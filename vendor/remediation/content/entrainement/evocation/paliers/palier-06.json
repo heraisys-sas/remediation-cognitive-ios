@@ -1,0 +1,236 @@
+[
+  {
+    "id": "ev-6-analyse-01",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Ce mot désigne un objet qui sert à enfoncer des clous.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "marteau"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-6-analyse-02",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Ce mot désigne un objet qui sert à se protéger de la pluie.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "parapluie"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-6-analyse-03",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Ce mot désigne un objet qui sert à couper du papier.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "ciseaux"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-6-analyse-04",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Ce mot désigne un lieu où l'on emprunte des livres.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "bibliothèque"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-6-analyse-05",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Ce mot désigne un objet qui sert à ouvrir une porte.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "clé",
+      "variantes": [
+        "clef"
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-6-analyse-06",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Ce mot désigne un véhicule à deux roues que l'on fait avancer en pédalant.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "vélo",
+      "variantes": [
+        "bicyclette"
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

@@ -1,0 +1,282 @@
+[
+  {
+    "id": "mt3-3-autoinstruction-01",
+    "type": "auto-instruction",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "mt-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Auto-instruction : avant d'agir, mets-toi une consigne à voix basse — « qu'est-ce que je dois faire ? » puis « comment ? » puis « vérifie ».",
+      "enonce": "Tu vas assembler une étagère. La notice et toutes les pièces sont disponibles, mais tu n’as pas encore repéré l’ordre du montage. Quelle question traite ce point ?",
+      "options": [
+        "Combien de livres faudra-t-il ranger sur l’étagère ?",
+        "Quelle pièce se monte d’abord et de quoi dépend la suivante ?",
+        "À quel endroit placer l’étagère une fois montée ?"
+      ],
+      "aide": "Choisis la question qui répond au point à clarifier dans cette situation."
+    },
+    "reponse": {
+      "valeur": "Quelle pièce se monte d’abord et de quoi dépend la suivante ?"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-3-autoinstruction-02",
+    "type": "auto-instruction",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "mt-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Auto-instruction : avant d'agir, mets-toi une consigne à voix basse — « qu'est-ce que je dois faire ? » puis « comment ? » puis « vérifie ».",
+      "enonce": "Un courrier demande une réponse mais tu ne sais pas encore laquelle. Quelle question clarifie d’abord la demande ?",
+      "options": [
+        "Dans quel dossier vais-je classer le courrier ?",
+        "Quel moyen de transport utiliser pour aller au guichet ?",
+        "Quelle action m’est demandée et pour quelle échéance ?"
+      ],
+      "aide": "Choisis la question qui répond au point à clarifier dans cette situation."
+    },
+    "reponse": {
+      "valeur": "Quelle action m’est demandée et pour quelle échéance ?"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-3-autoinstruction-03",
+    "type": "auto-instruction",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "mt-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Auto-instruction : avant d'agir, mets-toi une consigne à voix basse — « qu'est-ce que je dois faire ? » puis « comment ? » puis « vérifie ».",
+      "enonce": "Tu lis un chapitre pour expliquer demain deux causes d’un phénomène. Quelle question guide une lecture adaptée à ce but ?",
+      "options": [
+        "Quels passages racontent les conséquences du phénomène ?",
+        "Quels mots du chapitre sont les plus inhabituels ?",
+        "Quels passages expliquent ces deux causes ?"
+      ],
+      "aide": "Choisis la question qui répond au point à clarifier dans cette situation."
+    },
+    "reponse": {
+      "valeur": "Quels passages expliquent ces deux causes ?"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-3-autoinstruction-04",
+    "type": "auto-instruction",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "mt-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Auto-instruction : avant d'agir, mets-toi une consigne à voix basse — « qu'est-ce que je dois faire ? » puis « comment ? » puis « vérifie ».",
+      "enonce": "Tu vas remplir un formulaire qui demande plusieurs justificatifs. Tu veux éviter de t’interrompre pour les chercher. Quelle question t’aide ?",
+      "options": [
+        "Quels documents dois-je réunir avant de commencer ?",
+        "Comment classer le dossier après son envoi ?",
+        "Quelle sera la dernière rubrique à signer ?"
+      ],
+      "aide": "Choisis la question qui répond au point à clarifier dans cette situation."
+    },
+    "reponse": {
+      "valeur": "Quels documents dois-je réunir avant de commencer ?"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-3-autoinstruction-05",
+    "type": "auto-instruction",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "mt-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Auto-instruction : avant d'agir, mets-toi une consigne à voix basse — « qu'est-ce que je dois faire ? » puis « comment ? » puis « vérifie ».",
+      "enonce": "La recette est nouvelle. Tu as tous les ingrédients mais seulement 40 minutes et certaines étapes nécessitent du repos. Quelle question vérifier avant de commencer ?",
+      "options": [
+        "Quelle est la durée totale, repos compris ?",
+        "Quelle est la quantité totale d’ingrédients ?",
+        "Quelle présentation choisir pour le plat terminé ?"
+      ],
+      "aide": "Choisis la question qui répond au point à clarifier dans cette situation."
+    },
+    "reponse": {
+      "valeur": "Quelle est la durée totale, repos compris ?"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-3-autoinstruction-06",
+    "type": "auto-instruction",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "mt-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Auto-instruction : avant d'agir, mets-toi une consigne à voix basse — « qu'est-ce que je dois faire ? » puis « comment ? » puis « vérifie ».",
+      "enonce": "Tu ranges une pièce pour libérer le passage jusqu’à la fenêtre. Quelle question garde ce but en vue ?",
+      "options": [
+        "Comment réorganiser tous les livres par auteur ?",
+        "Quels objets empêchent actuellement ce passage ?",
+        "Quels objets faudrait-il remplacer prochainement ?"
+      ],
+      "aide": "Choisis la question qui répond au point à clarifier dans cette situation."
+    },
+    "reponse": {
+      "valeur": "Quels objets empêchent actuellement ce passage ?"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-3-autoinstruction-07",
+    "type": "auto-instruction",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "mt-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Auto-instruction : avant d'agir, mets-toi une consigne à voix basse — « qu'est-ce que je dois faire ? » puis « comment ? » puis « vérifie ».",
+      "enonce": "Tu appelles pour un prélèvement en double. La référence est prête ; tu veux formuler clairement ce que tu demandes. Quelle question t’aide ?",
+      "options": [
+        "Quel prélèvement contester et quelle régularisation demander ?",
+        "Quel jour sont émises les prochaines factures ?",
+        "Quel autre forfait pourrait être intéressant ?"
+      ],
+      "aide": "Choisis la question qui répond au point à clarifier dans cette situation."
+    },
+    "reponse": {
+      "valeur": "Quel prélèvement contester et quelle régularisation demander ?"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-3-autoinstruction-08",
+    "type": "auto-instruction",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "mt-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Auto-instruction : avant d'agir, mets-toi une consigne à voix basse — « qu'est-ce que je dois faire ? » puis « comment ? » puis « vérifie ».",
+      "enonce": "Tu dois expliquer demain une procédure sans tes notes. Quelle question permet de vérifier ta préparation ?",
+      "options": [
+        "Ai-je souligné tous les titres de la procédure ?",
+        "Puis-je redire les étapes dans l’ordre sans regarder ?",
+        "Ai-je lu chaque page au moins une fois ?"
+      ],
+      "aide": "Choisis la question qui répond au point à clarifier dans cette situation."
+    },
+    "reponse": {
+      "valeur": "Puis-je redire les étapes dans l’ordre sans regarder ?"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

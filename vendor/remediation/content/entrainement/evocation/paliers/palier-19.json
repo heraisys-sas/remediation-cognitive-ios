@@ -1,0 +1,1143 @@
+[
+  {
+    "id": "ev2-12-01",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une formule peut être comprise de deux façons et l'orateur ne permet pas de savoir laquelle il retient. Quel adjectif qualifie cette formule ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : précision de l'expression."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « é… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « É »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "équivoque",
+      "variantes": [
+        "ambigu",
+        "ambiguë",
+        "ambigüe"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-02",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Un argument conduit à une conclusion fausse en donnant l'impression d'être valable. Quel adjectif le qualifie ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : qualité d'un argument."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « fa… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « F »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "fallacieux",
+      "variantes": [
+        "trompeur",
+        "mensonger",
+        "spécieux"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-03",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Un raisonnement séduit au premier abord par son apparente justesse, mais l'examen révèle qu'il n'est pas fondé. Quel adjectif souligne cette apparence trompeuse ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : apparence d'un raisonnement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « spé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « S »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "spécieux",
+      "variantes": [
+        "fallacieux",
+        "captieux"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-04",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Un élément suffit à établir solidement le point discuté et emporte la conviction. Quel adjectif qualifie cet élément de preuve ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : force d'une preuve."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pro… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "probant",
+      "variantes": [
+        "convaincant",
+        "concluant",
+        "décisif"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-05",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une personne multiplie les demandes de précision uniquement pour retarder la décision. Quel adjectif qualifie cette manœuvre ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : intentions dans une discussion."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « di… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « D »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "dilatoire"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-06",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Un avis tient en quelques mots nets et incisifs, sans aucune explication supplémentaire. Quel adjectif qualifie cette formulation ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : manières de formuler."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « la… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « L »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "lapidaire",
+      "variantes": [
+        "laconique",
+        "concis",
+        "concise",
+        "succinct",
+        "succincte"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-07",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une réponse semble receler un sens caché et demeure difficile à interpréter, comme une devinette. Quel adjectif soutenu la qualifie ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : interprétation d'un message."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « si… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « S »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "sibyllin",
+      "variantes": [
+        "sibylline",
+        "énigmatique",
+        "obscur",
+        "obscure",
+        "cryptique"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-08",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Un récit saute volontairement des étapes que le lecteur doit reconstituer, sans tout exprimer. Quel adjectif qualifie cette manière de raconter ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : construction d'un récit."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « é… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « E »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "elliptique",
+      "variantes": [
+        "allusif"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-09",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Un compte rendu relate le lieu, les moments et toutes les conditions dans lesquelles les faits se sont déroulés. Quel adjectif qualifie ce récit ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : précision d'un récit."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « cir… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "13 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "circonstancié",
+      "variantes": [
+        "détaillé",
+        "précis",
+        "minutieux"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-10",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Un inventaire couvre tous les éléments du domaine annoncé, sans aucune omission. Quel adjectif le qualifie ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : étendue d'un examen."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ex… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « E »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "exhaustif",
+      "variantes": [
+        "complet",
+        "intégral"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-11",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une personne n'utilise une ressource qu'en très petite quantité, en veillant à en dépenser le moins possible. Quel adjectif qualifie son usage de cette ressource ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : mesure dans l'usage des ressources."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « par… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "parcimonieux",
+      "variantes": [
+        "économe",
+        "mesuré",
+        "frugal"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-12",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Après un conflit, une personne en position de force pardonne à son adversaire et renonce à se venger. Quel adjectif souligne sa grandeur d'âme ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : attitudes envers autrui."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ma… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « M »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "magnanime",
+      "variantes": [
+        "clément",
+        "clémente",
+        "généreux",
+        "généreuse",
+        "indulgent",
+        "indulgente"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-13",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une intervention surgit au mauvais moment et perturbe la discussion en cours. Quel adjectif qualifie cette intervention ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : adéquation au moment."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « in… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « I »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "intempestif",
+      "variantes": [
+        "intempestive",
+        "inopportun",
+        "inopportune",
+        "malvenu",
+        "malvenue",
+        "inapproprié",
+        "inappropriée"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-14",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une proposition arrive au moment où elle répond exactement au besoin présent. Quel adjectif souligne qu'elle survient à propos ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : adéquation au moment."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « o… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « O »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "opportun",
+      "variantes": [
+        "opportune",
+        "bienvenu",
+        "bienvenue",
+        "approprié",
+        "appropriée",
+        "judicieux",
+        "judicieuse"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-15",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une remarque désagréable à entendre permet pourtant d'éviter une erreur importante et de corriger la situation. Quel adjectif souligne son effet favorable ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : effets d'une intervention."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « sa… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « S »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "salutaire",
+      "variantes": [
+        "bénéfique",
+        "profitable",
+        "utile"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-16",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Un problème s'installe discrètement, sans signes immédiatement alarmants, puis révèle progressivement ses effets nuisibles. Quel adjectif qualifie cette manière d'apparaître ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : évolution d'un danger."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « in… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « I »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "insidieux",
+      "variantes": [
+        "insidieuse",
+        "sournois",
+        "sournoise",
+        "pernicieux",
+        "pernicieuse"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-17",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Un défaut suffit à lui seul à faire abandonner un achat, quels que soient les autres avantages. Quel adjectif qualifie ce défaut ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : obstacles à une décision."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ré… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "rédhibitoire",
+      "variantes": [
+        "éliminatoire",
+        "inacceptable"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-18",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Toutes les tentatives pour empêcher un événement échouent et rien ne permet plus de l'éviter. Quel adjectif qualifie sa survenue ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : possibilité d'agir sur un événement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « i… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « I »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "inéluctable",
+      "variantes": [
+        "inévitable",
+        "fatal",
+        "fatale",
+        "inexorable"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-19",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une personne se tient auprès d'un proche à travers toutes les épreuves, sans jamais se détourner de lui. Quel adjectif qualifie son soutien ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : solidité d'un engagement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « in… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « I »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "indéfectible",
+      "variantes": [
+        "infaillible",
+        "constant",
+        "inébranlable",
+        "fidèle"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-20",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une personne exprime souvent son intention d'agir, mais s'arrête avant de passer réellement à l'action. Quel adjectif la qualifie ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : passage de l'intention à l'action."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « vel… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « V »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "velléitaire",
+      "variantes": [
+        "indécis",
+        "indécise",
+        "irrésolu",
+        "irrésolue"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-21",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une personne change souvent d'avis et d'engagement, au gré des influences du moment. Quel adjectif qualifie cette instabilité ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : constance des attitudes."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ver… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « V »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "versatile",
+      "variantes": [
+        "inconstant",
+        "inconstante",
+        "changeant",
+        "changeante",
+        "instable",
+        "volage"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-22",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Dans un échange, les critiques prennent une tournure mordante et malveillante, traduisant un ressentiment tenace. Quel nom soutenu désigne ce ton des paroles ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : ton d'un échange."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « a… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "acrimonie",
+      "variantes": [
+        "aigreur",
+        "amertume",
+        "âpreté"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-23",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une personne réagit avec le même calme lorsqu'elle réussit et lorsqu'elle subit un revers, sans se laisser emporter ni abattre. Quel nom soutenu désigne cette attitude ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : stabilité émotionnelle."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « é… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « É »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "équanimité",
+      "variantes": [
+        "sérénité",
+        "impassibilité",
+        "égalité d'humeur"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-12-24",
+    "palier": 19,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une personne renonce volontairement à son intérêt propre pour se consacrer aux autres ou à une cause. Quel nom désigne ce sacrifice de soi ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : motivations de l'action."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ab… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "abnégation",
+      "variantes": [
+        "dévouement",
+        "désintéressement",
+        "renoncement"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

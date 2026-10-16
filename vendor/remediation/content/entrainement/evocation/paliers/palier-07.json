@@ -1,0 +1,236 @@
+[
+  {
+    "id": "ev-7-analyse-01",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Ce mot désigne un appareil qui conserve les aliments au froid.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "réfrigérateur",
+      "variantes": [
+        "frigo"
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-7-analyse-02",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Ce mot désigne un objet qui sert à écrire et que l'on peut effacer.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "crayon",
+      "variantes": [
+        "stylo à papier"
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-7-analyse-03",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Ce mot désigne un endroit où l'on attend le train.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "gare"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-7-analyse-04",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Ce mot désigne un objet que l'on met sur la tête quand il fait froid.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "bonnet"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-7-analyse-05",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Ce mot désigne un meuble où l'on range les vêtements.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "armoire"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-7-analyse-06",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Ce mot désigne un objet qui sert à mesurer une longueur.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "mètre"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

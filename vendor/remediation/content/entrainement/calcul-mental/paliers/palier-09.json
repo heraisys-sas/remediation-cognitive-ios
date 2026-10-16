@@ -1,0 +1,1046 @@
+[
+  {
+    "id": "cm4-9-f96832de4f2a",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 8 personnes, il faut 280 g de riz. Quelle quantité faut-il pour 12 personnes, en grammes ?",
+      "methode": "Cherche le facteur entre les deux effectifs, ou passe par une part. Applique le même rapport à la quantité.",
+      "famille_calcul": "proportion"
+    },
+    "reponse": {
+      "valeur": 420
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-f758f83d8f5e",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "3 interventions de 35 minutes, avec une pause de 10 minutes entre deux interventions successives. Quelle durée totale en minutes ?",
+      "methode": "Convertis toutes les durées en minutes, additionne le travail, puis les pauses entre les séquences. Une pause de moins que de séquences.",
+      "famille_calcul": "duree"
+    },
+    "reponse": {
+      "valeur": 125
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-8317c5f78562",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Une machine produit 84 pièces en 6 minutes à débit constant. Combien en produit-elle en 15 minutes ?",
+      "methode": "Ramène la production à une minute, puis applique la nouvelle durée. Vérifie que la quantité varie dans le même rapport que le temps.",
+      "famille_calcul": "debit"
+    },
+    "reponse": {
+      "valeur": 210
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-e018cd689d2f",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Travail de 8 h 35 à 12 h 10, avec 25 minutes de pause. Combien de minutes de travail effectif ?",
+      "methode": "Convertis les heures en minutes. Calcule la durée entre début et fin, puis retire la pause.",
+      "famille_calcul": "horaire"
+    },
+    "reponse": {
+      "valeur": 190
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-c2a4fef62205",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 47,5 + 18,75 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 66.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-c4d8584dc631",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 36 × 15 ?",
+      "methode": "Décompose le facteur à deux chiffres en dizaines et unités, multiplie chaque partie, puis rassemble les produits.",
+      "famille_calcul": "produit"
+    },
+    "reponse": {
+      "valeur": 540
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-3d867c19c904",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 8 personnes, il faut 320 g de riz. Quelle quantité faut-il pour 16 personnes, en grammes ?",
+      "methode": "Cherche le facteur entre les deux effectifs, ou passe par une part. Applique le même rapport à la quantité.",
+      "famille_calcul": "proportion"
+    },
+    "reponse": {
+      "valeur": 640
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-e1f1b5ac843e",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "4 interventions de 40 minutes, avec une pause de 10 minutes entre deux interventions successives. Quelle durée totale en minutes ?",
+      "methode": "Convertis toutes les durées en minutes, additionne le travail, puis les pauses entre les séquences. Une pause de moins que de séquences.",
+      "famille_calcul": "duree"
+    },
+    "reponse": {
+      "valeur": 190
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-5daeca92cfe1",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Une machine produit 96 pièces en 6 minutes à débit constant. Combien en produit-elle en 18 minutes ?",
+      "methode": "Ramène la production à une minute, puis applique la nouvelle durée. Vérifie que la quantité varie dans le même rapport que le temps.",
+      "famille_calcul": "debit"
+    },
+    "reponse": {
+      "valeur": 288
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-712a1b85c2a6",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Travail de 8 h 35 à 13 h 10, avec 25 minutes de pause. Combien de minutes de travail effectif ?",
+      "methode": "Convertis les heures en minutes. Calcule la durée entre début et fin, puis retire la pause.",
+      "famille_calcul": "horaire"
+    },
+    "reponse": {
+      "valeur": 250
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-0ea4525464d4",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 54,5 + 21,75 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 76.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-3e0486309c39",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 43 × 15 ?",
+      "methode": "Décompose le facteur à deux chiffres en dizaines et unités, multiplie chaque partie, puis rassemble les produits.",
+      "famille_calcul": "produit"
+    },
+    "reponse": {
+      "valeur": 645
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-f7caae23fc4a",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 8 personnes, il faut 360 g de riz. Quelle quantité faut-il pour 20 personnes, en grammes ?",
+      "methode": "Cherche le facteur entre les deux effectifs, ou passe par une part. Applique le même rapport à la quantité.",
+      "famille_calcul": "proportion"
+    },
+    "reponse": {
+      "valeur": 900
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-0b4401bfc97b",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "5 interventions de 45 minutes, avec une pause de 10 minutes entre deux interventions successives. Quelle durée totale en minutes ?",
+      "methode": "Convertis toutes les durées en minutes, additionne le travail, puis les pauses entre les séquences. Une pause de moins que de séquences.",
+      "famille_calcul": "duree"
+    },
+    "reponse": {
+      "valeur": 265
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-b2c560cea1c0",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Une machine produit 108 pièces en 6 minutes à débit constant. Combien en produit-elle en 21 minutes ?",
+      "methode": "Ramène la production à une minute, puis applique la nouvelle durée. Vérifie que la quantité varie dans le même rapport que le temps.",
+      "famille_calcul": "debit"
+    },
+    "reponse": {
+      "valeur": 378
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-abc62cf4b1e2",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Travail de 8 h 35 à 14 h 10, avec 25 minutes de pause. Combien de minutes de travail effectif ?",
+      "methode": "Convertis les heures en minutes. Calcule la durée entre début et fin, puis retire la pause.",
+      "famille_calcul": "horaire"
+    },
+    "reponse": {
+      "valeur": 310
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-2e78964d94a2",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 61,5 + 24,75 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 86.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-62d900777c9e",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 50 × 15 ?",
+      "methode": "Décompose le facteur à deux chiffres en dizaines et unités, multiplie chaque partie, puis rassemble les produits.",
+      "famille_calcul": "produit"
+    },
+    "reponse": {
+      "valeur": 750
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-96f567ec7ccd",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 8 personnes, il faut 400 g de riz. Quelle quantité faut-il pour 24 personnes, en grammes ?",
+      "methode": "Cherche le facteur entre les deux effectifs, ou passe par une part. Applique le même rapport à la quantité.",
+      "famille_calcul": "proportion"
+    },
+    "reponse": {
+      "valeur": 1200
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-bacf5800bf1b",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "6 interventions de 50 minutes, avec une pause de 10 minutes entre deux interventions successives. Quelle durée totale en minutes ?",
+      "methode": "Convertis toutes les durées en minutes, additionne le travail, puis les pauses entre les séquences. Une pause de moins que de séquences.",
+      "famille_calcul": "duree"
+    },
+    "reponse": {
+      "valeur": 350
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-525f4d3d80e8",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Une machine produit 120 pièces en 6 minutes à débit constant. Combien en produit-elle en 24 minutes ?",
+      "methode": "Ramène la production à une minute, puis applique la nouvelle durée. Vérifie que la quantité varie dans le même rapport que le temps.",
+      "famille_calcul": "debit"
+    },
+    "reponse": {
+      "valeur": 480
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-dc78cb16f2d0",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Travail de 8 h 35 à 15 h 10, avec 25 minutes de pause. Combien de minutes de travail effectif ?",
+      "methode": "Convertis les heures en minutes. Calcule la durée entre début et fin, puis retire la pause.",
+      "famille_calcul": "horaire"
+    },
+    "reponse": {
+      "valeur": 370
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-dfb117c441e6",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 68,5 + 27,75 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 96.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-b0d7a7ec68b4",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 57 × 15 ?",
+      "methode": "Décompose le facteur à deux chiffres en dizaines et unités, multiplie chaque partie, puis rassemble les produits.",
+      "famille_calcul": "produit"
+    },
+    "reponse": {
+      "valeur": 855
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-43f9f371a4e3",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 8 personnes, il faut 440 g de riz. Quelle quantité faut-il pour 28 personnes, en grammes ?",
+      "methode": "Cherche le facteur entre les deux effectifs, ou passe par une part. Applique le même rapport à la quantité.",
+      "famille_calcul": "proportion"
+    },
+    "reponse": {
+      "valeur": 1540
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-bb7c33a82a17",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "7 interventions de 55 minutes, avec une pause de 10 minutes entre deux interventions successives. Quelle durée totale en minutes ?",
+      "methode": "Convertis toutes les durées en minutes, additionne le travail, puis les pauses entre les séquences. Une pause de moins que de séquences.",
+      "famille_calcul": "duree"
+    },
+    "reponse": {
+      "valeur": 445
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-da7ebce1b28f",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Une machine produit 132 pièces en 6 minutes à débit constant. Combien en produit-elle en 27 minutes ?",
+      "methode": "Ramène la production à une minute, puis applique la nouvelle durée. Vérifie que la quantité varie dans le même rapport que le temps.",
+      "famille_calcul": "debit"
+    },
+    "reponse": {
+      "valeur": 594
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-b04d1846e388",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Travail de 8 h 35 à 16 h 10, avec 25 minutes de pause. Combien de minutes de travail effectif ?",
+      "methode": "Convertis les heures en minutes. Calcule la durée entre début et fin, puis retire la pause.",
+      "famille_calcul": "horaire"
+    },
+    "reponse": {
+      "valeur": 430
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-2db699b29516",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 75,5 + 30,75 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 106.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-57653c58b390",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 64 × 15 ?",
+      "methode": "Décompose le facteur à deux chiffres en dizaines et unités, multiplie chaque partie, puis rassemble les produits.",
+      "famille_calcul": "produit"
+    },
+    "reponse": {
+      "valeur": 960
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-0fd8bac617d8",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 8 personnes, il faut 480 g de riz. Quelle quantité faut-il pour 32 personnes, en grammes ?",
+      "methode": "Cherche le facteur entre les deux effectifs, ou passe par une part. Applique le même rapport à la quantité.",
+      "famille_calcul": "proportion"
+    },
+    "reponse": {
+      "valeur": 1920
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-4090f76db3af",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "8 interventions de 60 minutes, avec une pause de 10 minutes entre deux interventions successives. Quelle durée totale en minutes ?",
+      "methode": "Convertis toutes les durées en minutes, additionne le travail, puis les pauses entre les séquences. Une pause de moins que de séquences.",
+      "famille_calcul": "duree"
+    },
+    "reponse": {
+      "valeur": 550
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-b0c70240b578",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Une machine produit 144 pièces en 6 minutes à débit constant. Combien en produit-elle en 30 minutes ?",
+      "methode": "Ramène la production à une minute, puis applique la nouvelle durée. Vérifie que la quantité varie dans le même rapport que le temps.",
+      "famille_calcul": "debit"
+    },
+    "reponse": {
+      "valeur": 720
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-5512e36999ea",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Travail de 8 h 35 à 17 h 10, avec 25 minutes de pause. Combien de minutes de travail effectif ?",
+      "methode": "Convertis les heures en minutes. Calcule la durée entre début et fin, puis retire la pause.",
+      "famille_calcul": "horaire"
+    },
+    "reponse": {
+      "valeur": 490
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-46c00b084d8e",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 82,5 + 33,75 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 116.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-9-946c8d38d7ea",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 9,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 71 × 15 ?",
+      "methode": "Décompose le facteur à deux chiffres en dizaines et unités, multiplie chaque partie, puis rassemble les produits.",
+      "famille_calcul": "produit"
+    },
+    "reponse": {
+      "valeur": 1065
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

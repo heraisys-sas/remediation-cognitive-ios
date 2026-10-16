@@ -1,0 +1,322 @@
+[
+  {
+    "type": "reconnaissance",
+    "fonctions_ciblees": [
+      "acces-lexical"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Capacité à attendre sans s'énerver.",
+      "options": [
+        "tolérance",
+        "prudence",
+        "patience"
+      ],
+      "aide": "Relis la définition en entier avant de choisir."
+    },
+    "reponse": {
+      "valeur": "patience"
+    },
+    "id": "ev-1-reconnaissance-01",
+    "palier": 1,
+    "prerequis": [],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "reconnaissance",
+    "fonctions_ciblees": [
+      "acces-lexical"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Geste qu'on fait sans y penser, toujours de la même façon.",
+      "options": [
+        "habitude",
+        "routine",
+        "manie"
+      ],
+      "aide": "Relis la définition en entier avant de choisir."
+    },
+    "reponse": {
+      "valeur": "habitude"
+    },
+    "id": "ev-1-reconnaissance-02",
+    "palier": 1,
+    "prerequis": [],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "reconnaissance",
+    "fonctions_ciblees": [
+      "acces-lexical"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Absence de bruit.",
+      "options": [
+        "repos",
+        "silence",
+        "calme"
+      ],
+      "aide": "Relis la définition en entier avant de choisir."
+    },
+    "reponse": {
+      "valeur": "silence"
+    },
+    "id": "ev-1-reconnaissance-03",
+    "palier": 1,
+    "prerequis": [],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "reconnaissance",
+    "fonctions_ciblees": [
+      "acces-lexical"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Ce qui reste en mémoire d'un moment passé.",
+      "options": [
+        "image",
+        "souvenir",
+        "récit"
+      ],
+      "aide": "Relis la définition en entier avant de choisir."
+    },
+    "reponse": {
+      "valeur": "souvenir"
+    },
+    "id": "ev-1-reconnaissance-04",
+    "palier": 1,
+    "prerequis": [],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "reconnaissance",
+    "fonctions_ciblees": [
+      "acces-lexical"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Choix qu'on arrête après avoir hésité.",
+      "options": [
+        "avis",
+        "décision",
+        "projet"
+      ],
+      "aide": "Relis la définition en entier avant de choisir."
+    },
+    "reponse": {
+      "valeur": "décision"
+    },
+    "id": "ev-1-reconnaissance-05",
+    "palier": 1,
+    "prerequis": [],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "reconnaissance",
+    "fonctions_ciblees": [
+      "acces-lexical"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Objet en verre dans lequel on boit.",
+      "options": [
+        "bouteille",
+        "assiette",
+        "verre"
+      ],
+      "aide": "Relis la définition en entier avant de choisir."
+    },
+    "reponse": {
+      "valeur": "verre"
+    },
+    "id": "ev-1-reconnaissance-06",
+    "palier": 1,
+    "prerequis": [],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "reconnaissance",
+    "fonctions_ciblees": [
+      "acces-lexical"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Petit objet qui ouvre une porte.",
+      "options": [
+        "poignée",
+        "clé",
+        "cadenas"
+      ],
+      "aide": "Relis la définition en entier avant de choisir."
+    },
+    "reponse": {
+      "valeur": "clé"
+    },
+    "id": "ev-1-reconnaissance-07",
+    "palier": 1,
+    "prerequis": [],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "reconnaissance",
+    "fonctions_ciblees": [
+      "acces-lexical"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Objet qu'on ouvre quand il pleut.",
+      "options": [
+        "bottes",
+        "manteau",
+        "parapluie"
+      ],
+      "aide": "Relis la définition en entier avant de choisir."
+    },
+    "reponse": {
+      "valeur": "parapluie"
+    },
+    "id": "ev-1-reconnaissance-08",
+    "palier": 1,
+    "prerequis": [],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "reconnaissance",
+    "fonctions_ciblees": [
+      "acces-lexical"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Série de marches pour changer d'étage.",
+      "options": [
+        "couloir",
+        "escalier",
+        "ascenseur"
+      ],
+      "aide": "Relis la définition en entier avant de choisir."
+    },
+    "reponse": {
+      "valeur": "escalier"
+    },
+    "id": "ev-1-reconnaissance-09",
+    "palier": 1,
+    "prerequis": [],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "reconnaissance",
+    "fonctions_ciblees": [
+      "acces-lexical"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Ustensile pour manger la soupe.",
+      "options": [
+        "couteau",
+        "cuillère",
+        "fourchette"
+      ],
+      "aide": "Relis la définition en entier avant de choisir."
+    },
+    "reponse": {
+      "valeur": "cuillère"
+    },
+    "id": "ev-1-reconnaissance-10",
+    "palier": 1,
+    "prerequis": [],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

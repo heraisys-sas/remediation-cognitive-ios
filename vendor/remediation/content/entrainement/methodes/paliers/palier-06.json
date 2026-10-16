@@ -1,0 +1,678 @@
+[
+  {
+    "id": "mt2-6-pqrst-01",
+    "type": "pqrst-mise-en-oeuvre",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "mt-palier-5"
+    ],
+    "cap_complexite": "un texte court et cinq étapes guidées, une seule fois",
+    "contenu": {
+      "consigne": "Méthode PQRST, appliquée pas à pas : Parcours le texte, écris la question que tu te poses, Lis-le, Reformule-le avec tes mots, puis Teste-toi de mémoire.",
+      "titre_texte": "Le colis à retirer",
+      "texte": "Le colis est arrivé au bureau de tabac de la place. Il faut le retirer avant jeudi, avec une pièce d'identité. Le bureau ferme à 18 h. Si le colis n'est pas retiré, il repart à l'expéditeur.",
+      "etapes": [
+        {
+          "etape": 1,
+          "nom": "Parcours",
+          "enonce": "De quoi parle ce texte ?",
+          "options": [
+            "de l'enlèvement d'un colis",
+            "d'une recette de cuisine",
+            "d'un voyage en train"
+          ],
+          "bonne": "de l'enlèvement d'un colis"
+        },
+        {
+          "etape": 2,
+          "nom": "Question",
+          "enonce": "Écris la question que tu te poses sur ce texte.",
+          "modele": "Que faut-il apporter pour retirer le colis ?"
+        },
+        {
+          "etape": 3,
+          "nom": "Lecture",
+          "enonce": "Lis le texte entier, en cherchant la réponse à ta question."
+        },
+        {
+          "etape": 4,
+          "nom": "Reformulation",
+          "enonce": "Redis le texte en une phrase, avec tes mots.",
+          "modele": "Le colis attend au bureau de tabac : il faut le retirer avant jeudi, avec une pièce d'identité, avant la fermeture à 18 h.",
+          "criteres": [
+            {
+              "label": "le colis",
+              "expressions": [
+                "colis"
+              ],
+              "contradictions": []
+            },
+            {
+              "label": "le bureau de tabac",
+              "expressions": [
+                "bureau de tabac",
+                "bureau",
+                "buraliste"
+              ],
+              "contradictions": [
+                "pas au bureau",
+                "n est pas au bureau",
+                "ailleurs que le bureau"
+              ]
+            },
+            {
+              "label": "avant jeudi",
+              "expressions": [
+                "avant jeudi",
+                "mercredi",
+                "jeudi au plus tard"
+              ],
+              "contradictions": [
+                "apres jeudi",
+                "vendredi",
+                "samedi"
+              ]
+            },
+            {
+              "label": "une pièce d'identité",
+              "expressions": [
+                "piece d identite",
+                "carte d identite",
+                "identite"
+              ],
+              "contradictions": [
+                "sans piece d identite",
+                "pas apporter d identite",
+                "ne pas apporter d identite"
+              ]
+            },
+            {
+              "label": "la fermeture à 18 h",
+              "expressions": [
+                "fermeture a 18 h",
+                "18 h",
+                "18"
+              ],
+              "contradictions": [
+                "19 h",
+                "19",
+                "20 h",
+                "20"
+              ]
+            }
+          ],
+          "seuil": 0.8
+        },
+        {
+          "etape": 5,
+          "nom": "Test",
+          "questions": [
+            {
+              "enonce": "Jusqu'à quand peut-on retirer le colis ?",
+              "options": [
+                "jusqu'à jeudi",
+                "jusqu'à samedi",
+                "jusqu'à la fin du mois"
+              ],
+              "bonne": "jusqu'à jeudi"
+            },
+            {
+              "enonce": "Que faut-il apporter ?",
+              "options": [
+                "une pièce d'identité",
+                "un bon de commande",
+                "la carte de fidélité"
+              ],
+              "bonne": "une pièce d'identité"
+            }
+          ]
+        }
+      ],
+      "fiche_methode": [
+        "Parcours : je regarde le titre et le début, je devine le sujet.",
+        "Question : j'écris la question que je me pose.",
+        "Lecture : je lis en cherchant la réponse à ma question.",
+        "Reformulation : je redis le texte en une phrase, avec mes mots.",
+        "Test : je me teste de mémoire, sans regarder."
+      ]
+    },
+    "reponse": {
+      "valeur": "l'enlèvement d'un colis, l'identité, le délai et les horaires",
+      "seuil": 0.8
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-27",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt2-6-pqrst-02",
+    "type": "pqrst-mise-en-oeuvre",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "mt-palier-5"
+    ],
+    "cap_complexite": "un texte court et cinq étapes guidées, une seule fois",
+    "contenu": {
+      "consigne": "Méthode PQRST, appliquée pas à pas : Parcours le texte, écris la question que tu te poses, Lis-le, Reformule-le avec tes mots, puis Teste-toi de mémoire.",
+      "titre_texte": "Le nouveau lave-linge",
+      "texte": "Avant la première lessive, ouvrir le robinet d'arrivée d'eau. Verser un verre de vinaigre blanc dans le tambour et lancer un cycle à vide à 60 degrés. Trier ensuite le linge par couleur et remplir le tambour sans le tasser. Nettoyer le filtre une fois par mois pour éviter les mauvaises odeurs.",
+      "etapes": [
+        {
+          "etape": 1,
+          "nom": "Parcours",
+          "enonce": "De quoi parle ce texte ?",
+          "options": [
+            "de la mise en route d'un lave-linge",
+            "du montage d'une étagère",
+            "de l'entretien d'un vélo"
+          ],
+          "bonne": "de la mise en route d'un lave-linge"
+        },
+        {
+          "etape": 2,
+          "nom": "Question",
+          "enonce": "Écris la question que tu te poses sur ce texte.",
+          "modele": "Que fait-on avant la première lessive ?"
+        },
+        {
+          "etape": 3,
+          "nom": "Lecture",
+          "enonce": "Lis le texte entier, en cherchant la réponse à ta question."
+        },
+        {
+          "etape": 4,
+          "nom": "Reformulation",
+          "enonce": "Redis le texte en une phrase, avec tes mots.",
+          "modele": "Avant la première lessive : ouvrir le robinet, lancer un cycle à vide à 60 degrés avec du vinaigre, puis trier le linge et nettoyer le filtre chaque mois.",
+          "criteres": [
+            {
+              "label": "ouvrir le robinet",
+              "expressions": [
+                "ouvrir le robinet",
+                "robinet ouvert"
+              ],
+              "contradictions": [
+                "fermer le robinet",
+                "sans ouvrir le robinet"
+              ]
+            },
+            {
+              "label": "utiliser du vinaigre",
+              "expressions": [
+                "vinaigre blanc",
+                "vinaigre"
+              ],
+              "contradictions": [
+                "sans vinaigre",
+                "pas de vinaigre"
+              ]
+            },
+            {
+              "label": "un cycle à vide à 60 degrés",
+              "expressions": [
+                "cycle a vide a 60 degres"
+              ],
+              "groupes": [
+                [
+                  "cycle a vide"
+                ],
+                [
+                  "60 degres",
+                  "60"
+                ]
+              ],
+              "contradictions": [
+                "cycle avec du linge",
+                "cycle a froid",
+                "30 degres",
+                "30"
+              ]
+            },
+            {
+              "label": "trier le linge",
+              "expressions": [
+                "trier le linge",
+                "tri du linge",
+                "trier"
+              ],
+              "contradictions": [
+                "sans trier",
+                "ne pas trier"
+              ]
+            },
+            {
+              "label": "nettoyer le filtre chaque mois",
+              "expressions": [
+                "filtre chaque mois",
+                "filtre mensuel"
+              ],
+              "groupes": [
+                [
+                  "filtre"
+                ],
+                [
+                  "chaque mois",
+                  "mensuel",
+                  "une fois par mois"
+                ]
+              ],
+              "contradictions": [
+                "filtre chaque semaine",
+                "filtre chaque annee",
+                "ne pas nettoyer le filtre"
+              ]
+            }
+          ],
+          "seuil": 0.8
+        },
+        {
+          "etape": 5,
+          "nom": "Test",
+          "questions": [
+            {
+              "enonce": "Quel cycle lancer avant la première lessive ?",
+              "options": [
+                "un cycle à vide à 60 degrés",
+                "un cycle court à froid",
+                "un cycle avec du linge blanc"
+              ],
+              "bonne": "un cycle à vide à 60 degrés"
+            },
+            {
+              "enonce": "Tous les combien nettoyer le filtre ?",
+              "options": [
+                "une fois par mois",
+                "une fois par semaine",
+                "une fois par an"
+              ],
+              "bonne": "une fois par mois"
+            }
+          ]
+        }
+      ],
+      "fiche_methode": [
+        "Parcours : je regarde le titre et le début, je devine le sujet.",
+        "Question : j'écris la question que je me pose.",
+        "Lecture : je lis en cherchant la réponse à ma question.",
+        "Reformulation : je redis le texte en une phrase, avec mes mots.",
+        "Test : je me teste de mémoire, sans regarder."
+      ]
+    },
+    "reponse": {
+      "valeur": "la préparation du lave-linge, le cycle à vide, le tri du linge, le filtre",
+      "seuil": 0.8
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-27",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt2-6-pqrst-03",
+    "type": "pqrst-mise-en-oeuvre",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "mt-palier-5"
+    ],
+    "cap_complexite": "un texte court et cinq étapes guidées, une seule fois",
+    "contenu": {
+      "consigne": "Méthode PQRST, appliquée pas à pas : Parcours le texte, écris la question que tu te poses, Lis-le, Reformule-le avec tes mots, puis Teste-toi de mémoire.",
+      "titre_texte": "Le courrier de la mutuelle",
+      "texte": "La mutuelle accuse réception du dossier envoyé le 4 septembre. Les pièces sont complètes, aucun justificatif supplémentaire n'est demandé. Le remboursement sera versé sous quinze jours sur le compte habituel. Pour toute question, utiliser le numéro indiqué en haut de la lettre, pas la messagerie.",
+      "etapes": [
+        {
+          "etape": 1,
+          "nom": "Parcours",
+          "enonce": "De quoi parle ce texte ?",
+          "options": [
+            "du suivi d'un dossier de remboursement",
+            "de la résiliation d'un contrat",
+            "d'une convocation à un contrôle"
+          ],
+          "bonne": "du suivi d'un dossier de remboursement"
+        },
+        {
+          "etape": 2,
+          "nom": "Question",
+          "enonce": "Écris la question que tu te poses sur ce texte.",
+          "modele": "Quand vais-je recevoir le remboursement ?"
+        },
+        {
+          "etape": 3,
+          "nom": "Lecture",
+          "enonce": "Lis le texte entier, en cherchant la réponse à ta question."
+        },
+        {
+          "etape": 4,
+          "nom": "Reformulation",
+          "enonce": "Redis le texte en une phrase, avec tes mots.",
+          "modele": "Le dossier a bien été reçu, il est complet et sera remboursé sous quinze jours ; on peut appeler le numéro de la lettre pour toute question.",
+          "criteres": [
+            {
+              "label": "le dossier reçu",
+              "expressions": [
+                "dossier recu",
+                "accuse reception"
+              ],
+              "groupes": [
+                [
+                  "dossier"
+                ],
+                [
+                  "recu",
+                  "reception"
+                ]
+              ],
+              "contradictions": [
+                "dossier non recu",
+                "pas recu le dossier"
+              ]
+            },
+            {
+              "label": "les pièces complètes",
+              "expressions": [
+                "pieces completes",
+                "dossier complet"
+              ],
+              "contradictions": [
+                "pieces manquantes",
+                "dossier incomplet",
+                "pas complet"
+              ]
+            },
+            {
+              "label": "le remboursement",
+              "expressions": [
+                "remboursement",
+                "rembourse"
+              ],
+              "contradictions": [
+                "pas de remboursement",
+                "ne sera pas rembourse"
+              ]
+            },
+            {
+              "label": "sous quinze jours",
+              "expressions": [
+                "sous quinze jours",
+                "15 jours",
+                "quinze"
+              ],
+              "contradictions": [
+                "deux mois",
+                "2 mois",
+                "immediatement"
+              ]
+            },
+            {
+              "label": "appeler le numéro de la lettre",
+              "expressions": [
+                "appeler le numero de la lettre",
+                "appeler le numero"
+              ],
+              "groupes": [
+                [
+                  "appeler",
+                  "telephone",
+                  "telephoner"
+                ],
+                [
+                  "numero de la lettre",
+                  "numero"
+                ]
+              ],
+              "contradictions": [
+                "par la messagerie",
+                "utiliser la messagerie"
+              ]
+            }
+          ],
+          "seuil": 0.8
+        },
+        {
+          "etape": 5,
+          "nom": "Test",
+          "questions": [
+            {
+              "enonce": "Sous quel délai le remboursement sera-t-il versé ?",
+              "options": [
+                "sous quinze jours",
+                "sous deux mois",
+                "immédiatement"
+              ],
+              "bonne": "sous quinze jours"
+            },
+            {
+              "enonce": "Comment poser une question ?",
+              "options": [
+                "en appelant le numéro de la lettre",
+                "par la messagerie du site",
+                "en écrivant au tribunal"
+              ],
+              "bonne": "en appelant le numéro de la lettre"
+            }
+          ]
+        }
+      ],
+      "fiche_methode": [
+        "Parcours : je regarde le titre et le début, je devine le sujet.",
+        "Question : j'écris la question que je me pose.",
+        "Lecture : je lis en cherchant la réponse à ma question.",
+        "Reformulation : je redis le texte en une phrase, avec mes mots.",
+        "Test : je me teste de mémoire, sans regarder."
+      ]
+    },
+    "reponse": {
+      "valeur": "le accusé de réception, les pièces complètes, le délai de remboursement, le numéro",
+      "seuil": 0.8
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-27",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt2-6-pqrst-04",
+    "type": "pqrst-mise-en-oeuvre",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "mt-palier-5"
+    ],
+    "cap_complexite": "un texte court et cinq étapes guidées, une seule fois",
+    "contenu": {
+      "consigne": "Méthode PQRST, appliquée pas à pas : Parcours le texte, écris la question que tu te poses, Lis-le, Reformule-le avec tes mots, puis Teste-toi de mémoire.",
+      "titre_texte": "La séance à la piscine",
+      "texte": "La piscine propose des créneaux tranquilles le mardi et le jeudi matin. L'entrée coûte quatre euros, le carnet de dix entrées trente euros. Il faut un bonnet de bain et une pièce de un euro pour le casier. Les lignes 3 et 4 sont réservées aux nageurs lents.",
+      "etapes": [
+        {
+          "etape": 1,
+          "nom": "Parcours",
+          "enonce": "De quoi parle ce texte ?",
+          "options": [
+            "des conditions pour aller à la piscine",
+            "d'un match de natation",
+            "d'un cours de plongée"
+          ],
+          "bonne": "des conditions pour aller à la piscine"
+        },
+        {
+          "etape": 2,
+          "nom": "Question",
+          "enonce": "Écris la question que tu te poses sur ce texte.",
+          "modele": "Quels jours y a-t-il des créneaux tranquilles ?"
+        },
+        {
+          "etape": 3,
+          "nom": "Lecture",
+          "enonce": "Lis le texte entier, en cherchant la réponse à ta question."
+        },
+        {
+          "etape": 4,
+          "nom": "Reformulation",
+          "enonce": "Redis le texte en une phrase, avec tes mots.",
+          "modele": "La piscine a des créneaux tranquilles mardi et jeudi matin, avec un tarif simple, un bonnet obligatoire, une pièce pour le casier et des lignes réservées aux nageurs lents.",
+          "criteres": [
+            {
+              "label": "le mardi matin",
+              "expressions": [
+                "mardi matin",
+                "mardi"
+              ],
+              "contradictions": [
+                "pas le mardi",
+                "samedi"
+              ]
+            },
+            {
+              "label": "le jeudi matin",
+              "expressions": [
+                "jeudi matin",
+                "jeudi"
+              ],
+              "contradictions": [
+                "pas le jeudi",
+                "vendredi"
+              ]
+            },
+            {
+              "label": "les tarifs",
+              "expressions": [
+                "tarif",
+                "quatre euros",
+                "4 euros",
+                "trente euros",
+                "30 euros"
+              ],
+              "contradictions": [
+                "gratuit"
+              ]
+            },
+            {
+              "label": "le bonnet et la pièce pour le casier",
+              "expressions": [
+                "bonnet et piece pour le casier"
+              ],
+              "groupes": [
+                [
+                  "bonnet"
+                ],
+                [
+                  "piece pour le casier",
+                  "piece de un euro",
+                  "piece d un euro"
+                ]
+              ],
+              "contradictions": [
+                "sans bonnet",
+                "pas de bonnet",
+                "cadenas"
+              ]
+            },
+            {
+              "label": "les lignes réservées aux nageurs lents",
+              "expressions": [
+                "lignes reservees aux nageurs lents",
+                "lignes lentes"
+              ],
+              "groupes": [
+                [
+                  "ligne",
+                  "lignes"
+                ],
+                [
+                  "nageurs lents",
+                  "lents",
+                  "lentes"
+                ]
+              ],
+              "contradictions": [
+                "nageurs rapides"
+              ]
+            }
+          ],
+          "seuil": 0.8
+        },
+        {
+          "etape": 5,
+          "nom": "Test",
+          "questions": [
+            {
+              "enonce": "Quels jours sont tranquilles ?",
+              "options": [
+                "mardi et jeudi matin",
+                "samedi après-midi",
+                "tous les soirs"
+              ],
+              "bonne": "mardi et jeudi matin"
+            },
+            {
+              "enonce": "Que faut-il prévoir pour le casier ?",
+              "options": [
+                "une pièce de un euro",
+                "un cadenas personnel",
+                "rien du tout"
+              ],
+              "bonne": "une pièce de un euro"
+            }
+          ]
+        }
+      ],
+      "fiche_methode": [
+        "Parcours : je regarde le titre et le début, je devine le sujet.",
+        "Question : j'écris la question que je me pose.",
+        "Lecture : je lis en cherchant la réponse à ma question.",
+        "Reformulation : je redis le texte en une phrase, avec mes mots.",
+        "Test : je me teste de mémoire, sans regarder."
+      ]
+    },
+    "reponse": {
+      "valeur": "les créneaux tranquilles, les tarifs, le bonnet et le casier, les lignes lentes",
+      "seuil": 0.8
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-27",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

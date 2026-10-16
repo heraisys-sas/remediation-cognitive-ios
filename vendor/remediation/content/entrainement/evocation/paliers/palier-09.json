@@ -1,0 +1,1019 @@
+[
+  {
+    "id": "ev2-2-01",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Petit appareil de bureau qui assemble des feuilles au moyen d'une attache métallique repliée.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : matériel de bureau."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « a… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "agrafeuse"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-02",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Câble électrique muni d'une fiche et d'une prise, qui permet de brancher un appareil plus loin.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : équipement électrique."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ra… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "rallonge",
+      "variantes": [
+        "rallonge électrique"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-03",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Récipient percé de trous qui retient les pâtes pendant que l'eau de cuisson s'écoule.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : ustensiles de cuisine."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pa… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "passoire"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-04",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Petite fermeture amovible munie d'un arceau, que l'on accroche par exemple à un casier.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : fermetures."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ca… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "cadenas"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-05",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Miroir placé sur un véhicule pour voir ce qui se trouve derrière sans tourner la tête.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : équipement automobile."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ré… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "rétroviseur"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-06",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Objet de bureau à couverture rigide et à anneaux, dans lequel on range des feuilles perforées.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : rangement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « cla… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "classeur"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-07",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Outil dont l'extrémité s'engage dans la tête d'une vis pour la faire tourner.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : outils."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « tour… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « T »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "tournevis"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-08",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Appareil ou récipient à bec conçu pour faire chauffer de l'eau jusqu'à ébullition.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : équipement de cuisine."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « bou… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « B »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "bouilloire"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-09",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Accessoire à toile tendue sur des branches repliables, que l'on tient au-dessus de soi sous la pluie.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : accessoires."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pa… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "parapluie"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-10",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Outil à manche et à tête lourde, utilisé pour enfoncer des clous en les frappant.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : outils."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « mar… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « M »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "marteau"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-11",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Petit accessoire muni d'une rangée de dents, que l'on passe dans les cheveux pour les démêler.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : soins du quotidien."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pe… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "6 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "peigne"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-12",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Support que l'on suspend par un crochet et sur lequel on place une veste pour la ranger.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : rangement des vêtements."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ci… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "6 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "cintre"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-13",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Grand ustensile à manche terminé par une coupe profonde, utilisé pour servir la soupe.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : ustensiles de cuisine."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « lou… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "6 lettres, première lettre « L »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "louche"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-14",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Petite brosse munie d'un manche court, utilisée avec une pelle pour ramasser les miettes au sol.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : entretien du logement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ba… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « B »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "balayette"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-15",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Pièce de tissu suspendue devant une fenêtre, que l'on tire pour masquer la vue.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : aménagement du logement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ri… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "6 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "rideau"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-16",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Pièce de textile épais posée sur le sol, que l'on peut déplacer pour nettoyer dessous.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : aménagement du logement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ta… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "5 lettres, première lettre « T »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "tapis"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-17",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Appareil à pales tournantes qui met l'air en mouvement pour rafraîchir une pièce.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : équipement du logement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ven… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « V »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "ventilateur"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-18",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Appareil électrique qui retire la poussière du sol en l'attirant dans un réservoir ou un sac.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : entretien du logement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « as… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "aspirateur"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-19",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Petits accessoires que l'on place dans les oreilles pour écouter du son sans haut-parleur.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : équipement audio."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « é… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « É »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "écouteurs"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-20",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Petit étui pliant que l'on garde sur soi pour ranger billets de banque et cartes.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : accessoires personnels."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « por… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "portefeuille"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-21",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Outil de peinture constitué d'un cylindre absorbant monté sur un manche et tournant sur lui-même.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : outils de peinture."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « rou… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "rouleau",
+      "variantes": [
+        "rouleau à peinture"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-22",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Support à trois pieds sur lequel on fixe un appareil photo pour le stabiliser.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : matériel photographique."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « tré… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « T »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "trépied"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-23",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Objet souple et poreux qui absorbe l'eau, utilisé pour nettoyer une surface.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : entretien du logement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « é… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "6 lettres, première lettre « É »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "éponge"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-2-24",
+    "palier": 9,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Récipient isolant à bouchon, conçu pour garder une boisson chaude ou froide pendant plusieurs heures.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : récipients."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ther… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « T »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "thermos",
+      "variantes": [
+        "bouteille isotherme"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

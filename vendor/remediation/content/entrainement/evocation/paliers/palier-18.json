@@ -1,0 +1,1039 @@
+[
+  {
+    "id": "ev2-11-01",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Rapport de ressemblance entre deux situations différentes, utilisé pour éclairer l'une à partir de l'autre.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : rapprochements entre idées."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « a… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "analogie",
+      "variantes": [
+        "similitude",
+        "parallèle"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-02",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Proposition qui heurte l'opinion commune ou semble contradictoire, tout en pouvant conduire à une réflexion fondée.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : tensions dans le raisonnement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pa… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "paradoxe"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-03",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Manière de faire comprendre, souvent avec une intention moqueuse, autre chose que ce que les mots affirment littéralement.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : interprétation des propos."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « i… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "6 lettres, première lettre « I »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "ironie"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-04",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Présence d'un objet, d'un mot ou d'une pratique dans une époque à laquelle il n'appartient pas.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : cohérence historique."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « a… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "anachronisme"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-05",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Expression qui adoucit la formulation d'une réalité jugée pénible, choquante ou brutale.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : figures de style."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « eu… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « E »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "euphémisme",
+      "variantes": [
+        "atténuation"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-06",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Figure de style qui amplifie volontairement une réalité de façon excessive pour frapper l'esprit.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : figures de style."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « i… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « H »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "hyperbole",
+      "variantes": [
+        "exagération"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-07",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Figure de style qui réunit, dans une expression très courte, deux mots de sens opposés.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : figures de style."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « o… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « O »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "oxymore",
+      "variantes": [
+        "oxymoron"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-08",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Figure de style qui dit volontairement moins pour faire entendre davantage, souvent en niant le contraire de ce que l'on veut exprimer.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : figures de style."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « li… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "6 lettres, première lettre « L »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "litote"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-09",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Figure de style qui remplace un nom par un autre en raison d'un lien concret, par exemple le contenant pour son contenu.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : figures de style."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « mé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « M »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "métonymie"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-10",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Propriété d'un même mot de posséder plusieurs sens liés les uns aux autres.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : sens des mots."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « po… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "polysémie"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-11",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Relation dans laquelle un phénomène produit un autre phénomène, au-delà du simple fait qu'ils apparaissent ensemble.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : relations entre phénomènes."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « co… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "causalité",
+      "variantes": [
+        "lien de cause à effet"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-12",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Caractère de ce qui existe ou se produit, mais aurait pu ne pas exister ou se produire autrement.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : possibilité et nécessité."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « con… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "contingence"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-13",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Conception selon laquelle les phénomènes résultent de causes qui, dans les mêmes conditions, produisent les mêmes effets.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : explication des phénomènes."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « dé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « D »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "déterminisme"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-14",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Position selon laquelle les jugements et les valeurs dépendent du contexte ou du point de vue, plutôt que de critères valables absolument.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : philosophie du jugement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « re… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "relativisme"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-15",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Attitude qui suspend l'adhésion à une affirmation en doutant qu'on dispose de raisons suffisantes pour la tenir pour vraie.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : attitudes envers la connaissance."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « scep… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « S »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "scepticisme",
+      "variantes": [
+        "doute",
+        "réserve"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-16",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Courant de pensée qui fait de l'expérience sensible la source principale de nos connaissances.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : théories de la connaissance."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « em… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « E »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "empirisme"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-17",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Courant de pensée qui accorde à la raison un rôle premier dans l'accès à la connaissance.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : théories de la connaissance."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ra… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "rationalisme"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-18",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Disposition à agir pour le bien d'autrui, même lorsque cela ne procure pas d'avantage personnel.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : motivations de l'action."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « al… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "altruisme",
+      "variantes": [
+        "désintéressement",
+        "générosité"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-19",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Représentation d'une société idéale qui n'existe pas dans la réalité et sert parfois à critiquer le monde présent.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : imagination politique."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « u… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "6 lettres, première lettre « U »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "utopie"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-20",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Ensemble organisé d'idées et de valeurs qui oriente la manière dont un groupe comprend la société et souhaite la transformer.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : représentations collectives."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « i… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « I »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "idéologie"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-21",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Principe qui reconnaît et permet la coexistence de plusieurs opinions, croyances ou courants dans une société.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : organisation de la vie collective."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « plu… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "pluralisme"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-22",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Caractère de ce qui vaut pour tous, sans restriction à un groupe, à un lieu ou à une époque particuliers.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : portée d'une idée."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « u… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « U »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "universalité"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-23",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Caractère propre et distinctif par lequel une personne, une œuvre ou une situation se différencie de toutes les autres.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : caractère d'une chose."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « sin… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « S »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "singularité",
+      "variantes": [
+        "unicité",
+        "originalité",
+        "particularité"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-11-24",
+    "palier": 18,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Démarche de pensée qui fait progresser la réflexion par la confrontation de positions opposées et l'examen de leurs contradictions.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : méthodes de réflexion."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « di… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « D »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "dialectique"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

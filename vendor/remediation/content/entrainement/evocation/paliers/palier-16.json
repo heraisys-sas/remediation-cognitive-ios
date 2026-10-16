@@ -1,0 +1,1127 @@
+[
+  {
+    "id": "ev2-9-01",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Capacité à apprécier une situation avec finesse et à distinguer ce qui mérite d'être retenu ou écarté.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : qualités du jugement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « di… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « D »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "discernement",
+      "variantes": [
+        "clairvoyance",
+        "lucidité"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-02",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Attitude de grande retenue dans le jugement et l'action, qui conduit à examiner les risques avant de se prononcer.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : attitudes face à l'incertitude."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « cir… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "14 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "circonspection",
+      "variantes": [
+        "prudence",
+        "précaution"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-03",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Art d'aborder un sujet délicat sans blesser ni embarrasser son interlocuteur.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : qualités relationnelles."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ta… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "4 lettres, première lettre « T »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "tact",
+      "variantes": [
+        "délicatesse",
+        "doigté"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-04",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Qualité d'un style dépouillé, sans ornements superflus ni effets excessifs.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : qualités d'expression."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « so… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « S »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "sobriété",
+      "variantes": [
+        "simplicité",
+        "dépouillement"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-05",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Qualité d'un propos qui exprime l'essentiel en peu de mots, sans développement inutile.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : qualités d'expression."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « con… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "concision",
+      "variantes": [
+        "brièveté"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-06",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Art de bien parler de façon à convaincre ou à émouvoir ceux qui écoutent.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : expression orale."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « é… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « É »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "éloquence"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-07",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Sincérité ingénue d'une personne qui ne soupçonne pas la tromperie et se montre sans artifice.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : dispositions personnelles."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « can… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "candeur",
+      "variantes": [
+        "naïveté",
+        "innocence",
+        "ingénuité"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-08",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Manière d'agir avec une liberté détachée, qui peut donner l'impression de ne pas prendre les obligations au sérieux.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : attitudes sociales."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « dé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « D »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "désinvolture",
+      "variantes": [
+        "nonchalance"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-09",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Trouble profond d'une personne qui ne sait plus comment agir face à une situation qui la dépasse.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : états émotionnels."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « dé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « D »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "désarroi",
+      "variantes": [
+        "désorientation",
+        "perplexité"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-10",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Présence simultanée de sentiments ou de désirs opposés envers une même personne ou une même situation.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : vie affective."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « am… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "ambivalence"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-11",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Hésitation d'ordre moral devant un acte dont on craint qu'il puisse être fautif ou nuire à quelqu'un.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : jugement moral."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « scru… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « S »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "scrupule"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-12",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Disposition à considérer autrui favorablement et à vouloir son bien.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : relations humaines."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « bien… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "13 lettres, première lettre « B »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "bienveillance",
+      "variantes": [
+        "bonté",
+        "sollicitude"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-13",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel adjectif qualifie une personne qui comprend rapidement ce qui se cache derrière les apparences ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : qualités du jugement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « per… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "perspicace",
+      "variantes": [
+        "clairvoyant",
+        "clairvoyante",
+        "lucide",
+        "pénétrant",
+        "pénétrante"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-14",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel adjectif qualifie une personne qui s'exprime beaucoup trop longuement, avec un excès de détails ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : manières de s'exprimer."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pro… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "prolixe",
+      "variantes": [
+        "verbeux",
+        "verbeuse",
+        "bavard",
+        "bavarde"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-15",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel adjectif qualifie une réponse volontairement très brève, réduite à quelques mots ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : manières de s'exprimer."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « la… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « L »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "laconique",
+      "variantes": [
+        "succinct",
+        "succincte",
+        "concis",
+        "concise",
+        "lapidaire"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-16",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel adjectif qualifie une personne qui réagit avec calme, sans emportement ni prise de position extrême ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : attitudes personnelles."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pon… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "pondéré",
+      "variantes": [
+        "pondérée",
+        "mesuré",
+        "mesurée",
+        "modéré",
+        "modérée",
+        "tempéré",
+        "tempérée",
+        "posé",
+        "posée"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-17",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel adjectif qualifie un propos exprimé avec une force passionnée et une grande intensité ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : intensité de l'expression."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « vé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « V »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "véhément",
+      "variantes": [
+        "fougueux",
+        "ardent",
+        "virulent"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-18",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel adjectif qualifie un usage autrefois courant, mais aujourd'hui sorti des habitudes et paraissant d'une autre époque ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : rapport au temps."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « dé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "6 lettres, première lettre « D »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "désuet",
+      "variantes": [
+        "suranné",
+        "vieilli",
+        "démodé",
+        "obsolète"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-19",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel adjectif qualifie une affirmation énoncée comme une vérité incontestable, qui ferme la porte à toute discussion ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : manières d'affirmer."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "péremptoire",
+      "variantes": [
+        "tranchant",
+        "tranchante",
+        "sans appel",
+        "dogmatique",
+        "catégorique"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-20",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel adjectif qualifie une personne qui met les autres à l'aise dès le premier contact et les reçoit avec courtoisie ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : qualités relationnelles."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « a… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "affable",
+      "variantes": [
+        "avenant",
+        "avenante",
+        "accueillant",
+        "accueillante",
+        "amène",
+        "cordial",
+        "cordiale",
+        "aimable"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-21",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel adjectif qualifie une preuve directement observable, sur laquelle on peut s'appuyer plutôt que sur une simple impression ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : solidité des éléments."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « tan… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « T »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "tangible",
+      "variantes": [
+        "palpable",
+        "matériel",
+        "matérielle",
+        "concret",
+        "concrète",
+        "vérifiable"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-22",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel adjectif qualifie une explication qui paraît pouvoir être vraie, sans être encore démontrée ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : degré de crédibilité."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « plau… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "plausible",
+      "variantes": [
+        "vraisemblable",
+        "crédible",
+        "possible"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-23",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel adjectif qualifie une situation sans stabilité assurée, exposée à se dégrader ou à disparaître rapidement ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : stabilité des situations."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pré… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "précaire",
+      "variantes": [
+        "fragile",
+        "instable",
+        "incertain",
+        "incertaine"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-9-24",
+    "palier": 16,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel adjectif qualifie une personne qui supporte une épreuve pénible avec fermeté, sans se plaindre ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : attitudes face à l'épreuve."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « sto… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « S »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "stoïque",
+      "variantes": [
+        "impassible",
+        "imperturbable"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

@@ -1,0 +1,59 @@
+name: Exécution moteur sous iOS
+on:
+  workflow_dispatch:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  simulator:
+    runs-on: macos-26
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        device: ['iPhone 17', 'iPhone Air']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements-test.txt
+      - run: python -m pip download --no-deps -r requirements-test.txt --dest .local/locked-wheels
+      - run: python tools/ios/check_upstream.py
+      - run: python tools/ios/fetch_runtime.py
+      - run: python tools/ios/prepare_engine_probe.py --support .local/ios-python --destination .local/engine-ios-locked
+      - run: python tools/ios/run_simulator_probe.py --device '${{ matrix.device }}'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: preuve-ios-${{ strategy.job-index }}
+          path: |
+            .local/*.log
+            .local/*.xcresult
+            .local/engine-ios-locked/probe-manifest.json
+  calculation-pilot:
+    runs-on: macos-26
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        device: ['iPhone 17', 'iPhone Air']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip download --no-deps -r requirements-test.txt --dest .local/locked-wheels
+      - run: python tools/ios/check_upstream.py
+      - run: python tools/ios/fetch_runtime.py
+      - run: python tools/ios/prepare_pilot.py
+      - run: python tools/ios/run_simulator_probe.py --device '${{ matrix.device }}' --probe .local/calculation-pilot
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: preuve-pilote-${{ strategy.job-index }}
+          path: |
+            .local/*.log
+            .local/*.xcresult
+            .local/pilot-*.png
+            .local/calculation-pilot/probe-manifest.json

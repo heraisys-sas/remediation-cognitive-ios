@@ -1,0 +1,442 @@
+[
+  {
+    "type": "rappel-indice",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition. Demande un indice seulement si le mot ne vient pas.",
+      "enonce": "Capacité à attendre sans s'énerver.",
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : qualités."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Ça commence par « pa… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « P »."
+        }
+      ],
+      "aide": "Pense à une situation où tu as vécu cela récemment."
+    },
+    "reponse": {
+      "valeur": "patience"
+    },
+    "id": "ev-3-rappel-01",
+    "palier": 3,
+    "prerequis": [
+      "ev-palier-2"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-indice",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition. Demande un indice seulement si le mot ne vient pas.",
+      "enonce": "Geste qu'on fait sans y penser, toujours de la même façon.",
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : notions du quotidien."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Ça commence par « ha… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « H »."
+        }
+      ],
+      "aide": "Pense à une situation où tu as vécu cela récemment."
+    },
+    "reponse": {
+      "valeur": "habitude"
+    },
+    "id": "ev-3-rappel-02",
+    "palier": 3,
+    "prerequis": [
+      "ev-palier-2"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-indice",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition. Demande un indice seulement si le mot ne vient pas.",
+      "enonce": "Absence de bruit.",
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : notions du quotidien."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Ça commence par « si… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « S »."
+        }
+      ],
+      "aide": "Pense à une situation où tu as vécu cela récemment."
+    },
+    "reponse": {
+      "valeur": "silence"
+    },
+    "id": "ev-3-rappel-03",
+    "palier": 3,
+    "prerequis": [
+      "ev-palier-2"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-indice",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition. Demande un indice seulement si le mot ne vient pas.",
+      "enonce": "Ce qui reste en mémoire d'un moment passé.",
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : notions de mémoire."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Ça commence par « sou… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « S »."
+        }
+      ],
+      "aide": "Pense à une situation où tu as vécu cela récemment."
+    },
+    "reponse": {
+      "valeur": "souvenir"
+    },
+    "id": "ev-3-rappel-04",
+    "palier": 3,
+    "prerequis": [
+      "ev-palier-2"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-indice",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition. Demande un indice seulement si le mot ne vient pas.",
+      "enonce": "Choix qu'on arrête après avoir hésité.",
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : notions du quotidien."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Ça commence par « dé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « D »."
+        }
+      ],
+      "aide": "Pense à une situation où tu as vécu cela récemment."
+    },
+    "reponse": {
+      "valeur": "décision"
+    },
+    "id": "ev-3-rappel-05",
+    "palier": 3,
+    "prerequis": [
+      "ev-palier-2"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-indice",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition. Demande un indice seulement si le mot ne vient pas.",
+      "enonce": "Engagement qu'on prend devant quelqu'un.",
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : notions du quotidien."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Ça commence par « pro… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « P »."
+        }
+      ],
+      "aide": "Pense à une situation où tu as vécu cela récemment."
+    },
+    "reponse": {
+      "valeur": "promesse"
+    },
+    "id": "ev-3-rappel-06",
+    "palier": 3,
+    "prerequis": [
+      "ev-palier-2"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-indice",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition. Demande un indice seulement si le mot ne vient pas.",
+      "enonce": "Fait d'arriver après l'heure prévue.",
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : notions du quotidien."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Ça commence par « re… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "6 lettres, première lettre « R »."
+        }
+      ],
+      "aide": "Pense à une situation où tu as vécu cela récemment."
+    },
+    "reponse": {
+      "valeur": "retard"
+    },
+    "id": "ev-3-rappel-07",
+    "palier": 3,
+    "prerequis": [
+      "ev-palier-2"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-indice",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition. Demande un indice seulement si le mot ne vient pas.",
+      "enonce": "Sentiment de pouvoir compter sur quelqu'un.",
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : sentiments."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Ça commence par « con… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « C »."
+        }
+      ],
+      "aide": "Pense à une situation où tu as vécu cela récemment."
+    },
+    "reponse": {
+      "valeur": "confiance"
+    },
+    "id": "ev-3-rappel-08",
+    "palier": 3,
+    "prerequis": [
+      "ev-palier-2"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-indice",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition. Demande un indice seulement si le mot ne vient pas.",
+      "enonce": "Sensation d'être vidé, d'avoir besoin de repos.",
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : états du corps."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Ça commence par « fa… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « F »."
+        }
+      ],
+      "aide": "Pense à une situation où tu as vécu cela récemment."
+    },
+    "reponse": {
+      "valeur": "fatigue"
+    },
+    "id": "ev-3-rappel-09",
+    "palier": 3,
+    "prerequis": [
+      "ev-palier-2"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-indice",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition. Demande un indice seulement si le mot ne vient pas.",
+      "enonce": "Fait de se concentrer sur une seule chose.",
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : notions de mémoire."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Ça commence par « at… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « A »."
+        }
+      ],
+      "aide": "Pense à une situation où tu as vécu cela récemment."
+    },
+    "reponse": {
+      "valeur": "attention"
+    },
+    "id": "ev-3-rappel-10",
+    "palier": 3,
+    "prerequis": [
+      "ev-palier-2"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

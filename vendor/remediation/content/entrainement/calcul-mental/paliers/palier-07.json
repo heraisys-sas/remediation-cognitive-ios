@@ -1,0 +1,698 @@
+[
+  {
+    "id": "cm4-7-cfad20c40323",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 23 × 6 − 37 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 101
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-1433144bc940",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un nombre est multiplié par 7, puis on ajoute 29. Le résultat est 85. Quel était le nombre ?",
+      "methode": "Pars du résultat final et annule les opérations dans l’ordre inverse. Vérifie en refaisant le trajet vers l’avant.",
+      "famille_calcul": "inverse"
+    },
+    "reponse": {
+      "valeur": 8
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-48d0317d2d8e",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un atelier possède 145 pièces, reçoit 3 boîtes de 24 pièces, puis utilise 67 pièces. Combien en reste-t-il ?",
+      "methode": "Calcule le total ajouté, puis retranche les sorties du stock. Vérifie que tu comptes des unités et non des boîtes.",
+      "famille_calcul": "stock"
+    },
+    "reponse": {
+      "valeur": 150
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-aaf069a68fd6",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Trois mesures doivent avoir une moyenne de 82. Les deux premières valent 68 et 79. Quelle doit être la troisième ?",
+      "methode": "Retrouve le total nécessaire à partir de la moyenne visée, puis retire les valeurs déjà connues. Vérifie la moyenne obtenue.",
+      "famille_calcul": "moyenne"
+    },
+    "reponse": {
+      "valeur": 99
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-92130f40d6fb",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 27 × 7 − 40 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 149
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-72ee9cb547d6",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un nombre est multiplié par 8, puis on ajoute 32. Le résultat est 104. Quel était le nombre ?",
+      "methode": "Pars du résultat final et annule les opérations dans l’ordre inverse. Vérifie en refaisant le trajet vers l’avant.",
+      "famille_calcul": "inverse"
+    },
+    "reponse": {
+      "valeur": 9
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-7a6c1b28efcb",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un atelier possède 156 pièces, reçoit 4 boîtes de 26 pièces, puis utilise 71 pièces. Combien en reste-t-il ?",
+      "methode": "Calcule le total ajouté, puis retranche les sorties du stock. Vérifie que tu comptes des unités et non des boîtes.",
+      "famille_calcul": "stock"
+    },
+    "reponse": {
+      "valeur": 189
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-bb86ffd92afa",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Trois mesures doivent avoir une moyenne de 86. Les deux premières valent 71 et 81. Quelle doit être la troisième ?",
+      "methode": "Retrouve le total nécessaire à partir de la moyenne visée, puis retire les valeurs déjà connues. Vérifie la moyenne obtenue.",
+      "famille_calcul": "moyenne"
+    },
+    "reponse": {
+      "valeur": 106
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-0fac4d9e5843",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 31 × 8 − 43 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 205
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-3f6794e95ddc",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un nombre est multiplié par 9, puis on ajoute 35. Le résultat est 125. Quel était le nombre ?",
+      "methode": "Pars du résultat final et annule les opérations dans l’ordre inverse. Vérifie en refaisant le trajet vers l’avant.",
+      "famille_calcul": "inverse"
+    },
+    "reponse": {
+      "valeur": 10
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-eda6fd8d2615",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un atelier possède 167 pièces, reçoit 5 boîtes de 28 pièces, puis utilise 75 pièces. Combien en reste-t-il ?",
+      "methode": "Calcule le total ajouté, puis retranche les sorties du stock. Vérifie que tu comptes des unités et non des boîtes.",
+      "famille_calcul": "stock"
+    },
+    "reponse": {
+      "valeur": 232
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-d57f8140c19e",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Trois mesures doivent avoir une moyenne de 90. Les deux premières valent 74 et 83. Quelle doit être la troisième ?",
+      "methode": "Retrouve le total nécessaire à partir de la moyenne visée, puis retire les valeurs déjà connues. Vérifie la moyenne obtenue.",
+      "famille_calcul": "moyenne"
+    },
+    "reponse": {
+      "valeur": 113
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-9f58da3d176d",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 35 × 9 − 46 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 269
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-eec8e2ea9623",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un nombre est multiplié par 10, puis on ajoute 38. Le résultat est 148. Quel était le nombre ?",
+      "methode": "Pars du résultat final et annule les opérations dans l’ordre inverse. Vérifie en refaisant le trajet vers l’avant.",
+      "famille_calcul": "inverse"
+    },
+    "reponse": {
+      "valeur": 11
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-fdcb4a95bc38",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un atelier possède 178 pièces, reçoit 6 boîtes de 30 pièces, puis utilise 79 pièces. Combien en reste-t-il ?",
+      "methode": "Calcule le total ajouté, puis retranche les sorties du stock. Vérifie que tu comptes des unités et non des boîtes.",
+      "famille_calcul": "stock"
+    },
+    "reponse": {
+      "valeur": 279
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-74d8b39c562b",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Trois mesures doivent avoir une moyenne de 94. Les deux premières valent 77 et 85. Quelle doit être la troisième ?",
+      "methode": "Retrouve le total nécessaire à partir de la moyenne visée, puis retire les valeurs déjà connues. Vérifie la moyenne obtenue.",
+      "famille_calcul": "moyenne"
+    },
+    "reponse": {
+      "valeur": 120
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-8673d8dedf5c",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 39 × 10 − 49 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 341
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-33833f4268c6",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un nombre est multiplié par 11, puis on ajoute 41. Le résultat est 173. Quel était le nombre ?",
+      "methode": "Pars du résultat final et annule les opérations dans l’ordre inverse. Vérifie en refaisant le trajet vers l’avant.",
+      "famille_calcul": "inverse"
+    },
+    "reponse": {
+      "valeur": 12
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-9b60d534da87",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un atelier possède 189 pièces, reçoit 7 boîtes de 32 pièces, puis utilise 83 pièces. Combien en reste-t-il ?",
+      "methode": "Calcule le total ajouté, puis retranche les sorties du stock. Vérifie que tu comptes des unités et non des boîtes.",
+      "famille_calcul": "stock"
+    },
+    "reponse": {
+      "valeur": 330
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-fb985b42f909",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Trois mesures doivent avoir une moyenne de 98. Les deux premières valent 80 et 87. Quelle doit être la troisième ?",
+      "methode": "Retrouve le total nécessaire à partir de la moyenne visée, puis retire les valeurs déjà connues. Vérifie la moyenne obtenue.",
+      "famille_calcul": "moyenne"
+    },
+    "reponse": {
+      "valeur": 127
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-d2854f093945",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 43 × 11 − 52 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 421
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-a7fd3bb2d418",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un nombre est multiplié par 12, puis on ajoute 44. Le résultat est 200. Quel était le nombre ?",
+      "methode": "Pars du résultat final et annule les opérations dans l’ordre inverse. Vérifie en refaisant le trajet vers l’avant.",
+      "famille_calcul": "inverse"
+    },
+    "reponse": {
+      "valeur": 13
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-8640c3b852dc",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un atelier possède 200 pièces, reçoit 8 boîtes de 34 pièces, puis utilise 87 pièces. Combien en reste-t-il ?",
+      "methode": "Calcule le total ajouté, puis retranche les sorties du stock. Vérifie que tu comptes des unités et non des boîtes.",
+      "famille_calcul": "stock"
+    },
+    "reponse": {
+      "valeur": 385
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-7-16fd05d89be2",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 7,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Trois mesures doivent avoir une moyenne de 102. Les deux premières valent 83 et 89. Quelle doit être la troisième ?",
+      "methode": "Retrouve le total nécessaire à partir de la moyenne visée, puis retire les valeurs déjà connues. Vérifie la moyenne obtenue.",
+      "famille_calcul": "moyenne"
+    },
+    "reponse": {
+      "valeur": 134
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

@@ -1,0 +1,1022 @@
+[
+  {
+    "id": "ev2-8-01",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Bande de terre étroite reliant deux étendues terrestres plus vastes et bordée d'eau de part et d'autre.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : formes du relief."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « i… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "6 lettres, première lettre « I »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "isthme"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-02",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Embouchure où un fleuve se divise en plusieurs bras parmi les dépôts qu'il a accumulés.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : géographie des cours d'eau."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « del… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "5 lettres, première lettre « D »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "delta"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-03",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Distance angulaire d'un lieu par rapport à l'équateur, mesurée vers le nord ou vers le sud.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : repères géographiques."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « la… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « L »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "latitude"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-04",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Distance angulaire d'un lieu par rapport au méridien de référence, mesurée vers l'est ou vers l'ouest.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : repères géographiques."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « lon… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « L »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "longitude"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-05",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Demi-cercle imaginaire tracé à la surface de la Terre pour relier un pôle à l'autre.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : repères géographiques."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « mé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « M »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "méridien"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-06",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Chacune des moitiés du globe terrestre séparées, par exemple, par l'équateur.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : représentation du globe."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « é… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « H »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "hémisphère"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-07",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Variété des êtres vivants, de leurs différences génétiques et des milieux qu'ils forment.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : sciences du vivant."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « bi… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « B »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "biodiversité"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-08",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Ensemble formé par un milieu, les êtres vivants qui l'occupent et leurs interactions.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : sciences du vivant."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « é… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « É »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "écosystème"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-09",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Processus par lequel les végétaux verts utilisent la lumière pour produire de la matière organique à partir d'eau et de dioxyde de carbone.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : sciences du vivant."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « fo… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "13 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "photosynthèse"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-10",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Attraction mutuelle qui s'exerce entre les corps possédant une masse.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : phénomènes physiques."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « gra… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « G »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "gravitation",
+      "variantes": [
+        "attraction gravitationnelle"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-11",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Propriété d'un corps de conserver son état de repos ou son mouvement rectiligne uniforme lorsque les forces qui s'exercent sur lui se compensent.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : phénomènes physiques."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « i… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « I »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "inertie"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-12",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Matière issue de particules qui se déposent au fond de l'eau ou à la surface du sol.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : formation des sols et des roches."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « sé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « S »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "sédiment",
+      "variantes": [
+        "dépôt"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-13",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Discipline qui conçoit et réalise les représentations d'un territoire sous forme de cartes.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : représentation de l'espace."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « car… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "cartographie"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-14",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Discipline qui étudie les sociétés du passé à partir de leurs vestiges matériels, notamment par des fouilles.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : connaissance du passé."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ar… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "archéologie"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-15",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Science qui étudie les êtres vivants des époques anciennes à partir de leurs restes et de leurs traces conservés dans les roches.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : connaissance du vivant ancien."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pa… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "13 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "paléontologie"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-16",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Courant de pensée qui place la dignité de la personne, son éducation et son épanouissement au centre de ses préoccupations.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : courants de pensée."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « u… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « H »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "humanisme"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-17",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Principe d'organisation de l'État reposant sur sa neutralité envers les religions et la liberté de conscience.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : principes politiques."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « la… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « L »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "laïcité"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-18",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Pouvoir suprême reconnu à un État ou à un peuple pour décider de son organisation et de ses affaires.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : pouvoir politique."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « sou… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « S »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "souveraineté"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-19",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Union d'États ou de territoires dotés d'une autonomie, partageant un gouvernement central et soumis à une constitution commune.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : organisation politique."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « fé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « F »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "fédération",
+      "variantes": [
+        "État fédéral"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-20",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Représentation d'une idée abstraite par une figure, une scène ou un récit concret, comme la justice figurée par une personne tenant une balance.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : expression artistique."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « a… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "allégorie"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-21",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Œuvre qui tourne en ridicule les défauts d'une personne ou d'une société pour les dénoncer.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : genres littéraires."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « sa… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "6 lettres, première lettre « S »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "satire"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-22",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Poème de quatorze vers, traditionnellement répartis en deux quatrains et deux tercets.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : formes poétiques."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « so… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "6 lettres, première lettre « S »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "sonnet"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-23",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Dernière partie d'un récit qui indique ce que deviennent les personnages après le dénouement.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : composition d'un récit."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « é… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « É »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "épilogue"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-8-24",
+    "palier": 15,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Ensemble des biens, des œuvres et des traditions reçus des générations précédentes et que l'on souhaite transmettre.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : culture et transmission."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pa… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "patrimoine",
+      "variantes": [
+        "héritage culturel"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

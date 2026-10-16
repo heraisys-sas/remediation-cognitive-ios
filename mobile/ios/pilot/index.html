@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'none'; frame-src 'none'">
+<title>Calcul mental</title>
+<link rel="stylesheet" href="pilot.css">
+<main>
+  <p class="secondary">Remédiation · pilote autonome</p>
+  <h1>Calcul mental</h1>
+  <p id="intro">Une question à la fois, à ton rythme. Tu peux terminer et enregistrer la séance quand tu le souhaites.</p>
+  <p id="status" role="status" aria-live="polite"></p>
+  <section id="exercise" hidden>
+    <p id="position" class="secondary"></p>
+    <h2 id="question" tabindex="-1"></h2>
+    <p id="repriseSupport" hidden></p>
+    <details id="method"><summary>Une méthode pour t’aider</summary><p id="methodText"></p></details>
+    <form id="answerForm">
+      <label for="answer">Ta réponse</label>
+      <input id="answer" type="text" autocomplete="off" inputmode="text" enterkeyhint="done">
+      <button id="validate" type="submit">Valider</button>
+    </form>
+    <div id="feedback" role="status" aria-live="polite"></div>
+    <button id="next" hidden>Continuer</button>
+  </section>
+  <aside id="stopProposal" hidden role="status">
+    <p>La durée proposée est atteinte. Tu peux terminer la séance ou continuer à ton rythme.</p>
+    <button id="continueChoice" class="secondaryButton">Continuer à mon rythme</button>
+  </aside>
+  <button id="start">Commencer</button>
+  <button id="finish" class="secondaryButton" hidden>Terminer et enregistrer</button>
+  <section id="summary" hidden><h2>Séance enregistrée</h2><p id="summaryText"></p><p id="summaryAdvice" hidden>Une pause peut être utile. Tu peux t’arrêter ici et reprendre plus tard.</p></section>
+  <p id="error" role="alert"></p>
+  <button id="resume" hidden>Reprendre après l’interruption</button>
+</main>
+<script src="active-clock.js"></script>
+<script src="pilot.js"></script>
+</html>

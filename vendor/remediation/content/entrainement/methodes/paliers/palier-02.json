@@ -1,0 +1,282 @@
+[
+  {
+    "id": "mt3-2-gmt-01",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "mt-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Planifier : repère le but et les contraintes, puis choisis le plan d’étapes cohérent, et vérifie-le avant de te lancer.",
+      "enonce": "Tu prépares un dîner. Une invitée doit confirmer ses allergies avant le choix du menu. Les courses dépendent du menu.",
+      "options": [
+        "Choisir le menu, confirmer les allergies, faire les courses",
+        "Confirmer les allergies, choisir le menu, faire les courses",
+        "Confirmer les allergies, faire les courses, choisir le menu"
+      ],
+      "aide": "Un bon plan met d'abord ce qui rend la suite possible."
+    },
+    "reponse": {
+      "valeur": "Confirmer les allergies, choisir le menu, faire les courses"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-2-gmt-02",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "mt-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Planifier : repère le but et les contraintes, puis choisis le plan d’étapes cohérent, et vérifie-le avant de te lancer.",
+      "enonce": "Pour déménager, tu dois mesurer le meuble avant de choisir un véhicule. Le transport exige une réservation confirmée.",
+      "options": [
+        "Mesurer le meuble, transporter, confirmer la réservation",
+        "Mesurer le meuble, réserver le véhicule adapté, transporter",
+        "Réserver le véhicule, mesurer le meuble, transporter"
+      ],
+      "aide": "Un bon plan met d'abord ce qui rend la suite possible."
+    },
+    "reponse": {
+      "valeur": "Mesurer le meuble, réserver le véhicule adapté, transporter"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-2-gmt-03",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "mt-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Planifier : repère le but et les contraintes, puis choisis le plan d’étapes cohérent, et vérifie-le avant de te lancer.",
+      "enonce": "Un dossier en ligne exige la liste des pièces à jour. Les fichiers doivent être contrôlés avant validation définitive.",
+      "options": [
+        "Lire la liste à jour, réunir et contrôler les fichiers, valider",
+        "Lire la liste à jour, valider, contrôler les fichiers",
+        "Réunir les fichiers habituels, valider, lire la liste à jour"
+      ],
+      "aide": "Un bon plan met d'abord ce qui rend la suite possible."
+    },
+    "reponse": {
+      "valeur": "Lire la liste à jour, réunir et contrôler les fichiers, valider"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-2-gmt-04",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "mt-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Planifier : repère le but et les contraintes, puis choisis le plan d’étapes cohérent, et vérifie-le avant de te lancer.",
+      "enonce": "Pour repeindre, la notice exige de protéger le sol avant le ponçage, puis de dépoussiérer avant la peinture.",
+      "options": [
+        "Protéger le sol, peindre, poncer et dépoussiérer",
+        "Poncer et dépoussiérer, protéger le sol, peindre",
+        "Protéger le sol, poncer et dépoussiérer, peindre"
+      ],
+      "aide": "Un bon plan met d'abord ce qui rend la suite possible."
+    },
+    "reponse": {
+      "valeur": "Protéger le sol, poncer et dépoussiérer, peindre"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-2-gmt-05",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "mt-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Planifier : repère le but et les contraintes, puis choisis le plan d’étapes cohérent, et vérifie-le avant de te lancer.",
+      "enonce": "Le logement du week-end est non remboursable. Ton ami doit confirmer ses dates avant la réservation ; les billets seront achetés après confirmation du logement.",
+      "options": [
+        "Réserver le logement, confirmer les dates, acheter les billets",
+        "Confirmer les dates, réserver le logement, acheter les billets",
+        "Confirmer les dates, acheter les billets, réserver le logement"
+      ],
+      "aide": "Un bon plan met d'abord ce qui rend la suite possible."
+    },
+    "reponse": {
+      "valeur": "Confirmer les dates, réserver le logement, acheter les billets"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-2-gmt-06",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "mt-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Planifier : repère le but et les contraintes, puis choisis le plan d’étapes cohérent, et vérifie-le avant de te lancer.",
+      "enonce": "Le formulaire génère une référence après validation. Cette référence est indispensable pour payer, et le reçu de paiement doit être joint à l’envoi.",
+      "options": [
+        "Payer, valider le formulaire, envoyer avec le reçu",
+        "Valider le formulaire, envoyer le dossier, payer avec la référence",
+        "Valider le formulaire, payer avec la référence, envoyer avec le reçu"
+      ],
+      "aide": "Un bon plan met d'abord ce qui rend la suite possible."
+    },
+    "reponse": {
+      "valeur": "Valider le formulaire, payer avec la référence, envoyer avec le reçu"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-2-gmt-07",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "mt-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Planifier : repère le but et les contraintes, puis choisis le plan d’étapes cohérent, et vérifie-le avant de te lancer.",
+      "enonce": "Pour préparer une soupe selon une recette, tu veux éviter les achats en double. Tu dois vérifier le stock avant de compléter la liste, puis acheter ce qui manque.",
+      "options": [
+        "Vérifier le stock, acheter, compléter la liste",
+        "Compléter la liste, acheter, vérifier le stock",
+        "Vérifier le stock, compléter la liste, acheter les manquants"
+      ],
+      "aide": "Un bon plan met d'abord ce qui rend la suite possible."
+    },
+    "reponse": {
+      "valeur": "Vérifier le stock, compléter la liste, acheter les manquants"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-2-gmt-08",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "mt-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Planifier : repère le but et les contraintes, puis choisis le plan d’étapes cohérent, et vérifie-le avant de te lancer.",
+      "enonce": "Le cours de sport exige une séance d’essai avant l’abonnement. Il faut réserver un créneau avant de venir à l’essai.",
+      "options": [
+        "Choisir l’abonnement, réserver un essai, participer",
+        "Participer à l’essai, réserver le créneau, choisir l’abonnement",
+        "Réserver un essai, participer à l’essai, choisir l’abonnement"
+      ],
+      "aide": "Un bon plan met d'abord ce qui rend la suite possible."
+    },
+    "reponse": {
+      "valeur": "Réserver un essai, participer à l’essai, choisir l’abonnement"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

@@ -1,0 +1,815 @@
+[
+  {
+    "id": "ev2-1-01",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Carte que l'on porte sur soi pour être identifié à l'entrée d'un lieu de travail.",
+      "aide": null,
+      "options": [
+        "ticket",
+        "étiquette",
+        "badge"
+      ]
+    },
+    "reponse": {
+      "valeur": "badge"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-02",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Carnet dans lequel on inscrit ses rendez-vous aux dates prévues.",
+      "aide": null,
+      "options": [
+        "répertoire",
+        "agenda",
+        "annuaire"
+      ]
+    },
+    "reponse": {
+      "valeur": "agenda",
+      "variantes": [
+        "calendrier"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-03",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Objet ou ensemble d'objets emballés pour être expédiés par la poste ou par un transporteur.",
+      "aide": null,
+      "options": [
+        "colis",
+        "enveloppe",
+        "carte postale"
+      ]
+    },
+    "reponse": {
+      "valeur": "colis",
+      "variantes": [
+        "paquet"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-04",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Mécanisme fixé sur une porte, dans lequel on introduit une clé pour la verrouiller.",
+      "aide": null,
+      "options": [
+        "poignée",
+        "charnière",
+        "serrure"
+      ]
+    },
+    "reponse": {
+      "valeur": "serrure"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-05",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Document établi par un vendeur indiquant les achats effectués et la somme à payer.",
+      "aide": null,
+      "options": [
+        "catalogue",
+        "facture",
+        "devis"
+      ]
+    },
+    "reponse": {
+      "valeur": "facture"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-06",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Bagage généralement rigide, muni d'une poignée, pour emporter ses vêtements en voyage.",
+      "aide": null,
+      "options": [
+        "valise",
+        "portefeuille",
+        "pochette"
+      ]
+    },
+    "reponse": {
+      "valeur": "valise"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-07",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Élément lumineux que l'on remplace dans une lampe lorsqu'il ne fonctionne plus.",
+      "aide": null,
+      "options": [
+        "interrupteur",
+        "prise",
+        "ampoule"
+      ]
+    },
+    "reponse": {
+      "valeur": "ampoule"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-08",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Instrument à deux lames articulées que l'on rapproche pour couper du papier.",
+      "aide": null,
+      "options": [
+        "perforatrice",
+        "ciseaux",
+        "agrafeuse"
+      ]
+    },
+    "reponse": {
+      "valeur": "ciseaux"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-09",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Protection rigide que l'on porte sur la tête à vélo ou à moto.",
+      "aide": null,
+      "options": [
+        "casque",
+        "gants",
+        "genouillères"
+      ]
+    },
+    "reponse": {
+      "valeur": "casque"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-10",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Document officiel avec photo qui atteste l'identité et la nationalité pour voyager à l'étranger.",
+      "aide": null,
+      "options": [
+        "permis de conduire",
+        "carte bancaire",
+        "passeport"
+      ]
+    },
+    "reponse": {
+      "valeur": "passeport"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-11",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Commerce dans lequel on fait préparer ou délivrer les médicaments d'une ordonnance.",
+      "aide": null,
+      "options": [
+        "librairie",
+        "pharmacie",
+        "épicerie"
+      ]
+    },
+    "reponse": {
+      "valeur": "pharmacie"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-12",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Plateforme aménagée le long des voies, où les voyageurs attendent avant de monter dans le train.",
+      "aide": null,
+      "options": [
+        "quai",
+        "guichet",
+        "parking"
+      ]
+    },
+    "reponse": {
+      "valeur": "quai"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-13",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Engagement du vendeur à réparer ou remplacer un appareil défectueux dans les conditions prévues.",
+      "aide": null,
+      "options": [
+        "remise",
+        "livraison",
+        "garantie"
+      ]
+    },
+    "reponse": {
+      "valeur": "garantie"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-14",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Contrat donnant accès régulièrement à un service pendant une période, en échange d'un paiement.",
+      "aide": null,
+      "options": [
+        "acompte",
+        "abonnement",
+        "caution"
+      ]
+    },
+    "reponse": {
+      "valeur": "abonnement"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-15",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Somme versée à titre de sûreté et rendue si les engagements sont respectés.",
+      "aide": null,
+      "options": [
+        "caution",
+        "loyer",
+        "pourboire"
+      ]
+    },
+    "reponse": {
+      "valeur": "caution",
+      "variantes": [
+        "dépôt de garantie"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-16",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Cabine qui transporte des personnes d'un étage à l'autre dans un bâtiment.",
+      "aide": null,
+      "options": [
+        "escalier",
+        "couloir",
+        "ascenseur"
+      ]
+    },
+    "reponse": {
+      "valeur": "ascenseur"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-17",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Ensemble de touches permettant de saisir du texte sur un ordinateur.",
+      "aide": null,
+      "options": [
+        "souris",
+        "clavier",
+        "écran"
+      ]
+    },
+    "reponse": {
+      "valeur": "clavier"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-18",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Réserve rechargeable d'énergie électrique qui permet au téléphone de fonctionner sans être branché.",
+      "aide": null,
+      "options": [
+        "batterie",
+        "câble",
+        "adaptateur"
+      ]
+    },
+    "reponse": {
+      "valeur": "batterie",
+      "variantes": [
+        "accumulateur"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-19",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Marque personnelle, souvent formée du nom, que l'on trace au bas d'un contrat pour l'approuver.",
+      "aide": null,
+      "options": [
+        "en-tête",
+        "tampon",
+        "signature"
+      ]
+    },
+    "reponse": {
+      "valeur": "signature"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-20",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Espace aménagé pour laisser plusieurs véhicules en stationnement.",
+      "aide": null,
+      "options": [
+        "tunnel",
+        "parking",
+        "carrefour"
+      ]
+    },
+    "reponse": {
+      "valeur": "parking",
+      "variantes": [
+        "parc de stationnement"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-21",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Répertoire classé de personnes ou de services, accompagné de leurs coordonnées.",
+      "aide": null,
+      "options": [
+        "annuaire",
+        "journal",
+        "agenda"
+      ]
+    },
+    "reponse": {
+      "valeur": "annuaire"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-22",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Petit morceau de papier fixé sur un produit pour en indiquer le nom ou le prix.",
+      "aide": null,
+      "options": [
+        "emballage",
+        "sac",
+        "étiquette"
+      ]
+    },
+    "reponse": {
+      "valeur": "étiquette"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-23",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Titre de transport à présenter pour prendre un train à une date et sur un trajet donnés.",
+      "aide": null,
+      "options": [
+        "plan",
+        "billet",
+        "reçu"
+      ]
+    },
+    "reponse": {
+      "valeur": "billet",
+      "variantes": [
+        "ticket"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-1-24",
+    "palier": 8,
+    "type": "reconnaissance",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Document sur lequel un médecin prescrit les médicaments et leur mode de prise.",
+      "aide": null,
+      "options": [
+        "ordonnance",
+        "facture",
+        "carte Vitale"
+      ]
+    },
+    "reponse": {
+      "valeur": "ordonnance",
+      "variantes": [
+        "prescription"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

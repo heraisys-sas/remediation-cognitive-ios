@@ -10,6 +10,11 @@ jobs:
           python-version: '3.13'
       - run: python -m pip install -r requirements-test.txt
       - run: python tools/ios/check_upstream.py
+      - run: python -m pytest -q tests
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/test_active_clock.cjs tests/test_pilot_render.cjs
       - run: python -m probe
         env:
           PYTHONPATH: mobile/ios

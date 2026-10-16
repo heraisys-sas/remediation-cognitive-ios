@@ -1,0 +1,1093 @@
+[
+  {
+    "id": "ev2-5-01",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie déplacer un rendez-vous à une date plus tardive ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : organisation du temps."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « re… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "reporter",
+      "variantes": [
+        "différer",
+        "repousser",
+        "remettre",
+        "décaler"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-02",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie charger une autre personne d'une tâche en lui donnant le pouvoir nécessaire pour l'accomplir ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : organisation du travail."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « dé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « D »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "déléguer",
+      "variantes": [
+        "confier",
+        "mandater"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-03",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie mettre fin à un contrat d'abonnement selon les conditions prévues ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : démarches contractuelles."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ré… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "résilier",
+      "variantes": [
+        "rompre",
+        "dénoncer",
+        "annuler"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-04",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie se représenter ce qui risque de se produire et s'y préparer à l'avance ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : préparation."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « an… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "anticiper",
+      "variantes": [
+        "prévoir"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-05",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie rassembler les idées essentielles de plusieurs documents en un ensemble bref et organisé ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : traitement de l'information."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « sin… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « S »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "synthétiser",
+      "variantes": [
+        "résumer"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-06",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie classer plusieurs tâches par ordre d'importance ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : organisation."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « i… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « H »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "hiérarchiser",
+      "variantes": [
+        "prioriser"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-07",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie examiner un calcul pour s'assurer qu'il est exact ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : contrôle."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « vé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « V »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "vérifier",
+      "variantes": [
+        "contrôler"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-08",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie rendre une explication compréhensible en dissipant ce qui prête à confusion ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : communication."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « cla… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "clarifier",
+      "variantes": [
+        "éclaircir",
+        "expliciter"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-09",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie exprimer de nouveau la même idée avec d'autres mots ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : communication."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « re… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "reformuler"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-10",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie apporter des distinctions à un jugement trop catégorique pour le rendre moins absolu ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : expression d'un jugement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « nu… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « N »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "nuancer",
+      "variantes": [
+        "relativiser",
+        "tempérer"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-11",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie présenter des raisons organisées pour soutenir une opinion ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : raisonnement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ar… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "argumenter",
+      "variantes": [
+        "étayer"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-12",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie donner les raisons qui rendent une décision fondée ou acceptable ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : raisonnement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ju… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « J »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "justifier",
+      "variantes": [
+        "motiver"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-13",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie examiner deux propositions pour repérer leurs ressemblances et leurs différences ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : examen d'options."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « com… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "comparer",
+      "variantes": [
+        "confronter"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-14",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie reconnaître ce qui différencie deux notions pour ne pas les confondre ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : précision des idées."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « di… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « D »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "distinguer",
+      "variantes": [
+        "différencier",
+        "discerner"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-15",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie rendre compatibles deux exigences qui semblaient s'opposer ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : recherche d'accord."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « con… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "concilier",
+      "variantes": [
+        "accorder",
+        "harmoniser"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-16",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie demander l'avis d'une personne avant de prendre une décision ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : préparation d'une décision."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « con… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "consulter",
+      "variantes": [
+        "solliciter"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-17",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie reconnaître officiellement qu'un document ou une étape satisfait aux exigences prévues ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : décision."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « va… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « V »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "valider",
+      "variantes": [
+        "approuver",
+        "entériner"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-18",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie mettre en cause le bien-fondé d'une décision que l'on juge injustifiée ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : désaccord."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « con… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "contester",
+      "variantes": [
+        "discuter",
+        "remettre en cause"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-19",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie remplacer une information inexacte que l'on a déjà donnée par l'information exacte ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : correction."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « rec… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "rectifier",
+      "variantes": [
+        "corriger"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-20",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie conserver des documents qui ne servent plus couramment, en les classant pour pouvoir les retrouver ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : gestion documentaire."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ar… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "archiver"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-21",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie établir la liste complète des personnes ou des objets d'un ensemble en les dénombrant ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : collecte d'information."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « re… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "recenser",
+      "variantes": [
+        "dénombrer",
+        "inventorier",
+        "répertorier"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-22",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie attribuer à chacune de plusieurs personnes une part de la quantité totale de travail ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : organisation du travail."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ré… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "répartir",
+      "variantes": [
+        "distribuer",
+        "partager"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-23",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie organiser les actions de plusieurs personnes pour qu'elles se complètent efficacement sans se gêner ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : organisation collective."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « co… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "coordonner",
+      "variantes": [
+        "articuler"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-5-24",
+    "palier": 12,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Quel verbe signifie mettre une ressource à l'abri des dommages afin de la garder intacte et disponible ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : protection des ressources."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pré… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "préserver",
+      "variantes": [
+        "sauvegarder",
+        "conserver",
+        "protéger"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]
