@@ -7,28 +7,20 @@ Exécuter avec le Python de développement équipé de pytest et fsrs.
 from __future__ import annotations
 
 import argparse
-import importlib.metadata
-import importlib.util
 import json
 from pathlib import Path
 import shutil
 import subprocess
 import sys
+import zipfile
+
+from provenance import file_hash, tree_hash
 
 ROOT = Path(__file__).resolve().parents[2]
-MODULES = {
-    "fsrs": "fsrs",
-    "typing_extensions": "typing_extensions",
-    "pytest": "pytest",
-    "_pytest": "pytest",
-    "pluggy": "pluggy",
-    "iniconfig": "iniconfig",
-    "packaging": "packaging",
-    "pygments": "Pygments",
-}
 
 
-def prepare(support: Path, destination: Path) -> None:
+
+def prepare(support: Path, destination: Path, wheels: Path) -> None:
     support = support.resolve()
     destination = destination.resolve()
     # Pas d'écrasement d'une app précédente, ni copie d'un checkout utilisateur.
@@ -40,11 +32,21 @@ def prepare(support: Path, destination: Path) -> None:
     testbed = support / "testbed"
     if not framework.is_dir() or not (testbed / "__main__.py").is_file():
         raise ValueError("Distribution iOS Python/BeeWare incomplète")
-    specs = {name: importlib.util.find_spec(name) for name in MODULES}
-    if any(spec is None or spec.origin is None for spec in specs.values()):
-        raise ValueError("Installer les dépendances de développement dans un venv séparé")
-    if importlib.metadata.version("fsrs").split(".")[0] != "6":
-        raise ValueError("Ce moteur exige FSRS 6")
+    lock = json.loads((ROOT / "mobile/ios/probe-lock.json").read_text())
+    if tree_hash(support) != lock["runtime"]["tree_sha256"]:
+        raise ValueError("Le runtime extrait ne correspond pas à la référence verrouillée")
+    # Vérifier toutes les entrées avant de créer un projet partiel.
+    for wheel in lock["wheels"]:
+        archive = wheels / wheel["filename"]
+        if not archive.is_file() or file_hash(archive) != wheel["sha256"]:
+            raise ValueError(f"Wheel absent ou modifié : {archive}")
+        with zipfile.ZipFile(archive) as bundle:
+            for name in bundle.namelist():
+                path = Path(name)
+                if path.is_absolute() or ".." in path.parts or "\\" in name:
+                    raise ValueError(f"Chemin de wheel invalide : {name}")
+                if path.suffix in {".so", ".dylib", ".pyd"}:
+                    raise ValueError(f"Extension binaire non portable : {name}")
     subprocess.run(
         [sys.executable, str(testbed), "clone", "--platform", "iOS",
          "--framework", str(framework), str(destination)], check=True,
@@ -54,31 +56,18 @@ def prepare(support: Path, destination: Path) -> None:
     ignore = shutil.ignore_patterns("__pycache__", "*.pyc")
     shutil.copytree(ROOT / "engine", app / "engine", ignore=ignore)
     shutil.copytree(ROOT / "mobile" / "ios" / "probe", app / "ios_probe", ignore=ignore)
-    versions = {}
-    for name, distribution in MODULES.items():
-        spec = specs[name]
-        source = Path(spec.origin)
-        if spec.submodule_search_locations:
-            shutil.copytree(source.parent, packages / name, ignore=ignore)
-        else:
-            shutil.copy2(source, packages / source.name)
-        dist = importlib.metadata.distribution(distribution)
-        versions[distribution] = dist.version
-        # Conserver licences et métadonnées nécessaires aux imports.
-        for entry in dist.files or []:
-            if ".dist-info" in entry.parts[0] and ".." not in entry.parts:
-                target = packages / entry
-                target.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copy2(dist.locate_file(entry), target)
-    binaries = [path for path in packages.rglob("*") if path.suffix in {".so", ".dylib"}]
-    if binaries:
-        raise ValueError(f"Dépendances non portables à empaqueter : {binaries}")
+    for wheel in lock["wheels"]:
+        with zipfile.ZipFile(wheels / wheel["filename"]) as bundle:
+            bundle.extractall(packages)
     plan_path = destination / "iOSTestbed.xctestplan"
     plan = json.loads(plan_path.read_text())
     plan["defaultOptions"]["commandLineArgumentEntries"] = [{"argument": "ios_probe"}]
     plan_path.write_text(json.dumps(plan, indent=2) + "\n")
     manifest = {
-        "schema": 1, "dependencies": versions,
+        "schema": 2, "dependencies": lock["wheels"],
+        "runtime_source": lock["runtime"],
+        "app_sha256": tree_hash(app), "packages_sha256": tree_hash(packages),
+        "upstream": json.loads((ROOT / "UPSTREAM.json").read_text()),
         "runtime": (support / "VERSIONS").read_text(),
         "git_commit": subprocess.check_output(
             ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True,
@@ -93,5 +82,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--support", type=Path, required=True)
     parser.add_argument("--destination", type=Path, default=ROOT / ".local" / "engine-ios-probe")
+    parser.add_argument("--wheels", type=Path, default=ROOT / ".local/locked-wheels")
     args = parser.parse_args()
-    prepare(args.support, args.destination)
+    prepare(args.support, args.destination, args.wheels)

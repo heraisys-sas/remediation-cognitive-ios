@@ -17,20 +17,24 @@ Ce n'est pas encore une application d'exercices utilisable.
 
 ## Préparer
 
-Utiliser un environnement de développement avec les dépendances du dépôt.
-Obtenir une distribution iOS de Python contenant `Python.xcframework`, `VERSIONS`
-et le projet `testbed`, et la décompresser dans `.local/ios-python`.
+Utiliser Python 3.13 dans un environnement isolé avec `requirements-test.txt`.
+Le verrou `probe-lock.json` fixe le runtime, l'archive et l'arbre extrait ainsi
+que les wheels de toutes les dépendances de test, avec leurs empreintes SHA-256.
 L'expérimentation utilise Python-Apple-support 3.13-b16 (Python 3.13.16).
 Le runtime reste ignoré par Git ; aucun binaire n'est commité.
 
 ```sh
+python -m pip download --no-deps -r requirements-test.txt --dest .local/locked-wheels
+python tools/ios/fetch_runtime.py
 python tools/ios/prepare_engine_probe.py --support .local/ios-python
 ```
 
 La préparation refuse d'écraser un projet existant. Elle copie uniquement
 `engine/`, la sonde et les dépendances Python pures de test. Elle ne copie ni
 `backend/data`, ni les environnements locaux, ni les réglages du navigateur.
-Le manifeste généré conserve versions du runtime, dépendances et commit source.
+Le préparateur ne copie aucun paquet de l'environnement du poste : il extrait
+seulement les wheels vérifiés. Le manifeste conserve versions, empreintes du
+bundle et des paquets, référence amont et commit iOS.
 
 ## Vérifier
 
@@ -59,6 +63,13 @@ Une compilation seule **ne prouve pas** le fonctionnement sur iPhone.
 La commande cible un Mac Apple Silicon. Pour un Mac Intel, remplacer `arm64`
 par `x86_64`. Le tiret impose la signature ad hoc des extensions Python du
 banc d'essai ; aucun certificat personnel n'est utilisé pour le simulateur.
+
+Le workflow `Exécution moteur sous iOS` prépare et exécute la sonde sur des
+simulateurs iPhone 17 et Air équipés d'iOS 26 ou ultérieur. Les logs, résultats
+XCTest et manifeste sont conservés comme artefacts. L'absence de runtime,
+l'échec d'exécution ou un nombre différent de 60 tests réussis fait échouer
+la vérification. Le lancement neutralise les options/plugins pytest externes.
+Cela ne remplace pas la recette sur un iPhone physique.
 
 ## Critères de décision
 
