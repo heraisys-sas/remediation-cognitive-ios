@@ -9,3 +9,6 @@ __pycache__/
 data/
 *.key
 *.pem
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm

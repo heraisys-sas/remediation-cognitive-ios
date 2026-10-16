@@ -1,0 +1,470 @@
+[
+  {
+    "id": "cm3-1-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 10 − 7 ?",
+      "methode": "Décompose le nombre à retirer en parts faciles, puis enlève-les successivement. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 3
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-02",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien manque-t-il à 7 pour faire 10 ?",
+      "methode": "Pars du nombre indiqué et cherche ce qu’il faut ajouter pour atteindre dix. Vérifie en réunissant le nombre de départ et ton complément."
+    },
+    "reponse": {
+      "valeur": 3
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-03",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 10 − 4 ?",
+      "methode": "Décompose le nombre à retirer en parts faciles, puis enlève-les successivement. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 6
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-04",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien manque-t-il à 5 pour faire 10 ?",
+      "methode": "Pars du nombre indiqué et cherche ce qu’il faut ajouter pour atteindre dix. Vérifie en réunissant le nombre de départ et ton complément."
+    },
+    "reponse": {
+      "valeur": 5
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-05",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien manque-t-il à 8 pour faire 10 ?",
+      "methode": "Pars du nombre indiqué et cherche ce qu’il faut ajouter pour atteindre dix. Vérifie en réunissant le nombre de départ et ton complément."
+    },
+    "reponse": {
+      "valeur": 2
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-06",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 10 − 5 ?",
+      "methode": "Décompose le nombre à retirer en parts faciles, puis enlève-les successivement. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 5
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-07",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 10 − 6 ?",
+      "methode": "Décompose le nombre à retirer en parts faciles, puis enlève-les successivement. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 4
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-08",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien manque-t-il à 6 pour faire 10 ?",
+      "methode": "Pars du nombre indiqué et cherche ce qu’il faut ajouter pour atteindre dix. Vérifie en réunissant le nombre de départ et ton complément."
+    },
+    "reponse": {
+      "valeur": 4
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-09",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 10 − 9 ?",
+      "methode": "Décompose le nombre à retirer en parts faciles, puis enlève-les successivement. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 1
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-10",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 10 − 8 ?",
+      "methode": "Décompose le nombre à retirer en parts faciles, puis enlève-les successivement. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 2
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-11",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 10 − 3 ?",
+      "methode": "Décompose le nombre à retirer en parts faciles, puis enlève-les successivement. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 7
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-12",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 10 − 10 ?",
+      "methode": "Décompose le nombre à retirer en parts faciles, puis enlève-les successivement. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 0
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-13",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien manque-t-il à 9 pour faire 10 ?",
+      "methode": "Pars du nombre indiqué et cherche ce qu’il faut ajouter pour atteindre dix. Vérifie en réunissant le nombre de départ et ton complément."
+    },
+    "reponse": {
+      "valeur": 1
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-14",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien manque-t-il à 4 pour faire 10 ?",
+      "methode": "Pars du nombre indiqué et cherche ce qu’il faut ajouter pour atteindre dix. Vérifie en réunissant le nombre de départ et ton complément."
+    },
+    "reponse": {
+      "valeur": 6
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-15",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 10 − 2 ?",
+      "methode": "Décompose le nombre à retirer en parts faciles, puis enlève-les successivement. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 8
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-16",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien manque-t-il à 1 pour faire 10 ?",
+      "methode": "Pars du nombre indiqué et cherche ce qu’il faut ajouter pour atteindre dix. Vérifie en réunissant le nombre de départ et ton complément."
+    },
+    "reponse": {
+      "valeur": 9
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-17",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien manque-t-il à 2 pour faire 10 ?",
+      "methode": "Pars du nombre indiqué et cherche ce qu’il faut ajouter pour atteindre dix. Vérifie en réunissant le nombre de départ et ton complément."
+    },
+    "reponse": {
+      "valeur": 8
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-1-18",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien manque-t-il à 3 pour faire 10 ?",
+      "methode": "Pars du nombre indiqué et cherche ce qu’il faut ajouter pour atteindre dix. Vérifie en réunissant le nombre de départ et ton complément."
+    },
+    "reponse": {
+      "valeur": 7
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

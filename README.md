@@ -9,17 +9,20 @@ Aucun exercice n'est présenté comme un test diagnostique validé.
 
 ## État réel
 
-Première expérimentation : exécuter le moteur Python existant dans le processus
-d'une app iOS, sans FastAPI et sans Mac serveur. Ce dépôt ne livre pas encore
-une application d'exercices utilisable. Voir [le banc d'essai](mobile/ios/README.md).
-La voix et la dictée natives, les correcteurs, les contenus et la persistance
-mobile restent à intégrer. PCC sera facultatif pour l'accompagnement.
+Le noyau Python a exécuté ses 60 tests sous iOS 26.5 sur simulateurs iPhone 17
+et Air. Un premier pilote Calcul mental réutilise maintenant le service et les
+correcteurs d'origine, avec contenu versionné, interface locale et sauvegarde
+transactionnelle. Voir [le banc d'essai et le pilote](mobile/ios/README.md).
+La validation du pilote sous iOS est distincte de celle du noyau ; consulter
+les résultats du workflow avant de le considérer comme exécuté.
+La voix et la dictée natives restent à intégrer. PCC sera facultatif.
 
 ## Origine et suivi
 
 `engine/` est une copie inchangée du moteur et de ses tests au commit `44acda5`
 de la branche `dev` du dépôt source. `UPSTREAM.json` conserve cette référence
-et les empreintes de tous les fichiers Python importés. La licence BSD originale
+et les empreintes du noyau ainsi que du service et des contenus importés.
+La licence BSD originale
 est conservée dans `LICENSE`.
 
 Les évolutions du dépôt source sont examinées avant portage : règles de correction,

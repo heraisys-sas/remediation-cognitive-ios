@@ -1,0 +1,57 @@
+{
+  "theme": "methodes",
+  "paliers": [
+    {
+      "id": "mt-palier-1",
+      "description": "Retenir un texte — répondre de mémoire, avec un rappel de la méthode PQRST",
+      "prerequis": [],
+      "fichier": "paliers/palier-01.json",
+      "nb_items": 12
+    },
+    {
+      "id": "mt-palier-2",
+      "description": "Choisir un plan — comparer des suites d’étapes pour atteindre un but",
+      "prerequis": [
+        "mt-palier-1"
+      ],
+      "fichier": "paliers/palier-02.json",
+      "nb_items": 8
+    },
+    {
+      "id": "mt-palier-3",
+      "description": "Se guider avant d’agir — choisir une question à se poser",
+      "prerequis": [
+        "mt-palier-2"
+      ],
+      "fichier": "paliers/palier-03.json",
+      "nb_items": 8
+    },
+    {
+      "id": "mt-palier-4",
+      "description": "Vérifier un plan — repérer une étape mal placée",
+      "prerequis": [
+        "mt-palier-3"
+      ],
+      "fichier": "paliers/palier-04.json",
+      "nb_items": 8
+    },
+    {
+      "id": "mt-palier-5",
+      "description": "Chercher une information utile — consulter le document pour répondre",
+      "prerequis": [
+        "mt-palier-4"
+      ],
+      "fichier": "paliers/palier-05.json",
+      "nb_items": 8
+    },
+    {
+      "id": "mt-palier-6",
+      "description": "Appliquer PQRST pas à pas — questionner, lire, reformuler et se tester",
+      "prerequis": [
+        "mt-palier-5"
+      ],
+      "fichier": "paliers/palier-06.json",
+      "nb_items": 4
+    }
+  ]
+}

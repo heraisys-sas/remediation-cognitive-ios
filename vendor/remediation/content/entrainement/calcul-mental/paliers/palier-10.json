@@ -1,0 +1,1046 @@
+[
+  {
+    "id": "cm4-10-9f87bda2da40",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un article coûte 160 €. Une remise de 15 % est appliquée. Quel est le prix final en euros ?",
+      "methode": "Calcule la réduction avec des repères comme dix pour cent, la moitié ou le quart, puis soustrais-la au prix initial.",
+      "famille_calcul": "remise"
+    },
+    "reponse": {
+      "valeur": 136
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-caf6b3a55201",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un budget de 240 € augmente de 15 %. Quel est le nouveau budget en euros ?",
+      "methode": "Calcule d’abord l’augmentation, puis ajoute-la à la valeur de départ. Vérifie que la valeur finale est supérieure.",
+      "famille_calcul": "hausse"
+    },
+    "reponse": {
+      "valeur": 276
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-b4f5596e26b5",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Après une remise de 20 %, un article coûte 128 €. Quel était son prix initial en euros ?",
+      "methode": "Le prix final représente cent pour cent moins la remise. Retrouve la base en divisant par cette proportion, puis vérifie vers l’avant.",
+      "famille_calcul": "base"
+    },
+    "reponse": {
+      "valeur": 160
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-aa5a2e9a025b",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Une quantité passe de 200 à 230. Quel est le pourcentage d’augmentation ?",
+      "methode": "Calcule l’écart, divise-le par la valeur de départ, puis exprime le rapport sur cent. Le dénominateur est la valeur initiale.",
+      "famille_calcul": "taux"
+    },
+    "reponse": {
+      "valeur": 15
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-b9e77cca30a4",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (57,5 + 18,75) × 4 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 305
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-56fa9cb0cbd7",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 15 % de 240 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 36
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-5d4c269dfaee",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un article coûte 200 €. Une remise de 25 % est appliquée. Quel est le prix final en euros ?",
+      "methode": "Calcule la réduction avec des repères comme dix pour cent, la moitié ou le quart, puis soustrais-la au prix initial.",
+      "famille_calcul": "remise"
+    },
+    "reponse": {
+      "valeur": 150
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-5069920577b6",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un budget de 320 € augmente de 25 %. Quel est le nouveau budget en euros ?",
+      "methode": "Calcule d’abord l’augmentation, puis ajoute-la à la valeur de départ. Vérifie que la valeur finale est supérieure.",
+      "famille_calcul": "hausse"
+    },
+    "reponse": {
+      "valeur": 400
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-26c4be51d6f7",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Après une remise de 20 %, un article coûte 160 €. Quel était son prix initial en euros ?",
+      "methode": "Le prix final représente cent pour cent moins la remise. Retrouve la base en divisant par cette proportion, puis vérifie vers l’avant.",
+      "famille_calcul": "base"
+    },
+    "reponse": {
+      "valeur": 200
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-cab686fd4dbf",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Une quantité passe de 300 à 360. Quel est le pourcentage d’augmentation ?",
+      "methode": "Calcule l’écart, divise-le par la valeur de départ, puis exprime le rapport sur cent. Le dénominateur est la valeur initiale.",
+      "famille_calcul": "taux"
+    },
+    "reponse": {
+      "valeur": 20
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-3870c4ee8792",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (64,5 + 21,75) × 4 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 345
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-0c75a31608a5",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 15 % de 320 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 48
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-e976df70881e",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un article coûte 240 €. Une remise de 20 % est appliquée. Quel est le prix final en euros ?",
+      "methode": "Calcule la réduction avec des repères comme dix pour cent, la moitié ou le quart, puis soustrais-la au prix initial.",
+      "famille_calcul": "remise"
+    },
+    "reponse": {
+      "valeur": 192
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-161b1eca5009",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un budget de 400 € augmente de 10 %. Quel est le nouveau budget en euros ?",
+      "methode": "Calcule d’abord l’augmentation, puis ajoute-la à la valeur de départ. Vérifie que la valeur finale est supérieure.",
+      "famille_calcul": "hausse"
+    },
+    "reponse": {
+      "valeur": 440
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-0993e2c4fadb",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Après une remise de 20 %, un article coûte 192 €. Quel était son prix initial en euros ?",
+      "methode": "Le prix final représente cent pour cent moins la remise. Retrouve la base en divisant par cette proportion, puis vérifie vers l’avant.",
+      "famille_calcul": "base"
+    },
+    "reponse": {
+      "valeur": 240
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-b7744b0b4723",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Une quantité passe de 400 à 500. Quel est le pourcentage d’augmentation ?",
+      "methode": "Calcule l’écart, divise-le par la valeur de départ, puis exprime le rapport sur cent. Le dénominateur est la valeur initiale.",
+      "famille_calcul": "taux"
+    },
+    "reponse": {
+      "valeur": 25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-16b8741a4769",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (71,5 + 24,75) × 4 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 385
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-21f73cf3f905",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 15 % de 400 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 60
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-2b310f32984a",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un article coûte 280 €. Une remise de 15 % est appliquée. Quel est le prix final en euros ?",
+      "methode": "Calcule la réduction avec des repères comme dix pour cent, la moitié ou le quart, puis soustrais-la au prix initial.",
+      "famille_calcul": "remise"
+    },
+    "reponse": {
+      "valeur": 238
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-02c9abbeb14c",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un budget de 480 € augmente de 20 %. Quel est le nouveau budget en euros ?",
+      "methode": "Calcule d’abord l’augmentation, puis ajoute-la à la valeur de départ. Vérifie que la valeur finale est supérieure.",
+      "famille_calcul": "hausse"
+    },
+    "reponse": {
+      "valeur": 576
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-5972275786c1",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Après une remise de 20 %, un article coûte 224 €. Quel était son prix initial en euros ?",
+      "methode": "Le prix final représente cent pour cent moins la remise. Retrouve la base en divisant par cette proportion, puis vérifie vers l’avant.",
+      "famille_calcul": "base"
+    },
+    "reponse": {
+      "valeur": 280
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-42055ca591d1",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Une quantité passe de 500 à 650. Quel est le pourcentage d’augmentation ?",
+      "methode": "Calcule l’écart, divise-le par la valeur de départ, puis exprime le rapport sur cent. Le dénominateur est la valeur initiale.",
+      "famille_calcul": "taux"
+    },
+    "reponse": {
+      "valeur": 30
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-b9a7be09836a",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (78,5 + 27,75) × 4 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 425
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-828eb118dd2a",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 15 % de 480 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 72
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-893028175bb6",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un article coûte 320 €. Une remise de 25 % est appliquée. Quel est le prix final en euros ?",
+      "methode": "Calcule la réduction avec des repères comme dix pour cent, la moitié ou le quart, puis soustrais-la au prix initial.",
+      "famille_calcul": "remise"
+    },
+    "reponse": {
+      "valeur": 240
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-7e047166036e",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un budget de 560 € augmente de 15 %. Quel est le nouveau budget en euros ?",
+      "methode": "Calcule d’abord l’augmentation, puis ajoute-la à la valeur de départ. Vérifie que la valeur finale est supérieure.",
+      "famille_calcul": "hausse"
+    },
+    "reponse": {
+      "valeur": 644
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-86b23cb11579",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Après une remise de 20 %, un article coûte 256 €. Quel était son prix initial en euros ?",
+      "methode": "Le prix final représente cent pour cent moins la remise. Retrouve la base en divisant par cette proportion, puis vérifie vers l’avant.",
+      "famille_calcul": "base"
+    },
+    "reponse": {
+      "valeur": 320
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-1f3a8b7d7721",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Une quantité passe de 600 à 810. Quel est le pourcentage d’augmentation ?",
+      "methode": "Calcule l’écart, divise-le par la valeur de départ, puis exprime le rapport sur cent. Le dénominateur est la valeur initiale.",
+      "famille_calcul": "taux"
+    },
+    "reponse": {
+      "valeur": 35
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-934faf5a9f2f",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (85,5 + 30,75) × 4 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 465
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-ddc3a5a658b7",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 15 % de 560 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 84
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-a26f7c0dc012",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un article coûte 360 €. Une remise de 20 % est appliquée. Quel est le prix final en euros ?",
+      "methode": "Calcule la réduction avec des repères comme dix pour cent, la moitié ou le quart, puis soustrais-la au prix initial.",
+      "famille_calcul": "remise"
+    },
+    "reponse": {
+      "valeur": 288
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-1d0fc812072f",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un budget de 640 € augmente de 25 %. Quel est le nouveau budget en euros ?",
+      "methode": "Calcule d’abord l’augmentation, puis ajoute-la à la valeur de départ. Vérifie que la valeur finale est supérieure.",
+      "famille_calcul": "hausse"
+    },
+    "reponse": {
+      "valeur": 800
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-7132892e1504",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Après une remise de 20 %, un article coûte 288 €. Quel était son prix initial en euros ?",
+      "methode": "Le prix final représente cent pour cent moins la remise. Retrouve la base en divisant par cette proportion, puis vérifie vers l’avant.",
+      "famille_calcul": "base"
+    },
+    "reponse": {
+      "valeur": 360
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-227d9f9903b8",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Une quantité passe de 700 à 980. Quel est le pourcentage d’augmentation ?",
+      "methode": "Calcule l’écart, divise-le par la valeur de départ, puis exprime le rapport sur cent. Le dénominateur est la valeur initiale.",
+      "famille_calcul": "taux"
+    },
+    "reponse": {
+      "valeur": 40
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-a198a395ce36",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (92,5 + 33,75) × 4 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 505
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-10-c25a28a25482",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 10,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 15 % de 640 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 96
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

@@ -1,0 +1,1082 @@
+[
+  {
+    "id": "ev2-4-01",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "On vous laisse une semaine pour répondre. Quel nom désigne cette période dont vous disposez pour accomplir la démarche ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : organisation du temps."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « dé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "5 lettres, première lettre « D »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "délai",
+      "variantes": [
+        "durée",
+        "temps imparti",
+        "temps accordé"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-02",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Deux tâches vous attendent ; l'une doit passer avant les autres. Quel nom désigne cette place au premier rang ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : organisation."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pri… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "priorité",
+      "variantes": [
+        "primauté"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-03",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Deux personnes font chacune des concessions pour aboutir à un accord. Comment nommer cet accord ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : relations et décisions."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « com… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "compromis",
+      "variantes": [
+        "arrangement",
+        "terrain d’entente",
+        "terrain d'entente"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-04",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Vous remettez un travail à un collègue en étant assuré de pouvoir compter sur lui. Quel sentiment éprouvez-vous ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : relations."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « con… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "confiance",
+      "variantes": [
+        "assurance"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-05",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Avant de traverser, une personne vérifie les deux côtés pour éviter un danger. Quelle qualité guide sa conduite ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : manières d'agir."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pru… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "prudence",
+      "variantes": [
+        "précaution"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-06",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une personne organise ses démarches et prend ses décisions sans devoir être guidée. Quelle capacité manifeste-t-elle ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : capacités personnelles."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « o… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "autonomie",
+      "variantes": [
+        "indépendance"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-07",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "La file avance lentement, mais vous restez calme et acceptez d'attendre. Quelle qualité montrez-vous ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : qualités personnelles."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pa… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "patience"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-08",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Les informations d'un entretien doivent rester réservées aux personnes autorisées. Quel principe doit être respecté ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : circulation de l'information."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « con… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "15 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "confidentialité",
+      "variantes": [
+        "secret",
+        "discrétion"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-09",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une personne doit répondre des décisions qu'elle a prises et de leurs conséquences. Quel nom désigne cette obligation ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : engagements."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « res… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "14 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "responsabilité"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-10",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Plusieurs collègues travaillent ensemble à un même résultat en s'entraidant. Comment nommer cette manière d'agir ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : travail collectif."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « co… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "coopération",
+      "variantes": [
+        "collaboration",
+        "entraide"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-11",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Vous ignorez si votre demande sera acceptée ou refusée. Quel nom désigne l'état dans lequel vous êtes, faute de pouvoir connaître l'issue ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : connaissance d'une situation."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « in… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « I »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "incertitude",
+      "variantes": [
+        "doute"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-12",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Le problème qui vous préoccupait vient d'être résolu ; la tension retombe. Quel sentiment apparaît ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : émotions."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « sou… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « S »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "soulagement",
+      "variantes": [
+        "apaisement"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-13",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Le résultat attendu avec espoir n'est pas au rendez-vous. Quel sentiment peut-on éprouver ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : émotions."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « dé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « D »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "déception",
+      "variantes": [
+        "désillusion",
+        "désappointement"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-14",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une personne vous a apporté une aide précieuse ; vous souhaitez la remercier pour ce qu'elle a fait. Quel sentiment éprouvez-vous envers elle ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : relations."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « re… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "14 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "reconnaissance",
+      "variantes": [
+        "gratitude"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-15",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "On adapte l'aide aux besoins de chacun afin que le traitement soit juste. Quel principe cherche-t-on à respecter ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : principes de justice."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « é… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "6 lettres, première lettre « É »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "équité",
+      "variantes": [
+        "justice"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-16",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Vous rendez à une personne le soutien qu'elle vous a apporté : l'échange va dans les deux sens. Quel principe cela illustre-t-il ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : relations."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ré… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "réciprocité"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-17",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Les différentes parties d'un exposé s'accordent entre elles et ne se contredisent pas. Quelle qualité possède cet exposé ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : qualité d'un raisonnement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « co… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "cohérence",
+      "variantes": [
+        "logique"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-18",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Un appareil donne régulièrement un résultat exact et fonctionne sans défaillance. Quelle qualité lui attribue-t-on ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : qualité d'un outil."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « fi… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « F »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "fiabilité",
+      "variantes": [
+        "sûreté"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-19",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une remarque répond exactement au problème discuté. Quel nom désigne le fait qu'elle convient au sujet ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : qualité d'une contribution."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « per… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "pertinence",
+      "variantes": [
+        "à-propos",
+        "adéquation"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-20",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une personne reste attentive aux signaux qui pourraient annoncer un danger. Quel état maintient-elle pour pouvoir réagir rapidement ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : attention."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « vi… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « V »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "vigilance",
+      "variantes": [
+        "attention"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-21",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une collègue a du temps libre et peut vous aider maintenant. Quel nom désigne le fait qu'elle soit en mesure de vous consacrer ce temps ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : organisation personnelle."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « di… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "13 lettres, première lettre « D »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "disponibilité"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-22",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Vous cherchez spontanément à comprendre un sujet nouveau et multipliez les questions pour en savoir davantage. Quelle disposition vous anime ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : qualités personnelles."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « cu… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "curiosité",
+      "variantes": [
+        "intérêt",
+        "soif d'apprendre"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-23",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Malgré plusieurs difficultés, une personne poursuit son effort vers son objectif. Quelle qualité manifeste-t-elle ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : qualités personnelles."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « per… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "persévérance",
+      "variantes": [
+        "ténacité",
+        "persistance",
+        "constance"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-4-24",
+    "palier": 11,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une personne accepte facilement d'adapter ses habitudes lorsque la situation change. Quelle qualité, également associée à ce qui se plie sans casser, manifeste-t-elle ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : adaptation."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « sou… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « S »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "souplesse",
+      "variantes": [
+        "flexibilité",
+        "adaptabilité"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

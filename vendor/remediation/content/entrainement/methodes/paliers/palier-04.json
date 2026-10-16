@@ -1,0 +1,322 @@
+[
+  {
+    "id": "mt3-4-verif-01",
+    "type": "plan-a-verifier",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "mt-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Vérifier un plan : lis les contraintes, puis le plan. Choisis la seule étape à déplacer pour que tout le plan respecte ces contraintes.",
+      "enonce": "La peinture choisie doit être achetée avant de préparer le mélange. Le mur doit ensuite être peint avec ce mélange. Quelle seule étape faut-il déplacer, sans changer l’ordre des deux autres ?",
+      "options": [
+        "Acheter la peinture",
+        "Préparer le mélange",
+        "Peindre le mur"
+      ],
+      "aide": "Pour chaque étape, cherche ce qui doit être terminé avant elle.",
+      "plan": [
+        "Préparer le mélange",
+        "Peindre le mur",
+        "Acheter la peinture"
+      ]
+    },
+    "reponse": {
+      "valeur": "Acheter la peinture"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-4-verif-02",
+    "type": "plan-a-verifier",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "mt-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Vérifier un plan : lis les contraintes, puis le plan. Choisis la seule étape à déplacer pour que tout le plan respecte ces contraintes.",
+      "enonce": "Le loueur confirme une réservation seulement après validation du devis. Le retrait du camion exige cette confirmation. Quelle seule étape faut-il déplacer, sans changer l’ordre des deux autres ?",
+      "options": [
+        "Valider le devis",
+        "Retirer le camion",
+        "Confirmer la réservation"
+      ],
+      "aide": "Pour chaque étape, cherche ce qui doit être terminé avant elle.",
+      "plan": [
+        "Retirer le camion",
+        "Valider le devis",
+        "Confirmer la réservation"
+      ]
+    },
+    "reponse": {
+      "valeur": "Retirer le camion"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-4-verif-03",
+    "type": "plan-a-verifier",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "mt-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Vérifier un plan : lis les contraintes, puis le plan. Choisis la seule étape à déplacer pour que tout le plan respecte ces contraintes.",
+      "enonce": "Le portail produit un formulaire seulement après sélection de la demande. Il faut compléter ce formulaire avant de transmettre le dossier. Quelle seule étape faut-il déplacer, sans changer l’ordre des deux autres ?",
+      "options": [
+        "Transmettre le dossier",
+        "Sélectionner la demande",
+        "Compléter le formulaire"
+      ],
+      "aide": "Pour chaque étape, cherche ce qui doit être terminé avant elle.",
+      "plan": [
+        "Compléter le formulaire",
+        "Transmettre le dossier",
+        "Sélectionner la demande"
+      ]
+    },
+    "reponse": {
+      "valeur": "Sélectionner la demande"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-4-verif-04",
+    "type": "plan-a-verifier",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "mt-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Vérifier un plan : lis les contraintes, puis le plan. Choisis la seule étape à déplacer pour que tout le plan respecte ces contraintes.",
+      "enonce": "La recette demande de verser l’eau dans la casserole, de la porter à ébullition puis d’y ajouter les pâtes. Quelle seule étape faut-il déplacer, sans changer l’ordre des deux autres ?",
+      "options": [
+        "Ajouter les pâtes",
+        "Porter l’eau à ébullition",
+        "Verser l’eau dans la casserole"
+      ],
+      "aide": "Pour chaque étape, cherche ce qui doit être terminé avant elle.",
+      "plan": [
+        "Ajouter les pâtes",
+        "Verser l’eau dans la casserole",
+        "Porter l’eau à ébullition"
+      ]
+    },
+    "reponse": {
+      "valeur": "Ajouter les pâtes"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-4-verif-05",
+    "type": "plan-a-verifier",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "mt-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Vérifier un plan : lis les contraintes, puis le plan. Choisis la seule étape à déplacer pour que tout le plan respecte ces contraintes.",
+      "enonce": "Pour ce gâteau, la recette impose un four préchauffé avant l’enfournement. Le minuteur démarre une fois le gâteau enfourné. Quelle seule étape faut-il déplacer, sans changer l’ordre des deux autres ?",
+      "options": [
+        "Démarrer le minuteur",
+        "Enfourner le gâteau",
+        "Préchauffer le four"
+      ],
+      "aide": "Pour chaque étape, cherche ce qui doit être terminé avant elle.",
+      "plan": [
+        "Enfourner le gâteau",
+        "Démarrer le minuteur",
+        "Préchauffer le four"
+      ]
+    },
+    "reponse": {
+      "valeur": "Préchauffer le four"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-4-verif-06",
+    "type": "plan-a-verifier",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "mt-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Vérifier un plan : lis les contraintes, puis le plan. Choisis la seule étape à déplacer pour que tout le plan respecte ces contraintes.",
+      "enonce": "Le courrier doit être signé avant d’être mis sous enveloppe. L’enveloppe doit être fermée avant le dépôt au guichet. Quelle seule étape faut-il déplacer, sans changer l’ordre des deux autres ?",
+      "options": [
+        "Signer le courrier",
+        "Déposer l’enveloppe au guichet",
+        "Fermer l’enveloppe contenant le courrier"
+      ],
+      "aide": "Pour chaque étape, cherche ce qui doit être terminé avant elle.",
+      "plan": [
+        "Déposer l’enveloppe au guichet",
+        "Signer le courrier",
+        "Fermer l’enveloppe contenant le courrier"
+      ]
+    },
+    "reponse": {
+      "valeur": "Déposer l’enveloppe au guichet"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-4-verif-07",
+    "type": "plan-a-verifier",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "mt-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Vérifier un plan : lis les contraintes, puis le plan. Choisis la seule étape à déplacer pour que tout le plan respecte ces contraintes.",
+      "enonce": "Le service envoie un code après validation du compte. Ce code est nécessaire pour confirmer le rendez-vous. Quelle seule étape faut-il déplacer, sans changer l’ordre des deux autres ?",
+      "options": [
+        "Confirmer le rendez-vous avec le code",
+        "Recevoir le code",
+        "Valider le compte"
+      ],
+      "aide": "Pour chaque étape, cherche ce qui doit être terminé avant elle.",
+      "plan": [
+        "Recevoir le code",
+        "Confirmer le rendez-vous avec le code",
+        "Valider le compte"
+      ]
+    },
+    "reponse": {
+      "valeur": "Valider le compte"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt3-4-verif-08",
+    "type": "plan-a-verifier",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "mt-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Vérifier un plan : lis les contraintes, puis le plan. Choisis la seule étape à déplacer pour que tout le plan respecte ces contraintes.",
+      "enonce": "L’étiquette est calculée à partir du poids du colis fermé. Le dépôt exige que cette étiquette soit collée sur le colis. Quelle seule étape faut-il déplacer, sans changer l’ordre des deux autres ?",
+      "options": [
+        "Fermer et peser le colis",
+        "Éditer et coller l’étiquette",
+        "Déposer le colis"
+      ],
+      "aide": "Pour chaque étape, cherche ce qui doit être terminé avant elle.",
+      "plan": [
+        "Déposer le colis",
+        "Fermer et peser le colis",
+        "Éditer et coller l’étiquette"
+      ]
+    },
+    "reponse": {
+      "valeur": "Déposer le colis"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_methodes.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

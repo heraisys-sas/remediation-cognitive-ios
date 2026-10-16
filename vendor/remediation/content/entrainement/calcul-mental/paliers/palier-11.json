@@ -1,0 +1,1046 @@
+[
+  {
+    "id": "cm4-11-b65e72e9ca82",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 6 utilisations : offre A, 18 € fixes puis 7 € par utilisation ; offre B, 6 € fixes puis 11 € par utilisation. De combien B coûte-t-elle plus que A, en euros ?",
+      "methode": "Calcule le coût complet de chaque offre, frais fixes compris, pour la même quantité. Soustrais ensuite les deux coûts dans l’ordre demandé.",
+      "famille_calcul": "offres"
+    },
+    "reponse": {
+      "valeur": 12
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-2cf8ffcad597",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Offre A : 60 € fixes et 4 € par utilisation. Offre B : 12 € fixes et 8 € par utilisation. À combien d’utilisations leurs coûts sont-ils égaux ?",
+      "methode": "Calcule l’écart des frais fixes et l’économie par utilisation. Cherche combien d’utilisations compensent exactement cet écart.",
+      "famille_calcul": "seuil"
+    },
+    "reponse": {
+      "valeur": 12
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-415946217126",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "3 articles à 17 €. Livraison de 8 €, gratuite dès 60 € d’achats (seuil inclus). Quel total payer en euros ?",
+      "methode": "Calcule le panier avant la livraison. Applique ensuite le seuil à ce montant précis, puis ajoute les frais éventuels.",
+      "famille_calcul": "condition"
+    },
+    "reponse": {
+      "valeur": 59
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-11ba3e17f237",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un lot de 50 pièces coûte 180 €. Parmi elles, 5 sont inutilisables. Quel coût par pièce utilisable, en euros ?",
+      "methode": "Calcule combien d’éléments restent utilisables après les pertes, puis répartis le coût total entre eux.",
+      "famille_calcul": "rendement"
+    },
+    "reponse": {
+      "valeur": 4
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-dbda86811367",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (67,5 + 18,75) × 6 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 517.5
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-0e8f516bc652",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 20 % de 280 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 56
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-8cc268d3bf0f",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 7 utilisations : offre A, 20 € fixes puis 7 € par utilisation ; offre B, 7 € fixes puis 11 € par utilisation. De combien B coûte-t-elle plus que A, en euros ?",
+      "methode": "Calcule le coût complet de chaque offre, frais fixes compris, pour la même quantité. Soustrais ensuite les deux coûts dans l’ordre demandé.",
+      "famille_calcul": "offres"
+    },
+    "reponse": {
+      "valeur": 15
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-d1f995822b13",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Offre A : 72 € fixes et 4 € par utilisation. Offre B : 16 € fixes et 8 € par utilisation. À combien d’utilisations leurs coûts sont-ils égaux ?",
+      "methode": "Calcule l’écart des frais fixes et l’économie par utilisation. Cherche combien d’utilisations compensent exactement cet écart.",
+      "famille_calcul": "seuil"
+    },
+    "reponse": {
+      "valeur": 14
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-9ff13e39c321",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "4 articles à 17 €. Livraison de 8 €, gratuite dès 68 € d’achats (seuil inclus). Quel total payer en euros ?",
+      "methode": "Calcule le panier avant la livraison. Applique ensuite le seuil à ce montant précis, puis ajoute les frais éventuels.",
+      "famille_calcul": "condition"
+    },
+    "reponse": {
+      "valeur": 68
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-5b05803eda5d",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un lot de 60 pièces coûte 270 €. Parmi elles, 6 sont inutilisables. Quel coût par pièce utilisable, en euros ?",
+      "methode": "Calcule combien d’éléments restent utilisables après les pertes, puis répartis le coût total entre eux.",
+      "famille_calcul": "rendement"
+    },
+    "reponse": {
+      "valeur": 5
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-797c602fa66c",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (74,5 + 21,75) × 6 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 577.5
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-df3018dc0485",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 20 % de 360 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 72
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-58083d39c26b",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 8 utilisations : offre A, 22 € fixes puis 7 € par utilisation ; offre B, 8 € fixes puis 11 € par utilisation. De combien B coûte-t-elle plus que A, en euros ?",
+      "methode": "Calcule le coût complet de chaque offre, frais fixes compris, pour la même quantité. Soustrais ensuite les deux coûts dans l’ordre demandé.",
+      "famille_calcul": "offres"
+    },
+    "reponse": {
+      "valeur": 18
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-76f713affb86",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Offre A : 84 € fixes et 4 € par utilisation. Offre B : 20 € fixes et 8 € par utilisation. À combien d’utilisations leurs coûts sont-ils égaux ?",
+      "methode": "Calcule l’écart des frais fixes et l’économie par utilisation. Cherche combien d’utilisations compensent exactement cet écart.",
+      "famille_calcul": "seuil"
+    },
+    "reponse": {
+      "valeur": 16
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-67df4653ea04",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "5 articles à 17 €. Livraison de 8 €, gratuite dès 80 € d’achats (seuil inclus). Quel total payer en euros ?",
+      "methode": "Calcule le panier avant la livraison. Applique ensuite le seuil à ce montant précis, puis ajoute les frais éventuels.",
+      "famille_calcul": "condition"
+    },
+    "reponse": {
+      "valeur": 85
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-66e5574fbf86",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un lot de 70 pièces coûte 378 €. Parmi elles, 7 sont inutilisables. Quel coût par pièce utilisable, en euros ?",
+      "methode": "Calcule combien d’éléments restent utilisables après les pertes, puis répartis le coût total entre eux.",
+      "famille_calcul": "rendement"
+    },
+    "reponse": {
+      "valeur": 6
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-53bf00b4261c",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (81,5 + 24,75) × 6 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 637.5
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-3eecf3a58e61",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 20 % de 440 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 88
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-dc955d09994d",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 9 utilisations : offre A, 24 € fixes puis 7 € par utilisation ; offre B, 9 € fixes puis 11 € par utilisation. De combien B coûte-t-elle plus que A, en euros ?",
+      "methode": "Calcule le coût complet de chaque offre, frais fixes compris, pour la même quantité. Soustrais ensuite les deux coûts dans l’ordre demandé.",
+      "famille_calcul": "offres"
+    },
+    "reponse": {
+      "valeur": 21
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-cd5bd1e56e83",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Offre A : 96 € fixes et 4 € par utilisation. Offre B : 24 € fixes et 8 € par utilisation. À combien d’utilisations leurs coûts sont-ils égaux ?",
+      "methode": "Calcule l’écart des frais fixes et l’économie par utilisation. Cherche combien d’utilisations compensent exactement cet écart.",
+      "famille_calcul": "seuil"
+    },
+    "reponse": {
+      "valeur": 18
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-9a2dbba33bb1",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "6 articles à 17 €. Livraison de 8 €, gratuite dès 110 € d’achats (seuil inclus). Quel total payer en euros ?",
+      "methode": "Calcule le panier avant la livraison. Applique ensuite le seuil à ce montant précis, puis ajoute les frais éventuels.",
+      "famille_calcul": "condition"
+    },
+    "reponse": {
+      "valeur": 110
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-dd291a97fc41",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un lot de 80 pièces coûte 504 €. Parmi elles, 8 sont inutilisables. Quel coût par pièce utilisable, en euros ?",
+      "methode": "Calcule combien d’éléments restent utilisables après les pertes, puis répartis le coût total entre eux.",
+      "famille_calcul": "rendement"
+    },
+    "reponse": {
+      "valeur": 7
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-444936e938cb",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (88,5 + 27,75) × 6 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 697.5
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-b63b5be48193",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 20 % de 520 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 104
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-05f23247216b",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 10 utilisations : offre A, 26 € fixes puis 7 € par utilisation ; offre B, 10 € fixes puis 11 € par utilisation. De combien B coûte-t-elle plus que A, en euros ?",
+      "methode": "Calcule le coût complet de chaque offre, frais fixes compris, pour la même quantité. Soustrais ensuite les deux coûts dans l’ordre demandé.",
+      "famille_calcul": "offres"
+    },
+    "reponse": {
+      "valeur": 24
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-f899b52c51d3",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Offre A : 108 € fixes et 4 € par utilisation. Offre B : 28 € fixes et 8 € par utilisation. À combien d’utilisations leurs coûts sont-ils égaux ?",
+      "methode": "Calcule l’écart des frais fixes et l’économie par utilisation. Cherche combien d’utilisations compensent exactement cet écart.",
+      "famille_calcul": "seuil"
+    },
+    "reponse": {
+      "valeur": 20
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-2d962402d311",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "7 articles à 17 €. Livraison de 8 €, gratuite dès 119 € d’achats (seuil inclus). Quel total payer en euros ?",
+      "methode": "Calcule le panier avant la livraison. Applique ensuite le seuil à ce montant précis, puis ajoute les frais éventuels.",
+      "famille_calcul": "condition"
+    },
+    "reponse": {
+      "valeur": 119
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-997b30527f0a",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un lot de 90 pièces coûte 648 €. Parmi elles, 9 sont inutilisables. Quel coût par pièce utilisable, en euros ?",
+      "methode": "Calcule combien d’éléments restent utilisables après les pertes, puis répartis le coût total entre eux.",
+      "famille_calcul": "rendement"
+    },
+    "reponse": {
+      "valeur": 8
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-9b450cb46ae7",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (95,5 + 30,75) × 6 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 757.5
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-0f8230b6e8d4",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 20 % de 600 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 120
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-4b6dfc880837",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 11 utilisations : offre A, 28 € fixes puis 7 € par utilisation ; offre B, 11 € fixes puis 11 € par utilisation. De combien B coûte-t-elle plus que A, en euros ?",
+      "methode": "Calcule le coût complet de chaque offre, frais fixes compris, pour la même quantité. Soustrais ensuite les deux coûts dans l’ordre demandé.",
+      "famille_calcul": "offres"
+    },
+    "reponse": {
+      "valeur": 27
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-7021404a93c5",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Offre A : 120 € fixes et 4 € par utilisation. Offre B : 32 € fixes et 8 € par utilisation. À combien d’utilisations leurs coûts sont-ils égaux ?",
+      "methode": "Calcule l’écart des frais fixes et l’économie par utilisation. Cherche combien d’utilisations compensent exactement cet écart.",
+      "famille_calcul": "seuil"
+    },
+    "reponse": {
+      "valeur": 22
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-b1f1a8325347",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "8 articles à 17 €. Livraison de 8 €, gratuite dès 130 € d’achats (seuil inclus). Quel total payer en euros ?",
+      "methode": "Calcule le panier avant la livraison. Applique ensuite le seuil à ce montant précis, puis ajoute les frais éventuels.",
+      "famille_calcul": "condition"
+    },
+    "reponse": {
+      "valeur": 136
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-16d1244a90f9",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un lot de 100 pièces coûte 810 €. Parmi elles, 10 sont inutilisables. Quel coût par pièce utilisable, en euros ?",
+      "methode": "Calcule combien d’éléments restent utilisables après les pertes, puis répartis le coût total entre eux.",
+      "famille_calcul": "rendement"
+    },
+    "reponse": {
+      "valeur": 9
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-a6169d6b00fb",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (102,5 + 33,75) × 6 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 817.5
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-11-63a4ccc7c415",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 11,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 20 % de 680 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 136
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

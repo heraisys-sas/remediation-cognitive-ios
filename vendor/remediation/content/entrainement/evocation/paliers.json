@@ -1,0 +1,150 @@
+{
+  "theme": "evocation",
+  "paliers": [
+    {
+      "id": "ev-palier-1",
+      "description": "Reconnaître le mot juste parmi trois propositions",
+      "prerequis": [],
+      "fichier": "paliers/palier-01.json",
+      "nb_items": 10
+    },
+    {
+      "id": "ev-palier-2",
+      "description": "Retrouver des mots concrets à partir de leur définition",
+      "prerequis": [
+        "ev-palier-1"
+      ],
+      "fichier": "paliers/palier-02.json",
+      "nb_items": 10
+    },
+    {
+      "id": "ev-palier-3",
+      "description": "Retrouver des notions plus abstraites, avec indices progressifs",
+      "prerequis": [
+        "ev-palier-2"
+      ],
+      "fichier": "paliers/palier-03.json",
+      "nb_items": 10
+    },
+    {
+      "id": "ev-palier-4",
+      "description": "Retrouver le contexte d'une information (mémoire de la source)",
+      "prerequis": [
+        "ev-palier-3"
+      ],
+      "fichier": "paliers/palier-04.json",
+      "nb_items": 10
+    },
+    {
+      "id": "ev-palier-5",
+      "description": "Alterner reconnaissance et rappel indicé",
+      "prerequis": [
+        "ev-palier-4"
+      ],
+      "fichier": "paliers/palier-05.json",
+      "nb_items": 10
+    },
+    {
+      "id": "ev-palier-6",
+      "description": "Analyse sémantique (SFA) : décrire le mot par ses caractéristiques, puis le nommer",
+      "prerequis": [
+        "ev-palier-5"
+      ],
+      "fichier": "paliers/palier-06.json",
+      "nb_items": 6
+    },
+    {
+      "id": "ev-palier-7",
+      "description": "Analyse phonologique (PCA) : décomposer le mot par ses sons, puis le nommer",
+      "prerequis": [
+        "ev-palier-6"
+      ],
+      "fichier": "paliers/palier-07.json",
+      "nb_items": 6
+    },
+    {
+      "id": "ev-palier-8",
+      "description": "QCM de soutien",
+      "prerequis": [],
+      "fichier": "paliers/palier-08.json",
+      "nb_items": 24
+    },
+    {
+      "id": "ev-palier-9",
+      "description": "Objets familiers",
+      "prerequis": [],
+      "fichier": "paliers/palier-09.json",
+      "nb_items": 24
+    },
+    {
+      "id": "ev-palier-10",
+      "description": "Mots précis et documents",
+      "prerequis": [],
+      "fichier": "paliers/palier-10.json",
+      "nb_items": 24
+    },
+    {
+      "id": "ev-palier-11",
+      "description": "Notions en contexte",
+      "prerequis": [],
+      "fichier": "paliers/palier-11.json",
+      "nb_items": 24
+    },
+    {
+      "id": "ev-palier-12",
+      "description": "Verbes utiles",
+      "prerequis": [],
+      "fichier": "paliers/palier-12.json",
+      "nb_items": 24
+    },
+    {
+      "id": "ev-palier-13",
+      "description": "Mots en situation",
+      "prerequis": [],
+      "fichier": "paliers/palier-13.json",
+      "nb_items": 24
+    },
+    {
+      "id": "ev-palier-14",
+      "description": "Culture générale courante",
+      "prerequis": [],
+      "fichier": "paliers/palier-14.json",
+      "nb_items": 24
+    },
+    {
+      "id": "ev-palier-15",
+      "description": "Concepts de culture générale",
+      "prerequis": [],
+      "fichier": "paliers/palier-15.json",
+      "nb_items": 24
+    },
+    {
+      "id": "ev-palier-16",
+      "description": "Nuances de langue soutenue",
+      "prerequis": [],
+      "fichier": "paliers/palier-16.json",
+      "nb_items": 24
+    },
+    {
+      "id": "ev-palier-17",
+      "description": "Verbes de précision",
+      "prerequis": [],
+      "fichier": "paliers/palier-17.json",
+      "nb_items": 24
+    },
+    {
+      "id": "ev-palier-18",
+      "description": "Interprétation et raisonnement",
+      "prerequis": [],
+      "fichier": "paliers/palier-18.json",
+      "nb_items": 24
+    },
+    {
+      "id": "ev-palier-19",
+      "description": "Nuances soutenues en situation",
+      "prerequis": [],
+      "fichier": "paliers/palier-19.json",
+      "nb_items": 24
+    }
+  ]
+}

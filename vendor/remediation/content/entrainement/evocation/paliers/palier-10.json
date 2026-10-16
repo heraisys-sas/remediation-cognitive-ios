@@ -1,0 +1,1040 @@
+[
+  {
+    "id": "ev2-3-01",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Ustensile à large ouverture prolongée par un tube étroit, utilisé pour remplir une bouteille.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : ustensiles de cuisine."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « en… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « E »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "entonnoir"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-02",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Pièce articulée reliant une porte à son cadre et lui permettant de pivoter.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : quincaillerie."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « char… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "charnière",
+      "variantes": [
+        "paumelle"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-03",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Dispositif qui commande le chauffage pour maintenir une température choisie.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : réglage du logement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ther… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « T »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "thermostat"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-04",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Document qui détaille le prix proposé pour des travaux avant leur acceptation.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : documents commerciaux."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « de… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "5 lettres, première lettre « D »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "devis"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-05",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Document remis pour attester qu'un service a enregistré un dépôt ou une demande.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : documents administratifs."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ré… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "récépissé",
+      "variantes": [
+        "reçu",
+        "accusé de réception"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-06",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Document qui répartit les sommes à régler selon leurs dates de paiement.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : organisation des paiements."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « é… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « É »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "échéancier",
+      "variantes": [
+        "calendrier de paiement"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-07",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Document par lequel le propriétaire reconnaît que le loyer a été entièrement payé.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : documents de logement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « qui… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « Q »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "quittance",
+      "variantes": [
+        "quittance de loyer"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-08",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Liste détaillée des biens présents dans un lieu, établie après les avoir recensés.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : gestion des biens."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « in… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « I »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "inventaire"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-09",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Document autorisant une autre personne à agir ou à signer en son nom.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : documents administratifs."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pro… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "procuration",
+      "variantes": [
+        "mandat"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-10",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Document ajouté à un contrat existant pour en modifier certaines clauses.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : documents contractuels."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « a… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "avenant"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-11",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Document signé qui certifie l'exactitude d'un fait, par exemple l'hébergement d'une personne.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : documents administratifs."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « a… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "attestation",
+      "variantes": [
+        "certificat"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-12",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Feuille récapitulative qui accompagne un envoi de marchandises et en détaille le contenu.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : documents d'expédition."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « bor… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « B »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "bordereau",
+      "variantes": [
+        "bordereau d'expédition",
+        "bordereau de livraison",
+        "bon de livraison"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-13",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Feuille munie d'un onglet, placée dans un dossier pour séparer deux rubriques.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : matériel de bureau."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « in… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « I »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "intercalaire"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-14",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Appareil de bureau qui fait des trous réguliers dans des feuilles pour les ranger dans un classeur.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : matériel de bureau."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « per… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "perforatrice"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-15",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Anneau métallique muni d'une ouverture à ressort, utilisé pour accrocher rapidement une sangle.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : matériel de fixation."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « mou… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « M »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "mousqueton"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-16",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Anneau souple placé entre deux pièces d'un raccord pour empêcher l'eau de passer.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : plomberie."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « j… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "5 lettres, première lettre « J »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "joint",
+      "variantes": [
+        "joint d'étanchéité"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-17",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Petit disque percé en son centre que l'on place sous un écrou pour répartir le serrage.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : quincaillerie."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ron… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "rondelle"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-18",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Pièce que l'on insère dans un trou du mur pour y maintenir une vis.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : quincaillerie."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « che… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "cheville"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-19",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Outil fixé sur un établi, doté de deux mâchoires que l'on serre pour immobiliser une pièce.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : outils."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « é… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "4 lettres, première lettre « É »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "étau"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-20",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Instrument muni d'une bulle, utilisé pour vérifier qu'une étagère est horizontale.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : outils de mesure."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ni… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "6 lettres, première lettre « N »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "niveau",
+      "variantes": [
+        "niveau à bulle"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-21",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Dispositif que l'on règle pour qu'il sonne après la durée choisie.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : mesure du temps."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « mi… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « M »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "minuteur"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-22",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Instrument qui mesure la pression atmosphérique.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : instruments de mesure."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ba… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « B »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "baromètre"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-23",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Instrument à aiguille aimantée permettant de repérer la direction du nord.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : orientation."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « bou… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « B »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "boussole"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-3-24",
+    "palier": 10,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Dispositif de sécurité que l'on peut réarmer après qu'il a coupé automatiquement un circuit électrique en cas de surcharge.",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : sécurité électrique."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « di… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « D »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "disjoncteur"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

@@ -1,0 +1,506 @@
+[
+  {
+    "id": "cm3-4-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 12 − 3 ?",
+      "methode": "Retire d’abord ce qui permet d’arriver à dix, puis retire ce qu’il reste à enlever. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 9
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-02",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 15 − 10 ?",
+      "methode": "Retire d’abord ce qui permet d’arriver à dix, puis retire ce qu’il reste à enlever. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 5
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-03",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 19 − 13 ?",
+      "methode": "Retire d’abord ce qui permet d’arriver à dix, puis retire ce qu’il reste à enlever. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 6
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-04",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 13 − 8 ?",
+      "methode": "Retire d’abord ce qui permet d’arriver à dix, puis retire ce qu’il reste à enlever. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 5
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-05",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 14 − 4 ?",
+      "methode": "Décompose le nombre à retirer en parts faciles, puis enlève-les successivement. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 10
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-06",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 13 − 10 ?",
+      "methode": "Retire d’abord ce qui permet d’arriver à dix, puis retire ce qu’il reste à enlever. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 3
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-07",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 15 − 6 ?",
+      "methode": "Retire d’abord ce qui permet d’arriver à dix, puis retire ce qu’il reste à enlever. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 9
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-08",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 17 − 8 ?",
+      "methode": "Retire d’abord ce qui permet d’arriver à dix, puis retire ce qu’il reste à enlever. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 9
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-09",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 18 − 15 ?",
+      "methode": "Retire d’abord ce qui permet d’arriver à dix, puis retire ce qu’il reste à enlever. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 3
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-10",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 15 − 3 ?",
+      "methode": "Décompose le nombre à retirer en parts faciles, puis enlève-les successivement. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 12
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-11",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 11 − 4 ?",
+      "methode": "Retire d’abord ce qui permet d’arriver à dix, puis retire ce qu’il reste à enlever. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 7
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-12",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 19 − 15 ?",
+      "methode": "Retire d’abord ce qui permet d’arriver à dix, puis retire ce qu’il reste à enlever. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 4
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-13",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 18 − 8 ?",
+      "methode": "Décompose le nombre à retirer en parts faciles, puis enlève-les successivement. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 10
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-14",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 18 − 4 ?",
+      "methode": "Décompose le nombre à retirer en parts faciles, puis enlève-les successivement. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 14
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-15",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 17 − 12 ?",
+      "methode": "Retire d’abord ce qui permet d’arriver à dix, puis retire ce qu’il reste à enlever. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 5
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-16",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 12 − 9 ?",
+      "methode": "Retire d’abord ce qui permet d’arriver à dix, puis retire ce qu’il reste à enlever. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 3
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-17",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 19 − 14 ?",
+      "methode": "Retire d’abord ce qui permet d’arriver à dix, puis retire ce qu’il reste à enlever. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 5
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm3-4-18",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "fonctions_ciblees": [
+      "automatisation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "cm-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Combien font 17 − 9 ?",
+      "methode": "Retire d’abord ce qui permet d’arriver à dix, puis retire ce qu’il reste à enlever. Vérifie en ajoutant le retrait à ton résultat pour retrouver le départ."
+    },
+    "reponse": {
+      "valeur": 8
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generate_items.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

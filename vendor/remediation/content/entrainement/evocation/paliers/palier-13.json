@@ -1,0 +1,1097 @@
+[
+  {
+    "id": "ev2-6-01",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Lors d'une discussion, vous présentez un argument qui s'oppose à la proposition avancée. Comment nommer cet argument contraire ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : discussion."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « o… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « O »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "objection",
+      "variantes": [
+        "contre-argument",
+        "contre argument"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-02",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Pour faciliter un accord, vous renoncez à une partie de ce que vous demandiez. Comment nommer ce que vous avez accepté de céder ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : négociation."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « con… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "concession",
+      "variantes": [
+        "renoncement"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-03",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Un rapport affirme qu'une porte était fermée et qu'elle ne l'était pas au même instant. Quelle relation existe entre ces deux affirmations ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : logique."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « con… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "13 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "contradiction",
+      "variantes": [
+        "incompatibilité",
+        "incohérence"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-04",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Vous proposez une explication provisoire d'un problème, qui reste à vérifier par des observations. Comment nommer cette explication ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : raisonnement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « i… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « H »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "hypothèse",
+      "variantes": [
+        "supposition",
+        "conjecture"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-05",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une phrase peut recevoir deux interprétations différentes, sans permettre de choisir laquelle est voulue. Quel défaut présente-t-elle ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : communication."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « am… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "ambiguïté",
+      "variantes": [
+        "équivoque",
+        "double sens"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-06",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Après discussion, tous les membres d'un groupe acceptent une même solution sans opposition. Comment nommer ce résultat collectif ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : décision collective."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « con… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "consensus",
+      "variantes": [
+        "unanimité",
+        "accord général",
+        "accord collectif"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-07",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une formation exige une compétence qui doit déjà être acquise avant de commencer. Comment nommer cette compétence indispensable à l'entrée ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : apprentissage."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pré… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "prérequis",
+      "variantes": [
+        "préalable",
+        "condition préalable"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-08",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Vous devez organiser un déplacement en respectant obligatoirement un budget maximal. Quel nom désigne cette limite imposée ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : organisation."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « con… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "contrainte",
+      "variantes": [
+        "obligation",
+        "impératif",
+        "restriction",
+        "limitation"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-09",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Pour rejoindre un lieu, vous avez exactement deux possibilités entre lesquelles choisir. Quel nom désigne ce choix entre deux possibilités ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : décision."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « al… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « A »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "alternative"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-10",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une route ferme à la circulation ; les trajets deviennent plus longs. Quel nom désigne ce qui découle de la fermeture ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : relations entre événements."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « con… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "conséquence",
+      "variantes": [
+        "répercussion",
+        "effet",
+        "résultat",
+        "suite"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-11",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une tâche ne peut commencer que si une autre est achevée : elle ne peut pas avancer seule. Quel nom désigne ce lien entre les deux tâches ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : relations entre tâches."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « dé… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « D »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "dépendance",
+      "variantes": [
+        "subordination"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-12",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une règle s'applique à tous les dossiers sauf à un cas expressément prévu. Comment nommer ce cas qui échappe à la règle générale ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : règles."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ex… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « E »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "exception",
+      "variantes": [
+        "dérogation"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-13",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Un remboursement n'est possible qu'en fournissant le justificatif. Quel nom désigne ce dont dépend son obtention ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : décisions et exigences."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « con… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "condition",
+      "variantes": [
+        "prérequis",
+        "préalable",
+        "exigence"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-14",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Pour comparer des logements, vous retenez leur distance au travail comme élément de jugement. Comment nommer cet élément servant à évaluer les options ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : évaluation."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « cri… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « C »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "critère",
+      "variantes": [
+        "indicateur"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-15",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Sur l'ensemble des demandes reçues, une certaine part a été acceptée. Quel nom désigne cette part rapportée au total ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : quantités."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pro… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "proportion",
+      "variantes": [
+        "pourcentage",
+        "ratio",
+        "fraction"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-16",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Sur une longue période, des résultats augmentent globalement malgré quelques baisses ponctuelles. Comment nommer le mouvement d'ensemble qui se dégage ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : évolution."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ten… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « T »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "tendance",
+      "variantes": [
+        "orientation générale",
+        "évolution générale"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-17",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Sans mesure exacte, vous proposez une valeur approximative du temps nécessaire à une tâche. Comment nommer cette évaluation approchée ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : évaluation."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « es… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « E »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "estimation",
+      "variantes": [
+        "approximation"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-18",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Vous prolongez les évolutions actuelles pour décrire une situation future possible. Quel nom désigne ce résultat tourné vers l'avenir ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : anticipation."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « pro… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « P »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "projection",
+      "variantes": [
+        "extrapolation",
+        "prévision"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-19",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Deux phrases successives donnent la même information sans rien ajouter. Quel nom désigne le fait de donner inutilement plusieurs fois le même contenu ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : qualité de l'information."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « re… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "10 lettres, première lettre « R »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "redondance",
+      "variantes": [
+        "répétition",
+        "doublon"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-20",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Dans un message, une idée n'est pas exprimée directement mais se comprend grâce au contexte. Quel adjectif qualifie cette idée ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : interprétation."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « im… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « I »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "implicite",
+      "variantes": [
+        "sous-entendue",
+        "sous-entendu",
+        "tacite"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-21",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une consigne formule directement toutes ses exigences, sans rien laisser à deviner. Quel adjectif qualifie cette manière de les exprimer ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : communication."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « ex… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « E »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "explicite",
+      "variantes": [
+        "expressément formulée",
+        "clairement énoncée"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-22",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une personne arbitre un désaccord sans favoriser aucun des deux camps. Quel principe respecte-t-elle ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : jugement."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « im… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « I »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "impartialité",
+      "variantes": [
+        "neutralité",
+        "objectivité"
+      ]
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-23",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Une organisation rend accessibles ses décisions et leurs motifs, afin que chacun puisse les comprendre. Quel principe applique-t-elle ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : communication institutionnelle."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « tran… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "12 lettres, première lettre « T »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "transparence"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev2-6-24",
+    "palier": 13,
+    "type": "rappel-indice",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Chaque étape du traitement d'un dossier est enregistrée afin de pouvoir reconstituer son parcours. Quelle propriété ce suivi garantit-il ?",
+      "aide": null,
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : suivi de l'information."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Le mot commence par « tra… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « T »."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": "traçabilité"
+    },
+    "prerequis": [],
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (banque_lexicale_adulte)",
+      "date_creation": "2026-10-08",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

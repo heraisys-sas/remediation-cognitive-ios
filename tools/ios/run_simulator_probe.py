@@ -4,7 +4,9 @@ import argparse
 import json
 from pathlib import Path
 import platform
+import plistlib
 import subprocess
+import time
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -44,8 +46,15 @@ def main():
         if execution.returncode:
             print(log.read_text()[-16000:])
             raise SystemExit(execution.returncode)
-        # XCTest échoue si la sonde ne constate pas exactement 60 réussites.
-        print(json.dumps({"device": args.device, "runtime": runtime,
+        if args.probe.name == "calculation-pilot":
+            app = local / "ios-derived/Build/Products/Debug-iphonesimulator/iOSTestbed.app"
+            bundle = plistlib.loads((app / "Info.plist").read_bytes())["CFBundleIdentifier"]
+            subprocess.run(["xcrun", "simctl", "launch", device_id, bundle], check=True)
+            time.sleep(3)
+            subprocess.run(["xcrun", "simctl", "io", device_id, "screenshot",
+                            str(local / ("pilot-" + device_id + ".png"))], check=True)
+        # XCTest impose les invariants de la sonde ou ceux du parcours pilote.
+        print(json.dumps({"device": args.device, "runtime": {k: runtime[k] for k in ("identifier", "version", "buildversion")},
                           "result_bundle": str(result), "log": str(log), "xctest_exit_code": 0}))
     finally:
         subprocess.run(["xcrun", "simctl", "shutdown", device_id], capture_output=True)

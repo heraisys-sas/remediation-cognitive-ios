@@ -1,0 +1,698 @@
+[
+  {
+    "id": "cm4-5-278671c4ab4d",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 47 + 38 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 85
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-7cd69aea1fb1",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 143 − 68 ?",
+      "methode": "Retire un nombre rond proche, puis compense la différence. Vérifie en ajoutant le retrait au résultat.",
+      "famille_calcul": "soustraction"
+    },
+    "reponse": {
+      "valeur": 75
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-2fe8181fbdb2",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien manque-t-il à 137 pour faire 250 ?",
+      "methode": "Avance du départ à la dizaine suivante, puis jusqu’à la cible. Rassemble ces écarts et vérifie en sens inverse.",
+      "famille_calcul": "ecart"
+    },
+    "reponse": {
+      "valeur": 113
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-13d59695670a",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 68 + 27 − 18 ?",
+      "methode": "Repère les termes qui se regroupent facilement avant de calculer. Garde le signe de chaque terme et vérifie l’ordre de grandeur.",
+      "famille_calcul": "regrouper"
+    },
+    "reponse": {
+      "valeur": 77
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-2d36bb68aa38",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 54 + 41 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 95
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-4bca6a6e4cd7",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 156 − 75 ?",
+      "methode": "Retire un nombre rond proche, puis compense la différence. Vérifie en ajoutant le retrait au résultat.",
+      "famille_calcul": "soustraction"
+    },
+    "reponse": {
+      "valeur": 81
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-badcc934aa23",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien manque-t-il à 154 pour faire 300 ?",
+      "methode": "Avance du départ à la dizaine suivante, puis jusqu’à la cible. Rassemble ces écarts et vérifie en sens inverse.",
+      "famille_calcul": "ecart"
+    },
+    "reponse": {
+      "valeur": 146
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-86cb0e41919c",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 71 + 29 − 21 ?",
+      "methode": "Repère les termes qui se regroupent facilement avant de calculer. Garde le signe de chaque terme et vérifie l’ordre de grandeur.",
+      "famille_calcul": "regrouper"
+    },
+    "reponse": {
+      "valeur": 79
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-1eea82cd5bd8",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 61 + 44 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 105
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-585e610607f8",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 169 − 82 ?",
+      "methode": "Retire un nombre rond proche, puis compense la différence. Vérifie en ajoutant le retrait au résultat.",
+      "famille_calcul": "soustraction"
+    },
+    "reponse": {
+      "valeur": 87
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-f7517e527ac0",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien manque-t-il à 171 pour faire 350 ?",
+      "methode": "Avance du départ à la dizaine suivante, puis jusqu’à la cible. Rassemble ces écarts et vérifie en sens inverse.",
+      "famille_calcul": "ecart"
+    },
+    "reponse": {
+      "valeur": 179
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-ea598203fba2",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 74 + 31 − 24 ?",
+      "methode": "Repère les termes qui se regroupent facilement avant de calculer. Garde le signe de chaque terme et vérifie l’ordre de grandeur.",
+      "famille_calcul": "regrouper"
+    },
+    "reponse": {
+      "valeur": 81
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-7836b391717e",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 68 + 47 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 115
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-2452fa06b825",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 182 − 89 ?",
+      "methode": "Retire un nombre rond proche, puis compense la différence. Vérifie en ajoutant le retrait au résultat.",
+      "famille_calcul": "soustraction"
+    },
+    "reponse": {
+      "valeur": 93
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-2f4576e2c610",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien manque-t-il à 188 pour faire 400 ?",
+      "methode": "Avance du départ à la dizaine suivante, puis jusqu’à la cible. Rassemble ces écarts et vérifie en sens inverse.",
+      "famille_calcul": "ecart"
+    },
+    "reponse": {
+      "valeur": 212
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-88c9b1614129",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 77 + 33 − 27 ?",
+      "methode": "Repère les termes qui se regroupent facilement avant de calculer. Garde le signe de chaque terme et vérifie l’ordre de grandeur.",
+      "famille_calcul": "regrouper"
+    },
+    "reponse": {
+      "valeur": 83
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-a70492e881ae",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 75 + 50 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 125
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-796a2dc7dd72",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 195 − 96 ?",
+      "methode": "Retire un nombre rond proche, puis compense la différence. Vérifie en ajoutant le retrait au résultat.",
+      "famille_calcul": "soustraction"
+    },
+    "reponse": {
+      "valeur": 99
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-150aaaf2bedc",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien manque-t-il à 205 pour faire 450 ?",
+      "methode": "Avance du départ à la dizaine suivante, puis jusqu’à la cible. Rassemble ces écarts et vérifie en sens inverse.",
+      "famille_calcul": "ecart"
+    },
+    "reponse": {
+      "valeur": 245
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-47b9153327a6",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 80 + 35 − 30 ?",
+      "methode": "Repère les termes qui se regroupent facilement avant de calculer. Garde le signe de chaque terme et vérifie l’ordre de grandeur.",
+      "famille_calcul": "regrouper"
+    },
+    "reponse": {
+      "valeur": 85
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-c209a5e44ef4",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 82 + 53 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 135
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-ac8fd742a353",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 208 − 103 ?",
+      "methode": "Retire un nombre rond proche, puis compense la différence. Vérifie en ajoutant le retrait au résultat.",
+      "famille_calcul": "soustraction"
+    },
+    "reponse": {
+      "valeur": 105
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-c5c097060536",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien manque-t-il à 222 pour faire 500 ?",
+      "methode": "Avance du départ à la dizaine suivante, puis jusqu’à la cible. Rassemble ces écarts et vérifie en sens inverse.",
+      "famille_calcul": "ecart"
+    },
+    "reponse": {
+      "valeur": 278
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-5-8d76c0fba6ae",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 5,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 83 + 37 − 33 ?",
+      "methode": "Repère les termes qui se regroupent facilement avant de calculer. Garde le signe de chaque terme et vérifie l’ordre de grandeur.",
+      "famille_calcul": "regrouper"
+    },
+    "reponse": {
+      "valeur": 87
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

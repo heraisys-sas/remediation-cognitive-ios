@@ -10,8 +10,9 @@ Ce n'est pas encore une application d'exercices utilisable.
 - Les 60 tests du moteur passent sur le Mac et dans GitHub Actions (Linux).
 - `build-for-testing` réussit pour iOS Simulator arm64, cible iOS 26,
   avec le SDK iOS 27.1 et Python 3.13.16.
-- Aucun runtime de simulateur iOS n'est installé sur le poste : la suite n'a
-  **pas encore été exécutée sous iOS**, ni sur iPhone physique.
+- La sonde corrigée a exécuté ses 60 tests sous iOS 26.5 sur simulateurs
+  iPhone 17 et Air dans [GitHub Actions](https://github.com/heraisys-sas/remediation-cognitive-ios/actions/runs/38957640524).
+  Aucun essai sur iPhone physique n'est revendiqué.
 - La compilation inclut le moteur Python et FSRS, pas les correcteurs backend,
   les items, la persistance mobile ou les capacités vocales.
 
@@ -81,6 +82,41 @@ Cela ne remplace pas la recette sur un iPhone physique.
 - Voix et dictée natives restent une étape à développer et à essayer au micro réel.
 - Aucun résultat du modèle génératif ne remplace une correction déterministe.
 - Vérifier licences, frameworks signés et règles Apple avant distribution.
+
+## Pilote Calcul mental
+
+```sh
+python tools/ios/prepare_pilot.py
+python tools/ios/run_simulator_probe.py --device 'iPhone 17' --probe .local/calculation-pilot
+```
+
+Le projet généré `.local/calculation-pilot/iOSTestbed.xcodeproj` construit une
+app appelée « Remédiation ». L'interface WKWebView n'a accès qu'à ses fichiers
+locaux ; son pont appelle le service Python dans une file native sérialisée.
+Il n'y a ni serveur, ni tunnel, ni appel PCC. La saisie est au clavier.
+
+Le service, les correcteurs et les items viennent du commit source enregistré
+dans `UPSTREAM.json`. Le point d'entrée de package a été adapté pour ne pas
+importer les routes FastAPI. Les fonctions d'accompagnement macOS ne sont pas
+appelées par le pilote.
+
+Les réponses validées et la position sont enregistrées dans une transaction
+SQLite, avec les effets de clôture sur la maîtrise et FSRS. Une relance retrouve
+la séance ; les brouillons non validés ne sont pas sauvegardés. Une sortie en
+arrière-plan masque l'exercice et demande une reprise explicite ; le temps
+d'interruption n'est pas présenté comme une mesure continue. Le compteur de
+dosage n'est pas incrémenté une seconde fois lors de la reprise.
+
+L'adaptateur de sauvegarde est lié à la version du service : les états actifs
+d'une autre référence amont sont conservés et refusés, en attendant une
+migration explicitement testée. Aucun historique personnel n'est importé.
+
+Les tests du pilote couvrent correction, sauvegarde/relecture, clôture
+idempotente et transaction annulée. Les contrats Contextes et PQRST restent
+testés sans rendre ces parcours accessibles dans le pilote. Sous iOS, le
+workflow vérifie aussi le pont réel WebKit→natif→Python et conserve une capture
+de l'écran initial. Un passage sur iPhone réel, le clavier, VoiceOver, les
+grands caractères et le confort en séance restent nécessaires.
 
 ## Sources
 

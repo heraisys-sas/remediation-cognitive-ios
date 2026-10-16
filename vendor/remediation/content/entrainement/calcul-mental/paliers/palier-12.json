@@ -1,0 +1,1046 @@
+[
+  {
+    "id": "cm4-12-a2fd978c7faa",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un prix de 200 € augmente de 20 %, puis baisse de 10 % sur le nouveau prix. Quel est le prix final en euros ?",
+      "methode": "Applique la première variation. La seconde porte sur le nouveau montant : ne cumule pas simplement les pourcentages.",
+      "famille_calcul": "successif"
+    },
+    "reponse": {
+      "valeur": 216
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-54e84e8d4f5d",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un atelier accueille 18 participants payant chacun 32 €. La salle coûte 145 € et le matériel 12 € par participant. Quel solde reste en euros ?",
+      "methode": "Sépare les coûts fixes et les coûts par personne. Calcule les recettes, puis retire toutes les dépenses. Vérifie ce que représente le solde.",
+      "famille_calcul": "projet"
+    },
+    "reponse": {
+      "valeur": 215
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-6a54d8907b54",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Vente de 12 objets à 25 € chacun. La plateforme retient 10 % du montant des ventes, puis 27 € de frais fixes. Quel montant net reste en euros ?",
+      "methode": "Calcule le produit brut, retire d’abord les frais proportionnels puis les frais fixes. Vérifie que chaque dépense est comptée une fois.",
+      "famille_calcul": "marge"
+    },
+    "reponse": {
+      "valeur": 243
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-88ab04f97ec6",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 8 personnes, une recette utilise 320 g de riz. Pour 14 personnes, on dispose déjà de 75 g. Combien de grammes faut-il encore acheter ?",
+      "methode": "Calcule la quantité pour le nouvel effectif par proportionnalité, puis retire la réserve disponible. Vérifie les unités.",
+      "famille_calcul": "proportion_reserve"
+    },
+    "reponse": {
+      "valeur": 485
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-529b7522e051",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (77,5 + 18,75) × 8 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 770
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-e8c21cdd27e9",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 25 % de 320 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 80
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-396b7e009c65",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un prix de 300 € augmente de 20 %, puis baisse de 10 % sur le nouveau prix. Quel est le prix final en euros ?",
+      "methode": "Applique la première variation. La seconde porte sur le nouveau montant : ne cumule pas simplement les pourcentages.",
+      "famille_calcul": "successif"
+    },
+    "reponse": {
+      "valeur": 324
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-8780700e10b8",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un atelier accueille 20 participants payant chacun 35 €. La salle coûte 160 € et le matériel 13 € par participant. Quel solde reste en euros ?",
+      "methode": "Sépare les coûts fixes et les coûts par personne. Calcule les recettes, puis retire toutes les dépenses. Vérifie ce que représente le solde.",
+      "famille_calcul": "projet"
+    },
+    "reponse": {
+      "valeur": 280
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-73ae5d31b24a",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Vente de 14 objets à 30 € chacun. La plateforme retient 10 % du montant des ventes, puis 30 € de frais fixes. Quel montant net reste en euros ?",
+      "methode": "Calcule le produit brut, retire d’abord les frais proportionnels puis les frais fixes. Vérifie que chaque dépense est comptée une fois.",
+      "famille_calcul": "marge"
+    },
+    "reponse": {
+      "valeur": 348
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-ffc8fbf66b15",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 8 personnes, une recette utilise 360 g de riz. Pour 16 personnes, on dispose déjà de 80 g. Combien de grammes faut-il encore acheter ?",
+      "methode": "Calcule la quantité pour le nouvel effectif par proportionnalité, puis retire la réserve disponible. Vérifie les unités.",
+      "famille_calcul": "proportion_reserve"
+    },
+    "reponse": {
+      "valeur": 640
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-1ae67f80816f",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (84,5 + 21,75) × 8 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 850
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-6cd951a685f8",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 25 % de 400 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 100
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-04eb8a2d68d5",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un prix de 400 € augmente de 20 %, puis baisse de 10 % sur le nouveau prix. Quel est le prix final en euros ?",
+      "methode": "Applique la première variation. La seconde porte sur le nouveau montant : ne cumule pas simplement les pourcentages.",
+      "famille_calcul": "successif"
+    },
+    "reponse": {
+      "valeur": 432
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-52696ae8bdc6",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un atelier accueille 22 participants payant chacun 38 €. La salle coûte 175 € et le matériel 14 € par participant. Quel solde reste en euros ?",
+      "methode": "Sépare les coûts fixes et les coûts par personne. Calcule les recettes, puis retire toutes les dépenses. Vérifie ce que représente le solde.",
+      "famille_calcul": "projet"
+    },
+    "reponse": {
+      "valeur": 353
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-f6d6785a0b02",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Vente de 16 objets à 35 € chacun. La plateforme retient 10 % du montant des ventes, puis 33 € de frais fixes. Quel montant net reste en euros ?",
+      "methode": "Calcule le produit brut, retire d’abord les frais proportionnels puis les frais fixes. Vérifie que chaque dépense est comptée une fois.",
+      "famille_calcul": "marge"
+    },
+    "reponse": {
+      "valeur": 471
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-284b9370ce91",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 8 personnes, une recette utilise 400 g de riz. Pour 18 personnes, on dispose déjà de 85 g. Combien de grammes faut-il encore acheter ?",
+      "methode": "Calcule la quantité pour le nouvel effectif par proportionnalité, puis retire la réserve disponible. Vérifie les unités.",
+      "famille_calcul": "proportion_reserve"
+    },
+    "reponse": {
+      "valeur": 815
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-4fcfde8a0d20",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (91,5 + 24,75) × 8 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 930
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-d9e7c5c950d1",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 25 % de 480 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 120
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-9a0c399917fc",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un prix de 500 € augmente de 20 %, puis baisse de 10 % sur le nouveau prix. Quel est le prix final en euros ?",
+      "methode": "Applique la première variation. La seconde porte sur le nouveau montant : ne cumule pas simplement les pourcentages.",
+      "famille_calcul": "successif"
+    },
+    "reponse": {
+      "valeur": 540
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-e69e5b7f9129",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un atelier accueille 24 participants payant chacun 41 €. La salle coûte 190 € et le matériel 15 € par participant. Quel solde reste en euros ?",
+      "methode": "Sépare les coûts fixes et les coûts par personne. Calcule les recettes, puis retire toutes les dépenses. Vérifie ce que représente le solde.",
+      "famille_calcul": "projet"
+    },
+    "reponse": {
+      "valeur": 434
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-9109eb47c601",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Vente de 18 objets à 40 € chacun. La plateforme retient 10 % du montant des ventes, puis 36 € de frais fixes. Quel montant net reste en euros ?",
+      "methode": "Calcule le produit brut, retire d’abord les frais proportionnels puis les frais fixes. Vérifie que chaque dépense est comptée une fois.",
+      "famille_calcul": "marge"
+    },
+    "reponse": {
+      "valeur": 612
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-f9616c372872",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 8 personnes, une recette utilise 440 g de riz. Pour 20 personnes, on dispose déjà de 90 g. Combien de grammes faut-il encore acheter ?",
+      "methode": "Calcule la quantité pour le nouvel effectif par proportionnalité, puis retire la réserve disponible. Vérifie les unités.",
+      "famille_calcul": "proportion_reserve"
+    },
+    "reponse": {
+      "valeur": 1010
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-6d91ef0f17f2",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (98,5 + 27,75) × 8 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 1010
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-810174a9c3e3",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 25 % de 560 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 140
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-5c854dbeb4fe",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un prix de 600 € augmente de 20 %, puis baisse de 10 % sur le nouveau prix. Quel est le prix final en euros ?",
+      "methode": "Applique la première variation. La seconde porte sur le nouveau montant : ne cumule pas simplement les pourcentages.",
+      "famille_calcul": "successif"
+    },
+    "reponse": {
+      "valeur": 648
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-b718e1c779d3",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un atelier accueille 26 participants payant chacun 44 €. La salle coûte 205 € et le matériel 16 € par participant. Quel solde reste en euros ?",
+      "methode": "Sépare les coûts fixes et les coûts par personne. Calcule les recettes, puis retire toutes les dépenses. Vérifie ce que représente le solde.",
+      "famille_calcul": "projet"
+    },
+    "reponse": {
+      "valeur": 523
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-44ed5132d28a",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Vente de 20 objets à 45 € chacun. La plateforme retient 10 % du montant des ventes, puis 39 € de frais fixes. Quel montant net reste en euros ?",
+      "methode": "Calcule le produit brut, retire d’abord les frais proportionnels puis les frais fixes. Vérifie que chaque dépense est comptée une fois.",
+      "famille_calcul": "marge"
+    },
+    "reponse": {
+      "valeur": 771
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-3ff397dc9611",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 8 personnes, une recette utilise 480 g de riz. Pour 22 personnes, on dispose déjà de 95 g. Combien de grammes faut-il encore acheter ?",
+      "methode": "Calcule la quantité pour le nouvel effectif par proportionnalité, puis retire la réserve disponible. Vérifie les unités.",
+      "famille_calcul": "proportion_reserve"
+    },
+    "reponse": {
+      "valeur": 1225
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-bc3869c26df1",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (105,5 + 30,75) × 8 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 1090
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-a9fc9beaea2e",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 25 % de 640 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 160
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-4264e4dc74e7",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un prix de 700 € augmente de 20 %, puis baisse de 10 % sur le nouveau prix. Quel est le prix final en euros ?",
+      "methode": "Applique la première variation. La seconde porte sur le nouveau montant : ne cumule pas simplement les pourcentages.",
+      "famille_calcul": "successif"
+    },
+    "reponse": {
+      "valeur": 756
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-284df34199b7",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un atelier accueille 28 participants payant chacun 47 €. La salle coûte 220 € et le matériel 17 € par participant. Quel solde reste en euros ?",
+      "methode": "Sépare les coûts fixes et les coûts par personne. Calcule les recettes, puis retire toutes les dépenses. Vérifie ce que représente le solde.",
+      "famille_calcul": "projet"
+    },
+    "reponse": {
+      "valeur": 620
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-c0b6d5319ebb",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Vente de 22 objets à 50 € chacun. La plateforme retient 10 % du montant des ventes, puis 42 € de frais fixes. Quel montant net reste en euros ?",
+      "methode": "Calcule le produit brut, retire d’abord les frais proportionnels puis les frais fixes. Vérifie que chaque dépense est comptée une fois.",
+      "famille_calcul": "marge"
+    },
+    "reponse": {
+      "valeur": 948
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-a0d34604a785",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Pour 8 personnes, une recette utilise 520 g de riz. Pour 24 personnes, on dispose déjà de 100 g. Combien de grammes faut-il encore acheter ?",
+      "methode": "Calcule la quantité pour le nouvel effectif par proportionnalité, puis retire la réserve disponible. Vérifie les unités.",
+      "famille_calcul": "proportion_reserve"
+    },
+    "reponse": {
+      "valeur": 1460
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-cf5db4867799",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font (112,5 + 33,75) × 8 ?",
+      "methode": "Calcule la première étape et garde son résultat, puis applique la seconde. Vérifie chaque changement avant de répondre.",
+      "famille_calcul": "chaine"
+    },
+    "reponse": {
+      "valeur": 1170
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-12-1a224fc86976",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 12,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 25 % de 720 ?",
+      "methode": "Décompose le taux en repères faciles, comme dix pour cent et cinq pour cent. Applique-les à la base puis additionne.",
+      "famille_calcul": "pourcentage"
+    },
+    "reponse": {
+      "valeur": 180
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

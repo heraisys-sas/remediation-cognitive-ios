@@ -1,0 +1,392 @@
+[
+  {
+    "type": "rappel-indice",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Instrument qui indique le nord.",
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : objets de voyage."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Ça commence par « bous… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "8 lettres, première lettre « B »."
+        }
+      ],
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "boussole"
+    },
+    "id": "ev-5-rappel-01",
+    "palier": 5,
+    "prerequis": [
+      "ev-palier-4"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-indice",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Instrument qui indique la température.",
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : objets du quotidien."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Ça commence par « ther… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "11 lettres, première lettre « T »."
+        }
+      ],
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "thermomètre"
+    },
+    "id": "ev-5-rappel-02",
+    "palier": 5,
+    "prerequis": [
+      "ev-palier-4"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-indice",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Serrure mobile qu'on accroche à une porte.",
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : objets du quotidien."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Ça commence par « ca… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « C »."
+        }
+      ],
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "cadenas"
+    },
+    "id": "ev-5-rappel-03",
+    "palier": 5,
+    "prerequis": [
+      "ev-palier-4"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-indice",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Vêtement qu'on met pour cuisiner sans se tacher.",
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : vêtements."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Ça commence par « ta… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "7 lettres, première lettre « T »."
+        }
+      ],
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "tablier"
+    },
+    "id": "ev-5-rappel-04",
+    "palier": 5,
+    "prerequis": [
+      "ev-palier-4"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-indice",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Retrouve le mot à partir de la définition.",
+      "enonce": "Objet en forme de cône pour verser sans renverser.",
+      "indices": [
+        {
+          "type": "semantique",
+          "texte": "Catégorie : ustensiles de cuisine."
+        },
+        {
+          "type": "phonologique",
+          "texte": "Ça commence par « en… »."
+        },
+        {
+          "type": "orthographique",
+          "texte": "9 lettres, première lettre « E »."
+        }
+      ],
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "entonnoir"
+    },
+    "id": "ev-5-rappel-05",
+    "palier": 5,
+    "prerequis": [
+      "ev-palier-4"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "reconnaissance",
+    "fonctions_ciblees": [
+      "acces-lexical"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Sentiment d'être préoccupé par ce qui pourrait arriver.",
+      "options": [
+        "surprise",
+        "inquiétude",
+        "curiosité"
+      ],
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "inquiétude"
+    },
+    "id": "ev-5-reconnaissance-06",
+    "palier": 5,
+    "prerequis": [
+      "ev-palier-4"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "reconnaissance",
+    "fonctions_ciblees": [
+      "acces-lexical"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Gêne ressentie devant des personnes qu'on connaît peu.",
+      "options": [
+        "timidité",
+        "pudeur",
+        "réserve"
+      ],
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "timidité"
+    },
+    "id": "ev-5-reconnaissance-07",
+    "palier": 5,
+    "prerequis": [
+      "ev-palier-4"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "reconnaissance",
+    "fonctions_ciblees": [
+      "acces-lexical"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Fait d'agir avec précaution.",
+      "options": [
+        "calme",
+        "prudence",
+        "patience"
+      ],
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "prudence"
+    },
+    "id": "ev-5-reconnaissance-08",
+    "palier": 5,
+    "prerequis": [
+      "ev-palier-4"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "reconnaissance",
+    "fonctions_ciblees": [
+      "acces-lexical"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Force qui permet d'agir et de tenir la journée.",
+      "options": [
+        "énergie",
+        "souffle",
+        "entrain"
+      ],
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "énergie"
+    },
+    "id": "ev-5-reconnaissance-09",
+    "palier": 5,
+    "prerequis": [
+      "ev-palier-4"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "reconnaissance",
+    "fonctions_ciblees": [
+      "acces-lexical"
+    ],
+    "contenu": {
+      "consigne": "Choisis le mot qui correspond à la définition.",
+      "enonce": "Envie d'apprendre et de savoir.",
+      "options": [
+        "envie",
+        "curiosité",
+        "intérêt"
+      ],
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "curiosité"
+    },
+    "id": "ev-5-reconnaissance-10",
+    "palier": 5,
+    "prerequis": [
+      "ev-palier-4"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_evocation.py)",
+      "date_creation": "2026-09-20",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

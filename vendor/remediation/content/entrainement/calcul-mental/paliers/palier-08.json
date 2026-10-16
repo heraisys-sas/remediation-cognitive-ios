@@ -1,0 +1,1046 @@
+[
+  {
+    "id": "cm4-8-00982ae5d9dd",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Achat de 3 carnets à 12,5 € et d’un classeur à 8,75 €, avec une remise fixe de 5 € sur le total. Quel montant payer en euros ?",
+      "methode": "Multiplie chaque prix par sa quantité, additionne les sous-totaux, puis retire la remise fixe. Vérifie en euros.",
+      "famille_calcul": "panier"
+    },
+    "reponse": {
+      "valeur": 41.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-db65019f5783",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Budget de 150 €. Deux dépenses de 47,8 € et 36,65 €. Quel montant reste disponible en euros ?",
+      "methode": "Rassemble d’abord les dépenses, puis retire leur total du budget. Vérifie que reste et dépenses reconstituent le budget.",
+      "famille_calcul": "budget"
+    },
+    "reponse": {
+      "valeur": 65.55
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-f9de7f941596",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un lot de 4 dossiers coûte 29 €. Quel est le prix d’un dossier en euros ?",
+      "methode": "Exprime le prix en centimes si cela facilite le partage, divise par la quantité, puis reconvertis en euros.",
+      "famille_calcul": "unitaire"
+    },
+    "reponse": {
+      "valeur": 7.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-c5a0fe7f6560",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "On paie 3 billets à 6,75 € avec 100 €. Quelle monnaie rendre en euros ?",
+      "methode": "Calcule le total de l’achat, puis complète jusqu’à la somme payée. Vérifie que achat et monnaie reconstituent le paiement.",
+      "famille_calcul": "monnaie"
+    },
+    "reponse": {
+      "valeur": 79.75
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-12bb481c9fd3",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 37,5 + 18,75 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 56.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-a5c524a640e3",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 36 × 12 ?",
+      "methode": "Décompose le facteur à deux chiffres en dizaines et unités, multiplie chaque partie, puis rassemble les produits.",
+      "famille_calcul": "produit"
+    },
+    "reponse": {
+      "valeur": 432
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-368928c4c546",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Achat de 4 carnets à 13,5 € et d’un classeur à 9,75 €, avec une remise fixe de 6 € sur le total. Quel montant payer en euros ?",
+      "methode": "Multiplie chaque prix par sa quantité, additionne les sous-totaux, puis retire la remise fixe. Vérifie en euros.",
+      "famille_calcul": "panier"
+    },
+    "reponse": {
+      "valeur": 57.75
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-e7953f303e6e",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Budget de 175 €. Deux dépenses de 48,8 € et 38,65 €. Quel montant reste disponible en euros ?",
+      "methode": "Rassemble d’abord les dépenses, puis retire leur total du budget. Vérifie que reste et dépenses reconstituent le budget.",
+      "famille_calcul": "budget"
+    },
+    "reponse": {
+      "valeur": 87.55
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-1a334c5542ee",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un lot de 6 dossiers coûte 46,5 €. Quel est le prix d’un dossier en euros ?",
+      "methode": "Exprime le prix en centimes si cela facilite le partage, divise par la quantité, puis reconvertis en euros.",
+      "famille_calcul": "unitaire"
+    },
+    "reponse": {
+      "valeur": 7.75
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-70d4a069604b",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "On paie 4 billets à 7,75 € avec 120 €. Quelle monnaie rendre en euros ?",
+      "methode": "Calcule le total de l’achat, puis complète jusqu’à la somme payée. Vérifie que achat et monnaie reconstituent le paiement.",
+      "famille_calcul": "monnaie"
+    },
+    "reponse": {
+      "valeur": 89
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-3f592a24751f",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 44,5 + 21,75 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 66.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-7491433afcbb",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 43 × 12 ?",
+      "methode": "Décompose le facteur à deux chiffres en dizaines et unités, multiplie chaque partie, puis rassemble les produits.",
+      "famille_calcul": "produit"
+    },
+    "reponse": {
+      "valeur": 516
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-db5c759c81b9",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Achat de 5 carnets à 14,5 € et d’un classeur à 10,75 €, avec une remise fixe de 7 € sur le total. Quel montant payer en euros ?",
+      "methode": "Multiplie chaque prix par sa quantité, additionne les sous-totaux, puis retire la remise fixe. Vérifie en euros.",
+      "famille_calcul": "panier"
+    },
+    "reponse": {
+      "valeur": 76.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-cc896cff3e8a",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Budget de 200 €. Deux dépenses de 49,8 € et 40,65 €. Quel montant reste disponible en euros ?",
+      "methode": "Rassemble d’abord les dépenses, puis retire leur total du budget. Vérifie que reste et dépenses reconstituent le budget.",
+      "famille_calcul": "budget"
+    },
+    "reponse": {
+      "valeur": 109.55
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-1c69bb4de0db",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un lot de 8 dossiers coûte 66 €. Quel est le prix d’un dossier en euros ?",
+      "methode": "Exprime le prix en centimes si cela facilite le partage, divise par la quantité, puis reconvertis en euros.",
+      "famille_calcul": "unitaire"
+    },
+    "reponse": {
+      "valeur": 8.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-42b51800b526",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "On paie 5 billets à 8,75 € avec 140 €. Quelle monnaie rendre en euros ?",
+      "methode": "Calcule le total de l’achat, puis complète jusqu’à la somme payée. Vérifie que achat et monnaie reconstituent le paiement.",
+      "famille_calcul": "monnaie"
+    },
+    "reponse": {
+      "valeur": 96.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-6a0e4adde2ae",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 51,5 + 24,75 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 76.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-ee0766fdd344",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 50 × 12 ?",
+      "methode": "Décompose le facteur à deux chiffres en dizaines et unités, multiplie chaque partie, puis rassemble les produits.",
+      "famille_calcul": "produit"
+    },
+    "reponse": {
+      "valeur": 600
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-746b28aba03e",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Achat de 6 carnets à 15,5 € et d’un classeur à 11,75 €, avec une remise fixe de 8 € sur le total. Quel montant payer en euros ?",
+      "methode": "Multiplie chaque prix par sa quantité, additionne les sous-totaux, puis retire la remise fixe. Vérifie en euros.",
+      "famille_calcul": "panier"
+    },
+    "reponse": {
+      "valeur": 96.75
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-5696edf91dfc",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Budget de 225 €. Deux dépenses de 50,8 € et 42,65 €. Quel montant reste disponible en euros ?",
+      "methode": "Rassemble d’abord les dépenses, puis retire leur total du budget. Vérifie que reste et dépenses reconstituent le budget.",
+      "famille_calcul": "budget"
+    },
+    "reponse": {
+      "valeur": 131.55
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-ccc1d832f436",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un lot de 10 dossiers coûte 87,5 €. Quel est le prix d’un dossier en euros ?",
+      "methode": "Exprime le prix en centimes si cela facilite le partage, divise par la quantité, puis reconvertis en euros.",
+      "famille_calcul": "unitaire"
+    },
+    "reponse": {
+      "valeur": 8.75
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-bd8fce30bbc7",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "On paie 6 billets à 9,75 € avec 160 €. Quelle monnaie rendre en euros ?",
+      "methode": "Calcule le total de l’achat, puis complète jusqu’à la somme payée. Vérifie que achat et monnaie reconstituent le paiement.",
+      "famille_calcul": "monnaie"
+    },
+    "reponse": {
+      "valeur": 101.5
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-f0744ed37383",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 58,5 + 27,75 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 86.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-b9fb54205464",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 57 × 12 ?",
+      "methode": "Décompose le facteur à deux chiffres en dizaines et unités, multiplie chaque partie, puis rassemble les produits.",
+      "famille_calcul": "produit"
+    },
+    "reponse": {
+      "valeur": 684
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-f098107b8ebb",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Achat de 7 carnets à 16,5 € et d’un classeur à 12,75 €, avec une remise fixe de 9 € sur le total. Quel montant payer en euros ?",
+      "methode": "Multiplie chaque prix par sa quantité, additionne les sous-totaux, puis retire la remise fixe. Vérifie en euros.",
+      "famille_calcul": "panier"
+    },
+    "reponse": {
+      "valeur": 119.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-cc0a76896f02",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Budget de 250 €. Deux dépenses de 51,8 € et 44,65 €. Quel montant reste disponible en euros ?",
+      "methode": "Rassemble d’abord les dépenses, puis retire leur total du budget. Vérifie que reste et dépenses reconstituent le budget.",
+      "famille_calcul": "budget"
+    },
+    "reponse": {
+      "valeur": 153.55
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-f54a9f4c8218",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un lot de 12 dossiers coûte 111 €. Quel est le prix d’un dossier en euros ?",
+      "methode": "Exprime le prix en centimes si cela facilite le partage, divise par la quantité, puis reconvertis en euros.",
+      "famille_calcul": "unitaire"
+    },
+    "reponse": {
+      "valeur": 9.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-f8621701b47e",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "On paie 7 billets à 10,75 € avec 180 €. Quelle monnaie rendre en euros ?",
+      "methode": "Calcule le total de l’achat, puis complète jusqu’à la somme payée. Vérifie que achat et monnaie reconstituent le paiement.",
+      "famille_calcul": "monnaie"
+    },
+    "reponse": {
+      "valeur": 104.75
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-aee32c528a6d",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 65,5 + 30,75 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 96.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-0b30a20531e4",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 64 × 12 ?",
+      "methode": "Décompose le facteur à deux chiffres en dizaines et unités, multiplie chaque partie, puis rassemble les produits.",
+      "famille_calcul": "produit"
+    },
+    "reponse": {
+      "valeur": 768
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-9fd2508befa5",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Achat de 8 carnets à 17,5 € et d’un classeur à 13,75 €, avec une remise fixe de 10 € sur le total. Quel montant payer en euros ?",
+      "methode": "Multiplie chaque prix par sa quantité, additionne les sous-totaux, puis retire la remise fixe. Vérifie en euros.",
+      "famille_calcul": "panier"
+    },
+    "reponse": {
+      "valeur": 143.75
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-074e836998db",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Budget de 275 €. Deux dépenses de 52,8 € et 46,65 €. Quel montant reste disponible en euros ?",
+      "methode": "Rassemble d’abord les dépenses, puis retire leur total du budget. Vérifie que reste et dépenses reconstituent le budget.",
+      "famille_calcul": "budget"
+    },
+    "reponse": {
+      "valeur": 175.55
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-3d2661986f16",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Un lot de 14 dossiers coûte 136,5 €. Quel est le prix d’un dossier en euros ?",
+      "methode": "Exprime le prix en centimes si cela facilite le partage, divise par la quantité, puis reconvertis en euros.",
+      "famille_calcul": "unitaire"
+    },
+    "reponse": {
+      "valeur": 9.75
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-802656e34978",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "On paie 8 billets à 11,75 € avec 200 €. Quelle monnaie rendre en euros ?",
+      "methode": "Calcule le total de l’achat, puis complète jusqu’à la somme payée. Vérifie que achat et monnaie reconstituent le paiement.",
+      "famille_calcul": "monnaie"
+    },
+    "reponse": {
+      "valeur": 106
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-98a64044f065",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 72,5 + 33,75 ?",
+      "methode": "Arrondis un des termes à une dizaine, additionne, puis corrige exactement ce que tu as ajouté. Vérifie avec une estimation du total.",
+      "famille_calcul": "addition"
+    },
+    "reponse": {
+      "valeur": 106.25
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cm4-8-9d5d1ca88939",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "calcul-mental",
+    "palier": 8,
+    "fonctions_ciblees": [
+      "flexibilite",
+      "memoire-travail",
+      "automatisation"
+    ],
+    "prerequis": [],
+    "cap_complexite": "Énoncé visible ; calcul mental sans contrainte de vitesse ; une réponse numérique avec unité précisée.",
+    "contenu": {
+      "enonce": "Combien font 71 × 12 ?",
+      "methode": "Décompose le facteur à deux chiffres en dizaines et unités, multiplie chaque partie, puis rassemble les produits.",
+      "famille_calcul": "produit"
+    },
+    "reponse": {
+      "valeur": 852
+    },
+    "meta": {
+      "auteur": "tools/calcul_adulte.py",
+      "date_creation": "2026-10-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]
