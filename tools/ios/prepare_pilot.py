@@ -23,7 +23,7 @@ def main():
     # Réutilise une ressource-folder déjà déclarée dans le projet Xcode.
     pilot = destination / "iOSTestbed/app/pilot"
     pilot.mkdir()
-    for name in ("index.html", "pilot.css", "pilot.js"):
+    for name in ("index.html", "pilot.css", "active-clock.js", "pilot.js"):
         shutil.copy2(native / name, pilot / name)
     scene = destination / "iOSTestbed/SceneDelegate.m"
     scene.write_text(scene.read_text().replace('@"pilot" isDirectory:YES', '@"app/pilot" isDirectory:YES'))

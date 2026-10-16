@@ -16,7 +16,7 @@
     XCTNSPredicateExpectation *page = [[XCTNSPredicateExpectation alloc] initWithPredicate:loaded object:web];
     [self waitForExpectations:@[page] timeout:20];
     XCTestExpectation *response = [self expectationWithDescription:@"Pont WebKit vers moteur local"];
-    [web callAsyncJavaScript:@"const r = await window.webkit.messageHandlers.runtime.postMessage({action:'view'}); return {result:r, title:document.querySelector('h1').textContent, error:document.getElementById('error').textContent};"
+    [web callAsyncJavaScript:@"for(let i=0;i<200&&document.getElementById('status').textContent;i++) await new Promise(r=>setTimeout(r,10)); await document.getElementById('start').onclick(); const r=await window.webkit.messageHandlers.runtime.postMessage({action:'view'}); window.pauseForInterruption(); const paused=document.getElementById('exercise').hidden; document.getElementById('resume').onclick(); return {result:r, title:document.querySelector('h1').textContent, error:document.getElementById('error').textContent, paused:paused, resumed:!document.getElementById('exercise').hidden};"
                    arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld
            completionHandler:^(id value, NSError *error) {
         XCTAssertNil(error);
@@ -24,6 +24,9 @@
         XCTAssertEqualObjects(value[@"title"], @"Calcul mental");
         XCTAssertEqualObjects(value[@"error"], @"");
         XCTAssertNotNil(value[@"result"][@"started"]);
+        XCTAssertNotNil(value[@"result"][@"item"]);
+        XCTAssertEqualObjects(value[@"paused"], @YES);
+        XCTAssertEqualObjects(value[@"resumed"], @YES);
         [response fulfill];
     }];
     [self waitForExpectations:@[response] timeout:30];
