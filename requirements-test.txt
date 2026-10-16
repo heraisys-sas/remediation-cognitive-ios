@@ -1,0 +1,3 @@
+# Versions utilisées pour la première preuve de parité ; environnement séparé.
+fsrs==6.3.2
+pytest==9.1.1

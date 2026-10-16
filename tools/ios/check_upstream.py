@@ -1,0 +1,13 @@
+"""Vérifie que le moteur importé correspond à sa référence enregistrée."""
+
+import hashlib
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+lock = json.loads((ROOT / "UPSTREAM.json").read_text())
+actual = {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
+          for path in sorted((ROOT / "engine").rglob("*.py"))}
+if actual != lock["sha256"]:
+    raise SystemExit("Moteur modifié : documenter le portage et actualiser UPSTREAM.json après revue")
+print(f"Moteur conforme à {lock['commit']}")

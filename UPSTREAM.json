@@ -1,0 +1,26 @@
+{
+  "repository": "https://github.com/heraisys-sas/remediation-cognitive",
+  "branch": "dev",
+  "commit": "44acda5df5d689fe4de022e9c194655ff5fdce01",
+  "imported_paths": [
+    "engine/"
+  ],
+  "sha256": {
+    "engine/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "engine/adaptive/__init__.py": "20878cb8a46a6956292d11bd4224a71ba8c5f182679cc43cfb206e6b8a63cf43",
+    "engine/adaptive/rule.py": "8e396cd027135b60010d31f2e37448f91447e2d501325e72786e2c74b9b97b3c",
+    "engine/mastery/__init__.py": "3ed74f9ecfb41282a7351d89733895856a8a1f1cffa921658ff18a22aebc3c8e",
+    "engine/mastery/criteria.py": "97eaddd4dd2eb4754a3891fde7740c1e59b515a7d9f61e904abc9731e3602dcb",
+    "engine/session/__init__.py": "6532bc8008916efdc5d1b7be6ce0978ba6285a72d686ff1929114a419efb92bb",
+    "engine/session/runner.py": "152399efd580acd6dafbb93217a2a22b49e10785908f1aef24b699e8649c3fb1",
+    "engine/srs/__init__.py": "3e6ec15d6e3a2984a4e2c0ca2cd81ae6d6d267640998c4f9b6ea7a536fcca3f5",
+    "engine/srs/fsrs.py": "8995d3b9b7c75c207b6c6c75e91cae5573315e7f5a7a9d6fb9c701bfc7c14a40",
+    "engine/tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "engine/tests/test_adaptive.py": "26d1c489fbe57d99bcfda7def6c7c55bf21b4f4f52a964180689fd9dd1fb4d58",
+    "engine/tests/test_fsrs.py": "52e1cb677b6211c1bb36096c694db4931a85353062e2d76246c743eff108ea77",
+    "engine/tests/test_mastery.py": "2a1c6bafbc5ac847f6a0b1fe51d7ace8a9ab8e58cde0db145aba4af9ee328439",
+    "engine/tests/test_session.py": "49e6f488c54f57350cf0d8bbca398fbc2c3c3fded36ef9d1bd5240555bb1c67e",
+    "engine/tests/test_timeutil.py": "9152e7518ae69931b38719e39e7117f3e5812783f9c5351e5eb8c830d9eb48a1",
+    "engine/timeutil.py": "5ed5f8fc6a4eafb0ab9ea4df406cc61873bae70711f5e7d934be9c37a43dc811"
+  }
+}
