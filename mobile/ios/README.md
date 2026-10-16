@@ -5,6 +5,16 @@ Cette première étape compile le **moteur Python existant dans une app XCTest**
 sans FastAPI, sans Mac serveur, sans Cloudflare et sans appel PCC.
 Ce n'est pas encore une application d'exercices utilisable.
 
+## Validation du 16 octobre 2026
+
+- Les 60 tests du moteur passent sur le Mac et dans GitHub Actions (Linux).
+- `build-for-testing` réussit pour iOS Simulator arm64, cible iOS 26,
+  avec le SDK iOS 27.1 et Python 3.13.16.
+- Aucun runtime de simulateur iOS n'est installé sur le poste : la suite n'a
+  **pas encore été exécutée sous iOS**, ni sur iPhone physique.
+- La compilation inclut le moteur Python et FSRS, pas les correcteurs backend,
+  les items, la persistance mobile ou les capacités vocales.
+
 ## Préparer
 
 Utiliser un environnement de développement avec les dépendances du dépôt.
@@ -36,7 +46,9 @@ Compiler l'app et la suite pour simulateur, sans compte Apple :
 xcodebuild build-for-testing \
   -project .local/engine-ios-probe/iOSTestbed.xcodeproj \
   -scheme iOSTestbed -destination 'generic/platform=iOS Simulator' \
-  -derivedDataPath .local/ios-derived CODE_SIGNING_ALLOWED=NO
+  -derivedDataPath .local/ios-derived ARCHS=arm64 \
+  IPHONEOS_DEPLOYMENT_TARGET=26.0 CODE_SIGNING_ALLOWED=NO \
+  EXPANDED_CODE_SIGN_IDENTITY=-
 ```
 
 Pour exécuter, il faut un runtime simulateur installé et un appareil simulé
@@ -44,6 +56,9 @@ disponible. Ouvrir le projet généré dans Xcode, choisir iPhone 17 ou Air et l
 Product > Test. Sur appareil réel, une signature de développement est nécessaire.
 Vérifier dans la sortie `platform: ios`, puis tous les tests moteur réussis.
 Une compilation seule **ne prouve pas** le fonctionnement sur iPhone.
+La commande cible un Mac Apple Silicon. Pour un Mac Intel, remplacer `arm64`
+par `x86_64`. Le tiret impose la signature ad hoc des extensions Python du
+banc d'essai ; aucun certificat personnel n'est utilisé pour le simulateur.
 
 ## Critères de décision
 
