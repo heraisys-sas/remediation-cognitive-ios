@@ -49,6 +49,15 @@ def main():
         if args.probe.name == "calculation-pilot":
             app = local / "ios-derived/Build/Products/Debug-iphonesimulator/iOSTestbed.app"
             bundle = plistlib.loads((app / "Info.plist").read_bytes())["CFBundleIdentifier"]
+            # XCTest peut utiliser un clone puis arrêter la destination demandée.
+            # La capture est une étape distincte : démarrer et installer explicitement.
+            devices = json.loads(subprocess.check_output(
+                ["xcrun", "simctl", "list", "devices", "--json"], text=True))["devices"]
+            selected = next(d for group in devices.values() for d in group if d["udid"] == device_id)
+            if selected["state"] == "Shutdown":
+                subprocess.run(["xcrun", "simctl", "boot", device_id], check=True, timeout=60)
+            subprocess.run(["xcrun", "simctl", "bootstatus", device_id, "-b"], check=True, timeout=180)
+            subprocess.run(["xcrun", "simctl", "install", device_id, str(app)], check=True, timeout=60)
             subprocess.run(["xcrun", "simctl", "launch", device_id, bundle], check=True)
             time.sleep(3)
             subprocess.run(["xcrun", "simctl", "io", device_id, "screenshot",
