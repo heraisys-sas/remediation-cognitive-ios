@@ -3,6 +3,7 @@
 import json
 from pathlib import Path
 import sys
+from datetime import datetime, timedelta, timezone
 
 import pytest
 
@@ -90,3 +91,51 @@ def test_failed_checkpoint_rolls_back_fsrs_and_progress(tmp_path, monkeypatch):
     monkeypatch.setattr(runtime.store, "_ecrire_json", write)
     call(runtime, "finish", session_id=session["session_id"])
     assert len(call(runtime, "progress")["historique"]) == 1
+
+
+def test_errorless_reprise_preserves_support_and_first_result(tmp_path):
+    runtime = ApplicationRuntime(str(tmp_path))
+    session = call(runtime, "start")
+    first = session["items"][0]
+    answer = call(runtime, "answer", session_id=session["session_id"],
+                  item_id=first["id"], answer="inconnu", elapsed_ms=1500)
+    view = call(runtime, "next")
+    answers = {i["id"]: i["reponse"]["valeur"] for i in runtime.manager.contenu.items("calcul-mental")}
+    while not view["reprise"]:
+        call(runtime, "answer", session_id=session["session_id"], item_id=view["item"]["id"],
+             answer=str(answers[view["item"]["id"]]), elapsed_ms=1500)
+        view = call(runtime, "next")
+    runtime = ApplicationRuntime(str(tmp_path))
+    view = call(runtime, "view")
+    assert view["reprise_attendue"] == answer["attendue"]
+    call(runtime, "answer", session_id=session["session_id"], item_id=first["id"],
+         answer=str(view["reprise_attendue"]), elapsed_ms=1500)
+    result = call(runtime, "finish", session_id=session["session_id"])
+    assert result["resume"]["correctes"] == len(session["items"]) - 1
+
+
+def test_duration_proposal_can_be_dismissed_without_finishing(tmp_path, monkeypatch):
+    runtime = ApplicationRuntime(str(tmp_path))
+    session = call(runtime, "start")
+    import backend.app.api.entrainement.service as service
+    future = datetime.now(timezone.utc) + timedelta(seconds=601)
+    monkeypatch.setattr(service, "_horloge_utc", lambda: future)
+    call(runtime, "answer", session_id=session["session_id"],
+         item_id=session["items"][0]["id"], answer="inconnu", elapsed_ms=1500)
+    assert call(runtime, "view")["arret_propose"] is True
+    view = call(runtime, "dismiss-stop-proposal")
+    assert view["arret_propose"] is False
+    assert view.get("finished") is not True
+
+
+def test_summary_keeps_upstream_fatigue_proposal(tmp_path):
+    runtime = ApplicationRuntime(str(tmp_path))
+    session = call(runtime, "start")
+    for item in session["items"][:3]:
+        call(runtime, "answer", session_id=session["session_id"],
+             item_id=item["id"], answer="inconnu", elapsed_ms=5000)
+        call(runtime, "next")
+    call(runtime, "finish", session_id=session["session_id"])
+    summary = call(runtime, "view")["summary"]
+    assert summary["arret_propose"] is True
+    assert summary["motif_arret"] == "fatigue"

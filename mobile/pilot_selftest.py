@@ -22,8 +22,8 @@ def run():
                    for item in runtime.manager.contenu.items("calcul-mental")}
         first = session["items"][0]
         feedback = call(runtime, "answer", session_id=session["session_id"],
-                        item_id=first["id"], answer=str(answers[first["id"]]), elapsed_ms=1500)
-        assert feedback["correcte"]
+                        item_id=first["id"], answer="inconnu", elapsed_ms=1500)
+        assert feedback["correcte"] is False and feedback["reprise"] is True
         passed += 1
         runtime = ApplicationRuntime(directory)
         assert call(runtime, "view")["feedback"] == feedback
@@ -32,11 +32,13 @@ def run():
         view = call(runtime, "next")
         while view.get("item"):
             item = view["item"]
+            if view["reprise"]:
+                assert view["reprise_attendue"] == answers[item["id"]]
             call(runtime, "answer", session_id=session["session_id"],
                  item_id=item["id"], answer=str(answers[item["id"]]), elapsed_ms=1500)
             view = call(runtime, "next")
         summary = call(runtime, "finish", session_id=session["session_id"])
-        assert summary["resume"]["correctes"] == len(session["items"])
+        assert summary["resume"]["correctes"] == len(session["items"]) - 1
         progress = call(runtime, "progress")
         assert progress["historique"] and runtime.store.lire_cartes("calcul-mental")
         passed += 1

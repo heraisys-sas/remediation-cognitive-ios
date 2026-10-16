@@ -91,13 +91,16 @@ class ApplicationRuntime:
                 self.manager._sessions.clear()
                 result = self.manager.demarrer("calcul-mental")
                 self.ui = {"session": result, "queue": [i["id"] for i in result["items"]],
-                           "cursor": 0, "feedback": None}
+                           "cursor": 0, "feedback": None, "reprise_support": {}}
         elif action == "view":
             result = self._view()
         elif action == "next":
             if self.ui.get("feedback") is not None:
                 self.ui["cursor"] += 1
                 self.ui["feedback"] = None
+            result = self._view()
+        elif action == "dismiss-stop-proposal":
+            self.ui["stop_proposal"] = False
             result = self._view()
         elif action == "answer":
             answer = request.get("answer")
@@ -124,6 +127,9 @@ class ApplicationRuntime:
             self.ui["feedback"] = result
             if result.get("reprise"):
                 self.ui["queue"].append(str(request["item_id"]))
+                self.ui.setdefault("reprise_support", {})[str(request["item_id"])] = result["attendue"]
+            if result.get("arret_propose") and result.get("motif_arret") == "duree":
+                self.ui["stop_proposal"] = True
         elif action == "finish":
             result = self.manager.terminer("calcul-mental", str(request["session_id"]))
         elif action == "progress":
@@ -146,4 +152,7 @@ class ApplicationRuntime:
                 "item": by_id[queue[cursor]] if cursor < len(queue) else None,
                 "position": cursor + 1, "total": len(queue),
                 "feedback": self.ui["feedback"],
+                "arret_propose": self.ui.get("stop_proposal", False),
+                "reprise_attendue": self.ui.get("reprise_support", {}).get(queue[cursor])
+                    if cursor < len(queue) and cursor >= len(session["items"]) else None,
                 "reprise": cursor >= len(session["items"])}

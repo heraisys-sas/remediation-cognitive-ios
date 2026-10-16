@@ -26,6 +26,8 @@ function render(view) {
   element("finish").hidden = !view.started || Boolean(view.finished);
   element("exercise").hidden = !view.item || paused;
   element("summary").hidden = !view.finished;
+  element("stopProposal").hidden = !view.arret_propose || Boolean(view.finished);
+  element("summaryAdvice").hidden = !view.finished || !view.summary?.arret_propose;
   if (view.finished) {
     const summary = view.summary.resume;
     element("summaryText").textContent = `${summary.items} questions travaillées, dont ${summary.correctes} réussies à la première réponse retenue.`;
@@ -35,6 +37,9 @@ function render(view) {
   if (!view.item) return;
   element("position").textContent = `${view.reprise ? "Reprise après correction · " : ""}Question ${view.position} sur ${view.total}`;
   element("question").textContent = view.item.contenu.enonce;
+  element("repriseSupport").hidden = !view.reprise || view.reprise_attendue == null;
+  element("repriseSupport").textContent = view.reprise_attendue != null
+    ? `Reprise avec la réponse déjà fournie : ${view.reprise_attendue}. Tu peux t’appuyer dessus.` : "";
   element("methodText").textContent = view.item.contenu.methode || "";
   element("method").hidden = !view.item.contenu.methode;
   element("answerForm").hidden = Boolean(view.feedback);
@@ -62,6 +67,7 @@ element("next").onclick = () => perform(async () => {
 element("finish").onclick = () => perform(async () => {
   await request("finish", {session_id: state.session_id}); render(await request("view"));
 });
+element("continueChoice").onclick = () => perform(async () => render(await request("dismiss-stop-proposal")));
 window.pauseForInterruption = () => { clock.pause(); paused = true; element("exercise").hidden = true; element("resume").hidden = false; };
 document.addEventListener("visibilitychange", () => { if (document.hidden && state?.item) window.pauseForInterruption(); });
 element("resume").onclick = () => {

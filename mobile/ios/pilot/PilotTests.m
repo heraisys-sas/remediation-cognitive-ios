@@ -16,7 +16,19 @@
     XCTNSPredicateExpectation *page = [[XCTNSPredicateExpectation alloc] initWithPredicate:loaded object:web];
     [self waitForExpectations:@[page] timeout:20];
     XCTestExpectation *response = [self expectationWithDescription:@"Pont WebKit vers moteur local"];
-    [web callAsyncJavaScript:@"for(let i=0;i<200&&document.getElementById('status').textContent;i++) await new Promise(r=>setTimeout(r,10)); await document.getElementById('start').onclick(); const r=await window.webkit.messageHandlers.runtime.postMessage({action:'view'}); window.pauseForInterruption(); const paused=document.getElementById('exercise').hidden; document.getElementById('resume').onclick(); return {result:r, title:document.querySelector('h1').textContent, error:document.getElementById('error').textContent, paused:paused, resumed:!document.getElementById('exercise').hidden};"
+    NSString *script = @"for(let i=0;i<200&&document.getElementById('status').textContent;i++) await new Promise(r=>setTimeout(r,10));"
+        "await document.getElementById('start').onclick();"
+        "const r=await window.webkit.messageHandlers.runtime.postMessage({action:'view'});"
+        "window.pauseForInterruption(); const paused=document.getElementById('exercise').hidden;"
+        "document.getElementById('resume').onclick();"
+        "const resumed=!document.getElementById('exercise').hidden;"
+        "for(let i=0;i<12;i++){const v=await request('view');"
+        "await request('answer',{session_id:v.session_id,item_id:v.item.id,answer:'inconnu',elapsed_ms:1000});"
+        "render(await request('view')); await document.getElementById('next').onclick();}"
+        "const reprise=await request('view');"
+        "return {result:r,title:document.querySelector('h1').textContent,error:document.getElementById('error').textContent,"
+        "paused,resumed,support:!document.getElementById('repriseSupport').hidden && document.getElementById('repriseSupport').textContent.includes(String(reprise.reprise_attendue))};";
+    [web callAsyncJavaScript:script
                    arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld
            completionHandler:^(id value, NSError *error) {
         XCTAssertNil(error);
@@ -27,6 +39,7 @@
         XCTAssertNotNil(value[@"result"][@"item"]);
         XCTAssertEqualObjects(value[@"paused"], @YES);
         XCTAssertEqualObjects(value[@"resumed"], @YES);
+        XCTAssertEqualObjects(value[@"support"], @YES);
         [response fulfill];
     }];
     [self waitForExpectations:@[response] timeout:30];

@@ -13,6 +13,7 @@
   <section id="exercise" hidden>
     <p id="position" class="secondary"></p>
     <h2 id="question" tabindex="-1"></h2>
+    <p id="repriseSupport" hidden></p>
     <details id="method"><summary>Une méthode pour t’aider</summary><p id="methodText"></p></details>
     <form id="answerForm">
       <label for="answer">Ta réponse</label>
@@ -22,9 +23,13 @@
     <div id="feedback" role="status" aria-live="polite"></div>
     <button id="next" hidden>Continuer</button>
   </section>
+  <aside id="stopProposal" hidden role="status">
+    <p>La durée proposée est atteinte. Tu peux terminer la séance ou continuer à ton rythme.</p>
+    <button id="continueChoice" class="secondaryButton">Continuer à mon rythme</button>
+  </aside>
   <button id="start">Commencer</button>
   <button id="finish" class="secondaryButton" hidden>Terminer et enregistrer</button>
-  <section id="summary" hidden><h2>Séance enregistrée</h2><p id="summaryText"></p></section>
+  <section id="summary" hidden><h2>Séance enregistrée</h2><p id="summaryText"></p><p id="summaryAdvice" hidden>Une pause peut être utile. Tu peux t’arrêter ici et reprendre plus tard.</p></section>
   <p id="error" role="alert"></p>
   <button id="resume" hidden>Reprendre après l’interruption</button>
 </main>
