@@ -3,6 +3,7 @@
 import json
 from pathlib import Path
 import sys
+from contextlib import ExitStack
 from tempfile import TemporaryDirectory
 
 from mobile.application_runtime import ApplicationRuntime
@@ -13,8 +14,13 @@ def run():
         return json.loads(runtime.call(json.dumps({"action": action, **values})))
 
     passed = 0
-    with TemporaryDirectory(prefix="remediation-pilot-") as directory:
-        runtime = ApplicationRuntime(str(Path(directory).resolve()))
+    with TemporaryDirectory(prefix="remediation-pilot-") as directory, ExitStack() as resources:
+        def restored_runtime():
+            instance = ApplicationRuntime(str(Path(directory).resolve()))
+            resources.callback(instance.store.connection.close)
+            return instance
+
+        runtime = restored_runtime()
         session = call(runtime, "start")
         assert session["items"] and all("reponse" not in i for i in session["items"])
         passed += 1
@@ -25,7 +31,7 @@ def run():
                         item_id=first["id"], answer="inconnu", elapsed_ms=1500)
         assert feedback["correcte"] is False and feedback["reprise"] is True
         passed += 1
-        runtime = ApplicationRuntime(directory)
+        runtime = restored_runtime()
         assert call(runtime, "view")["feedback"] == feedback
         assert call(runtime, "start")["session_id"] == session["session_id"]
         passed += 1
@@ -42,7 +48,7 @@ def run():
         progress = call(runtime, "progress")
         assert progress["historique"] and runtime.store.lire_cartes("calcul-mental")
         passed += 1
-        relaunched = ApplicationRuntime(directory)
+        relaunched = restored_runtime()
         assert call(relaunched, "finish", session_id=session["session_id"]) == summary
         assert call(relaunched, "progress") == progress
         passed += 1
@@ -50,7 +56,7 @@ def run():
         item = lexical["items"][0]
         identity = {"session_id": lexical["session_id"], "item_id": item["id"]}
         call(relaunched, "hint", **identity)
-        restored = ApplicationRuntime(directory)
+        restored = restored_runtime()
         view = call(restored, "view")
         assert view["activity"] == "acces-lexical" and view["hints_used"] == 1
         passed += 1
