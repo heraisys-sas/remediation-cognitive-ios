@@ -27,6 +27,7 @@ jobs:
         if: always()
         with:
           name: preuve-ios-${{ strategy.job-index }}
+          include-hidden-files: true
           path: |
             .local/*.log
             .local/*.xcresult
@@ -52,6 +53,7 @@ jobs:
         if: always()
         with:
           name: preuve-pilote-${{ strategy.job-index }}
+          include-hidden-files: true
           path: |
             .local/*.log
             .local/*.xcresult

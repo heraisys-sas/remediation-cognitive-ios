@@ -10,11 +10,23 @@
   <h1>Calcul mental</h1>
   <p id="intro">Une question à la fois, à ton rythme. Tu peux terminer et enregistrer la séance quand tu le souhaites.</p>
   <p id="status" role="status" aria-live="polite"></p>
+  <div id="activityChoice">
+    <label for="activity">Choisir une activité</label>
+    <select id="activity">
+      <option value="calcul-mental">Calcul mental</option>
+      <option value="acces-lexical">Retrouver le mot</option>
+    </select>
+  </div>
   <section id="exercise" hidden>
     <p id="position" class="secondary"></p>
     <h2 id="question" tabindex="-1"></h2>
     <p id="repriseSupport" hidden></p>
     <details id="method"><summary>Une méthode pour t’aider</summary><p id="methodText"></p></details>
+    <section id="lexicalHelp" hidden aria-label="Aides facultatives">
+      <p id="hints" role="status" aria-live="polite"></p>
+      <button id="hint" class="secondaryButton">Un indice</button>
+      <button id="reveal" class="secondaryButton">Afficher le mot et continuer</button>
+    </section>
     <form id="answerForm">
       <label for="answer">Ta réponse</label>
       <input id="answer" type="text" autocomplete="off" inputmode="text" enterkeyhint="done">

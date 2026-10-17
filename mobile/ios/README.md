@@ -83,7 +83,7 @@ Cela ne remplace pas la recette sur un iPhone physique.
 - Aucun résultat du modèle génératif ne remplace une correction déterministe.
 - Vérifier licences, frameworks signés et règles Apple avant distribution.
 
-## Pilote Calcul mental
+## Pilote Calcul mental et Retrouver le mot
 
 ```sh
 python tools/ios/prepare_pilot.py
@@ -94,6 +94,19 @@ Le projet généré `.local/calculation-pilot/iOSTestbed.xcodeproj` construit un
 app appelée « Remédiation ». L'interface WKWebView n'a accès qu'à ses fichiers
 locaux ; son pont appelle le service Python dans une file native sérialisée.
 Il n'y a ni serveur, ni tunnel, ni appel PCC. La saisie est au clavier.
+
+Le choix d'activité est disponible avant le démarrage et après la clôture. Une
+séance active est reprise avec son parcours d'origine. Retrouver le mot utilise
+le parcours amont `evocation/acces-lexical` et son départ automatique au palier 2.
+Les indices sont facultatifs, progressifs et sauvegardés. « Afficher le mot et
+continuer » clôt l'essai comme assisté selon le service d'origine : le mot affiché
+ne devient pas une récupération sans aide. Les historiques et cartes sont
+séparés sous `evocation--acces-lexical`, sans modifier ceux du calcul.
+
+Le fichier HTML ouvert directement dans un navigateur explique maintenant qu'il
+faut lancer l'app native. Il n'exécute pas un moteur de démonstration.
+Pour conserver un projet déjà configuré dans Xcode, générer un autre projet avec
+`python tools/ios/prepare_pilot.py --destination .local/lexical-pilot`.
 
 Le service, les correcteurs et les items viennent du commit source enregistré
 dans `UPSTREAM.json`. Le point d'entrée de package a été adapté pour ne pas

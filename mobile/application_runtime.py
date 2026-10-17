@@ -14,6 +14,11 @@ from backend.app.api.entrainement.service import GestionnaireSessions, SessionEn
 from engine.session.runner import SessionRunner  # noqa: E402
 from mobile.transactional_store import TransactionalStore  # noqa: E402
 
+ACTIVITIES = {
+    "calcul-mental": ("calcul-mental", None, "Calcul mental"),
+    "acces-lexical": ("evocation", "acces-lexical", "Retrouver le mot"),
+}
+
 
 class ApplicationRuntime:
     """Instance sérialisée par l'appelant natif ; données dans le conteneur de l'app."""
@@ -82,16 +87,20 @@ class ApplicationRuntime:
 
     def _execute(self, request):
         action = request.get("action")
-        # Le premier pilote ne propose que le calcul. Pas de dictée/IA implicite.
         if action == "start":
+            activity = request.get("activity", "calcul-mental")
+            if activity not in ACTIVITIES:
+                raise ValueError("Parcours non disponible")
             active = next((s for s in self.manager._sessions.values() if not s.terminee), None)
             if active:
                 result = self.ui["session"]
             else:
                 self.manager._sessions.clear()
-                result = self.manager.demarrer("calcul-mental")
+                theme, parcours, _ = ACTIVITIES[activity]
+                result = self.manager.demarrer(theme, parcours=parcours)
                 self.ui = {"session": result, "queue": [i["id"] for i in result["items"]],
-                           "cursor": 0, "feedback": None, "reprise_support": {}}
+                           "cursor": 0, "feedback": None, "reprise_support": {},
+                           "activity": activity, "hints": {}}
         elif action == "view":
             result = self._view()
         elif action == "next":
@@ -102,8 +111,17 @@ class ApplicationRuntime:
         elif action == "dismiss-stop-proposal":
             self.ui["stop_proposal"] = False
             result = self._view()
-        elif action == "answer":
-            answer = request.get("answer")
+        elif action == "hint":
+            current = self._current_item(request)
+            item = current["item"]
+            hints = item["contenu"].get("indices", [])
+            if item.get("type") != "rappel-indice" or not hints or current.get("feedback"):
+                raise ValueError("Indice indisponible à cette étape")
+            counts = self.ui.setdefault("hints", {})
+            counts[item["id"]] = min(len(hints), counts.get(item["id"], 0) + 1)
+            result = self._view()
+        elif action in ("answer", "reveal"):
+            answer = request.get("answer", "")
             elapsed = request.get("elapsed_ms")
             if not isinstance(answer, (str, int, float)) or isinstance(answer, bool):
                 raise ValueError("Réponse invalide")
@@ -112,16 +130,21 @@ class ApplicationRuntime:
             # Un renvoi du même appel natif après perte de son retour ne crée pas
             # un essai supplémentaire. Le bouton Continuer libère l'item suivant.
             previous = self.ui.get("feedback")
-            if previous and self.ui.get("last_item") == request["item_id"]:
+            if (previous and self.ui.get("last_item") == request.get("item_id")
+                    and self.ui["session"]["session_id"] == request.get("session_id")):
                 return previous
-            current = self._view()
-            if (current.get("finished") or not current.get("item") or
-                    current["session_id"] != request["session_id"] or
-                    current["item"]["id"] != request["item_id"]):
-                raise ValueError("Réponse hors de l'étape présentée")
+            current = self._current_item(request)
+            item = current["item"]
+            hints = item["contenu"].get("indices", [])
+            hint_count = self.ui.get("hints", {}).get(item["id"], 0)
+            if action == "reveal":
+                if item.get("type") != "rappel-indice" or not hints:
+                    raise ValueError("Affichage de réponse indisponible")
+                hint_count = len(hints) + 1
+                answer = ""
             result = self.manager.repondre(
-                "calcul-mental", str(request["session_id"]), str(request["item_id"]),
-                answer, elapsed,
+                self._session().theme, str(request["session_id"]), str(request["item_id"]),
+                answer, elapsed, indice_utilise=hint_count,
             )
             self.ui["last_item"] = request["item_id"]
             self.ui["feedback"] = result
@@ -131,24 +154,44 @@ class ApplicationRuntime:
             if result.get("arret_propose") and result.get("motif_arret") == "duree":
                 self.ui["stop_proposal"] = True
         elif action == "finish":
-            result = self.manager.terminer("calcul-mental", str(request["session_id"]))
+            result = self.manager.terminer(self._session().theme, str(request["session_id"]))
         elif action == "progress":
-            result = self.manager.stockage.lire_maitrise("calcul-mental")
+            activity = request.get("activity", "calcul-mental")
+            if activity not in ACTIVITIES:
+                raise ValueError("Parcours non disponible")
+            theme, parcours, _ = ACTIVITIES[activity]
+            result = self.manager.stockage.lire_maitrise(f"{theme}--{parcours}" if parcours else theme)
         else:
             raise ValueError("Action native non prise en charge")
         return result
+
+    def _session(self):
+        if "session" not in self.ui:
+            raise ValueError("Aucune séance en cours")
+        return self.manager._sessions[self.ui["session"]["session_id"]]
+
+    def _current_item(self, request):
+        current = self._view()
+        if (current.get("finished") or not current.get("item") or
+                current.get("session_id") != request.get("session_id") or
+                current["item"]["id"] != request.get("item_id")):
+            raise ValueError("Réponse hors de l'étape présentée")
+        return current
 
     def _view(self):
         if "session" not in self.ui:
             return {"started": False}
         session = self.ui["session"]
         current = self.manager._sessions[session["session_id"]]
+        activity = self.ui.get("activity", "calcul-mental")
+        metadata = {"activity": activity, "title": ACTIVITIES[activity][2]}
         if current.terminee:
-            return {"started": True, "finished": True, "summary": current.resume_cloture}
+            return {"started": True, "finished": True, "summary": current.resume_cloture, **metadata}
         cursor = self.ui["cursor"]
         queue = self.ui["queue"]
         by_id = {item["id"]: item for item in session["items"]}
-        return {"started": True, "session_id": session["session_id"],
+        return {"started": True, "session_id": session["session_id"], **metadata,
+                "hints_used": self.ui.get("hints", {}).get(queue[cursor], 0) if cursor < len(queue) else 0,
                 "item": by_id[queue[cursor]] if cursor < len(queue) else None,
                 "position": cursor + 1, "total": len(queue),
                 "feedback": self.ui["feedback"],

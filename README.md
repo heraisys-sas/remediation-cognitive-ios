@@ -10,7 +10,7 @@ Aucun exercice n'est présenté comme un test diagnostique validé.
 ## État réel
 
 Le noyau Python a exécuté ses 60 tests sous iOS 26.5 sur simulateurs iPhone 17
-et Air. Un premier pilote Calcul mental réutilise maintenant le service et les
+et Air. Le pilote Calcul mental et Retrouver le mot réutilise le service et les
 correcteurs d'origine, avec contenu versionné, interface locale et sauvegarde
 transactionnelle. Voir [le banc d'essai et le pilote](mobile/ios/README.md).
 La validation du pilote sous iOS est distincte de celle du noyau ; consulter
