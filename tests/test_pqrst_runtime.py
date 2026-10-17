@@ -146,11 +146,14 @@ def test_pqrst_test_relecture_keeps_first_choices_and_condition(tmp_path):
 def test_pqrst_checkpoint_failure_rolls_back_transition(tmp_path, monkeypatch):
     runtime = ApplicationRuntime(str(tmp_path))
     view = start(runtime)
+    request = command(view, "continue")
+    observations = runtime.store.lire_observations(view["session_id"])
     original = runtime._save
     def fail():
         raise OSError("interruption simulée")
     monkeypatch.setattr(runtime, "_save", fail)
     with pytest.raises(OSError):
-        step(runtime, "continue")
+        call(runtime, "pqrst-step", **request)
     monkeypatch.setattr(runtime, "_save", original)
     assert call(runtime, "view") == view
+    assert runtime.store.lire_observations(view["session_id"]) == observations
