@@ -1,6 +1,7 @@
 "use strict";
 const element = id => document.getElementById(id);
 let state = null, busy = false, paused = false;
+let pendingProtocolPause = false;
 const clock = new ActiveClock();
 async function request(action, data = {}) {
   if (!window.webkit?.messageHandlers?.runtime) {
@@ -11,20 +12,26 @@ async function request(action, data = {}) {
 async function perform(operation) {
   if (busy) return;
   busy = true;
-  document.querySelectorAll("button").forEach(button => { button.disabled = true; });
+  const disabledBefore = new Map();
+  document.querySelectorAll("button").forEach(button => { disabledBefore.set(button, button.disabled); button.disabled = true; });
   element("error").textContent = "";
   element("status").textContent = "Enregistrement sur l’appareil…";
   try { await operation(); }
   catch (error) { element("error").textContent = String(error.message || error); }
   finally {
+    try { await flushProtocolPause(); }
+    catch (error) { element("error").textContent ||= String(error.message || error); }
     busy = false;
     element("status").textContent = "";
-    document.querySelectorAll("button").forEach(button => { button.disabled = false; });
+    document.querySelectorAll("button").forEach(button => { if (disabledBefore.has(button)) button.disabled = disabledBefore.get(button); });
     if (paused) { element("exercise").hidden = true; element("resume").hidden = false; }
   }
 }
 function render(view) {
   state = view;
+  if (view.finished) paused = false;
+  if (view.protocol?.paused) paused = true;
+  element("resume").hidden = !paused || Boolean(view.finished);
   element("activityChoice").hidden = Boolean(view.started && !view.finished);
   if (view.title) { document.querySelector("h1").textContent = view.title; document.title = view.title; }
   element("start").hidden = Boolean(view.started && !view.finished);
@@ -36,14 +43,17 @@ function render(view) {
   if (view.finished) {
     const summary = view.summary.resume;
     element("summaryText").textContent = `${summary.items} questions travaillées, dont ${summary.correctes} réussies à la première réponse retenue.`;
-    if (summary.assistees != null) element("summaryText").textContent += ` ${summary.sans_aide} retrouvées sans aide ; ${summary.assistees} avec le mot affiché.`;
+    if (view.activity === "pqrst-guide") element("summaryText").textContent = `${summary.items} texte(s) travaillé(s). Les résultats par étape sont conservés.`;
+    if (view.activity === "acces-lexical" && summary.assistees != null) element("summaryText").textContent += ` ${summary.sans_aide} retrouvées sans aide ; ${summary.assistees} avec le mot affiché.`;
     element("start").textContent = "Nouvelle séance";
     return;
   }
   if (!view.item) return;
   element("position").textContent = `${view.reprise ? "Reprise après correction · " : ""}Question ${view.position} sur ${view.total}`;
   element("question").textContent = view.item.contenu.enonce;
-  element("repriseSupport").hidden = !view.reprise || view.reprise_attendue == null;
+  const isPqrst = view.item.type === "pqrst-mise-en-oeuvre";
+  renderPqrstProtocol(view);
+  element("repriseSupport").hidden = isPqrst || !view.reprise || view.reprise_attendue == null;
   element("repriseSupport").textContent = view.reprise_attendue != null
     ? `Reprise avec la réponse déjà fournie : ${view.reprise_attendue}. Tu peux t’appuyer dessus.` : "";
   element("methodText").textContent = view.item.contenu.methode || "";
@@ -53,9 +63,10 @@ function render(view) {
   element("lexicalHelp").hidden = !lexical || Boolean(view.feedback) || Boolean(view.reprise);
   element("hints").textContent = hints.slice(0, view.hints_used || 0).map(hint => hint.texte).join("\n");
   element("hint").hidden = (view.hints_used || 0) >= hints.length;
-  element("answerForm").hidden = Boolean(view.feedback);
+  element("answerForm").hidden = isPqrst || Boolean(view.feedback);
   element("next").hidden = !view.feedback;
   element("feedback").textContent = view.feedback ? `${view.feedback.feedback || ""}${view.feedback.attendue != null ? " Réponse : " + view.feedback.attendue + "." : ""}` : "";
+  if (isPqrst && view.feedback) element("feedback").textContent = pqrstFeedbackLines(view.feedback).join("\n\n");
 }
 element("start").onclick = () => perform(async () => {
   await request("start", {activity: element("activity").value || "calcul-mental"});
@@ -64,7 +75,7 @@ element("start").onclick = () => perform(async () => {
   render(view); element("answer").value = ""; clock.reset(paused);
 });
 element("activity").onchange = () => {
-  document.querySelector("h1").textContent = element("activity").value === "acces-lexical" ? "Retrouver le mot" : "Calcul mental";
+  document.querySelector("h1").textContent = {"acces-lexical":"Retrouver le mot", "pqrst-guide":"PQRST guidé"}[element("activity").value] || "Calcul mental";
 };
 element("hint").onclick = () => perform(async () => {
   if (!state?.item || paused) return;
@@ -94,9 +105,52 @@ element("finish").onclick = () => perform(async () => {
   await request("finish", {session_id: state.session_id}); render(await request("view"));
 });
 element("continueChoice").onclick = () => perform(async () => render(await request("dismiss-stop-proposal")));
-window.pauseForInterruption = () => { clock.pause(); paused = true; element("exercise").hidden = true; element("resume").hidden = false; };
+async function protocolCommand(operation, value = null) {
+  if (!state?.protocol || (paused && operation !== "resume")) return;
+  const payload = {session_id:state.session_id, item_id:state.item.id, revision:state.protocol.revision,
+    operation, value, elapsed_ms:Math.round(clock.elapsed())};
+  const previousView = state;
+  return perform(async () => {
+    let view;
+    try { view = await request("pqrst-step", payload); }
+    catch (error) {
+      // Une réponse native perdue n'annule pas forcément sa transaction.
+      // Relire l'état durable évite de rester bloqué sur une ancienne révision.
+      const durable = await request("view").catch(() => null);
+      if (!durable) throw error;
+      if (!durable.finished && !durable.feedback && durable.protocol?.revision === payload.revision) {
+        render(durable); throw error;
+      }
+      view = durable;
+    }
+    if (["respond", "reread"].includes(operation)) clearPqrstDraft(previousView);
+    if (operation === "resume") paused = false;
+    render(view); clock.reset(paused);
+    if (!paused && view.protocol) element("protocol-heading").focus();
+  });
+}
+async function flushProtocolPause() {
+  if (!pendingProtocolPause) return;
+  let view = await request("view");
+  if (view.protocol && !view.protocol.paused && !["pret", "fin"].includes(view.protocol.phase)) {
+    view = await request("pqrst-step", {session_id:view.session_id, item_id:view.item.id,
+      revision:view.protocol.revision, operation:"pause", elapsed_ms:Math.round(clock.elapsed())});
+  }
+  pendingProtocolPause = false;
+  render(view); clock.reset(paused);
+}
+window.pauseForInterruption = () => {
+  clock.pause(); paused = true; element("exercise").hidden = true; element("resume").hidden = false;
+  if (state?.protocol && !state.protocol.paused && !["pret", "fin"].includes(state.protocol.phase)) {
+    pendingProtocolPause = true;
+    if (!busy) return perform(async () => {});
+  }
+};
 document.addEventListener("visibilitychange", () => { if (document.hidden && state?.item) window.pauseForInterruption(); });
-element("resume").onclick = () => {
+element("resume").onclick = async () => {
+  if (pendingProtocolPause) await perform(flushProtocolPause);
+  if (pendingProtocolPause) return;
+  if (state?.protocol?.paused) return protocolCommand("resume");
   clock.resume(); paused = false; element("resume").hidden = true; if (state) render(state);
 };
 perform(async () => { render(await request("view")); clock.reset(paused); });

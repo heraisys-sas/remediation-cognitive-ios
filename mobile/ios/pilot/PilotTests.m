@@ -33,14 +33,32 @@
         "await document.getElementById('hint').onclick();"
         "const hinted=await request('view'); const hintVisible=Boolean(document.getElementById('hints').textContent);"
         "await document.getElementById('reveal').onclick(); const revealed=await request('view');"
+        "await document.getElementById('finish').onclick();"
+        "document.getElementById('activity').value='pqrst-guide'; await document.getElementById('start').onclick();"
+        "await document.getElementById('protocol-continue').onclick();"
+        "document.getElementById('protocol-option-1').onclick(); await document.getElementById('protocol-respond').onclick();"
+        "await document.getElementById('protocol-continue').onclick();"
+        "let field=document.getElementById('protocol-answer'); field.value='Que retenir ?'; field.oninput();"
+        "await document.getElementById('protocol-respond').onclick(); await document.getElementById('protocol-continue').onclick();"
+        "await document.getElementById('protocol-continue').onclick();"
+        "const masked=!document.getElementById('protocol').textContent.includes('bureau de tabac de la place');"
+        "field=document.getElementById('protocol-answer'); field.value='Le colis attend'; field.oninput();"
+        "await document.getElementById('protocol-pause').onclick(); await document.getElementById('resume').onclick();"
+        "const draft=document.getElementById('protocol-answer').value==='Le colis attend';"
+        "await document.getElementById('protocol-reread').onclick(); await document.getElementById('protocol-continue').onclick();"
+        "field=document.getElementById('protocol-answer'); field.value='Le colis attend au bureau de tabac avant jeudi avec une pièce d’identité avant la fermeture à 18 h'; field.oninput();"
+        "await document.getElementById('protocol-respond').onclick(); await document.getElementById('protocol-continue').onclick();"
+        "for(let i=0;i<2;i++){document.getElementById('protocol-option-0').onclick(); await document.getElementById('protocol-respond').onclick();}"
+        "await document.getElementById('protocol-submit').onclick(); const pqrst=await request('view');"
         "return {result:r,title:document.querySelector('h1').textContent,error:document.getElementById('error').textContent,"
-        "paused,resumed,support,lexical:hinted.activity==='acces-lexical' && hinted.hints_used===1 && hintVisible && revealed.feedback.assistee===true};";
+        "paused,resumed,support,lexical:hinted.activity==='acces-lexical' && hinted.hints_used===1 && hintVisible && revealed.feedback.assistee===true,"
+        "pqrst:masked&&draft&&pqrst.feedback.sequence.observation.tentatives['4'][0].reponse==='Le colis attend'&&pqrst.feedback.sequence['1'].correcte===false&&document.getElementById('feedback').textContent.includes('sujet du texte : réponse à revoir')};";
     [web callAsyncJavaScript:script
                    arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld
            completionHandler:^(id value, NSError *error) {
         XCTAssertNil(error);
         XCTAssertTrue([value isKindOfClass:NSDictionary.class]);
-        XCTAssertEqualObjects(value[@"title"], @"Retrouver le mot");
+        XCTAssertEqualObjects(value[@"title"], @"PQRST guidé");
         XCTAssertEqualObjects(value[@"error"], @"");
         XCTAssertNotNil(value[@"result"][@"started"]);
         XCTAssertNotNil(value[@"result"][@"item"]);
@@ -48,9 +66,10 @@
         XCTAssertEqualObjects(value[@"resumed"], @YES);
         XCTAssertEqualObjects(value[@"support"], @YES);
         XCTAssertEqualObjects(value[@"lexical"], @YES);
+        XCTAssertEqualObjects(value[@"pqrst"], @YES);
         [response fulfill];
     }];
-    [self waitForExpectations:@[response] timeout:30];
+    [self waitForExpectations:@[response] timeout:60];
 }
 
 - (void)testNativePythonPersistence {
@@ -65,7 +84,7 @@
     NSDictionary *result = [NSJSONSerialization JSONObjectWithData:[report dataUsingEncoding:NSUTF8StringEncoding]
                                                            options:0 error:nil];
     XCTAssertEqualObjects(result[@"platform"], @"ios");
-    XCTAssertEqualObjects(result[@"passed"], @7);
+    XCTAssertEqualObjects(result[@"passed"], @9);
     NSLog(@"PILOT_RESULT=%@", report);
 }
 @end

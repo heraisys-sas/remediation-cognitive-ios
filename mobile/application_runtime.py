@@ -1,6 +1,7 @@
 """Entrée JSON locale ; conserve le service métier amont, sans serveur HTTP."""
 
 import json
+import copy
 from dataclasses import fields
 from datetime import datetime
 from pathlib import Path
@@ -13,10 +14,12 @@ sys.path.insert(0, str(ROOT / "vendor/remediation"))
 from backend.app.api.entrainement.service import GestionnaireSessions, SessionEnCours, ItemMoteur  # noqa: E402
 from engine.session.runner import SessionRunner  # noqa: E402
 from mobile.transactional_store import TransactionalStore  # noqa: E402
+from mobile import pqrst_protocol  # noqa: E402
 
 ACTIVITIES = {
     "calcul-mental": ("calcul-mental", None, "Calcul mental"),
     "acces-lexical": ("evocation", "acces-lexical", "Retrouver le mot"),
+    "pqrst-guide": ("methodes", "pqrst-guide", "PQRST guidé"),
 }
 
 
@@ -33,6 +36,7 @@ class ApplicationRuntime:
         self.ui = {}
         self.lock = threading.RLock()
         self.source_version = json.loads((ROOT / "UPSTREAM.json").read_text())["commit"]
+        self.first_call = True
 
     def _restore(self):
         self.manager = GestionnaireSessions(stockage=self.store)
@@ -81,9 +85,13 @@ class ApplicationRuntime:
             # Reconstruction depuis l'état durable : un échec ne laisse aucun état
             # mémoire en avance sur la transaction annulée.
             self._restore()
+            if self.first_call:
+                self._mark_restored_interruption()
             result = self._execute(request)
             self._save()
-            return json.dumps(result, ensure_ascii=False, allow_nan=False)
+            encoded = json.dumps(result, ensure_ascii=False, allow_nan=False)
+        self.first_call = False
+        return encoded
 
     def _execute(self, request):
         action = request.get("action")
@@ -103,6 +111,8 @@ class ApplicationRuntime:
                            "activity": activity, "hints": {}}
         elif action == "view":
             result = self._view()
+        elif action == "pqrst-step":
+            result = self._pqrst_step(request)
         elif action == "next":
             if self.ui.get("feedback") is not None:
                 self.ui["cursor"] += 1
@@ -114,6 +124,8 @@ class ApplicationRuntime:
         elif action == "hint":
             current = self._current_item(request)
             item = current["item"]
+            if item.get("type") == "pqrst-mise-en-oeuvre":
+                raise ValueError("Utiliser le parcours PQRST séquencé")
             hints = item["contenu"].get("indices", [])
             if item.get("type") != "rappel-indice" or not hints or current.get("feedback"):
                 raise ValueError("Indice indisponible à cette étape")
@@ -136,6 +148,8 @@ class ApplicationRuntime:
             current = self._current_item(request)
             item = current["item"]
             hints = item["contenu"].get("indices", [])
+            if item.get("type") == "pqrst-mise-en-oeuvre":
+                raise ValueError("Utiliser le parcours PQRST séquencé")
             hint_count = self.ui.get("hints", {}).get(item["id"], 0)
             if action == "reveal":
                 if item.get("type") != "rappel-indice" or not hints:
@@ -146,13 +160,7 @@ class ApplicationRuntime:
                 self._session().theme, str(request["session_id"]), str(request["item_id"]),
                 answer, elapsed, indice_utilise=hint_count,
             )
-            self.ui["last_item"] = request["item_id"]
-            self.ui["feedback"] = result
-            if result.get("reprise"):
-                self.ui["queue"].append(str(request["item_id"]))
-                self.ui.setdefault("reprise_support", {})[str(request["item_id"])] = result["attendue"]
-            if result.get("arret_propose") and result.get("motif_arret") == "duree":
-                self.ui["stop_proposal"] = True
+            self._record_feedback(request["item_id"], result)
         elif action == "finish":
             result = self.manager.terminer(self._session().theme, str(request["session_id"]))
         elif action == "progress":
@@ -163,7 +171,73 @@ class ApplicationRuntime:
             result = self.manager.stockage.lire_maitrise(f"{theme}--{parcours}" if parcours else theme)
         else:
             raise ValueError("Action native non prise en charge")
+        if action == "start" and self.ui.get("activity") == "pqrst-guide":
+            result = {**result, "items": [self._protocol_item(i) for i in result["items"]]}
         return result
+
+    def _record_feedback(self, item_id, result):
+        self.ui["last_item"] = item_id
+        self.ui["feedback"] = result
+        if result.get("reprise"):
+            self.ui["queue"].append(str(item_id))
+            self.ui.setdefault("reprise_support", {})[str(item_id)] = result["attendue"]
+        if result.get("arret_propose") and result.get("motif_arret") == "duree":
+            self.ui["stop_proposal"] = True
+
+    def _protocol_item(self, item):
+        return {"id": item["id"], "type": item["type"], "contenu": {"enonce": "PQRST — un texte, cinq étapes"}}
+
+    def _protocol(self):
+        return self.ui.setdefault("protocols", {}).setdefault(
+            str(self.ui["cursor"]), pqrst_protocol.create(self.ui["cursor"] >= len(self.ui["session"]["items"])))
+
+    def _mark_restored_interruption(self):
+        if "session" not in self.ui or self._session().terminee or self.ui.get("feedback"):
+            return
+        protocol = self.ui.get("protocols", {}).get(str(self.ui["cursor"]))
+        if protocol and not protocol["paused"] and protocol["phase"] not in ("pret", "fin"):
+            pqrst_protocol.pause(protocol)
+            protocol["revision"] += 1
+            item_id = self.ui["queue"][self.ui["cursor"]]
+            self.manager.observer(self._session().theme, self._session().session_id, item_id, protocol["answer"])
+
+    def _pqrst_step(self, request):
+        session = self._session()
+        cursor = self.ui["cursor"]
+        if (request.get("session_id") != session.session_id or cursor >= len(self.ui["queue"])
+                or request.get("item_id") != self.ui["queue"][cursor]):
+            raise ValueError("Étape PQRST périmée")
+        item_id = self.ui["queue"][cursor]
+        item = session.items_par_id[item_id]
+        if item["type"] != "pqrst-mise-en-oeuvre":
+            raise ValueError("Ce parcours n'est pas PQRST")
+        protocol = self._protocol()
+        # L'identité de l'action exclut l'horloge recalculée par le client après
+        # perte du retour ; un renvoi ne doit ni avancer ni ajouter du temps.
+        identity = lambda value: {k: v for k, v in value.items() if k != "elapsed_ms"}
+        if protocol.get("last_request") and identity(protocol["last_request"]) == identity(request):
+            return self._view()
+        revision = request.get("revision")
+        if (type(revision) is not int or revision != protocol["revision"]
+                or session.terminee or self.ui.get("feedback")):
+            raise ValueError("Étape PQRST périmée")
+        elapsed = request.get("elapsed_ms")
+        if type(elapsed) not in (int, float) or not 0 <= elapsed <= 86400000:
+            raise ValueError("Durée invalide")
+        protocol["elapsed_ms"] += elapsed
+        operation = request.get("operation")
+        if operation == "submit":
+            if protocol["phase"] != "fin" or protocol["paused"]:
+                raise ValueError("Terminer toutes les étapes avant la correction")
+            result = self.manager.repondre(session.theme, session.session_id, item_id,
+                                          protocol["answer"], protocol["elapsed_ms"])
+            self._record_feedback(item_id, result)
+            protocol["revision"] += 1
+        else:
+            pqrst_protocol.transition(protocol, operation, request.get("value"))
+            self.manager.observer(session.theme, session.session_id, item_id, protocol["answer"])
+        protocol["last_request"] = copy.deepcopy(request)
+        return self._view()
 
     def _session(self):
         if "session" not in self.ui:
@@ -190,9 +264,15 @@ class ApplicationRuntime:
         cursor = self.ui["cursor"]
         queue = self.ui["queue"]
         by_id = {item["id"]: item for item in session["items"]}
+        item = by_id[queue[cursor]] if cursor < len(queue) else None
+        protocol = None
+        if item and item["type"] == "pqrst-mise-en-oeuvre":
+            if not self.ui["feedback"]:
+                protocol = pqrst_protocol.screen(self._protocol(), item)
+            item = self._protocol_item(item)
         return {"started": True, "session_id": session["session_id"], **metadata,
                 "hints_used": self.ui.get("hints", {}).get(queue[cursor], 0) if cursor < len(queue) else 0,
-                "item": by_id[queue[cursor]] if cursor < len(queue) else None,
+                "item": item, "protocol": protocol,
                 "position": cursor + 1, "total": len(queue),
                 "feedback": self.ui["feedback"],
                 "arret_propose": self.ui.get("stop_proposal", False),

@@ -1,9 +1,10 @@
-# Première preuve du moteur embarqué
+# Moteur embarqué et parcours autonomes
 
 Cible produit : iPhone 17 et iPhone Air, puis iPad et extension selon capacités.
-Cette première étape compile le **moteur Python existant dans une app XCTest**,
-sans FastAPI, sans Mac serveur, sans Cloudflare et sans appel PCC.
-Ce n'est pas encore une application d'exercices utilisable.
+Le pilote propose Calcul mental, Retrouver le mot et PQRST guidé avec le moteur
+Python dans le processus de l'app. Il fonctionne sans FastAPI, Mac serveur,
+Cloudflare ou appel PCC. La saisie est au clavier. Les étapes ci-dessous
+conservent aussi l'historique de la première preuve XCTest.
 
 ## Validation du 16 octobre 2026
 
@@ -83,7 +84,7 @@ Cela ne remplace pas la recette sur un iPhone physique.
 - Aucun résultat du modèle génératif ne remplace une correction déterministe.
 - Vérifier licences, frameworks signés et règles Apple avant distribution.
 
-## Pilote Calcul mental et Retrouver le mot
+## Parcours du pilote
 
 ```sh
 python tools/ios/prepare_pilot.py
@@ -108,6 +109,25 @@ faut lancer l'app native. Il n'exécute pas un moteur de démonstration.
 Pour conserver un projet déjà configuré dans Xcode, générer un autre projet avec
 `python tools/ios/prepare_pilot.py --destination .local/lexical-pilot`.
 
+PQRST guidé utilise le parcours `methodes/pqrst-guide`. Le séquencement local
+présente P, Q, R, S, le retour avec résumé modèle, puis deux questions T sans
+rouvrir le support. Les premières réponses sont conservées séparément des essais
+après relecture. La question Q est enregistrée sans score ; les corrections de
+reformulation restent limitées aux idées reconnues par le correcteur amont.
+
+Chaque transition conserve une observation partielle et sa position dans la même
+transaction SQLite. Ces traces ne créent aucune correction, progression ou carte
+FSRS. La correction complète est demandée explicitement après les deux tests.
+Une clôture anticipée conserve les observations partielles sans les transformer
+en réponses. L'historique est séparé sous `methodes--pqrst-guide`.
+
+Les brouillons PQRST et les choix non validés survivent aux pauses dans la page,
+mais restent en mémoire : une fermeture du processus ne les sauvegarde pas.
+Une relance retrouve l'étape validée et demande une reprise explicite ; une
+interruption au rappel est signalée dans l'observation. L'interface reste masquée
+si l'enregistrement d'une pause échoue. Le temps actif est conservé par segments
+validés ; le segment perdu lors d'un arrêt du processus n'est pas reconstitué.
+
 Le service, les correcteurs et les items viennent du commit source enregistré
 dans `UPSTREAM.json`. Le point d'entrée de package a été adapté pour ne pas
 importer les routes FastAPI. Les fonctions d'accompagnement macOS ne sont pas
@@ -125,8 +145,9 @@ d'une autre référence amont sont conservés et refusés, en attendant une
 migration explicitement testée. Aucun historique personnel n'est importé.
 
 Les tests du pilote couvrent correction, sauvegarde/relecture, clôture
-idempotente et transaction annulée. Les contrats Contextes et PQRST restent
-testés sans rendre ces parcours accessibles dans le pilote. Sous iOS, le
+idempotente et transaction annulée. PQRST compare aussi les traces partielles,
+premières réponses, essais aidés et résultats au service amont. Le contrat
+Contextes reste testé sans rendre ce parcours accessible. Sous iOS, le
 workflow vérifie aussi le pont réel WebKit→natif→Python et conserve une capture
 de l'écran initial. Un passage sur iPhone réel, le clavier, VoiceOver, les
 grands caractères et le confort en séance restent nécessaires.

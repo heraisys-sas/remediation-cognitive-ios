@@ -67,4 +67,41 @@ def run():
         assert restored.store.lire_cartes("evocation--acces-lexical")
         assert call(restored, "progress") == progress
         passed += 1
+        pqrst = call(restored, "start", activity="pqrst-guide")
+        item = restored._session().items_par_id[pqrst["items"][0]["id"]]
+        steps = {e["etape"]: e for e in item["contenu"]["etapes"]}
+
+        def advance(instance, operation, value=None):
+            view = call(instance, "view")
+            return call(instance, "pqrst-step", session_id=view["session_id"], item_id=view["item"]["id"],
+                        revision=view["protocol"]["revision"], operation=operation, value=value, elapsed_ms=100)
+
+        advance(restored, "continue")
+        advance(restored, "respond", steps[1]["bonne"])
+        advance(restored, "continue")
+        advance(restored, "respond", "Que retenir ?")
+        advance(restored, "continue")
+        advance(restored, "continue")
+        pqrst_restored = restored_runtime()
+        view = call(pqrst_restored, "view")
+        assert view["protocol"]["paused"] and view["protocol"]["phase"] == "4"
+        assert not pqrst_restored.store.lire_cartes("methodes--pqrst-guide")
+        assert item["contenu"]["texte"] not in json.dumps(view, ensure_ascii=False)
+        passed += 1
+        advance(pqrst_restored, "resume")
+        advance(pqrst_restored, "reread", "Le colis.")
+        advance(pqrst_restored, "continue")
+        advance(pqrst_restored, "respond", steps[4]["modele"])
+        advance(pqrst_restored, "continue")
+        for question in steps[5]["questions"]:
+            advance(pqrst_restored, "respond", question["bonne"])
+        view = advance(pqrst_restored, "submit")
+        attempts = view["feedback"]["sequence"]["observation"]["tentatives"]["4"]
+        assert attempts[0]["reponse"] == "Le colis." and not attempts[0]["correction"]["correcte"]
+        assert attempts[1]["correction"]["correcte"]
+        summary = call(pqrst_restored, "finish", session_id=pqrst["session_id"])
+        assert summary["resume"]["correctes"] == 0
+        assert pqrst_restored.store.lire_cartes("methodes--pqrst-guide")
+        assert pqrst_restored.store.lire_temps_reference("methodes--pqrst-guide") == []
+        passed += 1
     return json.dumps({"platform": sys.platform, "passed": passed, "http_server": False})
