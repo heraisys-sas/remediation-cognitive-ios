@@ -15,11 +15,13 @@
     <select id="activity">
       <option value="calcul-mental">Calcul mental</option>
       <option value="acces-lexical">Retrouver le mot</option>
+      <option value="pqrst-guide">PQRST guidé</option>
     </select>
   </div>
   <section id="exercise" hidden>
     <p id="position" class="secondary"></p>
     <h2 id="question" tabindex="-1"></h2>
+    <section id="protocol" aria-label="PQRST guidé" hidden></section>
     <p id="repriseSupport" hidden></p>
     <details id="method"><summary>Une méthode pour t’aider</summary><p id="methodText"></p></details>
     <section id="lexicalHelp" hidden aria-label="Aides facultatives">
@@ -46,5 +48,6 @@
   <button id="resume" hidden>Reprendre après l’interruption</button>
 </main>
 <script src="active-clock.js"></script>
+<script src="pqrst.js"></script>
 <script src="pilot.js"></script>
 </html>
