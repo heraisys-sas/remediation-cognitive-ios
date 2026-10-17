@@ -4,13 +4,16 @@ import json
 from pathlib import Path
 import shutil
 import plistlib
+import argparse
 
 from prepare_engine_probe import prepare, ROOT
 from provenance import tree_hash
 
 
 def main():
-    destination = ROOT / ".local/calculation-pilot"
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--destination", type=Path, default=ROOT / ".local/calculation-pilot")
+    destination = parser.parse_args().destination.resolve()
     prepare(ROOT / ".local/ios-python", destination, ROOT / ".local/locked-wheels")
     app = destination / "iOSTestbed/app"
     ignore = shutil.ignore_patterns("__pycache__", "*.pyc", "*.sqlite")
@@ -37,7 +40,7 @@ def main():
     project.write_text(project.read_text().replace("org.python.iOSTestbed", "fr.heraisys.remediation.pilot"))
     manifest_path = destination / "probe-manifest.json"
     manifest = json.loads(manifest_path.read_text())
-    manifest.update(scope="Calcul mental : service, corrections, SQLite et pont natif ; clavier seulement",
+    manifest.update(scope="Calcul mental et accès lexical : service, corrections, aides, SQLite et pont natif ; clavier seulement",
                     app_sha256=tree_hash(app), native_sha256=tree_hash(destination / "iOSTestbed"))
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
     print(destination / "iOSTestbed.xcodeproj")

@@ -26,20 +26,28 @@
         "await request('answer',{session_id:v.session_id,item_id:v.item.id,answer:'inconnu',elapsed_ms:1000});"
         "render(await request('view')); await document.getElementById('next').onclick();}"
         "const reprise=await request('view');"
+        "const support=!document.getElementById('repriseSupport').hidden && document.getElementById('repriseSupport').textContent.includes(String(reprise.reprise_attendue));"
+        "await document.getElementById('finish').onclick();"
+        "document.getElementById('activity').value='acces-lexical';"
+        "await document.getElementById('start').onclick();"
+        "await document.getElementById('hint').onclick();"
+        "const hinted=await request('view'); const hintVisible=Boolean(document.getElementById('hints').textContent);"
+        "await document.getElementById('reveal').onclick(); const revealed=await request('view');"
         "return {result:r,title:document.querySelector('h1').textContent,error:document.getElementById('error').textContent,"
-        "paused,resumed,support:!document.getElementById('repriseSupport').hidden && document.getElementById('repriseSupport').textContent.includes(String(reprise.reprise_attendue))};";
+        "paused,resumed,support,lexical:hinted.activity==='acces-lexical' && hinted.hints_used===1 && hintVisible && revealed.feedback.assistee===true};";
     [web callAsyncJavaScript:script
                    arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld
            completionHandler:^(id value, NSError *error) {
         XCTAssertNil(error);
         XCTAssertTrue([value isKindOfClass:NSDictionary.class]);
-        XCTAssertEqualObjects(value[@"title"], @"Calcul mental");
+        XCTAssertEqualObjects(value[@"title"], @"Retrouver le mot");
         XCTAssertEqualObjects(value[@"error"], @"");
         XCTAssertNotNil(value[@"result"][@"started"]);
         XCTAssertNotNil(value[@"result"][@"item"]);
         XCTAssertEqualObjects(value[@"paused"], @YES);
         XCTAssertEqualObjects(value[@"resumed"], @YES);
         XCTAssertEqualObjects(value[@"support"], @YES);
+        XCTAssertEqualObjects(value[@"lexical"], @YES);
         [response fulfill];
     }];
     [self waitForExpectations:@[response] timeout:30];
@@ -57,7 +65,7 @@
     NSDictionary *result = [NSJSONSerialization JSONObjectWithData:[report dataUsingEncoding:NSUTF8StringEncoding]
                                                            options:0 error:nil];
     XCTAssertEqualObjects(result[@"platform"], @"ios");
-    XCTAssertEqualObjects(result[@"passed"], @5);
+    XCTAssertEqualObjects(result[@"passed"], @7);
     NSLog(@"PILOT_RESULT=%@", report);
 }
 @end

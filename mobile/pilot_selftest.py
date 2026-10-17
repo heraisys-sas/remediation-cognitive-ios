@@ -46,4 +46,19 @@ def run():
         assert call(relaunched, "finish", session_id=session["session_id"]) == summary
         assert call(relaunched, "progress") == progress
         passed += 1
+        lexical = call(relaunched, "start", activity="acces-lexical")
+        item = lexical["items"][0]
+        identity = {"session_id": lexical["session_id"], "item_id": item["id"]}
+        call(relaunched, "hint", **identity)
+        restored = ApplicationRuntime(directory)
+        view = call(restored, "view")
+        assert view["activity"] == "acces-lexical" and view["hints_used"] == 1
+        passed += 1
+        result = call(restored, "reveal", **identity, elapsed_ms=1500)
+        assert result["assistee"] is True and result["attendue"] is not None
+        summary = call(restored, "finish", session_id=lexical["session_id"])
+        assert summary["resume"]["assistees"] == 1 and summary["resume"]["sans_aide"] == 0
+        assert restored.store.lire_cartes("evocation--acces-lexical")
+        assert call(restored, "progress") == progress
+        passed += 1
     return json.dumps({"platform": sys.platform, "passed": passed, "http_server": False})
