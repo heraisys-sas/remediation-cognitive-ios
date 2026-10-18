@@ -309,3 +309,29 @@ La compilation finale `build-for-testing` iOS Simulator arm64 réussit pour le
 code `f25cf00`. Les contrôles GitHub restent bloqués avant exécution par la
 facturation ; aucun essai natif de ce lot n’est revendiqué. L’ergonomie reste
 reportée à la fin du portage.
+
+## Recette native mémoire visuelle — 18 octobre 2026
+
+Le code du lot `f25cf00` (documentation `20a31ea`) a été compilé, signé et
+exécuté sur l’iPhone Air connecté. Les sources sont synchronisées dans le projet
+Xcode local signé ; seul le chemin de stockage est remplacé localement par un
+dossier de test vierge. Aucun réglage personnel de signature n’est commité.
+
+Résultat : **3 tests XCTest réussis, zéro échec**, dont la sonde Python qui
+indique `platform: ios`, `passed: 20`, `http_server: false`. Les cinq parcours
+mémoire passent leurs contrôles embarqués : présentation, interruption,
+restauration, rappel masqué, correction et cartes FSRS. Les parcours de stratégie
+sont également couverts par la sonde ; le test WebKit traverse choisir un plan
+et chercher dans un document.
+
+Le test WebKit réel vérifie une présentation complète de cinq chiffres sur
+20 secondes, puis le masquage du support au rappel et l’enregistrement d’une
+réponse. La méthode WebKit dure 22,128 secondes et la suite 23,544 secondes.
+Cela complète les tests Mac ; VoiceOver, le confort et une recette visuelle
+complète de chaque banque restent à vérifier. Les avertissements du décodeur
+WEBP déjà observés sur Contextes restent présents sans échec du contrôle de
+chargement.
+
+Preuves locales ignorées par Git : `.local/memory-device.log` et
+`.local/memory-device.xcresult`. Aucun diagnostic de l’appareil n’est publié.
+L’app testée est relancée sur l’iPhone à la fin de l’essai.
