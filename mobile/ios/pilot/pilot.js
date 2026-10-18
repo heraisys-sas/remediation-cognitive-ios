@@ -32,6 +32,7 @@ function render(view) {
   if (view.finished) paused = false;
   if (view.protocol?.paused || view.contextes?.paused) paused = true;
   renderContextes(view);
+  renderChoices(view);
   element("resume").hidden = !paused || Boolean(view.finished);
   element("activityChoice").hidden = Boolean(view.started && !view.finished);
   if (view.title) { document.querySelector("h1").textContent = view.title; document.title = view.title; }
@@ -65,9 +66,10 @@ function render(view) {
   element("lexicalHelp").hidden = !lexical || Boolean(view.feedback) || Boolean(view.reprise);
   element("hints").textContent = hints.slice(0, view.hints_used || 0).map(hint => hint.texte).join("\n");
   element("hint").hidden = (view.hints_used || 0) >= hints.length;
-  element("answerForm").hidden = Boolean(view.contextes) || isPqrst || Boolean(view.feedback);
+  element("answerForm").hidden = Boolean(view.contextes) || isPqrst || isChoiceActivity(view) || Boolean(view.feedback);
   element("next").hidden = Boolean(view.contextes) || !view.feedback;
   element("feedback").textContent = view.feedback ? `${view.feedback.feedback || ""}${view.feedback.attendue != null ? " Réponse : " + view.feedback.attendue + "." : ""}` : "";
+  if (!view.feedback && view.retry_feedback) element("feedback").textContent = view.retry_feedback;
   if (isPqrst && view.feedback) element("feedback").textContent = pqrstFeedbackLines(view.feedback).join("\n\n");
 }
 element("start").onclick = () => perform(async () => {
@@ -77,7 +79,7 @@ element("start").onclick = () => perform(async () => {
   render(view); element("answer").value = ""; clock.reset(paused);
 });
 element("activity").onchange = () => {
-  document.querySelector("h1").textContent = {"acces-lexical":"Retrouver le mot", "pqrst-guide":"PQRST guidé", "memoire-source":"Retrouver le contexte"}[element("activity").value] || "Calcul mental";
+  document.querySelector("h1").textContent = {"acces-lexical":"Retrouver le mot", "pqrst-guide":"PQRST guidé", "memoire-source":"Retrouver le contexte", "choisir-plan":"Choisir un plan", "auto-instruction":"Se guider avant d’agir", "verifier-plan":"Vérifier un plan", "chercher-information":"Chercher dans un document"}[element("activity").value] || "Calcul mental";
 };
 element("hint").onclick = () => perform(async () => {
   if (!state?.item || paused) return;

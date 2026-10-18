@@ -15,6 +15,7 @@ from backend.app.api.entrainement.service import GestionnaireSessions, SessionEn
 from engine.session.runner import SessionRunner  # noqa: E402
 from mobile.transactional_store import TransactionalStore  # noqa: E402
 from mobile.contextes_runtime import ContextesRuntime
+from mobile.choice_runtime import ChoiceRuntime, CHOICE_ACTIVITIES
 from mobile import pqrst_protocol  # noqa: E402
 
 ACTIVITIES = {
@@ -25,7 +26,10 @@ ACTIVITIES = {
 }
 
 
-class ApplicationRuntime(ContextesRuntime):
+ACTIVITIES.update(CHOICE_ACTIVITIES)
+
+
+class ApplicationRuntime(ContextesRuntime, ChoiceRuntime):
     """Instance sérialisée par l'appelant natif ; données dans le conteneur de l'app."""
 
     def __init__(self, storage_directory: str):
@@ -113,6 +117,8 @@ class ApplicationRuntime(ContextesRuntime):
                            "activity": activity, "hints": {}}
                 if activity == "memoire-source":
                     self._contextes_start()
+        elif action == "choice-answer":
+            return self._choice_answer(request)
         elif action == "contextes-step":
             return self._contextes_step(request)
         elif action == "view":
@@ -141,6 +147,8 @@ class ApplicationRuntime(ContextesRuntime):
             counts[item["id"]] = min(len(hints), counts.get(item["id"], 0) + 1)
             result = self._view()
         elif action in ("answer", "reveal"):
+            if self.ui.get("activity") in CHOICE_ACTIVITIES:
+                raise ValueError("Utiliser la réponse à choix versionnée")
             if self.ui.get("activity") == "memoire-source":
                 raise ValueError("Utiliser le parcours Contextes séquencé")
             answer = request.get("answer", "")
@@ -288,6 +296,8 @@ class ApplicationRuntime(ContextesRuntime):
                 protocol = pqrst_protocol.screen(self._protocol(), item)
             item = self._protocol_item(item)
         return {"started": True, "session_id": session["session_id"], **metadata,
+                "choice_revision": self.ui.get("choice_revision", 0),
+                "retry_feedback": self.ui.get("retry_feedback"),
                 "hints_used": self.ui.get("hints", {}).get(queue[cursor], 0) if cursor < len(queue) else 0,
                 "item": item, "protocol": protocol,
                 "position": cursor + 1, "total": len(queue),

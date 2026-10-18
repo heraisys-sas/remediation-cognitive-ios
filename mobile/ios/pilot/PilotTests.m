@@ -102,7 +102,14 @@
         "const recallResumed=!document.querySelector('#contextes img')&&!document.getElementById('exercise').hidden;"
         "await document.getElementById('contextes-answer-0').onclick();"
         "const recalled=await request('view'); await document.getElementById('finish').onclick();"
-        "return {contextes:photoLoaded&&noPhoto&&recallResumed&&recalled.contextes.phase==='feedback',result:r,title:document.querySelector('h1').textContent,error:document.getElementById('error').textContent,"
+        "let strategies=true; for(const activity of ['choisir-plan','chercher-information']){"
+        "document.getElementById('activity').value=activity; await document.getElementById('start').onclick();"
+        "strategies=strategies&&document.getElementById('answerForm').hidden&&!document.getElementById('choices').hidden;"
+        "if(activity==='chercher-information')strategies=strategies&&Boolean(document.querySelector('#choices article').textContent);"
+        "await document.getElementById('choice-0').onclick(); const firstChoice=await request('view');"
+        "if(firstChoice.retry_feedback){strategies=strategies&&document.getElementById('next').hidden&&!document.getElementById('feedback').textContent.includes('Réponse :'); await document.getElementById('choice-1').onclick();}"
+        "const finalChoice=await request('view'); strategies=strategies&&Boolean(finalChoice.feedback); await document.getElementById('finish').onclick();}"
+        "return {strategies,contextes:photoLoaded&&noPhoto&&recallResumed&&recalled.contextes.phase==='feedback',result:r,title:document.querySelector('h1').textContent,error:document.getElementById('error').textContent,"
         "paused,resumed,support,lexical:hinted.activity==='acces-lexical' && hinted.hints_used===1 && hintVisible && revealed.feedback.assistee===true,"
         "pqrst:pqrstOK};";
     [web callAsyncJavaScript:script
@@ -110,7 +117,7 @@
            completionHandler:^(id value, NSError *error) {
         XCTAssertNil(error);
         XCTAssertTrue([value isKindOfClass:NSDictionary.class]);
-        XCTAssertEqualObjects(value[@"title"], @"Retrouver le contexte");
+        XCTAssertEqualObjects(value[@"title"], @"Chercher dans un document");
         XCTAssertEqualObjects(value[@"error"], @"");
         XCTAssertNotNil(value[@"result"][@"started"]);
         XCTAssertNotNil(value[@"result"][@"item"]);
@@ -120,6 +127,7 @@
         XCTAssertEqualObjects(value[@"lexical"], @YES);
         XCTAssertEqualObjects(value[@"pqrst"], @YES);
         XCTAssertEqualObjects(value[@"contextes"], @YES);
+        XCTAssertEqualObjects(value[@"strategies"], @YES);
         [response fulfill];
     }];
     [self waitForExpectations:@[response] timeout:60];
@@ -137,7 +145,7 @@
     NSDictionary *result = [NSJSONSerialization JSONObjectWithData:[report dataUsingEncoding:NSUTF8StringEncoding]
                                                            options:0 error:nil];
     XCTAssertEqualObjects(result[@"platform"], @"ios");
-    XCTAssertEqualObjects(result[@"passed"], @11);
+    XCTAssertEqualObjects(result[@"passed"], @15);
     NSLog(@"PILOT_RESULT=%@", report);
 }
 @end

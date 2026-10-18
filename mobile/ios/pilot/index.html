@@ -16,6 +16,10 @@
       <option value="calcul-mental">Calcul mental</option>
       <option value="acces-lexical">Retrouver le mot</option>
       <option value="memoire-source">Retrouver le contexte</option>
+      <option value="choisir-plan">Choisir un plan</option>
+      <option value="auto-instruction">Se guider avant d’agir</option>
+      <option value="verifier-plan">Vérifier un plan</option>
+      <option value="chercher-information">Chercher dans un document</option>
       <option value="pqrst-guide">PQRST guidé</option>
     </select>
   </div>
@@ -31,6 +35,7 @@
       <button id="hint" class="secondaryButton">Un indice</button>
       <button id="reveal" class="secondaryButton">Afficher le mot et continuer</button>
     </section>
+    <section id="choices" aria-label="Choix de réponse" hidden></section>
     <form id="answerForm">
       <label for="answer">Ta réponse</label>
       <input id="answer" type="text" autocomplete="off" inputmode="text" enterkeyhint="done">
@@ -52,5 +57,6 @@
 <script src="active-clock.js"></script>
 <script src="pqrst.js"></script>
 <script src="contextes.js"></script>
+<script src="choices.js"></script>
 <script src="pilot.js"></script>
 </html>

@@ -21,6 +21,7 @@ async function page({native = true, reply = async()=>({started:false})} = {}) {
   vm.runInContext(fs.readFileSync(path.join(source,'active-clock.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'pqrst.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'contextes.js'),'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(source,'choices.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'pilot.js'),'utf8'), context);
   await new Promise(resolve => setImmediate(resolve));
   return {get, render:value=>context.render(value), context};
@@ -227,4 +228,41 @@ test('une image décodée pendant un appel attend la disponibilité du pont',asy
   await new Promise(resolve=>setTimeout(resolve,30));
   assert.equal(calls.filter(c=>c.operation==='loaded').length,1);
   context.stopContextesTimer();
+});
+
+test('les stratégies présentent les choix et gardent le second essai sans réponse révélée',async()=>{
+  let current;
+  const calls=[];
+  const {get,render}=await page({reply:async payload=>{
+    calls.push(payload);
+    if(payload.action==='choice-answer') {
+      current={...current,choice_revision:current.choice_revision+1,retry_feedback:'Essaie encore.'};
+      return current;
+    }
+    return {started:false};
+  }});
+  current={started:true,activity:'choisir-plan',session_id:'s',choice_revision:0,item:{id:'i',contenu:{enonce:'Quel plan ?',options:['Courses puis menu','Menu puis courses'],consigne:'Repère le but.'}},position:1,total:8};
+  render(current);
+  assert.equal(get('answerForm').hidden,true);
+  await get('choice-0').onclick();
+  assert.equal(calls.at(-1).revision,0);
+  assert.equal(calls.at(-1).answer,'Courses puis menu');
+  assert.equal(get('feedback').textContent,'Essaie encore.');
+  assert.equal(get('next').hidden,true);
+  assert.equal(get('choice-1').disabled,false);
+  assert.equal(get('choices').hidden,false);
+});
+
+test('chercher une information conserve le document pendant la réponse',async()=>{
+  const {get,render}=await page();
+  render({started:true,activity:'chercher-information',session_id:'s',choice_revision:0,item:{id:'i',contenu:{enonce:'Quand ?',document:'Rendez-vous le 19 mars.',options:['12 mars','19 mars']}}});
+  assert.ok(get('choices').children.some(n=>n.tagName==='article'&&n.textContent==='Rendez-vous le 19 mars.'));
+});
+
+test('vérifier un plan montre ses étapes dans leur ordre source',async()=>{
+  const {get,render}=await page();
+  render({started:true,activity:'verifier-plan',session_id:'s',choice_revision:0,item:{id:'i',contenu:{enonce:'Quelle étape déplacer ?',plan:['Préparer','Peindre','Acheter'],options:['Acheter','Peindre']}}});
+  const list=get('choices').children.find(n=>n.tagName==='ol');
+  assert.ok(list);
+  assert.deepEqual(list.children.map(n=>n.textContent),['Préparer','Peindre','Acheter']);
 });
