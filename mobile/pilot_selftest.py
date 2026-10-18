@@ -15,8 +15,8 @@ def run():
 
     passed = 0
     with TemporaryDirectory(prefix="remediation-pilot-") as directory, ExitStack() as resources:
-        def restored_runtime():
-            instance = ApplicationRuntime(str(Path(directory).resolve()))
+        def restored_runtime(storage_directory=None):
+            instance = ApplicationRuntime(str(Path(storage_directory or directory).resolve()))
             resources.callback(instance.store.connection.close)
             return instance
 
@@ -136,4 +136,27 @@ def run():
         empty = call(context_restored, "start", activity="memoire-source")
         assert not empty["items"] and call(context_restored, "view")["finished"]
         passed += 1
+        for activity in ("choisir-plan", "auto-instruction", "verifier-plan", "chercher-information"):
+            strategy_directory = Path(directory) / activity
+            context_restored = restored_runtime(strategy_directory)
+            strategy = call(context_restored, "start", activity=activity)
+            item = context_restored._session().items_par_id[strategy["items"][0]["id"]]
+            correct = item["reponse"]["valeur"]
+            wrong = next(option for option in item["contenu"]["options"] if option != correct)
+            def choose(instance, value):
+                view = call(instance, "view")
+                return call(instance, "choice-answer", session_id=view["session_id"], item_id=view["item"]["id"],
+                            revision=view["choice_revision"], answer=value, elapsed_ms=100)
+            view = choose(context_restored, wrong)
+            if activity != "chercher-information":
+                assert view["retry_feedback"] and view["feedback"] is None
+                context_restored = restored_runtime(strategy_directory)
+                view = choose(context_restored, correct)
+                assert view["feedback"]["correcte"]
+                assert context_restored._session().temps_reference == [200.0]
+            else:
+                assert view["feedback"] and not view["feedback"]["correcte"]
+            call(context_restored, "finish", session_id=strategy["session_id"])
+            assert context_restored.store.lire_cartes("methodes--" + activity)
+            passed += 1
     return json.dumps({"platform": sys.platform, "passed": passed, "http_server": False})

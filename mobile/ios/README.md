@@ -236,3 +236,31 @@ Preuves locales ignorées par Git : `.local/contextes-device-retry.log` et
 `.local/contextes-device-retry.xcresult`. Les diagnostics de l’appareil ne sont
 pas publiés. Les tests GitHub restent bloqués par la facturation, indépendamment
 de cette réussite sur appareil physique.
+
+## Stratégies — lot du 18 octobre 2026
+
+Quatre parcours du thème `methodes` sont accessibles : `choisir-plan`,
+`auto-instruction`, `verifier-plan` et `chercher-information`. Les contenus,
+correcteurs, règles de second essai et effets de progression viennent du
+service inchangé au commit source `44acda5`. Le plan à vérifier garde l’ordre
+de ses étapes ; le document à consulter reste visible pendant la réponse.
+
+Une première erreur sur les trois parcours de raisonnement laisse répondre une
+seconde fois sans révéler la réponse. Le résultat intermédiaire et les essais
+sont sauvegardés, sans créer de correction finale ni carte à ce stade. Une
+relance conserve le second essai. Les segments de temps validés s’additionnent,
+sans reconstituer un segment perdu lors d’un arrêt du processus. Les révisions
+rendent le renvoi d’un appel idempotent même si le temps recalculé diffère.
+Les reprises avec la réponse déjà fournie suivent le comportement amont.
+
+Les historiques sont séparés par parcours ; le plafond de séances du thème
+`methodes` reste partagé comme dans la source. Les tests utilisent des dossiers
+synthétiques séparés pour respecter cette règle. Aucun historique personnel
+n’est réinterprété et aucune dérogation de dosage n’est ajoutée à l’interface.
+Les ajustements d’ergonomie et d’aides sont toujours reportés à la fin.
+
+Validation Mac : 107 tests Python (dont 60 du noyau), 18 tests JavaScript et
+15 contrôles de la sonde. Les audits Sol et Astra sont favorables après ajout
+du plan ordonné manquant. Le test WebKit natif couvre choisir un plan et chercher
+dans un document ; la sonde Python couvre les quatre nouveaux parcours.
+L’exécution native de ce lot reste en cours de vérification.
