@@ -167,6 +167,7 @@
     [speech handle:@{@"operation":@"capabilities"} reply:^(id value, NSString *error) {
         XCTAssertNil(error); capabilities = value;
     }];
+    NSLog(@"SPEECH_CAPABILITIES=%@", capabilities);
     XCTAssertNotNil(capabilities[@"speech"]);
     XCTAssertNotNil(capabilities[@"on_device_dictation"]);
     XCTAssertTrue([NSBundle.mainBundle.infoDictionary[@"NSMicrophoneUsageDescription"] length] > 0);

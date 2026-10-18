@@ -149,7 +149,7 @@
     NSString *token = command[@"token"];
     if (![operation isKindOfClass:NSString.class]) { reply(nil, @"Commande audio invalide."); return; }
     if ([operation isEqualToString:@"capabilities"]) {
-        reply(@{@"speech":@([self frenchVoice] != nil), @"on_device_dictation":@(self.recognizer.supportsOnDeviceRecognition)}, nil); return;
+        reply(@{@"speech":([self frenchVoice] ? @YES : @NO), @"on_device_dictation":(self.recognizer.supportsOnDeviceRecognition ? @YES : @NO)}, nil); return;
     }
     if ([operation isEqualToString:@"cancel"]) { [self cancelAll]; reply(@{@"ok":@YES}, nil); return; }
     if ([operation isEqualToString:@"stop-speaking"]) { [self stopSpeaking]; reply(@{@"ok":@YES}, nil); return; }
