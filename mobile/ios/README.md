@@ -411,3 +411,13 @@ ils n’ont pas fait échouer les tests et restent à suivre pour la réactivit�
 Preuves locales ignorées par Git : `.local/speech-device-verified.log` et
 `.local/speech-device-verified.xcresult`. Aucun diagnostic ou enregistrement
 vocal personnel n’est publié.
+
+### Confirmation de l’essai utilisateur
+
+Le 18 octobre 2026, après ouverture de la version testée, l’utilisateur confirme :
+« Lecture et dictée fonctionnent ». L’essai demandé consistait à écouter une
+consigne puis dicter un court texte en français dans Retrouver le mot, à arrêter
+la dictée et à vérifier la transcription sans la valider comme réponse.
+La lecture audible et la transcription réelle au microphone sont donc confirmées
+sur cet iPhone Air. Aucun enregistrement ni contenu personnel de l’essai n’est
+copié au dépôt. Un essai explicite en mode avion reste à faire.
