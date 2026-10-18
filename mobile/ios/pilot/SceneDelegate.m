@@ -81,6 +81,7 @@ static BOOL PrepareEngine(void) {
         [self.web.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
         [self.web.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor]]];
     NSURL *directory = [NSBundle.mainBundle.resourceURL URLByAppendingPathComponent:@"pilot" isDirectory:YES];
+    directory = directory.URLByResolvingSymlinksInPath.URLByStandardizingPath;
     self.allowedRoot = [directory.path stringByAppendingString:@"/"];
     [self.web loadFileURL:[directory URLByAppendingPathComponent:@"index.html"] allowingReadAccessToURL:directory];
 }
@@ -88,15 +89,21 @@ static BOOL PrepareEngine(void) {
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)action
  decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     NSURL *url = action.request.URL;
-    BOOL allowed = url.isFileURL && [url.path.stringByStandardizingPath hasPrefix:self.allowedRoot];
+    BOOL allowed = [self isAllowedLocalURL:url];
     decisionHandler(allowed ? WKNavigationActionPolicyAllow : WKNavigationActionPolicyCancel);
+}
+
+- (BOOL)isAllowedLocalURL:(NSURL *)url {
+    // Sur appareil, WebKit et NSBundle peuvent nommer le même dossier via
+    // /var ou /private/var. Comparer leurs chemins résolus, tout en refusant
+    // les liens qui sortent du dossier des ressources autorisées.
+    return url.isFileURL && [url.URLByResolvingSymlinksInPath.URLByStandardizingPath.path hasPrefix:self.allowedRoot];
 }
 
 - (void)userContentController:(WKUserContentController *)controller didReceiveScriptMessage:(WKScriptMessage *)message
  replyHandler:(void (^)(id _Nullable, NSString * _Nullable))replyHandler {
     NSURL *origin = message.frameInfo.request.URL;
-    if (!message.frameInfo.isMainFrame || !origin.isFileURL ||
-        ![origin.path.stringByStandardizingPath hasPrefix:self.allowedRoot] ||
+    if (!message.frameInfo.isMainFrame || ![self isAllowedLocalURL:origin] ||
         ![message.body isKindOfClass:NSDictionary.class]) {
         replyHandler(nil, @"Appel local refusé."); return;
     }

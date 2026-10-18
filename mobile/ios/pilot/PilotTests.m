@@ -3,7 +3,45 @@
 
 @interface TestbedTests : XCTestCase
 @end
+@interface UIViewController (PilotLocalURLChecks)
+- (BOOL)isAllowedLocalURL:(NSURL *)url;
+@end
 @implementation TestbedTests
+- (void)testLocalURLAliasesStayInsideResourceRoot {
+    UIWindowScene *scene = (UIWindowScene *)UIApplication.sharedApplication.connectedScenes.anyObject;
+    UIViewController *controller = scene.windows.firstObject.rootViewController;
+    NSString *root = [controller valueForKey:@"allowedRoot"];
+    NSURL *directory = [NSURL fileURLWithPath:root isDirectory:YES];
+    NSURL *index = [directory URLByAppendingPathComponent:@"index.html"];
+    XCTAssertTrue([controller isAllowedLocalURL:index]);
+    XCTAssertFalse([controller isAllowedLocalURL:[NSURL URLWithString:@"https://example.com/index.html"]]);
+    XCTAssertFalse([controller isAllowedLocalURL:[NSURL fileURLWithPath:[root stringByAppendingString:@"../outside.html"]]]);
+    NSString *sibling = [[root stringByDeletingLastPathComponent] stringByAppendingString:@"-other/index.html"];
+    XCTAssertFalse([controller isAllowedLocalURL:[NSURL fileURLWithPath:sibling]]);
+    NSURL *temporary = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:NSUUID.UUID.UUIDString] isDirectory:YES];
+    NSFileManager *files = NSFileManager.defaultManager;
+    NSError *error = nil;
+    XCTAssertTrue([files createDirectoryAtURL:temporary withIntermediateDirectories:YES attributes:nil error:&error]);
+    @try {
+        NSURL *alias = [temporary URLByAppendingPathComponent:@"alias" isDirectory:YES];
+        XCTAssertTrue([files createSymbolicLinkAtURL:alias withDestinationURL:directory error:&error]);
+        XCTAssertNil(error);
+        XCTAssertTrue([controller isAllowedLocalURL:[alias URLByAppendingPathComponent:@"index.html"]]);
+        NSURL *inside = [temporary URLByAppendingPathComponent:@"inside" isDirectory:YES];
+        XCTAssertTrue([files createDirectoryAtURL:inside withIntermediateDirectories:YES attributes:nil error:&error]);
+        NSURL *outside = [temporary URLByAppendingPathComponent:@"outside.html"];
+        XCTAssertTrue([@"test" writeToURL:outside atomically:YES encoding:NSUTF8StringEncoding error:&error]);
+        NSURL *escape = [inside URLByAppendingPathComponent:@"escape.html"];
+        XCTAssertTrue([files createSymbolicLinkAtURL:escape withDestinationURL:outside error:&error]);
+        UIViewController *isolated = [[controller class] new];
+        NSString *canonical = [inside.URLByResolvingSymlinksInPath.URLByStandardizingPath.path stringByAppendingString:@"/"];
+        [isolated setValue:canonical forKey:@"allowedRoot"];
+        XCTAssertFalse([isolated isAllowedLocalURL:escape]);
+    } @finally {
+        [files removeItemAtURL:temporary error:nil];
+    }
+}
+
 - (void)testWebViewCallsLocalEngine {
     UIWindowScene *scene = (UIWindowScene *)UIApplication.sharedApplication.connectedScenes.anyObject;
     UIViewController *controller = scene.windows.firstObject.rootViewController;

@@ -152,7 +152,21 @@ workflow vérifie aussi le pont réel WebKit→natif→Python et conserve une ca
 de l'écran initial. Un passage sur iPhone réel, le clavier, VoiceOver, les
 grands caractères et le confort en séance restent nécessaires.
 
-## Sources
+## Premier lancement physique — 18 octobre 2026
+
+L'app a été compilée et signée depuis Xcode, puis lancée sur un iPhone réel
+après activation du Mode développeur et approbation du certificat sur l'appareil.
+Un premier écran vide venait du contrôle de chemin : NSBundle exposait
+`/private/var/...` alors que WebKit utilisait `/var/...`. Les deux côtés utilisent
+désormais le chemin résolu pour la navigation et l'origine du pont, avec une
+limite inchangée au dossier des ressources. Le chargement de `index.html` et son
+titre ont été vérifiés dans le débogueur. Cela ne vaut pas recette complète des
+exercices sur appareil physique.
+
+Les tests natifs vérifient l'alias pointant vers les ressources et le refus des
+URL réseau, dossiers voisins, traversées et liens symboliques sortants.
+
+## Références
 
 - [CPython sur iOS](https://docs.python.org/3/using/ios.html)
 - [Runtime BeeWare](https://github.com/beeware/Python-Apple-support)
