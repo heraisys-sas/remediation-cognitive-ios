@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 
-async function page({native = true, reply = async()=>({started:false})} = {}) {
+async function page({native = true, reply = async()=>({started:false}), speechReply = null} = {}) {
   const nodes = {};
   const create = tag => {
     const node = {tagName:tag, textContent:'', value:'', hidden:false, disabled:false, children:[], attrs:{}, focus(){}, blur(){},
@@ -17,12 +17,14 @@ async function page({native = true, reply = async()=>({started:false})} = {}) {
   const context = vm.createContext({setTimeout,clearTimeout,performance:{now:()=>0}, document:{getElementById:get,
     querySelectorAll:()=>Object.values(nodes), querySelector:()=>get('heading'), createElement:create, addEventListener(){}},
     window:native ? {webkit:{messageHandlers:{runtime:{postMessage:reply}}}} : {}});
+  if(speechReply&&native) context.window.webkit.messageHandlers.speech={postMessage:speechReply};
   const source = path.resolve(__dirname, '../mobile/ios/pilot');
   vm.runInContext(fs.readFileSync(path.join(source,'active-clock.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'pqrst.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'contextes.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'choices.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'memory.js'),'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(source,'speech.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'pilot.js'),'utf8'), context);
   await new Promise(resolve => setImmediate(resolve));
   return {get, render:value=>context.render(value), context};
@@ -361,4 +363,117 @@ test('une avance mémoire validée malgré un retour perdu retrouve le rappel sa
   assert.ok(!get('memory').children.some(n=>n.textContent==='bouteille'));
   assert.equal(get('error').textContent,'');
   context.stopMemoryTimer();
+});
+
+test('la lecture ne reçoit aucun support masqué ni indice non demandé',async()=>{
+  const {context}=await page();
+  const item={id:'i',contenu:{enonce:'Où ?',indices:[{texte:'Indice visible'},{texte:'Indice secret'}]}};
+  const lexical={started:true,activity:'acces-lexical',item,hints_used:1};
+  assert.match(context.speechTextForView(lexical),/Indice visible/);
+  assert.doesNotMatch(context.speechTextForView(lexical),/secret/);
+  const memory={...lexical,memory:{phase:'element',content:'SECRET'}};
+  assert.equal(context.speechTextForView(memory),'');
+  assert.equal(context.speechTextForView({...memory,memory:{phase:'question',question:'Rappelle.'}}),'Rappelle.');
+  const pqrst={...lexical,protocol:{phase:'5.0',paragraphs:['Question T1'],options:['Lundi','Mardi']}};
+  assert.equal(context.speechTextForView(pqrst),'Question T1\nLundi\nMardi');
+  assert.equal(context.speechTextForView({...lexical,contextes:{phase:'question',question:'Où ?',image:{alt:'secret'}}}),'Où ?');
+});
+
+test('la dictée produit un brouillon modifiable sans soumettre de réponse',async()=>{
+  const calls=[];
+  const {get,render,context}=await page({reply:async payload=>{calls.push(payload);return {started:false};},speechReply:async payload=>{
+    calls.push(payload);return payload.operation==='capabilities'?{speech:true,on_device_dictation:true}:{ok:true};
+  }});
+  const view={started:true,activity:'acces-lexical',session_id:'s',position:1,item:{id:'i',contenu:{enonce:'Retrouve le mot.'}}};
+  render(view);get('answer').value='Une';await get('dictate').onclick();
+  const token=calls.find(c=>c.operation==='start-dictation').token;
+  context.window.nativeSpeechEvent({kind:'dictation',token,status:'partial',text:'bouteille'});
+  assert.equal(get('answer').value,'Une bouteille');
+  assert.equal(get('answer').readOnly,true);
+  assert.equal(get('validate').disabled,true);
+  context.window.nativeSpeechEvent({kind:'dictation',token,status:'finished',text:'bouteille'});
+  assert.equal(get('answer').value,'Une bouteille');
+  assert.equal(get('answer').readOnly,false);
+  assert.equal(get('validate').disabled,false);
+  assert.match(get('audioStatus').textContent,/Vérifie/);
+  assert.ok(!calls.some(c=>c.action==='answer'||c.operation==='answer'));
+});
+
+test('l’interruption arrête la dictée et ignore les résultats tardifs',async()=>{
+  const calls=[];
+  const {get,render,context}=await page({speechReply:async payload=>{calls.push(payload);return payload.operation==='capabilities'?{speech:true,on_device_dictation:true}:{ok:true};}});
+  render({started:true,activity:'acces-lexical',session_id:'s',position:1,item:{id:'i',contenu:{enonce:'Mot ?'}}});
+  await get('dictate').onclick();const token=calls.find(c=>c.operation==='start-dictation').token;
+  context.window.nativeSpeechEvent({kind:'dictation',token,status:'partial',text:'premier brouillon'});
+  context.window.pauseForInterruption();
+  assert.ok(calls.some(c=>c.operation==='cancel'));
+  context.window.nativeSpeechEvent({kind:'dictation',token,status:'finished',text:'résultat tardif'});
+  assert.equal(get('answer').value,'premier brouillon');
+  assert.equal(get('answer').readOnly,false);
+});
+
+test('la dictée refusée rend le clavier sans modifier le brouillon',async()=>{
+  const calls=[];
+  const {get,render,context}=await page({speechReply:async payload=>{calls.push(payload);return payload.operation==='capabilities'?{speech:true,on_device_dictation:true}:{ok:true};}});
+  render({started:true,activity:'acces-lexical',session_id:'s',item:{id:'i',contenu:{enonce:'Mot ?'}}});
+  get('answer').value='Mon texte';await get('dictate').onclick();
+  const token=calls.find(c=>c.operation==='start-dictation').token;
+  context.window.nativeSpeechEvent({kind:'dictation',token,status:'denied'});
+  assert.equal(get('answer').value,'Mon texte');assert.equal(get('answer').readOnly,false);
+  assert.match(get('audioStatus').textContent,/clavier/);
+});
+
+test('la dictée PQRST conserve le brouillon et respecte les étapes sans saisie libre',async()=>{
+  const calls=[];
+  const {get,render,context}=await page({speechReply:async payload=>{calls.push(payload);return payload.operation==='capabilities'?{speech:true,on_device_dictation:true}:{ok:true};}});
+  const base={started:true,activity:'pqrst-guide',session_id:'s',position:1,item:{id:'i',type:'pqrst-mise-en-oeuvre',contenu:{enonce:'PQRST'}},protocol:{phase:'4',revision:3,paragraphs:['Reformule.'],actions:[],input_label:'Reformulation',response_label:'Valider'}};
+  render(base);await get('dictate').onclick();const token=calls.find(c=>c.operation==='start-dictation').token;
+  context.window.nativeSpeechEvent({kind:'dictation',token,status:'finished',text:'Le colis attend.'});
+  assert.equal(get('protocol-answer').value,'Le colis attend.');
+  assert.equal(get('protocol-respond').disabled,false);
+  render(base);assert.equal(get('protocol-answer').value,'Le colis attend.');
+  render({...base,protocol:{phase:'5.0',revision:4,paragraphs:['T1'],options:['A','B'],actions:[],response_label:'Valider'}});
+  assert.equal(get('dictate').hidden,true);
+});
+
+test('un changement d’étape coupe la lecture avant l’appel au moteur',async()=>{
+  const calls=[];
+  const {get,render}=await page({reply:async payload=>{calls.push(payload);return {started:false};},speechReply:async payload=>{calls.push(payload);return payload.operation==='capabilities'?{speech:true,on_device_dictation:true}:{ok:true};}});
+  render({started:true,activity:'acces-lexical',session_id:'s',position:1,item:{id:'i',contenu:{enonce:'Question',indices:[{texte:'secret'}]}},hints_used:0});
+  await get('listen').onclick();
+  assert.equal(calls.find(c=>c.operation==='speak').text,'Question');
+  await get('hint').onclick();
+  const cancel=calls.findIndex(c=>c.operation==='cancel');const hint=calls.findIndex(c=>c.action==='hint');
+  assert.ok(cancel>=0&&hint>cancel);
+});
+
+test('un démarrage de dictée en attente est invalidé par une pause',async()=>{
+  const calls=[];let release;
+  const {get,render,context}=await page({speechReply:async payload=>{
+    calls.push(payload);
+    if(payload.operation==='capabilities')return {speech:true,on_device_dictation:true};
+    if(payload.operation==='cancel')await new Promise(resolve=>{release=resolve;});
+    return {ok:true};
+  }});
+  render({started:true,activity:'acces-lexical',session_id:'s',position:1,item:{id:'i',contenu:{enonce:'Question'}}});
+  await get('listen').onclick();const starting=get('dictate').onclick();
+  context.window.pauseForInterruption();release();await starting;
+  assert.ok(!calls.some(c=>c.operation==='start-dictation'));
+  assert.equal(get('exercise').hidden,true);
+});
+
+test('un démarrage audio en attente ne traverse pas un changement d’étape PQRST',async()=>{
+  const calls=[];let release;
+  const {get,render,context}=await page({speechReply:async payload=>{
+    calls.push(payload);
+    if(payload.operation==='capabilities')return {speech:true,on_device_dictation:true};
+    if(payload.operation==='cancel')await new Promise(resolve=>{release=resolve;});
+    return {ok:true};
+  }});
+  const view={started:true,activity:'pqrst-guide',session_id:'s',position:1,item:{id:'i',type:'pqrst-mise-en-oeuvre',contenu:{enonce:'PQRST'}},protocol:{phase:'Q',revision:2,input_label:'Question',paragraphs:['Q'],actions:[],response_label:'Valider'}};
+  render(view);await get('listen').onclick();const starting=get('dictate').onclick();
+  await context.perform(async()=>render({...view,protocol:{phase:'Q-retour',revision:3,paragraphs:['Retour'],actions:[]}}));
+  release();await starting;
+  assert.ok(!calls.some(c=>c.operation==='start-dictation'));
+  assert.equal(get('dictate').hidden,true);
 });

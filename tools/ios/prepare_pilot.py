@@ -8,6 +8,7 @@ import argparse
 
 from prepare_engine_probe import prepare, ROOT
 from provenance import tree_hash
+from native_sources import add_speech_sources
 
 
 def main():
@@ -22,11 +23,13 @@ def main():
     shutil.copy2(ROOT / "UPSTREAM.json", app / "UPSTREAM.json")
     native = ROOT / "mobile/ios/pilot"
     shutil.copy2(native / "SceneDelegate.m", destination / "iOSTestbed/SceneDelegate.m")
+    for name in ("SpeechController.h", "SpeechController.m"):
+        shutil.copy2(native / name, destination / "iOSTestbed" / name)
     shutil.copy2(native / "PilotTests.m", destination / "TestbedTests/TestbedTests.m")
     # Réutilise une ressource-folder déjà déclarée dans le projet Xcode.
     pilot = destination / "iOSTestbed/app/pilot"
     pilot.mkdir()
-    for name in ("index.html", "pilot.css", "active-clock.js", "pqrst.js", "contextes.js", "choices.js", "memory.js", "pilot.js"):
+    for name in ("index.html", "pilot.css", "active-clock.js", "pqrst.js", "contextes.js", "choices.js", "memory.js", "speech.js", "pilot.js"):
         shutil.copy2(native / name, pilot / name)
     shutil.copytree(ROOT / "vendor/remediation/frontend/images", pilot / "images")
     scene = destination / "iOSTestbed/SceneDelegate.m"
@@ -34,14 +37,17 @@ def main():
     info_path = destination / "iOSTestbed/iOSTestbed-Info.plist"
     info = plistlib.loads(info_path.read_bytes())
     info.update(CFBundleDisplayName="Remédiation", CFBundleDevelopmentRegion="fr",
-                CFBundleIdentifier="$(PRODUCT_BUNDLE_IDENTIFIER)")
+                CFBundleIdentifier="$(PRODUCT_BUNDLE_IDENTIFIER)",
+                NSMicrophoneUsageDescription="Le microphone permet de dicter ta réponse, uniquement quand tu choisis Dicter.",
+                NSSpeechRecognitionUsageDescription="La dictée transforme ta voix en texte à vérifier avant validation. L’app exige la reconnaissance sur cet appareil.")
     info.pop("UIRequiresFullScreen", None)
     info_path.write_bytes(plistlib.dumps(info))
     project = destination / "iOSTestbed.xcodeproj/project.pbxproj"
     project.write_text(project.read_text().replace("org.python.iOSTestbed", "fr.heraisys.remediation.pilot"))
+    add_speech_sources(project)
     manifest_path = destination / "probe-manifest.json"
     manifest = json.loads(manifest_path.read_text())
-    manifest.update(scope="Calcul, accès lexical, PQRST séquencé et Contextes en deux passes, stratégies et mémoire visuelle : service, corrections, aides, SQLite et pont natif ; clavier seulement",
+    manifest.update(scope="Calcul, accès lexical, PQRST séquencé et Contextes en deux passes, stratégies et mémoire visuelle : service, corrections, aides, SQLite et pont natif ; lecture et dictée natives facultatives",
                     app_sha256=tree_hash(app), native_sha256=tree_hash(destination / "iOSTestbed"))
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
     print(destination / "iOSTestbed.xcodeproj")

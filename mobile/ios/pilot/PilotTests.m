@@ -1,6 +1,17 @@
 #import <XCTest/XCTest.h>
 #import <WebKit/WebKit.h>
 
+// Déclarations de test : le contrôleur réel est fourni par l'app hôte.
+@interface NSObject (RCSpeechTestSurface)
+- (void)handle:(NSDictionary *)command reply:(void (^)(id, NSString *))reply;
+- (void)cancelAll;
+@end
+@interface RCNoLocalSpeech : NSObject
+@end
+@implementation RCNoLocalSpeech
+- (BOOL)supportsOnDeviceRecognition { return NO; }
+@end
+
 @interface TestbedTests : XCTestCase
 @end
 @interface UIViewController (PilotLocalURLChecks)
@@ -54,7 +65,9 @@
     XCTNSPredicateExpectation *page = [[XCTNSPredicateExpectation alloc] initWithPredicate:loaded object:web];
     [self waitForExpectations:@[page] timeout:20];
     XCTestExpectation *response = [self expectationWithDescription:@"Pont WebKit vers moteur local"];
-    NSString *script = @"for(let i=0;i<200&&document.getElementById('status').textContent;i++) await new Promise(r=>setTimeout(r,10));"
+    NSString *script = @"const voiceCapabilities=await speechRequest('capabilities');"
+        "if(voiceCapabilities.speech){await speechRequest('speak',{token:'native-smoke',text:'Essai de lecture.'}); await new Promise(r=>setTimeout(r,300)); await speechRequest('stop-speaking');}"
+        "for(let i=0;i<200&&document.getElementById('status').textContent;i++) await new Promise(r=>setTimeout(r,10));"
         "await document.getElementById('start').onclick();"
         "const r=await window.webkit.messageHandlers.runtime.postMessage({action:'view'});"
         "window.pauseForInterruption(); const paused=document.getElementById('exercise').hidden;"
@@ -119,7 +132,7 @@
         "const memoryField=document.getElementById('answer');memoryField.value='inconnu';await document.getElementById('answerForm').onsubmit({preventDefault(){}});"
         "for(let k=0;k<100&&busy;k++)await new Promise(r=>setTimeout(r,10));"
         "const memoryAnswer=await request('view');await document.getElementById('finish').onclick();"
-        "return {memory:noSequence&&timedMemory&&Boolean(memoryAnswer.feedback),strategies,contextes:photoLoaded&&noPhoto&&recallResumed&&recalled.contextes.phase==='feedback',result:r,title:document.querySelector('h1').textContent,error:document.getElementById('error').textContent,"
+        "return {speech:typeof voiceCapabilities.speech==='boolean'&&typeof voiceCapabilities.on_device_dictation==='boolean',memory:noSequence&&timedMemory&&Boolean(memoryAnswer.feedback),strategies,contextes:photoLoaded&&noPhoto&&recallResumed&&recalled.contextes.phase==='feedback',result:r,title:document.querySelector('h1').textContent,error:document.getElementById('error').textContent,"
         "paused,resumed,support,lexical:hinted.activity==='acces-lexical' && hinted.hints_used===1 && hintVisible && revealed.feedback.assistee===true,"
         "pqrst:pqrstOK};";
     [web callAsyncJavaScript:script
@@ -139,9 +152,45 @@
         XCTAssertEqualObjects(value[@"contextes"], @YES);
         XCTAssertEqualObjects(value[@"strategies"], @YES);
         XCTAssertEqualObjects(value[@"memory"], @YES);
+        XCTAssertEqualObjects(value[@"speech"], @YES);
         [response fulfill];
     }];
     [self waitForExpectations:@[response] timeout:60];
+}
+
+- (void)testNativeSpeechWithoutMicrophonePermission {
+    Class speechClass = NSClassFromString(@"RCSpeechController");
+    XCTAssertNotNil(speechClass);
+    if (!speechClass) return;
+    id speech = [speechClass new];
+    __block NSDictionary *capabilities = nil;
+    [speech handle:@{@"operation":@"capabilities"} reply:^(id value, NSString *error) {
+        XCTAssertNil(error); capabilities = value;
+    }];
+    NSLog(@"SPEECH_CAPABILITIES=%@", capabilities);
+    XCTAssertNotNil(capabilities[@"speech"]);
+    XCTAssertNotNil(capabilities[@"on_device_dictation"]);
+    XCTAssertTrue([NSBundle.mainBundle.infoDictionary[@"NSMicrophoneUsageDescription"] length] > 0);
+    XCTAssertTrue([NSBundle.mainBundle.infoDictionary[@"NSSpeechRecognitionUsageDescription"] length] > 0);
+    // Reconnaisseur sans capacité locale : refus avant toute demande d'autorisation.
+    [speech setValue:[RCNoLocalSpeech new] forKey:@"recognizer"];
+    __block NSString *rejection = nil;
+    [speech handle:@{@"operation":@"start-dictation", @"token":@"test-local-only"} reply:^(id value, NSString *error) {
+        XCTAssertNil(value); rejection = error;
+    }];
+    XCTAssertTrue([rejection containsString:@"hors connexion"]);
+    XCTAssertNil([speech valueForKey:@"dictationToken"]);
+    XCTAssertNil([speech valueForKey:@"engine"]);
+    // L'annulation invalide aussi une autorisation encore en attente.
+    [speech setValue:@"pending-test" forKey:@"dictationToken"];
+    NSUInteger generation = [[speech valueForKey:@"generation"] unsignedIntegerValue];
+    __block NSDictionary *event = nil;
+    [speech setValue:[^(NSDictionary *value) { event = value; } copy] forKey:@"eventSink"];
+    [speech cancelAll];
+    XCTAssertEqualObjects(event[@"status"], @"cancelled");
+    XCTAssertEqualObjects(event[@"token"], @"pending-test");
+    XCTAssertNil([speech valueForKey:@"dictationToken"]);
+    XCTAssertTrue([[speech valueForKey:@"generation"] unsignedIntegerValue] > generation);
 }
 
 - (void)testNativePythonPersistence {
