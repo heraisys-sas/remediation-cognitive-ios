@@ -1,0 +1,722 @@
+[
+  {
+    "id": "me-10-mots-19",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "bouteille",
+          "drapeau",
+          "journal",
+          "porte"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "bouteille drapeau journal porte"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-20",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "drapeau",
+          "nuage",
+          "chat",
+          "poisson"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "drapeau nuage chat poisson"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-21",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "chemise",
+          "cuisine",
+          "bougie",
+          "bureau"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "chemise cuisine bougie bureau"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-22",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "manteau",
+          "neige",
+          "porte",
+          "camion"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "manteau neige porte camion"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-23",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "camion",
+          "jardin",
+          "musique",
+          "panier"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "camion jardin musique panier"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-24",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "jardin",
+          "rivière",
+          "journal",
+          "ballon"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "jardin rivière journal ballon"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-25",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "vélo",
+          "radis",
+          "chapeau",
+          "drapeau"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "vélo radis chapeau drapeau"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-26",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "cahier",
+          "jardinier",
+          "manteau",
+          "jardin"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "cahier jardinier manteau jardin"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-27",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "lune",
+          "vélo",
+          "plage",
+          "marteau"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "lune vélo plage marteau"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-28",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "bureau",
+          "tapis",
+          "orange",
+          "jardin"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "bureau tapis orange jardin"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-29",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "poisson",
+          "ballon",
+          "porte",
+          "montre"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "poisson ballon porte montre"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-30",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "crayon",
+          "montagne",
+          "musique",
+          "sable"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "crayon montagne musique sable"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-31",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "fenêtre",
+          "cuisine",
+          "nuage",
+          "camion"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "fenêtre cuisine nuage camion"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-32",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "jardinier",
+          "pomme",
+          "camion",
+          "orange"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "jardinier pomme camion orange"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-33",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "pomme",
+          "guitare",
+          "jardinier",
+          "fenêtre"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "pomme guitare jardinier fenêtre"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-34",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "crayon",
+          "drapeau",
+          "fenêtre",
+          "bouteille"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "crayon drapeau fenêtre bouteille"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-35",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "journal",
+          "chat",
+          "fenêtre",
+          "radis"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "journal chat fenêtre radis"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-10-mots-36",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 10,
+    "prerequis": [
+      "me-palier-9"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "journal",
+          "tapis",
+          "poisson",
+          "rivière"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "journal tapis poisson rivière"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

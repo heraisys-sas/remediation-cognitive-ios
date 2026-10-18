@@ -11,7 +11,7 @@ Aucun exercice n'est présenté comme un test diagnostique validé.
 
 Le noyau Python a exécuté ses 60 tests sous iOS 26.5 sur simulateurs iPhone 17
 et Air. Le pilote propose Calcul mental, Retrouver le mot, PQRST guidé, Retrouver le
-contexte et quatre parcours de stratégie. Il réutilise le service et les
+contexte, quatre parcours de stratégie et cinq parcours de mémoire visuelle. Il réutilise le service et les
 correcteurs d’origine, avec contenu versionné, interface locale et sauvegarde
 transactionnelle. Voir [le banc d'essai et le pilote](mobile/ios/README.md).
 La validation du pilote sous iOS est distincte de celle du noyau ; consulter

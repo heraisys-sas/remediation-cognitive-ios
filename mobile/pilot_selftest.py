@@ -159,4 +159,27 @@ def run():
             call(context_restored, "finish", session_id=strategy["session_id"])
             assert context_restored.store.lire_cartes("methodes--" + activity)
             passed += 1
+        for activity in ("chiffres-endroit", "chiffres-envers", "mots", "associations", "position"):
+            memory_directory = Path(directory) / ("memory-" + activity)
+            memory_runtime = restored_runtime(memory_directory)
+            memory_session = call(memory_runtime, "start", activity=activity)
+            assert "affichage" not in json.dumps(memory_session)
+            def memory_step(instance, operation, answer=None, elapsed=0):
+                view = call(instance, "view")
+                return call(instance, "memory-step", session_id=view["session_id"], item_id=view["item"]["id"],
+                            revision=view["memory"]["revision"], operation=operation, answer=answer, elapsed_ms=elapsed)
+            view = memory_step(memory_runtime, "show")
+            memory_step(memory_runtime, "pause", elapsed=100)
+            memory_runtime = restored_runtime(memory_directory)
+            assert call(memory_runtime, "view")["memory"]["paused"]
+            view = memory_step(memory_runtime, "resume")
+            while view["memory"]["phase"] != "question":
+                view = memory_step(memory_runtime, "advance", elapsed=view["memory"]["remaining_ms"])
+            assert "content" not in view["memory"] and "affichage" not in json.dumps(view)
+            item = memory_runtime._session().items_par_id[view["item"]["id"]]
+            view = memory_step(memory_runtime, "answer", str(item["reponse"]["valeur"]), elapsed=1000)
+            assert view["feedback"]["correcte"]
+            call(memory_runtime, "finish", session_id=memory_session["session_id"])
+            assert memory_runtime.store.lire_cartes("memoire--" + activity)
+            passed += 1
     return json.dumps({"platform": sys.platform, "passed": passed, "http_server": False})

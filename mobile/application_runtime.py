@@ -16,6 +16,7 @@ from engine.session.runner import SessionRunner  # noqa: E402
 from mobile.transactional_store import TransactionalStore  # noqa: E402
 from mobile.contextes_runtime import ContextesRuntime
 from mobile.choice_runtime import ChoiceRuntime, CHOICE_ACTIVITIES
+from mobile.memory_runtime import MemoryRuntime, MEMORY_ACTIVITIES
 from mobile import pqrst_protocol  # noqa: E402
 
 ACTIVITIES = {
@@ -27,9 +28,10 @@ ACTIVITIES = {
 
 
 ACTIVITIES.update(CHOICE_ACTIVITIES)
+ACTIVITIES.update(MEMORY_ACTIVITIES)
 
 
-class ApplicationRuntime(ContextesRuntime, ChoiceRuntime):
+class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime):
     """Instance sérialisée par l'appelant natif ; données dans le conteneur de l'app."""
 
     def __init__(self, storage_directory: str):
@@ -117,6 +119,8 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime):
                            "activity": activity, "hints": {}}
                 if activity == "memoire-source":
                     self._contextes_start()
+        elif action == "memory-step":
+            return self._memory_step(request)
         elif action == "choice-answer":
             return self._choice_answer(request)
         elif action == "contextes-step":
@@ -147,6 +151,8 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime):
             counts[item["id"]] = min(len(hints), counts.get(item["id"], 0) + 1)
             result = self._view()
         elif action in ("answer", "reveal"):
+            if self.ui.get("activity") in MEMORY_ACTIVITIES:
+                raise ValueError("Utiliser le rappel mémoire séquencé")
             if self.ui.get("activity") in CHOICE_ACTIVITIES:
                 raise ValueError("Utiliser la réponse à choix versionnée")
             if self.ui.get("activity") == "memoire-source":
@@ -189,6 +195,8 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime):
             result = self.manager.stockage.lire_maitrise(f"{theme}--{parcours}" if parcours else theme)
         else:
             raise ValueError("Action native non prise en charge")
+        if action == "start" and self.ui.get("activity") in MEMORY_ACTIVITIES:
+            result = {**result, "items": [self._memory_stub(item) for item in result["items"]]}
         if action == "start" and self.ui.get("activity") == "memoire-source":
             result = {**result, "items": [self._contextes_stub(i) for i in result["items"]]}
         if action == "start" and self.ui.get("activity") == "pqrst-guide":
@@ -213,6 +221,9 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime):
 
     def _mark_restored_interruption(self):
         if "session" not in self.ui or self._session().terminee or self.ui.get("feedback"):
+            return
+        if self.ui.get("activity") in MEMORY_ACTIVITIES:
+            self._memory_interrupt()
             return
         if self.ui.get("activity") == "memoire-source":
             self._contextes_interrupt()
@@ -284,6 +295,8 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime):
         metadata = {"activity": activity, "title": ACTIVITIES[activity][2]}
         if current.terminee:
             return {"started": True, "finished": True, "summary": current.resume_cloture, **metadata}
+        if activity in MEMORY_ACTIVITIES:
+            return self._memory_view(metadata)
         if activity == "memoire-source":
             return self._contextes_view(metadata)
         cursor = self.ui["cursor"]

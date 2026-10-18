@@ -266,3 +266,44 @@ dans un document ; la sonde Python couvre les quatre nouveaux parcours.
 La compilation signée pour l’iPhone réussit ; le lancement des tests reste
 bloqué par le téléphone verrouillé. Aucune nouvelle exécution physique de ce
 lot n’est revendiquée. La recette est reportée au prochain point de test.
+
+## Mémoire visuelle — lot suivant du portage
+
+Cinq parcours `memoire` sont disponibles : `chiffres-endroit`, `chiffres-envers`,
+`mots`, `associations` et `position`. Les 216 items des douze banques, leurs
+identifiants et leurs paliers sont importés directement du commit source
+`44acda5`, avec empreintes dans `UPSTREAM.json`. Aucun contenu local non commité
+ni historique personnel n’est importé. Les services et correcteurs restent
+inchangés.
+
+La présentation conserve les durées du contenu : un chiffre, mot ou élément à
+la fois, alternant avec les blancs de la source ; les associations restent en
+liste pendant leur durée prévue. Le pont n’expose que le stimulus courant,
+puis la question sans la séquence ni les associations. Le bouton Passer reprend
+la possibilité déjà présente dans le client source. Les reprises après
+correction donnent la réponse pour la réancrer, sans la compter comme une
+première récupération indépendante.
+
+Les transitions, la position, le reliquat de présentation et les segments de
+temps de réponse validés sont sauvegardés dans la même transaction. Une
+interruption masque la présentation, demande une reprise explicite et conserve
+l’étape enregistrée. Les interruptions et présentations passées sont signalées
+dans l’état local ; aucun temps perdu lors d’un arrêt brutal n’est inventé.
+La reprise peut réafficher le stimulus courant pour le reliquat enregistré :
+elle n’est pas présentée comme une exposition continue sans interruption.
+Une clôture sans réponse ne crée ni correction ni carte. La progression et FSRS
+suivent le service d’origine, avec des historiques séparés par parcours et le
+plafond de séances partagé par le thème.
+
+Le support est masqué dès l’expiration prévue, avant la sauvegarde de l’avance.
+Si cette sauvegarde échoue, un réessai renvoie exactement la transition sans
+réexposer le stimulus. Un retour perdu après validation retrouve l’état durable.
+
+Validation Mac : 117 tests Python (dont 60 du noyau), 23 tests JavaScript et
+20 contrôles de la sonde. Les cinq parcours comparent correction, reprises,
+maîtrise, cartes FSRS et temps de référence au service source. Les tests couvrent
+également la minuterie, les blancs, les interruptions, les renvois, l’annulation
+de transaction et une séance vide. Le test WebKit natif est étendu à une
+présentation complète de cinq chiffres (20 secondes), puis au rappel masqué.
+La compilation finale et l’exécution native restent à confirmer. L’ergonomie
+reste reportée à la fin du portage.

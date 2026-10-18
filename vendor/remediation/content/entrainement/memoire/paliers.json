@@ -1,0 +1,111 @@
+{
+  "theme": "memoire",
+  "paliers": [
+    {
+      "id": "me-palier-1",
+      "description": "Empan 3 chiffres, endroit",
+      "prerequis": [],
+      "fichier": "paliers/palier-01.json",
+      "nb_items": 18
+    },
+    {
+      "id": "me-palier-2",
+      "description": "Empan 4 chiffres, endroit",
+      "prerequis": [
+        "me-palier-1"
+      ],
+      "fichier": "paliers/palier-02.json",
+      "nb_items": 18
+    },
+    {
+      "id": "me-palier-3",
+      "description": "Empan 5 + premières paires mot–nombre",
+      "prerequis": [
+        "me-palier-2"
+      ],
+      "fichier": "paliers/palier-03.json",
+      "nb_items": 18
+    },
+    {
+      "id": "me-palier-4",
+      "description": "Empan envers 3, endroit 6",
+      "prerequis": [
+        "me-palier-3"
+      ],
+      "fichier": "paliers/palier-04.json",
+      "nb_items": 18
+    },
+    {
+      "id": "me-palier-5",
+      "description": "Envers 4 + sonde rappel d’une position (pas 2)",
+      "prerequis": [
+        "me-palier-4"
+      ],
+      "fichier": "paliers/palier-05.json",
+      "nb_items": 18
+    },
+    {
+      "id": "me-palier-6",
+      "description": "Envers 5 + paires 3",
+      "prerequis": [
+        "me-palier-5"
+      ],
+      "fichier": "paliers/palier-06.json",
+      "nb_items": 18
+    },
+    {
+      "id": "me-palier-7",
+      "description": "Envers 6 + sonde rappel d’une position (pas 3)",
+      "prerequis": [
+        "me-palier-6"
+      ],
+      "fichier": "paliers/palier-07.json",
+      "nb_items": 18
+    },
+    {
+      "id": "me-palier-8",
+      "description": "Paires 4 + sonde rappel d’une position (pas 4)",
+      "prerequis": [
+        "me-palier-7"
+      ],
+      "fichier": "paliers/palier-08.json",
+      "nb_items": 18
+    },
+    {
+      "id": "me-palier-9",
+      "description": "Empan de mots 3, endroit",
+      "prerequis": [
+        "me-palier-8"
+      ],
+      "fichier": "paliers/palier-09.json",
+      "nb_items": 18
+    },
+    {
+      "id": "me-palier-10",
+      "description": "Empan de mots 4, endroit",
+      "prerequis": [
+        "me-palier-9"
+      ],
+      "fichier": "paliers/palier-10.json",
+      "nb_items": 18
+    },
+    {
+      "id": "me-palier-11",
+      "description": "Empan de mots 5, endroit",
+      "prerequis": [
+        "me-palier-10"
+      ],
+      "fichier": "paliers/palier-11.json",
+      "nb_items": 18
+    },
+    {
+      "id": "me-palier-12",
+      "description": "Empan de mots envers 3 et 4",
+      "prerequis": [
+        "me-palier-11"
+      ],
+      "fichier": "paliers/palier-12.json",
+      "nb_items": 18
+    }
+  ]
+}
