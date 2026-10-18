@@ -385,3 +385,29 @@ avion.
 Références : [exiger le traitement local](https://developer.apple.com/documentation/speech/sfspeechrecognitionrequest/requiresondevicerecognition),
 [capacité de reconnaissance locale](https://developer.apple.com/documentation/speech/sfspeechrecognizer/supportsondevicerecognition),
 [permission microphone](https://developer.apple.com/documentation/avfaudio/avaudioapplication/requestrecordpermission(completionhandler:)).
+
+## Exécution native du lot vocal — 18 octobre 2026
+
+La version `aa402ed` a exécuté ses quatre tests XCTest sur l’iPhone Air :
+zéro échec, et 20 contrôles Python embarqués réussis (`platform: ios`). Le pont
+WebKit confirme les capacités vocales booléennes, puis exerce lecture/arrêt.
+L’appareil déclare une voix française et la reconnaissance sur l’appareil
+pour la dictée. La méthode WebKit complète dure 22,534 secondes.
+
+Le quatrième test refuse une dictée lorsque la capacité locale est absente,
+avant toute demande de permission, et vérifie qu’une annulation invalide un
+token encore en attente. Le microphone n’est pas ouvert par cette suite.
+Le premier scénario a repris une séance de test interrompue ; le scénario
+suivant a détecté un format numérique au lieu d’un booléen dans les capacités.
+Ces deux échecs sont distingués de la dernière exécution réussie, faite sur un
+stockage neuf avec le format corrigé.
+
+L’app est relancée pour la recette humaine de la lecture, des permissions et
+du microphone. La transcription réelle et le mode avion ne sont pas encore
+validés. Le journal contient les avertissements WebP déjà connus ainsi qu’un
+avertissement iOS 27 sur l’activation/désactivation synchrone de la session audio ;
+ils n’ont pas fait échouer les tests et restent à suivre pour la réactivité.
+
+Preuves locales ignorées par Git : `.local/speech-device-verified.log` et
+`.local/speech-device-verified.xcresult`. Aucun diagnostic ou enregistrement
+vocal personnel n’est publié.
