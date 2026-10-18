@@ -83,6 +83,10 @@
         "await document.getElementById('start').onclick();"
         "await document.getElementById('hint').onclick();"
         "const hinted=await request('view'); const hintVisible=Boolean(document.getElementById('hints').textContent);"
+        "const regressionField=document.getElementById('answer'); regressionField.value='bouteille';"
+        "dictationDraft={token:'synthetic-regression',field:regressionField,key:audioContextKey(hinted),prefix:'',status:'partial'}; renderSpeechControls(hinted);"
+        "const dictationLocked=document.getElementById('validate').disabled; await document.getElementById('hint').onclick();"
+        "const dictationUnlocked=dictationLocked&&!document.getElementById('validate').disabled&&!regressionField.readOnly&&regressionField.value==='bouteille';"
         "await document.getElementById('reveal').onclick(); const revealed=await request('view');"
         "await document.getElementById('finish').onclick();"
         "document.getElementById('activity').value='pqrst-guide'; await document.getElementById('start').onclick();"
@@ -132,7 +136,7 @@
         "const memoryField=document.getElementById('answer');memoryField.value='inconnu';await document.getElementById('answerForm').onsubmit({preventDefault(){}});"
         "for(let k=0;k<100&&busy;k++)await new Promise(r=>setTimeout(r,10));"
         "const memoryAnswer=await request('view');await document.getElementById('finish').onclick();"
-        "return {speech:typeof voiceCapabilities.speech==='boolean'&&typeof voiceCapabilities.on_device_dictation==='boolean',memory:noSequence&&timedMemory&&Boolean(memoryAnswer.feedback),strategies,contextes:photoLoaded&&noPhoto&&recallResumed&&recalled.contextes.phase==='feedback',result:r,title:document.querySelector('h1').textContent,error:document.getElementById('error').textContent,"
+        "return {dictationUnlocked,speech:typeof voiceCapabilities.speech==='boolean'&&typeof voiceCapabilities.on_device_dictation==='boolean',memory:noSequence&&timedMemory&&Boolean(memoryAnswer.feedback),strategies,contextes:photoLoaded&&noPhoto&&recallResumed&&recalled.contextes.phase==='feedback',result:r,title:document.querySelector('h1').textContent,error:document.getElementById('error').textContent,"
         "paused,resumed,support,lexical:hinted.activity==='acces-lexical' && hinted.hints_used===1 && hintVisible && revealed.feedback.assistee===true,"
         "pqrst:pqrstOK};";
     [web callAsyncJavaScript:script
@@ -153,6 +157,7 @@
         XCTAssertEqualObjects(value[@"strategies"], @YES);
         XCTAssertEqualObjects(value[@"memory"], @YES);
         XCTAssertEqualObjects(value[@"speech"], @YES);
+        XCTAssertEqualObjects(value[@"dictationUnlocked"], @YES);
         [response fulfill];
     }];
     [self waitForExpectations:@[response] timeout:60];

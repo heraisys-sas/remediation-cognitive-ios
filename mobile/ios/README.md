@@ -421,3 +421,17 @@ la dictée et à vérifier la transcription sans la valider comme réponse.
 La lecture audible et la transcription réelle au microphone sont donc confirmées
 sur cet iPhone Air. Aucun enregistrement ni contenu personnel de l’essai n’est
 copié au dépôt. Un essai explicite en mode avion reste à faire.
+
+## Validation après dictée et indice
+
+Pendant une dictée active, Valider reste volontairement désactivé : arrêter la
+dictée, vérifier le texte, puis valider. Un cas distinct est corrigé : demander
+un indice pendant la capture pouvait conserver l’ancien verrou après annulation
+du microphone, car `perform` restaurait l’état désactivé du bouton. Le verrou
+est maintenant recalculé depuis l’état courant de capture et d’enregistrement.
+Le brouillon est conservé et les règles de saisie PQRST restent appliquées.
+
+La régression JavaScript échouait avant correction et passe ensuite ; la suite
+compte 32 tests JavaScript. Le scénario WebKit réel est étendu au brouillon
+synthétique, à la demande d’indice et au retour d’un bouton Valider actif, sans
+ouvrir le microphone. Revue Sol favorable ; exécution physique en cours.

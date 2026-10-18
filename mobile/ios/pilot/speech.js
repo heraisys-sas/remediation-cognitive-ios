@@ -35,7 +35,6 @@ function unlockDictation() {
   dictationDraft.field.readOnly=false;
   if(typeof dictationDraft.field.oninput==="function") dictationDraft.field.oninput();
   dictationDraft=null;
-  if(!busy) element("validate").disabled=false;
 }
 function stopSpeechForTransition() {
   audioGeneration+=1;
@@ -56,6 +55,9 @@ function renderSpeechControls(view) {
   element("dictate").hidden=!target||!speechCapabilities?.on_device_dictation;
   element("dictate").textContent=dictationDraft?"Arrêter la dictée":"Dicter";
   element("dictate").disabled=audioBusy||dictationDraft?.status==="finishing";
+  // Recalculer le verrou après perform : son instantané peut dater de la capture.
+  element("validate").disabled=busy||Boolean(dictationDraft);
+  if(!busy&&!dictationDraft&&view?.protocol?.input_label&&target&&typeof target.oninput==="function") target.oninput();
   if(dictationDraft) {
     dictationDraft.field.readOnly=true;
     for(const id of ["validate","protocol-respond","protocol-reread"]) {
