@@ -263,4 +263,6 @@ Validation Mac : 107 tests Python (dont 60 du noyau), 18 tests JavaScript et
 15 contrôles de la sonde. Les audits Sol et Astra sont favorables après ajout
 du plan ordonné manquant. Le test WebKit natif couvre choisir un plan et chercher
 dans un document ; la sonde Python couvre les quatre nouveaux parcours.
-L’exécution native de ce lot reste en cours de vérification.
+La compilation signée pour l’iPhone réussit ; le lancement des tests reste
+bloqué par le téléphone verrouillé. Aucune nouvelle exécution physique de ce
+lot n’est revendiquée. La recette est reportée au prochain point de test.
