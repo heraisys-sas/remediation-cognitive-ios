@@ -305,5 +305,7 @@ maîtrise, cartes FSRS et temps de référence au service source. Les tests couv
 également la minuterie, les blancs, les interruptions, les renvois, l’annulation
 de transaction et une séance vide. Le test WebKit natif est étendu à une
 présentation complète de cinq chiffres (20 secondes), puis au rappel masqué.
-La compilation finale et l’exécution native restent à confirmer. L’ergonomie
-reste reportée à la fin du portage.
+La compilation finale `build-for-testing` iOS Simulator arm64 réussit pour le
+code `f25cf00`. Les contrôles GitHub restent bloqués avant exécution par la
+facturation ; aucun essai natif de ce lot n’est revendiqué. L’ergonomie reste
+reportée à la fin du portage.
