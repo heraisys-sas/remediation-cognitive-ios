@@ -184,7 +184,10 @@ l'interdiction du réseau.
 Validation locale : 101 tests Python (dont les 60 tests du noyau), 15 tests
 JavaScript et 11 contrôles de la sonde. Le test WebKit natif est étendu aux
 photos locales, au passage découverte/rappel et au masquage lors d'une reprise.
-Son exécution iOS et la recette de ce nouveau lot sur iPhone réel restent à
+La compilation `build-for-testing` iOS Simulator arm64 réussit. GitHub Actions
+refuse toutefois de démarrer tous les jobs (paiement du compte échoué ou plafond
+de dépenses à augmenter dans Billing & plans, exécution 39124033098). Aucun test
+iOS de ce lot n’a donc été exécuté. La recette sur iPhone réel reste aussi à
 confirmer ; le premier essai physique précédent portait sur l'ébauche antérieure.
 Les ajustements des aides dépliables et des boutons de pause attendent la fin
 du portage, selon la demande utilisateur.
