@@ -477,3 +477,23 @@ test('un démarrage audio en attente ne traverse pas un changement d’étape PQ
   assert.ok(!calls.some(c=>c.operation==='start-dictation'));
   assert.equal(get('dictate').hidden,true);
 });
+
+test('un indice pendant la dictée ne laisse pas Valider grisé après son arrêt',async()=>{
+  let current; const calls=[];
+  const {get,render,context}=await page({reply:async payload=>{
+    calls.push(payload);
+    if(payload.action==='hint')return {...current,hints_used:1};
+    return {started:false};
+  },speechReply:async payload=>{
+    calls.push(payload);return payload.operation==='capabilities'?{speech:true,on_device_dictation:true}:{ok:true};
+  }});
+  current={started:true,activity:'acces-lexical',session_id:'s',position:1,hints_used:0,item:{id:'i',contenu:{enonce:'Mot ?',indices:[{texte:'Un objet'}]}}};
+  render(current);await get('dictate').onclick();
+  const token=calls.find(c=>c.operation==='start-dictation').token;
+  context.window.nativeSpeechEvent({kind:'dictation',token,status:'partial',text:'bouteille'});
+  assert.equal(get('validate').disabled,true);
+  await get('hint').onclick();
+  assert.equal(get('answer').value,'bouteille');
+  assert.equal(get('answer').readOnly,false);
+  assert.equal(get('validate').disabled,false);
+});
