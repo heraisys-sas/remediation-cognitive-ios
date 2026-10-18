@@ -1,5 +1,6 @@
 // Pilote autonome : transport natif vers Python, aucun serveur HTTP.
 #import "SceneDelegate.h"
+#import "SpeechController.h"
 #import <WebKit/WebKit.h>
 #import <Python/Python.h>
 
@@ -58,6 +59,7 @@ static BOOL PrepareEngine(void) {
 
 @interface PilotViewController : UIViewController <WKScriptMessageHandlerWithReply, WKNavigationDelegate>
 @property(nonatomic, strong) WKWebView *web;
+@property(nonatomic, strong) RCSpeechController *speech;
 @property(nonatomic, copy) NSString *allowedRoot;
 @end
 
@@ -68,6 +70,16 @@ static BOOL PrepareEngine(void) {
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
     [configuration.userContentController addScriptMessageHandlerWithReply:self
         contentWorld:WKContentWorld.pageWorld name:@"runtime"];
+    [configuration.userContentController addScriptMessageHandlerWithReply:self
+        contentWorld:WKContentWorld.pageWorld name:@"speech"];
+    self.speech = [RCSpeechController new];
+    __weak PilotViewController *weakSelf = self;
+    self.speech.eventSink = ^(NSDictionary *event) {
+        NSData *data = [NSJSONSerialization dataWithJSONObject:event options:0 error:nil];
+        if (!data) return;
+        NSString *json = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        [weakSelf.web evaluateJavaScript:[NSString stringWithFormat:@"window.nativeSpeechEvent?.(%@)", json] completionHandler:nil];
+    };
     self.web = [[WKWebView alloc] initWithFrame:CGRectZero configuration:configuration];
     self.web.navigationDelegate = self;
     self.web.translatesAutoresizingMaskIntoConstraints = NO;
@@ -110,6 +122,9 @@ static BOOL PrepareEngine(void) {
     NSError *encodingError = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:message.body options:0 error:&encodingError];
     if (!data || data.length > 65536) { replyHandler(nil, @"Demande invalide."); return; }
+    if ([message.name isEqualToString:@"speech"]) {
+        [self.speech handle:message.body reply:replyHandler]; return;
+    }
     NSString *request = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     dispatch_async(EngineQueue, ^{
         if (!PrepareEngine()) {
@@ -160,8 +175,13 @@ static BOOL PrepareEngine(void) {
     self.window.rootViewController = [[PilotViewController alloc] init];
     [self.window makeKeyAndVisible];
 }
+- (void)sceneWillResignActive:(UIScene *)scene {
+    PilotViewController *controller = (PilotViewController *)self.window.rootViewController;
+    [controller.speech interruptIfRunning];
+}
 - (void)sceneDidEnterBackground:(UIScene *)scene {
     PilotViewController *controller = (PilotViewController *)self.window.rootViewController;
+    [controller.speech cancelAll];
     [controller.web evaluateJavaScript:@"window.pauseForInterruption?.()" completionHandler:nil];
 }
 @end

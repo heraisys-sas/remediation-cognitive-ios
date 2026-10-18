@@ -16,7 +16,7 @@ async function perform(operation) {
   document.querySelectorAll("button").forEach(button => { disabledBefore.set(button, button.disabled); button.disabled = true; });
   element("error").textContent = "";
   element("status").textContent = "Enregistrement sur l’appareil…";
-  try { await operation(); }
+  try { const stopAudio=stopSpeechForTransition(); if(stopAudio) await stopAudio; await operation(); }
   catch (error) { element("error").textContent = String(error.message || error); }
   finally {
     try { await flushProtocolPause(); }
@@ -25,6 +25,7 @@ async function perform(operation) {
     element("status").textContent = "";
     document.querySelectorAll("button").forEach(button => { if (disabledBefore.has(button)) button.disabled = disabledBefore.get(button); });
     if (paused) { element("exercise").hidden = true; element("resume").hidden = false; }
+    if (state) renderSpeechControls(state);
   }
 }
 function render(view) {
@@ -44,6 +45,7 @@ function render(view) {
   element("stopProposal").hidden = !view.arret_propose || Boolean(view.finished);
   element("summaryAdvice").hidden = !view.finished || !view.summary?.arret_propose;
   if (view.finished) {
+    renderSpeechControls(view);
     const summary = view.summary.resume;
     element("summaryText").textContent = `${summary.items} questions travaillées, dont ${summary.correctes} réussies à la première réponse retenue.`;
     if (view.activity === "memoire-source") element("summaryText").textContent = `${summary.items} rappel(s) final(aux), dont ${summary.correctes} réussi(s). La découverte ne compte pas dans la progression.`;
@@ -52,7 +54,7 @@ function render(view) {
     element("start").textContent = "Nouvelle séance";
     return;
   }
-  if (!view.item) return;
+  if (!view.item) { renderSpeechControls(view); return; }
   element("position").textContent = `${view.reprise ? "Reprise après correction · " : ""}Question ${view.position} sur ${view.total}`;
   element("question").textContent = view.item.contenu.enonce;
   const isPqrst = view.item.type === "pqrst-mise-en-oeuvre";
@@ -73,6 +75,7 @@ function render(view) {
   element("feedback").textContent = view.feedback ? `${view.feedback.feedback || ""}${view.feedback.attendue != null ? " Réponse : " + view.feedback.attendue + "." : ""}` : "";
   if (!view.feedback && view.retry_feedback) element("feedback").textContent = view.retry_feedback;
   if (isPqrst && view.feedback) element("feedback").textContent = pqrstFeedbackLines(view.feedback).join("\n\n");
+  renderSpeechControls(view);
 }
 element("start").onclick = () => perform(async () => {
   await request("start", {activity: element("activity").value || "calcul-mental"});
@@ -155,6 +158,7 @@ async function flushProtocolPause() {
   render(view); clock.reset(paused);
 }
 window.pauseForInterruption = () => {
+  stopSpeechForTransition();
   stopContextesTimer(); stopMemoryTimer();
   clock.pause(); paused = true; element("exercise").hidden = true; element("resume").hidden = false;
   if (state?.memory || state?.contextes || (state?.protocol && !state.protocol.paused && !["pret", "fin"].includes(state.protocol.phase))) {
@@ -172,3 +176,7 @@ element("resume").onclick = async () => {
   clock.resume(); paused = false; element("resume").hidden = true; if (state) render(state);
 };
 perform(async () => { render(await request("view")); clock.reset(paused); });
+
+element("listen").onclick=listenVisibleText;
+element("dictate").onclick=dictateAnswer;
+initializeSpeech();

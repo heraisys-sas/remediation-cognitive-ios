@@ -16,7 +16,9 @@ correcteurs d’origine, avec contenu versionné, interface locale et sauvegarde
 transactionnelle. Voir [le banc d'essai et le pilote](mobile/ios/README.md).
 La validation du pilote sous iOS est distincte de celle du noyau ; consulter
 les résultats du workflow avant de le considérer comme exécuté.
-La voix et la dictée natives restent à intégrer. PCC sera facultatif.
+La lecture française et la dictée natives facultatives sont en cours de recette.
+La dictée exige la reconnaissance sur l’appareil et laisse vérifier le texte
+avant validation. PCC reste facultatif.
 
 ## Origine et suivi
 

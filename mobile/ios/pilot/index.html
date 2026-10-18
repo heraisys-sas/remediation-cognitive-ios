@@ -31,6 +31,11 @@
   <section id="exercise" hidden>
     <p id="position" class="secondary"></p>
     <h2 id="question" tabindex="-1"></h2>
+    <div id="audioControls" hidden>
+      <button id="listen" type="button" class="secondaryButton">Écouter</button>
+      <button id="dictate" type="button" class="secondaryButton" hidden>Dicter</button>
+      <p id="audioStatus" role="status" aria-live="polite"></p>
+    </div>
     <section id="protocol" aria-label="PQRST guidé" hidden></section>
     <section id="contextes" aria-label="Retrouver le contexte" hidden></section>
     <p id="repriseSupport" hidden></p>
@@ -65,5 +70,6 @@
 <script src="contextes.js"></script>
 <script src="choices.js"></script>
 <script src="memory.js"></script>
+<script src="speech.js"></script>
 <script src="pilot.js"></script>
 </html>

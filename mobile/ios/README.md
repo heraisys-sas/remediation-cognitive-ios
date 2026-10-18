@@ -335,3 +335,53 @@ chargement.
 Preuves locales ignorées par Git : `.local/memory-device.log` et
 `.local/memory-device.xcresult`. Aucun diagnostic de l’appareil n’est publié.
 L’app testée est relancée sur l’iPhone à la fin de l’essai.
+
+## Voix et dictée natives — premier agrément d’usage
+
+Deux commandes contextuelles sont ajoutées : Écouter/Arrêter la lecture et,
+seulement lorsqu’une réponse libre est attendue, Dicter/Arrêter la dictée.
+La lecture utilise les voix françaises ordinaires disponibles via
+AVSpeechSynthesizer, sans demander de Voix personnelle. Le texte provient
+uniquement de la vue courante : consigne, question, document/plan visible,
+options ou indices déjà demandés. Les stimuli mémoire ne sont pas lus ; le
+support PQRST masqué et les photos Contextes ne sont pas transmis au lecteur.
+La lecture est arrêtée avant un changement d’étape.
+
+La dictée utilise SFSpeechRecognizer pour `fr-FR`, uniquement si
+`supportsOnDeviceRecognition` est vrai, puis exige
+`requiresOnDeviceRecognition = YES`. Aucun repli vers une reconnaissance réseau
+n’est effectué, ni aucun mot attendu fourni au reconnaisseur. Si la capacité
+locale n’est pas disponible, le clavier continue de fonctionner. Les permissions
+microphone et reconnaissance sont demandées uniquement après le choix Dicter.
+Un refus ou une interruption libère la saisie et conserve le brouillon visible.
+
+Les transcriptions partielles restent des brouillons modifiables. Il faut
+arrêter la dictée et vérifier le texte avant de valider ; aucune transcription
+ne déclenche de correction automatiquement. Le flux audio est traité en mémoire
+sans fichier audio créé par l’app ; seul le texte explicitement validé suit le
+stockage habituel du moteur. La capture est limitée à 45 secondes, puis la clôture
+à 2 secondes. Une pause, une sortie en arrière-plan, un changement de route audio
+ou une interruption arrête l’audio. Les tokens natifs et générations front
+invalident les permissions et résultats tardifs, y compris un démarrage qui
+attendait encore une annulation native.
+
+La préparation Xcode ajoute les sources natives et les deux descriptions de
+permission sans modifier les paramètres personnels de signature. Le pont audio
+applique la même vérification d’origine locale et de frame principale que le
+pont moteur. Aucun service du moteur, correcteur, contenu ou historique n’est
+modifié par ce lot.
+
+Validation Mac à ce stade : 117 tests Python et 31 tests JavaScript réussis.
+Audits Sol et Astra favorables après correction d’une course au démarrage audio.
+Un quatrième test XCTest couvre les capacités sans ouvrir le micro, le refus
+avant permissions si la reconnaissance locale est indisponible et l’invalidation
+d’une autorisation en attente. Le test WebKit interroge le pont audio et exerce
+la commande de lecture/arrêt si une voix française est disponible.
+La première demande de permissions, l’écoute réelle et la reconnaissance au
+microphone restent à recetter sur iPhone. La réussite des tests de garde ne
+constitue pas une preuve de transcription réelle ni de fonctionnement en mode
+avion.
+
+Références : [exiger le traitement local](https://developer.apple.com/documentation/speech/sfspeechrecognitionrequest/requiresondevicerecognition),
+[capacité de reconnaissance locale](https://developer.apple.com/documentation/speech/sfspeechrecognizer/supportsondevicerecognition),
+[permission microphone](https://developer.apple.com/documentation/avfaudio/avaudioapplication/requestrecordpermission(completionhandler:)).
