@@ -104,4 +104,36 @@ def run():
         assert pqrst_restored.store.lire_cartes("methodes--pqrst-guide")
         assert pqrst_restored.store.lire_temps_reference("methodes--pqrst-guide") == []
         passed += 1
+        contexts = call(pqrst_restored, "start", activity="memoire-source")
+        def context_step(instance, operation, value=None):
+            view = call(instance, "view")
+            return call(instance, "contextes-step", session_id=view["session_id"], item_id=view["item"]["id"],
+                        revision=view["contextes"]["revision"], operation=operation, value=value, elapsed_ms=100)
+        context_step(pqrst_restored, "show")
+        context_step(pqrst_restored, "loaded")
+        context_step(pqrst_restored, "pause")
+        context_restored = restored_runtime()
+        view = call(context_restored, "view")
+        assert view["contextes"]["paused"] and "image" not in view["contextes"]
+        context_step(context_restored, "resume")
+        context_step(context_restored, "hide")
+        passed += 1
+        for passe in ("decouverte", "rappel"):
+            for index in range(len(contexts["items"])):
+                if passe == "decouverte" and index > 0:
+                    context_step(context_restored, "show")
+                    context_step(context_restored, "loaded")
+                    context_step(context_restored, "hide")
+                view = call(context_restored, "view")
+                assert "image" not in view["contextes"]
+                item = context_restored._session().items_par_id[view["item"]["id"]]
+                context_step(context_restored, "answer", item["reponse"]["valeur"])
+                view = context_step(context_restored, "next")
+            if passe == "decouverte":
+                assert not context_restored.store.lire_cartes("evocation--memoire-source")
+        assert view["finished"] and view["summary"]["resume"]["correctes"] == len(contexts["items"])
+        assert context_restored.store.lire_cartes("evocation--memoire-source")
+        empty = call(context_restored, "start", activity="memoire-source")
+        assert not empty["items"] and call(context_restored, "view")["finished"]
+        passed += 1
     return json.dumps({"platform": sys.platform, "passed": passed, "http_server": False})

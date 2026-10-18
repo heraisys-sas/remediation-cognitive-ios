@@ -88,15 +88,29 @@
         "await document.getElementById('protocol-respond').onclick(); await document.getElementById('protocol-continue').onclick();"
         "for(let i=0;i<2;i++){document.getElementById('protocol-option-0').onclick(); await document.getElementById('protocol-respond').onclick();}"
         "await document.getElementById('protocol-submit').onclick(); const pqrst=await request('view');"
-        "return {result:r,title:document.querySelector('h1').textContent,error:document.getElementById('error').textContent,"
+        "const pqrstOK=masked&&draft&&pqrst.feedback.sequence.observation.tentatives['4'][0].reponse==='Le colis attend'&&pqrst.feedback.sequence['1'].correcte===false&&document.getElementById('feedback').textContent.includes('sujet du texte : réponse à revoir');"
+        "await document.getElementById('finish').onclick(); document.getElementById('activity').value='memoire-source'; await document.getElementById('start').onclick();"
+        "const contextSession=await request('view'); let photoLoaded=false;"
+        "for(let n=0;n<contextSession.total;n++){"
+        "await document.getElementById('contextes-show').onclick();"
+        "for(let k=0;k<750;k++){await new Promise(r=>setTimeout(r,20)); const v=await request('view'); const pic=document.querySelector('#contextes img'); if(v.contextes.phase==='exposition'&&!busy&&pic&&pic.complete&&pic.naturalWidth)break;}"
+        "const im=document.querySelector('#contextes img'); photoLoaded=Boolean(im&&im.complete&&im.naturalWidth);"
+        "if(!photoLoaded)throw Error('Photo locale non chargée');"
+        "await contextesCommand('hide'); await document.getElementById('contextes-answer-0').onclick(); await document.getElementById('contextes-next').onclick();}"
+        "const recall=await request('view'); const noPhoto=recall.contextes.pass==='rappel'&&!document.querySelector('#contextes img');"
+        "await window.pauseForInterruption(); await document.getElementById('resume').onclick();"
+        "const recallResumed=!document.querySelector('#contextes img')&&!document.getElementById('exercise').hidden;"
+        "await document.getElementById('contextes-answer-0').onclick();"
+        "const recalled=await request('view'); await document.getElementById('finish').onclick();"
+        "return {contextes:photoLoaded&&noPhoto&&recallResumed&&recalled.contextes.phase==='feedback',result:r,title:document.querySelector('h1').textContent,error:document.getElementById('error').textContent,"
         "paused,resumed,support,lexical:hinted.activity==='acces-lexical' && hinted.hints_used===1 && hintVisible && revealed.feedback.assistee===true,"
-        "pqrst:masked&&draft&&pqrst.feedback.sequence.observation.tentatives['4'][0].reponse==='Le colis attend'&&pqrst.feedback.sequence['1'].correcte===false&&document.getElementById('feedback').textContent.includes('sujet du texte : réponse à revoir')};";
+        "pqrst:pqrstOK};";
     [web callAsyncJavaScript:script
                    arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld
            completionHandler:^(id value, NSError *error) {
         XCTAssertNil(error);
         XCTAssertTrue([value isKindOfClass:NSDictionary.class]);
-        XCTAssertEqualObjects(value[@"title"], @"PQRST guidé");
+        XCTAssertEqualObjects(value[@"title"], @"Retrouver le contexte");
         XCTAssertEqualObjects(value[@"error"], @"");
         XCTAssertNotNil(value[@"result"][@"started"]);
         XCTAssertNotNil(value[@"result"][@"item"]);
@@ -105,6 +119,7 @@
         XCTAssertEqualObjects(value[@"support"], @YES);
         XCTAssertEqualObjects(value[@"lexical"], @YES);
         XCTAssertEqualObjects(value[@"pqrst"], @YES);
+        XCTAssertEqualObjects(value[@"contextes"], @YES);
         [response fulfill];
     }];
     [self waitForExpectations:@[response] timeout:60];
@@ -122,7 +137,7 @@
     NSDictionary *result = [NSJSONSerialization JSONObjectWithData:[report dataUsingEncoding:NSUTF8StringEncoding]
                                                            options:0 error:nil];
     XCTAssertEqualObjects(result[@"platform"], @"ios");
-    XCTAssertEqualObjects(result[@"passed"], @9);
+    XCTAssertEqualObjects(result[@"passed"], @11);
     NSLog(@"PILOT_RESULT=%@", report);
 }
 @end

@@ -83,7 +83,7 @@ def test_hints_resume_and_reveal_cannot_become_unassisted(tmp_path):
 def test_lexical_rejects_stale_hint_and_unsupported_activity(tmp_path):
     runtime = ApplicationRuntime(str(tmp_path))
     with pytest.raises(ValueError):
-        call(runtime, "start", activity="memoire-source")
+        call(runtime, "start", activity="parcours-inexistant")
     session = call(runtime, "start", activity="acces-lexical")
     with pytest.raises(ValueError):
         call(runtime, "hint", session_id=session["session_id"], item_id="autre")

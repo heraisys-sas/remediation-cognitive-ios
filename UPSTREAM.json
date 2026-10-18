@@ -97,9 +97,31 @@
     "vendor/remediation/content/entrainement/methodes/paliers/palier-04.json": "ff00cf55348b395d42ed3b709f9ac2d8211c4d556d2a8b9fee79e207e152622d",
     "vendor/remediation/content/entrainement/methodes/paliers/palier-05.json": "9045428c6be493d11f5318b63efb944d2d79bd82275030ed18f6d7041376c713",
     "vendor/remediation/content/entrainement/methodes/paliers/palier-06.json": "6a700d9c2ead70d955df07fe55d84d611bf1527af3e8fe76aca5124dcd9e64da",
-    "vendor/remediation/content/entrainement/methodes/paliers.json": "ee634383811a85b894ea8476deb366fa01f8ed011597139bf4aa9cab6a3e42e0"
+    "vendor/remediation/content/entrainement/methodes/paliers.json": "ee634383811a85b894ea8476deb366fa01f8ed011597139bf4aa9cab6a3e42e0",
+    "vendor/remediation/frontend/images/contextes/README.md": "569c4cf63d34e0d0e66d6b42334155dedca2fb00bbd8cb19876523418382b9f3",
+    "vendor/remediation/frontend/images/contextes/manifest.json": "9f238b1a247fc73c72ef7177e96d20578204b3d332503fa1afb01b3e9a642273",
+    "vendor/remediation/frontend/images/contextes/source-01-v1-640.webp": "ed9415810e4c4c1d09fbbdcc8b6ccc9102740817d89d1fba60d1045ec3799363",
+    "vendor/remediation/frontend/images/contextes/source-01-v1-960.webp": "09fbc22c1d834faa293782922bc8719f74de9fb08270b58da51e7ea2a8422d4b",
+    "vendor/remediation/frontend/images/contextes/source-02-v1-640.webp": "341076be478dbd3e541e6d0d9777d346e6feffb8b336b169b579db0630104043",
+    "vendor/remediation/frontend/images/contextes/source-02-v1-960.webp": "00352b909afbb45e2066a2fb4d54320f52cf1f8b7b601ec07c14e7dd550ea1ea",
+    "vendor/remediation/frontend/images/contextes/source-03-v1-640.webp": "6004e128e13a275a6072940ee126b35aa4133f4f761fe2b9cc3538b8552c7119",
+    "vendor/remediation/frontend/images/contextes/source-03-v1-960.webp": "27f2aaecaff6989dd2ac27a91ba950d546b0fdff7312dd703536bb92c732e1ed",
+    "vendor/remediation/frontend/images/contextes/source-04-v1-640.webp": "2fc6b55d3fc11e7b2fa22168443a3d3846094b5a37bf1d3d57d53af645c7215e",
+    "vendor/remediation/frontend/images/contextes/source-04-v1-960.webp": "f89155ed4d9496980edd69234815177e9beb3b4c1ea31b244d24b28563770712",
+    "vendor/remediation/frontend/images/contextes/source-05-v1-640.webp": "6ea15b8707c0db033fa2aeb003e4f45e434bc87490c51db23b7ca4e214ddfbc8",
+    "vendor/remediation/frontend/images/contextes/source-05-v1-960.webp": "f7f67c6e01e109c670ec00b0ded15e91d3cdd55d6524fc111afafbd61f8fe985",
+    "vendor/remediation/frontend/images/contextes/source-06-v1-640.webp": "0ae7e1a08a2363a0ad15ab7a8a33d95cfd7e91674d94a4aa73eb753c3fa76a57",
+    "vendor/remediation/frontend/images/contextes/source-06-v1-960.webp": "de3ccc777e6b5eac731d74fce52a5eb71fc7cd73228d8ff850642173cdd80575",
+    "vendor/remediation/frontend/images/contextes/source-07-v1-640.webp": "0adb4b6d9ddc792082e33f23b5363c3e23233ca1883f47acefa5dab34d0f3329",
+    "vendor/remediation/frontend/images/contextes/source-07-v1-960.webp": "7e8f9235929a24123b93af707d541d9d60772dcca87103bf2ab5133faea75db3",
+    "vendor/remediation/frontend/images/contextes/source-08-v1-640.webp": "425caff488fe653ad6d075d120470828f5e80459bfc897c27619781d19ad5ac6",
+    "vendor/remediation/frontend/images/contextes/source-08-v1-960.webp": "33143dff75a00ed2d3bf9c97d562c4d743c3aa8ac25d6faf2e261e0c16379e25",
+    "vendor/remediation/frontend/images/contextes/source-09-v1-640.webp": "43576812cd600239f7003842ea460cb0a4e414c2b6ca75ded165907f5ce27890",
+    "vendor/remediation/frontend/images/contextes/source-09-v1-960.webp": "8d87c925dfa51d928528ddc95e4c0500e1292f2768721bbfd5c5d235c2b006ba",
+    "vendor/remediation/frontend/images/contextes/source-10-v1-640.webp": "1949921622bb1792eb90754d3d468a5d367c706b5ee4e84b3a9c369e58a7af83",
+    "vendor/remediation/frontend/images/contextes/source-10-v1-960.webp": "7f63493fd1d81f93bafc850f8ae496314902233505a2366c98b0183b4cb4b3e3"
   },
   "adaptations": {
-    "vendor/remediation/backend/app/api/entrainement/__init__.py": "Point d\u2019entr\u00e9e local sans route FastAPI ; service.py inchang\u00e9."
+    "vendor/remediation/backend/app/api/entrainement/__init__.py": "Point d’entrée local sans route FastAPI ; service.py inchangé."
   }
 }

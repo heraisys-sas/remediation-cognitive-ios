@@ -26,8 +26,9 @@ def main():
     # Réutilise une ressource-folder déjà déclarée dans le projet Xcode.
     pilot = destination / "iOSTestbed/app/pilot"
     pilot.mkdir()
-    for name in ("index.html", "pilot.css", "active-clock.js", "pqrst.js", "pilot.js"):
+    for name in ("index.html", "pilot.css", "active-clock.js", "pqrst.js", "contextes.js", "pilot.js"):
         shutil.copy2(native / name, pilot / name)
+    shutil.copytree(ROOT / "vendor/remediation/frontend/images", pilot / "images")
     scene = destination / "iOSTestbed/SceneDelegate.m"
     scene.write_text(scene.read_text().replace('@"pilot" isDirectory:YES', '@"app/pilot" isDirectory:YES'))
     info_path = destination / "iOSTestbed/iOSTestbed-Info.plist"
@@ -40,7 +41,7 @@ def main():
     project.write_text(project.read_text().replace("org.python.iOSTestbed", "fr.heraisys.remediation.pilot"))
     manifest_path = destination / "probe-manifest.json"
     manifest = json.loads(manifest_path.read_text())
-    manifest.update(scope="Calcul, accès lexical et PQRST séquencé : service, corrections, aides, SQLite et pont natif ; clavier seulement",
+    manifest.update(scope="Calcul, accès lexical, PQRST séquencé et Contextes en deux passes : service, corrections, aides, SQLite et pont natif ; clavier seulement",
                     app_sha256=tree_hash(app), native_sha256=tree_hash(destination / "iOSTestbed"))
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
     print(destination / "iOSTestbed.xcodeproj")

@@ -30,7 +30,8 @@ async function perform(operation) {
 function render(view) {
   state = view;
   if (view.finished) paused = false;
-  if (view.protocol?.paused) paused = true;
+  if (view.protocol?.paused || view.contextes?.paused) paused = true;
+  renderContextes(view);
   element("resume").hidden = !paused || Boolean(view.finished);
   element("activityChoice").hidden = Boolean(view.started && !view.finished);
   if (view.title) { document.querySelector("h1").textContent = view.title; document.title = view.title; }
@@ -43,6 +44,7 @@ function render(view) {
   if (view.finished) {
     const summary = view.summary.resume;
     element("summaryText").textContent = `${summary.items} questions travaillées, dont ${summary.correctes} réussies à la première réponse retenue.`;
+    if (view.activity === "memoire-source") element("summaryText").textContent = `${summary.items} rappel(s) final(aux), dont ${summary.correctes} réussi(s). La découverte ne compte pas dans la progression.`;
     if (view.activity === "pqrst-guide") element("summaryText").textContent = `${summary.items} texte(s) travaillé(s). Les résultats par étape sont conservés.`;
     if (view.activity === "acces-lexical" && summary.assistees != null) element("summaryText").textContent += ` ${summary.sans_aide} retrouvées sans aide ; ${summary.assistees} avec le mot affiché.`;
     element("start").textContent = "Nouvelle séance";
@@ -63,8 +65,8 @@ function render(view) {
   element("lexicalHelp").hidden = !lexical || Boolean(view.feedback) || Boolean(view.reprise);
   element("hints").textContent = hints.slice(0, view.hints_used || 0).map(hint => hint.texte).join("\n");
   element("hint").hidden = (view.hints_used || 0) >= hints.length;
-  element("answerForm").hidden = isPqrst || Boolean(view.feedback);
-  element("next").hidden = !view.feedback;
+  element("answerForm").hidden = Boolean(view.contextes) || isPqrst || Boolean(view.feedback);
+  element("next").hidden = Boolean(view.contextes) || !view.feedback;
   element("feedback").textContent = view.feedback ? `${view.feedback.feedback || ""}${view.feedback.attendue != null ? " Réponse : " + view.feedback.attendue + "." : ""}` : "";
   if (isPqrst && view.feedback) element("feedback").textContent = pqrstFeedbackLines(view.feedback).join("\n\n");
 }
@@ -75,7 +77,7 @@ element("start").onclick = () => perform(async () => {
   render(view); element("answer").value = ""; clock.reset(paused);
 });
 element("activity").onchange = () => {
-  document.querySelector("h1").textContent = {"acces-lexical":"Retrouver le mot", "pqrst-guide":"PQRST guidé"}[element("activity").value] || "Calcul mental";
+  document.querySelector("h1").textContent = {"acces-lexical":"Retrouver le mot", "pqrst-guide":"PQRST guidé", "memoire-source":"Retrouver le contexte"}[element("activity").value] || "Calcul mental";
 };
 element("hint").onclick = () => perform(async () => {
   if (!state?.item || paused) return;
@@ -132,6 +134,10 @@ async function protocolCommand(operation, value = null) {
 async function flushProtocolPause() {
   if (!pendingProtocolPause) return;
   let view = await request("view");
+  if (view.contextes && !view.contextes.paused) {
+    view = await request("contextes-step", {session_id:view.session_id, item_id:view.item.id,
+      revision:view.contextes.revision, operation:"pause", elapsed_ms:Math.round(clock.elapsed())});
+  }
   if (view.protocol && !view.protocol.paused && !["pret", "fin"].includes(view.protocol.phase)) {
     view = await request("pqrst-step", {session_id:view.session_id, item_id:view.item.id,
       revision:view.protocol.revision, operation:"pause", elapsed_ms:Math.round(clock.elapsed())});
@@ -140,8 +146,9 @@ async function flushProtocolPause() {
   render(view); clock.reset(paused);
 }
 window.pauseForInterruption = () => {
+  stopContextesTimer();
   clock.pause(); paused = true; element("exercise").hidden = true; element("resume").hidden = false;
-  if (state?.protocol && !state.protocol.paused && !["pret", "fin"].includes(state.protocol.phase)) {
+  if (state?.contextes || (state?.protocol && !state.protocol.paused && !["pret", "fin"].includes(state.protocol.phase))) {
     pendingProtocolPause = true;
     if (!busy) return perform(async () => {});
   }
@@ -150,6 +157,7 @@ document.addEventListener("visibilitychange", () => { if (document.hidden && sta
 element("resume").onclick = async () => {
   if (pendingProtocolPause) await perform(flushProtocolPause);
   if (pendingProtocolPause) return;
+  if (state?.contextes?.paused) return contextesCommand("resume");
   if (state?.protocol?.paused) return protocolCommand("resume");
   clock.resume(); paused = false; element("resume").hidden = true; if (state) render(state);
 };
