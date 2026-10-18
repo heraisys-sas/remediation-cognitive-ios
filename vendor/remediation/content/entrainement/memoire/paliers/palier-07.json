@@ -1,0 +1,778 @@
+[
+  {
+    "id": "me-7-empan-84",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "1",
+          "0",
+          "4",
+          "1",
+          "4",
+          "5"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "541401"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-empan-85",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "3",
+          "4",
+          "9",
+          "7",
+          "8",
+          "5"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "587943"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-empan-86",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "4",
+          "9",
+          "5",
+          "7",
+          "5",
+          "3"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "357594"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-empan-87",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "4",
+          "0",
+          "7",
+          "9",
+          "3",
+          "7"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "739704"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-empan-88",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "6",
+          "8",
+          "9",
+          "4",
+          "7",
+          "5"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "574986"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-empan-89",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "9",
+          "5",
+          "4",
+          "5",
+          "0",
+          "8"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "805459"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-empan-90",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "9",
+          "4",
+          "3",
+          "9",
+          "6",
+          "7"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "769349"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-empan-91",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "9",
+          "8",
+          "6",
+          "5",
+          "7",
+          "4"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "475689"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-nback-09",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "M",
+          "T",
+          "P",
+          "L",
+          "T",
+          "M",
+          "R"
+        ]
+      },
+      "enonce": "Quel élément était 3 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "L"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-nback-10",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "T",
+          "B",
+          "K",
+          "M",
+          "P",
+          "L",
+          "B"
+        ]
+      },
+      "enonce": "Quel élément était 3 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "M"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-nback-11",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "P",
+          "M",
+          "L",
+          "T",
+          "K",
+          "B",
+          "M"
+        ]
+      },
+      "enonce": "Quel élément était 3 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "T"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-nback-12",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "T",
+          "R",
+          "K",
+          "B",
+          "L",
+          "M",
+          "B"
+        ]
+      },
+      "enonce": "Quel élément était 3 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "B"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-nback-13",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "L",
+          "M",
+          "T",
+          "B",
+          "P",
+          "L",
+          "R"
+        ]
+      },
+      "enonce": "Quel élément était 3 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "B"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-nback-14",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "K",
+          "P",
+          "K",
+          "P",
+          "T",
+          "M",
+          "R"
+        ]
+      },
+      "enonce": "Quel élément était 3 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "P"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-nback-15",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "K",
+          "B",
+          "L",
+          "K",
+          "B",
+          "M",
+          "K"
+        ]
+      },
+      "enonce": "Quel élément était 3 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "K"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-nback-16",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "R",
+          "L",
+          "B",
+          "T",
+          "M",
+          "P",
+          "T"
+        ]
+      },
+      "enonce": "Quel élément était 3 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "T"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-nback-17",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "K",
+          "R",
+          "L",
+          "P",
+          "K",
+          "T",
+          "M"
+        ]
+      },
+      "enonce": "Quel élément était 3 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "P"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-7-nback-18",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "me-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "P",
+          "B",
+          "T",
+          "K",
+          "P",
+          "R",
+          "K"
+        ]
+      },
+      "enonce": "Quel élément était 3 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "K"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

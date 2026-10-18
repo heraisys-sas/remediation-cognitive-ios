@@ -1,0 +1,740 @@
+[
+  {
+    "id": "me-11-mots-37",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "bureau",
+          "chapeau",
+          "tapis",
+          "chemise",
+          "chemin"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "bureau chapeau tapis chemise chemin"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-38",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "chapeau",
+          "nuage",
+          "plage",
+          "vélo",
+          "bureau"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "chapeau nuage plage vélo bureau"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-39",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "nuage",
+          "montre",
+          "musique",
+          "bateau",
+          "bougie"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "nuage montre musique bateau bougie"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-40",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "plage",
+          "guitare",
+          "horloge",
+          "bureau",
+          "panier"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "plage guitare horloge bureau panier"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-41",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "vélo",
+          "nuage",
+          "plage",
+          "panier",
+          "sable"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "vélo nuage plage panier sable"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-42",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "marteau",
+          "fromage",
+          "drapeau",
+          "ballon",
+          "plage"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "marteau fromage drapeau ballon plage"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-43",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "table",
+          "nuage",
+          "colline",
+          "chocolat",
+          "panier"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "table nuage colline chocolat panier"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-44",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "chemise",
+          "panier",
+          "poisson",
+          "camion",
+          "pomme"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "chemise panier poisson camion pomme"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-45",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "soleil",
+          "stylo",
+          "rivière",
+          "pomme",
+          "cahier"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "soleil stylo rivière pomme cahier"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-46",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "poisson",
+          "montagne",
+          "musique",
+          "cahier",
+          "bougie"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "poisson montagne musique cahier bougie"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-47",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "table",
+          "neige",
+          "chat",
+          "fromage",
+          "radis"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "table neige chat fromage radis"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-48",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "chapeau",
+          "colline",
+          "jardin",
+          "radis",
+          "lune"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "chapeau colline jardin radis lune"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-49",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "bureau",
+          "sable",
+          "cuisine",
+          "rivière",
+          "chat"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "bureau sable cuisine rivière chat"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-50",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "bureau",
+          "colline",
+          "cuisine",
+          "manteau",
+          "chapeau"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "bureau colline cuisine manteau chapeau"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-51",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "jardinier",
+          "cuisine",
+          "chemise",
+          "lune",
+          "manteau"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "jardinier cuisine chemise lune manteau"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-52",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "radis",
+          "sable",
+          "jardinier",
+          "voiture",
+          "pomme"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "radis sable jardinier voiture pomme"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-53",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "stylo",
+          "drapeau",
+          "soleil",
+          "radis",
+          "colline"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "stylo drapeau soleil radis colline"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-11-mots-54",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 11,
+    "prerequis": [
+      "me-palier-10"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "panier",
+          "jardin",
+          "bouteille",
+          "bateau",
+          "chapeau"
+        ]
+      },
+      "enonce": "Tape les mots dans l'ordre, en les séparant par des espaces.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "panier jardin bouteille bateau chapeau"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

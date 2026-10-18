@@ -22,6 +22,7 @@ async function page({native = true, reply = async()=>({started:false})} = {}) {
   vm.runInContext(fs.readFileSync(path.join(source,'pqrst.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'contextes.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'choices.js'),'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(source,'memory.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'pilot.js'),'utf8'), context);
   await new Promise(resolve => setImmediate(resolve));
   return {get, render:value=>context.render(value), context};
@@ -265,4 +266,99 @@ test('vérifier un plan montre ses étapes dans leur ordre source',async()=>{
   const list=get('choices').children.find(n=>n.tagName==='ol');
   assert.ok(list);
   assert.deepEqual(list.children.map(n=>n.textContent),['Préparer','Peindre','Acheter']);
+});
+
+test('la mémoire montre un élément puis masque tout support au rappel',async()=>{
+  const {get,render,context}=await page();
+  const view={started:true,activity:'chiffres-endroit',session_id:'s',item:{id:'i',contenu:{enonce:'Mémorisation visuelle'}},memory:{phase:'element',revision:1,position:1,total:5,content:'7',remaining_ms:2000},position:1,total:12};
+  render(view);
+  assert.equal(get('answerForm').hidden,true);
+  assert.ok(get('memory').children.some(n=>n.textContent==='7'));
+  render({...view,memory:{phase:'question',revision:2,question:'Tape de mémoire.',inputmode:'numeric'}});
+  assert.equal(get('answerForm').hidden,false);
+  assert.ok(!get('memory').children.some(n=>n.textContent==='7'));
+  assert.equal(get('answer').inputMode,'numeric');
+  render({...view,memory:{phase:'question',revision:3,paused:true}});
+  assert.equal(get('exercise').hidden,true);
+  assert.equal(get('answerForm').hidden,true);
+  context.stopMemoryTimer();
+});
+
+test('une réponse mémoire utilise la transition versionnée plutôt que la réponse générique',async()=>{
+  const calls=[]; let view;
+  const {get,render}=await page({reply:async payload=>{
+    calls.push(payload);
+    if(payload.action==='memory-step')return {...view,feedback:{correcte:true,attendue:'007'},memory:{...view.memory,revision:4}};
+    return {started:false};
+  }});
+  view={started:true,activity:'chiffres-endroit',session_id:'s',item:{id:'i',contenu:{enonce:'Mémorisation visuelle'}},memory:{phase:'question',revision:3,question:'Tape de mémoire.',inputmode:'numeric'}};
+  render(view);get('answer').value='007';
+  await get('answerForm').onsubmit({preventDefault(){}});
+  await new Promise(resolve=>setImmediate(resolve));
+  assert.equal(calls.at(-1).action,'memory-step');
+  assert.equal(calls.at(-1).operation,'answer');
+  assert.equal(calls.at(-1).answer,'007');
+  assert.equal(calls.at(-1).revision,3);
+  assert.equal(get('next').hidden,false);
+});
+
+test('une interruption mémoire pendant une transition est sauvegardée après son retour',async()=>{
+  const calls=[];let current,release;
+  const {get,render,context}=await page({reply:async payload=>{
+    calls.push(payload);
+    if(payload.action==='view')return current;
+    if(payload.operation==='show'){
+      await new Promise(resolve=>{release=resolve;});
+      current={...current,memory:{phase:'element',revision:1,content:'8',position:1,total:3,remaining_ms:2000}};
+    } else if(payload.operation==='pause')current={...current,memory:{...current.memory,revision:2,paused:true,content:undefined}};
+    return current;
+  }});
+  current={started:true,activity:'chiffres-endroit',session_id:'s',item:{id:'i',contenu:{enonce:'Mémoire'}},memory:{phase:'pret',revision:0,instruction:'Mémorise.'}};
+  render(current);
+  const submitted=get('memory-show').onclick();
+  context.window.pauseForInterruption();release();await submitted;
+  assert.equal(calls.at(-1).operation,'pause');
+  assert.equal(calls.at(-1).revision,1);
+  assert.equal(get('exercise').hidden,true);
+  assert.equal(get('resume').hidden,false);
+  context.stopMemoryTimer();
+});
+
+test('une avance mémoire en échec masque le stimulus et permet un renvoi sans réexposition',async()=>{
+  const calls=[];let current,fail=true;
+  const {get,render,context}=await page({reply:async payload=>{
+    calls.push(payload);
+    if(payload.action==='view')return current||{started:false};
+    if(payload.operation==='advance'){
+      if(fail)throw Error('Stockage indisponible');
+      current={...current,memory:{phase:'question',revision:2,question:'Rappelle.',inputmode:'text'}};
+      return current;
+    }
+  }});
+  current={started:true,activity:'mots',session_id:'s',item:{id:'i',contenu:{enonce:'Mémoire'}},memory:{phase:'element',revision:1,content:'bouteille',position:1,total:4,remaining_ms:0}};
+  render(current);await new Promise(resolve=>setTimeout(resolve,30));
+  assert.equal(calls.filter(c=>c.operation==='advance').length,1);
+  assert.ok(!get('memory').children.some(n=>n.textContent==='bouteille'));
+  assert.match(get('error').textContent,/Stockage indisponible/);
+  assert.equal(get('memory-retry').textContent,'Réessayer');
+  const original=calls.find(c=>c.operation==='advance');
+  fail=false;await get('memory-retry').onclick();
+  assert.deepEqual(calls.at(-1),original);
+  assert.equal(get('answerForm').hidden,false);
+  context.stopMemoryTimer();
+});
+
+test('une avance mémoire validée malgré un retour perdu retrouve le rappel sans réexposition',async()=>{
+  let current;
+  const {get,render,context}=await page({reply:async payload=>{
+    if(payload.action==='view')return current||{started:false};
+    current={...current,memory:{phase:'question',revision:2,question:'Rappelle.',inputmode:'text'}};
+    throw Error('Retour perdu');
+  }});
+  current={started:true,activity:'mots',session_id:'s',item:{id:'i',contenu:{enonce:'Mémoire'}},memory:{phase:'element',revision:1,content:'bouteille',position:1,total:4,remaining_ms:0}};
+  render(current);await new Promise(resolve=>setTimeout(resolve,30));
+  assert.equal(get('answerForm').hidden,false);
+  assert.ok(!get('memory').children.some(n=>n.textContent==='bouteille'));
+  assert.equal(get('error').textContent,'');
+  context.stopMemoryTimer();
 });

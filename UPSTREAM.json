@@ -119,7 +119,21 @@
     "vendor/remediation/frontend/images/contextes/source-09-v1-640.webp": "43576812cd600239f7003842ea460cb0a4e414c2b6ca75ded165907f5ce27890",
     "vendor/remediation/frontend/images/contextes/source-09-v1-960.webp": "8d87c925dfa51d928528ddc95e4c0500e1292f2768721bbfd5c5d235c2b006ba",
     "vendor/remediation/frontend/images/contextes/source-10-v1-640.webp": "1949921622bb1792eb90754d3d468a5d367c706b5ee4e84b3a9c369e58a7af83",
-    "vendor/remediation/frontend/images/contextes/source-10-v1-960.webp": "7f63493fd1d81f93bafc850f8ae496314902233505a2366c98b0183b4cb4b3e3"
+    "vendor/remediation/frontend/images/contextes/source-10-v1-960.webp": "7f63493fd1d81f93bafc850f8ae496314902233505a2366c98b0183b4cb4b3e3",
+    "vendor/remediation/content/entrainement/memoire/README.md": "ddf9f0c81038b37f3c1ca057b66c1624c73eec43eb024a03c2203c449443b3e7",
+    "vendor/remediation/content/entrainement/memoire/paliers.json": "7a43cb3e4bbfd1c54d7dc63afe7a9b4af370113c1d23e75017f9a41218801b1d",
+    "vendor/remediation/content/entrainement/memoire/paliers/palier-01.json": "f0e3ea63e2b2e05bd60070d3627f6d36e0d9b7700c643795c200f9d70cfc2085",
+    "vendor/remediation/content/entrainement/memoire/paliers/palier-02.json": "098d403ec3a6a3a1ffde0a70a0b0daa15e6e845aad99b4eb7b7b2d22c2ec90b6",
+    "vendor/remediation/content/entrainement/memoire/paliers/palier-03.json": "8909101ce98f0a651a748a0246e761799e1dbcf38fe1442285088e6eda236690",
+    "vendor/remediation/content/entrainement/memoire/paliers/palier-04.json": "14ad1ca6a33097411b4e7c0eadc6e3e6c123d161e89b49b11b33a1c0ca7bac61",
+    "vendor/remediation/content/entrainement/memoire/paliers/palier-05.json": "6237501a8b23b7f8ee4a91b88d99e2aade4a2ddae2e02e72ceb60f989d1f5cfe",
+    "vendor/remediation/content/entrainement/memoire/paliers/palier-06.json": "07a910855f421635b3848c0033840db6dbec97d689c6dd691d7f6b5217517f55",
+    "vendor/remediation/content/entrainement/memoire/paliers/palier-07.json": "7656555058493e2119b93e7762ae38128337ea3bd437e452eac1522b3537a085",
+    "vendor/remediation/content/entrainement/memoire/paliers/palier-08.json": "78b87e8ff1a318c86a27b176c4632cf9a426bfd385a0f61112fc4cca63dcccb5",
+    "vendor/remediation/content/entrainement/memoire/paliers/palier-09.json": "1451fc55f220e1dc969c113c4c4cb3e9a3dcee94e9ddb017633788136b2fe581",
+    "vendor/remediation/content/entrainement/memoire/paliers/palier-10.json": "6ff3f6bc97695a26e87c26da33c8604f5f16bf44b050ec028f0a62d4769dccc8",
+    "vendor/remediation/content/entrainement/memoire/paliers/palier-11.json": "fafe9f87fa2e495e336f246b715b9b4ac041a84d190455d0c1922bae606288a2",
+    "vendor/remediation/content/entrainement/memoire/paliers/palier-12.json": "3e7d75ee23077c5d377986a450971d3db8513115cad44b1087a62be30c550832"
   },
   "adaptations": {
     "vendor/remediation/backend/app/api/entrainement/__init__.py": "Point d’entrée local sans route FastAPI ; service.py inchangé."

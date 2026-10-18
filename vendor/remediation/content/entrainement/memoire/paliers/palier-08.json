@@ -1,0 +1,868 @@
+[
+  {
+    "id": "me-8-paires-18",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 16000,
+        "elements": [
+          [
+            "PONT",
+            "15"
+          ],
+          [
+            "TABLE",
+            "50"
+          ],
+          [
+            "LUNE",
+            "78"
+          ],
+          [
+            "NUAGE",
+            "84"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « LUNE » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "78"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-paires-19",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 16000,
+        "elements": [
+          [
+            "NUAGE",
+            "82"
+          ],
+          [
+            "TABLE",
+            "32"
+          ],
+          [
+            "LUNE",
+            "94"
+          ],
+          [
+            "TRAIN",
+            "89"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « NUAGE » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "82"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-paires-20",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 16000,
+        "elements": [
+          [
+            "ARBRE",
+            "95"
+          ],
+          [
+            "FLEUR",
+            "96"
+          ],
+          [
+            "PORTE",
+            "83"
+          ],
+          [
+            "PONT",
+            "51"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « PONT » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "51"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-paires-21",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 16000,
+        "elements": [
+          [
+            "PORTE",
+            "97"
+          ],
+          [
+            "LIVRE",
+            "61"
+          ],
+          [
+            "ARBRE",
+            "23"
+          ],
+          [
+            "PLUIE",
+            "30"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « LIVRE » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "61"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-paires-22",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 16000,
+        "elements": [
+          [
+            "ARBRE",
+            "26"
+          ],
+          [
+            "NUAGE",
+            "44"
+          ],
+          [
+            "LIVRE",
+            "38"
+          ],
+          [
+            "PIERRE",
+            "50"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « NUAGE » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "44"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-paires-23",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 16000,
+        "elements": [
+          [
+            "PORTE",
+            "18"
+          ],
+          [
+            "TRAIN",
+            "16"
+          ],
+          [
+            "TABLE",
+            "34"
+          ],
+          [
+            "PIERRE",
+            "43"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « PIERRE » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "43"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-paires-24",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 16000,
+        "elements": [
+          [
+            "FLEUR",
+            "34"
+          ],
+          [
+            "LUNE",
+            "39"
+          ],
+          [
+            "LIVRE",
+            "97"
+          ],
+          [
+            "PLUIE",
+            "44"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « LUNE » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "39"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-paires-25",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 16000,
+        "elements": [
+          [
+            "TRAIN",
+            "78"
+          ],
+          [
+            "PIERRE",
+            "51"
+          ],
+          [
+            "TABLE",
+            "66"
+          ],
+          [
+            "ROUE",
+            "65"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « PIERRE » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "51"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-nback-19",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": "séquences de 8 éléments maximum",
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "B",
+          "K",
+          "P",
+          "B",
+          "M",
+          "K",
+          "L",
+          "K"
+        ]
+      },
+      "enonce": "Quel élément était 4 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "B"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-nback-20",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": "séquences de 8 éléments maximum",
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "P",
+          "R",
+          "B",
+          "P",
+          "R",
+          "K",
+          "M",
+          "R"
+        ]
+      },
+      "enonce": "Quel élément était 4 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "P"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-nback-21",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": "séquences de 8 éléments maximum",
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "R",
+          "M",
+          "K",
+          "R",
+          "L",
+          "B",
+          "K",
+          "T"
+        ]
+      },
+      "enonce": "Quel élément était 4 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "R"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-nback-22",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": "séquences de 8 éléments maximum",
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "B",
+          "M",
+          "R",
+          "T",
+          "R",
+          "T",
+          "L",
+          "P"
+        ]
+      },
+      "enonce": "Quel élément était 4 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "T"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-nback-23",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": "séquences de 8 éléments maximum",
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "P",
+          "R",
+          "K",
+          "P",
+          "R",
+          "K",
+          "M",
+          "B"
+        ]
+      },
+      "enonce": "Quel élément était 4 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "P"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-nback-24",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": "séquences de 8 éléments maximum",
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "R",
+          "B",
+          "P",
+          "L",
+          "K",
+          "R",
+          "L",
+          "P"
+        ]
+      },
+      "enonce": "Quel élément était 4 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "L"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-nback-25",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": "séquences de 8 éléments maximum",
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "T",
+          "L",
+          "K",
+          "R",
+          "L",
+          "R",
+          "B",
+          "L"
+        ]
+      },
+      "enonce": "Quel élément était 4 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "R"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-nback-26",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": "séquences de 8 éléments maximum",
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "P",
+          "T",
+          "K",
+          "M",
+          "P",
+          "K",
+          "T",
+          "B"
+        ]
+      },
+      "enonce": "Quel élément était 4 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "M"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-nback-27",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": "séquences de 8 éléments maximum",
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "K",
+          "L",
+          "K",
+          "P",
+          "K",
+          "L",
+          "P",
+          "K"
+        ]
+      },
+      "enonce": "Quel élément était 4 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "P"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-8-nback-28",
+    "type": "n-back",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "attention-soutenue"
+    ],
+    "palier": 8,
+    "prerequis": [
+      "me-palier-7"
+    ],
+    "cap_complexite": "séquences de 8 éléments maximum",
+    "contenu": {
+      "consigne": "Mémorise la séquence d'éléments.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "R",
+          "K",
+          "L",
+          "P",
+          "T",
+          "M",
+          "R",
+          "L"
+        ]
+      },
+      "enonce": "Quel élément était 4 positions avant la fin ? Tape-le.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "P"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

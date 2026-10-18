@@ -1,0 +1,731 @@
+[
+  {
+    "id": "me-4-empan-47",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "8",
+          "5",
+          "7"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "758"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-48",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "8",
+          "5",
+          "0"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "058"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-49",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "7",
+          "2",
+          "4"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "427"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-50",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "986"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-51",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "1",
+          "7",
+          "0"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "071"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-52",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "3",
+          "2",
+          "6"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "623"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-53",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "7",
+          "0",
+          "2"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "207"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-54",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "6",
+          "5",
+          "2"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "256"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-55",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "4",
+          "7",
+          "0"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "074"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-56",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "7",
+          "4",
+          "2",
+          "8",
+          "0",
+          "8"
+        ]
+      },
+      "enonce": "Tape la séquence de mémoire, dans l'ordre.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "742808"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-57",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "2",
+          "4",
+          "1",
+          "7",
+          "2",
+          "3"
+        ]
+      },
+      "enonce": "Tape la séquence de mémoire, dans l'ordre.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "241723"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-58",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "9",
+          "4",
+          "8",
+          "7",
+          "8",
+          "2"
+        ]
+      },
+      "enonce": "Tape la séquence de mémoire, dans l'ordre.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "948782"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-59",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "1",
+          "3",
+          "2",
+          "5",
+          "2",
+          "3"
+        ]
+      },
+      "enonce": "Tape la séquence de mémoire, dans l'ordre.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "132523"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-60",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "4",
+          "5",
+          "2",
+          "1",
+          "7",
+          "2"
+        ]
+      },
+      "enonce": "Tape la séquence de mémoire, dans l'ordre.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "452172"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-61",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "6",
+          "7",
+          "9",
+          "1",
+          "3",
+          "6"
+        ]
+      },
+      "enonce": "Tape la séquence de mémoire, dans l'ordre.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "679136"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-62",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "2",
+          "7",
+          "1",
+          "9",
+          "4",
+          "2"
+        ]
+      },
+      "enonce": "Tape la séquence de mémoire, dans l'ordre.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "271942"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-63",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "7",
+          "4",
+          "1",
+          "8",
+          "6",
+          "4"
+        ]
+      },
+      "enonce": "Tape la séquence de mémoire, dans l'ordre.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "741864"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-4-empan-64",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "me-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "3",
+          "6",
+          "8",
+          "1",
+          "7",
+          "0"
+        ]
+      },
+      "enonce": "Tape la séquence de mémoire, dans l'ordre.",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "368170"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

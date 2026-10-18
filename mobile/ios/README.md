@@ -266,3 +266,72 @@ dans un document ; la sonde Python couvre les quatre nouveaux parcours.
 La compilation signée pour l’iPhone réussit ; le lancement des tests reste
 bloqué par le téléphone verrouillé. Aucune nouvelle exécution physique de ce
 lot n’est revendiquée. La recette est reportée au prochain point de test.
+
+## Mémoire visuelle — lot suivant du portage
+
+Cinq parcours `memoire` sont disponibles : `chiffres-endroit`, `chiffres-envers`,
+`mots`, `associations` et `position`. Les 216 items des douze banques, leurs
+identifiants et leurs paliers sont importés directement du commit source
+`44acda5`, avec empreintes dans `UPSTREAM.json`. Aucun contenu local non commité
+ni historique personnel n’est importé. Les services et correcteurs restent
+inchangés.
+
+La présentation conserve les durées du contenu : un chiffre, mot ou élément à
+la fois, alternant avec les blancs de la source ; les associations restent en
+liste pendant leur durée prévue. Le pont n’expose que le stimulus courant,
+puis la question sans la séquence ni les associations. Le bouton Passer reprend
+la possibilité déjà présente dans le client source. Les reprises après
+correction donnent la réponse pour la réancrer, sans la compter comme une
+première récupération indépendante.
+
+Les transitions, la position, le reliquat de présentation et les segments de
+temps de réponse validés sont sauvegardés dans la même transaction. Une
+interruption masque la présentation, demande une reprise explicite et conserve
+l’étape enregistrée. Les interruptions et présentations passées sont signalées
+dans l’état local ; aucun temps perdu lors d’un arrêt brutal n’est inventé.
+La reprise peut réafficher le stimulus courant pour le reliquat enregistré :
+elle n’est pas présentée comme une exposition continue sans interruption.
+Une clôture sans réponse ne crée ni correction ni carte. La progression et FSRS
+suivent le service d’origine, avec des historiques séparés par parcours et le
+plafond de séances partagé par le thème.
+
+Le support est masqué dès l’expiration prévue, avant la sauvegarde de l’avance.
+Si cette sauvegarde échoue, un réessai renvoie exactement la transition sans
+réexposer le stimulus. Un retour perdu après validation retrouve l’état durable.
+
+Validation Mac : 117 tests Python (dont 60 du noyau), 23 tests JavaScript et
+20 contrôles de la sonde. Les cinq parcours comparent correction, reprises,
+maîtrise, cartes FSRS et temps de référence au service source. Les tests couvrent
+également la minuterie, les blancs, les interruptions, les renvois, l’annulation
+de transaction et une séance vide. Le test WebKit natif est étendu à une
+présentation complète de cinq chiffres (20 secondes), puis au rappel masqué.
+La compilation finale `build-for-testing` iOS Simulator arm64 réussit pour le
+code `f25cf00`. Les contrôles GitHub restent bloqués avant exécution par la
+facturation ; aucun essai natif de ce lot n’est revendiqué. L’ergonomie reste
+reportée à la fin du portage.
+
+## Recette native mémoire visuelle — 18 octobre 2026
+
+Le code du lot `f25cf00` (documentation `20a31ea`) a été compilé, signé et
+exécuté sur l’iPhone Air connecté. Les sources sont synchronisées dans le projet
+Xcode local signé ; seul le chemin de stockage est remplacé localement par un
+dossier de test vierge. Aucun réglage personnel de signature n’est commité.
+
+Résultat : **3 tests XCTest réussis, zéro échec**, dont la sonde Python qui
+indique `platform: ios`, `passed: 20`, `http_server: false`. Les cinq parcours
+mémoire passent leurs contrôles embarqués : présentation, interruption,
+restauration, rappel masqué, correction et cartes FSRS. Les parcours de stratégie
+sont également couverts par la sonde ; le test WebKit traverse choisir un plan
+et chercher dans un document.
+
+Le test WebKit réel vérifie une présentation complète de cinq chiffres sur
+20 secondes, puis le masquage du support au rappel et l’enregistrement d’une
+réponse. La méthode WebKit dure 22,128 secondes et la suite 23,544 secondes.
+Cela complète les tests Mac ; VoiceOver, le confort et une recette visuelle
+complète de chaque banque restent à vérifier. Les avertissements du décodeur
+WEBP déjà observés sur Contextes restent présents sans échec du contrôle de
+chargement.
+
+Preuves locales ignorées par Git : `.local/memory-device.log` et
+`.local/memory-device.xcresult`. Aucun diagnostic de l’appareil n’est publié.
+L’app testée est relancée sur l’iPhone à la fin de l’essai.

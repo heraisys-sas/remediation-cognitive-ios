@@ -1,0 +1,803 @@
+[
+  {
+    "id": "me-6-empan-75",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "2",
+          "7",
+          "8",
+          "2",
+          "1"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "12872"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-empan-76",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "6",
+          "1",
+          "2",
+          "1",
+          "5"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "51216"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-empan-77",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "8",
+          "1",
+          "0",
+          "7",
+          "3"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "37018"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-empan-78",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "1",
+          "4",
+          "9",
+          "8",
+          "9"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "98941"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-empan-79",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "9",
+          "2",
+          "0",
+          "7",
+          "0"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "07029"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-empan-80",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "6",
+          "8",
+          "7",
+          "1",
+          "3"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "31786"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-empan-81",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "8",
+          "6",
+          "2",
+          "3",
+          "7"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "73268"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-empan-82",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "6",
+          "9",
+          "6",
+          "1",
+          "3"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "31696"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-empan-83",
+    "type": "empan",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise la séquence de chiffres.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "9",
+          "1",
+          "7",
+          "2",
+          "0"
+        ]
+      },
+      "enonce": "Tape la séquence à l'envers (de mémoire).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "02719"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-paires-09",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "PIERRE",
+            "44"
+          ],
+          [
+            "LUNE",
+            "84"
+          ],
+          [
+            "PORTE",
+            "60"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « PORTE » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "60"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-paires-10",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "FLEUR",
+            "71"
+          ],
+          [
+            "TRAIN",
+            "76"
+          ],
+          [
+            "PLUIE",
+            "88"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « TRAIN » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "76"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-paires-11",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "TABLE",
+            "99"
+          ],
+          [
+            "ROUE",
+            "43"
+          ],
+          [
+            "ARBRE",
+            "61"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « TABLE » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "99"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-paires-12",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "ARBRE",
+            "56"
+          ],
+          [
+            "TABLE",
+            "87"
+          ],
+          [
+            "PLUIE",
+            "76"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « ARBRE » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "56"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-paires-13",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "PLUIE",
+            "90"
+          ],
+          [
+            "NUAGE",
+            "17"
+          ],
+          [
+            "PORTE",
+            "60"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « PLUIE » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "90"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-paires-14",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "LIVRE",
+            "68"
+          ],
+          [
+            "FLEUR",
+            "97"
+          ],
+          [
+            "ROUE",
+            "51"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « ROUE » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "51"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-paires-15",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "PLUIE",
+            "78"
+          ],
+          [
+            "ARBRE",
+            "15"
+          ],
+          [
+            "PORTE",
+            "69"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « PLUIE » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "78"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-paires-16",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "ARBRE",
+            "88"
+          ],
+          [
+            "PORTE",
+            "84"
+          ],
+          [
+            "LIVRE",
+            "47"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « PORTE » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "84"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-6-paires-17",
+    "type": "paires-associatives",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "memorisation-longue"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "me-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque paire mot–nombre.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "TRAIN",
+            "37"
+          ],
+          [
+            "LUNE",
+            "23"
+          ],
+          [
+            "LIVRE",
+            "38"
+          ]
+        ]
+      },
+      "enonce": "Nombre associé à « LIVRE » ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "38"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

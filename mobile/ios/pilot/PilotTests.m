@@ -109,7 +109,17 @@
         "await document.getElementById('choice-0').onclick(); const firstChoice=await request('view');"
         "if(firstChoice.retry_feedback){strategies=strategies&&document.getElementById('next').hidden&&!document.getElementById('feedback').textContent.includes('Réponse :'); await document.getElementById('choice-1').onclick();}"
         "const finalChoice=await request('view'); strategies=strategies&&Boolean(finalChoice.feedback); await document.getElementById('finish').onclick();}"
-        "return {strategies,contextes:photoLoaded&&noPhoto&&recallResumed&&recalled.contextes.phase==='feedback',result:r,title:document.querySelector('h1').textContent,error:document.getElementById('error').textContent,"
+        "document.getElementById('activity').value='chiffres-endroit'; await document.getElementById('start').onclick();"
+        "const memoryReady=await request('view'); const noSequence=!JSON.stringify(memoryReady).includes('affichage');"
+        "const presentationStart=performance.now(); await document.getElementById('memory-show').onclick();"
+        "const answerHidden=document.getElementById('answerForm').hidden;"
+        "for(let k=0;k<350&&state.memory.phase!=='question';k++)await new Promise(r=>setTimeout(r,100));"
+        "const memoryQuestion=await request('view'); const exposureDuration=performance.now()-presentationStart;"
+        "const timedMemory=answerHidden&&exposureDuration>=19000&&memoryQuestion.memory.phase==='question'&&!('content' in memoryQuestion.memory)&&!document.getElementById('answerForm').hidden;"
+        "const memoryField=document.getElementById('answer');memoryField.value='inconnu';await document.getElementById('answerForm').onsubmit({preventDefault(){}});"
+        "for(let k=0;k<100&&busy;k++)await new Promise(r=>setTimeout(r,10));"
+        "const memoryAnswer=await request('view');await document.getElementById('finish').onclick();"
+        "return {memory:noSequence&&timedMemory&&Boolean(memoryAnswer.feedback),strategies,contextes:photoLoaded&&noPhoto&&recallResumed&&recalled.contextes.phase==='feedback',result:r,title:document.querySelector('h1').textContent,error:document.getElementById('error').textContent,"
         "paused,resumed,support,lexical:hinted.activity==='acces-lexical' && hinted.hints_used===1 && hintVisible && revealed.feedback.assistee===true,"
         "pqrst:pqrstOK};";
     [web callAsyncJavaScript:script
@@ -117,7 +127,7 @@
            completionHandler:^(id value, NSError *error) {
         XCTAssertNil(error);
         XCTAssertTrue([value isKindOfClass:NSDictionary.class]);
-        XCTAssertEqualObjects(value[@"title"], @"Chercher dans un document");
+        XCTAssertEqualObjects(value[@"title"], @"Chiffres dans l’ordre");
         XCTAssertEqualObjects(value[@"error"], @"");
         XCTAssertNotNil(value[@"result"][@"started"]);
         XCTAssertNotNil(value[@"result"][@"item"]);
@@ -128,6 +138,7 @@
         XCTAssertEqualObjects(value[@"pqrst"], @YES);
         XCTAssertEqualObjects(value[@"contextes"], @YES);
         XCTAssertEqualObjects(value[@"strategies"], @YES);
+        XCTAssertEqualObjects(value[@"memory"], @YES);
         [response fulfill];
     }];
     [self waitForExpectations:@[response] timeout:60];
@@ -145,7 +156,7 @@
     NSDictionary *result = [NSJSONSerialization JSONObjectWithData:[report dataUsingEncoding:NSUTF8StringEncoding]
                                                            options:0 error:nil];
     XCTAssertEqualObjects(result[@"platform"], @"ios");
-    XCTAssertEqualObjects(result[@"passed"], @15);
+    XCTAssertEqualObjects(result[@"passed"], @20);
     NSLog(@"PILOT_RESULT=%@", report);
 }
 @end

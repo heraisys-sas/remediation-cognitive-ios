@@ -1,0 +1,713 @@
+[
+  {
+    "id": "me-12-mots-55",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "radis",
+          "chemise",
+          "rivière"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "rivière chemise radis"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-56",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "guitare",
+          "radis",
+          "lune"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "lune radis guitare"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-57",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "horloge",
+          "fromage",
+          "jardin"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "jardin fromage horloge"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-58",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "feuille",
+          "ballon",
+          "sable"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "sable ballon feuille"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-59",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "drapeau",
+          "chemin",
+          "chocolat"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "chocolat chemin drapeau"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-60",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "plage",
+          "jardinier",
+          "cuisine"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "cuisine jardinier plage"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-61",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "plage",
+          "table",
+          "chat"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "chat table plage"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-62",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "porte",
+          "crayon",
+          "ballon"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "ballon crayon porte"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-63",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "voiture",
+          "plage",
+          "jardin"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "jardin plage voiture"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-64",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "stylo",
+          "porte",
+          "journal",
+          "feuille"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "feuille journal porte stylo"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-65",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "plage",
+          "sable",
+          "chapeau",
+          "porte"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "porte chapeau sable plage"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-66",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "chapeau",
+          "manteau",
+          "feuille",
+          "panier"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "panier feuille manteau chapeau"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-67",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "horloge",
+          "chaussure",
+          "tapis",
+          "panier"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "panier tapis chaussure horloge"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-68",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "cuisine",
+          "bateau",
+          "sable",
+          "radis"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "radis sable bateau cuisine"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-69",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "stylo",
+          "journal",
+          "fromage",
+          "lune"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "lune fromage journal stylo"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-70",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "drapeau",
+          "lune",
+          "bouteille",
+          "musique"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "musique bouteille lune drapeau"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-71",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "feuille",
+          "fenêtre",
+          "chapeau",
+          "bouteille"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "bouteille chapeau fenêtre feuille"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "me-12-mots-72",
+    "type": "empan-mots",
+    "module": "entrainement",
+    "theme": "memoire",
+    "fonctions_ciblees": [
+      "memoire-travail"
+    ],
+    "palier": 12,
+    "prerequis": [
+      "me-palier-11"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "sequence",
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "elements": [
+          "montagne",
+          "chemin",
+          "tapis",
+          "ballon"
+        ]
+      },
+      "enonce": "Tape les mots à l'envers (le dernier d'abord).",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "ballon tapis chemin montagne"
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_memo_concentration.py)",
+      "date_creation": "2026-09-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

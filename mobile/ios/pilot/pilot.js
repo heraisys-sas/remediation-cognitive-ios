@@ -30,9 +30,10 @@ async function perform(operation) {
 function render(view) {
   state = view;
   if (view.finished) paused = false;
-  if (view.protocol?.paused || view.contextes?.paused) paused = true;
+  if (view.protocol?.paused || view.contextes?.paused || view.memory?.paused) paused = true;
   renderContextes(view);
   renderChoices(view);
+  renderMemory(view);
   element("resume").hidden = !paused || Boolean(view.finished);
   element("activityChoice").hidden = Boolean(view.started && !view.finished);
   if (view.title) { document.querySelector("h1").textContent = view.title; document.title = view.title; }
@@ -61,12 +62,13 @@ function render(view) {
     ? `Reprise avec la réponse déjà fournie : ${view.reprise_attendue}. Tu peux t’appuyer dessus.` : "";
   element("methodText").textContent = view.item.contenu.methode || "";
   element("method").hidden = !view.item.contenu.methode;
+  if (!view.memory) element("answer").inputMode = "text";
   const hints = view.item.contenu.indices || [];
   const lexical = view.item.type === "rappel-indice";
   element("lexicalHelp").hidden = !lexical || Boolean(view.feedback) || Boolean(view.reprise);
   element("hints").textContent = hints.slice(0, view.hints_used || 0).map(hint => hint.texte).join("\n");
   element("hint").hidden = (view.hints_used || 0) >= hints.length;
-  element("answerForm").hidden = Boolean(view.contextes) || isPqrst || isChoiceActivity(view) || Boolean(view.feedback);
+  element("answerForm").hidden = Boolean(view.memory && view.memory.phase !== "question") || Boolean(view.memory?.paused) || Boolean(view.contextes) || isPqrst || isChoiceActivity(view) || Boolean(view.feedback);
   element("next").hidden = Boolean(view.contextes) || !view.feedback;
   element("feedback").textContent = view.feedback ? `${view.feedback.feedback || ""}${view.feedback.attendue != null ? " Réponse : " + view.feedback.attendue + "." : ""}` : "";
   if (!view.feedback && view.retry_feedback) element("feedback").textContent = view.retry_feedback;
@@ -79,7 +81,7 @@ element("start").onclick = () => perform(async () => {
   render(view); element("answer").value = ""; clock.reset(paused);
 });
 element("activity").onchange = () => {
-  document.querySelector("h1").textContent = {"acces-lexical":"Retrouver le mot", "pqrst-guide":"PQRST guidé", "memoire-source":"Retrouver le contexte", "choisir-plan":"Choisir un plan", "auto-instruction":"Se guider avant d’agir", "verifier-plan":"Vérifier un plan", "chercher-information":"Chercher dans un document"}[element("activity").value] || "Calcul mental";
+  document.querySelector("h1").textContent = {"acces-lexical":"Retrouver le mot", "pqrst-guide":"PQRST guidé", "memoire-source":"Retrouver le contexte", "choisir-plan":"Choisir un plan", "auto-instruction":"Se guider avant d’agir", "verifier-plan":"Vérifier un plan", "chercher-information":"Chercher dans un document", "chiffres-endroit":"Chiffres dans l’ordre", "chiffres-envers":"Chiffres en ordre inverse", "mots":"Mots — ordre et ordre inverse", "associations":"Associations mot–nombre", "position":"Position dans une séquence"}[element("activity").value] || "Calcul mental";
 };
 element("hint").onclick = () => perform(async () => {
   if (!state?.item || paused) return;
@@ -93,6 +95,7 @@ element("reveal").onclick = () => perform(async () => {
 element("answerForm").onsubmit = event => {
   event.preventDefault();
   if (!element("answer").value.trim() || !state?.item || paused) return;
+  if (state.memory) return memoryCommand("answer", element("answer").value);
   perform(async () => {
     await request("answer", {session_id: state.session_id, item_id: state.item.id,
       answer: element("answer").value, elapsed_ms: Math.round(clock.elapsed())});
@@ -136,6 +139,10 @@ async function protocolCommand(operation, value = null) {
 async function flushProtocolPause() {
   if (!pendingProtocolPause) return;
   let view = await request("view");
+  if (view.memory && !view.memory.paused && !view.feedback) {
+    view = await request("memory-step", {session_id:view.session_id,item_id:view.item.id,
+      revision:view.memory.revision,operation:"pause",elapsed_ms:Math.round(clock.elapsed())});
+  }
   if (view.contextes && !view.contextes.paused) {
     view = await request("contextes-step", {session_id:view.session_id, item_id:view.item.id,
       revision:view.contextes.revision, operation:"pause", elapsed_ms:Math.round(clock.elapsed())});
@@ -148,9 +155,9 @@ async function flushProtocolPause() {
   render(view); clock.reset(paused);
 }
 window.pauseForInterruption = () => {
-  stopContextesTimer();
+  stopContextesTimer(); stopMemoryTimer();
   clock.pause(); paused = true; element("exercise").hidden = true; element("resume").hidden = false;
-  if (state?.contextes || (state?.protocol && !state.protocol.paused && !["pret", "fin"].includes(state.protocol.phase))) {
+  if (state?.memory || state?.contextes || (state?.protocol && !state.protocol.paused && !["pret", "fin"].includes(state.protocol.phase))) {
     pendingProtocolPause = true;
     if (!busy) return perform(async () => {});
   }
@@ -159,6 +166,7 @@ document.addEventListener("visibilitychange", () => { if (document.hidden && sta
 element("resume").onclick = async () => {
   if (pendingProtocolPause) await perform(flushProtocolPause);
   if (pendingProtocolPause) return;
+  if (state?.memory?.paused) return memoryCommand("resume");
   if (state?.contextes?.paused) return contextesCommand("resume");
   if (state?.protocol?.paused) return protocolCommand("resume");
   clock.resume(); paused = false; element("resume").hidden = true; if (state) render(state);

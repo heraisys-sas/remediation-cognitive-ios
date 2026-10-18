@@ -20,6 +20,11 @@
       <option value="auto-instruction">Se guider avant d’agir</option>
       <option value="verifier-plan">Vérifier un plan</option>
       <option value="chercher-information">Chercher dans un document</option>
+      <option value="chiffres-endroit">Chiffres dans l’ordre</option>
+      <option value="chiffres-envers">Chiffres en ordre inverse</option>
+      <option value="mots">Mots — ordre et ordre inverse</option>
+      <option value="associations">Associations mot–nombre</option>
+      <option value="position">Position dans une séquence</option>
       <option value="pqrst-guide">PQRST guidé</option>
     </select>
   </div>
@@ -35,6 +40,7 @@
       <button id="hint" class="secondaryButton">Un indice</button>
       <button id="reveal" class="secondaryButton">Afficher le mot et continuer</button>
     </section>
+    <section id="memory" aria-label="Mémorisation visuelle" hidden></section>
     <section id="choices" aria-label="Choix de réponse" hidden></section>
     <form id="answerForm">
       <label for="answer">Ta réponse</label>
@@ -58,5 +64,6 @@
 <script src="pqrst.js"></script>
 <script src="contextes.js"></script>
 <script src="choices.js"></script>
+<script src="memory.js"></script>
 <script src="pilot.js"></script>
 </html>
