@@ -434,4 +434,7 @@ Le brouillon est conservé et les règles de saisie PQRST restent appliquées.
 La régression JavaScript échouait avant correction et passe ensuite ; la suite
 compte 32 tests JavaScript. Le scénario WebKit réel est étendu au brouillon
 synthétique, à la demande d’indice et au retour d’un bouton Valider actif, sans
-ouvrir le microphone. Revue Sol favorable ; exécution physique en cours.
+ouvrir le microphone. Revue Sol favorable. Sur l’iPhone Air, les quatre tests
+XCTest passent (zéro échec), avec les 20 contrôles embarqués et la régression
+WebKit. Preuves locales ignorées : `.local/dictation-validation-device.log` et
+`.local/dictation-validation-device.xcresult`.
