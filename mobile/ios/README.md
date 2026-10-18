@@ -211,3 +211,28 @@ URL réseau, dossiers voisins, traversées et liens symboliques sortants.
 - [CPython sur iOS](https://docs.python.org/3/using/ios.html)
 - [Runtime BeeWare](https://github.com/beeware/Python-Apple-support)
 - [Règles de distribution Apple](https://developer.apple.com/app-store/review/guidelines/)
+
+## Exécution physique Contextes — 18 octobre 2026
+
+Le lot `53a7851` (documentation ensuite `57e5609`) a été compilé et signé
+avec le projet Xcode local déjà configuré, puis exécuté sur l’iPhone Air connecté.
+L’utilisateur a autorisé la réinitialisation des séances de test. Après
+réapprobation du certificat de développement, `test-without-building` a réussi :
+3 tests XCTest, zéro échec, et `PILOT_RESULT` indique `platform: ios`, `passed: 11`,
+`http_server: false`.
+
+La suite vérifie les limites des URL locales, le moteur et la persistance Python,
+puis le pont réel WebKit pour Calcul mental, accès lexical, PQRST et Contextes.
+Pour Contextes, les dix scènes locales sont chargées, leur exposition est passée
+explicitement, puis le rappel revient sans photo et conserve ce masquage après
+interruption/reprise. Le test Python embarqué parcourt aussi les deux passes,
+vérifie l’absence de cartes après découverte et la clôture du rappel.
+Cette exécution ne valide pas encore visuellement le confort, VoiceOver ou la
+durée réelle complète de chaque exposition. Le journal WebKit contient des
+messages de son décodeur WEBP (`err=-50`) malgré les contrôles de chargement
+réussis ; ils restent à examiner si un défaut visuel est constaté.
+
+Preuves locales ignorées par Git : `.local/contextes-device-retry.log` et
+`.local/contextes-device-retry.xcresult`. Les diagnostics de l’appareil ne sont
+pas publiés. Les tests GitHub restent bloqués par la facturation, indépendamment
+de cette réussite sur appareil physique.
