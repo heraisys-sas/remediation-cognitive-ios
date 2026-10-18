@@ -14,16 +14,18 @@ sys.path.insert(0, str(ROOT / "vendor/remediation"))
 from backend.app.api.entrainement.service import GestionnaireSessions, SessionEnCours, ItemMoteur  # noqa: E402
 from engine.session.runner import SessionRunner  # noqa: E402
 from mobile.transactional_store import TransactionalStore  # noqa: E402
+from mobile.contextes_runtime import ContextesRuntime
 from mobile import pqrst_protocol  # noqa: E402
 
 ACTIVITIES = {
     "calcul-mental": ("calcul-mental", None, "Calcul mental"),
     "acces-lexical": ("evocation", "acces-lexical", "Retrouver le mot"),
+    "memoire-source": ("evocation", "memoire-source", "Retrouver le contexte"),
     "pqrst-guide": ("methodes", "pqrst-guide", "PQRST guidé"),
 }
 
 
-class ApplicationRuntime:
+class ApplicationRuntime(ContextesRuntime):
     """Instance sérialisée par l'appelant natif ; données dans le conteneur de l'app."""
 
     def __init__(self, storage_directory: str):
@@ -109,11 +111,17 @@ class ApplicationRuntime:
                 self.ui = {"session": result, "queue": [i["id"] for i in result["items"]],
                            "cursor": 0, "feedback": None, "reprise_support": {},
                            "activity": activity, "hints": {}}
+                if activity == "memoire-source":
+                    self._contextes_start()
+        elif action == "contextes-step":
+            return self._contextes_step(request)
         elif action == "view":
             result = self._view()
         elif action == "pqrst-step":
             result = self._pqrst_step(request)
         elif action == "next":
+            if self.ui.get("activity") == "memoire-source":
+                raise ValueError("Utiliser le parcours Contextes séquencé")
             if self.ui.get("feedback") is not None:
                 self.ui["cursor"] += 1
                 self.ui["feedback"] = None
@@ -133,6 +141,8 @@ class ApplicationRuntime:
             counts[item["id"]] = min(len(hints), counts.get(item["id"], 0) + 1)
             result = self._view()
         elif action in ("answer", "reveal"):
+            if self.ui.get("activity") == "memoire-source":
+                raise ValueError("Utiliser le parcours Contextes séquencé")
             answer = request.get("answer", "")
             elapsed = request.get("elapsed_ms")
             if not isinstance(answer, (str, int, float)) or isinstance(answer, bool):
@@ -171,6 +181,8 @@ class ApplicationRuntime:
             result = self.manager.stockage.lire_maitrise(f"{theme}--{parcours}" if parcours else theme)
         else:
             raise ValueError("Action native non prise en charge")
+        if action == "start" and self.ui.get("activity") == "memoire-source":
+            result = {**result, "items": [self._contextes_stub(i) for i in result["items"]]}
         if action == "start" and self.ui.get("activity") == "pqrst-guide":
             result = {**result, "items": [self._protocol_item(i) for i in result["items"]]}
         return result
@@ -193,6 +205,9 @@ class ApplicationRuntime:
 
     def _mark_restored_interruption(self):
         if "session" not in self.ui or self._session().terminee or self.ui.get("feedback"):
+            return
+        if self.ui.get("activity") == "memoire-source":
+            self._contextes_interrupt()
             return
         protocol = self.ui.get("protocols", {}).get(str(self.ui["cursor"]))
         if protocol and not protocol["paused"] and protocol["phase"] not in ("pret", "fin"):
@@ -261,6 +276,8 @@ class ApplicationRuntime:
         metadata = {"activity": activity, "title": ACTIVITIES[activity][2]}
         if current.terminee:
             return {"started": True, "finished": True, "summary": current.resume_cloture, **metadata}
+        if activity == "memoire-source":
+            return self._contextes_view(metadata)
         cursor = self.ui["cursor"]
         queue = self.ui["queue"]
         by_id = {item["id"]: item for item in session["items"]}

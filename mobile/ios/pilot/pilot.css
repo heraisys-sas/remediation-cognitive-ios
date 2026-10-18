@@ -17,3 +17,7 @@ textarea:focus-visible { outline: 3px solid #b2e2ef; outline-offset: 3px; }
 .protocolChoice { display: block; width: 100%; text-align: left; }
 .protocolChoice[aria-pressed="true"] { background: #87c4d7; color: #10222c; }
 #protocol p, #feedback { white-space: pre-line; }
+
+#contextes img { display: block; width: 100%; height: auto; border-radius: 8px; }
+#contextes figure { margin: 16px 0; }
+#contextes figcaption { margin-top: 8px; }

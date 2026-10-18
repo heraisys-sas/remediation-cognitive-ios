@@ -1,7 +1,7 @@
 # Moteur embarqué et parcours autonomes
 
 Cible produit : iPhone 17 et iPhone Air, puis iPad et extension selon capacités.
-Le pilote propose Calcul mental, Retrouver le mot et PQRST guidé avec le moteur
+Le pilote propose Calcul mental, Retrouver le mot, PQRST guidé et Retrouver le contexte avec le moteur
 Python dans le processus de l'app. Il fonctionne sans FastAPI, Mac serveur,
 Cloudflare ou appel PCC. La saisie est au clavier. Les étapes ci-dessous
 conservent aussi l'historique de la première preuve XCTest.
@@ -146,11 +146,48 @@ migration explicitement testée. Aucun historique personnel n'est importé.
 
 Les tests du pilote couvrent correction, sauvegarde/relecture, clôture
 idempotente et transaction annulée. PQRST compare aussi les traces partielles,
-premières réponses, essais aidés et résultats au service amont. Le contrat
-Contextes reste testé sans rendre ce parcours accessible. Sous iOS, le
+premières réponses, essais aidés et résultats au service amont. Le parcours
+Contextes compare aussi les deux passes, les premières réponses et la progression
+au service amont. Sous iOS, le
 workflow vérifie aussi le pont réel WebKit→natif→Python et conserve une capture
 de l'écran initial. Un passage sur iPhone réel, le clavier, VoiceOver, les
 grands caractères et le confort en séance restent nécessaires.
+
+## Portage Contextes — lot du 18 octobre 2026
+
+« Retrouver le contexte » reprend `evocation/memoire-source`. Une première passe
+montre chaque scène locale pendant la durée prévue par le contenu (12 secondes,
+avec possibilité de passer après chargement), puis demande son contexte. Après
+la découverte de toutes les scènes, les mêmes questions reviennent sans photo.
+Les options et la correction proviennent du contenu et du service inchangés.
+Seuls les rappels finaux alimentent maîtrise, FSRS et temps de référence.
+
+Les premières réponses des deux passes et les faits de présentation sont
+conservés séparément. Après une erreur au rappel, la photo peut réapparaître
+avec la correction ; ce chargement est enregistré sans écraser la réponse.
+Une clôture pendant la découverte ne crée aucun rappel ni progrès fictif.
+Une séance sans carte due est clôturée sans indexer d'item absent.
+
+La position, les réponses et les transitions sont transactionnelles. Une
+interruption masque les scènes et suspend le temps actif ; une reprise conserve
+le reliquat d'exposition déjà enregistré. Après arrêt brutal, le segment non
+validé reste inconnu et n'est pas reconstitué. Les brouillons et choix non validés
+ne sont pas ajoutés à l'historique. Les chargements échoués sont signalés et
+permettent de réessayer ou terminer sans fabriquer une exposition réussie.
+
+Les 22 ressources `frontend/images/contextes` (photos WebP, manifeste et notice)
+sont extraites directement du commit source `44acda5`, avec leurs empreintes dans
+`UPSTREAM.json`. Aucun fichier de travail local ni historique personnel n'est
+importé. La politique WebKit autorise les images locales seulement et conserve
+l'interdiction du réseau.
+
+Validation locale : 101 tests Python (dont les 60 tests du noyau), 15 tests
+JavaScript et 11 contrôles de la sonde. Le test WebKit natif est étendu aux
+photos locales, au passage découverte/rappel et au masquage lors d'une reprise.
+Son exécution iOS et la recette de ce nouveau lot sur iPhone réel restent à
+confirmer ; le premier essai physique précédent portait sur l'ébauche antérieure.
+Les ajustements des aides dépliables et des boutons de pause attendent la fin
+du portage, selon la demande utilisateur.
 
 ## Premier lancement physique — 18 octobre 2026
 

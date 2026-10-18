@@ -6,20 +6,21 @@ const vm = require('node:vm');
 
 async function page({native = true, reply = async()=>({started:false})} = {}) {
   const nodes = {};
-  const create = () => {
-    const node = {textContent:'', value:'', hidden:false, disabled:false, children:[], attrs:{}, focus(){}, blur(){},
+  const create = tag => {
+    const node = {tagName:tag, textContent:'', value:'', hidden:false, disabled:false, children:[], attrs:{}, focus(){}, blur(){},
       append(...items){this.children.push(...items);}, replaceChildren(...items){this.children=items;},
       setAttribute(key,value){this.attrs[key]=value;}};
     Object.defineProperty(node,'id',{set(value){nodes[value]=this;}, get(){return Object.keys(nodes).find(key=>nodes[key]===this);}});
     return node;
   };
   const get = id => nodes[id] ||= create();
-  const context = vm.createContext({performance:{now:()=>0}, document:{getElementById:get,
+  const context = vm.createContext({setTimeout,clearTimeout,performance:{now:()=>0}, document:{getElementById:get,
     querySelectorAll:()=>Object.values(nodes), querySelector:()=>get('heading'), createElement:create, addEventListener(){}},
     window:native ? {webkit:{messageHandlers:{runtime:{postMessage:reply}}}} : {}});
   const source = path.resolve(__dirname, '../mobile/ios/pilot');
   vm.runInContext(fs.readFileSync(path.join(source,'active-clock.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'pqrst.js'),'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(source,'contextes.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'pilot.js'),'utf8'), context);
   await new Promise(resolve => setImmediate(resolve));
   return {get, render:value=>context.render(value), context};
@@ -191,4 +192,39 @@ test('la fatigue du résumé invite à la pause sans bloquer une nouvelle séanc
   assert.equal(get('summaryAdvice').hidden,false);
   assert.equal(get('start').hidden,false);
   assert.equal(get('start').disabled,false);
+});
+
+test('Contextes masque la saisie et la photo au rappel, et conserve le message incident',async()=>{
+  const {get,render}=await page();
+  const base={started:true,session_id:'s',position:1,total:10,activity:'memoire-source',item:{id:'i',type:'rappel-source',contenu:{enonce:'Contexte'}},contextes:{pass:'rappel',phase:'question',revision:1,options:['SMS','Carnet'],question:'Où ?'}};
+  render(base);
+  assert.equal(get('answerForm').hidden,true);
+  assert.equal(get('next').hidden,true);
+  assert.equal(get('contextes').children.some(n=>n.tagName==='img'),false);
+  assert.equal(get('contextes-answer-0').textContent,'SMS');
+  render({...base,contextes:{...base.contextes,pass:'decouverte',phase:'pret',options:[],image_failed:true}});
+  assert.equal(get('contextes-show').textContent,'Réessayer');
+  assert.ok(get('contextes').children.some(n=>n.textContent.includes('pas pu être chargée')));
+});
+
+test('une image décodée pendant un appel attend la disponibilité du pont',async()=>{
+  const calls=[]; let view;
+  const {get,context,render}=await page({reply:async payload=>{
+    calls.push(payload);
+    if(payload.action==='contextes-step') view={...view,contextes:{...view.contextes,phase:'exposition',revision:2}};
+    return view||{started:false};
+  }});
+  view={started:true,session_id:'s',position:1,total:10,item:{id:'i',contenu:{enonce:'Contexte'}},contextes:{pass:'decouverte',phase:'photo',revision:1,image:{src:'images/a.webp',alt:'Message'},remaining_ms:12000}};
+  let release;
+  const work=context.perform(async()=>{
+    render(view);
+    const image=get('contextes').children.find(n=>n.tagName==='figure').children[0];
+    image.onload(); // Décodage immédiat pendant perform.
+    await new Promise(resolve=>{release=resolve;});
+  });
+  assert.equal(calls.some(c=>c.operation==='loaded'),false);
+  release(); await work;
+  await new Promise(resolve=>setTimeout(resolve,30));
+  assert.equal(calls.filter(c=>c.operation==='loaded').length,1);
+  context.stopContextesTimer();
 });
