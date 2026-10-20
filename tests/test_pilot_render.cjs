@@ -29,6 +29,7 @@ async function page({native = true, reply = async()=>({started:false}), speechRe
   vm.runInContext(fs.readFileSync(path.join(source,'auto-lexical.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'feedback-flow.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'voice-settings.js'),'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(source,'home.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'pilot.js'),'utf8'), context);
   await new Promise(resolve => setImmediate(resolve));
   return {get, render:value=>context.render(value), context};
@@ -198,8 +199,8 @@ test('la fatigue du résumé invite à la pause sans bloquer une nouvelle séanc
   const {get,render} = await page();
   render({started:true,finished:true,summary:{resume:{items:3,correctes:0},arret_propose:true,motif_arret:'fatigue'}});
   assert.equal(get('summaryAdvice').hidden,false);
-  assert.equal(get('start').hidden,false);
-  assert.equal(get('start').disabled,false);
+  assert.equal(get('activityChoice').hidden,false);
+  assert.equal(get('activity-card-calcul-mental').disabled,false);
 });
 
 test('Contextes masque la saisie et la photo au rappel, et conserve le message incident',async()=>{
@@ -673,4 +674,58 @@ test('le chargement initial tardif ne laisse pas la préécoute grisée',async()
   assert.equal(app.get('previewVoice').disabled,true);
   release({started:false});await new Promise(resolve=>setImmediate(resolve));
   assert.equal(app.get('previewVoice').disabled,false);
+});
+test('les compétences enregistrées filtrent les cartes et leur liste explicative',async()=>{
+  const {get}=await page({speechReply:async payload=>payload.operation==='home-settings'?{enabled:['mots','information']}:{}});
+  assert.deepEqual(get('activityCards').children.map(card=>card.id),['activity-card-acces-lexical','activity-card-chercher-information']);
+  assert.equal(get('competency-mots').checked,true);assert.equal(get('competency-calcul').checked,false);
+  const choices=get('competencyChoices').children;
+  assert.match(choices[1].children[1].children[2].textContent,/Cartes : Retrouver le mot/);
+});
+test('le choix vide est conservé et n’affiche aucune activité par défaut',async()=>{
+  const {get}=await page({speechReply:async payload=>payload.operation==='home-settings'?{enabled:[]}:{}});
+  assert.equal(get('activityCards').children.length,0);assert.match(get('homeStatus').textContent,/Aucune compétence/);
+});
+test('décocher une compétence sauvegarde le filtre sans appeler le moteur',async()=>{
+  const runtime=[],settings=[];
+  const {get}=await page({reply:async payload=>{runtime.push(payload);return {started:false};},speechReply:async payload=>{
+    settings.push(payload);if(payload.operation==='home-settings')return {enabled:['calcul','mots']};
+    if(payload.operation==='set-home-settings')return {enabled:payload.enabled};return {};
+  }});
+  const before=runtime.length;get('competency-calcul').checked=false;await get('competency-calcul').onchange();
+  assert.equal(runtime.length,before);assert.deepEqual(Array.from(settings.at(-1).enabled),['mots']);
+  assert.deepEqual(get('activityCards').children.map(card=>card.id),['activity-card-acces-lexical']);
+});
+test('un enregistrement refusé garde les cartes précédentes et restaure la case',async()=>{
+  const {get}=await page({speechReply:async payload=>{
+    if(payload.operation==='home-settings')return {enabled:['calcul']};
+    if(payload.operation==='set-home-settings')throw Error('Sauvegarde impossible');return {};
+  }});
+  get('competency-calcul').checked=false;await get('competency-calcul').onchange();
+  assert.equal(get('competency-calcul').checked,true);assert.equal(get('activityCards').children.length,1);
+  assert.match(get('competencyStatus').textContent,/Sauvegarde impossible/);
+});
+test('une carte lance directement la bonne activité sans second clic',async()=>{
+  const calls=[];
+  const {get}=await page({reply:async payload=>{calls.push(payload);return payload.action==='view'?{started:false}:{session_id:'s'};},
+    speechReply:async payload=>payload.operation==='home-settings'?{enabled:['information']}:{}});
+  await get('activity-card-chercher-information').onclick();
+  assert.equal(calls.find(payload=>payload.action==='start').activity,'chercher-information');
+});
+test('les cartes ne démarrent pas une autre activité pendant une séance',async()=>{
+  const calls=[];const {get,render}=await page({reply:async payload=>{calls.push(payload);return {started:false};}});
+  render({started:true,session_id:'s',item:{id:'i',contenu:{enonce:'Question'}},position:1,total:2});
+  const before=calls.length;await get('activity-card-calcul-mental').onclick();assert.equal(calls.length,before);
+});
+test('les treize parcours disponibles ont une carte et une seule',async()=>{
+  const {context}=await page();const ids=vm.runInContext('homeCompetencies.flatMap(item=>item.cards.map(card=>card[0]))',context);
+  assert.equal(ids.length,13);assert.equal(new Set(ids).size,13);
+  const html=fs.readFileSync(path.resolve(__dirname,'../mobile/ios/pilot/index.html'),'utf8');
+  const activities=[...html.matchAll(/<option value="([^"]+)"/g)].map(match=>match[1]);
+  assert.deepEqual(Array.from(ids).sort(),activities.sort());
+});
+test('les contrôles tolèrent les cartes et cases non montées dans le DOM réel',async()=>{
+  const {context}=await page();const original=context.document.getElementById;
+  context.document.getElementById=id=>id.startsWith('activity-card-')||id.startsWith('competency-')?null:original(id);
+  assert.doesNotThrow(()=>context.renderHomeControls());
 });

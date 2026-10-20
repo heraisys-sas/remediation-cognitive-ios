@@ -71,7 +71,7 @@
         "const voiceCapabilities=await speechRequest('capabilities');"
         "if(voiceCapabilities.speech){await speechRequest('speak',{token:'native-smoke',text:'Essai de lecture.'}); await new Promise(r=>setTimeout(r,300)); await speechRequest('stop-speaking');}"
         "for(let i=0;i<200&&document.getElementById('status').textContent;i++) await new Promise(r=>setTimeout(r,10));"
-        "await document.getElementById('start').onclick();"
+        "for(let i=0;i<500&&(!homeReady||busy);i++)await new Promise(r=>setTimeout(r,20));homeEnabled=homeCompetencies.map(item=>item.id);renderHomeCards();await document.getElementById('activity-card-calcul-mental').onclick();"
         "const r=await window.webkit.messageHandlers.runtime.postMessage({action:'view'});"
         "window.pauseForInterruption(); const paused=document.getElementById('exercise').hidden;"
         "document.getElementById('resume').onclick();"
@@ -147,7 +147,7 @@
            completionHandler:^(id value, NSError *error) {
         XCTAssertNil(error);
         XCTAssertTrue([value isKindOfClass:NSDictionary.class]);
-        XCTAssertEqualObjects(value[@"title"], @"Chiffres dans l’ordre");
+        XCTAssertEqualObjects(value[@"title"], @"Remédiation");
         XCTAssertEqualObjects(value[@"error"], @"");
         XCTAssertNotNil(value[@"result"][@"started"]);
         XCTAssertNotNil(value[@"result"][@"item"]);
@@ -183,6 +183,38 @@
         [response fulfill];
     }];
     [self waitForExpectations:@[response] timeout:20];
+}
+- (void)testHomeCompetencies {
+    NSUserDefaults *defaults = NSUserDefaults.standardUserDefaults;
+    id previous = [defaults objectForKey:@"RCEnabledCompetenciesV1"];
+    @try {
+        UIWindowScene *scene = (UIWindowScene *)UIApplication.sharedApplication.connectedScenes.anyObject;
+        WKWebView *web = [scene.windows.firstObject.rootViewController valueForKey:@"web"];
+        NSPredicate *loaded = [NSPredicate predicateWithBlock:^BOOL(id object, NSDictionary *bindings) {
+            return !web.loading && [web.URL.lastPathComponent isEqualToString:@"index.html"];
+        }];
+        XCTNSPredicateExpectation *page = [[XCTNSPredicateExpectation alloc] initWithPredicate:loaded object:web];
+        [self waitForExpectations:@[page] timeout:20];
+        XCTestExpectation *response = [self expectationWithDescription:@"Cartes et compétences"];
+        NSString *script = @"for(let i=0;i<500&&(!homeReady||busy);i++)await new Promise(r=>setTimeout(r,20));"
+            "const original=[...homeEnabled];let result;try{"
+            "await speechRequest('set-home-settings',{enabled:['mots','information']});homeEnabled=['mots','information'];renderCompetencySettings();renderHomeCards();"
+            "const filtered=document.querySelectorAll('#activityCards button').length===2&&!document.getElementById('activity-card-calcul-mental')&&document.getElementById('competency-mots').checked;"
+            "document.getElementById('competency-mots').checked=false;await document.getElementById('competency-mots').onchange();"
+            "const saved=await speechRequest('home-settings');const persisted=saved.enabled.length===1&&saved.enabled[0]==='information'&&document.querySelectorAll('#activityCards button').length===1;"
+            "document.getElementById('competency-information').checked=false;await document.getElementById('competency-information').onchange();"
+            "const empty=document.querySelectorAll('#activityCards button').length===0&&(await speechRequest('home-settings')).enabled.length===0;result={filtered,persisted,empty};"
+            "}finally{await speechRequest('set-home-settings',{enabled:original});homeEnabled=original;renderCompetencySettings();renderHomeCards();}return result;";
+        [web callAsyncJavaScript:script arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld completionHandler:^(id value, NSError *error) {
+            XCTAssertNil(error);XCTAssertEqualObjects(value[@"filtered"],@YES);XCTAssertEqualObjects(value[@"persisted"],@YES);XCTAssertEqualObjects(value[@"empty"],@YES);[response fulfill];
+        }];
+        [self waitForExpectations:@[response] timeout:25];
+        id speech = [NSClassFromString(@"RCSpeechController") new];
+        [speech handle:@{@"operation":@"set-home-settings",@"enabled":@[@"inconnue"]} reply:^(id value, NSString *error) {XCTAssertNil(value);XCTAssertNotNil(error);}];
+    } @finally {
+        if(previous)[defaults setObject:previous forKey:@"RCEnabledCompetenciesV1"];
+        else [defaults removeObjectForKey:@"RCEnabledCompetenciesV1"];
+    }
 }
 - (void)testFrenchVoicePreference {
     NSUserDefaults *defaults = NSUserDefaults.standardUserDefaults;

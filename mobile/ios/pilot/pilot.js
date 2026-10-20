@@ -26,7 +26,7 @@ async function perform(operation) {
     element("status").textContent = "";
     document.querySelectorAll("button").forEach(button => { if (disabledBefore.has(button)) button.disabled = disabledBefore.get(button); });
     if (paused) { element("exercise").hidden = true; element("resume").hidden = false; }
-    renderVoiceSettingsControls();
+    renderVoiceSettingsControls();renderHomeControls();
     if (state) { renderSpeechControls(state); armAutoLexical(); armFeedbackFlow(); }
   }
 }
@@ -40,8 +40,9 @@ function render(view) {
   renderMemory(view);
   element("resume").hidden = !paused || Boolean(view.finished);
   element("activityChoice").hidden = Boolean(view.started && !view.finished);
-  if (view.title) { document.querySelector("h1").textContent = view.title; document.title = view.title; }
-  element("start").hidden = Boolean(view.started && !view.finished);
+  if (!view.started || view.finished) {document.querySelector("h1").textContent="Remédiation";document.title="Remédiation";}
+  else if (view.title) { document.querySelector("h1").textContent = view.title; document.title = view.title; }
+  element("start").hidden = true;
   element("finish").hidden = !view.started || Boolean(view.finished);
   element("exercise").hidden = !view.item || paused;
   element("summary").hidden = !view.finished;
@@ -188,3 +189,4 @@ element("holdFeedback").onclick=toggleFeedbackHold;
 element("listen").onclick=listenVisibleText;
 element("dictate").onclick=dictateAnswer;
 initializeSpeech();
+initializeHomeSettings();

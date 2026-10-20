@@ -185,6 +185,26 @@
     if ([operation isEqualToString:@"capabilities"]) {
         reply(@{@"speech":([self frenchVoice] ? @YES : @NO), @"on_device_dictation":(self.recognizer.supportsOnDeviceRecognition ? @YES : @NO)}, nil); return;
     }
+    if ([operation isEqualToString:@"home-settings"]) {
+        NSArray *enabled = [NSUserDefaults.standardUserDefaults arrayForKey:@"RCEnabledCompetenciesV1"];
+        reply(@{@"enabled":enabled ?: NSNull.null}, nil); return;
+    }
+    if ([operation isEqualToString:@"set-home-settings"]) {
+        NSArray *enabled = command[@"enabled"];
+        NSSet *allowed = [NSSet setWithArray:@[@"calcul",@"mots",@"memoire",@"contexte",@"organisation",@"information",@"lecture"]];
+        if (![enabled isKindOfClass:NSArray.class] || enabled.count > allowed.count) {
+            reply(nil, @"Choix de compétences invalide."); return;
+        }
+        NSMutableSet *seen = [NSMutableSet new];
+        for (id value in enabled) {
+            if (![value isKindOfClass:NSString.class] || ![allowed containsObject:value] || [seen containsObject:value]) {
+                reply(nil, @"Compétence inconnue ou répétée."); return;
+            }
+            [seen addObject:value];
+        }
+        [NSUserDefaults.standardUserDefaults setObject:enabled forKey:@"RCEnabledCompetenciesV1"];
+        reply(@{@"enabled":enabled}, nil); return;
+    }
     if ([operation isEqualToString:@"voices"]) {
         NSMutableArray *voices = [NSMutableArray new];
         for (AVSpeechSynthesisVoice *voice in [self selectableFrenchVoices])
