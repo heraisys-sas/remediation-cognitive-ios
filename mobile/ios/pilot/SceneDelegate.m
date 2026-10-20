@@ -1,6 +1,7 @@
 // Pilote autonome : transport natif vers Python, aucun serveur HTTP.
 #import "SceneDelegate.h"
 #import "SpeechController.h"
+#import "SemanticBridge.h"
 #import <WebKit/WebKit.h>
 #import <Python/Python.h>
 
@@ -17,6 +18,7 @@ static BOOL PrepareEngine(void) {
     if (EngineInstance) return YES;
     if (EngineAttempted) return NO;
     EngineAttempted = YES;
+    if (PyImport_AppendInittab("_rc_semantics", PyInit__rc_semantics) < 0) return NO;
     NSString *resources = NSBundle.mainBundle.resourcePath;
     PyPreConfig pre;
     PyPreConfig_InitIsolatedConfig(&pre);

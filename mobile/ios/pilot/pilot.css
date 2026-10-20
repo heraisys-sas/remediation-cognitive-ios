@@ -24,3 +24,8 @@ textarea:focus-visible { outline: 3px solid #b2e2ef; outline-offset: 3px; }
 
 .memoryElement { font-size: 2.25em; text-align: center; padding: 16px; min-height: 1.6em; }
 #memory ul { font-size: 1.25em; }
+
+#feedback:not(:empty) { padding: 12px 16px; border-left: 3px solid #87c4d7; background: #202833; border-radius: 4px 10px 10px 4px; }
+.feedbackFlow { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.feedbackFlow .secondary { font-size: .9em; }
+#holdFeedback { border-color: transparent; text-decoration: underline; text-underline-offset: 3px; margin: 0; }

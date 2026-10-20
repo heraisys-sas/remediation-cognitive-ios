@@ -139,3 +139,25 @@ def test_summary_keeps_upstream_fatigue_proposal(tmp_path):
     summary = call(runtime, "view")["summary"]
     assert summary["arret_propose"] is True
     assert summary["motif_arret"] == "fatigue"
+
+
+def test_dictation_preview_does_not_write_or_count_attempts(tmp_path):
+    runtime = ApplicationRuntime(str(tmp_path))
+    session = call(runtime, "start", activity="acces-lexical")
+    item_id = session["items"][0]["id"]
+    answers = {item["id"]: item["reponse"]["valeur"]
+               for item in runtime.manager.contenu.items("evocation", "acces-lexical")}
+    expected = str(answers[item_id])
+    def snapshot():
+        return {str(p.relative_to(tmp_path)): p.read_bytes()
+                for p in tmp_path.rglob("*") if p.is_file()}
+    before = snapshot()
+    args = dict(session_id=session["session_id"], item_id=item_id)
+    assert call(runtime, "verify-dictation", **args, transcription="incompréhensible")["acceptee"] is False
+    assert call(runtime, "verify-dictation", **args, transcription="pas " + expected)["acceptee"] is False
+    assert call(runtime, "verify-dictation", **args, transcription=expected)["acceptee"] is True
+    assert snapshot() == before
+    assert call(runtime, "view").get("feedback") is None
+    assert call(runtime, "answer", **args, answer=expected, elapsed_ms=1200)["correcte"] is True
+    with pytest.raises(ValueError):
+        call(runtime, "verify-dictation", **args, transcription=expected)

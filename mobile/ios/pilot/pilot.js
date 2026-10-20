@@ -11,6 +11,7 @@ async function request(action, data = {}) {
 }
 async function perform(operation) {
   if (busy) return;
+  stopFeedbackFlow();
   busy = true;
   const disabledBefore = new Map();
   document.querySelectorAll("button").forEach(button => { disabledBefore.set(button, button.disabled); button.disabled = true; });
@@ -25,11 +26,12 @@ async function perform(operation) {
     element("status").textContent = "";
     document.querySelectorAll("button").forEach(button => { if (disabledBefore.has(button)) button.disabled = disabledBefore.get(button); });
     if (paused) { element("exercise").hidden = true; element("resume").hidden = false; }
-    if (state) renderSpeechControls(state);
+    if (state) { renderSpeechControls(state); armAutoLexical(); armFeedbackFlow(); }
   }
 }
 function render(view) {
   state = view;
+  renderFeedbackFlow(view);
   if (view.finished) paused = false;
   if (view.protocol?.paused || view.contextes?.paused || view.memory?.paused) paused = true;
   renderContextes(view);
@@ -78,9 +80,12 @@ function render(view) {
   renderSpeechControls(view);
 }
 element("start").onclick = () => perform(async () => {
-  await request("start", {activity: element("activity").value || "calcul-mental"});
+  const activity=element("activity").value||"calcul-mental";
+  await authorizeAutoLexical(activity);
+  await request("start", {activity});
   let view = await request("view");
   if (!view.item && !view.finished) { await request("finish", {session_id:view.session_id}); view = await request("view"); }
+  bindAutoLexicalSession(view);
   render(view); element("answer").value = ""; clock.reset(paused);
 });
 element("activity").onchange = () => {
@@ -159,6 +164,7 @@ async function flushProtocolPause() {
 }
 window.pauseForInterruption = () => {
   stopSpeechForTransition();
+  stopFeedbackFlow();
   stopContextesTimer(); stopMemoryTimer();
   clock.pause(); paused = true; element("exercise").hidden = true; element("resume").hidden = false;
   if (state?.memory || state?.contextes || (state?.protocol && !state.protocol.paused && !["pret", "fin"].includes(state.protocol.phase))) {
@@ -173,10 +179,11 @@ element("resume").onclick = async () => {
   if (state?.memory?.paused) return memoryCommand("resume");
   if (state?.contextes?.paused) return contextesCommand("resume");
   if (state?.protocol?.paused) return protocolCommand("resume");
-  clock.resume(); paused = false; element("resume").hidden = true; if (state) render(state);
+  clock.resume(); paused = false; element("resume").hidden = true; if (state) {render(state);armAutoLexical();armFeedbackFlow();}
 };
 perform(async () => { render(await request("view")); clock.reset(paused); });
 
+element("holdFeedback").onclick=toggleFeedbackHold;
 element("listen").onclick=listenVisibleText;
 element("dictate").onclick=dictateAnswer;
 initializeSpeech();

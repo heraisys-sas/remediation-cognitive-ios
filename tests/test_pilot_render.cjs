@@ -25,6 +25,9 @@ async function page({native = true, reply = async()=>({started:false}), speechRe
   vm.runInContext(fs.readFileSync(path.join(source,'choices.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'memory.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'speech.js'),'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.resolve(__dirname,'../vendor/remediation/frontend/src/dictee-auto.js'),'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(source,'auto-lexical.js'),'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(source,'feedback-flow.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'pilot.js'),'utf8'), context);
   await new Promise(resolve => setImmediate(resolve));
   return {get, render:value=>context.render(value), context};
@@ -496,4 +499,141 @@ test('un indice pendant la dictée ne laisse pas Valider grisé après son arrê
   assert.equal(get('answer').value,'bouteille');
   assert.equal(get('answer').readOnly,false);
   assert.equal(get('validate').disabled,false);
+});
+
+// Horloge déterministe pour les délais de la dictée importée de la version Mac.
+async function automaticPage() {
+  const operations=[], calls=[];
+  const view={started:true,session_id:'auto-session',activity:'acces-lexical',position:1,total:1,
+    item:{id:'mot',type:'rappel-indice',contenu:{enonce:'Un récipient pour boire'}},hints_used:0};
+  const app=await page({reply:async payload=>{
+    calls.push(payload);
+    if(payload.action==='verify-dictation')return {acceptee:payload.transcription==='une bouteille'};
+    if(payload.action==='answer')return {correcte:true};
+    return payload.action==='view'?{started:false}:{started:false};
+  },speechReply:async payload=>{operations.push(payload);return {speech:true,on_device_dictation:true};}});
+  let now=0, serial=0;
+  const timers=new Map();
+  app.context.setTimeout=(fn,delay)=>{const id=++serial;timers.set(id,{fn,at:now+delay});return id;};
+  app.context.clearTimeout=id=>timers.delete(id);
+  const advance=async ms=>{
+    now+=ms;
+    for(const [id,timer] of [...timers])if(timer.at<=now){timers.delete(id);timer.fn();}
+    await new Promise(resolve=>setImmediate(resolve));
+  };
+  app.render(view);
+  vm.runInContext('autoVoiceSession="auto-session";armAutoLexical()',app.context);
+  return {...app,operations,calls,advance};
+}
+
+test('le micro est préarmé pendant la lecture sans démarrage de dictée à froid',async()=>{
+  const app=await automaticPage();
+  const read=app.operations.find(op=>op.operation==='speak');
+  assert.ok(read);
+  assert.equal(app.operations.filter(op=>op.operation==='prepare-dictation').length,1);
+  await app.advance(2000);
+  assert.equal(app.operations.filter(op=>op.operation==='start-dictation').length,0);
+  app.context.window.nativeSpeechEvent({kind:'speech',token:'ancien',status:'finished'});
+  await app.advance(2000);
+  assert.equal(app.operations.filter(op=>op.operation==='start-dictation').length,0);
+  app.context.window.nativeSpeechEvent({kind:'speech',token:read.token,status:'finished'});
+  await app.advance(149);
+  assert.equal(app.operations.filter(op=>op.operation==='start-dictation').length,0);
+  await app.advance(1);
+  assert.equal(app.operations.filter(op=>op.operation==='activate-dictation').length,1);
+  assert.equal(app.operations.filter(op=>op.operation==='start-dictation').length,0);
+  vm.runInContext('stopSpeechForTransition()',app.context);
+});
+
+test('les hypothèses vocales rejetées ne sont pas des réponses et une acceptation valide une seule fois',async()=>{
+  const app=await automaticPage();
+  const read=app.operations.find(op=>op.operation==='speak');
+  app.context.window.nativeSpeechEvent({kind:'speech',token:read.token,status:'finished'});
+  await app.advance(150);
+  const token=app.operations.find(op=>op.operation==='prepare-dictation').token;
+  const partial=text=>app.context.window.nativeSpeechEvent({kind:'dictation',token,status:'partial',text});
+  partial('un verre');await app.advance(700);
+  assert.equal(app.calls.filter(op=>op.action==='answer').length,0);
+  partial('une bouteille');await app.advance(699);
+  assert.equal(app.calls.filter(op=>op.action==='answer').length,0);
+  await app.advance(1);
+  assert.equal(app.calls.filter(op=>op.action==='answer').length,1);
+  partial('une bouteille');await app.advance(1000);
+  assert.equal(app.calls.filter(op=>op.action==='answer').length,1);
+});
+
+test('une interruption pendant la lecture interdit toute ouverture tardive du micro',async()=>{
+  const app=await automaticPage();
+  const read=app.operations.find(op=>op.operation==='speak');
+  app.context.window.pauseForInterruption();
+  app.context.window.nativeSpeechEvent({kind:'speech',token:read.token,status:'finished'});
+  await app.advance(3000);
+  assert.equal(app.operations.filter(op=>op.operation==='start-dictation').length,0);
+});
+
+test('la reprise explicite réarme le micro sans relire la consigne déjà entendue',async()=>{
+  const app=await automaticPage();
+  const read=app.operations.find(op=>op.operation==='speak');
+  app.context.window.nativeSpeechEvent({kind:'speech',token:read.token,status:'finished'});
+  await app.advance(150);
+  app.context.window.pauseForInterruption();
+  await app.get('resume').onclick();
+  await app.advance(150);
+  assert.equal(app.operations.filter(op=>op.operation==='speak').length,1);
+  assert.equal(app.operations.filter(op=>['prepare-dictation','start-dictation'].includes(op.operation)).length,2);
+  vm.runInContext('stopSpeechForTransition()',app.context);
+});
+
+test('le choix du clavier annule l’écoute et ignore une transcription tardive',async()=>{
+  const app=await automaticPage();
+  const read=app.operations.find(op=>op.operation==='speak');
+  app.context.window.nativeSpeechEvent({kind:'speech',token:read.token,status:'finished'});
+  await app.advance(150);
+  const token=app.operations.find(op=>op.operation==='prepare-dictation').token;
+  await app.get('dictate').onclick();
+  app.context.window.nativeSpeechEvent({kind:'dictation',token,status:'partial',text:'une bouteille'});
+  await app.advance(1000);
+  assert.equal(app.calls.filter(op=>op.action==='answer').length,0);
+  assert.equal(app.get('answer').value,'');
+});
+
+async function feedbackPage(extra={}){
+  const app=await page();let timer=null,delay=null,advances=0;
+  app.context.setTimeout=(fn,ms)=>{timer=fn;delay=ms;return 1;};
+  app.context.clearTimeout=()=>{timer=null;};
+  app.get('next').onclick=()=>{advances++;};
+  const view={started:true,session_id:'s',position:1,total:2,item:{id:'i',contenu:{enonce:'Question'}},
+    feedback:{correcte:true,feedback:'Bonne réponse.'},...extra};
+  app.render(view);app.context.armFeedbackFlow();
+  return {...app,fire:()=>{const fn=timer;timer=null;fn?.();},delay:()=>delay,advances:()=>advances};
+}
+test('le retour avance automatiquement une fois après un délai lisible',async()=>{
+  const app=await feedbackPage();assert.ok(app.delay()>=2200);
+  app.fire();assert.equal(app.advances(),1);app.fire();assert.equal(app.advances(),1);
+});
+test('Prendre le temps conserve le retour et une pause empêche tout passage tardif',async()=>{
+  const app=await feedbackPage();app.get('holdFeedback').onclick();app.fire();
+  assert.equal(app.advances(),0);
+  app.get('holdFeedback').onclick();app.context.window.pauseForInterruption();app.fire();
+  assert.equal(app.advances(),0);
+});
+test('le passage automatique attend la lecture vocale du retour',async()=>{
+  const app=await feedbackPage();vm.runInContext('speechToken="lecture-retour"',app.context);
+  app.fire();assert.equal(app.advances(),0);assert.equal(app.delay(),250);
+  vm.runInContext('speechToken=null',app.context);app.fire();assert.equal(app.advances(),1);
+});
+test('Contextes attend la révélation effective de la photo avant la suite',async()=>{
+  const app=await feedbackPage({contextes:{phase:'feedback',revision:2,image:{},reveal_recorded:false,options:[]}});
+  assert.equal(vm.runInContext('feedbackTimer',app.context),null);assert.equal(app.advances(),0);
+});
+test('Prendre le temps reste actif après une révision de pause du même retour Contextes',async()=>{
+  const screen={phase:'feedback',revision:2,pass:'rappel',options:[]};
+  const app=await feedbackPage({contextes:screen});app.get('holdFeedback').onclick();
+  vm.runInContext('paused=true',app.context);
+  app.render({...vm.runInContext('state',app.context),contextes:{...screen,revision:3,paused:true}});
+  vm.runInContext('paused=false',app.context);
+  app.render({...vm.runInContext('state',app.context),contextes:{...screen,revision:4,paused:false}});
+  app.context.armFeedbackFlow();
+  assert.equal(vm.runInContext('feedbackHeld',app.context),true);
+  assert.equal(vm.runInContext('feedbackTimer',app.context),null);
 });

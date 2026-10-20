@@ -65,7 +65,8 @@
     XCTNSPredicateExpectation *page = [[XCTNSPredicateExpectation alloc] initWithPredicate:loaded object:web];
     [self waitForExpectations:@[page] timeout:20];
     XCTestExpectation *response = [self expectationWithDescription:@"Pont WebKit vers moteur local"];
-    NSString *script = @"const voiceCapabilities=await speechRequest('capabilities');"
+    NSString *script = @"authorizeAutoLexical=async()=>{autoPermission=false;autoVoiceSession=null;};"
+        "const voiceCapabilities=await speechRequest('capabilities');"
         "if(voiceCapabilities.speech){await speechRequest('speak',{token:'native-smoke',text:'Essai de lecture.'}); await new Promise(r=>setTimeout(r,300)); await speechRequest('stop-speaking');}"
         "for(let i=0;i<200&&document.getElementById('status').textContent;i++) await new Promise(r=>setTimeout(r,10));"
         "await document.getElementById('start').onclick();"

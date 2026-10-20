@@ -37,6 +37,8 @@ function unlockDictation() {
   dictationDraft=null;
 }
 function stopSpeechForTransition() {
+  abortAutoLexical();
+  notifyAutoReading(false);
   audioGeneration+=1;
   const active=Boolean(speechToken||dictationDraft);
   speechToken=null; unlockDictation();
@@ -53,7 +55,7 @@ function renderSpeechControls(view) {
   element("listen").textContent=speechToken?"Arrêter la lecture":"Écouter";
   element("listen").disabled=audioBusy;
   element("dictate").hidden=!target||!speechCapabilities?.on_device_dictation;
-  element("dictate").textContent=dictationDraft?"Arrêter la dictée":"Dicter";
+  element("dictate").textContent=autoLexical?"Répondre au clavier":dictationDraft?"Arrêter la dictée":"Dicter";
   element("dictate").disabled=audioBusy||dictationDraft?.status==="finishing";
   // Recalculer le verrou après perform : son instantané peut dater de la capture.
   element("validate").disabled=busy||Boolean(dictationDraft);
@@ -69,22 +71,24 @@ async function audioOperation(operation) {
   if(audioBusy||busy||paused) return;
   audioBusy=true; element("audioStatus").textContent="";
   try {await operation();}
-  catch(error) {speechToken=null;unlockDictation();element("audioStatus").textContent=String(error.message||error);}
-  finally {audioBusy=false;renderSpeechControls(state);}
+  catch(error) {speechToken=null;notifyAutoReading(false);unlockDictation();element("audioStatus").textContent=String(error.message||error);}
+  finally {audioBusy=false;renderSpeechControls(state);armAutoLexical();}
 }
 async function listenVisibleText() {
   return audioOperation(async()=>{
-    if(speechToken) {speechToken=null;await speechRequest("stop-speaking");return;}
+    if(speechToken) {await speechRequest("stop-speaking");return;}
     const text=speechTextForView(state), key=audioContextKey(state);
     if(!text) return;
     const stopped=stopSpeechForTransition(), generation=audioGeneration;
     if(stopped) await stopped;
     if(generation!==audioGeneration||paused||busy||audioContextKey(state)!==key) return;
     const token=`read-${++audioSerial}`;speechToken=token;
+    notifyAutoReading(true);
     await speechRequest("speak",{token,text:text.slice(0,12000)});
   });
 }
 async function dictateAnswer() {
+  if(autoLexical){autoLexical.manuel();return;}
   return audioOperation(async()=>{
     if(dictationDraft) {dictationDraft.status="finishing";await speechRequest("stop-dictation");return;}
     const field=dictationTarget(state), key=audioContextKey(state); if(!field) return;
@@ -99,8 +103,9 @@ async function dictateAnswer() {
   });
 }
 window.nativeSpeechEvent=event=>{
+  if(receiveAutoSpeech(event))return;
   if(event?.kind==="speech"&&event.token===speechToken) {
-    if(["finished","stopped"].includes(event.status)) speechToken=null;
+    if(["finished","stopped"].includes(event.status)) {speechToken=null;notifyAutoReading(false);}
     renderSpeechControls(state);return;
   }
   if(event?.kind!=="dictation"||event.token!==dictationDraft?.token||dictationDraft.key!==audioContextKey(state)) return;
