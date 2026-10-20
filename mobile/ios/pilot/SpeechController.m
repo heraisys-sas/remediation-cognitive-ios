@@ -4,8 +4,9 @@
 #import <UIKit/UIKit.h>
 #import <mach/mach_time.h>
 
-@interface RCSpeechController () <AVSpeechSynthesizerDelegate>
+@interface RCSpeechController () <AVSpeechSynthesizerDelegate, AVAudioPlayerDelegate>
 @property(nonatomic, strong) AVSpeechSynthesizer *synthesizer;
+@property(nonatomic, strong, nullable) AVAudioPlayer *player;
 @property(nonatomic, strong, nullable) AVSpeechUtterance *utterance;
 @property(nonatomic, copy, nullable) NSString *speechToken;
 @property(nonatomic, strong) SFSpeechRecognizer *recognizer;
@@ -62,6 +63,7 @@
 - (void)stopSpeaking {
     NSString *token = self.speechToken;
     self.speechToken = nil; self.utterance = nil;
+    [self.player stop];self.player=nil;
     [self.synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
     if (token) {
         [self emit:@"speech" status:@"stopped" token:token text:@""];
@@ -191,7 +193,7 @@
     }
     if ([operation isEqualToString:@"set-home-settings"]) {
         NSArray *enabled = command[@"enabled"];
-        NSSet *allowed = [NSSet setWithArray:@[@"calcul",@"mots",@"memoire",@"contexte",@"organisation",@"information",@"lecture"]];
+        NSSet *allowed = [NSSet setWithArray:@[@"calcul",@"mots",@"memoire",@"contexte",@"organisation",@"information",@"lecture",@"deduction",@"actualisation",@"quotidien",@"apprentissages",@"memoires-immediates"]];
         if (![enabled isKindOfClass:NSArray.class] || enabled.count > allowed.count) {
             reply(nil, @"Choix de compétences invalide."); return;
         }
@@ -243,6 +245,24 @@
     if ([operation isEqualToString:@"stop-speaking"]) { [self stopSpeaking]; reply(@{@"ok":@YES}, nil); return; }
     if ([operation isEqualToString:@"stop-dictation"]) { [self stopDictation]; reply(@{@"ok":@YES}, nil); return; }
     if (![token isKindOfClass:NSString.class] || !token.length || token.length > 200) { reply(nil, @"Commande audio invalide."); return; }
+    if ([operation isEqualToString:@"play-audio"]) {
+        NSString *path = command[@"path"];
+        if (![path isKindOfClass:NSString.class] || ![path hasPrefix:@"audio/series/"] ||
+            [path.pathComponents containsObject:@".."] || ![path.pathExtension isEqualToString:@"m4a"]) {
+            reply(nil, @"Fichier audio local invalide."); return;
+        }
+        NSURL *root = [NSBundle.mainBundle.resourceURL URLByAppendingPathComponent:@"app/pilot" isDirectory:YES];
+        NSURL *url = [root URLByAppendingPathComponent:path].URLByResolvingSymlinksInPath.URLByStandardizingPath;
+        NSString *prefix = [root.URLByResolvingSymlinksInPath.URLByStandardizingPath.path stringByAppendingString:@"/"];
+        if (![url.path hasPrefix:prefix]) {reply(nil,@"Fichier audio hors application.");return;}
+        [self cancelAll];NSError *error=nil;
+        if (![AVAudioSession.sharedInstance setCategory:AVAudioSessionCategoryPlayback mode:AVAudioSessionModeSpokenAudio options:0 error:&error] ||
+            ![AVAudioSession.sharedInstance setActive:YES error:&error]) {reply(nil,@"Lecture audio indisponible.");return;}
+        self.player=[[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];self.player.delegate=self;
+        self.speechToken=token;
+        if(!self.player || ![self.player play]) {[self stopSpeaking];reply(nil,@"Lecture audio indisponible.");return;}
+        reply(@{@"ok":@YES},nil);return;
+    }
     if ([operation isEqualToString:@"activate-dictation"]) {
         if ([token isEqualToString:self.dictationToken]) [self activatePreparedDictation];
         reply(@{@"ok":@YES}, nil); return;
@@ -294,6 +314,15 @@
         reply(@{@"ok":@YES}, nil); return;
     }
     reply(nil, @"Commande audio inconnue.");
+}
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    if(player!=self.player)return;
+    NSString *token=self.speechToken;self.speechToken=nil;self.player=nil;
+    [self emit:@"speech" status:flag?@"finished":@"failed" token:token text:@""];
+    [AVAudioSession.sharedInstance setActive:NO withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:nil];
+}
+- (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error {
+    [self audioPlayerDidFinishPlaying:player successfully:NO];
 }
 - (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didStartSpeechUtterance:(AVSpeechUtterance *)utterance {
     if (utterance == self.utterance) [self emit:@"speech" status:@"speaking" token:self.speechToken text:@""];

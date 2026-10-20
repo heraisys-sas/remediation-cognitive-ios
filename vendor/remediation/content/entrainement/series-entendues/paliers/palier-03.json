@@ -1,0 +1,626 @@
+[
+  {
+    "id": "rse1-3-libre-01",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "series-entendues",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "rse-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "musique",
+            "bateau",
+            "chat"
+          ],
+          [
+            "bureau",
+            "sable",
+            "crayon"
+          ],
+          [
+            "tapis",
+            "chemise",
+            "horloge"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "auditive",
+        "pause_serie_ms": 3000,
+        "audio": {
+          "musique": "/ui/audio/series/fr-thomas-155-v1/825d9dc7295d9a52.m4a",
+          "bateau": "/ui/audio/series/fr-thomas-155-v1/90f8669a7794a24e.m4a",
+          "chat": "/ui/audio/series/fr-thomas-155-v1/6064ff5752305a3d.m4a",
+          "bureau": "/ui/audio/series/fr-thomas-155-v1/5017f00acf88c13e.m4a",
+          "sable": "/ui/audio/series/fr-thomas-155-v1/e14da5aa2d206b43.m4a",
+          "crayon": "/ui/audio/series/fr-thomas-155-v1/87ab8ec24328b851.m4a",
+          "tapis": "/ui/audio/series/fr-thomas-155-v1/b09dd3f86116dbbb.m4a",
+          "chemise": "/ui/audio/series/fr-thomas-155-v1/de0bf8d2ecf9e71e.m4a",
+          "horloge": "/ui/audio/series/fr-thomas-155-v1/72c1dc8bc1f16e79.m4a"
+        }
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "musique",
+        "bateau",
+        "chat",
+        "bureau",
+        "sable",
+        "crayon",
+        "tapis",
+        "chemise",
+        "horloge"
+      ],
+      "seuil": 0.5
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_series_entendues.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rse1-3-libre-02",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "series-entendues",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "rse-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "ballon",
+            "bateau",
+            "orange"
+          ],
+          [
+            "porte",
+            "vélo",
+            "nuage"
+          ],
+          [
+            "marteau",
+            "voiture",
+            "bougie"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "auditive",
+        "pause_serie_ms": 3000,
+        "audio": {
+          "ballon": "/ui/audio/series/fr-thomas-155-v1/fc58aad3c044d70f.m4a",
+          "bateau": "/ui/audio/series/fr-thomas-155-v1/90f8669a7794a24e.m4a",
+          "orange": "/ui/audio/series/fr-thomas-155-v1/f063af920399a4cc.m4a",
+          "porte": "/ui/audio/series/fr-thomas-155-v1/fb95dd077f3ee247.m4a",
+          "vélo": "/ui/audio/series/fr-thomas-155-v1/58b462ef8f5c8059.m4a",
+          "nuage": "/ui/audio/series/fr-thomas-155-v1/5b51c90d0728a97e.m4a",
+          "marteau": "/ui/audio/series/fr-thomas-155-v1/02aba5e4ce9baa45.m4a",
+          "voiture": "/ui/audio/series/fr-thomas-155-v1/8ea3c47ab308e96b.m4a",
+          "bougie": "/ui/audio/series/fr-thomas-155-v1/65ef028878fbda9c.m4a"
+        }
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "ballon",
+        "bateau",
+        "orange",
+        "porte",
+        "vélo",
+        "nuage",
+        "marteau",
+        "voiture",
+        "bougie"
+      ],
+      "seuil": 0.5
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_series_entendues.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rse1-3-libre-03",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "series-entendues",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "rse-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "bateau",
+            "camion",
+            "bouteille"
+          ],
+          [
+            "poisson",
+            "chat",
+            "voiture"
+          ],
+          [
+            "cuisine",
+            "sable",
+            "montre"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "auditive",
+        "pause_serie_ms": 3000,
+        "audio": {
+          "bateau": "/ui/audio/series/fr-thomas-155-v1/90f8669a7794a24e.m4a",
+          "camion": "/ui/audio/series/fr-thomas-155-v1/7b43699447a175ec.m4a",
+          "bouteille": "/ui/audio/series/fr-thomas-155-v1/8658d03a7e7b8ff1.m4a",
+          "poisson": "/ui/audio/series/fr-thomas-155-v1/cf44336902c77b31.m4a",
+          "chat": "/ui/audio/series/fr-thomas-155-v1/6064ff5752305a3d.m4a",
+          "voiture": "/ui/audio/series/fr-thomas-155-v1/8ea3c47ab308e96b.m4a",
+          "cuisine": "/ui/audio/series/fr-thomas-155-v1/c5cbcc4bf1d80930.m4a",
+          "sable": "/ui/audio/series/fr-thomas-155-v1/e14da5aa2d206b43.m4a",
+          "montre": "/ui/audio/series/fr-thomas-155-v1/d8d375e6eafecb9b.m4a"
+        }
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "bateau",
+        "camion",
+        "bouteille",
+        "poisson",
+        "chat",
+        "voiture",
+        "cuisine",
+        "sable",
+        "montre"
+      ],
+      "seuil": 0.5
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_series_entendues.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rse1-3-libre-04",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "series-entendues",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "rse-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "manteau",
+            "fourchette",
+            "plage"
+          ],
+          [
+            "stylo",
+            "bureau",
+            "chemise"
+          ],
+          [
+            "cahier",
+            "camion",
+            "feuille"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "auditive",
+        "pause_serie_ms": 3000,
+        "audio": {
+          "manteau": "/ui/audio/series/fr-thomas-155-v1/9f722e1db2b38213.m4a",
+          "fourchette": "/ui/audio/series/fr-thomas-155-v1/b207e0178b126e0a.m4a",
+          "plage": "/ui/audio/series/fr-thomas-155-v1/9f11fbc1c8390590.m4a",
+          "stylo": "/ui/audio/series/fr-thomas-155-v1/eb3b39942653d568.m4a",
+          "bureau": "/ui/audio/series/fr-thomas-155-v1/5017f00acf88c13e.m4a",
+          "chemise": "/ui/audio/series/fr-thomas-155-v1/de0bf8d2ecf9e71e.m4a",
+          "cahier": "/ui/audio/series/fr-thomas-155-v1/a3d2b24b85373d02.m4a",
+          "camion": "/ui/audio/series/fr-thomas-155-v1/7b43699447a175ec.m4a",
+          "feuille": "/ui/audio/series/fr-thomas-155-v1/55a4bc25e40bbc3c.m4a"
+        }
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "manteau",
+        "fourchette",
+        "plage",
+        "stylo",
+        "bureau",
+        "chemise",
+        "cahier",
+        "camion",
+        "feuille"
+      ],
+      "seuil": 0.5
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_series_entendues.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rse1-3-libre-05",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "series-entendues",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "rse-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "montre",
+            "jardin",
+            "plage"
+          ],
+          [
+            "journal",
+            "chapeau",
+            "guitare"
+          ],
+          [
+            "lune",
+            "colline",
+            "manteau"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "auditive",
+        "pause_serie_ms": 3000,
+        "audio": {
+          "montre": "/ui/audio/series/fr-thomas-155-v1/d8d375e6eafecb9b.m4a",
+          "jardin": "/ui/audio/series/fr-thomas-155-v1/6ce159e321be3071.m4a",
+          "plage": "/ui/audio/series/fr-thomas-155-v1/9f11fbc1c8390590.m4a",
+          "journal": "/ui/audio/series/fr-thomas-155-v1/517e07e052bf4f7d.m4a",
+          "chapeau": "/ui/audio/series/fr-thomas-155-v1/bf02f512b11e166e.m4a",
+          "guitare": "/ui/audio/series/fr-thomas-155-v1/5a09f8fdf5295166.m4a",
+          "lune": "/ui/audio/series/fr-thomas-155-v1/2991d53101c25d7f.m4a",
+          "colline": "/ui/audio/series/fr-thomas-155-v1/43dd6771b140a51b.m4a",
+          "manteau": "/ui/audio/series/fr-thomas-155-v1/9f722e1db2b38213.m4a"
+        }
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "montre",
+        "jardin",
+        "plage",
+        "journal",
+        "chapeau",
+        "guitare",
+        "lune",
+        "colline",
+        "manteau"
+      ],
+      "seuil": 0.5
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_series_entendues.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rse1-3-libre-06",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "series-entendues",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "rse-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "chapeau",
+            "drapeau",
+            "chat"
+          ],
+          [
+            "manteau",
+            "chemin",
+            "vélo"
+          ],
+          [
+            "colline",
+            "neige",
+            "lune"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "auditive",
+        "pause_serie_ms": 3000,
+        "audio": {
+          "chapeau": "/ui/audio/series/fr-thomas-155-v1/bf02f512b11e166e.m4a",
+          "drapeau": "/ui/audio/series/fr-thomas-155-v1/597ce5bb6106b9ca.m4a",
+          "chat": "/ui/audio/series/fr-thomas-155-v1/6064ff5752305a3d.m4a",
+          "manteau": "/ui/audio/series/fr-thomas-155-v1/9f722e1db2b38213.m4a",
+          "chemin": "/ui/audio/series/fr-thomas-155-v1/e215503e305ff2c6.m4a",
+          "vélo": "/ui/audio/series/fr-thomas-155-v1/58b462ef8f5c8059.m4a",
+          "colline": "/ui/audio/series/fr-thomas-155-v1/43dd6771b140a51b.m4a",
+          "neige": "/ui/audio/series/fr-thomas-155-v1/978e2dbed35fc4f8.m4a",
+          "lune": "/ui/audio/series/fr-thomas-155-v1/2991d53101c25d7f.m4a"
+        }
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "chapeau",
+        "drapeau",
+        "chat",
+        "manteau",
+        "chemin",
+        "vélo",
+        "colline",
+        "neige",
+        "lune"
+      ],
+      "seuil": 0.5
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_series_entendues.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rse1-3-libre-07",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "series-entendues",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "rse-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "marteau",
+            "bouteille",
+            "chaussure"
+          ],
+          [
+            "drapeau",
+            "pomme",
+            "chemise"
+          ],
+          [
+            "chapeau",
+            "radis",
+            "lune"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "auditive",
+        "pause_serie_ms": 3000,
+        "audio": {
+          "marteau": "/ui/audio/series/fr-thomas-155-v1/02aba5e4ce9baa45.m4a",
+          "bouteille": "/ui/audio/series/fr-thomas-155-v1/8658d03a7e7b8ff1.m4a",
+          "chaussure": "/ui/audio/series/fr-thomas-155-v1/ae73d82198b556c2.m4a",
+          "drapeau": "/ui/audio/series/fr-thomas-155-v1/597ce5bb6106b9ca.m4a",
+          "pomme": "/ui/audio/series/fr-thomas-155-v1/b3faf137b5ef7de0.m4a",
+          "chemise": "/ui/audio/series/fr-thomas-155-v1/de0bf8d2ecf9e71e.m4a",
+          "chapeau": "/ui/audio/series/fr-thomas-155-v1/bf02f512b11e166e.m4a",
+          "radis": "/ui/audio/series/fr-thomas-155-v1/6f1b98af23fb367d.m4a",
+          "lune": "/ui/audio/series/fr-thomas-155-v1/2991d53101c25d7f.m4a"
+        }
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "marteau",
+        "bouteille",
+        "chaussure",
+        "drapeau",
+        "pomme",
+        "chemise",
+        "chapeau",
+        "radis",
+        "lune"
+      ],
+      "seuil": 0.5
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_series_entendues.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rse1-3-libre-08",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "series-entendues",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "rse-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "marteau",
+            "voiture",
+            "soleil"
+          ],
+          [
+            "fromage",
+            "bougie",
+            "chat"
+          ],
+          [
+            "manteau",
+            "lune",
+            "cuisine"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "auditive",
+        "pause_serie_ms": 3000,
+        "audio": {
+          "marteau": "/ui/audio/series/fr-thomas-155-v1/02aba5e4ce9baa45.m4a",
+          "voiture": "/ui/audio/series/fr-thomas-155-v1/8ea3c47ab308e96b.m4a",
+          "soleil": "/ui/audio/series/fr-thomas-155-v1/79be8aca15c39cfc.m4a",
+          "fromage": "/ui/audio/series/fr-thomas-155-v1/f0cf388aa86160f8.m4a",
+          "bougie": "/ui/audio/series/fr-thomas-155-v1/65ef028878fbda9c.m4a",
+          "chat": "/ui/audio/series/fr-thomas-155-v1/6064ff5752305a3d.m4a",
+          "manteau": "/ui/audio/series/fr-thomas-155-v1/9f722e1db2b38213.m4a",
+          "lune": "/ui/audio/series/fr-thomas-155-v1/2991d53101c25d7f.m4a",
+          "cuisine": "/ui/audio/series/fr-thomas-155-v1/c5cbcc4bf1d80930.m4a"
+        }
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "marteau",
+        "voiture",
+        "soleil",
+        "fromage",
+        "bougie",
+        "chat",
+        "manteau",
+        "lune",
+        "cuisine"
+      ],
+      "seuil": 0.5
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_series_entendues.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

@@ -8,6 +8,12 @@ function speechTextForView(view) {
   if(!view?.item||view.finished||paused||view.memory?.paused||view.contextes?.paused||view.protocol?.paused) return "";
   if(view.feedback) return view.feedback.sequence?pqrstFeedbackLines(view.feedback).join("\n"):
     [view.feedback.feedback,view.feedback.attendue!=null?`Réponse : ${view.feedback.attendue}.`:null].filter(Boolean).join("\n");
+  if(view.activity==='anglais'||view.activity==='python'||view.immediate)return '';
+  if(view.activity==='deduction')return textePourLectureDeduction(view.item.contenu);
+  if(view.lexical_strategy)return [view.lexical_strategy.instruction,view.lexical_strategy.definition,view.lexical_strategy.prompt,view.lexical_strategy.question].filter(Boolean).join('\n');
+  if(view.functional)return [view.functional.consigne,view.functional.etape?.texte].filter(Boolean).join('\n');
+  if(view.attention)return [view.attention.instruction,view.attention.objective,view.attention.criterion,view.attention.prompt,view.attention.message?.text,view.attention.point?.state].filter(Boolean).join('\n');
+  if(view.comparison)return (view.comparison.documents||[]).flatMap(doc=>[doc.titre,...doc.lignes.map(line=>`${line.label} : ${line.texte}`)]).join('\n');
   if(view.memory) return [view.memory.instruction,view.memory.question].filter(Boolean).join("\n");
   if(view.contextes) return [view.contextes.instruction,view.contextes.question].filter(Boolean).join("\n");
   if(view.protocol) return [...view.protocol.paragraphs,...(view.protocol.options||[])].filter(Boolean).join("\n");
@@ -20,7 +26,7 @@ function speechTextForView(view) {
   return parts.filter(Boolean).join("\n");
 }
 function dictationTarget(view) {
-  if(!view?.item||view.finished||view.feedback||paused||view.protocol?.paused||view.memory?.paused||view.contextes) return null;
+  if(!view?.item||view.finished||view.feedback||paused||view.protocol?.paused||view.memory?.paused||view.contextes||view.immediate||view.lexical_strategy||view.functional||view.comparison||view.attention||view.activity==="deduction"||view.activity==="python"||view.activity==="anglais") return null;
   if(view.protocol) return view.protocol.input_label?element("protocol-answer"):null;
   if(isChoiceActivity(view)) return null;
   if(view.memory&&view.memory.phase!=="question") return null;
@@ -37,10 +43,13 @@ function unlockDictation() {
   dictationDraft=null;
 }
 function stopSpeechForTransition() {
+  stopMemoryAudio();
   abortAutoLexical();
   notifyAutoReading(false);
   audioGeneration+=1;
-  const active=Boolean(speechToken||dictationDraft);
+  const active=Boolean(speechToken||dictationDraft||immediateSpeechToken);
+  immediateStopTimer();
+  if(immediateSpeechToken){immediateSpeechToken=null;clearTimeout(immediateSpeechWatchdog);const resolve=immediateSpeechResolve;immediateSpeechResolve=null;resolve?.();}
   speechToken=null; unlockDictation();
   if(active) return speechRequest("cancel").catch(()=>{});
   return null;
@@ -103,6 +112,8 @@ async function dictateAnswer() {
   });
 }
 window.nativeSpeechEvent=event=>{
+  if(window.immediateNativeSpeechEvent?.(event))return;
+  if(memoryAudio&&event?.token===memoryAudio.token){memoryNativeSpeechEvent(event);return;}
   if(receiveAutoSpeech(event))return;
   if(event?.kind==="speech"&&event.token===speechToken) {
     if(["finished","stopped"].includes(event.status)) {speechToken=null;notifyAutoReading(false);}

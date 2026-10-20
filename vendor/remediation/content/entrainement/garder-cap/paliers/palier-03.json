@@ -1,0 +1,142 @@
+[
+  {
+    "id": "cap-1-3-01",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "cap-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu dois transmettre à Léa un devis signé de 1 480 € avec l’annexe révisée. Le brouillon affiche Léa et les deux pièces. Le devis joint est signé, mais indique 1 840 € ; l’annexe est bien la dernière version. Quel contrôle appelle une correction avant l’envoi ?",
+      "options": [
+        "Faire corriger puis signer le devis au montant convenu",
+        "Conserver le devis signé et actualiser l’annexe",
+        "Modifier seulement le montant dans le texte du courriel"
+      ],
+      "methode": "Compare le résultat avec toutes les conditions du but. Une tâche presque terminée peut encore manquer d’un élément essentiel.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Faire corriger puis signer le devis au montant convenu"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-3-02",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "cap-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu réserves deux billets pour samedi, départ après 18 h et arrivée avant 21 h. Le récapitulatif indique deux voyageurs, samedi, départ 18 h 20, arrivée 21 h 10. Quel point faut-il corriger ?",
+      "options": [
+        "Choisir un trajet dont le départ est avant 18 h",
+        "Choisir un trajet dont l’arrivée est avant 21 h",
+        "Conserver le trajet et modifier le nombre de voyageurs"
+      ],
+      "methode": "Compare le résultat avec toutes les conditions du but. Une tâche presque terminée peut encore manquer d’un élément essentiel.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Choisir un trajet dont l’arrivée est avant 21 h"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-3-03",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "cap-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "La facture F18 est de 160 €. Un acompte F18 de 80 € a déjà été encaissé ; le solde dû est donc distinct de cet acompte. Deux ordres futurs F18 de 80 € sont programmés. Quel ajustement règle exactement la facture sans annuler le solde ?",
+      "options": [
+        "Conserver un seul des deux ordres futurs",
+        "Conserver les deux ordres futurs",
+        "Annuler les deux ordres futurs"
+      ],
+      "methode": "Compare le résultat avec toutes les conditions du but. Une tâche presque terminée peut encore manquer d’un élément essentiel.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Conserver un seul des deux ordres futurs"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-3-04",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "cap-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Le livrable doit être un PDF avec les chiffres révisés et un graphique cohérent. Les chiffres ont été corrigés dans la source après le dernier export ; le graphique de la source utilise encore les anciennes valeurs. Quelle clôture satisfait toutes les conditions ?",
+      "options": [
+        "Actualiser le graphique, exporter le PDF, puis vérifier le PDF",
+        "Exporter le PDF, puis vérifier seulement les chiffres du tableau",
+        "Actualiser le graphique, puis renommer le dernier PDF exporté"
+      ],
+      "methode": "Compare le résultat avec toutes les conditions du but. Une tâche presque terminée peut encore manquer d’un élément essentiel.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Actualiser le graphique, exporter le PDF, puis vérifier le PDF"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

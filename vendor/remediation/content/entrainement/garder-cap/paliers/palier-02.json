@@ -1,0 +1,142 @@
+[
+  {
+    "id": "cap-1-2-01",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "flexibilite"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "cap-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu dois arriver avant 10 h avec un budget maximal de 25 €. Le train prévu est annulé. Bus A : arrivée 9 h 50, 18 € ; bus B : arrivée 10 h 05, 12 € ; taxi : arrivée 9 h 40, 38 €. Les documents sont déjà prêts. Quel ajustement conserve les contraintes ?",
+      "options": [
+        "Choisir le bus B et conserver les documents prêts",
+        "Choisir le bus A et conserver les documents prêts",
+        "Choisir le taxi et conserver les documents prêts"
+      ],
+      "methode": "Repère ce qui a changé, garde le but et les contraintes encore valables, puis ajuste seulement ce qui est nécessaire.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Choisir le bus A et conserver les documents prêts"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-2-02",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "flexibilite"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "cap-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Le dépôt d’un dossier doit être terminé avant 17 h, avec une preuve horodatée. Le guichet ferme exceptionnellement à 15 h. À 15 h 30, tu disposes d’un portail ouvert jusqu’à 17 h avec reçu immédiat, d’un courriel avec accusé manuel demain, ou d’un envoi postal suivi livré demain.",
+      "options": [
+        "Utiliser le courrier suivi et conserver le numéro",
+        "Utiliser le portail et conserver son reçu",
+        "Envoyer le courriel et conserver la copie envoyée"
+      ],
+      "methode": "Repère ce qui a changé, garde le but et les contraintes encore valables, puis ajuste seulement ce qui est nécessaire.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Utiliser le portail et conserver son reçu"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-2-03",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "flexibilite"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "cap-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "La réunion exige six personnes et un accès distant confidentiel. La salle initiale est indisponible. A : huit places, visioconférence, espace partagé ; B : six places, visioconférence, salle fermée ; C : six places, salle fermée, sans réseau. Quel remplacement conserve les deux exigences ?",
+      "options": [
+        "Réserver C et conserver l’horaire prévu",
+        "Réserver A avec son équipement de visioconférence",
+        "Réserver B avec son équipement de visioconférence"
+      ],
+      "methode": "Repère ce qui a changé, garde le but et les contraintes encore valables, puis ajuste seulement ce qui est nécessaire.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Réserver B avec son équipement de visioconférence"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-2-04",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "flexibilite"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "cap-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Une intervention de 30 minutes était prévue entre 14 h et 15 h. Elle doit désormais durer 45 minutes, après la livraison de matériel à 14 h 10 et avant une autre activité fixe à 15 h. Quel créneau reste compatible ?",
+      "options": [
+        "14 h 10–14 h 55",
+        "14 h–14 h 45",
+        "14 h 20–15 h 05"
+      ],
+      "methode": "Repère ce qui a changé, garde le but et les contraintes encore valables, puis ajuste seulement ce qui est nécessaire.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "14 h 10–14 h 55"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

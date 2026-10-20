@@ -68,7 +68,8 @@
     [self waitForExpectations:@[page] timeout:20];
     XCTestExpectation *response = [self expectationWithDescription:@"Pont WebKit vers moteur local"];
     NSString *script = @"authorizeAutoLexical=async()=>{autoPermission=false;autoVoiceSession=null;};"
-        "const voiceCapabilities=await speechRequest('capabilities');"
+        "const previous=await request('view');if(previous.started&&!previous.finished)await request('finish',{session_id:previous.session_id});"
+        "render(await request('view'));const voiceCapabilities=await speechRequest('capabilities');"
         "if(voiceCapabilities.speech){await speechRequest('speak',{token:'native-smoke',text:'Essai de lecture.'}); await new Promise(r=>setTimeout(r,300)); await speechRequest('stop-speaking');}"
         "for(let i=0;i<200&&document.getElementById('status').textContent;i++) await new Promise(r=>setTimeout(r,10));"
         "for(let i=0;i<500&&(!homeReady||busy);i++)await new Promise(r=>setTimeout(r,20));homeEnabled=homeCompetencies.map(item=>item.id);renderHomeCards();await document.getElementById('activity-card-calcul-mental').onclick();"
@@ -199,9 +200,9 @@
         NSString *script = @"for(let i=0;i<500&&(!homeReady||busy);i++)await new Promise(r=>setTimeout(r,20));"
             "const original=[...homeEnabled];let result;try{"
             "await speechRequest('set-home-settings',{enabled:['mots','information']});homeEnabled=['mots','information'];renderCompetencySettings();renderHomeCards();"
-            "const filtered=document.querySelectorAll('#activityCards button').length===2&&!document.getElementById('activity-card-calcul-mental')&&document.getElementById('competency-mots').checked;"
+            "const filtered=document.querySelectorAll('#activityCards button').length===6&&!document.getElementById('activity-card-calcul-mental')&&document.getElementById('competency-mots').checked;"
             "document.getElementById('competency-mots').checked=false;await document.getElementById('competency-mots').onchange();"
-            "const saved=await speechRequest('home-settings');const persisted=saved.enabled.length===1&&saved.enabled[0]==='information'&&document.querySelectorAll('#activityCards button').length===1;"
+            "const saved=await speechRequest('home-settings');const persisted=saved.enabled.length===1&&saved.enabled[0]==='information'&&document.querySelectorAll('#activityCards button').length===3;"
             "document.getElementById('competency-information').checked=false;await document.getElementById('competency-information').onchange();"
             "const empty=document.querySelectorAll('#activityCards button').length===0&&(await speechRequest('home-settings')).enabled.length===0;result={filtered,persisted,empty};"
             "}finally{await speechRequest('set-home-settings',{enabled:original});homeEnabled=original;renderCompetencySettings();renderHomeCards();}return result;";
@@ -309,4 +310,42 @@
     XCTAssertEqualObjects(result[@"passed"], @20);
     NSLog(@"PILOT_RESULT=%@", report);
 }
+- (void)testZComplementaryPathways {
+    UIWindowScene *scene = (UIWindowScene *)UIApplication.sharedApplication.connectedScenes.anyObject;
+    WKWebView *web = [scene.windows.firstObject.rootViewController valueForKey:@"web"];
+    XCTAssertNotNil(web);
+    if (!web) return;
+    NSPredicate *loaded = [NSPredicate predicateWithBlock:^BOOL(id object, NSDictionary *bindings) {
+        return !web.loading && [web.URL.lastPathComponent isEqualToString:@"index.html"];
+    }];
+    [self waitForExpectations:@[[[XCTNSPredicateExpectation alloc] initWithPredicate:loaded object:web]] timeout:20];
+    XCTestExpectation *done = [self expectationWithDescription:@"Comparaison et réponse aidée sur appareil"];
+    NSString *script = @"for(let i=0;i<500&&(!homeReady||busy);i++)await new Promise(r=>setTimeout(r,20));"
+        "authorizeAutoLexical=async()=>{};stopSpeechForTransition();stopFeedbackFlow();"
+        "let current=await request('view');if(current.started&&!current.finished)await request('finish',{session_id:(await request('view')).session_id});"
+        "await request('start',{activity:'comparer-documents'});render(await request('view'));"
+        "const documents=document.querySelectorAll('#comparison article').length===2;"
+        "for(const field of document.querySelectorAll('#comparison fieldset')){const radio=field.querySelector('input');radio.checked=true;radio.dispatchEvent(new Event('change'));}"
+        "const ready=!document.querySelector('#comparison button').disabled;"
+        "await comparisonCommand('answer',Object.fromEntries(state.comparison.champs.map(field=>[field.id,'conforme'])));"
+        "const corrected=Boolean(state.feedback);await request('finish',{session_id:(await request('view')).session_id});"
+        "render(await request('start',{activity:'mi-code'}));"
+        "const waitAnswer=async()=>{for(let i=0;i<1500&&(busy||state.immediate.phase!=='reponse');i++)await new Promise(r=>setTimeout(r,20));if(busy||state.immediate.phase!=='reponse')throw Error('Réponse MI inaccessible');};"
+        "await immediateCommand('show');await waitAnswer();"
+        "const masked=!state.immediate.stimulus;"
+        "await immediateCommand('answer',{response:null,observations:{absence_declaree:true}});"
+        "if(!state.immediate.first_response)throw Error('Première réponse MI absente : '+document.getElementById('error').textContent);const first=state.immediate.first_response;"
+        "await immediateCommand('help');await immediateCommand('show');await waitAnswer();"
+        "await immediateCommand('answer',{response:null,observations:{absence_declaree:true}});"
+        "const assisted=state.immediate.phase==='feedback'&&Boolean(state.immediate.help_response)&&state.immediate.first_response.date===first.date&&state.immediate.first_response.response===first.response&&state.immediate.first_response.observations.absence_declaree===first.observations.absence_declaree;"
+        "render(await request('finish',{session_id:state.session_id}));return {documents,ready,corrected,masked,assisted};";
+    [web callAsyncJavaScript:script arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld completionHandler:^(id value, NSError *error) {
+        XCTAssertNil(error);
+        for (NSString *key in @[@"documents",@"ready",@"corrected",@"masked",@"assisted"]) XCTAssertEqualObjects(value[key], @YES, @"%@", key);
+        NSLog(@"COMPLEMENTARY_DEVICE_RESULT=%@", value);
+        [done fulfill];
+    }];
+    [self waitForExpectations:@[done] timeout:90];
+}
+
 @end

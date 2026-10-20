@@ -18,6 +18,10 @@
         <div id="competencyChoices"></div>
         <p id="competencyStatus" class="secondary" role="status" aria-live="polite"></p>
       </fieldset>
+      <details><summary>Variantes de mémoire immédiate</summary>
+        <label for="miModality">Retenir un code</label><select id="miModality"><option value="visuelle">Chiffres lus à l’écran</option><option value="auditive">Chiffres entendus</option></select>
+        <label for="miCondition">Qu’est-ce qui a changé ?</label><select id="miCondition"><option value="forme">Formes</option><option value="couleur">Couleurs</option><option value="association">Associations forme–couleur</option></select>
+      </details>
       <label for="voiceChoice">Voix de lecture</label>
       <select id="voiceChoice" disabled><option>Chargement des voix…</option></select>
       <button id="previewVoice" type="button" class="secondaryButton" disabled>Écouter cette voix</button>
@@ -26,18 +30,41 @@
     <label for="activity" hidden>Choisir une activité</label>
     <select id="activity" hidden>
       <option value="calcul-mental">Calcul mental</option>
+      <option value="deduction">Déduction</option>
+      <option value="anglais">Verbes irréguliers anglais</option>
+      <option value="python">Lire du Python</option>
       <option value="acces-lexical">Retrouver le mot</option>
       <option value="memoire-source">Retrouver le contexte</option>
+      <option value="pqrst-guide">PQRST guidé</option>
+      <option value="cap-adapter">Adapter un plan</option>
+      <option value="cap-verifier">Vérifier avant de terminer</option>
       <option value="choisir-plan">Choisir un plan</option>
       <option value="auto-instruction">Se guider avant d’agir</option>
       <option value="verifier-plan">Vérifier un plan</option>
       <option value="chercher-information">Chercher dans un document</option>
+      <option value="pqrst-rappel">Répondre de mémoire après lecture</option>
+      <option value="quotidien">Situations du quotidien</option>
+      <option value="series-lues-immediat">Séries lues — rappel immédiat</option>
+      <option value="series-lues-differe">Séries lues — rappel après attente</option>
+      <option value="series-lues-premiere-serie">Séries lues — première série</option>
+      <option value="series-entendues-immediat">Séries entendues — rappel immédiat</option>
+      <option value="series-entendues-differe">Séries entendues — rappel après attente</option>
+      <option value="series-entendues-premiere-serie">Séries entendues — première série</option>
       <option value="chiffres-endroit">Chiffres dans l’ordre</option>
       <option value="chiffres-envers">Chiffres en ordre inverse</option>
       <option value="mots">Mots — ordre et ordre inverse</option>
       <option value="associations">Associations mot–nombre</option>
       <option value="position">Position dans une séquence</option>
-      <option value="pqrst-guide">PQRST guidé</option>
+      <option value="strategie-semantique">Stratégie sémantique (SFA)</option>
+      <option value="strategie-phonologique">Stratégie phonologique (PCA)</option>
+      <option value="actualiser-consigne">Actualiser une consigne</option>
+      <option value="comparer-documents">Comparer des documents</option>
+      <option value="reperer-essentiel">Repérer l’essentiel</option>
+      <option value="cap-reprendre">Garder le cap — reprendre après une interruption</option>
+      <option value="mi-code">Retenir un code</option>
+      <option value="mi-chemin">Refaire le chemin</option>
+      <option value="mi-changement">Qu’est-ce qui a changé ?</option>
+      <option value="mi-objets">Quel objet était où ?</option>
     </select>
     <h2>Tes activités</h2>
     <p id="homeStatus" class="secondary" role="status"></p>
@@ -61,6 +88,12 @@
       <button id="hint" class="secondaryButton">Un indice</button>
       <button id="reveal" class="secondaryButton">Afficher le mot et continuer</button>
     </details>
+    <section id="lexicalStrategy" aria-label="Stratégies pour retrouver le mot" hidden></section>
+    <section id="functional" aria-label="Actualiser une consigne" hidden></section>
+    <section id="comparison" aria-label="Comparer des documents" hidden></section>
+    <section id="attention" aria-label="Attention et reprise" hidden></section>
+    <section id="deduction" aria-label="Grille de déduction" hidden></section>
+    <section id="immediate" aria-label="Mémoires immédiates" hidden></section>
     <section id="memory" aria-label="Mémorisation visuelle" hidden></section>
     <section id="choices" aria-label="Choix de réponse" hidden></section>
     <form id="answerForm">
@@ -94,5 +127,12 @@
 <script src="feedback-flow.js"></script>
 <script src="voice-settings.js"></script>
 <script src="home.js"></script>
+<script src="deduction-source.js"></script>
+<script src="deduction.js"></script>
+<script src="lexical-strategy.js"></script>
+<script src="functional.js"></script>
+<script src="comparison.js"></script>
+<script src="attention.js"></script>
+<script src="immediate.js"></script>
 <script src="pilot.js"></script>
 </html>

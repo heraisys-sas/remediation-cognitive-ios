@@ -28,9 +28,10 @@ def test_strategy_matches_source_including_second_attempt_and_cards(tmp_path,mon
     runtime=ApplicationRuntime(str(tmp_path/'mobile'))
     source=GestionnaireSessions(stockage=StockageJSON(tmp_path/'source'))
     session=call(runtime,"start",activity=activity)
-    reference=source.demarrer("methodes",parcours=activity)
+    theme,parcours,_=CHOICE_ACTIVITIES[activity]
+    reference=source.demarrer(theme,parcours=parcours)
     assert session['items']==reference['items']
-    answers={i['id']:i['reponse']['valeur'] for i in source.contenu.items('methodes',activity)}
+    answers={i['id']:i['reponse']['valeur'] for i in source.contenu.items(theme,parcours)}
     # Une erreur et une réussite dès le premier essai, puis deux erreurs :
     # couvre aussi les reprises ajoutées à la fin par le service source.
     for index,item in enumerate(session['items']):
@@ -38,14 +39,14 @@ def test_strategy_matches_source_including_second_attempt_and_cards(tmp_path,mon
         wrong=next(o for o in item['contenu']['options'] if o!=correct)
         first=correct if index%3==1 else wrong
         result=answer(runtime,first)
-        expected=source.repondre('methodes',reference['session_id'],item['id'],first,1000)
+        expected=source.repondre(theme,reference['session_id'],item['id'],first,1000)
         if expected.get('essai_supplementaire'):
             assert not result['feedback'] and result['retry_feedback']==expected['feedback']
             assert not runtime._session().reponses.get(item['id'])
             assert expected['attendue'] is None
             second=correct if index%3==0 else wrong
             result=answer(runtime,second,1500)
-            expected=source.repondre('methodes',reference['session_id'],item['id'],second,2500)
+            expected=source.repondre(theme,reference['session_id'],item['id'],second,2500)
         assert result['feedback']==expected
         call(runtime,'next')
     view=call(runtime,'view')
@@ -53,13 +54,13 @@ def test_strategy_matches_source_including_second_attempt_and_cards(tmp_path,mon
         item=view['item']; correct=answers[item['id']]
         assert view['reprise_attendue']==correct
         actual=answer(runtime,correct)['feedback']
-        expected=source.repondre('methodes',reference['session_id'],item['id'],correct,1000)
+        expected=source.repondre(theme,reference['session_id'],item['id'],correct,1000)
         assert actual==expected
         view=call(runtime,'next')
     actual=call(runtime,'finish',session_id=session['session_id'])
-    expected=source.terminer('methodes',reference['session_id'])
+    expected=source.terminer(theme,reference['session_id'])
     assert actual['resume']==expected['resume']
-    key=f'methodes--{activity}'
+    key=f'{theme}--{parcours}'
     assert runtime.store.lire_maitrise(key)==source.stockage.lire_maitrise(key)
     assert runtime.store.lire_temps_reference(key)==source.stockage.lire_temps_reference(key)
     for item_id,card in runtime.store.lire_cartes(key).items():

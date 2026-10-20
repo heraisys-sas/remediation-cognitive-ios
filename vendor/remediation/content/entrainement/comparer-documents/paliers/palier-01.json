@@ -1,0 +1,866 @@
+[
+  {
+    "id": "comparer-documents-v2-1-01",
+    "module": "entrainement",
+    "theme": "comparer-documents",
+    "type": "comparer-documents",
+    "palier": 1,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "fonctions-executives"
+    ],
+    "contenu": {
+      "enonce": "Réservation de salle — vérifie chaque point de la confirmation.",
+      "consigne": "Les deux documents restent consultables. Pour chaque point, indique si la confirmation respecte la demande. Une confirmation peut être entièrement conforme.",
+      "methode": "Prends un critère de la demande, retrouve-le dans la confirmation, compare sa valeur puis passe au suivant. Termine par une vérification des points non traités.",
+      "documents": [
+        {
+          "titre": "Demande",
+          "lignes": [
+            {
+              "id": "jour",
+              "label": "Jour",
+              "texte": "jeudi"
+            },
+            {
+              "id": "debut",
+              "label": "Début",
+              "texte": "14 h"
+            }
+          ]
+        },
+        {
+          "titre": "Confirmation",
+          "lignes": [
+            {
+              "id": "jour",
+              "label": "Jour",
+              "texte": "vendredi"
+            },
+            {
+              "id": "debut",
+              "label": "Début",
+              "texte": "14 h"
+            }
+          ]
+        }
+      ],
+      "champs": [
+        {
+          "id": "jour",
+          "label": "Jour"
+        },
+        {
+          "id": "debut",
+          "label": "Début"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "jour": "ecart",
+        "debut": "conforme"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "comparer-documents-v2-1-02",
+    "module": "entrainement",
+    "theme": "comparer-documents",
+    "type": "comparer-documents",
+    "palier": 1,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "fonctions-executives"
+    ],
+    "contenu": {
+      "enonce": "Confirmation de voyage — vérifie chaque point de la confirmation.",
+      "consigne": "Les deux documents restent consultables. Pour chaque point, indique si la confirmation respecte la demande. Une confirmation peut être entièrement conforme.",
+      "methode": "Prends un critère de la demande, retrouve-le dans la confirmation, compare sa valeur puis passe au suivant. Termine par une vérification des points non traités.",
+      "documents": [
+        {
+          "titre": "Demande",
+          "lignes": [
+            {
+              "id": "date",
+              "label": "Date",
+              "texte": "18 novembre"
+            },
+            {
+              "id": "depart",
+              "label": "Départ",
+              "texte": "8 h 20"
+            }
+          ]
+        },
+        {
+          "titre": "Confirmation",
+          "lignes": [
+            {
+              "id": "date",
+              "label": "Date",
+              "texte": "19 novembre"
+            },
+            {
+              "id": "depart",
+              "label": "Départ",
+              "texte": "8 h 20"
+            }
+          ]
+        }
+      ],
+      "champs": [
+        {
+          "id": "date",
+          "label": "Date"
+        },
+        {
+          "id": "depart",
+          "label": "Départ"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "date": "ecart",
+        "depart": "conforme"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "comparer-documents-v2-1-03",
+    "module": "entrainement",
+    "theme": "comparer-documents",
+    "type": "comparer-documents",
+    "palier": 1,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "fonctions-executives"
+    ],
+    "contenu": {
+      "enonce": "Commande de matériel — vérifie chaque point de la confirmation.",
+      "consigne": "Les deux documents restent consultables. Pour chaque point, indique si la confirmation respecte la demande. Une confirmation peut être entièrement conforme.",
+      "methode": "Prends un critère de la demande, retrouve-le dans la confirmation, compare sa valeur puis passe au suivant. Termine par une vérification des points non traités.",
+      "documents": [
+        {
+          "titre": "Demande",
+          "lignes": [
+            {
+              "id": "ref",
+              "label": "Référence",
+              "texte": "AX-24"
+            },
+            {
+              "id": "quantite",
+              "label": "Quantité",
+              "texte": "6"
+            }
+          ]
+        },
+        {
+          "titre": "Confirmation",
+          "lignes": [
+            {
+              "id": "ref",
+              "label": "Référence",
+              "texte": "AX-24"
+            },
+            {
+              "id": "quantite",
+              "label": "Quantité",
+              "texte": "6"
+            }
+          ]
+        }
+      ],
+      "champs": [
+        {
+          "id": "ref",
+          "label": "Référence"
+        },
+        {
+          "id": "quantite",
+          "label": "Quantité"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "ref": "conforme",
+        "quantite": "conforme"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "comparer-documents-v2-1-04",
+    "module": "entrainement",
+    "theme": "comparer-documents",
+    "type": "comparer-documents",
+    "palier": 1,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "fonctions-executives"
+    ],
+    "contenu": {
+      "enonce": "Inscription à une formation — vérifie chaque point de la confirmation.",
+      "consigne": "Les deux documents restent consultables. Pour chaque point, indique si la confirmation respecte la demande. Une confirmation peut être entièrement conforme.",
+      "methode": "Prends un critère de la demande, retrouve-le dans la confirmation, compare sa valeur puis passe au suivant. Termine par une vérification des points non traités.",
+      "documents": [
+        {
+          "titre": "Demande",
+          "lignes": [
+            {
+              "id": "intitule",
+              "label": "Intitulé",
+              "texte": "Analyse de données"
+            },
+            {
+              "id": "date",
+              "label": "Date",
+              "texte": "7 décembre"
+            }
+          ]
+        },
+        {
+          "titre": "Confirmation",
+          "lignes": [
+            {
+              "id": "intitule",
+              "label": "Intitulé",
+              "texte": "Analyse de données"
+            },
+            {
+              "id": "date",
+              "label": "Date",
+              "texte": "8 décembre"
+            }
+          ]
+        }
+      ],
+      "champs": [
+        {
+          "id": "intitule",
+          "label": "Intitulé"
+        },
+        {
+          "id": "date",
+          "label": "Date"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "intitule": "conforme",
+        "date": "ecart"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "comparer-documents-v2-1-05",
+    "module": "entrainement",
+    "theme": "comparer-documents",
+    "type": "comparer-documents",
+    "palier": 1,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "fonctions-executives"
+    ],
+    "contenu": {
+      "enonce": "Devis de travaux — vérifie chaque point de la confirmation.",
+      "consigne": "Les deux documents restent consultables. Pour chaque point, indique si la confirmation respecte la demande. Une confirmation peut être entièrement conforme.",
+      "methode": "Prends un critère de la demande, retrouve-le dans la confirmation, compare sa valeur puis passe au suivant. Termine par une vérification des points non traités.",
+      "documents": [
+        {
+          "titre": "Demande",
+          "lignes": [
+            {
+              "id": "lot",
+              "label": "Lot",
+              "texte": "bibliothèque"
+            },
+            {
+              "id": "debut",
+              "label": "Début",
+              "texte": "4 mai"
+            }
+          ]
+        },
+        {
+          "titre": "Confirmation",
+          "lignes": [
+            {
+              "id": "lot",
+              "label": "Lot",
+              "texte": "bureau"
+            },
+            {
+              "id": "debut",
+              "label": "Début",
+              "texte": "4 mai"
+            }
+          ]
+        }
+      ],
+      "champs": [
+        {
+          "id": "lot",
+          "label": "Lot"
+        },
+        {
+          "id": "debut",
+          "label": "Début"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "lot": "ecart",
+        "debut": "conforme"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "comparer-documents-v2-1-06",
+    "module": "entrainement",
+    "theme": "comparer-documents",
+    "type": "comparer-documents",
+    "palier": 1,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "fonctions-executives"
+    ],
+    "contenu": {
+      "enonce": "Programme de colloque — vérifie chaque point de la confirmation.",
+      "consigne": "Les deux documents restent consultables. Pour chaque point, indique si la confirmation respecte la demande. Une confirmation peut être entièrement conforme.",
+      "methode": "Prends un critère de la demande, retrouve-le dans la confirmation, compare sa valeur puis passe au suivant. Termine par une vérification des points non traités.",
+      "documents": [
+        {
+          "titre": "Demande",
+          "lignes": [
+            {
+              "id": "session",
+              "label": "Session",
+              "texte": "Neurosciences"
+            },
+            {
+              "id": "jour",
+              "label": "Jour",
+              "texte": "vendredi"
+            }
+          ]
+        },
+        {
+          "titre": "Confirmation",
+          "lignes": [
+            {
+              "id": "session",
+              "label": "Session",
+              "texte": "Éthique"
+            },
+            {
+              "id": "jour",
+              "label": "Jour",
+              "texte": "vendredi"
+            }
+          ]
+        }
+      ],
+      "champs": [
+        {
+          "id": "session",
+          "label": "Session"
+        },
+        {
+          "id": "jour",
+          "label": "Jour"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "session": "ecart",
+        "jour": "conforme"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "comparer-documents-v2-1-07",
+    "module": "entrainement",
+    "theme": "comparer-documents",
+    "type": "comparer-documents",
+    "palier": 1,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "fonctions-executives"
+    ],
+    "contenu": {
+      "enonce": "Contrat de location — vérifie chaque point de la confirmation.",
+      "consigne": "Les deux documents restent consultables. Pour chaque point, indique si la confirmation respecte la demande. Une confirmation peut être entièrement conforme.",
+      "methode": "Prends un critère de la demande, retrouve-le dans la confirmation, compare sa valeur puis passe au suivant. Termine par une vérification des points non traités.",
+      "documents": [
+        {
+          "titre": "Demande",
+          "lignes": [
+            {
+              "id": "adresse",
+              "label": "Adresse",
+              "texte": "24 rue Hugo"
+            },
+            {
+              "id": "debut",
+              "label": "Prise d’effet",
+              "texte": "1er juin"
+            }
+          ]
+        },
+        {
+          "titre": "Confirmation",
+          "lignes": [
+            {
+              "id": "adresse",
+              "label": "Adresse",
+              "texte": "42 rue Hugo"
+            },
+            {
+              "id": "debut",
+              "label": "Prise d’effet",
+              "texte": "1er juin"
+            }
+          ]
+        }
+      ],
+      "champs": [
+        {
+          "id": "adresse",
+          "label": "Adresse"
+        },
+        {
+          "id": "debut",
+          "label": "Prise d’effet"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "adresse": "ecart",
+        "debut": "conforme"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "comparer-documents-v2-1-08",
+    "module": "entrainement",
+    "theme": "comparer-documents",
+    "type": "comparer-documents",
+    "palier": 1,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "fonctions-executives"
+    ],
+    "contenu": {
+      "enonce": "Ordre de mission — vérifie chaque point de la confirmation.",
+      "consigne": "Les deux documents restent consultables. Pour chaque point, indique si la confirmation respecte la demande. Une confirmation peut être entièrement conforme.",
+      "methode": "Prends un critère de la demande, retrouve-le dans la confirmation, compare sa valeur puis passe au suivant. Termine par une vérification des points non traités.",
+      "documents": [
+        {
+          "titre": "Demande",
+          "lignes": [
+            {
+              "id": "ville",
+              "label": "Destination",
+              "texte": "Nantes"
+            },
+            {
+              "id": "depart",
+              "label": "Départ",
+              "texte": "3 février"
+            }
+          ]
+        },
+        {
+          "titre": "Confirmation",
+          "lignes": [
+            {
+              "id": "ville",
+              "label": "Destination",
+              "texte": "Nantes"
+            },
+            {
+              "id": "depart",
+              "label": "Départ",
+              "texte": "3 février"
+            }
+          ]
+        }
+      ],
+      "champs": [
+        {
+          "id": "ville",
+          "label": "Destination"
+        },
+        {
+          "id": "depart",
+          "label": "Départ"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "ville": "conforme",
+        "depart": "conforme"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "comparer-documents-v2-1-09",
+    "module": "entrainement",
+    "theme": "comparer-documents",
+    "type": "comparer-documents",
+    "palier": 1,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "fonctions-executives"
+    ],
+    "contenu": {
+      "enonce": "Invitation culturelle — vérifie chaque point de la confirmation.",
+      "consigne": "Les deux documents restent consultables. Pour chaque point, indique si la confirmation respecte la demande. Une confirmation peut être entièrement conforme.",
+      "methode": "Prends un critère de la demande, retrouve-le dans la confirmation, compare sa valeur puis passe au suivant. Termine par une vérification des points non traités.",
+      "documents": [
+        {
+          "titre": "Demande",
+          "lignes": [
+            {
+              "id": "spectacle",
+              "label": "Spectacle",
+              "texte": "Le Cid"
+            },
+            {
+              "id": "date",
+              "label": "Date",
+              "texte": "16 avril"
+            }
+          ]
+        },
+        {
+          "titre": "Confirmation",
+          "lignes": [
+            {
+              "id": "spectacle",
+              "label": "Spectacle",
+              "texte": "Cyrano"
+            },
+            {
+              "id": "date",
+              "label": "Date",
+              "texte": "16 avril"
+            }
+          ]
+        }
+      ],
+      "champs": [
+        {
+          "id": "spectacle",
+          "label": "Spectacle"
+        },
+        {
+          "id": "date",
+          "label": "Date"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "spectacle": "ecart",
+        "date": "conforme"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "comparer-documents-v2-1-10",
+    "module": "entrainement",
+    "theme": "comparer-documents",
+    "type": "comparer-documents",
+    "palier": 1,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "fonctions-executives"
+    ],
+    "contenu": {
+      "enonce": "Dossier d’assurance — vérifie chaque point de la confirmation.",
+      "consigne": "Les deux documents restent consultables. Pour chaque point, indique si la confirmation respecte la demande. Une confirmation peut être entièrement conforme.",
+      "methode": "Prends un critère de la demande, retrouve-le dans la confirmation, compare sa valeur puis passe au suivant. Termine par une vérification des points non traités.",
+      "documents": [
+        {
+          "titre": "Demande",
+          "lignes": [
+            {
+              "id": "contrat",
+              "label": "Contrat",
+              "texte": "Habitat 284"
+            },
+            {
+              "id": "sinistre",
+              "label": "Référence",
+              "texte": "S-1038"
+            }
+          ]
+        },
+        {
+          "titre": "Confirmation",
+          "lignes": [
+            {
+              "id": "contrat",
+              "label": "Contrat",
+              "texte": "Habitat 248"
+            },
+            {
+              "id": "sinistre",
+              "label": "Référence",
+              "texte": "S-1038"
+            }
+          ]
+        }
+      ],
+      "champs": [
+        {
+          "id": "contrat",
+          "label": "Contrat"
+        },
+        {
+          "id": "sinistre",
+          "label": "Référence"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "contrat": "ecart",
+        "sinistre": "conforme"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "comparer-documents-v2-1-11",
+    "module": "entrainement",
+    "theme": "comparer-documents",
+    "type": "comparer-documents",
+    "palier": 1,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "fonctions-executives"
+    ],
+    "contenu": {
+      "enonce": "Planning associatif — vérifie chaque point de la confirmation.",
+      "consigne": "Les deux documents restent consultables. Pour chaque point, indique si la confirmation respecte la demande. Une confirmation peut être entièrement conforme.",
+      "methode": "Prends un critère de la demande, retrouve-le dans la confirmation, compare sa valeur puis passe au suivant. Termine par une vérification des points non traités.",
+      "documents": [
+        {
+          "titre": "Demande",
+          "lignes": [
+            {
+              "id": "activite",
+              "label": "Activité",
+              "texte": "atelier lecture"
+            },
+            {
+              "id": "jour",
+              "label": "Jour",
+              "texte": "mercredi"
+            }
+          ]
+        },
+        {
+          "titre": "Confirmation",
+          "lignes": [
+            {
+              "id": "activite",
+              "label": "Activité",
+              "texte": "atelier lecture"
+            },
+            {
+              "id": "jour",
+              "label": "Jour",
+              "texte": "vendredi"
+            }
+          ]
+        }
+      ],
+      "champs": [
+        {
+          "id": "activite",
+          "label": "Activité"
+        },
+        {
+          "id": "jour",
+          "label": "Jour"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "activite": "conforme",
+        "jour": "ecart"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "comparer-documents-v2-1-12",
+    "module": "entrainement",
+    "theme": "comparer-documents",
+    "type": "comparer-documents",
+    "palier": 1,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "fonctions-executives"
+    ],
+    "contenu": {
+      "enonce": "Réservation de restaurant — vérifie chaque point de la confirmation.",
+      "consigne": "Les deux documents restent consultables. Pour chaque point, indique si la confirmation respecte la demande. Une confirmation peut être entièrement conforme.",
+      "methode": "Prends un critère de la demande, retrouve-le dans la confirmation, compare sa valeur puis passe au suivant. Termine par une vérification des points non traités.",
+      "documents": [
+        {
+          "titre": "Demande",
+          "lignes": [
+            {
+              "id": "nom",
+              "label": "Nom",
+              "texte": "Le Rivage"
+            },
+            {
+              "id": "date",
+              "label": "Date",
+              "texte": "12 septembre"
+            }
+          ]
+        },
+        {
+          "titre": "Confirmation",
+          "lignes": [
+            {
+              "id": "nom",
+              "label": "Nom",
+              "texte": "Le Rivage"
+            },
+            {
+              "id": "date",
+              "label": "Date",
+              "texte": "12 septembre"
+            }
+          ]
+        }
+      ],
+      "champs": [
+        {
+          "id": "nom",
+          "label": "Nom"
+        },
+        {
+          "id": "date",
+          "label": "Date"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "nom": "conforme",
+        "date": "conforme"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

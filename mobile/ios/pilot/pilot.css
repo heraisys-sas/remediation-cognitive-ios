@@ -42,3 +42,38 @@ textarea:focus-visible { outline: 3px solid #b2e2ef; outline-offset: 3px; }
 .activityCard span { margin-top: 8px; color: #bac5d1; font-size: .95em; line-height: 1.5; }
 .activityCard:active { background: #304353; }
 @media (min-width: 640px) { .activityCards { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+
+/* Grille de déduction : cases et choix restent lisibles et faciles à toucher. */
+.deductionPalette { display: grid; grid-template-columns: repeat(auto-fit,minmax(8rem,1fr)); gap: 8px; margin: 16px 0; }
+.deductionPalette button { min-height: 52px; margin: 0; text-align: left; }
+.deductionGrid { display: grid; gap: 6px; width: min(100%,36rem); margin: 18px auto; }
+.deductionGrid button { min-width: 48px; min-height: 56px; aspect-ratio: 1; margin: 0; padding: 4px; font-size: clamp(.85rem,3.2vw,1.05rem); overflow-wrap: anywhere; }
+.deductionGrid button:disabled { opacity: 1; background: #202833; color: #edf0f4; border-color: #7a8a9d; }
+.deductionGrid button:focus-visible, .deductionPalette button:focus-visible { outline: 3px solid #b2e2ef; outline-offset: 2px; }
+
+/* Présentations visuelles des mémoires immédiates. */
+.mi-code { display: grid; min-height: 2.2em; place-items: center; margin: 16px 0; font-size: clamp(2rem,12vw,4rem); font-weight: 650; letter-spacing: .12em; font-variant-numeric: tabular-nums; }
+.mi-path-board { display: grid; grid-template-columns: repeat(3,minmax(48px,1fr)); gap: 8px; width: min(100%,22rem); margin: 18px auto; }
+.mi-path-cell { display: grid; min-width: 48px; min-height: 56px; aspect-ratio: 1; place-items: center; border: 1px solid #7a8a9d; border-radius: 8px; background: #202833; color: #edf0f4; }
+.mi-path-board button.mi-path-cell { padding: 4px; }
+.mi-path-cell.is-lit { background: #b2e2ef; border-color: #d7f3fa; box-shadow: 0 0 0 3px #4c8293; }
+.mi-visual-board { display: grid; grid-template-columns: repeat(auto-fit,minmax(56px,1fr)); gap: 8px; margin: 18px 0; }
+.mi-visual-cell { display: grid; min-width: 48px; min-height: 60px; aspect-ratio: 1; place-items: center; border: 1px solid #a9b5c1; border-radius: 8px; background: #303946; color: #101820; font-size: 1.1rem; font-weight: 650; }
+.mi-visual-board button.mi-visual-cell { margin: 0; padding: 5px; }
+.mi-visual-board button.mi-visual-cell[aria-pressed="true"] { outline: 3px solid #b2e2ef; outline-offset: 2px; }
+.mi-object-list { padding-left: 1.5rem; }
+.mi-object-list li { margin: 8px 0; }
+
+.document-source,.comparison-document { padding: 14px; margin: 12px 0; background: #202833; border: 1px solid #7a8a9d; border-radius: 8px; }
+.comparison-option { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; margin-right: 14px; }
+.comparison-option input { width: 24px; min-height: 24px; margin: 0; }
+.comparison-field { margin: 12px 0; border: 1px solid #7a8a9d; border-radius: 8px; }
+.mi-object-board,.immediate-path { position: relative; display: block; width: min(100%,30rem); height: 240px; margin: 20px auto; }
+.mi-object-slot,.immediate-path-cell { position: absolute; display: grid; place-items: center; transform: translate(-50%,-50%); width: clamp(44px,12vw,64px); height: clamp(44px,12vw,64px); border: 1px solid #7a8a9d; border-radius: 6px; background: #202833; margin: 0; padding: 3px; z-index: 1; }
+.mi-object-slot svg,.mi-visual-cell svg { display: block; width: 100%; height: 100%; }
+.immediate-path-cell.is-lit { background: #b2e2ef; outline: 3px solid #edf0f4; }
+.immediate-path-links { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.immediate-path-links line { stroke: #bac5d1; stroke-width: 1; }
+.mi-object-reserve { display: flex; flex-wrap: wrap; gap: 8px; }
+.mi-model-comparison { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 640px) { .mi-model-comparison { grid-template-columns: 1fr 1fr; } }

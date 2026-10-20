@@ -7,7 +7,7 @@ const vm = require('node:vm');
 async function page({native = true, reply = async()=>({started:false}), speechReply = null} = {}) {
   const nodes = {};
   const create = tag => {
-    const node = {tagName:tag, textContent:'', value:'', hidden:false, disabled:false, children:[], attrs:{}, focus(){}, blur(){},
+    const node = {tagName:tag, textContent:'', value:'', hidden:false, disabled:false, children:[], attrs:{}, style:{},dataset:{},classList:{add(){},remove(){}},addEventListener(name,callback){this["on"+name]=callback;},querySelector(){return null;}, focus(){}, blur(){},
       append(...items){this.children.push(...items);}, replaceChildren(...items){this.children=items;},
       setAttribute(key,value){this.attrs[key]=value;}};
     Object.defineProperty(node,'id',{set(value){nodes[value]=this;}, get(){return Object.keys(nodes).find(key=>nodes[key]===this);}});
@@ -15,7 +15,7 @@ async function page({native = true, reply = async()=>({started:false}), speechRe
   };
   const get = id => nodes[id] ||= create();
   const context = vm.createContext({setTimeout,clearTimeout,performance:{now:()=>0}, document:{getElementById:get,
-    querySelectorAll:()=>Object.values(nodes), querySelector:()=>get('heading'), createElement:create, addEventListener(){}},
+    querySelectorAll:()=>Object.values(nodes), querySelector:()=>get('heading'), createElement:create, createTextNode:text=>({textContent:text}), addEventListener(){}},
     window:native ? {webkit:{messageHandlers:{runtime:{postMessage:reply}}}} : {}});
   if(speechReply&&native) context.window.webkit.messageHandlers.speech={postMessage:speechReply};
   const source = path.resolve(__dirname, '../mobile/ios/pilot');
@@ -30,6 +30,8 @@ async function page({native = true, reply = async()=>({started:false}), speechRe
   vm.runInContext(fs.readFileSync(path.join(source,'feedback-flow.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'voice-settings.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'home.js'),'utf8'), context);
+  for(const name of ['deduction','lexical-strategy','functional','comparison','attention','immediate'])vm.runInContext(fs.readFileSync(path.join(source,name+'.js'),'utf8'),context);
+  vm.runInContext(fs.readFileSync(path.resolve(__dirname,'../vendor/remediation/frontend/src/exercises/deduction.js'),'utf8'),context);
   vm.runInContext(fs.readFileSync(path.join(source,'pilot.js'),'utf8'), context);
   await new Promise(resolve => setImmediate(resolve));
   return {get, render:value=>context.render(value), context};
@@ -679,8 +681,9 @@ test('le chargement initial tardif ne laisse pas la préécoute grisée',async()
   assert.equal(app.get('previewVoice').disabled,false);
 });
 test('les compétences enregistrées filtrent les cartes et leur liste explicative',async()=>{
-  const {get}=await page({speechReply:async payload=>payload.operation==='home-settings'?{enabled:['mots','information']}:{}});
-  assert.deepEqual(get('activityCards').children.map(card=>card.id),['activity-card-acces-lexical','activity-card-chercher-information']);
+  const {get,context}=await page({speechReply:async payload=>payload.operation==='home-settings'?{enabled:['mots','information']}:{}});
+  assert.equal(get('activityCards').children.length,6);
+  assert.ok(get('activityCards').children.some(card=>card.id==='activity-card-comparer-documents'));
   assert.equal(get('competency-mots').checked,true);assert.equal(get('competency-calcul').checked,false);
   const choices=get('competencyChoices').children;
   assert.match(choices[1].children[1].children[2].textContent,/Cartes : Retrouver le mot/);
@@ -697,7 +700,7 @@ test('décocher une compétence sauvegarde le filtre sans appeler le moteur',asy
   }});
   const before=runtime.length;get('competency-calcul').checked=false;await get('competency-calcul').onchange();
   assert.equal(runtime.length,before);assert.deepEqual(Array.from(settings.at(-1).enabled),['mots']);
-  assert.deepEqual(get('activityCards').children.map(card=>card.id),['activity-card-acces-lexical']);
+  assert.deepEqual(get('activityCards').children.map(card=>card.id),['activity-card-acces-lexical','activity-card-strategie-semantique','activity-card-strategie-phonologique']);
 });
 test('un enregistrement refusé garde les cartes précédentes et restaure la case',async()=>{
   const {get}=await page({speechReply:async payload=>{
@@ -720,15 +723,46 @@ test('les cartes ne démarrent pas une autre activité pendant une séance',asyn
   render({started:true,session_id:'s',item:{id:'i',contenu:{enonce:'Question'}},position:1,total:2});
   const before=calls.length;await get('activity-card-calcul-mental').onclick();assert.equal(calls.length,before);
 });
-test('les treize parcours disponibles ont une carte et une seule',async()=>{
+test('les trente-six parcours disponibles ont une carte et une seule',async()=>{
   const {context}=await page();const ids=vm.runInContext('homeCompetencies.flatMap(item=>item.cards.map(card=>card[0]))',context);
-  assert.equal(ids.length,13);assert.equal(new Set(ids).size,13);
+  assert.equal(ids.length,36);assert.equal(new Set(ids).size,36);
   const html=fs.readFileSync(path.resolve(__dirname,'../mobile/ios/pilot/index.html'),'utf8');
-  const activities=[...html.matchAll(/<option value="([^"]+)"/g)].map(match=>match[1]);
+  const select=html.split('<select id="activity" hidden>')[1].split('</select>')[0];
+  const activities=[...select.matchAll(/<option value="([^"]+)"/g)].map(match=>match[1]);
   assert.deepEqual(Array.from(ids).sort(),activities.sort());
 });
 test('les contrôles tolèrent les cartes et cases non montées dans le DOM réel',async()=>{
   const {context}=await page();const original=context.document.getElementById;
   context.document.getElementById=id=>id.startsWith('activity-card-')||id.startsWith('competency-')?null:original(id);
   assert.doesNotThrow(()=>context.renderHomeControls());
+});
+
+test('comparer conserve le brouillon après reprise et permet la validation après un rendu occupé', async()=>{
+  const {get,context}=await page();
+  const view={started:true,session_id:'s',activity:'comparer-documents',position:1,item:{id:'i',contenu:{}},comparison:{revision:1,documents:[{titre:'A',lignes:[]},{titre:'B',lignes:[]}],champs:[{id:'date',label:'Date'}]}};
+  context.fixture=view;
+  vm.runInContext('state=fixture; paused=false; renderComparison(fixture)',context);
+  const descend=node=>[node,...node.children.flatMap(child=>child.children?descend(child):[])];
+  let nodes=descend(get('comparison'));
+  const radio=nodes.find(node=>node.type==='radio');radio.checked=true;radio.onchange();
+  assert.equal(nodes.find(node=>node.tagName==='button').disabled,false);
+  vm.runInContext('busy=true;renderComparison(fixture);busy=false',context);
+  nodes=descend(get('comparison'));
+  assert.equal(nodes.find(node=>node.type==='radio').checked,true);
+  assert.equal(nodes.find(node=>node.tagName==='button').disabled,false);
+  context.fixture={...view,position:2,item:{id:'other',contenu:{}}};
+  vm.runInContext('renderComparison(fixture)',context);
+  assert.equal(descend(get('comparison')).find(node=>node.tagName==='button').disabled,true);
+});
+
+test('actualiser ne montre que le message courant puis masque les messages au rappel',async()=>{
+  const {get,context}=await page();
+  const view={started:true,session_id:'s',activity:'actualiser-consigne',position:1,item:{id:'i'},functional:{phase:'messages',revision:1,index:1,total:3,etape:{titre:'Modification',texte:'Le rendez-vous est mardi.'}}};
+  context.fixture=view;vm.runInContext('renderFunctional(fixture)',context);
+  const texts=node=>[node.textContent,...node.children.flatMap(child=>child.children?texts(child):[child.textContent])].join(' ');
+  assert.match(texts(get('functional')),/mardi/);
+  context.fixture={...view,functional:{phase:'answer',revision:2,fields:[{id:'jour',label:'Jour'}]}};
+  vm.runInContext('renderFunctional(fixture)',context);
+  assert.doesNotMatch(texts(get('functional')),/mardi/);
+  assert.equal(get('functional-submit').disabled,true);
 });

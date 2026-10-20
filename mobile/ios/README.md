@@ -438,3 +438,17 @@ ouvrir le microphone. Revue Sol favorable. Sur l’iPhone Air, les quatre tests
 XCTest passent (zéro échec), avec les 20 contrôles embarqués et la régression
 WebKit. Preuves locales ignorées : `.local/dictation-validation-device.log` et
 `.local/dictation-validation-device.xcresult`.
+
+## Lot complémentaire du 20 octobre 2026
+
+Le pilote comporte maintenant 32 parcours classiques et quatre protocoles
+séparés de mémoire immédiate. Les sections précédentes décrivent les validations
+historiques, pas une recette physique de ces ajouts.
+Voir [l’inventaire, les contrats et les limites](../../docs/30-technique/parcours-complementaires.md)
+et [l’expérience de délégation](../../docs/30-technique/experience-delegation.md).
+
+Le 20 octobre, les neuf tests natifs du dernier pilote passent sur iPhone Air :
+20 contrôles du moteur, réglages, voix/audio, parcours existants, comparaison
+de documents et Code avec second essai aidé. Les données XCTest sont isolées
+du stockage utilisé à la main. Cela reste une couverture représentative,
+pas une recette exhaustive des 36 parcours.

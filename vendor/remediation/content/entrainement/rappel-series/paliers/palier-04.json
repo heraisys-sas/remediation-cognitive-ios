@@ -1,0 +1,466 @@
+[
+  {
+    "id": "rs2-4-libre-01",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "rs-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre. La question viendra après un temps d'attente de 20 secondes.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "poisson",
+            "colline",
+            "chaussure"
+          ],
+          [
+            "fourchette",
+            "soleil",
+            "fenêtre"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 20,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "poisson",
+        "colline",
+        "chaussure",
+        "fourchette",
+        "soleil",
+        "fenêtre"
+      ],
+      "seuil": 0.5
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-4-libre-02",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "rs-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre. La question viendra après un temps d'attente de 20 secondes.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "tapis",
+            "manteau",
+            "colline"
+          ],
+          [
+            "chaussure",
+            "lune",
+            "fourchette",
+            "sable"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 20,
+      "portee": "premiere-serie",
+      "enonce": "Quels étaient les mots de la PREMIÈRE série ? Sépare-les par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "tapis",
+        "manteau",
+        "colline"
+      ],
+      "seuil": 0.6
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-4-libre-03",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "rs-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre. La question viendra après un temps d'attente de 20 secondes.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "soleil",
+            "neige",
+            "chapeau"
+          ],
+          [
+            "crayon",
+            "lune",
+            "marteau"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 20,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "soleil",
+        "neige",
+        "chapeau",
+        "crayon",
+        "lune",
+        "marteau"
+      ],
+      "seuil": 0.5
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-4-libre-04",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "rs-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre. La question viendra après un temps d'attente de 20 secondes.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "chemin",
+            "voiture",
+            "jardin"
+          ],
+          [
+            "guitare",
+            "camion",
+            "chapeau",
+            "tapis"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 20,
+      "portee": "premiere-serie",
+      "enonce": "Quels étaient les mots de la PREMIÈRE série ? Sépare-les par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "chemin",
+        "voiture",
+        "jardin"
+      ],
+      "seuil": 0.6
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-4-libre-05",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "rs-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre. La question viendra après un temps d'attente de 20 secondes.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "poisson",
+            "ballon",
+            "porte"
+          ],
+          [
+            "stylo",
+            "chemin",
+            "vélo"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 20,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "poisson",
+        "ballon",
+        "porte",
+        "stylo",
+        "chemin",
+        "vélo"
+      ],
+      "seuil": 0.5
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-4-libre-06",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "rs-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre. La question viendra après un temps d'attente de 20 secondes.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "nuage",
+            "montre",
+            "chaussure"
+          ],
+          [
+            "poisson",
+            "cuisine",
+            "journal",
+            "radis"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 20,
+      "portee": "premiere-serie",
+      "enonce": "Quels étaient les mots de la PREMIÈRE série ? Sépare-les par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "nuage",
+        "montre",
+        "chaussure"
+      ],
+      "seuil": 0.6
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-4-libre-07",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "rs-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre. La question viendra après un temps d'attente de 20 secondes.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "bougie",
+            "jardin",
+            "musique"
+          ],
+          [
+            "vélo",
+            "voiture",
+            "chemin"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 20,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "bougie",
+        "jardin",
+        "musique",
+        "vélo",
+        "voiture",
+        "chemin"
+      ],
+      "seuil": 0.5
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-4-libre-08",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "rs-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre. La question viendra après un temps d'attente de 20 secondes.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "neige",
+            "chemise",
+            "vélo"
+          ],
+          [
+            "chaussure",
+            "poisson",
+            "bouteille",
+            "sable"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 20,
+      "portee": "premiere-serie",
+      "enonce": "Quels étaient les mots de la PREMIÈRE série ? Sépare-les par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "neige",
+        "chemise",
+        "vélo"
+      ],
+      "seuil": 0.6
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

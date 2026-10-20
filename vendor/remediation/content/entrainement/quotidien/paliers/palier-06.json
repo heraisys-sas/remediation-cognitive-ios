@@ -1,0 +1,422 @@
+[
+  {
+    "id": "qo2-6-solution-01",
+    "type": "meilleure-solution",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "qo-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'action la plus utile. Astuce : commence par ce qui est simple et vérifiable.",
+      "enonce": "L’imprimante indique « bac papier vide ». Tu as du papier du format demandé et aucun autre message d’erreur.",
+      "options": [
+        "Réinstaller le pilote de l’imprimante",
+        "Changer la cartouche d’encre",
+        "Remplir le bac demandé puis relancer l’impression"
+      ],
+      "aide": "Compare chaque action avec le problème à résoudre maintenant."
+    },
+    "reponse": {
+      "valeur": "Remplir le bac demandé puis relancer l’impression"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-6-solution-02",
+    "type": "meilleure-solution",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "qo-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'action la plus utile. Astuce : commence par ce qui est simple et vérifiable.",
+      "enonce": "Tu viens de découvrir que tu as manqué ton rendez-vous de ce matin. Tu veux régler la situation actuelle avant d’organiser les prochains.",
+      "options": [
+        "Ajouter une alarme au rendez-vous déjà passé",
+        "Contacter le service pour convenir de la suite",
+        "Préparer uniquement un calendrier pour le mois prochain"
+      ],
+      "aide": "Compare chaque action avec le problème à résoudre maintenant."
+    },
+    "reponse": {
+      "valeur": "Contacter le service pour convenir de la suite"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-6-solution-03",
+    "type": "meilleure-solution",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "qo-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'action la plus utile. Astuce : commence par ce qui est simple et vérifiable.",
+      "enonce": "Tu ne retrouves pas un document. Le registre indique qu’il a été classé dans le dossier « logement ». Tu veux le retrouver maintenant.",
+      "options": [
+        "Renommer tous les dossiers avant de chercher",
+        "Consulter le dossier indiqué dans le registre",
+        "Créer un nouveau dossier de rangement"
+      ],
+      "aide": "Compare chaque action avec le problème à résoudre maintenant."
+    },
+    "reponse": {
+      "valeur": "Consulter le dossier indiqué dans le registre"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-6-solution-04",
+    "type": "meilleure-solution",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "qo-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'action la plus utile. Astuce : commence par ce qui est simple et vérifiable.",
+      "enonce": "Une seule rubrique du formulaire t’est incompréhensible. Les autres sont remplies et une assistance est disponible pour expliquer les rubriques.",
+      "options": [
+        "Recommencer les rubriques déjà complétées",
+        "Envoyer le formulaire en laissant la rubrique obligatoire vide",
+        "Demander une explication sur cette rubrique précise"
+      ],
+      "aide": "Compare chaque action avec le problème à résoudre maintenant."
+    },
+    "reponse": {
+      "valeur": "Demander une explication sur cette rubrique précise"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-6-solution-05",
+    "type": "meilleure-solution",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "qo-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'action la plus utile. Astuce : commence par ce qui est simple et vérifiable.",
+      "enonce": "Deux tâches attendent : l’une bloque ton collègue maintenant, l’autre n’est due que demain. Elles prennent le même temps.",
+      "options": [
+        "Alterner toutes les minutes entre les deux",
+        "Faire d’abord celle due demain",
+        "Faire la tâche dont ton collègue a besoin maintenant"
+      ],
+      "aide": "Compare chaque action avec le problème à résoudre maintenant."
+    },
+    "reponse": {
+      "valeur": "Faire la tâche dont ton collègue a besoin maintenant"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-6-solution-06",
+    "type": "meilleure-solution",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "qo-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'action la plus utile. Astuce : commence par ce qui est simple et vérifiable.",
+      "enonce": "Une conversation voisine empêche d’entendre ton appel. Une pièce calme est libre et tu peux t’y déplacer.",
+      "options": [
+        "Poursuivre l’appel dans la pièce calme",
+        "Demander de répéter chaque phrase sans changer de pièce",
+        "Augmenter seulement le volume au maximum"
+      ],
+      "aide": "Compare chaque action avec le problème à résoudre maintenant."
+    },
+    "reponse": {
+      "valeur": "Poursuivre l’appel dans la pièce calme"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-6-solution-07",
+    "type": "meilleure-solution",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "qo-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'action la plus utile. Astuce : commence par ce qui est simple et vérifiable.",
+      "enonce": "Tu es au magasin avec une liste enregistrée sur ton téléphone. Tu ne te rappelles plus le dernier produit.",
+      "options": [
+        "Reconstituer de mémoire la liste complète",
+        "Consulter la liste enregistrée",
+        "Acheter un produit supplémentaire au cas où"
+      ],
+      "aide": "Compare chaque action avec le problème à résoudre maintenant."
+    },
+    "reponse": {
+      "valeur": "Consulter la liste enregistrée"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-6-solution-08",
+    "type": "meilleure-solution",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "qo-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'action la plus utile. Astuce : commence par ce qui est simple et vérifiable.",
+      "enonce": "Un rendez-vous passe du mardi au jeudi. Ton agenda contient encore le mardi et doit ne garder que le nouveau créneau.",
+      "options": [
+        "Modifier l’entrée existante pour le jeudi",
+        "Ajouter jeudi en conservant l’entrée mardi",
+        "Mettre une note générale sans modifier la date"
+      ],
+      "aide": "Compare chaque action avec le problème à résoudre maintenant."
+    },
+    "reponse": {
+      "valeur": "Modifier l’entrée existante pour le jeudi"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-6-solution-09",
+    "type": "meilleure-solution",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "qo-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'action la plus utile. Astuce : commence par ce qui est simple et vérifiable.",
+      "enonce": "Tu dois traiter 30 dossiers identiques. Tu te perds lorsque plusieurs sont ouverts. Chaque dossier peut être terminé séparément.",
+      "options": [
+        "Ouvrir les 30 pour voir l’ensemble",
+        "Terminer un dossier avant d’ouvrir le suivant",
+        "Commencer la première page de chaque dossier"
+      ],
+      "aide": "Compare chaque action avec le problème à résoudre maintenant."
+    },
+    "reponse": {
+      "valeur": "Terminer un dossier avant d’ouvrir le suivant"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-6-solution-10",
+    "type": "meilleure-solution",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "qo-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'action la plus utile. Astuce : commence par ce qui est simple et vérifiable.",
+      "enonce": "Tu lis une notice longue pour trouver uniquement la procédure de retour. Le sommaire indique cette rubrique.",
+      "options": [
+        "Relire d’abord toutes les caractéristiques techniques",
+        "Aller à la rubrique de retour indiquée",
+        "Chercher uniquement dans la rubrique d’installation"
+      ],
+      "aide": "Compare chaque action avec le problème à résoudre maintenant."
+    },
+    "reponse": {
+      "valeur": "Aller à la rubrique de retour indiquée"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-6-solution-11",
+    "type": "meilleure-solution",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "qo-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'action la plus utile. Astuce : commence par ce qui est simple et vérifiable.",
+      "enonce": "Tu veux connaître les pièces exigées pour une inscription. L’accueil répond à une question précise à la fois.",
+      "options": [
+        "Demander la liste des pièces pour cette inscription",
+        "Demander tous les horaires de l’établissement",
+        "Raconter d’abord toutes les démarches déjà faites"
+      ],
+      "aide": "Compare chaque action avec le problème à résoudre maintenant."
+    },
+    "reponse": {
+      "valeur": "Demander la liste des pièces pour cette inscription"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-6-solution-12",
+    "type": "meilleure-solution",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "qo-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'action la plus utile. Astuce : commence par ce qui est simple et vérifiable.",
+      "enonce": "Tu effectues une étape qui ne peut pas être interrompue pendant deux minutes. Un appel non urgent arrive ; la messagerie est active.",
+      "options": [
+        "Finir cette étape puis consulter le message et rappeler",
+        "Interrompre l’étape pour répondre immédiatement",
+        "Commencer une autre tâche avant de vérifier le message"
+      ],
+      "aide": "Compare chaque action avec le problème à résoudre maintenant."
+    },
+    "reponse": {
+      "valeur": "Finir cette étape puis consulter le message et rappeler"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

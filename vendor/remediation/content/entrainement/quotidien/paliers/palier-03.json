@@ -1,0 +1,410 @@
+[
+  {
+    "id": "qo-3-temps-01",
+    "type": "estimation-temps",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "vitesse-traitement"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "qo-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Estime le temps nécessaire, en minutes. Astuce : compare avec une fois où tu l'as déjà fait.",
+      "enonce": "Aller à pied à la boulangerie du coin (à 500 mètres).",
+      "aide": "Une estimation, pas une mesure exacte : une fourchette large est acceptée."
+    },
+    "reponse": {
+      "valeur": 10,
+      "intervalle": [
+        3,
+        25
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-3-temps-02",
+    "type": "estimation-temps",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "vitesse-traitement"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "qo-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Estime le temps nécessaire, en minutes. Astuce : compare avec une fois où tu l'as déjà fait.",
+      "enonce": "Prendre une douche complète.",
+      "aide": "Une estimation, pas une mesure exacte : une fourchette large est acceptée."
+    },
+    "reponse": {
+      "valeur": 15,
+      "intervalle": [
+        5,
+        30
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-3-temps-03",
+    "type": "estimation-temps",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "vitesse-traitement"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "qo-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Estime le temps nécessaire, en minutes. Astuce : compare avec une fois où tu l'as déjà fait.",
+      "enonce": "Remplir un formulaire administratif de deux pages.",
+      "aide": "Une estimation, pas une mesure exacte : une fourchette large est acceptée."
+    },
+    "reponse": {
+      "valeur": 20,
+      "intervalle": [
+        5,
+        45
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-3-temps-04",
+    "type": "estimation-temps",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "vitesse-traitement"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "qo-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Estime le temps nécessaire, en minutes. Astuce : compare avec une fois où tu l'as déjà fait.",
+      "enonce": "Préparer un repas simple : pâtes et sauce.",
+      "aide": "Une estimation, pas une mesure exacte : une fourchette large est acceptée."
+    },
+    "reponse": {
+      "valeur": 25,
+      "intervalle": [
+        10,
+        50
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-3-temps-05",
+    "type": "estimation-temps",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "vitesse-traitement"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "qo-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Estime le temps nécessaire, en minutes. Astuce : compare avec une fois où tu l'as déjà fait.",
+      "enonce": "Descendre les poubelles au local.",
+      "aide": "Une estimation, pas une mesure exacte : une fourchette large est acceptée."
+    },
+    "reponse": {
+      "valeur": 5,
+      "intervalle": [
+        1,
+        15
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-3-temps-06",
+    "type": "estimation-temps",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "vitesse-traitement"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "qo-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Estime le temps nécessaire, en minutes. Astuce : compare avec une fois où tu l'as déjà fait.",
+      "enonce": "Étendre une lessive.",
+      "aide": "Une estimation, pas une mesure exacte : une fourchette large est acceptée."
+    },
+    "reponse": {
+      "valeur": 10,
+      "intervalle": [
+        3,
+        25
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-3-temps-07",
+    "type": "estimation-temps",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "vitesse-traitement"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "qo-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Estime le temps nécessaire, en minutes. Astuce : compare avec une fois où tu l'as déjà fait.",
+      "enonce": "Faire les courses pour deux ou trois jours.",
+      "aide": "Une estimation, pas une mesure exacte : une fourchette large est acceptée."
+    },
+    "reponse": {
+      "valeur": 40,
+      "intervalle": [
+        15,
+        75
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-3-temps-08",
+    "type": "estimation-temps",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "vitesse-traitement"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "qo-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Estime le temps nécessaire, en minutes. Astuce : compare avec une fois où tu l'as déjà fait.",
+      "enonce": "Réserver un billet de train en ligne.",
+      "aide": "Une estimation, pas une mesure exacte : une fourchette large est acceptée."
+    },
+    "reponse": {
+      "valeur": 10,
+      "intervalle": [
+        3,
+        25
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-3-temps-09",
+    "type": "estimation-temps",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "vitesse-traitement"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "qo-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Estime le temps nécessaire, en minutes. Astuce : compare avec une fois où tu l'as déjà fait.",
+      "enonce": "Nettoyer la salle de bain.",
+      "aide": "Une estimation, pas une mesure exacte : une fourchette large est acceptée."
+    },
+    "reponse": {
+      "valeur": 30,
+      "intervalle": [
+        10,
+        60
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-3-temps-10",
+    "type": "estimation-temps",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "vitesse-traitement"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "qo-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Estime le temps nécessaire, en minutes. Astuce : compare avec une fois où tu l'as déjà fait.",
+      "enonce": "Prendre un rendez-vous par téléphone.",
+      "aide": "Une estimation, pas une mesure exacte : une fourchette large est acceptée."
+    },
+    "reponse": {
+      "valeur": 5,
+      "intervalle": [
+        1,
+        15
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-3-temps-11",
+    "type": "estimation-temps",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "vitesse-traitement"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "qo-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Estime le temps nécessaire, en minutes. Astuce : compare avec une fois où tu l'as déjà fait.",
+      "enonce": "Préparer un courrier avec une enveloppe et un timbre.",
+      "aide": "Une estimation, pas une mesure exacte : une fourchette large est acceptée."
+    },
+    "reponse": {
+      "valeur": 8,
+      "intervalle": [
+        2,
+        20
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-3-temps-12",
+    "type": "estimation-temps",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "vitesse-traitement"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "qo-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Estime le temps nécessaire, en minutes. Astuce : compare avec une fois où tu l'as déjà fait.",
+      "enonce": "Aller à la pharmacie et revenir (10 minutes à pied).",
+      "aide": "Une estimation, pas une mesure exacte : une fourchette large est acceptée."
+    },
+    "reponse": {
+      "valeur": 20,
+      "intervalle": [
+        8,
+        40
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

@@ -1,0 +1,534 @@
+[
+  {
+    "id": "rse1-4-libre-01",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "series-entendues",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "rse-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre. La question viendra après un temps d'attente de 20 secondes.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "camion",
+            "sable",
+            "bateau"
+          ],
+          [
+            "soleil",
+            "table",
+            "musique"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "auditive",
+        "pause_serie_ms": 3000,
+        "audio": {
+          "camion": "/ui/audio/series/fr-thomas-155-v1/7b43699447a175ec.m4a",
+          "sable": "/ui/audio/series/fr-thomas-155-v1/e14da5aa2d206b43.m4a",
+          "bateau": "/ui/audio/series/fr-thomas-155-v1/90f8669a7794a24e.m4a",
+          "soleil": "/ui/audio/series/fr-thomas-155-v1/79be8aca15c39cfc.m4a",
+          "table": "/ui/audio/series/fr-thomas-155-v1/084ffd19fd055455.m4a",
+          "musique": "/ui/audio/series/fr-thomas-155-v1/825d9dc7295d9a52.m4a"
+        }
+      },
+      "delai_s": 20,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "camion",
+        "sable",
+        "bateau",
+        "soleil",
+        "table",
+        "musique"
+      ],
+      "seuil": 0.5
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_series_entendues.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rse1-4-libre-02",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "series-entendues",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "rse-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre. La question viendra après un temps d'attente de 20 secondes.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "ballon",
+            "bouteille",
+            "sable"
+          ],
+          [
+            "montre",
+            "bureau",
+            "radis",
+            "orange"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "auditive",
+        "pause_serie_ms": 3000,
+        "audio": {
+          "ballon": "/ui/audio/series/fr-thomas-155-v1/fc58aad3c044d70f.m4a",
+          "bouteille": "/ui/audio/series/fr-thomas-155-v1/8658d03a7e7b8ff1.m4a",
+          "sable": "/ui/audio/series/fr-thomas-155-v1/e14da5aa2d206b43.m4a",
+          "montre": "/ui/audio/series/fr-thomas-155-v1/d8d375e6eafecb9b.m4a",
+          "bureau": "/ui/audio/series/fr-thomas-155-v1/5017f00acf88c13e.m4a",
+          "radis": "/ui/audio/series/fr-thomas-155-v1/6f1b98af23fb367d.m4a",
+          "orange": "/ui/audio/series/fr-thomas-155-v1/f063af920399a4cc.m4a"
+        }
+      },
+      "delai_s": 20,
+      "portee": "premiere-serie",
+      "enonce": "Quels étaient les mots de la PREMIÈRE série ? Sépare-les par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "ballon",
+        "bouteille",
+        "sable"
+      ],
+      "seuil": 0.6
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_series_entendues.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rse1-4-libre-03",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "series-entendues",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "rse-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre. La question viendra après un temps d'attente de 20 secondes.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "stylo",
+            "rivière",
+            "chemise"
+          ],
+          [
+            "radis",
+            "nuage",
+            "tapis"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "auditive",
+        "pause_serie_ms": 3000,
+        "audio": {
+          "stylo": "/ui/audio/series/fr-thomas-155-v1/eb3b39942653d568.m4a",
+          "rivière": "/ui/audio/series/fr-thomas-155-v1/1137dbc0fdfb660a.m4a",
+          "chemise": "/ui/audio/series/fr-thomas-155-v1/de0bf8d2ecf9e71e.m4a",
+          "radis": "/ui/audio/series/fr-thomas-155-v1/6f1b98af23fb367d.m4a",
+          "nuage": "/ui/audio/series/fr-thomas-155-v1/5b51c90d0728a97e.m4a",
+          "tapis": "/ui/audio/series/fr-thomas-155-v1/b09dd3f86116dbbb.m4a"
+        }
+      },
+      "delai_s": 20,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "stylo",
+        "rivière",
+        "chemise",
+        "radis",
+        "nuage",
+        "tapis"
+      ],
+      "seuil": 0.5
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_series_entendues.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rse1-4-libre-04",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "series-entendues",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "rse-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre. La question viendra après un temps d'attente de 20 secondes.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "journal",
+            "neige",
+            "chat"
+          ],
+          [
+            "feuille",
+            "drapeau",
+            "pomme",
+            "fromage"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "auditive",
+        "pause_serie_ms": 3000,
+        "audio": {
+          "journal": "/ui/audio/series/fr-thomas-155-v1/517e07e052bf4f7d.m4a",
+          "neige": "/ui/audio/series/fr-thomas-155-v1/978e2dbed35fc4f8.m4a",
+          "chat": "/ui/audio/series/fr-thomas-155-v1/6064ff5752305a3d.m4a",
+          "feuille": "/ui/audio/series/fr-thomas-155-v1/55a4bc25e40bbc3c.m4a",
+          "drapeau": "/ui/audio/series/fr-thomas-155-v1/597ce5bb6106b9ca.m4a",
+          "pomme": "/ui/audio/series/fr-thomas-155-v1/b3faf137b5ef7de0.m4a",
+          "fromage": "/ui/audio/series/fr-thomas-155-v1/f0cf388aa86160f8.m4a"
+        }
+      },
+      "delai_s": 20,
+      "portee": "premiere-serie",
+      "enonce": "Quels étaient les mots de la PREMIÈRE série ? Sépare-les par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "journal",
+        "neige",
+        "chat"
+      ],
+      "seuil": 0.6
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_series_entendues.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rse1-4-libre-05",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "series-entendues",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "rse-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre. La question viendra après un temps d'attente de 20 secondes.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "vélo",
+            "radis",
+            "feuille"
+          ],
+          [
+            "fromage",
+            "chaussure",
+            "chemin"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "auditive",
+        "pause_serie_ms": 3000,
+        "audio": {
+          "vélo": "/ui/audio/series/fr-thomas-155-v1/58b462ef8f5c8059.m4a",
+          "radis": "/ui/audio/series/fr-thomas-155-v1/6f1b98af23fb367d.m4a",
+          "feuille": "/ui/audio/series/fr-thomas-155-v1/55a4bc25e40bbc3c.m4a",
+          "fromage": "/ui/audio/series/fr-thomas-155-v1/f0cf388aa86160f8.m4a",
+          "chaussure": "/ui/audio/series/fr-thomas-155-v1/ae73d82198b556c2.m4a",
+          "chemin": "/ui/audio/series/fr-thomas-155-v1/e215503e305ff2c6.m4a"
+        }
+      },
+      "delai_s": 20,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "vélo",
+        "radis",
+        "feuille",
+        "fromage",
+        "chaussure",
+        "chemin"
+      ],
+      "seuil": 0.5
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_series_entendues.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rse1-4-libre-06",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "series-entendues",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "rse-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre. La question viendra après un temps d'attente de 20 secondes.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "nuage",
+            "cahier",
+            "tapis"
+          ],
+          [
+            "porte",
+            "orange",
+            "chemise",
+            "drapeau"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "auditive",
+        "pause_serie_ms": 3000,
+        "audio": {
+          "nuage": "/ui/audio/series/fr-thomas-155-v1/5b51c90d0728a97e.m4a",
+          "cahier": "/ui/audio/series/fr-thomas-155-v1/a3d2b24b85373d02.m4a",
+          "tapis": "/ui/audio/series/fr-thomas-155-v1/b09dd3f86116dbbb.m4a",
+          "porte": "/ui/audio/series/fr-thomas-155-v1/fb95dd077f3ee247.m4a",
+          "orange": "/ui/audio/series/fr-thomas-155-v1/f063af920399a4cc.m4a",
+          "chemise": "/ui/audio/series/fr-thomas-155-v1/de0bf8d2ecf9e71e.m4a",
+          "drapeau": "/ui/audio/series/fr-thomas-155-v1/597ce5bb6106b9ca.m4a"
+        }
+      },
+      "delai_s": 20,
+      "portee": "premiere-serie",
+      "enonce": "Quels étaient les mots de la PREMIÈRE série ? Sépare-les par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "nuage",
+        "cahier",
+        "tapis"
+      ],
+      "seuil": 0.6
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_series_entendues.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rse1-4-libre-07",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "series-entendues",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "rse-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre. La question viendra après un temps d'attente de 20 secondes.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "feuille",
+            "chapeau",
+            "orange"
+          ],
+          [
+            "soleil",
+            "chaussure",
+            "sable"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "auditive",
+        "pause_serie_ms": 3000,
+        "audio": {
+          "feuille": "/ui/audio/series/fr-thomas-155-v1/55a4bc25e40bbc3c.m4a",
+          "chapeau": "/ui/audio/series/fr-thomas-155-v1/bf02f512b11e166e.m4a",
+          "orange": "/ui/audio/series/fr-thomas-155-v1/f063af920399a4cc.m4a",
+          "soleil": "/ui/audio/series/fr-thomas-155-v1/79be8aca15c39cfc.m4a",
+          "chaussure": "/ui/audio/series/fr-thomas-155-v1/ae73d82198b556c2.m4a",
+          "sable": "/ui/audio/series/fr-thomas-155-v1/e14da5aa2d206b43.m4a"
+        }
+      },
+      "delai_s": 20,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "feuille",
+        "chapeau",
+        "orange",
+        "soleil",
+        "chaussure",
+        "sable"
+      ],
+      "seuil": 0.5
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_series_entendues.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rse1-4-libre-08",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "series-entendues",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "rse-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre. La question viendra après un temps d'attente de 20 secondes.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "chemise",
+            "crayon",
+            "orange"
+          ],
+          [
+            "panier",
+            "table",
+            "radis",
+            "guitare"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "auditive",
+        "pause_serie_ms": 3000,
+        "audio": {
+          "chemise": "/ui/audio/series/fr-thomas-155-v1/de0bf8d2ecf9e71e.m4a",
+          "crayon": "/ui/audio/series/fr-thomas-155-v1/87ab8ec24328b851.m4a",
+          "orange": "/ui/audio/series/fr-thomas-155-v1/f063af920399a4cc.m4a",
+          "panier": "/ui/audio/series/fr-thomas-155-v1/4f40a3145d4f193c.m4a",
+          "table": "/ui/audio/series/fr-thomas-155-v1/084ffd19fd055455.m4a",
+          "radis": "/ui/audio/series/fr-thomas-155-v1/6f1b98af23fb367d.m4a",
+          "guitare": "/ui/audio/series/fr-thomas-155-v1/5a09f8fdf5295166.m4a"
+        }
+      },
+      "delai_s": 20,
+      "portee": "premiere-serie",
+      "enonce": "Quels étaient les mots de la PREMIÈRE série ? Sépare-les par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "chemise",
+        "crayon",
+        "orange"
+      ],
+      "seuil": 0.6
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_series_entendues.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

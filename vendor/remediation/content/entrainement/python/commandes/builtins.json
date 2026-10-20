@@ -1,0 +1,242 @@
+[
+  {
+    "id": "py-cmd-len-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "python/commandes/builtins",
+    "fonctions_ciblees": ["memorisation-longue", "memoire-travail"],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Commande qui renvoie le nombre d'éléments d'une liste",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "len"
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "py-cmd-sorted-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "python/commandes/builtins",
+    "fonctions_ciblees": ["memorisation-longue", "memoire-travail"],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Commande qui renvoie une copie triée d'une liste, sans modifier l'originale",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "sorted"
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "py-cmd-enumerate-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "python/commandes/builtins",
+    "fonctions_ciblees": ["memorisation-longue", "memoire-travail"],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Commande qui parcourt une liste en renvoyant à chaque tour la paire (index, élément)",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "enumerate"
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "py-cmd-zip-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "python/commandes/builtins",
+    "fonctions_ciblees": ["memorisation-longue", "memoire-travail"],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Commande qui regroupe deux listes élément à élément en paires",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "zip"
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "py-cmd-range-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "python/commandes/builtins",
+    "fonctions_ciblees": ["memorisation-longue", "memoire-travail"],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Commande qui produit les entiers de 0 à n-1",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "range"
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "py-cmd-sum-01",
+    "type": "prediction-sortie",
+    "module": "entrainement",
+    "theme": "python/commandes/builtins",
+    "fonctions_ciblees": ["memoire-travail"],
+    "palier": 2,
+    "prerequis": [],
+    "cap_complexite": "1 niveau d'imbrication max (cap projet : 2)",
+    "contenu": {
+      "enonce": "sum([3, 5, 2])",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": 10
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "py-cmd-min-01",
+    "type": "prediction-sortie",
+    "module": "entrainement",
+    "theme": "python/commandes/builtins",
+    "fonctions_ciblees": ["memoire-travail"],
+    "palier": 2,
+    "prerequis": [],
+    "cap_complexite": "1 niveau d'imbrication max (cap projet : 2)",
+    "contenu": {
+      "enonce": "min([8, 2, 5])",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": 2
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "py-cmd-max-01",
+    "type": "prediction-sortie",
+    "module": "entrainement",
+    "theme": "python/commandes/builtins",
+    "fonctions_ciblees": ["memoire-travail"],
+    "palier": 2,
+    "prerequis": [],
+    "cap_complexite": "1 niveau d'imbrication max (cap projet : 2)",
+    "contenu": {
+      "enonce": "max([8, 2, 5])",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": 8
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "py-cmd-round-01",
+    "type": "prediction-sortie",
+    "module": "entrainement",
+    "theme": "python/commandes/builtins",
+    "fonctions_ciblees": ["memoire-travail"],
+    "palier": 2,
+    "prerequis": [],
+    "cap_complexite": "1 niveau d'imbrication max (cap projet : 2)",
+    "contenu": {
+      "enonce": "round(3.14159, 2)",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": 3.14
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "py-cmd-join-01",
+    "type": "prediction-sortie",
+    "module": "entrainement",
+    "theme": "python/commandes/builtins",
+    "fonctions_ciblees": ["memoire-travail"],
+    "palier": 2,
+    "prerequis": [],
+    "cap_complexite": "1 niveau d'imbrication max (cap projet : 2)",
+    "contenu": {
+      "enonce": "''.join(['a', 'b', 'c'])",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "abc"
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

@@ -1,0 +1,282 @@
+[
+  {
+    "id": "qo2-7-aide-01",
+    "type": "aide-externe",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-prospective",
+      "planification"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "qo-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'aide la plus efficace. Astuce : une bonne aide est au bon endroit, au bon moment, et visible juste avant l'action.",
+      "enonce": "Tu dois sortir les bacs jeudi à 20 h. Tu seras chez toi avec ton téléphone, mais tu ne consulteras plus tes mails après 18 h.",
+      "options": [
+        "Programmer une alarme jeudi à 20 h",
+        "Mettre une alarme vendredi à 20 h",
+        "Programmer un courriel jeudi à 20 h"
+      ],
+      "aide": "Se souvenir, c'est plus facile quand le rappel est placé là où l'action aura lieu."
+    },
+    "reponse": {
+      "valeur": "Programmer une alarme jeudi à 20 h"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-7-aide-02",
+    "type": "aide-externe",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-prospective",
+      "planification"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "qo-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'aide la plus efficace. Astuce : une bonne aide est au bon endroit, au bon moment, et visible juste avant l'action.",
+      "enonce": "Tu dois appeler demain à 9 h avec un numéro et une référence. Tu seras dehors avec ton téléphone.",
+      "options": [
+        "Noter le numéro seul sur le bureau de la maison",
+        "Créer un rappel à 9 h sans les informations nécessaires",
+        "Créer un rappel à 9 h avec le numéro et la référence"
+      ],
+      "aide": "Se souvenir, c'est plus facile quand le rappel est placé là où l'action aura lieu."
+    },
+    "reponse": {
+      "valeur": "Créer un rappel à 9 h avec le numéro et la référence"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-7-aide-03",
+    "type": "aide-externe",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-prospective",
+      "planification"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "qo-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'aide la plus efficace. Astuce : une bonne aide est au bon endroit, au bon moment, et visible juste avant l'action.",
+      "enonce": "Tu dois emporter une carte professionnelle. Ton téléphone restera éteint et tu prends toujours ton sac près de la porte.",
+      "options": [
+        "Mettre la carte dans le sac avant le départ",
+        "Poser la carte dans un dossier que tu n’emportes pas",
+        "Prévoir une notification sur le téléphone éteint"
+      ],
+      "aide": "Se souvenir, c'est plus facile quand le rappel est placé là où l'action aura lieu."
+    },
+    "reponse": {
+      "valeur": "Mettre la carte dans le sac avant le départ"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-7-aide-04",
+    "type": "aide-externe",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-prospective",
+      "planification"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "qo-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'aide la plus efficace. Astuce : une bonne aide est au bon endroit, au bon moment, et visible juste avant l'action.",
+      "enonce": "Tu dois emporter un dossier demain. Il ne tient pas dans ton sac ; tu prends toujours tes clés sur une tablette dégagée.",
+      "options": [
+        "Poser le dossier sur la tablette avec les clés",
+        "Mettre un rappel sur le calendrier du mois suivant",
+        "Poser le dossier dans la pièce où tu ne passes pas"
+      ],
+      "aide": "Se souvenir, c'est plus facile quand le rappel est placé là où l'action aura lieu."
+    },
+    "reponse": {
+      "valeur": "Poser le dossier sur la tablette avec les clés"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-7-aide-05",
+    "type": "aide-externe",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-prospective",
+      "planification"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "qo-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'aide la plus efficace. Astuce : une bonne aide est au bon endroit, au bon moment, et visible juste avant l'action.",
+      "enonce": "Tu dois vérifier les fenêtres en partant. Tu regardes toujours la poignée de la porte d’entrée ; le passage doit rester libre.",
+      "options": [
+        "Poser un objet au sol dans le passage",
+        "Fixer un petit rappel visible près de la poignée",
+        "Mettre le rappel au dos d’une porte de placard fermée"
+      ],
+      "aide": "Se souvenir, c'est plus facile quand le rappel est placé là où l'action aura lieu."
+    },
+    "reponse": {
+      "valeur": "Fixer un petit rappel visible près de la poignée"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-7-aide-06",
+    "type": "aide-externe",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-prospective",
+      "planification"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "qo-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'aide la plus efficace. Astuce : une bonne aide est au bon endroit, au bon moment, et visible juste avant l'action.",
+      "enonce": "Le livre doit être rendu aujourd’hui. Tu pars directement à la bibliothèque et ton sac est déjà près de toi.",
+      "options": [
+        "Mettre le livre dans le sac maintenant",
+        "Créer un rappel pour ce soir après la fermeture",
+        "Noter seulement la date de retour dans l’agenda"
+      ],
+      "aide": "Se souvenir, c'est plus facile quand le rappel est placé là où l'action aura lieu."
+    },
+    "reponse": {
+      "valeur": "Mettre le livre dans le sac maintenant"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-7-aide-07",
+    "type": "aide-externe",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-prospective",
+      "planification"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "qo-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'aide la plus efficace. Astuce : une bonne aide est au bon endroit, au bon moment, et visible juste avant l'action.",
+      "enonce": "Tu dois transmettre un code à ta sœur maintenant. Tu as le code et elle peut recevoir des messages écrits.",
+      "options": [
+        "Lui envoyer directement le code par message",
+        "Lui envoyer seulement « rappelle-moi »",
+        "Créer un rappel pour lui envoyer le code demain"
+      ],
+      "aide": "Se souvenir, c'est plus facile quand le rappel est placé là où l'action aura lieu."
+    },
+    "reponse": {
+      "valeur": "Lui envoyer directement le code par message"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-7-aide-08",
+    "type": "aide-externe",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-prospective",
+      "planification"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "qo-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis l'aide la plus efficace. Astuce : une bonne aide est au bon endroit, au bon moment, et visible juste avant l'action.",
+      "enonce": "Tu dois acheter du pain sur le trajet du retour à 18 h. Tu auras ton téléphone et la boulangerie ferme à 18 h 30.",
+      "options": [
+        "Mettre la note sur le réfrigérateur à la maison",
+        "Régler un rappel à 18 h avec le lieu de l’achat",
+        "Régler un rappel à 19 h au retour chez toi"
+      ],
+      "aide": "Se souvenir, c'est plus facile quand le rappel est placé là où l'action aura lieu."
+    },
+    "reponse": {
+      "valeur": "Régler un rappel à 18 h avec le lieu de l’achat"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

@@ -45,6 +45,13 @@ static BOOL PrepareEngine(void) {
     NSURL *base = [NSFileManager.defaultManager URLsForDirectory:NSApplicationSupportDirectory
                                                      inDomains:NSUserDomainMask].firstObject;
     NSURL *storage = [base URLByAppendingPathComponent:@"RemediationPilot" isDirectory:YES];
+    // Les scénarios XCTest ne consomment pas les quotas du pilote utilisé à la main.
+    if (NSClassFromString(@"XCTestCase") &&
+        [NSProcessInfo.processInfo.arguments containsObject:@"ios_probe"]) {
+        storage = [[NSURL fileURLWithPath:NSTemporaryDirectory() isDirectory:YES]
+            URLByAppendingPathComponent:[@"remediation-uitest-" stringByAppendingString:NSUUID.UUID.UUIDString]
+            isDirectory:YES];
+    }
     NSError *error = nil;
     [NSFileManager.defaultManager createDirectoryAtURL:storage withIntermediateDirectories:YES
         attributes:@{NSFileProtectionKey: NSFileProtectionCompleteUntilFirstUserAuthentication} error:&error];

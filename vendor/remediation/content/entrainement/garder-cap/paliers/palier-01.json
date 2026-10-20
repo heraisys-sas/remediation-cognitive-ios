@@ -1,0 +1,1022 @@
+[
+  {
+    "id": "cap-2-reprise-01",
+    "type": "reprise-interrompue",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification",
+      "memoire-travail"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Finaliser un dossier associatif",
+      "but": "Le dossier doit être complet et cohérent avant son dépôt.",
+      "points": [
+        {
+          "id": "formulaire",
+          "label": "Formulaire",
+          "etat": "Le formulaire principal est rempli et signé.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "annexe",
+          "label": "Annexe",
+          "etat": "Le brouillon contient encore l’ancienne annexe B.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "pieces",
+          "label": "Pièces",
+          "etat": "Les trois justificatifs demandés sont joints.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "budget",
+          "label": "Budget",
+          "etat": "Le budget total a été recalculé et validé.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        }
+      ],
+      "interruption_apres": 1,
+      "interruption": {
+        "enonce": "Quel mot désigne un moyen de transport ?",
+        "options": [
+          "Train",
+          "Dossier",
+          "Budget"
+        ]
+      },
+      "methode": "Avant l’interruption, avance point par point. Après le détour, retrouve le dernier point traité et reprends au suivant.",
+      "consigne": "Commence le contrôle. Un bref message interrompra réellement la tâche ; réponds-y, puis retrouve où reprendre sans contrainte de temps."
+    },
+    "reponse": {
+      "valeur": {
+        "points": {
+          "formulaire": "valide",
+          "annexe": "reprendre",
+          "pieces": "valide",
+          "budget": "valide"
+        },
+        "reprise": "annexe"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-10-02",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-2-reprise-02",
+    "type": "reprise-interrompue",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification",
+      "memoire-travail"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Préparer un déplacement professionnel",
+      "but": "Tous les éléments du déplacement doivent correspondre aux dates retenues.",
+      "points": [
+        {
+          "id": "transfert",
+          "label": "Transfert",
+          "etat": "Aucun trajet entre la gare et l’hôtel n’est réservé.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "hotel",
+          "label": "Hôtel",
+          "etat": "La chambre est réservée du 19 au 21 au lieu du 18 au 20.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "train",
+          "label": "Train",
+          "etat": "Le billet correspond au départ du 18 novembre.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "identite",
+          "label": "Identité",
+          "etat": "La pièce d’identité est disponible et valide.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        }
+      ],
+      "interruption_apres": 2,
+      "interruption": {
+        "enonce": "Quel nombre vient juste après 27 ?",
+        "options": [
+          "26",
+          "28",
+          "37"
+        ]
+      },
+      "methode": "Avant l’interruption, avance point par point. Après le détour, retrouve le dernier point traité et reprends au suivant.",
+      "consigne": "Commence le contrôle. Un bref message interrompra réellement la tâche ; réponds-y, puis retrouve où reprendre sans contrainte de temps."
+    },
+    "reponse": {
+      "valeur": {
+        "points": {
+          "transfert": "reprendre",
+          "hotel": "reprendre",
+          "train": "valide",
+          "identite": "valide"
+        },
+        "reprise": "train"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-10-02",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-2-reprise-03",
+    "type": "reprise-interrompue",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification",
+      "memoire-travail"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Préparer une réunion hybride",
+      "but": "La réunion doit être accessible sur place et à distance avec les bons documents.",
+      "points": [
+        {
+          "id": "salle",
+          "label": "Salle",
+          "etat": "La réservation porte encore sur Atlas alors que la réunion passe en Vega.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "lien",
+          "label": "Lien distant",
+          "etat": "L’invitation contient le lien de la réunion précédente.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "ordre",
+          "label": "Ordre du jour",
+          "etat": "L’ordre du jour final a été envoyé.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "participants",
+          "label": "Participants",
+          "etat": "Les six participants ont répondu.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        }
+      ],
+      "interruption_apres": 3,
+      "interruption": {
+        "enonce": "Quel mot appartient à la catégorie des lieux ?",
+        "options": [
+          "Bibliothèque",
+          "Signature",
+          "Mercredi"
+        ]
+      },
+      "methode": "Avant l’interruption, avance point par point. Après le détour, retrouve le dernier point traité et reprends au suivant.",
+      "consigne": "Commence le contrôle. Un bref message interrompra réellement la tâche ; réponds-y, puis retrouve où reprendre sans contrainte de temps."
+    },
+    "reponse": {
+      "valeur": {
+        "points": {
+          "salle": "reprendre",
+          "lien": "reprendre",
+          "ordre": "valide",
+          "participants": "valide"
+        },
+        "reprise": "participants"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-10-02",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-2-reprise-04",
+    "type": "reprise-interrompue",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification",
+      "memoire-travail"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Vérifier une commande de matériel",
+      "but": "La commande doit respecter la référence, la quantité, le budget et le lieu de livraison.",
+      "points": [
+        {
+          "id": "budget",
+          "label": "Budget",
+          "etat": "Le total de 480 euros respecte le plafond.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "reference",
+          "label": "Référence",
+          "etat": "La référence AX-24 figure sur le bon.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "quantite",
+          "label": "Quantité",
+          "etat": "Le bon indique huit unités au lieu de six.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "livraison",
+          "label": "Livraison",
+          "etat": "L’adresse correspond à l’ancien site.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        }
+      ],
+      "interruption_apres": 1,
+      "interruption": {
+        "enonce": "Quelle proposition est une couleur ?",
+        "options": [
+          "Vega",
+          "Orange",
+          "Facture"
+        ]
+      },
+      "methode": "Avant l’interruption, avance point par point. Après le détour, retrouve le dernier point traité et reprends au suivant.",
+      "consigne": "Commence le contrôle. Un bref message interrompra réellement la tâche ; réponds-y, puis retrouve où reprendre sans contrainte de temps."
+    },
+    "reponse": {
+      "valeur": {
+        "points": {
+          "budget": "valide",
+          "reference": "valide",
+          "quantite": "reprendre",
+          "livraison": "reprendre"
+        },
+        "reprise": "reference"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-10-02",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-2-reprise-05",
+    "type": "reprise-interrompue",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification",
+      "memoire-travail"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Clore une note de synthèse",
+      "but": "La note et ses annexes doivent utiliser les mêmes données actualisées.",
+      "points": [
+        {
+          "id": "tableau",
+          "label": "Tableau",
+          "etat": "Le tableau central utilise encore la version 6.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "graphique",
+          "label": "Graphique",
+          "etat": "Le graphique a été recalculé depuis la version 7.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "export",
+          "label": "Export",
+          "etat": "Le PDF final a été produit avant la dernière correction.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "texte",
+          "label": "Texte",
+          "etat": "Les chiffres du texte proviennent de la version 7.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        }
+      ],
+      "interruption_apres": 2,
+      "interruption": {
+        "enonce": "Quel objet sert à écrire ?",
+        "options": [
+          "Stylo",
+          "Billet",
+          "Salle"
+        ]
+      },
+      "methode": "Avant l’interruption, avance point par point. Après le détour, retrouve le dernier point traité et reprends au suivant.",
+      "consigne": "Commence le contrôle. Un bref message interrompra réellement la tâche ; réponds-y, puis retrouve où reprendre sans contrainte de temps."
+    },
+    "reponse": {
+      "valeur": {
+        "points": {
+          "tableau": "reprendre",
+          "graphique": "valide",
+          "export": "reprendre",
+          "texte": "valide"
+        },
+        "reprise": "export"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-10-02",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-2-reprise-06",
+    "type": "reprise-interrompue",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification",
+      "memoire-travail"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Préparer une inscription à une formation",
+      "but": "Le dossier doit correspondre à la session choisie et être complet.",
+      "points": [
+        {
+          "id": "accord",
+          "label": "Accord",
+          "etat": "L’accord de prise en charge est joint.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "session",
+          "label": "Session",
+          "etat": "La session du 8 décembre est sélectionnée.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "format",
+          "label": "Format",
+          "etat": "Le formulaire mentionne sur place au lieu d’à distance.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "identite",
+          "label": "Identité",
+          "etat": "Le nom comporte une inversion de deux lettres.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        }
+      ],
+      "interruption_apres": 3,
+      "interruption": {
+        "enonce": "Quel mois vient après avril ?",
+        "options": [
+          "Mars",
+          "Mai",
+          "Juin"
+        ]
+      },
+      "methode": "Avant l’interruption, avance point par point. Après le détour, retrouve le dernier point traité et reprends au suivant.",
+      "consigne": "Commence le contrôle. Un bref message interrompra réellement la tâche ; réponds-y, puis retrouve où reprendre sans contrainte de temps."
+    },
+    "reponse": {
+      "valeur": {
+        "points": {
+          "accord": "valide",
+          "session": "valide",
+          "format": "reprendre",
+          "identite": "reprendre"
+        },
+        "reprise": "identite"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-10-02",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-2-reprise-07",
+    "type": "reprise-interrompue",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification",
+      "memoire-travail"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Organiser un atelier public",
+      "but": "Le matériel, le lieu, l’horaire et la capacité doivent suivre la fiche validée.",
+      "points": [
+        {
+          "id": "capacite",
+          "label": "Capacité",
+          "etat": "Le formulaire accepte encore 18 inscriptions pour une limite de 14.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "materiel",
+          "label": "Matériel",
+          "etat": "Le vidéoprojecteur est réservé.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "horaire",
+          "label": "Horaire",
+          "etat": "Le début à 18 h 30 est correctement annoncé.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "lieu",
+          "label": "Lieu",
+          "etat": "L’affiche indique la salle 3 au lieu de la salle 5.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        }
+      ],
+      "interruption_apres": 1,
+      "interruption": {
+        "enonce": "Quel mot désigne un document ?",
+        "options": [
+          "Annexe",
+          "Portail",
+          "Matin"
+        ]
+      },
+      "methode": "Avant l’interruption, avance point par point. Après le détour, retrouve le dernier point traité et reprends au suivant.",
+      "consigne": "Commence le contrôle. Un bref message interrompra réellement la tâche ; réponds-y, puis retrouve où reprendre sans contrainte de temps."
+    },
+    "reponse": {
+      "valeur": {
+        "points": {
+          "capacite": "reprendre",
+          "materiel": "valide",
+          "horaire": "valide",
+          "lieu": "reprendre"
+        },
+        "reprise": "materiel"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-10-02",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-2-reprise-08",
+    "type": "reprise-interrompue",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification",
+      "memoire-travail"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Contrôler une facture avant paiement",
+      "but": "La facture doit correspondre au devis et aux paiements déjà enregistrés.",
+      "points": [
+        {
+          "id": "fournisseur",
+          "label": "Fournisseur",
+          "etat": "Le nom et le compte bancaire correspondent au devis.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "reference",
+          "label": "Référence",
+          "etat": "La facture porte F81 au lieu de F18.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "montant",
+          "label": "Montant",
+          "etat": "Le total est de 1 840 euros au lieu de 1 480 euros.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "acompte",
+          "label": "Acompte",
+          "etat": "L’acompte de 480 euros est bien déduit.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        }
+      ],
+      "interruption_apres": 2,
+      "interruption": {
+        "enonce": "Quel nombre est le plus grand ?",
+        "options": [
+          "18",
+          "81",
+          "28"
+        ]
+      },
+      "methode": "Avant l’interruption, avance point par point. Après le détour, retrouve le dernier point traité et reprends au suivant.",
+      "consigne": "Commence le contrôle. Un bref message interrompra réellement la tâche ; réponds-y, puis retrouve où reprendre sans contrainte de temps."
+    },
+    "reponse": {
+      "valeur": {
+        "points": {
+          "fournisseur": "valide",
+          "reference": "reprendre",
+          "montant": "reprendre",
+          "acompte": "valide"
+        },
+        "reprise": "montant"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-10-02",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-2-reprise-09",
+    "type": "reprise-interrompue",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification",
+      "memoire-travail"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Préparer une visite de chantier",
+      "but": "Les informations transmises doivent permettre l’accès et respecter les consignes.",
+      "points": [
+        {
+          "id": "acces",
+          "label": "Accès",
+          "etat": "Le message conseille l’entrée nord, désormais fermée.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "contact",
+          "label": "Contact",
+          "etat": "Le numéro indiqué appartient à l’ancien responsable.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "equipement",
+          "label": "Équipement",
+          "etat": "Le port de chaussures de sécurité est mentionné.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "date",
+          "label": "Date",
+          "etat": "La visite est indiquée mardi 12 octobre.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        }
+      ],
+      "interruption_apres": 3,
+      "interruption": {
+        "enonce": "Quel mot désigne une personne ?",
+        "options": [
+          "Trésorier",
+          "Guichet",
+          "Contrat"
+        ]
+      },
+      "methode": "Avant l’interruption, avance point par point. Après le détour, retrouve le dernier point traité et reprends au suivant.",
+      "consigne": "Commence le contrôle. Un bref message interrompra réellement la tâche ; réponds-y, puis retrouve où reprendre sans contrainte de temps."
+    },
+    "reponse": {
+      "valeur": {
+        "points": {
+          "acces": "reprendre",
+          "contact": "reprendre",
+          "equipement": "valide",
+          "date": "valide"
+        },
+        "reprise": "date"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-10-02",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-2-reprise-10",
+    "type": "reprise-interrompue",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification",
+      "memoire-travail"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Finaliser une réservation culturelle",
+      "but": "La réservation doit correspondre au spectacle, aux personnes et aux contraintes choisies.",
+      "points": [
+        {
+          "id": "places",
+          "label": "Places",
+          "etat": "Deux places contiguës sont attribuées.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "acces",
+          "label": "Accès",
+          "etat": "La demande d’accès sans escalier n’apparaît pas.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "spectacle",
+          "label": "Spectacle",
+          "etat": "Le billet porte bien Le Cid.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "date",
+          "label": "Date",
+          "etat": "La confirmation indique le 18 avril au lieu du 16.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        }
+      ],
+      "interruption_apres": 1,
+      "interruption": {
+        "enonce": "Quel jour vient avant vendredi ?",
+        "options": [
+          "Jeudi",
+          "Samedi",
+          "Mardi"
+        ]
+      },
+      "methode": "Avant l’interruption, avance point par point. Après le détour, retrouve le dernier point traité et reprends au suivant.",
+      "consigne": "Commence le contrôle. Un bref message interrompra réellement la tâche ; réponds-y, puis retrouve où reprendre sans contrainte de temps."
+    },
+    "reponse": {
+      "valeur": {
+        "points": {
+          "places": "valide",
+          "acces": "reprendre",
+          "spectacle": "valide",
+          "date": "reprendre"
+        },
+        "reprise": "acces"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-10-02",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-2-reprise-11",
+    "type": "reprise-interrompue",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification",
+      "memoire-travail"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Préparer un dossier d’assurance",
+      "but": "Les références et pièces doivent permettre le traitement du sinistre déclaré.",
+      "points": [
+        {
+          "id": "photos",
+          "label": "Photos",
+          "etat": "Les quatre photos demandées sont jointes.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "date",
+          "label": "Date",
+          "etat": "La déclaration porte le 19 janvier au lieu du 9.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "sinistre",
+          "label": "Sinistre",
+          "etat": "La référence saisie est S-1083 au lieu de S-1038.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "contrat",
+          "label": "Contrat",
+          "etat": "Le numéro Habitat 284 est exact.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        }
+      ],
+      "interruption_apres": 2,
+      "interruption": {
+        "enonce": "Quel mot désigne une action ?",
+        "options": [
+          "Vérifier",
+          "Atlas",
+          "Facture"
+        ]
+      },
+      "methode": "Avant l’interruption, avance point par point. Après le détour, retrouve le dernier point traité et reprends au suivant.",
+      "consigne": "Commence le contrôle. Un bref message interrompra réellement la tâche ; réponds-y, puis retrouve où reprendre sans contrainte de temps."
+    },
+    "reponse": {
+      "valeur": {
+        "points": {
+          "photos": "valide",
+          "date": "reprendre",
+          "sinistre": "reprendre",
+          "contrat": "valide"
+        },
+        "reprise": "sinistre"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-10-02",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-2-reprise-12",
+    "type": "reprise-interrompue",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification",
+      "memoire-travail"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Publier un programme associatif",
+      "but": "Le programme publié doit reprendre les décisions du dernier comité.",
+      "points": [
+        {
+          "id": "horaire",
+          "label": "Horaire",
+          "etat": "Le créneau du mercredi à 18 h est exact.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "contact",
+          "label": "Contact",
+          "etat": "Le courriel renvoie vers une adresse qui n’est plus utilisée.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "animateur",
+          "label": "Animateur",
+          "etat": "Le nom affiché est celui de l’animateur remplacé.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        },
+        {
+          "id": "activite",
+          "label": "Activité",
+          "etat": "L’atelier lecture apparaît dans le programme.",
+          "options": [
+            "Déjà validé",
+            "À reprendre"
+          ]
+        }
+      ],
+      "interruption_apres": 3,
+      "interruption": {
+        "enonce": "Quelle proposition est une durée ?",
+        "options": [
+          "Deux heures",
+          "Mardi",
+          "Centre B"
+        ]
+      },
+      "methode": "Avant l’interruption, avance point par point. Après le détour, retrouve le dernier point traité et reprends au suivant.",
+      "consigne": "Commence le contrôle. Un bref message interrompra réellement la tâche ; réponds-y, puis retrouve où reprendre sans contrainte de temps."
+    },
+    "reponse": {
+      "valeur": {
+        "points": {
+          "horaire": "valide",
+          "contact": "reprendre",
+          "animateur": "reprendre",
+          "activite": "valide"
+        },
+        "reprise": "activite"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_garder_cap.py)",
+      "date_creation": "2026-10-02",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

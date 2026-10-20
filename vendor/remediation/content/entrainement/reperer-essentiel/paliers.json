@@ -1,0 +1,26 @@
+{
+  "theme": "reperer-essentiel",
+  "paliers": [
+    {
+      "id": "reperer-essentiel-palier-1",
+      "description": "Un critère temporel",
+      "prerequis": [],
+      "fichier": "paliers/palier-01.json",
+      "nb_items": 12
+    },
+    {
+      "id": "reperer-essentiel-palier-2",
+      "description": "Deux catégories de changements",
+      "prerequis": [],
+      "fichier": "paliers/palier-02.json",
+      "nb_items": 12
+    },
+    {
+      "id": "reperer-essentiel-palier-3",
+      "description": "Tous les changements nécessitant une action",
+      "prerequis": [],
+      "fichier": "paliers/palier-03.json",
+      "nb_items": 12
+    }
+  ]
+}

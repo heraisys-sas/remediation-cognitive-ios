@@ -1,6 +1,6 @@
 "use strict";
 function isChoiceActivity(view) {
-  return ["choisir-plan","auto-instruction","verifier-plan","chercher-information"].includes(view.activity);
+  return ["choisir-plan","auto-instruction","verifier-plan","chercher-information","cap-adapter","cap-verifier"].includes(view.activity);
 }
 function renderChoices(view) {
   const region=element("choices"); region.replaceChildren();

@@ -17,11 +17,19 @@ from mobile.transactional_store import TransactionalStore  # noqa: E402
 from mobile.contextes_runtime import ContextesRuntime
 from mobile.choice_runtime import ChoiceRuntime, CHOICE_ACTIVITIES
 from mobile.memory_runtime import MemoryRuntime, MEMORY_ACTIVITIES
+from mobile.comparison_runtime import ComparisonRuntime, COMPARISON_ACTIVITIES
+from mobile.attention_runtime import AttentionRuntime, ATTENTION_ACTIVITIES
+from mobile.immediate_runtime import ImmediateRuntime
+from mobile.lexical_strategy_runtime import LexicalStrategyRuntime, LEXICAL_STRATEGY_ACTIVITIES
+from mobile.functional_runtime import FunctionalRuntime, FUNCTIONAL_ACTIVITIES
 from mobile.semantic_adapter import install as install_semantics
 from mobile import pqrst_protocol  # noqa: E402
 
 ACTIVITIES = {
     "calcul-mental": ("calcul-mental", None, "Calcul mental"),
+    "deduction": ("deduction", None, "Déduction"),
+    "anglais": ("anglais", None, "Verbes irréguliers anglais"),
+    "python": ("python", None, "Lire du Python"),
     "acces-lexical": ("evocation", "acces-lexical", "Retrouver le mot"),
     "memoire-source": ("evocation", "memoire-source", "Retrouver le contexte"),
     "pqrst-guide": ("methodes", "pqrst-guide", "PQRST guidé"),
@@ -30,9 +38,13 @@ ACTIVITIES = {
 
 ACTIVITIES.update(CHOICE_ACTIVITIES)
 ACTIVITIES.update(MEMORY_ACTIVITIES)
+ACTIVITIES.update(LEXICAL_STRATEGY_ACTIVITIES)
+ACTIVITIES.update(FUNCTIONAL_ACTIVITIES)
+ACTIVITIES.update(COMPARISON_ACTIVITIES)
+ACTIVITIES.update(ATTENTION_ACTIVITIES)
 
 
-class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime):
+class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime, LexicalStrategyRuntime, FunctionalRuntime, ComparisonRuntime, AttentionRuntime, ImmediateRuntime):
     """Instance sérialisée par l'appelant natif ; données dans le conteneur de l'app."""
 
     def __init__(self, storage_directory: str):
@@ -114,6 +126,22 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime):
 
     def _execute(self, request):
         action = request.get("action")
+        if action=="start" and (request.get("activity","").startswith("mi-") or request.get("activity")=="memoires-immediates"):
+            data=dict(request)
+            if data["activity"].startswith("mi-"):data["parcours"]=data["activity"][3:];data["activity"]="memoires-immediates"
+            return self._immediate_start(data)
+        if self.ui.get("immediate"):
+            if action=="view":return self._immediate_view()
+            if action=="immediate-step":return self._immediate_step(request)
+            if action=="immediate-interrupt":
+                view=self._immediate_view()
+                if request.get("session_id")!=view["session_id"] or request.get("item_id")!=view["item_id"] or type(request.get("revision")) is not int or request["revision"]!=view["immediate"]["revision"]:
+                    raise ValueError("Interruption périmée")
+                return self._immediate_interrupt()
+            if action=="finish":return self._immediate_finish(request)
+            if self._immediate_active():raise ValueError("Terminer le bloc de mémoire avant de changer d’activité")
+        if action=="comparison-step":return self._comparison_step(request)
+        if action=="attention-step":return self._attention_step(request)
         if action == "start":
             activity = request.get("activity", "calcul-mental")
             if activity not in ACTIVITIES:
@@ -125,11 +153,18 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime):
                 self.manager._sessions.clear()
                 theme, parcours, _ = ACTIVITIES[activity]
                 result = self.manager.demarrer(theme, parcours=parcours)
-                self.ui = {"session": result, "queue": [i["id"] for i in result["items"]],
+                kept={key:copy.deepcopy(self.ui[key]) for key in ("immediate_daily","immediate_history") if key in self.ui}
+                self.ui = {**kept,"session": result, "queue": [i["id"] for i in result["items"]],
                            "cursor": 0, "feedback": None, "reprise_support": {},
                            "activity": activity, "hints": {}}
+                if activity in LEXICAL_STRATEGY_ACTIVITIES:
+                    self._lexical_strategy_start()
                 if activity == "memoire-source":
                     self._contextes_start()
+        elif action == "lexical-strategy-step":
+            return self._lexical_strategy_step(request)
+        elif action == "functional-step":
+            return self._functional_step(request)
         elif action == "memory-step":
             return self._memory_step(request)
         elif action == "choice-answer":
@@ -146,6 +181,8 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime):
             if self.ui.get("feedback") is not None:
                 self.ui["cursor"] += 1
                 self.ui["feedback"] = None
+                if self.ui.get("activity") in LEXICAL_STRATEGY_ACTIVITIES and self.ui["cursor"] < len(self.ui["queue"]):
+                    self._lexical_strategy_start()
             result = self._view()
         elif action == "dismiss-stop-proposal":
             self.ui["stop_proposal"] = False
@@ -162,6 +199,8 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime):
             counts[item["id"]] = min(len(hints), counts.get(item["id"], 0) + 1)
             result = self._view()
         elif action in ("answer", "reveal"):
+            if self.ui.get("activity") in LEXICAL_STRATEGY_ACTIVITIES or self.ui.get("activity") in FUNCTIONAL_ACTIVITIES or self.ui.get("activity") in COMPARISON_ACTIVITIES or self.ui.get("activity") in ATTENTION_ACTIVITIES:
+                raise ValueError("Utiliser le parcours séquencé")
             if self.ui.get("activity") in MEMORY_ACTIVITIES:
                 raise ValueError("Utiliser le rappel mémoire séquencé")
             if self.ui.get("activity") in CHOICE_ACTIVITIES:
@@ -206,6 +245,14 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime):
             result = self.manager.stockage.lire_maitrise(f"{theme}--{parcours}" if parcours else theme)
         else:
             raise ValueError("Action native non prise en charge")
+        if action == "start" and self.ui.get("activity") in COMPARISON_ACTIVITIES:
+            result={**result,"items":[{"id":i["id"],"type":i["type"],"contenu":{k:v for k,v in i["contenu"].items() if k in ("enonce","consigne","methode")}} for i in result["items"]]}
+        if action == "start" and self.ui.get("activity") in ATTENTION_ACTIVITIES:
+            result={**result,"items":[self._attention_stub(item) for item in result["items"]]}
+        if action == "start" and self.ui.get("activity") in LEXICAL_STRATEGY_ACTIVITIES:
+            result = {**result, "items": [self._lexical_strategy_stub(item) for item in result["items"]]}
+        if action == "start" and self.ui.get("activity") in FUNCTIONAL_ACTIVITIES:
+            result = {**result, "items": [self._functional_stub(item) for item in result["items"]]}
         if action == "start" and self.ui.get("activity") in MEMORY_ACTIVITIES:
             result = {**result, "items": [self._memory_stub(item) for item in result["items"]]}
         if action == "start" and self.ui.get("activity") == "memoire-source":
@@ -231,7 +278,22 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime):
             str(self.ui["cursor"]), pqrst_protocol.create(self.ui["cursor"] >= len(self.ui["session"]["items"])))
 
     def _mark_restored_interruption(self):
+        if self._immediate_active():
+            self._immediate_interrupt()
+            return
+        if self.ui.get("activity") in COMPARISON_ACTIVITIES:
+            self._comparison_interrupt()
+            return
+        if self.ui.get("activity") in ATTENTION_ACTIVITIES:
+            self._attention_interrupt()
+            return
         if "session" not in self.ui or self._session().terminee or self.ui.get("feedback"):
+            return
+        if self.ui.get("activity") in LEXICAL_STRATEGY_ACTIVITIES:
+            self._lexical_strategy_interrupt()
+            return
+        if self.ui.get("activity") in FUNCTIONAL_ACTIVITIES:
+            self._functional_interrupt()
             return
         if self.ui.get("activity") in MEMORY_ACTIVITIES:
             self._memory_interrupt()
@@ -298,6 +360,7 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime):
         return current
 
     def _view(self):
+        if self.ui.get("immediate"):return self._immediate_view()
         if "session" not in self.ui:
             return {"started": False}
         session = self.ui["session"]
@@ -306,6 +369,8 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime):
         metadata = {"activity": activity, "title": ACTIVITIES[activity][2]}
         if current.terminee:
             return {"started": True, "finished": True, "summary": current.resume_cloture, **metadata}
+        if activity in COMPARISON_ACTIVITIES:return self._comparison_view(metadata)
+        if activity in ATTENTION_ACTIVITIES:return self._attention_view(metadata)
         if activity in MEMORY_ACTIVITIES:
             return self._memory_view(metadata)
         if activity == "memoire-source":
@@ -315,6 +380,13 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime):
         by_id = {item["id"]: item for item in session["items"]}
         item = by_id[queue[cursor]] if cursor < len(queue) else None
         protocol = None
+        strategy = functional = None
+        if item and activity in LEXICAL_STRATEGY_ACTIVITIES:
+            strategy = self._lexical_strategy_view(current.items_par_id[item["id"]])
+            item = self._lexical_strategy_stub(item)
+        if item and activity in FUNCTIONAL_ACTIVITIES:
+            functional = self._functional_view(current.items_par_id[item["id"]])
+            item = self._functional_stub(item)
         if item and item["type"] == "pqrst-mise-en-oeuvre":
             if not self.ui["feedback"]:
                 protocol = pqrst_protocol.screen(self._protocol(), item)
@@ -323,7 +395,7 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime):
                 "choice_revision": self.ui.get("choice_revision", 0),
                 "retry_feedback": self.ui.get("retry_feedback"),
                 "hints_used": self.ui.get("hints", {}).get(queue[cursor], 0) if cursor < len(queue) else 0,
-                "item": item, "protocol": protocol,
+                "item": item, "protocol": protocol, "lexical_strategy": strategy, "functional": functional,
                 "position": cursor + 1, "total": len(queue),
                 "feedback": self.ui["feedback"],
                 "arret_propose": self.ui.get("stop_proposal", False),
