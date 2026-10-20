@@ -41,15 +41,23 @@
 - (void)emit:(NSString *)kind status:(NSString *)status token:(NSString *)token text:(NSString *)text {
     if (self.eventSink && token) self.eventSink(@{@"kind":kind, @"status":status, @"token":token, @"text":text ?: @""});
 }
-- (AVSpeechSynthesisVoice *)frenchVoice {
-    AVSpeechSynthesisVoice *fallback = nil;
+- (NSArray<AVSpeechSynthesisVoice *> *)selectableFrenchVoices {
+    NSMutableArray *voices = [NSMutableArray new];
     for (AVSpeechSynthesisVoice *voice in AVSpeechSynthesisVoice.speechVoices) {
+        if (![voice.language hasPrefix:@"fr-"] || [voice.identifier containsString:@"com.apple.eloquence."]) continue;
         if (voice.voiceTraits & (AVSpeechSynthesisVoiceTraitIsPersonalVoice | AVSpeechSynthesisVoiceTraitIsNoveltyVoice)) continue;
-        if ([voice.language isEqualToString:@"fr-FR"]) {
-            if (!fallback || voice.quality > fallback.quality) fallback = voice;
-        }
+        [voices addObject:voice];
     }
-    return fallback;
+    return voices;
+}
+- (AVSpeechSynthesisVoice *)frenchVoice {
+    NSString *preferred = [NSUserDefaults.standardUserDefaults stringForKey:@"RCFrenchVoiceIdentifier"];
+    AVSpeechSynthesisVoice *fallback = nil;
+    for (AVSpeechSynthesisVoice *voice in [self selectableFrenchVoices]) {
+        if ([voice.identifier isEqualToString:preferred]) return voice;
+        if ([voice.language isEqualToString:@"fr-FR"] && (!fallback || voice.quality > fallback.quality)) fallback = voice;
+    }
+    return fallback ?: [self selectableFrenchVoices].firstObject;
 }
 - (void)stopSpeaking {
     NSString *token = self.speechToken;
@@ -176,6 +184,23 @@
     if (![operation isKindOfClass:NSString.class]) { reply(nil, @"Commande audio invalide."); return; }
     if ([operation isEqualToString:@"capabilities"]) {
         reply(@{@"speech":([self frenchVoice] ? @YES : @NO), @"on_device_dictation":(self.recognizer.supportsOnDeviceRecognition ? @YES : @NO)}, nil); return;
+    }
+    if ([operation isEqualToString:@"voices"]) {
+        NSMutableArray *voices = [NSMutableArray new];
+        for (AVSpeechSynthesisVoice *voice in [self selectableFrenchVoices])
+            [voices addObject:@{@"identifier":voice.identifier,@"name":voice.name,@"language":voice.language,@"quality":@(voice.quality)}];
+        reply(@{@"voices":voices,@"selected":[self frenchVoice].identifier ?: @""}, nil); return;
+    }
+    if ([operation isEqualToString:@"set-voice"]) {
+        NSString *identifier = command[@"identifier"];
+        if ([identifier isKindOfClass:NSString.class]) {
+            for (AVSpeechSynthesisVoice *voice in [self selectableFrenchVoices]) {
+                if (![voice.identifier isEqualToString:identifier]) continue;
+                [NSUserDefaults.standardUserDefaults setObject:identifier forKey:@"RCFrenchVoiceIdentifier"];
+                reply(@{@"selected":identifier}, nil); return;
+            }
+        }
+        reply(nil, @"Cette voix française n’est plus disponible sur cet appareil."); return;
     }
     if ([operation isEqualToString:@"authorize-dictation"]) {
         if (!self.recognizer.supportsOnDeviceRecognition) { reply(@{@"authorized":@NO}, nil); return; }

@@ -26,6 +26,7 @@ async function perform(operation) {
     element("status").textContent = "";
     document.querySelectorAll("button").forEach(button => { if (disabledBefore.has(button)) button.disabled = disabledBefore.get(button); });
     if (paused) { element("exercise").hidden = true; element("resume").hidden = false; }
+    renderVoiceSettingsControls();
     if (state) { renderSpeechControls(state); armAutoLexical(); armFeedbackFlow(); }
   }
 }

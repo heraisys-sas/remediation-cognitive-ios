@@ -128,4 +128,5 @@ async function initializeSpeech() {
   try {speechCapabilities=await speechRequest("capabilities");}
   catch {speechCapabilities=null;}
   if(state) renderSpeechControls(state);
+  await initializeVoiceSettings();
 }

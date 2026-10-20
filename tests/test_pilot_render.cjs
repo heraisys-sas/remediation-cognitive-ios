@@ -28,6 +28,7 @@ async function page({native = true, reply = async()=>({started:false}), speechRe
   vm.runInContext(fs.readFileSync(path.resolve(__dirname,'../vendor/remediation/frontend/src/dictee-auto.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'auto-lexical.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'feedback-flow.js'),'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(source,'voice-settings.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'pilot.js'),'utf8'), context);
   await new Promise(resolve => setImmediate(resolve));
   return {get, render:value=>context.render(value), context};
@@ -636,4 +637,40 @@ test('Prendre le temps reste actif après une révision de pause du même retour
   app.context.armFeedbackFlow();
   assert.equal(vm.runInContext('feedbackHeld',app.context),true);
   assert.equal(vm.runInContext('feedbackTimer',app.context),null);
+});
+test('les paramètres proposent les voix françaises sans Eloquence et enregistrent le choix',async()=>{
+  const calls=[];
+  const {get}=await page({speechReply:async payload=>{
+    calls.push(payload);
+    if(payload.operation==='voices')return {selected:'thomas',voices:[
+      {identifier:'thomas',name:'Thomas',language:'fr-FR',quality:1},
+      {identifier:'marie',name:'Marie',language:'fr-FR',quality:1},
+      {identifier:'amelie',name:'Amélie',language:'fr-CA',quality:1},
+      {identifier:'com.apple.eloquence.fr-FR.Flo',name:'Flo',language:'fr-FR',quality:1},
+      {identifier:'en',name:'English',language:'en-US',quality:1}]};
+    if(payload.operation==='set-voice')return {selected:payload.identifier};
+    return {speech:true,on_device_dictation:true};
+  }});
+  assert.deepEqual(get('voiceChoice').children.map(option=>option.textContent),['Thomas · France','Marie · France','Amélie · Canada']);
+  get('voiceChoice').value='marie';await get('voiceChoice').onchange();
+  assert.equal(calls.at(-1).operation,'set-voice');assert.equal(calls.at(-1).identifier,'marie');
+  await get('previewVoice').onclick();assert.equal(calls.at(-1).operation,'speak');
+  assert.doesNotMatch(calls.at(-1).text,/réponse attendue/);
+});
+test('une préférence refusée restaure la sélection et affiche l’erreur',async()=>{
+  const {get}=await page({speechReply:async payload=>{
+    if(payload.operation==='voices')return {selected:'thomas',voices:[{identifier:'thomas',name:'Thomas',language:'fr-FR',quality:1}]};
+    if(payload.operation==='set-voice')throw Error('Voix indisponible');
+    return {speech:true};
+  }});
+  get('voiceChoice').value='absente';await get('voiceChoice').onchange();
+  assert.equal(get('voiceChoice').value,'thomas');assert.match(get('voiceSettingsStatus').textContent,/indisponible/);
+});
+test('le chargement initial tardif ne laisse pas la préécoute grisée',async()=>{
+  let release;
+  const app=await page({reply:async()=>new Promise(resolve=>{release=resolve;}),speechReply:async payload=>
+    payload.operation==='voices'?{selected:'thomas',voices:[{identifier:'thomas',name:'Thomas',language:'fr-FR'}]}:{speech:true}});
+  assert.equal(app.get('previewVoice').disabled,true);
+  release({started:false});await new Promise(resolve=>setImmediate(resolve));
+  assert.equal(app.get('previewVoice').disabled,false);
 });

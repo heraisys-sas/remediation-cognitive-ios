@@ -29,7 +29,7 @@ def main():
     # Réutilise une ressource-folder déjà déclarée dans le projet Xcode.
     pilot = destination / "iOSTestbed/app/pilot"
     pilot.mkdir()
-    for name in ("index.html", "pilot.css", "active-clock.js", "pqrst.js", "contextes.js", "choices.js", "memory.js", "speech.js", "auto-lexical.js", "feedback-flow.js", "pilot.js"):
+    for name in ("index.html", "pilot.css", "active-clock.js", "pqrst.js", "contextes.js", "choices.js", "memory.js", "speech.js", "auto-lexical.js", "feedback-flow.js", "voice-settings.js", "pilot.js"):
         shutil.copy2(native / name, pilot / name)
     shutil.copy2(ROOT / "vendor/remediation/frontend/src/dictee-auto.js", pilot / "dictee-auto.js")
     shutil.copytree(ROOT / "vendor/remediation/frontend/images", pilot / "images")

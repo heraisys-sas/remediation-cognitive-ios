@@ -166,6 +166,55 @@
     [self waitForExpectations:@[response] timeout:60];
 }
 
+- (void)testVoiceSettingsLoad {
+    UIWindowScene *scene = (UIWindowScene *)UIApplication.sharedApplication.connectedScenes.anyObject;
+    WKWebView *web = [scene.windows.firstObject.rootViewController valueForKey:@"web"];
+    XCTAssertNotNil(web);
+    NSPredicate *loaded = [NSPredicate predicateWithBlock:^BOOL(id object, NSDictionary *bindings) {
+        return !web.loading && [web.URL.lastPathComponent isEqualToString:@"index.html"];
+    }];
+    XCTNSPredicateExpectation *page = [[XCTNSPredicateExpectation alloc] initWithPredicate:loaded object:web];
+    [self waitForExpectations:@[page] timeout:20];
+    XCTestExpectation *response = [self expectationWithDescription:@"Paramètres vocaux chargés"];
+    [web callAsyncJavaScript:@"for(let i=0;i<500&&(busy||!voiceSettingsReady);i++)await new Promise(r=>setTimeout(r,20)); return {ready:voiceSettingsReady,disabled:document.getElementById('previewVoice').disabled,count:document.getElementById('voiceChoice').options.length};"
+        arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld completionHandler:^(id value, NSError *error) {
+        XCTAssertNil(error);XCTAssertEqualObjects(value[@"ready"],@YES);
+        XCTAssertEqualObjects(value[@"disabled"],@NO);XCTAssertTrue([value[@"count"] integerValue]>0);
+        [response fulfill];
+    }];
+    [self waitForExpectations:@[response] timeout:20];
+}
+- (void)testFrenchVoicePreference {
+    NSUserDefaults *defaults = NSUserDefaults.standardUserDefaults;
+    NSString *previous = [defaults stringForKey:@"RCFrenchVoiceIdentifier"];
+    @try {
+        id speech = [NSClassFromString(@"RCSpeechController") new];
+        __block NSDictionary *inventory;
+        [speech handle:@{@"operation":@"voices"} reply:^(id value, NSString *error) {XCTAssertNil(error);inventory=value;}];
+        NSArray *voices = inventory[@"voices"];
+        XCTAssertTrue(voices.count > 0);
+        for (NSDictionary *voice in voices) {
+            XCTAssertTrue([voice[@"language"] hasPrefix:@"fr-"]);
+            XCTAssertFalse([voice[@"identifier"] containsString:@"com.apple.eloquence."]);
+        }
+        NSString *identifier = [voices.lastObject objectForKey:@"identifier"];
+        if (!identifier) return;
+        [speech handle:@{@"operation":@"set-voice",@"identifier":identifier} reply:^(id value, NSString *error) {
+            XCTAssertNil(error);XCTAssertEqualObjects(value[@"selected"],identifier);
+        }];
+        id restored = [NSClassFromString(@"RCSpeechController") new];
+        [restored handle:@{@"operation":@"voices"} reply:^(id value, NSString *error) {
+            XCTAssertNil(error);XCTAssertEqualObjects(value[@"selected"],identifier);
+        }];
+        [restored handle:@{@"operation":@"set-voice",@"identifier":@"com.apple.eloquence.fr-FR.Flo"} reply:^(id value, NSString *error) {
+            XCTAssertNil(value);XCTAssertNotNil(error);
+        }];
+        XCTAssertEqualObjects([defaults stringForKey:@"RCFrenchVoiceIdentifier"],identifier);
+    } @finally {
+        if (previous) [defaults setObject:previous forKey:@"RCFrenchVoiceIdentifier"];
+        else [defaults removeObjectForKey:@"RCFrenchVoiceIdentifier"];
+    }
+}
 - (void)testAudioRoutingPreservesAccessories {
     id speech = [NSClassFromString(@"RCSpeechController") new];
     XCTAssertNotNil(speech);

@@ -43,3 +43,15 @@ Le mode de capture est `AVAudioSessionModeDefault`, avec `PlayAndRecord`, `Defau
 Après activation, si la seule sortie choisie par iOS reste `BuiltInReceiver`, un repli ponctuel sélectionne le haut-parleur. Une sortie casque, Bluetooth, USB ou AirPlay n’est pas remplacée. Le test natif couvre la décision pour chacune de ces sorties et pour les routes multiples. Le niveau réellement entendu et les transitions avec un casque doivent être contrôlés sur l’appareil.
 
 Validation du correctif de routage : 5 XCTest réussis sur iPhone Air, sans échec, dont la politique de préservation des accessoires et le parcours WebKit. Preuve locale : `.local/audio-routing-final-device.xcresult`. Relecture Sol favorable. Le volume entendu et le casque réel restent à confirmer par l’utilisateur.
+
+## Choix de voix depuis l’accueil
+
+L’accueil propose « Paramètres », avec un sélecteur des voix françaises réellement disponibles sur l’appareil et un bouton « Écouter cette voix ». Les voix Eloquence, personnelles et fantaisie sont exclues côté natif. La région et, si disponible, la qualité améliorée/premium sont indiquées.
+
+Le choix est validé contre l’inventaire natif puis conservé dans les préférences locales de l’app. Toutes les lectures suivantes l’utilisent. Si la voix n’est plus installée, le contrôleur reprend une voix française disponible, en privilégiant France et la qualité disponible. L’inventaire et l’essai ne téléchargent aucune voix et ne demandent pas d’accès au microphone.
+
+Tests JavaScript : 45 réussis, incluant filtre, enregistrement, aperçu et restauration de la sélection sur erreur. Test natif ajouté pour vérifier l’exclusion d’Eloquence, la persistance entre contrôleurs et le refus d’un identifiant interdit ; la préférence de l’utilisateur est restaurée à la fin du test.
+
+Validation native des paramètres : 6 XCTest réussis sur iPhone Air (`.local/voice-settings-device.xcresult`), dont persistance et exclusion des voix. La relecture Sol a relevé une course de chargement du bouton d’essai ; son état est maintenant recalculé après chaque opération, avec un test JavaScript sur chargement différé.
+
+Le test natif ciblé `testVoiceSettingsLoad` passe également après correction : inventaire chargé et bouton d’essai actif (`.local/voice-settings-final-device.xcresult`).
