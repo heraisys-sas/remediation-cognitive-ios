@@ -2,6 +2,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Speech/Speech.h>
 #import <UIKit/UIKit.h>
+#import <mach/mach_time.h>
 
 @interface RCSpeechController () <AVSpeechSynthesizerDelegate>
 @property(nonatomic, strong) AVSpeechSynthesizer *synthesizer;
@@ -16,6 +17,9 @@
 @property(nonatomic) NSUInteger generation;
 @property(nonatomic) BOOL tapInstalled;
 @property(nonatomic) BOOL recording;
+@property(atomic) BOOL acceptingAudio;
+@property(atomic) uint64_t acceptingSince;
+@property(nonatomic) BOOL prepared;
 @end
 
 @implementation RCSpeechController
@@ -37,15 +41,23 @@
 - (void)emit:(NSString *)kind status:(NSString *)status token:(NSString *)token text:(NSString *)text {
     if (self.eventSink && token) self.eventSink(@{@"kind":kind, @"status":status, @"token":token, @"text":text ?: @""});
 }
-- (AVSpeechSynthesisVoice *)frenchVoice {
-    AVSpeechSynthesisVoice *fallback = nil;
+- (NSArray<AVSpeechSynthesisVoice *> *)selectableFrenchVoices {
+    NSMutableArray *voices = [NSMutableArray new];
     for (AVSpeechSynthesisVoice *voice in AVSpeechSynthesisVoice.speechVoices) {
+        if (![voice.language hasPrefix:@"fr-"] || [voice.identifier containsString:@"com.apple.eloquence."]) continue;
         if (voice.voiceTraits & (AVSpeechSynthesisVoiceTraitIsPersonalVoice | AVSpeechSynthesisVoiceTraitIsNoveltyVoice)) continue;
-        if ([voice.language isEqualToString:@"fr-FR"]) {
-            if (!fallback || voice.quality > fallback.quality) fallback = voice;
-        }
+        [voices addObject:voice];
     }
-    return fallback;
+    return voices;
+}
+- (AVSpeechSynthesisVoice *)frenchVoice {
+    NSString *preferred = [NSUserDefaults.standardUserDefaults stringForKey:@"RCFrenchVoiceIdentifier"];
+    AVSpeechSynthesisVoice *fallback = nil;
+    for (AVSpeechSynthesisVoice *voice in [self selectableFrenchVoices]) {
+        if ([voice.identifier isEqualToString:preferred]) return voice;
+        if ([voice.language isEqualToString:@"fr-FR"] && (!fallback || voice.quality > fallback.quality)) fallback = voice;
+    }
+    return fallback ?: [self selectableFrenchVoices].firstObject;
 }
 - (void)stopSpeaking {
     NSString *token = self.speechToken;
@@ -57,6 +69,7 @@
     }
 }
 - (void)stopCapture {
+    self.acceptingAudio = NO; self.prepared = NO;
     [self.engine stop];
     if (self.tapInstalled) { [self.engine.inputNode removeTapOnBus:0]; self.tapInstalled = NO; }
     [self.request endAudio];
@@ -84,6 +97,18 @@
     if ([notification.userInfo[AVAudioSessionRouteChangeReasonKey] unsignedIntegerValue] == AVAudioSessionRouteChangeReasonOldDeviceUnavailable)
         dispatch_async(dispatch_get_main_queue(), ^{ [self cancelAll]; });
 }
+// Corriger uniquement l’écouteur interne : ne jamais écraser une sortie casque.
+- (BOOL)shouldUseSpeakerForOutputs:(NSArray<NSString *> *)ports {
+    return ports.count == 1 && [ports.firstObject isEqualToString:AVAudioSessionPortBuiltInReceiver];
+}
+- (BOOL)ensureSpeakerRoute:(NSError **)error {
+    AVAudioSession *audio = AVAudioSession.sharedInstance;
+    if (![audio.category isEqualToString:AVAudioSessionCategoryPlayAndRecord]) return YES;
+    NSMutableArray *ports = [NSMutableArray new];
+    for (AVAudioSessionPortDescription *output in audio.currentRoute.outputs) [ports addObject:output.portType];
+    if (![self shouldUseSpeakerForOutputs:ports]) return YES;
+    return [audio overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:error];
+}
 - (void)beginCapture:(NSUInteger)generation {
     if (generation != self.generation || !self.dictationToken) return;
     if (UIApplication.sharedApplication.applicationState != UIApplicationStateActive || !self.recognizer.supportsOnDeviceRecognition) {
@@ -91,9 +116,9 @@
     }
     NSError *error = nil;
     AVAudioSession *audio = AVAudioSession.sharedInstance;
-    if (![audio setCategory:AVAudioSessionCategoryPlayAndRecord mode:AVAudioSessionModeMeasurement
-                   options:AVAudioSessionCategoryOptionDefaultToSpeaker | AVAudioSessionCategoryOptionAllowBluetoothHFP error:&error] ||
-        ![audio setActive:YES error:&error]) { [self finishDictation:@"unavailable"]; return; }
+    if (![audio setCategory:AVAudioSessionCategoryPlayAndRecord mode:AVAudioSessionModeDefault
+                   options:AVAudioSessionCategoryOptionDefaultToSpeaker | AVAudioSessionCategoryOptionAllowBluetoothHFP | AVAudioSessionCategoryOptionAllowBluetoothA2DP error:&error] ||
+        ![audio setActive:YES error:&error] || ![self ensureSpeakerRoute:&error]) { [self finishDictation:@"unavailable"]; return; }
     self.engine = [AVAudioEngine new];
     AVAudioInputNode *input = self.engine.inputNode;
     AVAudioFormat *format = [input outputFormatForBus:0];
@@ -120,18 +145,27 @@
     }];
     @try {
         [input installTapOnBus:0 bufferSize:1024 format:format block:^(AVAudioPCMBuffer *buffer, AVAudioTime *when) {
-            [request appendAudioPCMBuffer:buffer];
+            // Le matériel est chaud pendant la lecture, mais ses buffers sont jetés.
+            RCSpeechController *strong = weakSelf;
+            // Rejeter aussi les buffers commencés avant l’ouverture mais livrés après.
+            if (strong.acceptingAudio && when.hostTimeValid && when.hostTime >= strong.acceptingSince)
+                [request appendAudioPCMBuffer:buffer];
         }];
         self.tapInstalled = YES;
         [self.engine prepare];
         if (![self.engine startAndReturnError:&error]) { [self finishDictation:@"unavailable"]; return; }
     } @catch (NSException *exception) { [self finishDictation:@"unavailable"]; return; }
     self.recording = YES;
-    [self emit:@"dictation" status:@"listening" token:self.dictationToken text:@""];
+    if (!self.prepared) [self activatePreparedDictation];
     // Une capture courte ne reste jamais ouverte indéfiniment.
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 45 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         if (generation == self.generation && self.dictationToken) [self stopDictation];
     });
+}
+- (void)activatePreparedDictation {
+    if (!self.recording || !self.dictationToken || self.acceptingAudio || self.speechToken) return;
+    self.prepared = NO; self.acceptingSince = mach_absolute_time(); self.acceptingAudio = YES;
+    [self emit:@"dictation" status:@"listening" token:self.dictationToken text:@""];
 }
 - (void)stopDictation {
     if (!self.dictationToken) return;
@@ -151,20 +185,89 @@
     if ([operation isEqualToString:@"capabilities"]) {
         reply(@{@"speech":([self frenchVoice] ? @YES : @NO), @"on_device_dictation":(self.recognizer.supportsOnDeviceRecognition ? @YES : @NO)}, nil); return;
     }
+    if ([operation isEqualToString:@"home-settings"]) {
+        NSArray *enabled = [NSUserDefaults.standardUserDefaults arrayForKey:@"RCEnabledCompetenciesV1"];
+        reply(@{@"enabled":enabled ?: NSNull.null}, nil); return;
+    }
+    if ([operation isEqualToString:@"set-home-settings"]) {
+        NSArray *enabled = command[@"enabled"];
+        NSSet *allowed = [NSSet setWithArray:@[@"calcul",@"mots",@"memoire",@"contexte",@"organisation",@"information",@"lecture"]];
+        if (![enabled isKindOfClass:NSArray.class] || enabled.count > allowed.count) {
+            reply(nil, @"Choix de compétences invalide."); return;
+        }
+        NSMutableSet *seen = [NSMutableSet new];
+        for (id value in enabled) {
+            if (![value isKindOfClass:NSString.class] || ![allowed containsObject:value] || [seen containsObject:value]) {
+                reply(nil, @"Compétence inconnue ou répétée."); return;
+            }
+            [seen addObject:value];
+        }
+        [NSUserDefaults.standardUserDefaults setObject:enabled forKey:@"RCEnabledCompetenciesV1"];
+        reply(@{@"enabled":enabled}, nil); return;
+    }
+    if ([operation isEqualToString:@"voices"]) {
+        NSMutableArray *voices = [NSMutableArray new];
+        for (AVSpeechSynthesisVoice *voice in [self selectableFrenchVoices])
+            [voices addObject:@{@"identifier":voice.identifier,@"name":voice.name,@"language":voice.language,@"quality":@(voice.quality)}];
+        reply(@{@"voices":voices,@"selected":[self frenchVoice].identifier ?: @""}, nil); return;
+    }
+    if ([operation isEqualToString:@"set-voice"]) {
+        NSString *identifier = command[@"identifier"];
+        if ([identifier isKindOfClass:NSString.class]) {
+            for (AVSpeechSynthesisVoice *voice in [self selectableFrenchVoices]) {
+                if (![voice.identifier isEqualToString:identifier]) continue;
+                [NSUserDefaults.standardUserDefaults setObject:identifier forKey:@"RCFrenchVoiceIdentifier"];
+                reply(@{@"selected":identifier}, nil); return;
+            }
+        }
+        reply(nil, @"Cette voix française n’est plus disponible sur cet appareil."); return;
+    }
+    if ([operation isEqualToString:@"authorize-dictation"]) {
+        if (!self.recognizer.supportsOnDeviceRecognition) { reply(@{@"authorized":@NO}, nil); return; }
+        NSUInteger generation = self.generation;
+        [SFSpeechRecognizer requestAuthorization:^(SFSpeechRecognizerAuthorizationStatus status) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (generation != self.generation || status != SFSpeechRecognizerAuthorizationStatusAuthorized) {
+                    reply(@{@"authorized":@NO}, nil); return;
+                }
+                [AVAudioApplication requestRecordPermissionWithCompletionHandler:^(BOOL granted) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        reply(@{@"authorized":(granted && generation == self.generation ? @YES : @NO)}, nil);
+                    });
+                }];
+            });
+        }];
+        return;
+    }
     if ([operation isEqualToString:@"cancel"]) { [self cancelAll]; reply(@{@"ok":@YES}, nil); return; }
     if ([operation isEqualToString:@"stop-speaking"]) { [self stopSpeaking]; reply(@{@"ok":@YES}, nil); return; }
     if ([operation isEqualToString:@"stop-dictation"]) { [self stopDictation]; reply(@{@"ok":@YES}, nil); return; }
     if (![token isKindOfClass:NSString.class] || !token.length || token.length > 200) { reply(nil, @"Commande audio invalide."); return; }
+    if ([operation isEqualToString:@"activate-dictation"]) {
+        if ([token isEqualToString:self.dictationToken]) [self activatePreparedDictation];
+        reply(@{@"ok":@YES}, nil); return;
+    }
+    if ([operation isEqualToString:@"prepare-dictation"]) {
+        [self cancelAll];
+        if (SFSpeechRecognizer.authorizationStatus != SFSpeechRecognizerAuthorizationStatusAuthorized ||
+            AVAudioApplication.sharedInstance.recordPermission != AVAudioApplicationRecordPermissionGranted) {
+            reply(nil, @"Autorisation vocale nécessaire avant la préparation."); return;
+        }
+        self.dictationToken = token; self.lastText = @""; self.prepared = YES;
+        [self beginCapture:self.generation];
+        reply(@{@"ok":@(self.recording)}, nil); return;
+    }
     if ([operation isEqualToString:@"speak"]) {
         NSString *text = command[@"text"];
         AVSpeechSynthesisVoice *voice = [self frenchVoice];
         if (![text isKindOfClass:NSString.class] || !text.length || text.length > 12000 || !voice) {
             reply(nil, @"La lecture française est indisponible sur cet appareil."); return;
         }
-        [self cancelAll];
+        BOOL prepared = self.prepared && self.recording;
+        if (prepared) [self stopSpeaking]; else [self cancelAll];
         NSError *error = nil;
-        if (![AVAudioSession.sharedInstance setCategory:AVAudioSessionCategoryPlayback mode:AVAudioSessionModeSpokenAudio options:AVAudioSessionCategoryOptionDuckOthers error:&error] ||
-            ![AVAudioSession.sharedInstance setActive:YES error:&error]) { reply(nil, @"La lecture est indisponible pour le moment."); return; }
+        if ((!prepared && ![AVAudioSession.sharedInstance setCategory:AVAudioSessionCategoryPlayback mode:AVAudioSessionModeSpokenAudio options:AVAudioSessionCategoryOptionDuckOthers error:&error]) ||
+            ![AVAudioSession.sharedInstance setActive:YES error:&error] || ![self ensureSpeakerRoute:&error]) { reply(nil, @"La lecture est indisponible pour le moment."); return; }
         self.speechToken = token;
         self.utterance = [AVSpeechUtterance speechUtteranceWithString:text];
         self.utterance.voice = voice; self.utterance.rate = AVSpeechUtteranceDefaultSpeechRate;
@@ -201,7 +304,9 @@
 - (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didFinishSpeechUtterance:(AVSpeechUtterance *)utterance {
     if (utterance != self.utterance) return;
     NSString *token = self.speechToken; self.speechToken = nil; self.utterance = nil;
+    // Ouvrir le flux immédiatement, dans le callback natif de fin de synthèse.
+    if (self.prepared) [self activatePreparedDictation];
     [self emit:@"speech" status:@"finished" token:token text:@""];
-    [AVAudioSession.sharedInstance setActive:NO withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:nil];
+    if (!self.dictationToken) [AVAudioSession.sharedInstance setActive:NO withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:nil];
 }
 @end

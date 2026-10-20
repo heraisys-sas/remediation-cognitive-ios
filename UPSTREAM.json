@@ -133,7 +133,8 @@
     "vendor/remediation/content/entrainement/memoire/paliers/palier-09.json": "1451fc55f220e1dc969c113c4c4cb3e9a3dcee94e9ddb017633788136b2fe581",
     "vendor/remediation/content/entrainement/memoire/paliers/palier-10.json": "6ff3f6bc97695a26e87c26da33c8604f5f16bf44b050ec028f0a62d4769dccc8",
     "vendor/remediation/content/entrainement/memoire/paliers/palier-11.json": "fafe9f87fa2e495e336f246b715b9b4ac041a84d190455d0c1922bae606288a2",
-    "vendor/remediation/content/entrainement/memoire/paliers/palier-12.json": "3e7d75ee23077c5d377986a450971d3db8513115cad44b1087a62be30c550832"
+    "vendor/remediation/content/entrainement/memoire/paliers/palier-12.json": "3e7d75ee23077c5d377986a450971d3db8513115cad44b1087a62be30c550832",
+    "vendor/remediation/frontend/src/dictee-auto.js": "a68c6c067bfe914c22d93ea884920370da103a40326cb6a89e9a8445896876c7"
   },
   "adaptations": {
     "vendor/remediation/backend/app/api/entrainement/__init__.py": "Point d’entrée local sans route FastAPI ; service.py inchangé."

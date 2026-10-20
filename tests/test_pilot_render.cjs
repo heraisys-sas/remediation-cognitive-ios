@@ -25,6 +25,11 @@ async function page({native = true, reply = async()=>({started:false}), speechRe
   vm.runInContext(fs.readFileSync(path.join(source,'choices.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'memory.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'speech.js'),'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.resolve(__dirname,'../vendor/remediation/frontend/src/dictee-auto.js'),'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(source,'auto-lexical.js'),'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(source,'feedback-flow.js'),'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(source,'voice-settings.js'),'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(source,'home.js'),'utf8'), context);
   vm.runInContext(fs.readFileSync(path.join(source,'pilot.js'),'utf8'), context);
   await new Promise(resolve => setImmediate(resolve));
   return {get, render:value=>context.render(value), context};
@@ -166,9 +171,12 @@ test('les indices lexicaux restent facultatifs et sont restaurés dans l’ordre
   assert.equal(get('heading').textContent,'Retrouver le mot');
   assert.equal(get('activityChoice').hidden,true);
   assert.equal(get('lexicalHelp').hidden,false);
+  assert.equal(get('lexicalHelp').open,false);
+  get('lexicalHelp').open=true;
   assert.equal(get('hints').textContent,'Catégorie : bureau');
   assert.equal(get('hint').hidden,false);
   render({...view,hints_used:2});
+  assert.equal(get('lexicalHelp').open,true);
   assert.equal(get('hint').hidden,true);
   assert.match(get('hints').textContent,/Commence par a/);
   render({...view,feedback:{assistee:true,attendue:'agrafeuse'}});
@@ -194,8 +202,8 @@ test('la fatigue du résumé invite à la pause sans bloquer une nouvelle séanc
   const {get,render} = await page();
   render({started:true,finished:true,summary:{resume:{items:3,correctes:0},arret_propose:true,motif_arret:'fatigue'}});
   assert.equal(get('summaryAdvice').hidden,false);
-  assert.equal(get('start').hidden,false);
-  assert.equal(get('start').disabled,false);
+  assert.equal(get('activityChoice').hidden,false);
+  assert.equal(get('activity-card-calcul-mental').disabled,false);
 });
 
 test('Contextes masque la saisie et la photo au rappel, et conserve le message incident',async()=>{
@@ -496,4 +504,231 @@ test('un indice pendant la dictée ne laisse pas Valider grisé après son arrê
   assert.equal(get('answer').value,'bouteille');
   assert.equal(get('answer').readOnly,false);
   assert.equal(get('validate').disabled,false);
+});
+
+// Horloge déterministe pour les délais de la dictée importée de la version Mac.
+async function automaticPage() {
+  const operations=[], calls=[];
+  const view={started:true,session_id:'auto-session',activity:'acces-lexical',position:1,total:1,
+    item:{id:'mot',type:'rappel-indice',contenu:{enonce:'Un récipient pour boire'}},hints_used:0};
+  const app=await page({reply:async payload=>{
+    calls.push(payload);
+    if(payload.action==='verify-dictation')return {acceptee:payload.transcription==='une bouteille'};
+    if(payload.action==='answer')return {correcte:true};
+    return payload.action==='view'?{started:false}:{started:false};
+  },speechReply:async payload=>{operations.push(payload);return {speech:true,on_device_dictation:true};}});
+  let now=0, serial=0;
+  const timers=new Map();
+  app.context.setTimeout=(fn,delay)=>{const id=++serial;timers.set(id,{fn,at:now+delay});return id;};
+  app.context.clearTimeout=id=>timers.delete(id);
+  const advance=async ms=>{
+    now+=ms;
+    for(const [id,timer] of [...timers])if(timer.at<=now){timers.delete(id);timer.fn();}
+    await new Promise(resolve=>setImmediate(resolve));
+  };
+  app.render(view);
+  vm.runInContext('autoVoiceSession="auto-session";armAutoLexical()',app.context);
+  return {...app,operations,calls,advance};
+}
+
+test('le micro est préarmé pendant la lecture sans démarrage de dictée à froid',async()=>{
+  const app=await automaticPage();
+  const read=app.operations.find(op=>op.operation==='speak');
+  assert.ok(read);
+  assert.equal(app.operations.filter(op=>op.operation==='prepare-dictation').length,1);
+  await app.advance(2000);
+  assert.equal(app.operations.filter(op=>op.operation==='start-dictation').length,0);
+  app.context.window.nativeSpeechEvent({kind:'speech',token:'ancien',status:'finished'});
+  await app.advance(2000);
+  assert.equal(app.operations.filter(op=>op.operation==='start-dictation').length,0);
+  app.context.window.nativeSpeechEvent({kind:'speech',token:read.token,status:'finished'});
+  await app.advance(149);
+  assert.equal(app.operations.filter(op=>op.operation==='start-dictation').length,0);
+  await app.advance(1);
+  assert.equal(app.operations.filter(op=>op.operation==='activate-dictation').length,1);
+  assert.equal(app.operations.filter(op=>op.operation==='start-dictation').length,0);
+  vm.runInContext('stopSpeechForTransition()',app.context);
+});
+
+test('les hypothèses vocales rejetées ne sont pas des réponses et une acceptation valide une seule fois',async()=>{
+  const app=await automaticPage();
+  const read=app.operations.find(op=>op.operation==='speak');
+  app.context.window.nativeSpeechEvent({kind:'speech',token:read.token,status:'finished'});
+  await app.advance(150);
+  const token=app.operations.find(op=>op.operation==='prepare-dictation').token;
+  const partial=text=>app.context.window.nativeSpeechEvent({kind:'dictation',token,status:'partial',text});
+  partial('un verre');await app.advance(700);
+  assert.equal(app.calls.filter(op=>op.action==='answer').length,0);
+  partial('une bouteille');await app.advance(699);
+  assert.equal(app.calls.filter(op=>op.action==='answer').length,0);
+  await app.advance(1);
+  assert.equal(app.calls.filter(op=>op.action==='answer').length,1);
+  partial('une bouteille');await app.advance(1000);
+  assert.equal(app.calls.filter(op=>op.action==='answer').length,1);
+});
+
+test('une interruption pendant la lecture interdit toute ouverture tardive du micro',async()=>{
+  const app=await automaticPage();
+  const read=app.operations.find(op=>op.operation==='speak');
+  app.context.window.pauseForInterruption();
+  app.context.window.nativeSpeechEvent({kind:'speech',token:read.token,status:'finished'});
+  await app.advance(3000);
+  assert.equal(app.operations.filter(op=>op.operation==='start-dictation').length,0);
+});
+
+test('la reprise explicite réarme le micro sans relire la consigne déjà entendue',async()=>{
+  const app=await automaticPage();
+  const read=app.operations.find(op=>op.operation==='speak');
+  app.context.window.nativeSpeechEvent({kind:'speech',token:read.token,status:'finished'});
+  await app.advance(150);
+  app.context.window.pauseForInterruption();
+  await app.get('resume').onclick();
+  await app.advance(150);
+  assert.equal(app.operations.filter(op=>op.operation==='speak').length,1);
+  assert.equal(app.operations.filter(op=>['prepare-dictation','start-dictation'].includes(op.operation)).length,2);
+  vm.runInContext('stopSpeechForTransition()',app.context);
+});
+
+test('le choix du clavier annule l’écoute et ignore une transcription tardive',async()=>{
+  const app=await automaticPage();
+  const read=app.operations.find(op=>op.operation==='speak');
+  app.context.window.nativeSpeechEvent({kind:'speech',token:read.token,status:'finished'});
+  await app.advance(150);
+  const token=app.operations.find(op=>op.operation==='prepare-dictation').token;
+  await app.get('dictate').onclick();
+  app.context.window.nativeSpeechEvent({kind:'dictation',token,status:'partial',text:'une bouteille'});
+  await app.advance(1000);
+  assert.equal(app.calls.filter(op=>op.action==='answer').length,0);
+  assert.equal(app.get('answer').value,'');
+});
+
+async function feedbackPage(extra={}){
+  const app=await page();let timer=null,delay=null,advances=0;
+  app.context.setTimeout=(fn,ms)=>{timer=fn;delay=ms;return 1;};
+  app.context.clearTimeout=()=>{timer=null;};
+  app.get('next').onclick=()=>{advances++;};
+  const view={started:true,session_id:'s',position:1,total:2,item:{id:'i',contenu:{enonce:'Question'}},
+    feedback:{correcte:true,feedback:'Bonne réponse.'},...extra};
+  app.render(view);app.context.armFeedbackFlow();
+  return {...app,fire:()=>{const fn=timer;timer=null;fn?.();},delay:()=>delay,advances:()=>advances};
+}
+test('le retour avance automatiquement une fois après un délai lisible',async()=>{
+  const app=await feedbackPage();assert.ok(app.delay()>=2200);
+  app.fire();assert.equal(app.advances(),1);app.fire();assert.equal(app.advances(),1);
+});
+test('Prendre le temps conserve le retour et une pause empêche tout passage tardif',async()=>{
+  const app=await feedbackPage();app.get('holdFeedback').onclick();app.fire();
+  assert.equal(app.advances(),0);
+  app.get('holdFeedback').onclick();app.context.window.pauseForInterruption();app.fire();
+  assert.equal(app.advances(),0);
+});
+test('le passage automatique attend la lecture vocale du retour',async()=>{
+  const app=await feedbackPage();vm.runInContext('speechToken="lecture-retour"',app.context);
+  app.fire();assert.equal(app.advances(),0);assert.equal(app.delay(),250);
+  vm.runInContext('speechToken=null',app.context);app.fire();assert.equal(app.advances(),1);
+});
+test('Contextes attend la révélation effective de la photo avant la suite',async()=>{
+  const app=await feedbackPage({contextes:{phase:'feedback',revision:2,image:{},reveal_recorded:false,options:[]}});
+  assert.equal(vm.runInContext('feedbackTimer',app.context),null);assert.equal(app.advances(),0);
+});
+test('Prendre le temps reste actif après une révision de pause du même retour Contextes',async()=>{
+  const screen={phase:'feedback',revision:2,pass:'rappel',options:[]};
+  const app=await feedbackPage({contextes:screen});app.get('holdFeedback').onclick();
+  vm.runInContext('paused=true',app.context);
+  app.render({...vm.runInContext('state',app.context),contextes:{...screen,revision:3,paused:true}});
+  vm.runInContext('paused=false',app.context);
+  app.render({...vm.runInContext('state',app.context),contextes:{...screen,revision:4,paused:false}});
+  app.context.armFeedbackFlow();
+  assert.equal(vm.runInContext('feedbackHeld',app.context),true);
+  assert.equal(vm.runInContext('feedbackTimer',app.context),null);
+});
+test('les paramètres proposent les voix françaises sans Eloquence et enregistrent le choix',async()=>{
+  const calls=[];
+  const {get}=await page({speechReply:async payload=>{
+    calls.push(payload);
+    if(payload.operation==='voices')return {selected:'thomas',voices:[
+      {identifier:'thomas',name:'Thomas',language:'fr-FR',quality:1},
+      {identifier:'marie',name:'Marie',language:'fr-FR',quality:1},
+      {identifier:'amelie',name:'Amélie',language:'fr-CA',quality:1},
+      {identifier:'com.apple.eloquence.fr-FR.Flo',name:'Flo',language:'fr-FR',quality:1},
+      {identifier:'en',name:'English',language:'en-US',quality:1}]};
+    if(payload.operation==='set-voice')return {selected:payload.identifier};
+    return {speech:true,on_device_dictation:true};
+  }});
+  assert.deepEqual(get('voiceChoice').children.map(option=>option.textContent),['Thomas · France','Marie · France','Amélie · Canada']);
+  get('voiceChoice').value='marie';await get('voiceChoice').onchange();
+  assert.equal(calls.at(-1).operation,'set-voice');assert.equal(calls.at(-1).identifier,'marie');
+  await get('previewVoice').onclick();assert.equal(calls.at(-1).operation,'speak');
+  assert.doesNotMatch(calls.at(-1).text,/réponse attendue/);
+});
+test('une préférence refusée restaure la sélection et affiche l’erreur',async()=>{
+  const {get}=await page({speechReply:async payload=>{
+    if(payload.operation==='voices')return {selected:'thomas',voices:[{identifier:'thomas',name:'Thomas',language:'fr-FR',quality:1}]};
+    if(payload.operation==='set-voice')throw Error('Voix indisponible');
+    return {speech:true};
+  }});
+  get('voiceChoice').value='absente';await get('voiceChoice').onchange();
+  assert.equal(get('voiceChoice').value,'thomas');assert.match(get('voiceSettingsStatus').textContent,/indisponible/);
+});
+test('le chargement initial tardif ne laisse pas la préécoute grisée',async()=>{
+  let release;
+  const app=await page({reply:async()=>new Promise(resolve=>{release=resolve;}),speechReply:async payload=>
+    payload.operation==='voices'?{selected:'thomas',voices:[{identifier:'thomas',name:'Thomas',language:'fr-FR'}]}:{speech:true}});
+  assert.equal(app.get('previewVoice').disabled,true);
+  release({started:false});await new Promise(resolve=>setImmediate(resolve));
+  assert.equal(app.get('previewVoice').disabled,false);
+});
+test('les compétences enregistrées filtrent les cartes et leur liste explicative',async()=>{
+  const {get}=await page({speechReply:async payload=>payload.operation==='home-settings'?{enabled:['mots','information']}:{}});
+  assert.deepEqual(get('activityCards').children.map(card=>card.id),['activity-card-acces-lexical','activity-card-chercher-information']);
+  assert.equal(get('competency-mots').checked,true);assert.equal(get('competency-calcul').checked,false);
+  const choices=get('competencyChoices').children;
+  assert.match(choices[1].children[1].children[2].textContent,/Cartes : Retrouver le mot/);
+});
+test('le choix vide est conservé et n’affiche aucune activité par défaut',async()=>{
+  const {get}=await page({speechReply:async payload=>payload.operation==='home-settings'?{enabled:[]}:{}});
+  assert.equal(get('activityCards').children.length,0);assert.match(get('homeStatus').textContent,/Aucune compétence/);
+});
+test('décocher une compétence sauvegarde le filtre sans appeler le moteur',async()=>{
+  const runtime=[],settings=[];
+  const {get}=await page({reply:async payload=>{runtime.push(payload);return {started:false};},speechReply:async payload=>{
+    settings.push(payload);if(payload.operation==='home-settings')return {enabled:['calcul','mots']};
+    if(payload.operation==='set-home-settings')return {enabled:payload.enabled};return {};
+  }});
+  const before=runtime.length;get('competency-calcul').checked=false;await get('competency-calcul').onchange();
+  assert.equal(runtime.length,before);assert.deepEqual(Array.from(settings.at(-1).enabled),['mots']);
+  assert.deepEqual(get('activityCards').children.map(card=>card.id),['activity-card-acces-lexical']);
+});
+test('un enregistrement refusé garde les cartes précédentes et restaure la case',async()=>{
+  const {get}=await page({speechReply:async payload=>{
+    if(payload.operation==='home-settings')return {enabled:['calcul']};
+    if(payload.operation==='set-home-settings')throw Error('Sauvegarde impossible');return {};
+  }});
+  get('competency-calcul').checked=false;await get('competency-calcul').onchange();
+  assert.equal(get('competency-calcul').checked,true);assert.equal(get('activityCards').children.length,1);
+  assert.match(get('competencyStatus').textContent,/Sauvegarde impossible/);
+});
+test('une carte lance directement la bonne activité sans second clic',async()=>{
+  const calls=[];
+  const {get}=await page({reply:async payload=>{calls.push(payload);return payload.action==='view'?{started:false}:{session_id:'s'};},
+    speechReply:async payload=>payload.operation==='home-settings'?{enabled:['information']}:{}});
+  await get('activity-card-chercher-information').onclick();
+  assert.equal(calls.find(payload=>payload.action==='start').activity,'chercher-information');
+});
+test('les cartes ne démarrent pas une autre activité pendant une séance',async()=>{
+  const calls=[];const {get,render}=await page({reply:async payload=>{calls.push(payload);return {started:false};}});
+  render({started:true,session_id:'s',item:{id:'i',contenu:{enonce:'Question'}},position:1,total:2});
+  const before=calls.length;await get('activity-card-calcul-mental').onclick();assert.equal(calls.length,before);
+});
+test('les treize parcours disponibles ont une carte et une seule',async()=>{
+  const {context}=await page();const ids=vm.runInContext('homeCompetencies.flatMap(item=>item.cards.map(card=>card[0]))',context);
+  assert.equal(ids.length,13);assert.equal(new Set(ids).size,13);
+  const html=fs.readFileSync(path.resolve(__dirname,'../mobile/ios/pilot/index.html'),'utf8');
+  const activities=[...html.matchAll(/<option value="([^"]+)"/g)].map(match=>match[1]);
+  assert.deepEqual(Array.from(ids).sort(),activities.sort());
+});
+test('les contrôles tolèrent les cartes et cases non montées dans le DOM réel',async()=>{
+  const {context}=await page();const original=context.document.getElementById;
+  context.document.getElementById=id=>id.startsWith('activity-card-')||id.startsWith('competency-')?null:original(id);
+  assert.doesNotThrow(()=>context.renderHomeControls());
 });

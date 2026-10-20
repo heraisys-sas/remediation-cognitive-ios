@@ -7,12 +7,24 @@
 <link rel="stylesheet" href="pilot.css">
 <main>
   <p class="secondary">Remédiation · pilote autonome</p>
-  <h1>Calcul mental</h1>
+  <h1>Remédiation</h1>
   <p id="intro">Une question à la fois, à ton rythme. Tu peux terminer et enregistrer la séance quand tu le souhaites.</p>
   <p id="status" role="status" aria-live="polite"></p>
   <div id="activityChoice">
-    <label for="activity">Choisir une activité</label>
-    <select id="activity">
+    <details id="voiceSettings">
+      <summary>Paramètres</summary>
+      <fieldset id="competencies"><legend>Compétences à travailler</legend>
+        <p>Coche les compétences pour choisir les cartes affichées sur l’accueil.</p>
+        <div id="competencyChoices"></div>
+        <p id="competencyStatus" class="secondary" role="status" aria-live="polite"></p>
+      </fieldset>
+      <label for="voiceChoice">Voix de lecture</label>
+      <select id="voiceChoice" disabled><option>Chargement des voix…</option></select>
+      <button id="previewVoice" type="button" class="secondaryButton" disabled>Écouter cette voix</button>
+      <p id="voiceSettingsStatus" class="secondary" role="status" aria-live="polite"></p>
+    </details>
+    <label for="activity" hidden>Choisir une activité</label>
+    <select id="activity" hidden>
       <option value="calcul-mental">Calcul mental</option>
       <option value="acces-lexical">Retrouver le mot</option>
       <option value="memoire-source">Retrouver le contexte</option>
@@ -27,6 +39,9 @@
       <option value="position">Position dans une séquence</option>
       <option value="pqrst-guide">PQRST guidé</option>
     </select>
+    <h2>Tes activités</h2>
+    <p id="homeStatus" class="secondary" role="status"></p>
+    <div id="activityCards" class="activityCards"></div>
   </div>
   <section id="exercise" hidden>
     <p id="position" class="secondary"></p>
@@ -40,11 +55,12 @@
     <section id="contextes" aria-label="Retrouver le contexte" hidden></section>
     <p id="repriseSupport" hidden></p>
     <details id="method"><summary>Une méthode pour t’aider</summary><p id="methodText"></p></details>
-    <section id="lexicalHelp" hidden aria-label="Aides facultatives">
+    <details id="lexicalHelp" hidden>
+      <summary>Une aide pour retrouver le mot</summary>
       <p id="hints" role="status" aria-live="polite"></p>
       <button id="hint" class="secondaryButton">Un indice</button>
       <button id="reveal" class="secondaryButton">Afficher le mot et continuer</button>
-    </section>
+    </details>
     <section id="memory" aria-label="Mémorisation visuelle" hidden></section>
     <section id="choices" aria-label="Choix de réponse" hidden></section>
     <form id="answerForm">
@@ -54,6 +70,8 @@
     </form>
     <div id="feedback" role="status" aria-live="polite"></div>
     <button id="next" hidden>Continuer</button>
+    <div class="feedbackFlow"><span id="feedbackFlowStatus" class="secondary" role="status"></span>
+      <button id="holdFeedback" class="secondaryButton" type="button" hidden>Prendre le temps</button></div>
   </section>
   <aside id="stopProposal" hidden role="status">
     <p>La durée proposée est atteinte. Tu peux terminer la séance ou continuer à ton rythme.</p>
@@ -71,5 +89,10 @@
 <script src="choices.js"></script>
 <script src="memory.js"></script>
 <script src="speech.js"></script>
+<script src="dictee-auto.js"></script>
+<script src="auto-lexical.js"></script>
+<script src="feedback-flow.js"></script>
+<script src="voice-settings.js"></script>
+<script src="home.js"></script>
 <script src="pilot.js"></script>
 </html>

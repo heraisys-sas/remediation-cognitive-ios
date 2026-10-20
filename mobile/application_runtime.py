@@ -17,6 +17,7 @@ from mobile.transactional_store import TransactionalStore  # noqa: E402
 from mobile.contextes_runtime import ContextesRuntime
 from mobile.choice_runtime import ChoiceRuntime, CHOICE_ACTIVITIES
 from mobile.memory_runtime import MemoryRuntime, MEMORY_ACTIVITIES
+from mobile.semantic_adapter import install as install_semantics
 from mobile import pqrst_protocol  # noqa: E402
 
 ACTIVITIES = {
@@ -35,6 +36,7 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime):
     """Instance sérialisée par l'appelant natif ; données dans le conteneur de l'app."""
 
     def __init__(self, storage_directory: str):
+        install_semantics()
         path = Path(storage_directory)
         if not path.is_absolute():
             raise ValueError("Le stockage doit être un chemin absolu du conteneur iOS")
@@ -89,6 +91,15 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime):
 
     def call(self, request_json: str) -> str:
         request = json.loads(request_json)
+        if request.get("action") == "verify-dictation":
+            with self.lock:
+                self._restore()
+                current = self._current_item(request)
+                if self.ui.get("activity") != "acces-lexical" or current.get("feedback"):
+                    raise ValueError("Détection automatique indisponible")
+                result = self.manager.verifier_dictee(self._session().theme, self._session().session_id,
+                    current["item"]["id"], request.get("transcription"))
+                return json.dumps(result, ensure_ascii=False, allow_nan=False)
         with self.lock, self.store.transaction_theme("pilot"):
             # Reconstruction depuis l'état durable : un échec ne laisse aucun état
             # mémoire en avance sur la transaction annulée.

@@ -24,3 +24,21 @@ textarea:focus-visible { outline: 3px solid #b2e2ef; outline-offset: 3px; }
 
 .memoryElement { font-size: 2.25em; text-align: center; padding: 16px; min-height: 1.6em; }
 #memory ul { font-size: 1.25em; }
+
+#feedback:not(:empty) { padding: 12px 16px; border-left: 3px solid #87c4d7; background: #202833; border-radius: 4px 10px 10px 4px; }
+.feedbackFlow { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.feedbackFlow .secondary { font-size: .9em; }
+#holdFeedback { border-color: transparent; text-decoration: underline; text-underline-offset: 3px; margin: 0; }
+
+#competencies { border: 0; padding: 0; margin: 12px 0 24px; min-width: 0; }
+#competencies legend { font-weight: 600; }
+.competencyChoice { display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid #536477; cursor: pointer; }
+.competencyChoice input { width: 24px; min-height: 24px; flex: 0 0 24px; margin: 4px 0; accent-color: #87c4d7; }
+.competencyChoice span, .competencyChoice strong, .competencyChoice small { display: block; }
+.competencyChoice small { color: #bac5d1; margin-top: 6px; font-size: .9em; }
+.activityCards { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 16px 0 24px; }
+.activityCard { margin: 0; padding: 18px; background: #202833; color: #edf0f4; border-color: #7a8a9d; text-align: left; }
+.activityCard strong, .activityCard span { display: block; }
+.activityCard span { margin-top: 8px; color: #bac5d1; font-size: .95em; line-height: 1.5; }
+.activityCard:active { background: #304353; }
+@media (min-width: 640px) { .activityCards { grid-template-columns: repeat(2,minmax(0,1fr)); } }

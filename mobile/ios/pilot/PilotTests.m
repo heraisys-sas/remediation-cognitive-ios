@@ -1,10 +1,12 @@
 #import <XCTest/XCTest.h>
 #import <WebKit/WebKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 // Déclarations de test : le contrôleur réel est fourni par l'app hôte.
 @interface NSObject (RCSpeechTestSurface)
 - (void)handle:(NSDictionary *)command reply:(void (^)(id, NSString *))reply;
 - (void)cancelAll;
+- (BOOL)shouldUseSpeakerForOutputs:(NSArray<NSString *> *)ports;
 @end
 @interface RCNoLocalSpeech : NSObject
 @end
@@ -65,10 +67,11 @@
     XCTNSPredicateExpectation *page = [[XCTNSPredicateExpectation alloc] initWithPredicate:loaded object:web];
     [self waitForExpectations:@[page] timeout:20];
     XCTestExpectation *response = [self expectationWithDescription:@"Pont WebKit vers moteur local"];
-    NSString *script = @"const voiceCapabilities=await speechRequest('capabilities');"
+    NSString *script = @"authorizeAutoLexical=async()=>{autoPermission=false;autoVoiceSession=null;};"
+        "const voiceCapabilities=await speechRequest('capabilities');"
         "if(voiceCapabilities.speech){await speechRequest('speak',{token:'native-smoke',text:'Essai de lecture.'}); await new Promise(r=>setTimeout(r,300)); await speechRequest('stop-speaking');}"
         "for(let i=0;i<200&&document.getElementById('status').textContent;i++) await new Promise(r=>setTimeout(r,10));"
-        "await document.getElementById('start').onclick();"
+        "for(let i=0;i<500&&(!homeReady||busy);i++)await new Promise(r=>setTimeout(r,20));homeEnabled=homeCompetencies.map(item=>item.id);renderHomeCards();await document.getElementById('activity-card-calcul-mental').onclick();"
         "const r=await window.webkit.messageHandlers.runtime.postMessage({action:'view'});"
         "window.pauseForInterruption(); const paused=document.getElementById('exercise').hidden;"
         "document.getElementById('resume').onclick();"
@@ -81,7 +84,7 @@
         "await document.getElementById('finish').onclick();"
         "document.getElementById('activity').value='acces-lexical';"
         "await document.getElementById('start').onclick();"
-        "await document.getElementById('hint').onclick();"
+        "const helpInitiallyClosed=!document.getElementById('lexicalHelp').open;document.getElementById('lexicalHelp').open=true;await document.getElementById('hint').onclick();"
         "const hinted=await request('view'); const hintVisible=Boolean(document.getElementById('hints').textContent);"
         "const regressionField=document.getElementById('answer'); regressionField.value='bouteille';"
         "dictationDraft={token:'synthetic-regression',field:regressionField,key:audioContextKey(hinted),prefix:'',status:'partial'}; renderSpeechControls(hinted);"
@@ -98,7 +101,7 @@
         "await document.getElementById('protocol-continue').onclick();"
         "const masked=!document.getElementById('protocol').textContent.includes('bureau de tabac de la place');"
         "field=document.getElementById('protocol-answer'); field.value='Le colis attend'; field.oninput();"
-        "await document.getElementById('protocol-pause').onclick(); await document.getElementById('resume').onclick();"
+        "if(document.getElementById('protocol-pause'))throw Error('Bouton Pause inattendu');await window.pauseForInterruption(); await document.getElementById('resume').onclick();"
         "const draft=document.getElementById('protocol-answer').value==='Le colis attend';"
         "await document.getElementById('protocol-reread').onclick(); await document.getElementById('protocol-continue').onclick();"
         "field=document.getElementById('protocol-answer'); field.value='Le colis attend au bureau de tabac avant jeudi avec une pièce d’identité avant la fermeture à 18 h'; field.oninput();"
@@ -137,14 +140,14 @@
         "for(let k=0;k<100&&busy;k++)await new Promise(r=>setTimeout(r,10));"
         "const memoryAnswer=await request('view');await document.getElementById('finish').onclick();"
         "return {dictationUnlocked,speech:typeof voiceCapabilities.speech==='boolean'&&typeof voiceCapabilities.on_device_dictation==='boolean',memory:noSequence&&timedMemory&&Boolean(memoryAnswer.feedback),strategies,contextes:photoLoaded&&noPhoto&&recallResumed&&recalled.contextes.phase==='feedback',result:r,title:document.querySelector('h1').textContent,error:document.getElementById('error').textContent,"
-        "paused,resumed,support,lexical:hinted.activity==='acces-lexical' && hinted.hints_used===1 && hintVisible && revealed.feedback.assistee===true,"
+        "paused,resumed,support,lexical:helpInitiallyClosed && document.getElementById('lexicalHelp').tagName==='DETAILS' && hinted.activity==='acces-lexical' && hinted.hints_used===1 && hintVisible && revealed.feedback.assistee===true,"
         "pqrst:pqrstOK};";
     [web callAsyncJavaScript:script
                    arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld
            completionHandler:^(id value, NSError *error) {
         XCTAssertNil(error);
         XCTAssertTrue([value isKindOfClass:NSDictionary.class]);
-        XCTAssertEqualObjects(value[@"title"], @"Chiffres dans l’ordre");
+        XCTAssertEqualObjects(value[@"title"], @"Remédiation");
         XCTAssertEqualObjects(value[@"error"], @"");
         XCTAssertNotNil(value[@"result"][@"started"]);
         XCTAssertNotNil(value[@"result"][@"item"]);
@@ -163,6 +166,99 @@
     [self waitForExpectations:@[response] timeout:60];
 }
 
+- (void)testVoiceSettingsLoad {
+    UIWindowScene *scene = (UIWindowScene *)UIApplication.sharedApplication.connectedScenes.anyObject;
+    WKWebView *web = [scene.windows.firstObject.rootViewController valueForKey:@"web"];
+    XCTAssertNotNil(web);
+    NSPredicate *loaded = [NSPredicate predicateWithBlock:^BOOL(id object, NSDictionary *bindings) {
+        return !web.loading && [web.URL.lastPathComponent isEqualToString:@"index.html"];
+    }];
+    XCTNSPredicateExpectation *page = [[XCTNSPredicateExpectation alloc] initWithPredicate:loaded object:web];
+    [self waitForExpectations:@[page] timeout:20];
+    XCTestExpectation *response = [self expectationWithDescription:@"Paramètres vocaux chargés"];
+    [web callAsyncJavaScript:@"for(let i=0;i<500&&(busy||!voiceSettingsReady);i++)await new Promise(r=>setTimeout(r,20)); return {ready:voiceSettingsReady,disabled:document.getElementById('previewVoice').disabled,count:document.getElementById('voiceChoice').options.length};"
+        arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld completionHandler:^(id value, NSError *error) {
+        XCTAssertNil(error);XCTAssertEqualObjects(value[@"ready"],@YES);
+        XCTAssertEqualObjects(value[@"disabled"],@NO);XCTAssertTrue([value[@"count"] integerValue]>0);
+        [response fulfill];
+    }];
+    [self waitForExpectations:@[response] timeout:20];
+}
+- (void)testHomeCompetencies {
+    NSUserDefaults *defaults = NSUserDefaults.standardUserDefaults;
+    id previous = [defaults objectForKey:@"RCEnabledCompetenciesV1"];
+    @try {
+        UIWindowScene *scene = (UIWindowScene *)UIApplication.sharedApplication.connectedScenes.anyObject;
+        WKWebView *web = [scene.windows.firstObject.rootViewController valueForKey:@"web"];
+        NSPredicate *loaded = [NSPredicate predicateWithBlock:^BOOL(id object, NSDictionary *bindings) {
+            return !web.loading && [web.URL.lastPathComponent isEqualToString:@"index.html"];
+        }];
+        XCTNSPredicateExpectation *page = [[XCTNSPredicateExpectation alloc] initWithPredicate:loaded object:web];
+        [self waitForExpectations:@[page] timeout:20];
+        XCTestExpectation *response = [self expectationWithDescription:@"Cartes et compétences"];
+        NSString *script = @"for(let i=0;i<500&&(!homeReady||busy);i++)await new Promise(r=>setTimeout(r,20));"
+            "const original=[...homeEnabled];let result;try{"
+            "await speechRequest('set-home-settings',{enabled:['mots','information']});homeEnabled=['mots','information'];renderCompetencySettings();renderHomeCards();"
+            "const filtered=document.querySelectorAll('#activityCards button').length===2&&!document.getElementById('activity-card-calcul-mental')&&document.getElementById('competency-mots').checked;"
+            "document.getElementById('competency-mots').checked=false;await document.getElementById('competency-mots').onchange();"
+            "const saved=await speechRequest('home-settings');const persisted=saved.enabled.length===1&&saved.enabled[0]==='information'&&document.querySelectorAll('#activityCards button').length===1;"
+            "document.getElementById('competency-information').checked=false;await document.getElementById('competency-information').onchange();"
+            "const empty=document.querySelectorAll('#activityCards button').length===0&&(await speechRequest('home-settings')).enabled.length===0;result={filtered,persisted,empty};"
+            "}finally{await speechRequest('set-home-settings',{enabled:original});homeEnabled=original;renderCompetencySettings();renderHomeCards();}return result;";
+        [web callAsyncJavaScript:script arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld completionHandler:^(id value, NSError *error) {
+            XCTAssertNil(error);XCTAssertEqualObjects(value[@"filtered"],@YES);XCTAssertEqualObjects(value[@"persisted"],@YES);XCTAssertEqualObjects(value[@"empty"],@YES);[response fulfill];
+        }];
+        [self waitForExpectations:@[response] timeout:25];
+        id speech = [NSClassFromString(@"RCSpeechController") new];
+        [speech handle:@{@"operation":@"set-home-settings",@"enabled":@[@"inconnue"]} reply:^(id value, NSString *error) {XCTAssertNil(value);XCTAssertNotNil(error);}];
+    } @finally {
+        if(previous)[defaults setObject:previous forKey:@"RCEnabledCompetenciesV1"];
+        else [defaults removeObjectForKey:@"RCEnabledCompetenciesV1"];
+    }
+}
+- (void)testFrenchVoicePreference {
+    NSUserDefaults *defaults = NSUserDefaults.standardUserDefaults;
+    NSString *previous = [defaults stringForKey:@"RCFrenchVoiceIdentifier"];
+    @try {
+        id speech = [NSClassFromString(@"RCSpeechController") new];
+        __block NSDictionary *inventory;
+        [speech handle:@{@"operation":@"voices"} reply:^(id value, NSString *error) {XCTAssertNil(error);inventory=value;}];
+        NSArray *voices = inventory[@"voices"];
+        XCTAssertTrue(voices.count > 0);
+        for (NSDictionary *voice in voices) {
+            XCTAssertTrue([voice[@"language"] hasPrefix:@"fr-"]);
+            XCTAssertFalse([voice[@"identifier"] containsString:@"com.apple.eloquence."]);
+        }
+        NSString *identifier = [voices.lastObject objectForKey:@"identifier"];
+        if (!identifier) return;
+        [speech handle:@{@"operation":@"set-voice",@"identifier":identifier} reply:^(id value, NSString *error) {
+            XCTAssertNil(error);XCTAssertEqualObjects(value[@"selected"],identifier);
+        }];
+        id restored = [NSClassFromString(@"RCSpeechController") new];
+        [restored handle:@{@"operation":@"voices"} reply:^(id value, NSString *error) {
+            XCTAssertNil(error);XCTAssertEqualObjects(value[@"selected"],identifier);
+        }];
+        [restored handle:@{@"operation":@"set-voice",@"identifier":@"com.apple.eloquence.fr-FR.Flo"} reply:^(id value, NSString *error) {
+            XCTAssertNil(value);XCTAssertNotNil(error);
+        }];
+        XCTAssertEqualObjects([defaults stringForKey:@"RCFrenchVoiceIdentifier"],identifier);
+    } @finally {
+        if (previous) [defaults setObject:previous forKey:@"RCFrenchVoiceIdentifier"];
+        else [defaults removeObjectForKey:@"RCFrenchVoiceIdentifier"];
+    }
+}
+- (void)testAudioRoutingPreservesAccessories {
+    id speech = [NSClassFromString(@"RCSpeechController") new];
+    XCTAssertNotNil(speech);
+    XCTAssertTrue([speech shouldUseSpeakerForOutputs:@[AVAudioSessionPortBuiltInReceiver]]);
+    for (NSString *port in @[AVAudioSessionPortBuiltInSpeaker, AVAudioSessionPortHeadphones,
+          AVAudioSessionPortBluetoothHFP, AVAudioSessionPortBluetoothA2DP,
+          AVAudioSessionPortBluetoothLE, AVAudioSessionPortUSBAudio, AVAudioSessionPortAirPlay]) {
+        XCTAssertFalse([speech shouldUseSpeakerForOutputs:@[port]]);
+        XCTAssertFalse(([speech shouldUseSpeakerForOutputs:@[AVAudioSessionPortBuiltInReceiver,port]]));
+    }
+    XCTAssertFalse([speech shouldUseSpeakerForOutputs:@[]]);
+}
 - (void)testNativeSpeechWithoutMicrophonePermission {
     Class speechClass = NSClassFromString(@"RCSpeechController");
     XCTAssertNotNil(speechClass);

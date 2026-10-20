@@ -23,14 +23,15 @@ def main():
     shutil.copy2(ROOT / "UPSTREAM.json", app / "UPSTREAM.json")
     native = ROOT / "mobile/ios/pilot"
     shutil.copy2(native / "SceneDelegate.m", destination / "iOSTestbed/SceneDelegate.m")
-    for name in ("SpeechController.h", "SpeechController.m"):
+    for name in ("SpeechController.h", "SpeechController.m", "SemanticBridge.h", "SemanticBridge.m"):
         shutil.copy2(native / name, destination / "iOSTestbed" / name)
     shutil.copy2(native / "PilotTests.m", destination / "TestbedTests/TestbedTests.m")
     # Réutilise une ressource-folder déjà déclarée dans le projet Xcode.
     pilot = destination / "iOSTestbed/app/pilot"
     pilot.mkdir()
-    for name in ("index.html", "pilot.css", "active-clock.js", "pqrst.js", "contextes.js", "choices.js", "memory.js", "speech.js", "pilot.js"):
+    for name in ("index.html", "pilot.css", "active-clock.js", "pqrst.js", "contextes.js", "choices.js", "memory.js", "speech.js", "auto-lexical.js", "feedback-flow.js", "voice-settings.js", "home.js", "pilot.js"):
         shutil.copy2(native / name, pilot / name)
+    shutil.copy2(ROOT / "vendor/remediation/frontend/src/dictee-auto.js", pilot / "dictee-auto.js")
     shutil.copytree(ROOT / "vendor/remediation/frontend/images", pilot / "images")
     scene = destination / "iOSTestbed/SceneDelegate.m"
     scene.write_text(scene.read_text().replace('@"pilot" isDirectory:YES', '@"app/pilot" isDirectory:YES'))
@@ -38,8 +39,8 @@ def main():
     info = plistlib.loads(info_path.read_bytes())
     info.update(CFBundleDisplayName="Remédiation", CFBundleDevelopmentRegion="fr",
                 CFBundleIdentifier="$(PRODUCT_BUNDLE_IDENTIFIER)",
-                NSMicrophoneUsageDescription="Le microphone permet de dicter ta réponse, uniquement quand tu choisis Dicter.",
-                NSSpeechRecognitionUsageDescription="La dictée transforme ta voix en texte à vérifier avant validation. L’app exige la reconnaissance sur cet appareil.")
+                NSMicrophoneUsageDescription="Le microphone permet de répondre à voix haute. Dans Retrouver le mot, il s’ouvre après la lecture ; tu peux choisir le clavier.",
+                NSSpeechRecognitionUsageDescription="La dictée transforme ta voix en texte sur cet appareil. Dans Retrouver le mot, une réponse reconnue est validée automatiquement selon les règles de l’exercice.")
     info.pop("UIRequiresFullScreen", None)
     info_path.write_bytes(plistlib.dumps(info))
     project = destination / "iOSTestbed.xcodeproj/project.pbxproj"
