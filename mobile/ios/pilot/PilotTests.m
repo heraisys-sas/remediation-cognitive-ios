@@ -84,7 +84,7 @@
         "await document.getElementById('finish').onclick();"
         "document.getElementById('activity').value='acces-lexical';"
         "await document.getElementById('start').onclick();"
-        "await document.getElementById('hint').onclick();"
+        "const helpInitiallyClosed=!document.getElementById('lexicalHelp').open;document.getElementById('lexicalHelp').open=true;await document.getElementById('hint').onclick();"
         "const hinted=await request('view'); const hintVisible=Boolean(document.getElementById('hints').textContent);"
         "const regressionField=document.getElementById('answer'); regressionField.value='bouteille';"
         "dictationDraft={token:'synthetic-regression',field:regressionField,key:audioContextKey(hinted),prefix:'',status:'partial'}; renderSpeechControls(hinted);"
@@ -101,7 +101,7 @@
         "await document.getElementById('protocol-continue').onclick();"
         "const masked=!document.getElementById('protocol').textContent.includes('bureau de tabac de la place');"
         "field=document.getElementById('protocol-answer'); field.value='Le colis attend'; field.oninput();"
-        "await document.getElementById('protocol-pause').onclick(); await document.getElementById('resume').onclick();"
+        "if(document.getElementById('protocol-pause'))throw Error('Bouton Pause inattendu');await window.pauseForInterruption(); await document.getElementById('resume').onclick();"
         "const draft=document.getElementById('protocol-answer').value==='Le colis attend';"
         "await document.getElementById('protocol-reread').onclick(); await document.getElementById('protocol-continue').onclick();"
         "field=document.getElementById('protocol-answer'); field.value='Le colis attend au bureau de tabac avant jeudi avec une pièce d’identité avant la fermeture à 18 h'; field.oninput();"
@@ -140,7 +140,7 @@
         "for(let k=0;k<100&&busy;k++)await new Promise(r=>setTimeout(r,10));"
         "const memoryAnswer=await request('view');await document.getElementById('finish').onclick();"
         "return {dictationUnlocked,speech:typeof voiceCapabilities.speech==='boolean'&&typeof voiceCapabilities.on_device_dictation==='boolean',memory:noSequence&&timedMemory&&Boolean(memoryAnswer.feedback),strategies,contextes:photoLoaded&&noPhoto&&recallResumed&&recalled.contextes.phase==='feedback',result:r,title:document.querySelector('h1').textContent,error:document.getElementById('error').textContent,"
-        "paused,resumed,support,lexical:hinted.activity==='acces-lexical' && hinted.hints_used===1 && hintVisible && revealed.feedback.assistee===true,"
+        "paused,resumed,support,lexical:helpInitiallyClosed && document.getElementById('lexicalHelp').tagName==='DETAILS' && hinted.activity==='acces-lexical' && hinted.hints_used===1 && hintVisible && revealed.feedback.assistee===true,"
         "pqrst:pqrstOK};";
     [web callAsyncJavaScript:script
                    arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld

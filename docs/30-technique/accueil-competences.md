@@ -40,3 +40,11 @@ Relecture Astra : classement des 7 compétences et 13 cartes cohérent ; descrip
 Huit XCTest réussis, zéro échec, dont le filtre réel WebKit (2 cartes, puis 1, puis aucune), la sauvegarde/relecture des préférences et le démarrage direct d’une séance depuis une carte. Le moteur embarqué conserve ses 20 contrôles réussis. Preuves locales : `.local/home-competencies-final-device.log` et `.local/home-competencies-final-device.xcresult`. Une première exécution avait conservé l’attente de l’ancien titre d’accueil dans un test ; cette attente a été mise à jour avant l’exécution complète réussie.
 
 La vérification visuelle via navigateur local n’a pas pu être exécutée, le navigateur refusant les URL `file:` ; aucune capture visuelle de l’accueil n’est revendiquée. L’ergonomie perçue reste à confirmer à l’usage sur l’iPhone.
+
+## Allègement des commandes d’exercice
+
+Les aides lexicales sont regroupées dans « Une aide pour retrouver le mot », un panneau natif `<details>` fermé au début d’une nouvelle question. Demander un indice laisse le panneau ouvert. Les boutons d’indice et de révélation gardent leurs actions et la progression habituelles.
+
+PQRST n’affiche plus de bouton Pause puisqu’il n’impose pas de temps de réponse. Les interruptions de l’app conservent leur mise en pause automatique et la reprise explicite. Les tests WebKit vérifient désormais cette interruption directement, sans dépendre d’un bouton retiré.
+
+Validation de cet allègement : 53 tests JavaScript et 8 XCTest réussis sur iPhone Air, zéro échec ; aide initialement repliée et interruption PQRST vérifiées dans WebKit. Résultat local `.local/disclosure-final-device.xcresult`. Relecture Sol favorable. Une première exécution conservait un clic de test vers l’ancien bouton Pause ; ce scénario a été adapté à l’interruption système avant la vérification complète réussie.

@@ -2,6 +2,7 @@
 const element = id => document.getElementById(id);
 let state = null, busy = false, paused = false;
 let pendingProtocolPause = false;
+let lexicalHelpKey=null;
 const clock = new ActiveClock();
 async function request(action, data = {}) {
   if (!window.webkit?.messageHandlers?.runtime) {
@@ -71,6 +72,8 @@ function render(view) {
   if (!view.memory) element("answer").inputMode = "text";
   const hints = view.item.contenu.indices || [];
   const lexical = view.item.type === "rappel-indice";
+  const helpKey=JSON.stringify([view.session_id,view.item.id,view.position,Boolean(view.reprise)]);
+  if(helpKey!==lexicalHelpKey){element("lexicalHelp").open=false;lexicalHelpKey=helpKey;}
   element("lexicalHelp").hidden = !lexical || Boolean(view.feedback) || Boolean(view.reprise);
   element("hints").textContent = hints.slice(0, view.hints_used || 0).map(hint => hint.texte).join("\n");
   element("hint").hidden = (view.hints_used || 0) >= hints.length;

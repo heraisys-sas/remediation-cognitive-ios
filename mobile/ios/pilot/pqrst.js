@@ -64,9 +64,6 @@ function renderPqrstProtocol(view) {
     update();
   }
   protocol.actions.forEach(action => button(`protocol-${action.operation}`, action.label, () => protocolCommand(action.operation)));
-  if (!["pret", "fin"].includes(protocol.phase)) {
-    button("protocol-pause", "Faire une pause", () => window.pauseForInterruption()).className = "secondaryButton";
-  }
 }
 
 function pqrstFeedbackLines(result) {

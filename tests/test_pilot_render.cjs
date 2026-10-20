@@ -171,9 +171,12 @@ test('les indices lexicaux restent facultatifs et sont restaurés dans l’ordre
   assert.equal(get('heading').textContent,'Retrouver le mot');
   assert.equal(get('activityChoice').hidden,true);
   assert.equal(get('lexicalHelp').hidden,false);
+  assert.equal(get('lexicalHelp').open,false);
+  get('lexicalHelp').open=true;
   assert.equal(get('hints').textContent,'Catégorie : bureau');
   assert.equal(get('hint').hidden,false);
   render({...view,hints_used:2});
+  assert.equal(get('lexicalHelp').open,true);
   assert.equal(get('hint').hidden,true);
   assert.match(get('hints').textContent,/Commence par a/);
   render({...view,feedback:{assistee:true,attendue:'agrafeuse'}});
