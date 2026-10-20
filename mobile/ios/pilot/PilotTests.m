@@ -199,9 +199,9 @@
         NSString *script = @"for(let i=0;i<500&&(!homeReady||busy);i++)await new Promise(r=>setTimeout(r,20));"
             "const original=[...homeEnabled];let result;try{"
             "await speechRequest('set-home-settings',{enabled:['mots','information']});homeEnabled=['mots','information'];renderCompetencySettings();renderHomeCards();"
-            "const filtered=document.querySelectorAll('#activityCards button').length===2&&!document.getElementById('activity-card-calcul-mental')&&document.getElementById('competency-mots').checked;"
+            "const filtered=document.querySelectorAll('#activityCards button').length===6&&!document.getElementById('activity-card-calcul-mental')&&document.getElementById('competency-mots').checked;"
             "document.getElementById('competency-mots').checked=false;await document.getElementById('competency-mots').onchange();"
-            "const saved=await speechRequest('home-settings');const persisted=saved.enabled.length===1&&saved.enabled[0]==='information'&&document.querySelectorAll('#activityCards button').length===1;"
+            "const saved=await speechRequest('home-settings');const persisted=saved.enabled.length===1&&saved.enabled[0]==='information'&&document.querySelectorAll('#activityCards button').length===3;"
             "document.getElementById('competency-information').checked=false;await document.getElementById('competency-information').onchange();"
             "const empty=document.querySelectorAll('#activityCards button').length===0&&(await speechRequest('home-settings')).enabled.length===0;result={filtered,persisted,empty};"
             "}finally{await speechRequest('set-home-settings',{enabled:original});homeEnabled=original;renderCompetencySettings();renderHomeCards();}return result;";

@@ -1,0 +1,446 @@
+[
+  {
+    "id": "qo-1-message-01",
+    "type": "prise-message",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Lis le message, puis réponds de mémoire. Astuce : retiens qui, quoi et quand — tu peux te le répéter dans ta tête.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "Le cabinet médical a appelé : le rendez-vous de jeudi est avancé à 14 h 30."
+          ]
+        ]
+      },
+      "enonce": "À quelle heure est le rendez-vous ?",
+      "aide": "Regroupe les informations : qui ? quoi ? quand ? où ?"
+    },
+    "reponse": {
+      "valeur": "14 h 30"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-1-message-02",
+    "type": "prise-message",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Lis le message, puis réponds de mémoire. Astuce : retiens qui, quoi et quand — tu peux te le répéter dans ta tête.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "Maman a laissé un message : achète du pain, deux bouteilles de lait et six œufs."
+          ]
+        ]
+      },
+      "enonce": "Combien de bouteilles de lait ?",
+      "aide": "Regroupe les informations : qui ? quoi ? quand ? où ?"
+    },
+    "reponse": {
+      "valeur": "deux"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-1-message-03",
+    "type": "prise-message",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Lis le message, puis réponds de mémoire. Astuce : retiens qui, quoi et quand — tu peux te le répéter dans ta tête.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "La pharmacie ferme à 19 h le samedi et rouvre le lundi matin."
+          ]
+        ]
+      },
+      "enonce": "Quand la pharmacie rouvre-t-elle ?",
+      "aide": "Regroupe les informations : qui ? quoi ? quand ? où ?"
+    },
+    "reponse": {
+      "valeur": "le lundi matin"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-1-message-04",
+    "type": "prise-message",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Lis le message, puis réponds de mémoire. Astuce : retiens qui, quoi et quand — tu peux te le répéter dans ta tête.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "Le plombier passera mardi entre 8 h et 10 h ; il faut laisser la porte de la cave ouverte."
+          ]
+        ]
+      },
+      "enonce": "Que faut-il laisser ouvert ?",
+      "aide": "Regroupe les informations : qui ? quoi ? quand ? où ?"
+    },
+    "reponse": {
+      "valeur": "la porte de la cave"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-1-message-05",
+    "type": "prise-message",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Lis le message, puis réponds de mémoire. Astuce : retiens qui, quoi et quand — tu peux te le répéter dans ta tête.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "Ta sœur rappelle qu'il faut prendre le train de 16 h 42, pas celui de 17 h."
+          ]
+        ]
+      },
+      "enonce": "Quel train faut-il prendre ?",
+      "aide": "Regroupe les informations : qui ? quoi ? quand ? où ?"
+    },
+    "reponse": {
+      "valeur": "16 h 42"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-1-message-06",
+    "type": "prise-message",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Lis le message, puis réponds de mémoire. Astuce : retiens qui, quoi et quand — tu peux te le répéter dans ta tête.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "Le voisin a déposé un colis au troisième étage, chez la gardienne."
+          ]
+        ]
+      },
+      "enonce": "Où est le colis ?",
+      "aide": "Regroupe les informations : qui ? quoi ? quand ? où ?"
+    },
+    "reponse": {
+      "valeur": "chez la gardienne"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-1-message-07",
+    "type": "prise-message",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Lis le message, puis réponds de mémoire. Astuce : retiens qui, quoi et quand — tu peux te le répéter dans ta tête.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "Le médecin a demandé de refaire la prise de sang vendredi, à jeun."
+          ]
+        ]
+      },
+      "enonce": "Quand faut-il refaire la prise de sang ?",
+      "aide": "Regroupe les informations : qui ? quoi ? quand ? où ?"
+    },
+    "reponse": {
+      "valeur": "vendredi"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-1-message-08",
+    "type": "prise-message",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Lis le message, puis réponds de mémoire. Astuce : retiens qui, quoi et quand — tu peux te le répéter dans ta tête.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "Le garagiste annonce que la voiture sera prête jeudi soir, autour de 18 h."
+          ]
+        ]
+      },
+      "enonce": "Quand la voiture sera-t-elle prête ?",
+      "aide": "Regroupe les informations : qui ? quoi ? quand ? où ?"
+    },
+    "reponse": {
+      "valeur": "jeudi soir"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-1-message-09",
+    "type": "prise-message",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Lis le message, puis réponds de mémoire. Astuce : retiens qui, quoi et quand — tu peux te le répéter dans ta tête.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "L'orthophoniste propose de décaler la séance au mardi 10 h au lieu du jeudi."
+          ]
+        ]
+      },
+      "enonce": "Quel jour est proposé pour la nouvelle séance ?",
+      "aide": "Regroupe les informations : qui ? quoi ? quand ? où ?"
+    },
+    "reponse": {
+      "valeur": "mardi"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-1-message-10",
+    "type": "prise-message",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Lis le message, puis réponds de mémoire. Astuce : retiens qui, quoi et quand — tu peux te le répéter dans ta tête.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "Le livreur passera demain ; il faut un code à quatre chiffres pour la porte : 4721."
+          ]
+        ]
+      },
+      "enonce": "Quel est le code de la porte ?",
+      "aide": "Regroupe les informations : qui ? quoi ? quand ? où ?"
+    },
+    "reponse": {
+      "valeur": "4721"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-1-message-11",
+    "type": "prise-message",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Lis le message, puis réponds de mémoire. Astuce : retiens qui, quoi et quand — tu peux te le répéter dans ta tête.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "La boulangère te rappelle que la commande de dix croissants est prête depuis midi."
+          ]
+        ]
+      },
+      "enonce": "Combien de croissants sont commandés ?",
+      "aide": "Regroupe les informations : qui ? quoi ? quand ? où ?"
+    },
+    "reponse": {
+      "valeur": "dix"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo-1-message-12",
+    "type": "prise-message",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Lis le message, puis réponds de mémoire. Astuce : retiens qui, quoi et quand — tu peux te le répéter dans ta tête.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "La banque signale un rendez-vous conseiller le 3 du mois prochain, à 11 h 15."
+          ]
+        ]
+      },
+      "enonce": "À quelle date est le rendez-vous ?",
+      "aide": "Regroupe les informations : qui ? quoi ? quand ? où ?"
+    },
+    "reponse": {
+      "valeur": "le 3 du mois prochain"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-23",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "theme": "garder-cap",
+  "paliers": [
+    {
+      "id": "cap-palier-1",
+      "description": "Reprendre une tâche après une interruption réellement vécue",
+      "prerequis": [],
+      "fichier": "paliers/palier-01.json",
+      "nb_items": 12
+    },
+    {
+      "id": "cap-palier-2",
+      "description": "Adapter le plan à un changement",
+      "prerequis": [
+        "cap-palier-1"
+      ],
+      "fichier": "paliers/palier-02.json",
+      "nb_items": 4
+    },
+    {
+      "id": "cap-palier-3",
+      "description": "Vérifier avant de terminer",
+      "prerequis": [
+        "cap-palier-2"
+      ],
+      "fichier": "paliers/palier-03.json",
+      "nb_items": 4
+    }
+  ]
+}

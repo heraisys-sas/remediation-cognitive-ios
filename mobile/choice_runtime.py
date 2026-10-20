@@ -2,6 +2,8 @@
 import copy
 
 CHOICE_ACTIVITIES = {
+    "cap-adapter": ("garder-cap", "adapter", "Adapter un plan"),
+    "cap-verifier": ("garder-cap", "verifier", "Vérifier avant de terminer"),
     "choisir-plan": ("methodes", "choisir-plan", "Choisir un plan"),
     "auto-instruction": ("methodes", "auto-instruction", "Se guider avant d’agir"),
     "verifier-plan": ("methodes", "verifier-plan", "Vérifier un plan"),

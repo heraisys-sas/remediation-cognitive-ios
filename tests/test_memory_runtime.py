@@ -27,7 +27,7 @@ def encode(runtime):
     return view
 
 
-@pytest.mark.parametrize("activity",MEMORY_ACTIVITIES)
+@pytest.mark.parametrize("activity",[key for key,value in MEMORY_ACTIVITIES.items() if value[0]=="memoire"])
 def test_memory_matches_source_answers_reprises_and_progress(tmp_path,monkeypatch,activity):
     now=datetime.now(timezone.utc)
     original=GestionnaireSessions.__init__

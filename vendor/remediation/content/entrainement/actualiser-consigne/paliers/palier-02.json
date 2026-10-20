@@ -1,0 +1,854 @@
+[
+  {
+    "id": "actualiser-consigne-v2-2-01",
+    "module": "entrainement",
+    "theme": "actualiser-consigne",
+    "type": "actualiser-consigne",
+    "palier": 2,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Préparer une réunion — restitue la consigne finale.",
+      "consigne": "Lis chaque message à ton rythme. Il sera masqué au suivant. Garde ce qui reste valable et remplace seulement ce qui change.",
+      "methode": "Reformule la consigne en quelques éléments. À chaque message, remplace l’élément modifié puis répète mentalement la version à jour.",
+      "etat_initial": {
+        "heure": "14 h",
+        "lieu": "Atlas",
+        "piece": "budget"
+      },
+      "etapes": [
+        {
+          "titre": "Consigne initiale",
+          "evenement": "initial",
+          "texte": "Horaire : 14 h. Salle : Atlas. Document : budget."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "heure",
+          "nouveau": "15 h",
+          "texte": "Horaire : désormais 15 h. Conserve les autres éléments mémorisés."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "lieu",
+          "nouveau": "Orion",
+          "texte": "Salle : désormais Orion. Conserve les autres éléments mémorisés."
+        }
+      ],
+      "champs": [
+        {
+          "id": "heure",
+          "label": "Horaire"
+        },
+        {
+          "id": "lieu",
+          "label": "Salle"
+        },
+        {
+          "id": "piece",
+          "label": "Document"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "heure": "15 h",
+        "lieu": "Orion",
+        "piece": "budget"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "actualiser-consigne-v2-2-02",
+    "module": "entrainement",
+    "theme": "actualiser-consigne",
+    "type": "actualiser-consigne",
+    "palier": 2,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Retirer un dossier — restitue la consigne finale.",
+      "consigne": "Lis chaque message à ton rythme. Il sera masqué au suivant. Garde ce qui reste valable et remplace seulement ce qui change.",
+      "methode": "Reformule la consigne en quelques éléments. À chaque message, remplace l’élément modifié puis répète mentalement la version à jour.",
+      "etat_initial": {
+        "jour": "mardi",
+        "lieu": "accueil",
+        "piece": "badge"
+      },
+      "etapes": [
+        {
+          "titre": "Consigne initiale",
+          "evenement": "initial",
+          "texte": "Jour : mardi. Guichet : accueil. Justificatif : badge."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "lieu",
+          "nouveau": "bureau 12",
+          "texte": "Guichet : désormais bureau 12. Conserve les autres éléments mémorisés."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "piece",
+          "nouveau": "convocation",
+          "texte": "Justificatif : désormais convocation. Conserve les autres éléments mémorisés."
+        }
+      ],
+      "champs": [
+        {
+          "id": "jour",
+          "label": "Jour"
+        },
+        {
+          "id": "lieu",
+          "label": "Guichet"
+        },
+        {
+          "id": "piece",
+          "label": "Justificatif"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "jour": "mardi",
+        "lieu": "bureau 12",
+        "piece": "convocation"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "actualiser-consigne-v2-2-03",
+    "module": "entrainement",
+    "theme": "actualiser-consigne",
+    "type": "actualiser-consigne",
+    "palier": 2,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Réceptionner une livraison — restitue la consigne finale.",
+      "consigne": "Lis chaque message à ton rythme. Il sera masqué au suivant. Garde ce qui reste valable et remplace seulement ce qui change.",
+      "methode": "Reformule la consigne en quelques éléments. À chaque message, remplace l’élément modifié puis répète mentalement la version à jour.",
+      "etat_initial": {
+        "heure": "10 h",
+        "acces": "nord",
+        "piece": "bon de commande"
+      },
+      "etapes": [
+        {
+          "titre": "Consigne initiale",
+          "evenement": "initial",
+          "texte": "Horaire : 10 h. Entrée : nord. Document : bon de commande."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "piece",
+          "nouveau": "facture",
+          "texte": "Document : désormais facture. Conserve les autres éléments mémorisés."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "heure",
+          "nouveau": "11 h",
+          "texte": "Horaire : désormais 11 h. Conserve les autres éléments mémorisés."
+        }
+      ],
+      "champs": [
+        {
+          "id": "heure",
+          "label": "Horaire"
+        },
+        {
+          "id": "acces",
+          "label": "Entrée"
+        },
+        {
+          "id": "piece",
+          "label": "Document"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "heure": "11 h",
+        "acces": "nord",
+        "piece": "facture"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "actualiser-consigne-v2-2-04",
+    "module": "entrainement",
+    "theme": "actualiser-consigne",
+    "type": "actualiser-consigne",
+    "palier": 2,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Organiser une visite culturelle — restitue la consigne finale.",
+      "consigne": "Lis chaque message à ton rythme. Il sera masqué au suivant. Garde ce qui reste valable et remplace seulement ce qui change.",
+      "methode": "Reformule la consigne en quelques éléments. À chaque message, remplace l’élément modifié puis répète mentalement la version à jour.",
+      "etat_initial": {
+        "jour": "lundi",
+        "lieu": "gare",
+        "piece": "plan"
+      },
+      "etapes": [
+        {
+          "titre": "Consigne initiale",
+          "evenement": "initial",
+          "texte": "Jour : lundi. Rendez-vous : gare. Document : plan."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "jour",
+          "nouveau": "mercredi",
+          "texte": "Jour : désormais mercredi. Conserve les autres éléments mémorisés."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "lieu",
+          "nouveau": "musée",
+          "texte": "Rendez-vous : désormais musée. Conserve les autres éléments mémorisés."
+        }
+      ],
+      "champs": [
+        {
+          "id": "jour",
+          "label": "Jour"
+        },
+        {
+          "id": "lieu",
+          "label": "Rendez-vous"
+        },
+        {
+          "id": "piece",
+          "label": "Document"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "jour": "mercredi",
+        "lieu": "musée",
+        "piece": "plan"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "actualiser-consigne-v2-2-05",
+    "module": "entrainement",
+    "theme": "actualiser-consigne",
+    "type": "actualiser-consigne",
+    "palier": 2,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Préparer un déplacement — restitue la consigne finale.",
+      "consigne": "Lis chaque message à ton rythme. Il sera masqué au suivant. Garde ce qui reste valable et remplace seulement ce qui change.",
+      "methode": "Reformule la consigne en quelques éléments. À chaque message, remplace l’élément modifié puis répète mentalement la version à jour.",
+      "etat_initial": {
+        "depart": "8 h 20",
+        "quai": "3",
+        "bagage": "valise cabine"
+      },
+      "etapes": [
+        {
+          "titre": "Consigne initiale",
+          "evenement": "initial",
+          "texte": "Départ : 8 h 20. Quai : 3. Bagage : valise cabine."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "quai",
+          "nouveau": "7",
+          "texte": "Quai : désormais 7. Conserve les autres éléments mémorisés."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "bagage",
+          "nouveau": "sac à dos",
+          "texte": "Bagage : désormais sac à dos. Conserve les autres éléments mémorisés."
+        }
+      ],
+      "champs": [
+        {
+          "id": "depart",
+          "label": "Départ"
+        },
+        {
+          "id": "quai",
+          "label": "Quai"
+        },
+        {
+          "id": "bagage",
+          "label": "Bagage"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "depart": "8 h 20",
+        "quai": "7",
+        "bagage": "sac à dos"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "actualiser-consigne-v2-2-06",
+    "module": "entrainement",
+    "theme": "actualiser-consigne",
+    "type": "actualiser-consigne",
+    "palier": 2,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Suivre une formation — restitue la consigne finale.",
+      "consigne": "Lis chaque message à ton rythme. Il sera masqué au suivant. Garde ce qui reste valable et remplace seulement ce qui change.",
+      "methode": "Reformule la consigne en quelques éléments. À chaque message, remplace l’élément modifié puis répète mentalement la version à jour.",
+      "etat_initial": {
+        "date": "7 décembre",
+        "format": "sur place",
+        "support": "ordinateur"
+      },
+      "etapes": [
+        {
+          "titre": "Consigne initiale",
+          "evenement": "initial",
+          "texte": "Date : 7 décembre. Format : sur place. Support : ordinateur."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "support",
+          "nouveau": "tablette",
+          "texte": "Support : désormais tablette. Conserve les autres éléments mémorisés."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "date",
+          "nouveau": "8 décembre",
+          "texte": "Date : désormais 8 décembre. Conserve les autres éléments mémorisés."
+        }
+      ],
+      "champs": [
+        {
+          "id": "date",
+          "label": "Date"
+        },
+        {
+          "id": "format",
+          "label": "Format"
+        },
+        {
+          "id": "support",
+          "label": "Support"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "date": "8 décembre",
+        "format": "sur place",
+        "support": "tablette"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "actualiser-consigne-v2-2-07",
+    "module": "entrainement",
+    "theme": "actualiser-consigne",
+    "type": "actualiser-consigne",
+    "palier": 2,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Préparer un rendez-vous administratif — restitue la consigne finale.",
+      "consigne": "Lis chaque message à ton rythme. Il sera masqué au suivant. Garde ce qui reste valable et remplace seulement ce qui change.",
+      "methode": "Reformule la consigne en quelques éléments. À chaque message, remplace l’élément modifié puis répète mentalement la version à jour.",
+      "etat_initial": {
+        "jour": "lundi",
+        "service": "urbanisme",
+        "dossier": "original"
+      },
+      "etapes": [
+        {
+          "titre": "Consigne initiale",
+          "evenement": "initial",
+          "texte": "Jour : lundi. Service : urbanisme. Dossier : original."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "jour",
+          "nouveau": "mardi",
+          "texte": "Jour : désormais mardi. Conserve les autres éléments mémorisés."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "service",
+          "nouveau": "état civil",
+          "texte": "Service : désormais état civil. Conserve les autres éléments mémorisés."
+        }
+      ],
+      "champs": [
+        {
+          "id": "jour",
+          "label": "Jour"
+        },
+        {
+          "id": "service",
+          "label": "Service"
+        },
+        {
+          "id": "dossier",
+          "label": "Dossier"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "jour": "mardi",
+        "service": "état civil",
+        "dossier": "original"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "actualiser-consigne-v2-2-08",
+    "module": "entrainement",
+    "theme": "actualiser-consigne",
+    "type": "actualiser-consigne",
+    "palier": 2,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Coordonner une intervention à domicile — restitue la consigne finale.",
+      "consigne": "Lis chaque message à ton rythme. Il sera masqué au suivant. Garde ce qui reste valable et remplace seulement ce qui change.",
+      "methode": "Reformule la consigne en quelques éléments. À chaque message, remplace l’élément modifié puis répète mentalement la version à jour.",
+      "etat_initial": {
+        "date": "12 octobre",
+        "plage": "matin",
+        "acces": "porte principale"
+      },
+      "etapes": [
+        {
+          "titre": "Consigne initiale",
+          "evenement": "initial",
+          "texte": "Date : 12 octobre. Plage horaire : matin. Accès : porte principale."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "plage",
+          "nouveau": "13 h–15 h",
+          "texte": "Plage horaire : désormais 13 h–15 h. Conserve les autres éléments mémorisés."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "acces",
+          "nouveau": "cour intérieure",
+          "texte": "Accès : désormais cour intérieure. Conserve les autres éléments mémorisés."
+        }
+      ],
+      "champs": [
+        {
+          "id": "date",
+          "label": "Date"
+        },
+        {
+          "id": "plage",
+          "label": "Plage horaire"
+        },
+        {
+          "id": "acces",
+          "label": "Accès"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "date": "12 octobre",
+        "plage": "13 h–15 h",
+        "acces": "cour intérieure"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "actualiser-consigne-v2-2-09",
+    "module": "entrainement",
+    "theme": "actualiser-consigne",
+    "type": "actualiser-consigne",
+    "palier": 2,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Animer un atelier — restitue la consigne finale.",
+      "consigne": "Lis chaque message à ton rythme. Il sera masqué au suivant. Garde ce qui reste valable et remplace seulement ce qui change.",
+      "methode": "Reformule la consigne en quelques éléments. À chaque message, remplace l’élément modifié puis répète mentalement la version à jour.",
+      "etat_initial": {
+        "jour": "samedi",
+        "salle": "atelier 2",
+        "materiel": "ordinateur"
+      },
+      "etapes": [
+        {
+          "titre": "Consigne initiale",
+          "evenement": "initial",
+          "texte": "Jour : samedi. Salle : atelier 2. Matériel : ordinateur."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "materiel",
+          "nouveau": "vidéoprojecteur",
+          "texte": "Matériel : désormais vidéoprojecteur. Conserve les autres éléments mémorisés."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "jour",
+          "nouveau": "dimanche",
+          "texte": "Jour : désormais dimanche. Conserve les autres éléments mémorisés."
+        }
+      ],
+      "champs": [
+        {
+          "id": "jour",
+          "label": "Jour"
+        },
+        {
+          "id": "salle",
+          "label": "Salle"
+        },
+        {
+          "id": "materiel",
+          "label": "Matériel"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "jour": "dimanche",
+        "salle": "atelier 2",
+        "materiel": "vidéoprojecteur"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "actualiser-consigne-v2-2-10",
+    "module": "entrainement",
+    "theme": "actualiser-consigne",
+    "type": "actualiser-consigne",
+    "palier": 2,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Préparer une consultation — restitue la consigne finale.",
+      "consigne": "Lis chaque message à ton rythme. Il sera masqué au suivant. Garde ce qui reste valable et remplace seulement ce qui change.",
+      "methode": "Reformule la consigne en quelques éléments. À chaque message, remplace l’élément modifié puis répète mentalement la version à jour.",
+      "etat_initial": {
+        "heure": "11 h",
+        "lieu": "cabinet A",
+        "document": "résultats"
+      },
+      "etapes": [
+        {
+          "titre": "Consigne initiale",
+          "evenement": "initial",
+          "texte": "Horaire : 11 h. Site : cabinet A. Document : résultats."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "heure",
+          "nouveau": "11 h 45",
+          "texte": "Horaire : désormais 11 h 45. Conserve les autres éléments mémorisés."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "lieu",
+          "nouveau": "centre B",
+          "texte": "Site : désormais centre B. Conserve les autres éléments mémorisés."
+        }
+      ],
+      "champs": [
+        {
+          "id": "heure",
+          "label": "Horaire"
+        },
+        {
+          "id": "lieu",
+          "label": "Site"
+        },
+        {
+          "id": "document",
+          "label": "Document"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "heure": "11 h 45",
+        "lieu": "centre B",
+        "document": "résultats"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "actualiser-consigne-v2-2-11",
+    "module": "entrainement",
+    "theme": "actualiser-consigne",
+    "type": "actualiser-consigne",
+    "palier": 2,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Finaliser un dossier associatif — restitue la consigne finale.",
+      "consigne": "Lis chaque message à ton rythme. Il sera masqué au suivant. Garde ce qui reste valable et remplace seulement ce qui change.",
+      "methode": "Reformule la consigne en quelques éléments. À chaque message, remplace l’élément modifié puis répète mentalement la version à jour.",
+      "etat_initial": {
+        "date": "20 mars",
+        "format": "PDF",
+        "signature": "présidente"
+      },
+      "etapes": [
+        {
+          "titre": "Consigne initiale",
+          "evenement": "initial",
+          "texte": "Échéance : 20 mars. Format : PDF. Signature : présidente."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "format",
+          "nouveau": "formulaire en ligne",
+          "texte": "Format : désormais formulaire en ligne. Conserve les autres éléments mémorisés."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "signature",
+          "nouveau": "trésorier",
+          "texte": "Signature : désormais trésorier. Conserve les autres éléments mémorisés."
+        }
+      ],
+      "champs": [
+        {
+          "id": "date",
+          "label": "Échéance"
+        },
+        {
+          "id": "format",
+          "label": "Format"
+        },
+        {
+          "id": "signature",
+          "label": "Signature"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "date": "20 mars",
+        "format": "formulaire en ligne",
+        "signature": "trésorier"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "actualiser-consigne-v2-2-12",
+    "module": "entrainement",
+    "theme": "actualiser-consigne",
+    "type": "actualiser-consigne",
+    "palier": 2,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "memoire-travail",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Organiser un dîner — restitue la consigne finale.",
+      "consigne": "Lis chaque message à ton rythme. Il sera masqué au suivant. Garde ce qui reste valable et remplace seulement ce qui change.",
+      "methode": "Reformule la consigne en quelques éléments. À chaque message, remplace l’élément modifié puis répète mentalement la version à jour.",
+      "etat_initial": {
+        "heure": "19 h 30",
+        "lieu": "restaurant Rivage",
+        "nombre": "4"
+      },
+      "etapes": [
+        {
+          "titre": "Consigne initiale",
+          "evenement": "initial",
+          "texte": "Horaire : 19 h 30. Lieu : restaurant Rivage. Couverts : 4."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "nombre",
+          "nouveau": "5",
+          "texte": "Couverts : désormais 5. Conserve les autres éléments mémorisés."
+        },
+        {
+          "titre": "Mise à jour",
+          "evenement": "mise_a_jour",
+          "champ": "heure",
+          "nouveau": "20 h",
+          "texte": "Horaire : désormais 20 h. Conserve les autres éléments mémorisés."
+        }
+      ],
+      "champs": [
+        {
+          "id": "heure",
+          "label": "Horaire"
+        },
+        {
+          "id": "lieu",
+          "label": "Lieu"
+        },
+        {
+          "id": "nombre",
+          "label": "Couverts"
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "heure": "20 h",
+        "lieu": "restaurant Rivage",
+        "nombre": "5"
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

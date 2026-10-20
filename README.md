@@ -10,15 +10,15 @@ Aucun exercice n'est présenté comme un test diagnostique validé.
 ## État réel
 
 Le noyau Python a exécuté ses 60 tests sous iOS 26.5 sur simulateurs iPhone 17
-et Air. Le pilote propose Calcul mental, Retrouver le mot, PQRST guidé, Retrouver le
-contexte, quatre parcours de stratégie et cinq parcours de mémoire visuelle. Il réutilise le service et les
-correcteurs d’origine, avec contenu versionné, interface locale et sauvegarde
-transactionnelle. Voir [le banc d'essai et le pilote](mobile/ios/README.md).
-La validation du pilote sous iOS est distincte de celle du noyau ; consulter
-les résultats du workflow avant de le considérer comme exécuté.
-La lecture française et la dictée natives facultatives sont en cours de recette.
-La dictée exige la reconnaissance sur l’appareil et laisse vérifier le texte
-avant validation. PCC reste facultatif.
+et Air. Le nouveau lot local étend le pilote à 32 parcours classiques et quatre
+protocoles de mémoire immédiate, avec contenu versionné, correcteurs d’origine
+et sauvegarde transactionnelle. Voir [l’inventaire et la validation du lot](docs/30-technique/parcours-complementaires.md).
+Les 213 tests Python et 56 contrôles JavaScript du lot passent sur ordinateur.
+La compilation iOS est distincte de l’exécution sur simulateur et de la recette
+sur appareil. Les nouveaux parcours restent à essayer sur iPhone.
+La lecture et la dictée natives fonctionnent dans le pilote ; la validation
+vocale automatique concerne Retrouver le mot, selon les règles du moteur.
+PCC reste facultatif.
 
 ## Origine et suivi
 

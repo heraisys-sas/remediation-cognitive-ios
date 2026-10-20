@@ -1,0 +1,474 @@
+[
+  {
+    "id": "rs2-2-libre-01",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "rs-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "panier",
+            "chapeau",
+            "sable"
+          ],
+          [
+            "cuisine",
+            "pomme",
+            "guitare"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "panier",
+        "chapeau",
+        "sable",
+        "cuisine",
+        "pomme",
+        "guitare"
+      ],
+      "seuil": 0.6
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-2-libre-02",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "rs-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "chocolat",
+            "plage",
+            "table"
+          ],
+          [
+            "jardin",
+            "vélo",
+            "bureau"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "chocolat",
+        "plage",
+        "table",
+        "jardin",
+        "vélo",
+        "bureau"
+      ],
+      "seuil": 0.6
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-2-libre-03",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "rs-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "cuisine",
+            "bouteille",
+            "manteau"
+          ],
+          [
+            "fenêtre",
+            "table",
+            "voiture"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "cuisine",
+        "bouteille",
+        "manteau",
+        "fenêtre",
+        "table",
+        "voiture"
+      ],
+      "seuil": 0.6
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-2-libre-04",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "rs-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "crayon",
+            "chocolat",
+            "lune"
+          ],
+          [
+            "bougie",
+            "nuage",
+            "horloge"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "crayon",
+        "chocolat",
+        "lune",
+        "bougie",
+        "nuage",
+        "horloge"
+      ],
+      "seuil": 0.6
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-2-libre-05",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "rs-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "musique",
+            "lune",
+            "bougie"
+          ],
+          [
+            "montre",
+            "stylo",
+            "chocolat"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "musique",
+        "lune",
+        "bougie",
+        "montre",
+        "stylo",
+        "chocolat"
+      ],
+      "seuil": 0.6
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-2-libre-06",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "rs-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "nuage",
+            "fourchette",
+            "fromage"
+          ],
+          [
+            "bateau",
+            "manteau",
+            "lune"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "nuage",
+        "fourchette",
+        "fromage",
+        "bateau",
+        "manteau",
+        "lune"
+      ],
+      "seuil": 0.6
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-2-libre-07",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "rs-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "ballon",
+            "chocolat",
+            "sable"
+          ],
+          [
+            "pomme",
+            "neige",
+            "montagne"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "ballon",
+        "chocolat",
+        "sable",
+        "pomme",
+        "neige",
+        "montagne"
+      ],
+      "seuil": 0.6
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-2-libre-08",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "rs-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise chaque série de mots, l'une après l'autre.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "marteau",
+            "fourchette",
+            "rivière"
+          ],
+          [
+            "stylo",
+            "orange",
+            "chocolat"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, toutes séries confondues, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "marteau",
+        "fourchette",
+        "rivière",
+        "stylo",
+        "orange",
+        "chocolat"
+      ],
+      "seuil": 0.6
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

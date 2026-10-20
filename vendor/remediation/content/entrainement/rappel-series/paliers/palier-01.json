@@ -1,0 +1,410 @@
+[
+  {
+    "id": "rs2-1-libre-01",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "cahier",
+            "radis",
+            "plage",
+            "pomme"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "cahier",
+        "radis",
+        "plage",
+        "pomme"
+      ],
+      "seuil": 0.75
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-1-libre-02",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "chaussure",
+            "chat",
+            "table",
+            "neige"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "chaussure",
+        "chat",
+        "table",
+        "neige"
+      ],
+      "seuil": 0.75
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-1-libre-03",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "drapeau",
+            "cahier",
+            "journal",
+            "porte"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "drapeau",
+        "cahier",
+        "journal",
+        "porte"
+      ],
+      "seuil": 0.75
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-1-libre-04",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "table",
+            "cahier",
+            "radis",
+            "horloge"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "table",
+        "cahier",
+        "radis",
+        "horloge"
+      ],
+      "seuil": 0.75
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-1-libre-05",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "chemise",
+            "camion",
+            "bureau",
+            "vélo"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "chemise",
+        "camion",
+        "bureau",
+        "vélo"
+      ],
+      "seuil": 0.75
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-1-libre-06",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "stylo",
+            "chaussure",
+            "horloge",
+            "manteau"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "stylo",
+        "chaussure",
+        "horloge",
+        "manteau"
+      ],
+      "seuil": 0.75
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-1-libre-07",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "nuage",
+            "musique",
+            "journal",
+            "pomme"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "nuage",
+        "musique",
+        "journal",
+        "pomme"
+      ],
+      "seuil": 0.75
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "rs2-1-libre-08",
+    "type": "rappel-libre",
+    "module": "entrainement",
+    "theme": "rappel-series",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Mémorise les mots affichés.",
+      "affichage": {
+        "mode": "series",
+        "series": [
+          [
+            "musique",
+            "camion",
+            "manteau",
+            "tapis"
+          ]
+        ],
+        "duree_par_item_ms": 2000,
+        "pause_item_ms": 2000,
+        "modalite": "visuelle",
+        "pause_serie_ms": 3000
+      },
+      "delai_s": 0,
+      "portee": "toutes-series",
+      "enonce": "Écris tous les mots dont tu te souviens, séparés par des espaces.",
+      "aide": "Note d'abord les mots qui viennent sans effort, puis cherche les autres."
+    },
+    "reponse": {
+      "valeur": [
+        "musique",
+        "camion",
+        "manteau",
+        "tapis"
+      ],
+      "seuil": 0.75
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_rappel_series.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

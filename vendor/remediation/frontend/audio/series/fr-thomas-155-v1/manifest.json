@@ -1,0 +1,248 @@
+{
+  "profil": "fr-thomas-155-v1",
+  "voix": "Thomas (fr-FR)",
+  "debit_mots_min": 155,
+  "codec": "AAC mono 32 kbit/s",
+  "mots": {
+    "chat": {
+      "fichier": "6064ff5752305a3d.m4a",
+      "duree_s": 0.3322,
+      "octets": 5840
+    },
+    "lune": {
+      "fichier": "2991d53101c25d7f.m4a",
+      "duree_s": 0.484807,
+      "octets": 6538
+    },
+    "porte": {
+      "fichier": "fb95dd077f3ee247.m4a",
+      "duree_s": 0.530975,
+      "octets": 7127
+    },
+    "stylo": {
+      "fichier": "eb3b39942653d568.m4a",
+      "duree_s": 0.506531,
+      "octets": 6710
+    },
+    "table": {
+      "fichier": "084ffd19fd055455.m4a",
+      "duree_s": 0.506259,
+      "octets": 6615
+    },
+    "rivière": {
+      "fichier": "1137dbc0fdfb660a.m4a",
+      "duree_s": 0.763447,
+      "octets": 7256
+    },
+    "pomme": {
+      "fichier": "b3faf137b5ef7de0.m4a",
+      "duree_s": 0.426485,
+      "octets": 6774
+    },
+    "jardin": {
+      "fichier": "6ce159e321be3071.m4a",
+      "duree_s": 0.545533,
+      "octets": 6732
+    },
+    "montre": {
+      "fichier": "d8d375e6eafecb9b.m4a",
+      "duree_s": 0.543039,
+      "octets": 7212
+    },
+    "nuage": {
+      "fichier": "5b51c90d0728a97e.m4a",
+      "duree_s": 0.601224,
+      "octets": 7259
+    },
+    "panier": {
+      "fichier": "4f40a3145d4f193c.m4a",
+      "duree_s": 0.420816,
+      "octets": 6095
+    },
+    "bougie": {
+      "fichier": "65ef028878fbda9c.m4a",
+      "duree_s": 0.508299,
+      "octets": 6757
+    },
+    "fromage": {
+      "fichier": "f0cf388aa86160f8.m4a",
+      "duree_s": 0.716735,
+      "octets": 7256
+    },
+    "manteau": {
+      "fichier": "9f722e1db2b38213.m4a",
+      "duree_s": 0.496553,
+      "octets": 7108
+    },
+    "chemin": {
+      "fichier": "e215503e305ff2c6.m4a",
+      "duree_s": 0.484263,
+      "octets": 6302
+    },
+    "fenêtre": {
+      "fichier": "dabeba149de8a0ad.m4a",
+      "duree_s": 0.658594,
+      "octets": 7277
+    },
+    "sable": {
+      "fichier": "e14da5aa2d206b43.m4a",
+      "duree_s": 0.552744,
+      "octets": 6708
+    },
+    "crayon": {
+      "fichier": "87ab8ec24328b851.m4a",
+      "duree_s": 0.449796,
+      "octets": 6386
+    },
+    "chapeau": {
+      "fichier": "bf02f512b11e166e.m4a",
+      "duree_s": 0.542313,
+      "octets": 6699
+    },
+    "cuisine": {
+      "fichier": "c5cbcc4bf1d80930.m4a",
+      "duree_s": 0.623946,
+      "octets": 6991
+    },
+    "voiture": {
+      "fichier": "8ea3c47ab308e96b.m4a",
+      "duree_s": 0.765805,
+      "octets": 7837
+    },
+    "orange": {
+      "fichier": "f063af920399a4cc.m4a",
+      "duree_s": 0.567619,
+      "octets": 6868
+    },
+    "marteau": {
+      "fichier": "02aba5e4ce9baa45.m4a",
+      "duree_s": 0.577823,
+      "octets": 7258
+    },
+    "plage": {
+      "fichier": "9f11fbc1c8390590.m4a",
+      "duree_s": 0.565805,
+      "octets": 6837
+    },
+    "tapis": {
+      "fichier": "b09dd3f86116dbbb.m4a",
+      "duree_s": 0.414966,
+      "octets": 5971
+    },
+    "guitare": {
+      "fichier": "5a09f8fdf5295166.m4a",
+      "duree_s": 0.763719,
+      "octets": 7824
+    },
+    "bureau": {
+      "fichier": "5017f00acf88c13e.m4a",
+      "duree_s": 0.473424,
+      "octets": 6588
+    },
+    "soleil": {
+      "fichier": "79be8aca15c39cfc.m4a",
+      "duree_s": 0.600045,
+      "octets": 6905
+    },
+    "poisson": {
+      "fichier": "cf44336902c77b31.m4a",
+      "duree_s": 0.529478,
+      "octets": 6705
+    },
+    "chemise": {
+      "fichier": "de0bf8d2ecf9e71e.m4a",
+      "duree_s": 0.681633,
+      "octets": 7156
+    },
+    "montagne": {
+      "fichier": "5d049357a3dc35fa.m4a",
+      "duree_s": 0.751973,
+      "octets": 7991
+    },
+    "bouteille": {
+      "fichier": "8658d03a7e7b8ff1.m4a",
+      "duree_s": 0.647619,
+      "octets": 7297
+    },
+    "chaussure": {
+      "fichier": "ae73d82198b556c2.m4a",
+      "duree_s": 0.796644,
+      "octets": 7785
+    },
+    "journal": {
+      "fichier": "517e07e052bf4f7d.m4a",
+      "duree_s": 0.684853,
+      "octets": 7234
+    },
+    "musique": {
+      "fichier": "825d9dc7295d9a52.m4a",
+      "duree_s": 0.670703,
+      "octets": 7758
+    },
+    "neige": {
+      "fichier": "978e2dbed35fc4f8.m4a",
+      "duree_s": 0.531565,
+      "octets": 6476
+    },
+    "bateau": {
+      "fichier": "90f8669a7794a24e.m4a",
+      "duree_s": 0.496689,
+      "octets": 6698
+    },
+    "colline": {
+      "fichier": "43dd6771b140a51b.m4a",
+      "duree_s": 0.472834,
+      "octets": 6208
+    },
+    "horloge": {
+      "fichier": "72c1dc8bc1f16e79.m4a",
+      "duree_s": 0.637279,
+      "octets": 7006
+    },
+    "feuille": {
+      "fichier": "55a4bc25e40bbc3c.m4a",
+      "duree_s": 0.461315,
+      "octets": 6154
+    },
+    "chocolat": {
+      "fichier": "2d5b1173a82eda12.m4a",
+      "duree_s": 0.646803,
+      "octets": 7132
+    },
+    "drapeau": {
+      "fichier": "597ce5bb6106b9ca.m4a",
+      "duree_s": 0.580045,
+      "octets": 7123
+    },
+    "camion": {
+      "fichier": "7b43699447a175ec.m4a",
+      "duree_s": 0.449796,
+      "octets": 6198
+    },
+    "radis": {
+      "fichier": "6f1b98af23fb367d.m4a",
+      "duree_s": 0.46127,
+      "octets": 6133
+    },
+    "vélo": {
+      "fichier": "58b462ef8f5c8059.m4a",
+      "duree_s": 0.463946,
+      "octets": 6386
+    },
+    "ballon": {
+      "fichier": "fc58aad3c044d70f.m4a",
+      "duree_s": 0.450249,
+      "octets": 6476
+    },
+    "cahier": {
+      "fichier": "a3d2b24b85373d02.m4a",
+      "duree_s": 0.414966,
+      "octets": 5835
+    },
+    "fourchette": {
+      "fichier": "b207e0178b126e0a.m4a",
+      "duree_s": 0.821134,
+      "octets": 7816
+    }
+  }
+}

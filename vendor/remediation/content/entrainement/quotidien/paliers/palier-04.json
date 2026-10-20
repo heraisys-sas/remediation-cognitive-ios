@@ -1,0 +1,422 @@
+[
+  {
+    "id": "qo2-4-debut-01",
+    "type": "par-ou-commencer",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "qo-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis par où commencer. Astuce : commence par ce qui rend la suite possible.",
+      "enonce": "Un invité arrive dans 20 minutes. Il utilisera seulement l’entrée et le salon, actuellement encombrés. Par où commencer ?",
+      "options": [
+        "Dégager l’entrée et le salon",
+        "Trier les papiers dans un placard fermé",
+        "Réorganiser le rangement de la chambre"
+      ],
+      "aide": "Quelle première action débloque toutes les autres ?"
+    },
+    "reponse": {
+      "valeur": "Dégager l’entrée et le salon"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-4-debut-02",
+    "type": "par-ou-commencer",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "qo-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis par où commencer. Astuce : commence par ce qui rend la suite possible.",
+      "enonce": "La liste des pièces de ta demande a changé cette année. Tu as un ancien dossier mais tu ignores les nouvelles exigences.",
+      "options": [
+        "Photocopier toutes les pièces de l’ancien dossier",
+        "Rédiger la lettre avec l’ancien modèle",
+        "Consulter la liste actuelle des pièces"
+      ],
+      "aide": "Quelle première action débloque toutes les autres ?"
+    },
+    "reponse": {
+      "valeur": "Consulter la liste actuelle des pièces"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-4-debut-03",
+    "type": "par-ou-commencer",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "qo-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis par où commencer. Astuce : commence par ce qui rend la suite possible.",
+      "enonce": "Pour ton déménagement, l’ascenseur se réserve au moins trois semaines avant. Tu déménages dans 23 jours ; les cartons peuvent attendre.",
+      "options": [
+        "Commencer par emballer les livres",
+        "Choisir la décoration du nouveau logement",
+        "Réserver le créneau de l’ascenseur"
+      ],
+      "aide": "Quelle première action débloque toutes les autres ?"
+    },
+    "reponse": {
+      "valeur": "Réserver le créneau de l’ascenseur"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-4-debut-04",
+    "type": "par-ou-commencer",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "qo-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis par où commencer. Astuce : commence par ce qui rend la suite possible.",
+      "enonce": "Un projet reprend après un mois. Ton collègue a laissé un bilan des tâches achevées et de la prochaine étape.",
+      "options": [
+        "Recommencer la première tâche du projet",
+        "Planifier toutes les tâches sans lire le bilan",
+        "Lire le bilan de reprise"
+      ],
+      "aide": "Quelle première action débloque toutes les autres ?"
+    },
+    "reponse": {
+      "valeur": "Lire le bilan de reprise"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-4-debut-05",
+    "type": "par-ou-commencer",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "qo-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis par où commencer. Astuce : commence par ce qui rend la suite possible.",
+      "enonce": "Tu reçois six personnes dont une suit un régime particulier. Le menu n’est pas choisi. Quelle première action évite de devoir changer les courses ?",
+      "options": [
+        "Demander les contraintes alimentaires",
+        "Préparer le plan de table",
+        "Acheter les ingrédients de ton menu habituel"
+      ],
+      "aide": "Quelle première action débloque toutes les autres ?"
+    },
+    "reponse": {
+      "valeur": "Demander les contraintes alimentaires"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-4-debut-06",
+    "type": "par-ou-commencer",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "qo-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis par où commencer. Astuce : commence par ce qui rend la suite possible.",
+      "enonce": "Deux cours t’intéressent. Ils ont lieu à des horaires différents et tu ne peux te libérer qu’un soir précis.",
+      "options": [
+        "Choisir la tenue adaptée à chaque cours",
+        "Comparer les durées d’abonnement avant les horaires",
+        "Comparer les horaires avec ta disponibilité"
+      ],
+      "aide": "Quelle première action débloque toutes les autres ?"
+    },
+    "reponse": {
+      "valeur": "Comparer les horaires avec ta disponibilité"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-4-debut-07",
+    "type": "par-ou-commencer",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "qo-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis par où commencer. Astuce : commence par ce qui rend la suite possible.",
+      "enonce": "Trois courriers sont à traiter : l’un expire demain, les autres dans trois semaines. Ils demandent chacun environ dix minutes.",
+      "options": [
+        "Commencer par le courrier le plus récent",
+        "Traiter le courrier qui expire demain",
+        "Commencer par celui dont l’enveloppe est déjà ouverte"
+      ],
+      "aide": "Quelle première action débloque toutes les autres ?"
+    },
+    "reponse": {
+      "valeur": "Traiter le courrier qui expire demain"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-4-debut-08",
+    "type": "par-ou-commencer",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "qo-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis par où commencer. Astuce : commence par ce qui rend la suite possible.",
+      "enonce": "Tu dois contester un montant. Le service demande la référence de facture dès le début de l’appel ; tu ne l’as pas sous les yeux.",
+      "options": [
+        "Retrouver la facture et sa référence",
+        "Chercher les tarifs d’un concurrent",
+        "Composer le numéro immédiatement"
+      ],
+      "aide": "Quelle première action débloque toutes les autres ?"
+    },
+    "reponse": {
+      "valeur": "Retrouver la facture et sa référence"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-4-debut-09",
+    "type": "par-ou-commencer",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "qo-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis par où commencer. Astuce : commence par ce qui rend la suite possible.",
+      "enonce": "Un déplacement dépend d’un rendez-vous dont la date n’est pas confirmée. Les billets envisagés ne sont pas échangeables.",
+      "options": [
+        "Acheter les billets au tarif actuel",
+        "Préparer la valise pour la date supposée",
+        "Faire confirmer la date du rendez-vous"
+      ],
+      "aide": "Quelle première action débloque toutes les autres ?"
+    },
+    "reponse": {
+      "valeur": "Faire confirmer la date du rendez-vous"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-4-debut-10",
+    "type": "par-ou-commencer",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "qo-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis par où commencer. Astuce : commence par ce qui rend la suite possible.",
+      "enonce": "Tu veux retrouver rapidement tes documents. Les dossiers thématiques existent déjà mais les papiers récents sont en pile.",
+      "options": [
+        "Créer un second jeu de dossiers identiques",
+        "Classer la pile dans les dossiers existants",
+        "Changer toutes les étiquettes déjà lisibles"
+      ],
+      "aide": "Quelle première action débloque toutes les autres ?"
+    },
+    "reponse": {
+      "valeur": "Classer la pile dans les dossiers existants"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-4-debut-11",
+    "type": "par-ou-commencer",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "qo-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis par où commencer. Astuce : commence par ce qui rend la suite possible.",
+      "enonce": "Ton rendez-vous est demain à 8 h. Un justificatif est obligatoire et le service qui le fournit ferme dans une heure.",
+      "options": [
+        "Préparer d’abord les vêtements de demain",
+        "Obtenir le justificatif avant la fermeture",
+        "Chercher un café près du rendez-vous"
+      ],
+      "aide": "Quelle première action débloque toutes les autres ?"
+    },
+    "reponse": {
+      "valeur": "Obtenir le justificatif avant la fermeture"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "qo2-4-debut-12",
+    "type": "par-ou-commencer",
+    "module": "entrainement",
+    "theme": "quotidien",
+    "fonctions_ciblees": [
+      "planification",
+      "fonctions-executives"
+    ],
+    "palier": 4,
+    "prerequis": [
+      "qo-palier-3"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Choisis par où commencer. Astuce : commence par ce qui rend la suite possible.",
+      "enonce": "Tu veux démonter un appareil pour le réparer. La notice précise les précautions et l’ordre d’ouverture, que tu ne connais pas.",
+      "options": [
+        "Lire les précautions et l’ordre d’ouverture",
+        "Commander des pièces avant d’identifier le défaut",
+        "Retirer d’abord les vis visibles"
+      ],
+      "aide": "Quelle première action débloque toutes les autres ?"
+    },
+    "reponse": {
+      "valeur": "Lire les précautions et l’ordre d’ouverture"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_quotidien.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

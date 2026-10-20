@@ -1,0 +1,39 @@
+{
+  "theme": "series-entendues",
+  "paliers": [
+    {
+      "id": "rse-palier-1",
+      "description": "Une série de 4 mots, rappel libre immédiat",
+      "prerequis": [],
+      "fichier": "paliers/palier-01.json",
+      "nb_items": 8
+    },
+    {
+      "id": "rse-palier-2",
+      "description": "Deux séries de 3 mots, rappel de l'ensemble",
+      "prerequis": [
+        "rse-palier-1"
+      ],
+      "fichier": "paliers/palier-02.json",
+      "nb_items": 8
+    },
+    {
+      "id": "rse-palier-3",
+      "description": "Trois séries de 3 mots, rappel de l'ensemble",
+      "prerequis": [
+        "rse-palier-2"
+      ],
+      "fichier": "paliers/palier-03.json",
+      "nb_items": 8
+    },
+    {
+      "id": "rse-palier-4",
+      "description": "Rappel différé (20 s) : toutes les séries, puis la première seulement",
+      "prerequis": [
+        "rse-palier-3"
+      ],
+      "fichier": "paliers/palier-04.json",
+      "nb_items": 8
+    }
+  ]
+}

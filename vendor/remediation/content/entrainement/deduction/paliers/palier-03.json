@@ -1,0 +1,8484 @@
+[
+  {
+    "id": "df-3-3b4840c55d35",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 1/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "voisin-gauche",
+          "figure": "carre",
+          "couleur": "bleu",
+          "figure2": "cercle",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "autre-ligne",
+          "figure": "cercle",
+          "couleur": "vert",
+          "figure2": "cercle",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "a-gauche-de",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "figure2": "carre",
+          "couleur2": "vert"
+        },
+        {
+          "type": "entre",
+          "figure": "carre",
+          "couleur": "rouge",
+          "extremites": [
+            {
+              "figure": "cercle",
+              "couleur": "vert"
+            },
+            {
+              "figure": "carre",
+              "couleur": "vert"
+            }
+          ],
+          "axe": "colonne"
+        },
+        {
+          "type": "voisin-dessus",
+          "figure": "cercle",
+          "couleur": "vert",
+          "figure2": "carre",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "couleur": "rouge"
+          },
+          "zone": "ligne",
+          "numero": "chaque",
+          "nombre": 1
+        },
+        {
+          "type": "voisin-gauche",
+          "figure": "triangle",
+          "couleur": "vert",
+          "figure2": "triangle",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "a-gauche-de",
+          "figure": "cercle",
+          "couleur": "bleu",
+          "figure2": "triangle",
+          "couleur2": "bleu"
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 1,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "carre",
+        "couleur": "rouge",
+        "phrases": [
+          1,
+          3,
+          4
+        ],
+        "possibilites": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            3,
+            4,
+            5
+          ]
+        ],
+        "case": 5,
+        "demonstration": [
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  1,
+                  4,
+                  7
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  2,
+                  5,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  2,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  5
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  2,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "triangle:vert;triangle:rouge;cercle:vert;cercle:bleu;triangle:bleu;carre:rouge;carre:bleu;cercle:rouge;carre:vert",
+      "grille": [
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "carre",
+          "vert"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-53111f6c6d8e",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 1/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "couleur": "vert"
+          },
+          "zone": "ligne",
+          "numero": "chaque",
+          "nombre": 1
+        },
+        {
+          "type": "entre",
+          "figure": "triangle",
+          "couleur": "vert",
+          "extremites": [
+            {
+              "figure": "carre",
+              "couleur": "rouge"
+            },
+            {
+              "figure": "carre",
+              "couleur": "bleu"
+            }
+          ],
+          "axe": "ligne"
+        },
+        {
+          "type": "autre-colonne",
+          "figure": "triangle",
+          "couleur": "vert",
+          "figure2": "cercle",
+          "couleur2": "bleu"
+        },
+        {
+          "type": "voisin-dessus",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "figure2": "carre",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "au-dessus-de",
+          "figure": "carre",
+          "couleur": "vert",
+          "figure2": "cercle",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "oppose",
+          "figure": "triangle",
+          "couleur": "bleu",
+          "figure2": "triangle",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "autre-colonne",
+          "figure": "cercle",
+          "couleur": "vert",
+          "figure2": "triangle",
+          "couleur2": "vert"
+        },
+        {
+          "type": "voisin-gauche",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "figure2": "carre",
+          "couleur2": "vert"
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 1,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "cercle",
+        "couleur": "bleu",
+        "phrases": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          1
+        ],
+        "possibilites": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "case": 2,
+        "demonstration": [
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  2,
+                  3,
+                  5,
+                  6,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  2,
+                  3,
+                  5,
+                  6,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  1,
+                  4,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  2,
+                  3,
+                  5,
+                  6,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  3,
+                  5,
+                  6,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  2,
+                  3,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 5,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 6,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  5,
+                  6,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 7,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  2,
+                  3,
+                  5,
+                  6,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 8,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  1,
+                  4
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  5,
+                  6,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  2
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  5,
+                  6,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  1
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  4,
+                  7
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "triangle:rouge;carre:vert;cercle:bleu;carre:rouge;triangle:vert;carre:bleu;cercle:vert;cercle:rouge;triangle:bleu",
+      "grille": [
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-52ca08b7eedd",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 1/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "oppose",
+          "figure": "cercle",
+          "couleur": "bleu",
+          "figure2": "triangle",
+          "couleur2": "bleu"
+        },
+        {
+          "type": "ligne",
+          "figure": "triangle",
+          "couleur": "bleu",
+          "ligne": 1
+        },
+        {
+          "type": "autre-ligne",
+          "figure": "triangle",
+          "couleur": "vert",
+          "figure2": "carre",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "figure": "triangle"
+          },
+          "zone": "colonne",
+          "numero": "chaque",
+          "nombre": 1
+        },
+        {
+          "type": "pas-colonne",
+          "figure": "carre",
+          "couleur": "vert",
+          "colonne": 1
+        },
+        {
+          "type": "autre-ligne",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "figure2": "triangle",
+          "couleur2": "vert"
+        },
+        {
+          "type": "entre",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "extremites": [
+            {
+              "figure": "cercle",
+              "couleur": "vert"
+            },
+            {
+              "figure": "triangle",
+              "couleur": "rouge"
+            }
+          ],
+          "axe": "colonne"
+        },
+        {
+          "type": "au-dessus-de",
+          "figure": "cercle",
+          "couleur": "vert",
+          "figure2": "carre",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "au-dessus-de",
+          "figure": "triangle",
+          "couleur": "bleu",
+          "figure2": "carre",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "autre-colonne",
+          "figure": "carre",
+          "couleur": "vert",
+          "figure2": "triangle",
+          "couleur2": "bleu"
+        },
+        {
+          "type": "voisin-gauche",
+          "figure": "cercle",
+          "couleur": "vert",
+          "figure2": "carre",
+          "couleur2": "bleu"
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 1,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "cercle",
+        "couleur": "rouge",
+        "phrases": [
+          1,
+          2,
+          5,
+          7,
+          8,
+          9,
+          11,
+          3,
+          6
+        ],
+        "possibilites": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "case": 4,
+        "demonstration": [
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 5,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  2,
+                  3,
+                  5,
+                  6,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 7,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 8,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 9,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 11,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 6,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  4
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "triangle:vert;cercle:vert;carre:bleu;cercle:bleu;cercle:rouge;triangle:bleu;carre:vert;triangle:rouge;carre:rouge",
+      "grille": [
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "carre",
+          "rouge"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-e09a9d2b30ae",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 1/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "entre",
+          "figure": "carre",
+          "couleur": "bleu",
+          "extremites": [
+            {
+              "figure": "triangle",
+              "couleur": "vert"
+            },
+            {
+              "figure": "triangle",
+              "couleur": "rouge"
+            }
+          ],
+          "axe": "colonne"
+        },
+        {
+          "type": "comparaison",
+          "figure": "carre",
+          "couleur": "bleu",
+          "figure2": "cercle",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "autre-colonne",
+          "figure": "carre",
+          "couleur": "rouge",
+          "figure2": "cercle",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "pas-ligne",
+          "figure": "carre",
+          "couleur": "rouge",
+          "ligne": 2
+        },
+        {
+          "type": "autre-ligne",
+          "figure": "cercle",
+          "couleur": "vert",
+          "figure2": "triangle",
+          "couleur2": "bleu"
+        },
+        {
+          "type": "comparaison",
+          "figure": "cercle",
+          "couleur": "vert",
+          "figure2": "triangle",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "autre-colonne",
+          "figure": "triangle",
+          "couleur": "vert",
+          "figure2": "carre",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "couleur": "vert"
+          },
+          "zone": "ligne",
+          "numero": "chaque",
+          "nombre": 1
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 1,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "cercle",
+        "couleur": "rouge",
+        "phrases": [
+          1,
+          2,
+          4,
+          6,
+          8
+        ],
+        "possibilites": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            1,
+            2,
+            4,
+            5,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "case": 5,
+        "demonstration": [
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 6,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  1,
+                  2,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 8,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  5
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  4
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  3
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  1,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  1,
+                  7
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "carre:rouge;triangle:vert;triangle:bleu;carre:vert;carre:bleu;cercle:rouge;cercle:vert;triangle:rouge;cercle:bleu",
+      "grille": [
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-ae087bd431c2",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 1/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "colonne",
+          "figure": "triangle",
+          "couleur": "vert",
+          "colonne": 0
+        },
+        {
+          "type": "autre-colonne",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "figure2": "carre",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "entre",
+          "figure": "carre",
+          "couleur": "bleu",
+          "extremites": [
+            {
+              "figure": "triangle",
+              "couleur": "vert"
+            },
+            {
+              "figure": "carre",
+              "couleur": "vert"
+            }
+          ],
+          "axe": "colonne"
+        },
+        {
+          "type": "pas-ligne",
+          "figure": "triangle",
+          "couleur": "bleu",
+          "ligne": 1
+        },
+        {
+          "type": "ligne",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "ligne": 0
+        },
+        {
+          "type": "autre-colonne",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "figure2": "triangle",
+          "couleur2": "vert"
+        },
+        {
+          "type": "autre-ligne",
+          "figure": "cercle",
+          "couleur": "vert",
+          "figure2": "cercle",
+          "couleur2": "bleu"
+        },
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "figure": "triangle"
+          },
+          "zone": "ligne",
+          "numero": "chaque",
+          "nombre": 1
+        },
+        {
+          "type": "pas-colonne",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "colonne": 1
+        },
+        {
+          "type": "oppose",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "figure2": "cercle",
+          "couleur2": "vert"
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 1,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "carre",
+        "couleur": "bleu",
+        "phrases": [
+          1,
+          3
+        ],
+        "possibilites": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            3,
+            4,
+            5
+          ]
+        ],
+        "case": 3,
+        "demonstration": [
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  3,
+                  6
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  3
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  6
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  6
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "triangle:vert;cercle:rouge;cercle:bleu;carre:bleu;carre:rouge;triangle:rouge;carre:vert;cercle:vert;triangle:bleu",
+      "grille": [
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-0b74564aaf6b",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 1/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "ligne",
+          "figure": "triangle",
+          "couleur": "bleu",
+          "ligne": 0
+        },
+        {
+          "type": "voisin-gauche",
+          "figure": "carre",
+          "couleur": "bleu",
+          "figure2": "cercle",
+          "couleur2": "vert"
+        },
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "couleur": "vert"
+          },
+          "zone": "colonne",
+          "numero": "chaque",
+          "nombre": 1
+        },
+        {
+          "type": "pas-colonne",
+          "figure": "carre",
+          "couleur": "rouge",
+          "colonne": 2
+        },
+        {
+          "type": "comparaison",
+          "figure": "carre",
+          "couleur": "vert",
+          "figure2": "triangle",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "entre",
+          "figure": "carre",
+          "couleur": "bleu",
+          "extremites": [
+            {
+              "figure": "triangle",
+              "couleur": "bleu"
+            },
+            {
+              "figure": "cercle",
+              "couleur": "vert"
+            }
+          ],
+          "axe": "ligne"
+        },
+        {
+          "type": "a-gauche-de",
+          "figure": "cercle",
+          "couleur": "bleu",
+          "figure2": "cercle",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "au-dessus-de",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "figure2": "cercle",
+          "couleur2": "bleu"
+        },
+        {
+          "type": "autre-colonne",
+          "figure": "triangle",
+          "couleur": "vert",
+          "figure2": "carre",
+          "couleur2": "bleu"
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 1,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "cercle",
+        "couleur": "vert",
+        "phrases": [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "possibilites": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            1,
+            2,
+            4,
+            5,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            2,
+            3,
+            5,
+            6,
+            8
+          ]
+        ],
+        "case": 2,
+        "demonstration": [
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 5,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 6,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  2
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  1
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  0
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "triangle:bleu;carre:bleu;cercle:vert;triangle:vert;carre:rouge;cercle:rouge;cercle:bleu;carre:vert;triangle:rouge",
+      "grille": [
+        [
+          "triangle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-fc873516494e",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 1/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "entre",
+          "figure": "cercle",
+          "couleur": "bleu",
+          "extremites": [
+            {
+              "figure": "cercle",
+              "couleur": "rouge"
+            },
+            {
+              "figure": "carre",
+              "couleur": "vert"
+            }
+          ],
+          "axe": "colonne"
+        },
+        {
+          "type": "voisin-dessus",
+          "figure": "triangle",
+          "couleur": "vert",
+          "figure2": "carre",
+          "couleur2": "bleu"
+        },
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "couleur": "bleu"
+          },
+          "zone": "colonne",
+          "numero": "chaque",
+          "nombre": 1
+        },
+        {
+          "type": "autre-ligne",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "figure2": "triangle",
+          "couleur2": "bleu"
+        },
+        {
+          "type": "voisin-gauche",
+          "figure": "carre",
+          "couleur": "bleu",
+          "figure2": "carre",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "comparaison",
+          "figure": "cercle",
+          "couleur": "bleu",
+          "figure2": "carre",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "autre-ligne",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "figure2": "carre",
+          "couleur2": "vert"
+        },
+        {
+          "type": "pas-ligne",
+          "figure": "triangle",
+          "couleur": "bleu",
+          "ligne": 0
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 1,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "carre",
+        "couleur": "rouge",
+        "phrases": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          3
+        ],
+        "possibilites": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            1,
+            2,
+            4,
+            5,
+            7,
+            8
+          ],
+          [
+            1,
+            2,
+            4,
+            5,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "case": 5,
+        "demonstration": [
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 5,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 6,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  4
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 8,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  6,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  5,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 5,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  5
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  8
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "cercle:rouge;triangle:vert;triangle:rouge;cercle:bleu;carre:bleu;carre:rouge;carre:vert;cercle:vert;triangle:bleu",
+      "grille": [
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-086f5eef2ab0",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 2/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "couleur": "bleu"
+          },
+          "zone": "ligne",
+          "numero": "chaque",
+          "nombre": 1
+        },
+        {
+          "type": "au-dessus-de",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "figure2": "carre",
+          "couleur2": "rouge",
+          "et": [
+            {
+              "type": "pas-colonne",
+              "figure": "carre",
+              "couleur": "rouge",
+              "colonne": 0
+            }
+          ]
+        },
+        {
+          "type": "autre-colonne",
+          "figure": "carre",
+          "couleur": "rouge",
+          "figure2": "triangle",
+          "couleur2": "rouge",
+          "et": [
+            {
+              "type": "comparaison",
+              "figure": "cercle",
+              "couleur": "vert",
+              "figure2": "triangle",
+              "couleur2": "rouge"
+            }
+          ]
+        },
+        {
+          "type": "entre",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "extremites": [
+            {
+              "couleur": "vert"
+            },
+            {
+              "couleur": "vert"
+            }
+          ],
+          "axe": "colonne"
+        },
+        {
+          "type": "oppose",
+          "figure": "carre",
+          "couleur": "bleu",
+          "figure2": "cercle",
+          "couleur2": "vert"
+        },
+        {
+          "type": "autre-ligne",
+          "figure": "carre",
+          "couleur": "vert",
+          "figure2": "cercle",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "a-gauche-de",
+              "figure": "triangle",
+              "couleur": "rouge",
+              "figure2": "cercle",
+              "couleur2": "bleu"
+            }
+          ]
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 2,
+      "aide_raisonnement": {
+        "mode": "intersection",
+        "figure": "triangle",
+        "couleur": "rouge",
+        "phrases": [
+          3,
+          4,
+          6
+        ],
+        "possibilites": [
+          [
+            1,
+            2,
+            4,
+            5,
+            7,
+            8
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            3,
+            4,
+            6,
+            7
+          ]
+        ],
+        "case": 4
+      }
+    },
+    "reponse": {
+      "valeur": "cercle:rouge;triangle:vert;cercle:bleu;cercle:vert;triangle:rouge;carre:bleu;triangle:bleu;carre:vert;carre:rouge",
+      "grille": [
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "carre",
+          "rouge"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-beed73b6e19a",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 2/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "entre",
+          "figure": "carre",
+          "couleur": "rouge",
+          "extremites": [
+            {
+              "couleur": "bleu"
+            },
+            {
+              "couleur": "bleu"
+            }
+          ],
+          "axe": "ligne"
+        },
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "figure": "carre"
+          },
+          "zone": "ligne",
+          "numero": "chaque",
+          "nombre": 1
+        },
+        {
+          "type": "autre-colonne",
+          "figure": "carre",
+          "couleur": "bleu",
+          "figure2": "cercle",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "au-dessus-de",
+              "figure": "cercle",
+              "couleur": "bleu",
+              "figure2": "cercle",
+              "couleur2": "rouge"
+            }
+          ]
+        },
+        {
+          "type": "oppose",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "figure2": "triangle",
+          "couleur2": "vert"
+        },
+        {
+          "type": "pas-ligne",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "ligne": 1,
+          "et": [
+            {
+              "type": "a-gauche-de",
+              "figure": "carre",
+              "couleur": "rouge",
+              "figure2": "cercle",
+              "couleur2": "rouge"
+            }
+          ]
+        },
+        {
+          "type": "a-gauche-de",
+          "figure": "cercle",
+          "couleur": "bleu",
+          "figure2": "triangle",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "autre-colonne",
+              "figure": "cercle",
+              "couleur": "bleu",
+              "figure2": "carre",
+              "couleur2": "rouge"
+            }
+          ]
+        },
+        {
+          "type": "pas-ligne",
+          "figure": "triangle",
+          "couleur": "vert",
+          "ligne": 2,
+          "et": [
+            {
+              "type": "a-gauche-de",
+              "figure": "triangle",
+              "couleur": "vert",
+              "figure2": "cercle",
+              "couleur2": "vert"
+            }
+          ]
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 2,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "cercle",
+        "couleur": "rouge",
+        "phrases": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "possibilites": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            1,
+            2,
+            7,
+            8
+          ]
+        ],
+        "case": 8,
+        "demonstration": [
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  1,
+                  4,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 5,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  8
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5,
+                  6,
+                  7
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "cercle:bleu;carre:rouge;triangle:bleu;triangle:vert;carre:bleu;triangle:rouge;carre:vert;cercle:vert;cercle:rouge",
+      "grille": [
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ],
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-23a37de8d257",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 2/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "voisin-gauche",
+          "figure": "cercle",
+          "couleur": "bleu",
+          "figure2": "carre",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "pas-coin",
+          "figure": "carre",
+          "couleur": "bleu"
+        },
+        {
+          "type": "entre",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "extremites": [
+            {
+              "figure": "carre"
+            },
+            {
+              "figure": "carre"
+            }
+          ],
+          "axe": "colonne"
+        },
+        {
+          "type": "au-dessus-de",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "figure2": "carre",
+          "couleur2": "vert"
+        },
+        {
+          "type": "a-gauche-de",
+          "figure": "triangle",
+          "couleur": "vert",
+          "figure2": "triangle",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "autre-ligne",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "figure2": "cercle",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "autre-ligne",
+              "figure": "triangle",
+              "couleur": "rouge",
+              "figure2": "cercle",
+              "couleur2": "rouge"
+            }
+          ]
+        },
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "couleur": "vert"
+          },
+          "zone": "ligne",
+          "numero": "chaque",
+          "nombre": 1
+        },
+        {
+          "type": "a-gauche-de",
+          "figure": "cercle",
+          "couleur": "vert",
+          "figure2": "carre",
+          "couleur2": "vert",
+          "et": [
+            {
+              "type": "oppose",
+              "figure": "cercle",
+              "couleur": "vert",
+              "figure2": "triangle",
+              "couleur2": "bleu"
+            }
+          ]
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 2,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "carre",
+        "couleur": "bleu",
+        "phrases": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "possibilites": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            1,
+            3,
+            4,
+            5,
+            7
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "case": 1,
+        "demonstration": [
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  3,
+                  4,
+                  5,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  1,
+                  2,
+                  5,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 5,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 6,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 8,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  5,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  2,
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  3,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  1
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  4
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  2,
+                  5,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  3,
+                  6,
+                  7
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "triangle:vert;carre:bleu;cercle:rouge;cercle:vert;triangle:rouge;triangle:bleu;cercle:bleu;carre:rouge;carre:vert",
+      "grille": [
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "carre",
+          "vert"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-541b9efb7f38",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 2/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "pas-colonne",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "colonne": 2
+        },
+        {
+          "type": "a-gauche-de",
+          "figure": "cercle",
+          "couleur": "bleu",
+          "figure2": "triangle",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "pas-ligne",
+              "figure": "cercle",
+              "couleur": "bleu",
+              "ligne": 1
+            }
+          ]
+        },
+        {
+          "type": "entre",
+          "figure": "cercle",
+          "couleur": "vert",
+          "extremites": [
+            {
+              "figure": "triangle"
+            },
+            {
+              "figure": "triangle"
+            }
+          ],
+          "axe": "colonne"
+        },
+        {
+          "type": "autre-ligne",
+          "figure": "cercle",
+          "couleur": "bleu",
+          "figure2": "triangle",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "au-dessus-de",
+              "figure": "triangle",
+              "couleur": "bleu",
+              "figure2": "triangle",
+              "couleur2": "rouge"
+            }
+          ]
+        },
+        {
+          "type": "pas-colonne",
+          "figure": "carre",
+          "couleur": "vert",
+          "colonne": 0
+        },
+        {
+          "type": "voisin-gauche",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "figure2": "triangle",
+          "couleur2": "vert"
+        },
+        {
+          "type": "autre-ligne",
+          "figure": "triangle",
+          "couleur": "bleu",
+          "figure2": "carre",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "autre-colonne",
+              "figure": "cercle",
+              "couleur": "rouge",
+              "figure2": "carre",
+              "couleur2": "bleu"
+            }
+          ]
+        },
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "figure": "cercle"
+          },
+          "zone": "colonne",
+          "numero": "chaque",
+          "nombre": 1
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 2,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "cercle",
+        "couleur": "vert",
+        "phrases": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "possibilites": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "case": 5,
+        "demonstration": [
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 5,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 6,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  1,
+                  2,
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 8,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  5
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  2,
+                  4
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  1,
+                  2,
+                  7,
+                  8
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "carre:rouge;carre:vert;triangle:bleu;carre:bleu;triangle:rouge;cercle:vert;cercle:bleu;cercle:rouge;triangle:vert",
+      "grille": [
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "vert"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-f23c449827e4",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 2/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "couleur": "bleu"
+          },
+          "zone": "ligne",
+          "numero": "chaque",
+          "nombre": 1
+        },
+        {
+          "type": "autre-colonne",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "figure2": "triangle",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "autre-colonne",
+              "figure": "cercle",
+              "couleur": "bleu",
+              "figure2": "triangle",
+              "couleur2": "bleu"
+            }
+          ]
+        },
+        {
+          "type": "a-gauche-de",
+          "figure": "cercle",
+          "couleur": "vert",
+          "figure2": "carre",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "au-dessus-de",
+              "figure": "triangle",
+              "couleur": "rouge",
+              "figure2": "cercle",
+              "couleur2": "vert"
+            }
+          ]
+        },
+        {
+          "type": "pas-ligne",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "ligne": 0
+        },
+        {
+          "type": "autre-colonne",
+          "figure": "triangle",
+          "couleur": "bleu",
+          "figure2": "cercle",
+          "couleur2": "vert"
+        },
+        {
+          "type": "autre-colonne",
+          "figure": "triangle",
+          "couleur": "vert",
+          "figure2": "carre",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "voisin-dessus",
+              "figure": "carre",
+              "couleur": "vert",
+              "figure2": "carre",
+              "couleur2": "bleu"
+            }
+          ]
+        },
+        {
+          "type": "entre",
+          "figure": "triangle",
+          "couleur": "bleu",
+          "extremites": [
+            {
+              "figure": "carre"
+            },
+            {
+              "figure": "carre"
+            }
+          ],
+          "axe": "ligne"
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 2,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "cercle",
+        "couleur": "vert",
+        "phrases": [
+          3,
+          4,
+          6,
+          7,
+          2,
+          5
+        ],
+        "possibilites": [
+          [
+            3,
+            4,
+            6,
+            7
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "case": 6,
+        "demonstration": [
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  3,
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 6,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 7,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  3,
+                  6
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  4,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  2,
+                  3,
+                  5,
+                  6,
+                  8
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  2,
+                  3,
+                  5,
+                  6,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  6,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 5,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  2,
+                  3,
+                  5,
+                  8
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  2,
+                  3,
+                  5,
+                  8
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  6
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  3
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "carre:rouge;triangle:bleu;carre:vert;cercle:rouge;triangle:rouge;carre:bleu;cercle:vert;triangle:vert;cercle:bleu",
+      "grille": [
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-e919e1f51ff0",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 2/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "entre",
+          "figure": "cercle",
+          "couleur": "vert",
+          "extremites": [
+            {
+              "couleur": "rouge"
+            },
+            {
+              "couleur": "rouge"
+            }
+          ],
+          "axe": "colonne"
+        },
+        {
+          "type": "pas-colonne",
+          "figure": "carre",
+          "couleur": "bleu",
+          "colonne": 0
+        },
+        {
+          "type": "oppose",
+          "figure": "carre",
+          "couleur": "vert",
+          "figure2": "cercle",
+          "couleur2": "vert"
+        },
+        {
+          "type": "pas-ligne",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "ligne": 0,
+          "et": [
+            {
+              "type": "autre-colonne",
+              "figure": "carre",
+              "couleur": "vert",
+              "figure2": "triangle",
+              "couleur2": "rouge"
+            }
+          ]
+        },
+        {
+          "type": "a-gauche-de",
+          "figure": "carre",
+          "couleur": "bleu",
+          "figure2": "triangle",
+          "couleur2": "rouge",
+          "et": [
+            {
+              "type": "au-dessus-de",
+              "figure": "carre",
+              "couleur": "rouge",
+              "figure2": "carre",
+              "couleur2": "bleu"
+            }
+          ]
+        },
+        {
+          "type": "oppose",
+          "figure": "carre",
+          "couleur": "rouge",
+          "figure2": "cercle",
+          "couleur2": "rouge",
+          "et": [
+            {
+              "type": "autre-colonne",
+              "figure": "cercle",
+              "couleur": "rouge",
+              "figure2": "cercle",
+              "couleur2": "bleu"
+            }
+          ]
+        },
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "figure": "triangle"
+          },
+          "zone": "ligne",
+          "numero": "chaque",
+          "nombre": 1
+        },
+        {
+          "type": "pas-coin",
+          "figure": "triangle",
+          "couleur": "bleu"
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 2,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "cercle",
+        "couleur": "vert",
+        "phrases": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "possibilites": [
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "case": 5,
+        "demonstration": [
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  5
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 5,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  4,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  5,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 6,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  3,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 8,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  3,
+                  4,
+                  5,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  3,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  5
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  3
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  4,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  4,
+                  6,
+                  7
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "triangle:vert;cercle:bleu;carre:rouge;carre:vert;triangle:bleu;cercle:vert;cercle:rouge;carre:bleu;triangle:rouge",
+      "grille": [
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-b2cb2f1ec781",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 2/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "entre",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "extremites": [
+            {
+              "couleur": "rouge"
+            },
+            {
+              "couleur": "rouge"
+            }
+          ],
+          "axe": "colonne"
+        },
+        {
+          "type": "a-gauche-de",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "figure2": "cercle",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "autre-colonne",
+              "figure": "cercle",
+              "couleur": "bleu",
+              "figure2": "carre",
+              "couleur2": "bleu"
+            }
+          ]
+        },
+        {
+          "type": "au-dessus-de",
+          "figure": "carre",
+          "couleur": "rouge",
+          "figure2": "triangle",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "a-gauche-de",
+              "figure": "carre",
+              "couleur": "rouge",
+              "figure2": "triangle",
+              "couleur2": "vert"
+            }
+          ]
+        },
+        {
+          "type": "au-dessus-de",
+          "figure": "carre",
+          "couleur": "vert",
+          "figure2": "cercle",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "oppose",
+          "figure": "triangle",
+          "couleur": "vert",
+          "figure2": "cercle",
+          "couleur2": "bleu"
+        },
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "figure": "cercle"
+          },
+          "zone": "ligne",
+          "numero": "chaque",
+          "nombre": 1
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 2,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "triangle",
+        "couleur": "rouge",
+        "phrases": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "possibilites": [
+          [
+            0,
+            1,
+            2,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            3,
+            4,
+            6,
+            7
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "case": 6,
+        "demonstration": [
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  6,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 5,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  1,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 6,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  3,
+                  4
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  6,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  2,
+                  3,
+                  5,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  6
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "carre:rouge;cercle:bleu;carre:vert;cercle:rouge;triangle:bleu;carre:bleu;triangle:rouge;triangle:vert;cercle:vert",
+      "grille": [
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "cercle",
+          "vert"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-38c7e92d122a",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 3/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "a-gauche-de",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "figure2": "triangle",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "a-gauche-de",
+              "figure": "triangle",
+              "couleur": "rouge",
+              "figure2": "carre",
+              "couleur2": "bleu"
+            }
+          ]
+        },
+        {
+          "type": "oppose",
+          "figure": "cercle",
+          "couleur": "bleu",
+          "figure2": "carre",
+          "couleur2": "vert"
+        },
+        {
+          "type": "entre",
+          "figure": "cercle",
+          "couleur": "vert",
+          "extremites": [
+            {
+              "figure": "triangle"
+            },
+            {
+              "figure": "triangle"
+            }
+          ],
+          "axe": "colonne"
+        },
+        {
+          "type": "a-gauche-de",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "figure2": "carre",
+          "couleur2": "vert",
+          "et": [
+            {
+              "type": "au-dessus-de",
+              "figure": "cercle",
+              "couleur": "bleu",
+              "figure2": "carre",
+              "couleur2": "vert"
+            }
+          ]
+        },
+        {
+          "type": "pas-coin",
+          "figure": "carre",
+          "couleur": "rouge",
+          "et": [
+            {
+              "type": "oppose",
+              "figure": "triangle",
+              "couleur": "rouge",
+              "figure2": "carre",
+              "couleur2": "rouge"
+            }
+          ]
+        },
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "couleur": "vert"
+          },
+          "zone": "ligne",
+          "numero": "chaque",
+          "nombre": 1
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 3,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "cercle",
+        "couleur": "rouge",
+        "phrases": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "possibilites": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            3,
+            4,
+            6,
+            7
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "case": 6,
+        "demonstration": [
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 5,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  1,
+                  5,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  1,
+                  3,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 6,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  6
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "cercle:bleu;triangle:vert;carre:bleu;triangle:rouge;cercle:vert;carre:rouge;cercle:rouge;triangle:bleu;carre:vert",
+      "grille": [
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "vert"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-153711ef086b",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 3/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "comparaison",
+          "figure": "carre",
+          "couleur": "bleu",
+          "figure2": "triangle",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "couleur": "bleu"
+          },
+          "zone": "colonne",
+          "numero": "chaque",
+          "nombre": 1
+        },
+        {
+          "type": "pas-colonne",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "colonne": 2,
+          "et": [
+            {
+              "type": "pas-ligne",
+              "figure": "cercle",
+              "couleur": "rouge",
+              "ligne": 0
+            }
+          ]
+        },
+        {
+          "type": "entre",
+          "figure": "cercle",
+          "couleur": "bleu",
+          "extremites": [
+            {
+              "couleur": "vert"
+            },
+            {
+              "couleur": "vert"
+            }
+          ],
+          "axe": "colonne"
+        },
+        {
+          "type": "au-dessus-de",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "figure2": "triangle",
+          "couleur2": "vert",
+          "et": [
+            {
+              "type": "autre-ligne",
+              "figure": "cercle",
+              "couleur": "rouge",
+              "figure2": "carre",
+              "couleur2": "rouge"
+            }
+          ]
+        },
+        {
+          "type": "a-gauche-de",
+          "figure": "carre",
+          "couleur": "vert",
+          "figure2": "cercle",
+          "couleur2": "bleu"
+        },
+        {
+          "type": "pas-ligne",
+          "figure": "carre",
+          "couleur": "rouge",
+          "ligne": 2
+        },
+        {
+          "type": "pas-colonne",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "colonne": 0
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 3,
+      "aide_raisonnement": {
+        "mode": "intersection",
+        "figure": "cercle",
+        "couleur": "rouge",
+        "phrases": [
+          3,
+          5,
+          8
+        ],
+        "possibilites": [
+          [
+            3,
+            4,
+            6,
+            7
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            4,
+            5,
+            7,
+            8
+          ]
+        ],
+        "case": 4
+      }
+    },
+    "reponse": {
+      "valeur": "carre:rouge;triangle:bleu;cercle:vert;carre:vert;cercle:rouge;cercle:bleu;carre:bleu;triangle:rouge;triangle:vert",
+      "grille": [
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "vert"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-ab79336ade9a",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 3/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "a-gauche-de",
+          "figure": "carre",
+          "couleur": "vert",
+          "figure2": "triangle",
+          "couleur2": "vert",
+          "et": [
+            {
+              "type": "comparaison",
+              "figure": "carre",
+              "couleur": "vert",
+              "figure2": "carre",
+              "couleur2": "rouge"
+            }
+          ]
+        },
+        {
+          "type": "oppose",
+          "figure": "carre",
+          "couleur": "bleu",
+          "figure2": "cercle",
+          "couleur2": "rouge",
+          "et": [
+            {
+              "type": "autre-colonne",
+              "figure": "carre",
+              "couleur": "bleu",
+              "figure2": "triangle",
+              "couleur2": "vert"
+            }
+          ]
+        },
+        {
+          "type": "au-dessus-de",
+          "figure": "cercle",
+          "couleur": "vert",
+          "figure2": "triangle",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "comparaison",
+              "figure": "cercle",
+              "couleur": "bleu",
+              "figure2": "triangle",
+              "couleur2": "bleu"
+            }
+          ]
+        },
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "couleur": "rouge"
+          },
+          "zone": "ligne",
+          "numero": "chaque",
+          "nombre": 1
+        },
+        {
+          "type": "autre-ligne",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "figure2": "cercle",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "autre-colonne",
+              "figure": "cercle",
+              "couleur": "bleu",
+              "figure2": "cercle",
+              "couleur2": "vert"
+            }
+          ]
+        },
+        {
+          "type": "autre-ligne",
+          "figure": "carre",
+          "couleur": "vert",
+          "figure2": "triangle",
+          "couleur2": "bleu"
+        },
+        {
+          "type": "entre",
+          "figure": "carre",
+          "couleur": "vert",
+          "extremites": [
+            {
+              "figure": "cercle"
+            },
+            {
+              "figure": "cercle"
+            }
+          ],
+          "axe": "colonne"
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 3,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "cercle",
+        "couleur": "vert",
+        "phrases": [
+          1,
+          2,
+          3,
+          7,
+          4,
+          6,
+          5
+        ],
+        "possibilites": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "case": 0,
+        "demonstration": [
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 7,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 6,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  6,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 5,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 7,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  0
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  2,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  3
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  1,
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "cercle:vert;triangle:rouge;carre:bleu;carre:vert;triangle:vert;carre:rouge;cercle:rouge;cercle:bleu;triangle:bleu",
+      "grille": [
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-c62d88843398",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 3/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "comparaison",
+          "figure": "carre",
+          "couleur": "vert",
+          "figure2": "cercle",
+          "couleur2": "vert"
+        },
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "figure": "carre"
+          },
+          "zone": "ligne",
+          "numero": "chaque",
+          "nombre": 1
+        },
+        {
+          "type": "a-gauche-de",
+          "figure": "cercle",
+          "couleur": "bleu",
+          "figure2": "carre",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "au-dessus-de",
+              "figure": "cercle",
+              "couleur": "rouge",
+              "figure2": "cercle",
+              "couleur2": "bleu"
+            }
+          ]
+        },
+        {
+          "type": "autre-colonne",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "figure2": "triangle",
+          "couleur2": "vert",
+          "et": [
+            {
+              "type": "a-gauche-de",
+              "figure": "cercle",
+              "couleur": "rouge",
+              "figure2": "cercle",
+              "couleur2": "vert"
+            }
+          ]
+        },
+        {
+          "type": "pas-colonne",
+          "figure": "carre",
+          "couleur": "rouge",
+          "colonne": 1,
+          "et": [
+            {
+              "type": "oppose",
+              "figure": "cercle",
+              "couleur": "rouge",
+              "figure2": "carre",
+              "couleur2": "rouge"
+            }
+          ]
+        },
+        {
+          "type": "au-dessus-de",
+          "figure": "triangle",
+          "couleur": "vert",
+          "figure2": "triangle",
+          "couleur2": "bleu"
+        },
+        {
+          "type": "entre",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "extremites": [
+            {
+              "couleur": "bleu"
+            },
+            {
+              "couleur": "bleu"
+            }
+          ],
+          "axe": "colonne"
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 3,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "cercle",
+        "couleur": "rouge",
+        "phrases": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          2
+        ],
+        "possibilites": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            3,
+            4,
+            6,
+            7
+          ],
+          [
+            0,
+            2,
+            3,
+            5,
+            6,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "case": 0,
+        "demonstration": [
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 5,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  3
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  5,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 6,
+            "reductions": [
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 7,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "cercle:rouge;carre:bleu;triangle:vert;carre:vert;triangle:rouge;cercle:vert;cercle:bleu;triangle:bleu;carre:rouge",
+      "grille": [
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "rouge"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-a9d7fb430ede",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 3/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "couleur": "vert"
+          },
+          "zone": "colonne",
+          "numero": "chaque",
+          "nombre": 1
+        },
+        {
+          "type": "au-dessus-de",
+          "figure": "cercle",
+          "couleur": "vert",
+          "figure2": "triangle",
+          "couleur2": "rouge"
+        },
+        {
+          "type": "autre-ligne",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "figure2": "cercle",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "autre-ligne",
+              "figure": "carre",
+              "couleur": "rouge",
+              "figure2": "triangle",
+              "couleur2": "rouge"
+            }
+          ]
+        },
+        {
+          "type": "au-dessus-de",
+          "figure": "triangle",
+          "couleur": "bleu",
+          "figure2": "carre",
+          "couleur2": "vert",
+          "et": [
+            {
+              "type": "comparaison",
+              "figure": "carre",
+              "couleur": "vert",
+              "figure2": "cercle",
+              "couleur2": "bleu"
+            }
+          ]
+        },
+        {
+          "type": "oppose",
+          "figure": "triangle",
+          "couleur": "vert",
+          "figure2": "carre",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "a-gauche-de",
+              "figure": "triangle",
+              "couleur": "vert",
+              "figure2": "carre",
+              "couleur2": "vert"
+            }
+          ]
+        },
+        {
+          "type": "entre",
+          "figure": "carre",
+          "couleur": "rouge",
+          "extremites": [
+            {
+              "figure": "triangle"
+            },
+            {
+              "figure": "triangle"
+            }
+          ],
+          "axe": "colonne"
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 3,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "cercle",
+        "couleur": "bleu",
+        "phrases": [
+          2,
+          4,
+          5,
+          6,
+          1,
+          3
+        ],
+        "possibilites": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            4,
+            5,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "case": 5,
+        "demonstration": [
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 5,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  2,
+                  5,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  4,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  3,
+                  6
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 6,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  2,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  5
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  2
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  3
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  4
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  6
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "triangle:vert;triangle:bleu;cercle:vert;carre:rouge;carre:vert;cercle:bleu;triangle:rouge;cercle:rouge;carre:bleu",
+      "grille": [
+        [
+          "triangle",
+          "vert"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "carre",
+          "bleu"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "df-3-2472fd0cd2ed",
+    "type": "grille-deduction",
+    "module": "entrainement",
+    "theme": "deduction",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "memoire-travail"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "de-palier-2"
+    ],
+    "cap_complexite": "Croisement de contraintes explicites ; étape 3/3, grille 3×3.",
+    "contenu": {
+      "consigne": "Place les 9 figures colorées : chacune une seule fois, une par case. Toute autre contrainte est écrite dans les indices. Croise les phrases, compare les possibilités et ne place un pion que lorsque sa case est certaine.",
+      "figures": [
+        "cercle",
+        "carre",
+        "triangle"
+      ],
+      "couleurs": [
+        "rouge",
+        "bleu",
+        "vert"
+      ],
+      "enonces": [
+        {
+          "type": "au-dessus-de",
+          "figure": "cercle",
+          "couleur": "rouge",
+          "figure2": "triangle",
+          "couleur2": "vert",
+          "et": [
+            {
+              "type": "oppose",
+              "figure": "cercle",
+              "couleur": "rouge",
+              "figure2": "carre",
+              "couleur2": "bleu"
+            }
+          ]
+        },
+        {
+          "type": "au-dessus-de",
+          "figure": "triangle",
+          "couleur": "rouge",
+          "figure2": "triangle",
+          "couleur2": "vert",
+          "et": [
+            {
+              "type": "a-gauche-de",
+              "figure": "carre",
+              "couleur": "vert",
+              "figure2": "triangle",
+              "couleur2": "vert"
+            }
+          ]
+        },
+        {
+          "type": "autre-colonne",
+          "figure": "carre",
+          "couleur": "vert",
+          "figure2": "carre",
+          "couleur2": "bleu",
+          "et": [
+            {
+              "type": "au-dessus-de",
+              "figure": "cercle",
+              "couleur": "bleu",
+              "figure2": "carre",
+              "couleur2": "vert"
+            }
+          ]
+        },
+        {
+          "type": "compte-categorie",
+          "categorie": {
+            "figure": "carre"
+          },
+          "zone": "ligne",
+          "numero": "chaque",
+          "nombre": 1
+        },
+        {
+          "type": "a-gauche-de",
+          "figure": "cercle",
+          "couleur": "bleu",
+          "figure2": "triangle",
+          "couleur2": "rouge",
+          "et": [
+            {
+              "type": "autre-ligne",
+              "figure": "carre",
+              "couleur": "rouge",
+              "figure2": "triangle",
+              "couleur2": "rouge"
+            }
+          ]
+        },
+        {
+          "type": "a-gauche-de",
+          "figure": "carre",
+          "couleur": "bleu",
+          "figure2": "cercle",
+          "couleur2": "vert"
+        },
+        {
+          "type": "entre",
+          "figure": "cercle",
+          "couleur": "bleu",
+          "extremites": [
+            {
+              "couleur": "rouge"
+            },
+            {
+              "couleur": "rouge"
+            }
+          ],
+          "axe": "ligne"
+        }
+      ],
+      "indices": [],
+      "aide": "Aucune phrase ne suffit seule : recoupe les phrases entre elles, écarte les positions impossibles — les cases certaines apparaissent au croisement.",
+      "etape_progression": 3,
+      "aide_raisonnement": {
+        "mode": "croisement",
+        "figure": "cercle",
+        "couleur": "rouge",
+        "phrases": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "possibilites": [
+          [
+            0,
+            1,
+            2,
+            3,
+            5
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "case": 2,
+        "demonstration": [
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 2,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "vert",
+                "cases": [
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 3,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  4,
+                  6,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 4,
+            "reductions": [
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 5,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  4
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "rouge",
+                "cases": [
+                  4,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 6,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  1,
+                  2,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  3,
+                  6,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 7,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  2,
+                  3
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "bleu",
+                "cases": [
+                  1,
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "phrase": 1,
+            "reductions": [
+              {
+                "figure": "cercle",
+                "couleur": "rouge",
+                "cases": [
+                  2
+                ]
+              },
+              {
+                "figure": "cercle",
+                "couleur": "vert",
+                "cases": [
+                  1,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "rouge",
+                "cases": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "bleu",
+                "cases": [
+                  6
+                ]
+              },
+              {
+                "figure": "carre",
+                "couleur": "vert",
+                "cases": [
+                  3,
+                  4,
+                  7
+                ]
+              },
+              {
+                "figure": "triangle",
+                "couleur": "bleu",
+                "cases": [
+                  0,
+                  1,
+                  3,
+                  4,
+                  5,
+                  7,
+                  8
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reponse": {
+      "valeur": "carre:rouge;cercle:bleu;cercle:rouge;triangle:bleu;carre:vert;triangle:rouge;carre:bleu;cercle:vert;triangle:vert",
+      "grille": [
+        [
+          "carre",
+          "rouge"
+        ],
+        [
+          "cercle",
+          "bleu"
+        ],
+        [
+          "cercle",
+          "rouge"
+        ],
+        [
+          "triangle",
+          "bleu"
+        ],
+        [
+          "carre",
+          "vert"
+        ],
+        [
+          "triangle",
+          "rouge"
+        ],
+        [
+          "carre",
+          "bleu"
+        ],
+        [
+          "cercle",
+          "vert"
+        ],
+        [
+          "triangle",
+          "vert"
+        ]
+      ]
+    },
+    "meta": {
+      "auteur": "generation-automatique (tools/generer_deduction.py)",
+      "date_creation": "2026-09-30",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

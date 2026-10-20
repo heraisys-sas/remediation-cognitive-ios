@@ -1,0 +1,26 @@
+{
+  "theme": "comparer-documents",
+  "paliers": [
+    {
+      "id": "comparer-documents-palier-1",
+      "description": "Deux points à comparer",
+      "prerequis": [],
+      "fichier": "paliers/palier-01.json",
+      "nb_items": 12
+    },
+    {
+      "id": "comparer-documents-palier-2",
+      "description": "Quatre points dans un ordre différent",
+      "prerequis": [],
+      "fichier": "paliers/palier-02.json",
+      "nb_items": 12
+    },
+    {
+      "id": "comparer-documents-palier-3",
+      "description": "Six points, ordre différent et valeurs proches",
+      "prerequis": [],
+      "fichier": "paliers/palier-03.json",
+      "nb_items": 12
+    }
+  ]
+}

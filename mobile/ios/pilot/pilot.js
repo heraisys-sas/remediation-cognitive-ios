@@ -35,7 +35,21 @@ function render(view) {
   state = view;
   renderFeedbackFlow(view);
   if (view.finished) paused = false;
-  if (view.protocol?.paused || view.contextes?.paused || view.memory?.paused) paused = true;
+  if (view.protocol?.paused || view.contextes?.paused || view.memory?.paused || view.lexical_strategy?.paused || view.functional?.paused || view.comparison?.paused || view.attention?.paused) paused = true;
+  renderImmediate(view);
+  if(view.immediate){
+    for(const id of ["question","position","lexicalHelp","method","repriseSupport","answerForm","protocol","contextes","memory","choices","deduction","lexicalStrategy","functional","comparison","attention","feedback","next","audioControls"])element(id).hidden=true;
+    element("resume").hidden=!paused||Boolean(view.finished);
+    document.title=view.finished?"Remédiation":view.title;
+    element("activityChoice").hidden=!view.finished;element("exercise").hidden=Boolean(view.finished)||paused;
+    element("start").hidden=true;element("finish").hidden=Boolean(view.finished);element("summary").hidden=!view.finished;
+    element("answerForm").hidden=true;element("next").hidden=true;element("audioControls").hidden=true;
+    document.querySelector("h1").textContent=view.finished?"Remédiation":view.title;
+    if(view.finished)element("summaryText").textContent="Bloc de mémoire enregistré. Les premières réponses, aides et interruptions sont conservées séparément.";
+    renderHomeControls();return;
+  }
+  element("question").hidden=false;element("position").hidden=false;element("feedback").hidden=false;
+  renderLexicalStrategy(view);renderFunctional(view);renderComparison(view);renderAttention(view);renderDeduction(view);
   renderContextes(view);
   renderChoices(view);
   renderMemory(view);
@@ -77,7 +91,7 @@ function render(view) {
   element("lexicalHelp").hidden = !lexical || Boolean(view.feedback) || Boolean(view.reprise);
   element("hints").textContent = hints.slice(0, view.hints_used || 0).map(hint => hint.texte).join("\n");
   element("hint").hidden = (view.hints_used || 0) >= hints.length;
-  element("answerForm").hidden = Boolean(view.memory && view.memory.phase !== "question") || Boolean(view.memory?.paused) || Boolean(view.contextes) || isPqrst || isChoiceActivity(view) || Boolean(view.feedback);
+  element("answerForm").hidden = Boolean(view.memory && view.memory.phase !== "question") || Boolean(view.memory?.paused) || Boolean(view.contextes) || isPqrst || isChoiceActivity(view) || Boolean(view.feedback) || Boolean(view.lexical_strategy||view.functional||view.comparison||view.attention) || view.activity==="deduction" || Boolean(view.memory?.options?.length);
   element("next").hidden = Boolean(view.contextes) || !view.feedback;
   element("feedback").textContent = view.feedback ? `${view.feedback.feedback || ""}${view.feedback.attendue != null ? " Réponse : " + view.feedback.attendue + "." : ""}` : "";
   if (!view.feedback && view.retry_feedback) element("feedback").textContent = view.retry_feedback;
@@ -87,7 +101,8 @@ function render(view) {
 element("start").onclick = () => perform(async () => {
   const activity=element("activity").value||"calcul-mental";
   await authorizeAutoLexical(activity);
-  await request("start", {activity});
+  const params=activity.startsWith("mi-")?{parametres:activity==="mi-code"?{modalite:element("miModality").value||"visuelle"}:activity==="mi-changement"?{condition:element("miCondition").value||"forme"}:{}}:{};
+  await request("start", {activity,...params});
   let view = await request("view");
   if (!view.item && !view.finished) { await request("finish", {session_id:view.session_id}); view = await request("view"); }
   bindAutoLexicalSession(view);
@@ -152,6 +167,12 @@ async function protocolCommand(operation, value = null) {
 async function flushProtocolPause() {
   if (!pendingProtocolPause) return;
   let view = await request("view");
+  if(view.immediate){
+    view=await request("immediate-interrupt",{session_id:view.session_id,item_id:view.item_id,revision:view.immediate.revision});
+  }
+  for(const [field,action] of [["lexical_strategy","lexical-strategy-step"],["functional","functional-step"],["comparison","comparison-step"],["attention","attention-step"]]){
+    if(view[field]&&!view[field].paused&&!view.feedback)view=await request(action,{session_id:view.session_id,item_id:view.item.id,revision:view[field].revision,operation:"pause",elapsed_ms:Math.round(clock.elapsed())});
+  }
   if (view.memory && !view.memory.paused && !view.feedback) {
     view = await request("memory-step", {session_id:view.session_id,item_id:view.item.id,
       revision:view.memory.revision,operation:"pause",elapsed_ms:Math.round(clock.elapsed())});
@@ -172,7 +193,7 @@ window.pauseForInterruption = () => {
   stopFeedbackFlow();
   stopContextesTimer(); stopMemoryTimer();
   clock.pause(); paused = true; element("exercise").hidden = true; element("resume").hidden = false;
-  if (state?.memory || state?.contextes || (state?.protocol && !state.protocol.paused && !["pret", "fin"].includes(state.protocol.phase))) {
+  if (state?.immediate || state?.lexical_strategy || state?.functional || state?.comparison || state?.attention || state?.memory || state?.contextes || (state?.protocol && !state.protocol.paused && !["pret", "fin"].includes(state.protocol.phase))) {
     pendingProtocolPause = true;
     if (!busy) return perform(async () => {});
   }
@@ -181,6 +202,11 @@ document.addEventListener("visibilitychange", () => { if (document.hidden && sta
 element("resume").onclick = async () => {
   if (pendingProtocolPause) await perform(flushProtocolPause);
   if (pendingProtocolPause) return;
+  if(state?.immediate){paused=false;render(state);clock.reset(false);return;}
+  if(state?.lexical_strategy?.paused)return lexicalStrategyCommand("resume");
+  if(state?.functional?.paused)return functionalCommand("resume");
+  if(state?.comparison?.paused)return comparisonCommand("resume");
+  if(state?.attention?.paused)return attentionCommand("resume");
   if (state?.memory?.paused) return memoryCommand("resume");
   if (state?.contextes?.paused) return contextesCommand("resume");
   if (state?.protocol?.paused) return protocolCommand("resume");

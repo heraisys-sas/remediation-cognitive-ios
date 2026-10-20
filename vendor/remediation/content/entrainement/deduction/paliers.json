@@ -1,0 +1,48 @@
+{
+  "theme": "deduction",
+  "paliers": [
+    {
+      "id": "de-palier-1",
+      "description": "Repères et chaînes — 3×3",
+      "prerequis": [],
+      "fichier": "paliers/palier-01.json",
+      "nb_items": 20
+    },
+    {
+      "id": "de-palier-2",
+      "description": "Exclusions par catégorie et recoupement — 3×3",
+      "prerequis": [
+        "de-palier-1"
+      ],
+      "fichier": "paliers/palier-02.json",
+      "nb_items": 20
+    },
+    {
+      "id": "de-palier-3",
+      "description": "Répartitions et entre-deux — 3×3",
+      "prerequis": [
+        "de-palier-2"
+      ],
+      "fichier": "paliers/palier-03.json",
+      "nb_items": 20
+    },
+    {
+      "id": "de-palier-4",
+      "description": "Contraintes collectives croisées — 3×3 avancé",
+      "prerequis": [
+        "de-palier-3"
+      ],
+      "fichier": "paliers/palier-04.json",
+      "nb_items": 20
+    },
+    {
+      "id": "de-palier-5",
+      "description": "Synthèse et diagonales — 4×4",
+      "prerequis": [
+        "de-palier-4"
+      ],
+      "fichier": "paliers/palier-05.json",
+      "nb_items": 20
+    }
+  ]
+}

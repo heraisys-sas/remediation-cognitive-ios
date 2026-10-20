@@ -1,0 +1,75 @@
+{
+  "theme": "quotidien",
+  "paliers": [
+    {
+      "id": "qo-palier-1",
+      "description": "Retenir un message — rappeler un détail après sa lecture",
+      "prerequis": [],
+      "fichier": "paliers/palier-01.json",
+      "nb_items": 12
+    },
+    {
+      "id": "qo-palier-2",
+      "description": "Choisir la prochaine étape — poursuivre une tâche commencée",
+      "prerequis": [
+        "qo-palier-1"
+      ],
+      "fichier": "paliers/palier-02.json",
+      "nb_items": 12
+    },
+    {
+      "id": "qo-palier-3",
+      "description": "Estimer une durée — proposer un temps en minutes",
+      "prerequis": [
+        "qo-palier-2"
+      ],
+      "fichier": "paliers/palier-03.json",
+      "nb_items": 12
+    },
+    {
+      "id": "qo-palier-4",
+      "description": "Choisir par où commencer — préparer une première action",
+      "prerequis": [
+        "qo-palier-3"
+      ],
+      "fichier": "paliers/palier-04.json",
+      "nb_items": 12
+    },
+    {
+      "id": "qo-palier-5",
+      "description": "Prévoir un rappel — choisir une routine ou un repère pour penser à agir",
+      "prerequis": [
+        "qo-palier-4"
+      ],
+      "fichier": "paliers/palier-05.json",
+      "nb_items": 12
+    },
+    {
+      "id": "qo-palier-6",
+      "description": "Choisir une action utile — comparer des solutions à une difficulté",
+      "prerequis": [
+        "qo-palier-5"
+      ],
+      "fichier": "paliers/palier-06.json",
+      "nb_items": 12
+    },
+    {
+      "id": "qo-palier-7",
+      "description": "Choisir une aide-mémoire — placer un rappel au bon moment",
+      "prerequis": [
+        "qo-palier-6"
+      ],
+      "fichier": "paliers/palier-07.json",
+      "nb_items": 8
+    },
+    {
+      "id": "qo-palier-8",
+      "description": "Prioriser quand le temps manque — choisir quoi préparer, simplifier ou reporter",
+      "prerequis": [
+        "qo-palier-7"
+      ],
+      "fichier": "paliers/palier-08.json",
+      "nb_items": 8
+    }
+  ]
+}

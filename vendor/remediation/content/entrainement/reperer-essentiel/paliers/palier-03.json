@@ -1,0 +1,806 @@
+[
+  {
+    "id": "reperer-essentiel-v2-3-01",
+    "module": "entrainement",
+    "theme": "reperer-essentiel",
+    "type": "reperer-essentiel",
+    "palier": 3,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Préparer le déplacement pour la conférence de jeudi à Lyon",
+      "objectif": "Train jeudi à 8 h 20, quai 3. Billet enregistré. Badge fourni sur place.",
+      "critere": "Tous les changements qui nécessitent une action pour ta tâche.",
+      "consigne": "Pour chaque message, décide s’il change la tâche selon les critères affichés. Compare le message au but et aux informations déjà connues.",
+      "methode": "Relis le but et les critères. Identifie d’abord la tâche concernée, puis compare l’information au plan actuel. Ne retiens que ce qui répond aux critères.",
+      "messages": [
+        {
+          "id": "m1",
+          "texte": "Une formule de restauration peut être réservée."
+        },
+        {
+          "id": "m2",
+          "texte": "Le train pour la conférence est annoncé jeudi à 8 h 20."
+        },
+        {
+          "id": "m3",
+          "texte": "Le train de vendredi pour Lyon partira à 8 h 40."
+        },
+        {
+          "id": "m4",
+          "texte": "Imprime désormais le badge avant le départ."
+        },
+        {
+          "id": "m5",
+          "texte": "L’entrée se fera rue Pasteur plutôt que rue Curie."
+        },
+        {
+          "id": "m6",
+          "texte": "La conférence de jeudi est désormais prévu pour 8 h 40."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "m1": "non",
+        "m2": "non",
+        "m3": "non",
+        "m4": "oui",
+        "m5": "oui",
+        "m6": "oui"
+      },
+      "explications": {
+        "m1": "Cette possibilité ne modifie pas ce que tu dois faire.",
+        "m2": "Le message reprend une information déjà connue.",
+        "m3": "Le message concerne une autre tâche.",
+        "m4": "Une préparation nouvelle est demandée.",
+        "m5": "Une autre action nécessaire est modifiée.",
+        "m6": "Le moment prévu pour ta tâche est modifié."
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "reperer-essentiel-v2-3-02",
+    "module": "entrainement",
+    "theme": "reperer-essentiel",
+    "type": "reperer-essentiel",
+    "palier": 3,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Préparer la réunion Atlas de mardi",
+      "objectif": "Réunion mardi à 14 h, salle 2. Quatre participants. Dossier version 3 prêt.",
+      "critere": "Tous les changements qui nécessitent une action pour ta tâche.",
+      "consigne": "Pour chaque message, décide s’il change la tâche selon les critères affichés. Compare le message au but et aux informations déjà connues.",
+      "methode": "Relis le but et les critères. Identifie d’abord la tâche concernée, puis compare l’information au plan actuel. Ne retiens que ce qui répond aux critères.",
+      "messages": [
+        {
+          "id": "m1",
+          "texte": "Le café du hall propose une nouvelle carte."
+        },
+        {
+          "id": "m2",
+          "texte": "La salle 2 accueille la réunion Atlas mardi à 14 h."
+        },
+        {
+          "id": "m3",
+          "texte": "Prépare un cinquième exemplaire pour le participant ajouté."
+        },
+        {
+          "id": "m4",
+          "texte": "La réunion atlas est désormais prévu pour 14 h 30."
+        },
+        {
+          "id": "m5",
+          "texte": "La réunion Orion de mardi passe à 14 h 30."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "m1": "non",
+        "m2": "non",
+        "m3": "oui",
+        "m4": "oui",
+        "m5": "non"
+      },
+      "explications": {
+        "m1": "Cette possibilité ne modifie pas ce que tu dois faire.",
+        "m2": "Le message reprend une information déjà connue.",
+        "m3": "Une préparation nouvelle est demandée.",
+        "m4": "Le moment prévu pour ta tâche est modifié.",
+        "m5": "Le message concerne une autre tâche."
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "reperer-essentiel-v2-3-03",
+    "module": "entrainement",
+    "theme": "reperer-essentiel",
+    "type": "reperer-essentiel",
+    "palier": 3,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Réceptionner la commande AX-24 jeudi",
+      "objectif": "Six unités AX-24 jeudi, entrée nord. Bon prêt. Paiement après livraison.",
+      "critere": "Tous les changements qui nécessitent une action pour ta tâche.",
+      "consigne": "Pour chaque message, décide s’il change la tâche selon les critères affichés. Compare le message au but et aux informations déjà connues.",
+      "methode": "Relis le but et les critères. Identifie d’abord la tâche concernée, puis compare l’information au plan actuel. Ne retiens que ce qui répond aux critères.",
+      "messages": [
+        {
+          "id": "m1",
+          "texte": "Le catalogue présente aussi des accessoires pour AX-24."
+        },
+        {
+          "id": "m2",
+          "texte": "Accueille le livreur à l’entrée est plutôt qu’au nord."
+        },
+        {
+          "id": "m3",
+          "texte": "Fais signer le bon avant la réception."
+        },
+        {
+          "id": "m4",
+          "texte": "La commande AX-42 arrivera vendredi."
+        },
+        {
+          "id": "m5",
+          "texte": "La commande ax-24 est désormais prévu pour vendredi."
+        },
+        {
+          "id": "m6",
+          "texte": "Six unités AX-24 sont annoncées pour jeudi."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "m1": "non",
+        "m2": "oui",
+        "m3": "oui",
+        "m4": "non",
+        "m5": "oui",
+        "m6": "non"
+      },
+      "explications": {
+        "m1": "Cette possibilité ne modifie pas ce que tu dois faire.",
+        "m2": "Une autre action nécessaire est modifiée.",
+        "m3": "Une préparation nouvelle est demandée.",
+        "m4": "Le message concerne une autre tâche.",
+        "m5": "Le moment prévu pour ta tâche est modifié.",
+        "m6": "Le message reprend une information déjà connue."
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "reperer-essentiel-v2-3-04",
+    "module": "entrainement",
+    "theme": "reperer-essentiel",
+    "type": "reperer-essentiel",
+    "palier": 3,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Préparer l’atelier de samedi",
+      "objectif": "Atelier samedi à 10 h, huit inscrits. Ordinateur chargé. Supports disponibles sur place.",
+      "critere": "Tous les changements qui nécessitent une action pour ta tâche.",
+      "consigne": "Pour chaque message, décide s’il change la tâche selon les critères affichés. Compare le message au but et aux informations déjà connues.",
+      "methode": "Relis le but et les critères. Identifie d’abord la tâche concernée, puis compare l’information au plan actuel. Ne retiens que ce qui répond aux critères.",
+      "messages": [
+        {
+          "id": "m1",
+          "texte": "La bibliothèque publie son programme trimestriel."
+        },
+        {
+          "id": "m2",
+          "texte": "Huit personnes sont inscrites samedi à 10 h."
+        },
+        {
+          "id": "m3",
+          "texte": "Télécharge les supports avant de venir."
+        },
+        {
+          "id": "m4",
+          "texte": "L’atelier de samedi est désormais prévu pour 11 h."
+        },
+        {
+          "id": "m5",
+          "texte": "L’atelier de dimanche commencera à 11 h."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "m1": "non",
+        "m2": "non",
+        "m3": "oui",
+        "m4": "oui",
+        "m5": "non"
+      },
+      "explications": {
+        "m1": "Cette possibilité ne modifie pas ce que tu dois faire.",
+        "m2": "Le message reprend une information déjà connue.",
+        "m3": "Une préparation nouvelle est demandée.",
+        "m4": "Le moment prévu pour ta tâche est modifié.",
+        "m5": "Le message concerne une autre tâche."
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "reperer-essentiel-v2-3-05",
+    "module": "entrainement",
+    "theme": "reperer-essentiel",
+    "type": "reperer-essentiel",
+    "palier": 3,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Finaliser le dossier Habitat 284",
+      "objectif": "Dossier Habitat 284 à envoyer lundi avant 17 h. Pièces et signature réunies.",
+      "critere": "Tous les changements qui nécessitent une action pour ta tâche.",
+      "consigne": "Pour chaque message, décide s’il change la tâche selon les critères affichés. Compare le message au but et aux informations déjà connues.",
+      "methode": "Relis le but et les critères. Identifie d’abord la tâche concernée, puis compare l’information au plan actuel. Ne retiens que ce qui répond aux critères.",
+      "messages": [
+        {
+          "id": "m1",
+          "texte": "Dépose le dossier sur le portail plutôt que par courriel."
+        },
+        {
+          "id": "m2",
+          "texte": "Une brochure explique les garanties optionnelles."
+        },
+        {
+          "id": "m3",
+          "texte": "Le dépôt du dossier Habitat 284 est prévu lundi avant 17 h."
+        },
+        {
+          "id": "m4",
+          "texte": "Ajoute l’attestation fiscale reçue ce matin."
+        },
+        {
+          "id": "m5",
+          "texte": "Le dossier habitat 284 est désormais prévu pour mardi avant 12 h."
+        },
+        {
+          "id": "m6",
+          "texte": "Le dossier Auto 284 doit partir mardi avant 12 h."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "m1": "oui",
+        "m2": "non",
+        "m3": "non",
+        "m4": "oui",
+        "m5": "oui",
+        "m6": "non"
+      },
+      "explications": {
+        "m1": "Une autre action nécessaire est modifiée.",
+        "m2": "Cette possibilité ne modifie pas ce que tu dois faire.",
+        "m3": "Le message reprend une information déjà connue.",
+        "m4": "Une préparation nouvelle est demandée.",
+        "m5": "Le moment prévu pour ta tâche est modifié.",
+        "m6": "Le message concerne une autre tâche."
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "reperer-essentiel-v2-3-06",
+    "module": "entrainement",
+    "theme": "reperer-essentiel",
+    "type": "reperer-essentiel",
+    "palier": 3,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Organiser le dîner de vendredi",
+      "objectif": "Table vendredi à 20 h pour cinq personnes au Rivage. Menu végétarien signalé.",
+      "critere": "Tous les changements qui nécessitent une action pour ta tâche.",
+      "consigne": "Pour chaque message, décide s’il change la tâche selon les critères affichés. Compare le message au but et aux informations déjà connues.",
+      "methode": "Relis le but et les critères. Identifie d’abord la tâche concernée, puis compare l’information au plan actuel. Ne retiens que ce qui répond aux critères.",
+      "messages": [
+        {
+          "id": "m1",
+          "texte": "Le dîner de vendredi est désormais prévu pour 20 h 30."
+        },
+        {
+          "id": "m2",
+          "texte": "Le chef publie une recette sur le site du restaurant."
+        },
+        {
+          "id": "m3",
+          "texte": "Préviens le restaurant qu’une sixième personne vient."
+        },
+        {
+          "id": "m4",
+          "texte": "La réservation de samedi est avancée à 20 h 30."
+        },
+        {
+          "id": "m5",
+          "texte": "La table du vendredi est inscrite à 20 h pour cinq."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "m1": "oui",
+        "m2": "non",
+        "m3": "oui",
+        "m4": "non",
+        "m5": "non"
+      },
+      "explications": {
+        "m1": "Le moment prévu pour ta tâche est modifié.",
+        "m2": "Cette possibilité ne modifie pas ce que tu dois faire.",
+        "m3": "Une préparation nouvelle est demandée.",
+        "m4": "Le message concerne une autre tâche.",
+        "m5": "Le message reprend une information déjà connue."
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "reperer-essentiel-v2-3-07",
+    "module": "entrainement",
+    "theme": "reperer-essentiel",
+    "type": "reperer-essentiel",
+    "palier": 3,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Préparer la visite du chantier mardi",
+      "objectif": "Visite mardi à 9 h, entrée ouest. Casque disponible sur place.",
+      "critere": "Tous les changements qui nécessitent une action pour ta tâche.",
+      "consigne": "Pour chaque message, décide s’il change la tâche selon les critères affichés. Compare le message au but et aux informations déjà connues.",
+      "methode": "Relis le but et les critères. Identifie d’abord la tâche concernée, puis compare l’information au plan actuel. Ne retiens que ce qui répond aux critères.",
+      "messages": [
+        {
+          "id": "m1",
+          "texte": "Apporte désormais tes propres chaussures de sécurité."
+        },
+        {
+          "id": "m2",
+          "texte": "Le bulletin météo annonce un ciel couvert."
+        },
+        {
+          "id": "m3",
+          "texte": "Le rendez-vous de visite figure mardi à 9 h."
+        },
+        {
+          "id": "m4",
+          "texte": "La livraison du chantier arrivera mardi à 9 h 45."
+        },
+        {
+          "id": "m5",
+          "texte": "Entre par le portail sud plutôt que par l’ouest."
+        },
+        {
+          "id": "m6",
+          "texte": "La visite du chantier est désormais prévu pour 9 h 45."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "m1": "oui",
+        "m2": "non",
+        "m3": "non",
+        "m4": "non",
+        "m5": "oui",
+        "m6": "oui"
+      },
+      "explications": {
+        "m1": "Une préparation nouvelle est demandée.",
+        "m2": "Cette possibilité ne modifie pas ce que tu dois faire.",
+        "m3": "Le message reprend une information déjà connue.",
+        "m4": "Le message concerne une autre tâche.",
+        "m5": "Une autre action nécessaire est modifiée.",
+        "m6": "Le moment prévu pour ta tâche est modifié."
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "reperer-essentiel-v2-3-08",
+    "module": "entrainement",
+    "theme": "reperer-essentiel",
+    "type": "reperer-essentiel",
+    "palier": 3,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Participer à la formation Analyse de données",
+      "objectif": "Formation lundi à 9 h, salle Vega. Ordinateur fourni. Support imprimé.",
+      "critere": "Tous les changements qui nécessitent une action pour ta tâche.",
+      "consigne": "Pour chaque message, décide s’il change la tâche selon les critères affichés. Compare le message au but et aux informations déjà connues.",
+      "methode": "Relis le but et les critères. Identifie d’abord la tâche concernée, puis compare l’information au plan actuel. Ne retiens que ce qui répond aux critères.",
+      "messages": [
+        {
+          "id": "m1",
+          "texte": "Le centre propose un webinaire facultatif le mois prochain."
+        },
+        {
+          "id": "m2",
+          "texte": "La formation analyse de données est désormais prévu pour 9 h 30."
+        },
+        {
+          "id": "m3",
+          "texte": "Installe le logiciel indiqué avant la séance."
+        },
+        {
+          "id": "m4",
+          "texte": "La session Analyse de données est inscrite lundi à 9 h."
+        },
+        {
+          "id": "m5",
+          "texte": "La formation Gestion de projet commence à 9 h 30."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "m1": "non",
+        "m2": "oui",
+        "m3": "oui",
+        "m4": "non",
+        "m5": "non"
+      },
+      "explications": {
+        "m1": "Cette possibilité ne modifie pas ce que tu dois faire.",
+        "m2": "Le moment prévu pour ta tâche est modifié.",
+        "m3": "Une préparation nouvelle est demandée.",
+        "m4": "Le message reprend une information déjà connue.",
+        "m5": "Le message concerne une autre tâche."
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "reperer-essentiel-v2-3-09",
+    "module": "entrainement",
+    "theme": "reperer-essentiel",
+    "type": "reperer-essentiel",
+    "palier": 3,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Préparer le rendez-vous fiscal",
+      "objectif": "Rendez-vous jeudi à 15 h, centre B. Déclaration et justificatifs prêts.",
+      "critere": "Tous les changements qui nécessitent une action pour ta tâche.",
+      "consigne": "Pour chaque message, décide s’il change la tâche selon les critères affichés. Compare le message au but et aux informations déjà connues.",
+      "methode": "Relis le but et les critères. Identifie d’abord la tâche concernée, puis compare l’information au plan actuel. Ne retiens que ce qui répond aux critères.",
+      "messages": [
+        {
+          "id": "m1",
+          "texte": "Le rendez-vous bancaire de jeudi passe à 16 h."
+        },
+        {
+          "id": "m2",
+          "texte": "Présente-toi au centre C plutôt qu’au centre B."
+        },
+        {
+          "id": "m3",
+          "texte": "Le site publie un guide général sur les déductions."
+        },
+        {
+          "id": "m4",
+          "texte": "Le rendez-vous fiscal est désormais prévu pour 16 h."
+        },
+        {
+          "id": "m5",
+          "texte": "Le centre B attend le dossier fiscal jeudi à 15 h."
+        },
+        {
+          "id": "m6",
+          "texte": "Ajoute le relevé annuel demandé dans le dernier message."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "m1": "non",
+        "m2": "oui",
+        "m3": "non",
+        "m4": "oui",
+        "m5": "non",
+        "m6": "oui"
+      },
+      "explications": {
+        "m1": "Le message concerne une autre tâche.",
+        "m2": "Une autre action nécessaire est modifiée.",
+        "m3": "Cette possibilité ne modifie pas ce que tu dois faire.",
+        "m4": "Le moment prévu pour ta tâche est modifié.",
+        "m5": "Le message reprend une information déjà connue.",
+        "m6": "Une préparation nouvelle est demandée."
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "reperer-essentiel-v2-3-10",
+    "module": "entrainement",
+    "theme": "reperer-essentiel",
+    "type": "reperer-essentiel",
+    "palier": 3,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Coordonner l’intervention de plomberie",
+      "objectif": "Intervention mercredi entre 13 h et 15 h. Accès par la cour. Gardien présent.",
+      "critere": "Tous les changements qui nécessitent une action pour ta tâche.",
+      "consigne": "Pour chaque message, décide s’il change la tâche selon les critères affichés. Compare le message au but et aux informations déjà connues.",
+      "methode": "Relis le but et les critères. Identifie d’abord la tâche concernée, puis compare l’information au plan actuel. Ne retiens que ce qui répond aux critères.",
+      "messages": [
+        {
+          "id": "m1",
+          "texte": "Le plombier dispose du créneau de 13 h à 15 h mercredi."
+        },
+        {
+          "id": "m2",
+          "texte": "Transmets au gardien la photo de la fuite avant midi."
+        },
+        {
+          "id": "m3",
+          "texte": "Le contrôle électrique est fixé mercredi de 16 h à 18 h."
+        },
+        {
+          "id": "m4",
+          "texte": "L’intervention de plomberie est désormais prévu pour 16 h–18 h."
+        },
+        {
+          "id": "m5",
+          "texte": "L’entreprise propose un contrat annuel d’entretien."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "m1": "non",
+        "m2": "oui",
+        "m3": "non",
+        "m4": "oui",
+        "m5": "non"
+      },
+      "explications": {
+        "m1": "Le message reprend une information déjà connue.",
+        "m2": "Une préparation nouvelle est demandée.",
+        "m3": "Le message concerne une autre tâche.",
+        "m4": "Le moment prévu pour ta tâche est modifié.",
+        "m5": "Cette possibilité ne modifie pas ce que tu dois faire."
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "reperer-essentiel-v2-3-11",
+    "module": "entrainement",
+    "theme": "reperer-essentiel",
+    "type": "reperer-essentiel",
+    "palier": 3,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Préparer la présentation du projet Rivage",
+      "objectif": "Présentation vendredi à 11 h, auditorium. Version 6 sur la tablette.",
+      "critere": "Tous les changements qui nécessitent une action pour ta tâche.",
+      "consigne": "Pour chaque message, décide s’il change la tâche selon les critères affichés. Compare le message au but et aux informations déjà connues.",
+      "methode": "Relis le but et les critères. Identifie d’abord la tâche concernée, puis compare l’information au plan actuel. Ne retiens que ce qui répond aux critères.",
+      "messages": [
+        {
+          "id": "m1",
+          "texte": "La présentation rivage est désormais prévu pour 11 h 45."
+        },
+        {
+          "id": "m2",
+          "texte": "L’auditorium est réservé vendredi à 11 h pour Rivage."
+        },
+        {
+          "id": "m3",
+          "texte": "La présentation Atlas commencera vendredi à 11 h 45."
+        },
+        {
+          "id": "m4",
+          "texte": "Utilise la version 7 envoyée par la direction."
+        },
+        {
+          "id": "m5",
+          "texte": "Une conférence publique occupera le hall en soirée."
+        },
+        {
+          "id": "m6",
+          "texte": "Ajoute la diapositive financière reçue ce matin."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "m1": "oui",
+        "m2": "non",
+        "m3": "non",
+        "m4": "oui",
+        "m5": "non",
+        "m6": "oui"
+      },
+      "explications": {
+        "m1": "Le moment prévu pour ta tâche est modifié.",
+        "m2": "Le message reprend une information déjà connue.",
+        "m3": "Le message concerne une autre tâche.",
+        "m4": "Une autre action nécessaire est modifiée.",
+        "m5": "Cette possibilité ne modifie pas ce que tu dois faire.",
+        "m6": "Une préparation nouvelle est demandée."
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "reperer-essentiel-v2-3-12",
+    "module": "entrainement",
+    "theme": "reperer-essentiel",
+    "type": "reperer-essentiel",
+    "palier": 3,
+    "prerequis": [],
+    "fonctions_ciblees": [
+      "attention-selective",
+      "inhibition"
+    ],
+    "contenu": {
+      "enonce": "Organiser le retrait du colis 684",
+      "objectif": "Retrait samedi à partir de 10 h, bureau 4. Pièce d’identité prête.",
+      "critere": "Tous les changements qui nécessitent une action pour ta tâche.",
+      "consigne": "Pour chaque message, décide s’il change la tâche selon les critères affichés. Compare le message au but et aux informations déjà connues.",
+      "methode": "Relis le but et les critères. Identifie d’abord la tâche concernée, puis compare l’information au plan actuel. Ne retiens que ce qui répond aux critères.",
+      "messages": [
+        {
+          "id": "m1",
+          "texte": "Le retrait du colis 684 est désormais prévu pour 11 h 30."
+        },
+        {
+          "id": "m2",
+          "texte": "Apporte aussi le code imprimé reçu par courriel."
+        },
+        {
+          "id": "m3",
+          "texte": "Le colis 684 est inscrit au bureau 4 dès 10 h."
+        },
+        {
+          "id": "m4",
+          "texte": "Le colis 648 sera disponible samedi à 11 h 30."
+        },
+        {
+          "id": "m5",
+          "texte": "Le transporteur propose une enquête de satisfaction."
+        }
+      ]
+    },
+    "reponse": {
+      "valeur": {
+        "m1": "oui",
+        "m2": "oui",
+        "m3": "non",
+        "m4": "non",
+        "m5": "non"
+      },
+      "explications": {
+        "m1": "Le moment prévu pour ta tâche est modifié.",
+        "m2": "Une préparation nouvelle est demandée.",
+        "m3": "Le message reprend une information déjà connue.",
+        "m4": "Le message concerne une autre tâche.",
+        "m5": "Cette possibilité ne modifie pas ce que tu dois faire."
+      }
+    },
+    "meta": {
+      "auteur": "redaction-assistee (tools/generer_attention_fonctionnelle.py)",
+      "date_creation": "2026-10-01",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]

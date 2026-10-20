@@ -1,0 +1,26 @@
+{
+  "theme": "actualiser-consigne",
+  "paliers": [
+    {
+      "id": "actualiser-consigne-palier-1",
+      "description": "Deux éléments, un remplacement",
+      "prerequis": [],
+      "fichier": "paliers/palier-01.json",
+      "nb_items": 12
+    },
+    {
+      "id": "actualiser-consigne-palier-2",
+      "description": "Trois éléments, deux mises à jour",
+      "prerequis": [],
+      "fichier": "paliers/palier-02.json",
+      "nb_items": 12
+    },
+    {
+      "id": "actualiser-consigne-palier-3",
+      "description": "Quatre éléments, correction d’une correction et message connexe",
+      "prerequis": [],
+      "fichier": "paliers/palier-03.json",
+      "nb_items": 12
+    }
+  ]
+}

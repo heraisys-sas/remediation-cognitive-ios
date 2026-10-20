@@ -29,10 +29,13 @@ def main():
     # Réutilise une ressource-folder déjà déclarée dans le projet Xcode.
     pilot = destination / "iOSTestbed/app/pilot"
     pilot.mkdir()
-    for name in ("index.html", "pilot.css", "active-clock.js", "pqrst.js", "contextes.js", "choices.js", "memory.js", "speech.js", "auto-lexical.js", "feedback-flow.js", "voice-settings.js", "home.js", "pilot.js"):
-        shutil.copy2(native / name, pilot / name)
+    for source in native.iterdir():
+        if source.suffix in (".html", ".css", ".js"):
+            shutil.copy2(source, pilot / source.name)
     shutil.copy2(ROOT / "vendor/remediation/frontend/src/dictee-auto.js", pilot / "dictee-auto.js")
     shutil.copytree(ROOT / "vendor/remediation/frontend/images", pilot / "images")
+    shutil.copytree(ROOT / "vendor/remediation/frontend/audio", pilot / "audio")
+    shutil.copy2(ROOT / "vendor/remediation/frontend/src/exercises/deduction.js", pilot / "deduction-source.js")
     scene = destination / "iOSTestbed/SceneDelegate.m"
     scene.write_text(scene.read_text().replace('@"pilot" isDirectory:YES', '@"app/pilot" isDirectory:YES'))
     info_path = destination / "iOSTestbed/iOSTestbed-Info.plist"
@@ -48,7 +51,7 @@ def main():
     add_speech_sources(project)
     manifest_path = destination / "probe-manifest.json"
     manifest = json.loads(manifest_path.read_text())
-    manifest.update(scope="Calcul, accès lexical, PQRST séquencé et Contextes en deux passes, stratégies et mémoire visuelle : service, corrections, aides, SQLite et pont natif ; lecture et dictée natives facultatives",
+    manifest.update(scope="32 parcours classiques et 4 protocoles de mémoire immédiate : contenus et correcteurs amont, stockage local et interface native ; lecture et dictée facultatives",
                     app_sha256=tree_hash(app), native_sha256=tree_hash(destination / "iOSTestbed"))
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
     print(destination / "iOSTestbed.xcodeproj")

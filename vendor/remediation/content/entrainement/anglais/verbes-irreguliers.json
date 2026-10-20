@@ -1,0 +1,242 @@
+[
+  {
+    "id": "en-verb-go-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "anglais/verbes-irreguliers",
+    "fonctions_ciblees": ["memorisation-longue"],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "go → prétérit ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "went"
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "en-verb-have-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "anglais/verbes-irreguliers",
+    "fonctions_ciblees": ["memorisation-longue"],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "have → prétérit ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "had"
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "en-verb-make-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "anglais/verbes-irreguliers",
+    "fonctions_ciblees": ["memorisation-longue"],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "make → prétérit ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "made"
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "en-verb-take-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "anglais/verbes-irreguliers",
+    "fonctions_ciblees": ["memorisation-longue"],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "take → prétérit ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "took"
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "en-verb-come-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "anglais/verbes-irreguliers",
+    "fonctions_ciblees": ["memorisation-longue"],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "come → prétérit ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "came"
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "en-verb-see-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "anglais/verbes-irreguliers",
+    "fonctions_ciblees": ["memorisation-longue"],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "see → prétérit ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "saw"
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "en-verb-give-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "anglais/verbes-irreguliers",
+    "fonctions_ciblees": ["memorisation-longue"],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "give → prétérit ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "gave"
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "en-verb-find-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "anglais/verbes-irreguliers",
+    "fonctions_ciblees": ["memorisation-longue"],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "find → prétérit ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "found"
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "en-verb-think-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "anglais/verbes-irreguliers",
+    "fonctions_ciblees": ["memorisation-longue"],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "think → prétérit ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "thought"
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "en-verb-tell-01",
+    "type": "production",
+    "module": "entrainement",
+    "theme": "anglais/verbes-irreguliers",
+    "fonctions_ciblees": ["memorisation-longue"],
+    "palier": 1,
+    "prerequis": [],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "tell → prétérit ?",
+      "aide": null
+    },
+    "reponse": {
+      "valeur": "told"
+    },
+    "meta": {
+      "auteur": "agent-sprint1",
+      "date_creation": "2026-09-03",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  }
+]
