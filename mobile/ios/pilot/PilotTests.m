@@ -1,10 +1,12 @@
 #import <XCTest/XCTest.h>
 #import <WebKit/WebKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 // Déclarations de test : le contrôleur réel est fourni par l'app hôte.
 @interface NSObject (RCSpeechTestSurface)
 - (void)handle:(NSDictionary *)command reply:(void (^)(id, NSString *))reply;
 - (void)cancelAll;
+- (BOOL)shouldUseSpeakerForOutputs:(NSArray<NSString *> *)ports;
 @end
 @interface RCNoLocalSpeech : NSObject
 @end
@@ -164,6 +166,18 @@
     [self waitForExpectations:@[response] timeout:60];
 }
 
+- (void)testAudioRoutingPreservesAccessories {
+    id speech = [NSClassFromString(@"RCSpeechController") new];
+    XCTAssertNotNil(speech);
+    XCTAssertTrue([speech shouldUseSpeakerForOutputs:@[AVAudioSessionPortBuiltInReceiver]]);
+    for (NSString *port in @[AVAudioSessionPortBuiltInSpeaker, AVAudioSessionPortHeadphones,
+          AVAudioSessionPortBluetoothHFP, AVAudioSessionPortBluetoothA2DP,
+          AVAudioSessionPortBluetoothLE, AVAudioSessionPortUSBAudio, AVAudioSessionPortAirPlay]) {
+        XCTAssertFalse([speech shouldUseSpeakerForOutputs:@[port]]);
+        XCTAssertFalse(([speech shouldUseSpeakerForOutputs:@[AVAudioSessionPortBuiltInReceiver,port]]));
+    }
+    XCTAssertFalse([speech shouldUseSpeakerForOutputs:@[]]);
+}
 - (void)testNativeSpeechWithoutMicrophonePermission {
     Class speechClass = NSClassFromString(@"RCSpeechController");
     XCTAssertNotNil(speechClass);

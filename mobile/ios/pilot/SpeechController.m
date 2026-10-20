@@ -89,6 +89,18 @@
     if ([notification.userInfo[AVAudioSessionRouteChangeReasonKey] unsignedIntegerValue] == AVAudioSessionRouteChangeReasonOldDeviceUnavailable)
         dispatch_async(dispatch_get_main_queue(), ^{ [self cancelAll]; });
 }
+// Corriger uniquement l’écouteur interne : ne jamais écraser une sortie casque.
+- (BOOL)shouldUseSpeakerForOutputs:(NSArray<NSString *> *)ports {
+    return ports.count == 1 && [ports.firstObject isEqualToString:AVAudioSessionPortBuiltInReceiver];
+}
+- (BOOL)ensureSpeakerRoute:(NSError **)error {
+    AVAudioSession *audio = AVAudioSession.sharedInstance;
+    if (![audio.category isEqualToString:AVAudioSessionCategoryPlayAndRecord]) return YES;
+    NSMutableArray *ports = [NSMutableArray new];
+    for (AVAudioSessionPortDescription *output in audio.currentRoute.outputs) [ports addObject:output.portType];
+    if (![self shouldUseSpeakerForOutputs:ports]) return YES;
+    return [audio overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:error];
+}
 - (void)beginCapture:(NSUInteger)generation {
     if (generation != self.generation || !self.dictationToken) return;
     if (UIApplication.sharedApplication.applicationState != UIApplicationStateActive || !self.recognizer.supportsOnDeviceRecognition) {
@@ -96,9 +108,9 @@
     }
     NSError *error = nil;
     AVAudioSession *audio = AVAudioSession.sharedInstance;
-    if (![audio setCategory:AVAudioSessionCategoryPlayAndRecord mode:AVAudioSessionModeMeasurement
-                   options:AVAudioSessionCategoryOptionDefaultToSpeaker | AVAudioSessionCategoryOptionAllowBluetoothHFP error:&error] ||
-        ![audio setActive:YES error:&error]) { [self finishDictation:@"unavailable"]; return; }
+    if (![audio setCategory:AVAudioSessionCategoryPlayAndRecord mode:AVAudioSessionModeDefault
+                   options:AVAudioSessionCategoryOptionDefaultToSpeaker | AVAudioSessionCategoryOptionAllowBluetoothHFP | AVAudioSessionCategoryOptionAllowBluetoothA2DP error:&error] ||
+        ![audio setActive:YES error:&error] || ![self ensureSpeakerRoute:&error]) { [self finishDictation:@"unavailable"]; return; }
     self.engine = [AVAudioEngine new];
     AVAudioInputNode *input = self.engine.inputNode;
     AVAudioFormat *format = [input outputFormatForBus:0];
@@ -210,7 +222,7 @@
         if (prepared) [self stopSpeaking]; else [self cancelAll];
         NSError *error = nil;
         if ((!prepared && ![AVAudioSession.sharedInstance setCategory:AVAudioSessionCategoryPlayback mode:AVAudioSessionModeSpokenAudio options:AVAudioSessionCategoryOptionDuckOthers error:&error]) ||
-            ![AVAudioSession.sharedInstance setActive:YES error:&error]) { reply(nil, @"La lecture est indisponible pour le moment."); return; }
+            ![AVAudioSession.sharedInstance setActive:YES error:&error] || ![self ensureSpeakerRoute:&error]) { reply(nil, @"La lecture est indisponible pour le moment."); return; }
         self.speechToken = token;
         self.utterance = [AVSpeechUtterance speechUtteranceWithString:text];
         self.utterance.voice = voice; self.utterance.rate = AVSpeechUtteranceDefaultSpeechRate;

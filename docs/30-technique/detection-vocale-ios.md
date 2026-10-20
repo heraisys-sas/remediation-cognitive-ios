@@ -35,3 +35,11 @@ Tous les retours finaux proposent désormais une suite automatique, avec un dél
 La suite automatique attend la fin d’une lecture vocale. Pour Contextes, elle attend la révélation enregistrée de la photo ; une erreur de chargement ne provoque aucun passage automatique. Les temporisations d’exposition et les étapes PQRST de lecture, de formulation ou de rappel conservent leurs transitions pédagogiques. Aucun nouvel essai ni aucune réponse n’est inventé par la navigation.
 
 Les transitions, interruptions et changements d’item annulent les timers obsolètes. Le retour est présenté dans un encadré discret. Les tests ciblés vérifient le passage unique, le maintien explicite, l’interruption, l’attente de lecture vocale et la révélation Contextes.
+
+## Routage de lecture et micro préarmé
+
+Le mode de capture est `AVAudioSessionModeDefault`, avec `PlayAndRecord`, `DefaultToSpeaker`, `AllowBluetoothHFP` et `AllowBluetoothA2DP`. Le mode `Measurement` précédent réduit le traitement dynamique et peut diminuer le niveau de lecture ; il ne convenait pas à cette interaction parlée.
+
+Après activation, si la seule sortie choisie par iOS reste `BuiltInReceiver`, un repli ponctuel sélectionne le haut-parleur. Une sortie casque, Bluetooth, USB ou AirPlay n’est pas remplacée. Le test natif couvre la décision pour chacune de ces sorties et pour les routes multiples. Le niveau réellement entendu et les transitions avec un casque doivent être contrôlés sur l’appareil.
+
+Validation du correctif de routage : 5 XCTest réussis sur iPhone Air, sans échec, dont la politique de préservation des accessoires et le parcours WebKit. Preuve locale : `.local/audio-routing-final-device.xcresult`. Relecture Sol favorable. Le volume entendu et le casque réel restent à confirmer par l’utilisateur.
