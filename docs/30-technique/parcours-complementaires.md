@@ -84,7 +84,7 @@ correction source des nouvelles présentations, conservation des blocs et quotas
 au rappel et l’envoi du marqueur d’essai aidé. `check_upstream.py` valide les empreintes.
 
 La compilation générique arm64 pour simulateur vérifie aussi les sources natives
-et la cible XCTest ; elle ne constitue pas une exécution. Le 20 octobre, neuf tests natifs passent sur iPhone Air en iOS 27.1,
+et la cible XCTest ; elle ne constitue pas une exécution. Le 20 octobre, neuf tests natifs passent sur iPhone Air en iOS 27.0.1,
 avec les 20 contrôles du moteur embarqué. Le test complémentaire vérifie les
 deux documents, l’activation de la validation, la correction et, pour Code,
 le masquage, le second essai aidé et la conservation de la première réponse.
