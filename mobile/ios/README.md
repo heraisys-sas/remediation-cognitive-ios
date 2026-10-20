@@ -446,3 +446,9 @@ séparés de mémoire immédiate. Les sections précédentes décrivent les vali
 historiques, pas une recette physique de ces ajouts.
 Voir [l’inventaire, les contrats et les limites](../../docs/30-technique/parcours-complementaires.md)
 et [l’expérience de délégation](../../docs/30-technique/experience-delegation.md).
+
+Le 20 octobre, les neuf tests natifs du dernier pilote passent sur iPhone Air :
+20 contrôles du moteur, réglages, voix/audio, parcours existants, comparaison
+de documents et Code avec second essai aidé. Les données XCTest sont isolées
+du stockage utilisé à la main. Cela reste une couverture représentative,
+pas une recette exhaustive des 36 parcours.

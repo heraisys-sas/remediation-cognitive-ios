@@ -84,11 +84,17 @@ correction source des nouvelles présentations, conservation des blocs et quotas
 au rappel et l’envoi du marqueur d’essai aidé. `check_upstream.py` valide les empreintes.
 
 La compilation générique arm64 pour simulateur vérifie aussi les sources natives
-et la cible XCTest ; elle ne constitue pas une exécution. Aucun nouveau parcours
-n’a encore été testé sur le téléphone déconnecté. Aucun simulateur n’a été exécuté
-pour ce lot. La lisibilité réelle, VoiceOver, la disposition sur iPad, les délais
-et les transitions audio restent à vérifier sur appareil. Les tests historiques
-sur iPhone ne valident pas ces nouveaux écrans.
+et la cible XCTest ; elle ne constitue pas une exécution. Le 20 octobre, neuf tests natifs passent sur iPhone Air en iOS 27.1,
+avec les 20 contrôles du moteur embarqué. Le test complémentaire vérifie les
+deux documents, l’activation de la validation, la correction et, pour Code,
+le masquage, le second essai aidé et la conservation de la première réponse.
+Aucun simulateur n’a été exécuté pour ce lot. La lisibilité réelle, VoiceOver, la disposition sur iPad, les délais
+et les transitions audio restent à vérifier sur appareil. Ce contrôle représentatif ne valide pas l’ensemble des 36 parcours.
+Le résultat local est dans `.local/complete-parcours-device-isolated.xcresult`
+(neuf tests, zéro échec, 49,2 secondes) et son journal homonyme `.log`.
+Les scénarios XCTest disposent désormais d’un stockage temporaire distinct,
+conditionné au chargement de XCTest et à l’argument `ios_probe`, afin de ne
+pas consommer les quotas du pilote utilisé à la main.
 
 La dernière revue par sous-agents a été interrompue par le quota d’usage.
 Elle a néanmoins identifié le marqueur d’essai aidé manquant dans la commande JS,

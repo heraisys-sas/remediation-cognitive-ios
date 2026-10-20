@@ -15,7 +15,9 @@ protocoles de mémoire immédiate, avec contenu versionné, correcteurs d’orig
 et sauvegarde transactionnelle. Voir [l’inventaire et la validation du lot](docs/30-technique/parcours-complementaires.md).
 Les 213 tests Python et 56 contrôles JavaScript du lot passent sur ordinateur.
 La compilation iOS est distincte de l’exécution sur simulateur et de la recette
-sur appareil. Les nouveaux parcours restent à essayer sur iPhone.
+sur appareil. Neuf tests natifs passent sur iPhone Air, dont une première vérification de
+Comparer des documents et de Code avec essai aidé. La recette de tous les
+nouveaux parcours reste à compléter.
 La lecture et la dictée natives fonctionnent dans le pilote ; la validation
 vocale automatique concerne Retrouver le mot, selon les règles du moteur.
 PCC reste facultatif.
