@@ -315,6 +315,10 @@
     UIWindowScene *scene = (UIWindowScene *)UIApplication.sharedApplication.connectedScenes.anyObject;
     WKWebView *web = [scene.windows.firstObject.rootViewController valueForKey:@"web"];
     XCTAssertNotNil(web); if (!web) return;
+    NSPredicate *loaded = [NSPredicate predicateWithBlock:^BOOL(id object, NSDictionary *bindings) {
+        return !web.loading && [web.URL.lastPathComponent isEqualToString:@"index.html"];
+    }];
+    [self waitForExpectations:@[[[XCTNSPredicateExpectation alloc] initWithPredicate:loaded object:web]] timeout:20];
     XCTestExpectation *done = [self expectationWithDescription:@"Chemin visible et suite automatique"];
     NSString *script = @"for(let i=0;i<500&&(typeof state==='undefined'||busy||!homeReady);i++)await new Promise(r=>setTimeout(r,20));"
         "stopFeedbackFlow();stopSpeechForTransition();const old=await request('view');if(old.started&&!old.finished)await request('finish',{session_id:old.session_id});"
@@ -323,15 +327,26 @@
         "const visible=Boolean(lit&&other&&getComputedStyle(lit).backgroundColor!==getComputedStyle(other).backgroundColor);"
         "for(let i=0;i<1000&&(busy||state.immediate.phase!=='reponse');i++)await new Promise(r=>setTimeout(r,20));"
         "if(state.immediate.phase!=='reponse')throw Error('Le chemin ne passe pas au rappel');"
-        "await immediateCommand('answer',{response:null,observations:{absence_declaree:true}});"
+        "window.pathTestPhase='gesture';const board=document.querySelector('.immediate-path-input'),cells=[...board.querySelectorAll('button.immediate-path-cell')];"
+        "const send=(type,cell)=>{const r=cell.getBoundingClientRect();board.dispatchEvent(new PointerEvent(type,{bubbles:true,pointerId:7,pointerType:'touch',isPrimary:true,button:0,clientX:r.x+r.width/2,clientY:r.y+r.height/2}));};"
+        "send('pointerdown',cells[0]);send('pointermove',cells[1]);send('pointerup',cells[1]);"
+        "const line=board.querySelector('svg line');const drawn=board.querySelectorAll('button[aria-pressed=true]').length===2&&Boolean(line)&&getComputedStyle(line).strokeWidth==='3px'&&getComputedStyle(cells[0]).backgroundColor==='rgba(0, 0, 0, 0)';"
+        "window.pathTestPhase='answer';await immediateCommand('answer',{response:null,observations:{absence_declaree:true}});"
+        "window.pathTestPhase='feedback';const modelLines=document.querySelectorAll('.immediate-path-model svg line').length===1;"
         "const hold=!document.getElementById('holdFeedback').hidden;const first=state.item_id;"
         "for(let i=0;i<900&&(busy||state.item_id===first);i++)await new Promise(r=>setTimeout(r,20));"
         "const automatic=state.item_id!==first&&state.immediate.phase==='pret';"
         "const options=!document.getElementById('sessionOptions').hidden&&!document.getElementById('sessionOptions').open;"
-        "render(await request('finish',{session_id:state.session_id}));return {visible,hold,automatic,options};";
+        "render(await request('finish',{session_id:state.session_id}));return {visible,hold,automatic,options,drawn,modelLines};";
     [web callAsyncJavaScript:script arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld completionHandler:^(id value, NSError *error) {
-        XCTAssertNil(error);
-        for (NSString *key in @[@"visible",@"hold",@"automatic",@"options"]) XCTAssertEqualObjects(value[key], @YES, @"%@", key);
+        if (error) {
+            XCTFail(@"%@", error);
+            [web evaluateJavaScript:@"JSON.stringify({stage:window.pathTestPhase,phase:state?.immediate?.phase,busy,error:document.getElementById('error').textContent})" completionHandler:^(id debug, NSError *failure) {
+                NSLog(@"PATH_TEST_DEBUG=%@ %@", debug, failure); [done fulfill];
+            }];
+            return;
+        }
+        for (NSString *key in @[@"visible",@"hold",@"automatic",@"options",@"drawn",@"modelLines"]) XCTAssertEqualObjects(value[key], @YES, @"%@", key);
         NSLog(@"ERGONOMY_DEVICE_RESULT=%@", value);
         [done fulfill];
     }];
