@@ -43,8 +43,14 @@ retarde la suite. « Prendre le temps » permet de lire sans limite.
 - Empreintes `UPSTREAM.json` conformes au commit `44acda5`.
 - Nouvelle vérification XCTest : surbrillance effective du chemin par comparaison
   des couleurs calculées dans WebKit, rappel après masquage, commande de maintien
-  accessible et passage automatique au prochain essai. Préparation et compilation
-  iPhone effectuées ; exécution en attente du déverrouillage au moment de cette note.
+  accessible et passage automatique au prochain essai. Dix tests natifs réussis sur iPhone Air (59,1 secondes, zéro échec), dont ce
+  scénario et la conservation de la première réponse lors de l’essai aidé.
+  Preuve locale : `.local/ergonomie-device.xcresult`.
+- GitHub Actions : moteur et noyau simulateurs iPhone 17/Air réussis ; pilote
+  iPhone Air réussi. Le pilote iPhone 17 échoue dans le scénario de test lors
+  du passage de Contextes aux stratégies (bouton absent). Le test attend désormais
+  la fin des écritures asynchrones avant ses commandes de clôture/démarrage ;
+  cette correction du scénario reste à confirmer sur le runner.
 
 ## Recette encore nécessaire
 
