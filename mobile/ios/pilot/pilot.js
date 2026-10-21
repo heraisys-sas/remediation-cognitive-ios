@@ -2,7 +2,7 @@
 const element = id => document.getElementById(id);
 let state = null, busy = false, paused = false;
 let pendingProtocolPause = false;
-let lexicalHelpKey=null;
+let lexicalHelpKey=null, methodKey=null;
 const clock = new ActiveClock();
 async function request(action, data = {}) {
   if (!window.webkit?.messageHandlers?.runtime) {
@@ -34,8 +34,14 @@ async function perform(operation) {
 function render(view) {
   state = view;
   renderFeedbackFlow(view);
+  const currentMethodKey=JSON.stringify([view.session_id,view.item?.id,view.position,Boolean(view.reprise)]);
+  if(currentMethodKey!==methodKey){element("method").open=false;methodKey=currentMethodKey;}
   if (view.finished) paused = false;
   if (view.protocol?.paused || view.contextes?.paused || view.memory?.paused || view.lexical_strategy?.paused || view.functional?.paused || view.comparison?.paused || view.attention?.paused) paused = true;
+  const activeSession=Boolean(view.started&&!view.finished);
+  element("sessionOptions").hidden=!activeSession;
+  element("intro").hidden=activeSession;
+  if(!activeSession)element("sessionOptions").open=false;
   renderImmediate(view);
   if(view.immediate){
     for(const id of ["question","position","lexicalHelp","method","repriseSupport","answerForm","protocol","contextes","memory","choices","deduction","lexicalStrategy","functional","comparison","attention","feedback","next","audioControls"])element(id).hidden=true;
@@ -43,6 +49,7 @@ function render(view) {
     document.title=view.finished?"Remédiation":view.title;
     element("activityChoice").hidden=!view.finished;element("exercise").hidden=Boolean(view.finished)||paused;
     element("start").hidden=true;element("finish").hidden=Boolean(view.finished);element("summary").hidden=!view.finished;
+    element("stopProposal").hidden=true;
     element("answerForm").hidden=true;element("next").hidden=true;element("audioControls").hidden=true;
     document.querySelector("h1").textContent=view.finished?"Remédiation":view.title;
     if(view.finished)element("summaryText").textContent="Bloc de mémoire enregistré. Les premières réponses, aides et interruptions sont conservées séparément.";

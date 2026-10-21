@@ -7,7 +7,7 @@ const vm = require('node:vm');
 async function page({native = true, reply = async()=>({started:false}), speechReply = null} = {}) {
   const nodes = {};
   const create = tag => {
-    const node = {tagName:tag, textContent:'', value:'', hidden:false, disabled:false, children:[], attrs:{}, style:{},dataset:{},classList:{add(){},remove(){}},addEventListener(name,callback){this["on"+name]=callback;},querySelector(){return null;}, focus(){}, blur(){},
+    const node = {tagName:tag, textContent:'', value:'', hidden:false, disabled:false, children:[], attrs:{}, style:{setProperty(key,value){this[key]=value;}},dataset:{},classList:{values:new Set(),add(value){this.values.add(value);},remove(value){this.values.delete(value);}},addEventListener(name,callback){this["on"+name]=callback;},querySelector(){return null;}, focus(){}, blur(){},
       append(...items){this.children.push(...items);}, replaceChildren(...items){this.children=items;},
       setAttribute(key,value){this.attrs[key]=value;}};
     Object.defineProperty(node,'id',{set(value){nodes[value]=this;}, get(){return Object.keys(nodes).find(key=>nodes[key]===this);}});
@@ -15,7 +15,7 @@ async function page({native = true, reply = async()=>({started:false}), speechRe
   };
   const get = id => nodes[id] ||= create();
   const context = vm.createContext({setTimeout,clearTimeout,performance:{now:()=>0}, document:{getElementById:get,
-    querySelectorAll:()=>Object.values(nodes), querySelector:()=>get('heading'), createElement:create, createTextNode:text=>({textContent:text}), addEventListener(){}},
+    querySelectorAll:()=>Object.values(nodes), querySelector:()=>get('heading'), createElement:create, createElementNS:(ns,tag)=>create(tag), createTextNode:text=>({textContent:text}), addEventListener(){}},
     window:native ? {webkit:{messageHandlers:{runtime:{postMessage:reply}}}} : {}});
   if(speechReply&&native) context.window.webkit.messageHandlers.speech={postMessage:speechReply};
   const source = path.resolve(__dirname, '../mobile/ios/pilot');
@@ -765,4 +765,56 @@ test('actualiser ne montre que le message courant puis masque les messages au ra
   vm.runInContext('renderFunctional(fixture)',context);
   assert.doesNotMatch(texts(get('functional')),/mardi/);
   assert.equal(get('functional-submit').disabled,true);
+});
+
+for (const kind of ['code','chemin','changement','objets']) {
+  test(`le retour ${kind} avance sans bouton obligatoire et attend si demandé`,async()=>{
+    const app=await feedbackPage({item:undefined,item_id:'trial-1',feedback:undefined,
+      immediate:{kind,phase:'feedback',revision:3,correction:{exacte:false},model:{},can_help:true}});
+    assert.ok(app.delay()>=4000);
+    assert.equal(app.get('holdFeedback').hidden,false);
+    let next=0;app.context.immediateCommand=operation=>{assert.equal(operation,'continue');next++;};
+    app.get('holdFeedback').onclick();app.fire();assert.equal(next,0);
+    app.get('holdFeedback').onclick();app.fire();assert.equal(next,1);
+  });
+}
+
+test('les retours intermédiaires PQRST avancent, la lecture et le résumé attendent',async()=>{
+  for(const phase of ['P-retour','Q-retour','R','retour-S','relecture']){
+    const app=await feedbackPage({feedback:null,item:{id:'i',type:'pqrst-mise-en-oeuvre',contenu:{enonce:'PQRST'}},
+      protocol:{phase,revision:2,paragraphs:['Une information à lire.'],actions:[{operation:'continue',label:'Continuer'}]}});
+    let next=0;app.context.protocolCommand=operation=>{assert.equal(operation,'continue');next++;};
+    if(['P-retour','Q-retour'].includes(phase)){assert.ok(app.delay()>=2200);app.fire();assert.equal(next,1);}
+    else assert.equal(vm.runInContext('feedbackTimer',app.context),null);
+  }
+});
+
+test('la méthode se referme pour une nouvelle question mais reste ouverte sur le même item',async()=>{
+  const app=await page();
+  const view={started:true,session_id:'s',position:1,item:{id:'i',contenu:{enonce:'Question',methode:'Une aide'}}};
+  app.render(view);app.get('method').open=true;app.render(view);assert.equal(app.get('method').open,true);
+  app.render({...view,position:2,item:{...view.item,id:'j'}});assert.equal(app.get('method').open,false);
+});
+
+
+test('le chemin éclaire une seule case avec un style existant puis masque la présentation',async()=>{
+  const app=await page();const region=app.get('immediate');
+  app.context.pathFixture={kind:'chemin',stimulus:{positions:[{id:'a',x:.2,y:.2},{id:'b',x:.8,y:.8}],trajet:['a','b']},params:{signal_ms:1500,intervalle_ms:500}};
+  const presentation=vm.runInContext('immediateVisualStimulus(pathFixture,element("immediate"))',app.context);
+  const cells=region.children[0].children;
+  assert.equal(cells.filter(cell=>cell.classList.values.has('is-lit')).length,1);
+  assert.equal(cells[0].classList.values.has('is-lit'),true);
+  assert.match(fs.readFileSync(path.resolve(__dirname,'../mobile/ios/pilot/pilot.css'),'utf8'),/\.immediate-path-cell\.is-lit\s*\{/);
+  app.context.immediateStopTimer();await presentation;
+  assert.equal(cells.filter(cell=>cell.classList.values.has('is-lit')).length,0);
+});
+
+test('les options de séance et la relecture sont accessibles sans multiplier les boutons visibles',async()=>{
+  const app=await page();
+  app.render({started:true,session_id:'s',item:{id:'i',type:'pqrst-mise-en-oeuvre',contenu:{enonce:'Question'}},
+    protocol:{phase:'4',revision:1,paragraphs:[],actions:[],input_label:'Reformulation',can_reread:true}});
+  assert.equal(app.get('sessionOptions').hidden,false);
+  assert.ok(app.get('protocol-help').children.includes(app.get('protocol-reread-absence')));
+  assert.ok(app.get('protocol-help').children.includes(app.get('protocol-reread')));
+  app.render({started:false});assert.equal(app.get('sessionOptions').hidden,true);
 });

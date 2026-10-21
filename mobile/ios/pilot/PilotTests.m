@@ -67,7 +67,8 @@
     XCTNSPredicateExpectation *page = [[XCTNSPredicateExpectation alloc] initWithPredicate:loaded object:web];
     [self waitForExpectations:@[page] timeout:20];
     XCTestExpectation *response = [self expectationWithDescription:@"Pont WebKit vers moteur local"];
-    NSString *script = @"authorizeAutoLexical=async()=>{autoPermission=false;autoVoiceSession=null;};"
+    NSString *script = @"const idle=async()=>{for(let i=0;i<500&&busy;i++)await new Promise(r=>setTimeout(r,20));if(busy)throw Error('Enregistrement toujours en cours');};"
+        "authorizeAutoLexical=async()=>{autoPermission=false;autoVoiceSession=null;};"
         "const previous=await request('view');if(previous.started&&!previous.finished)await request('finish',{session_id:previous.session_id});"
         "render(await request('view'));const voiceCapabilities=await speechRequest('capabilities');"
         "if(voiceCapabilities.speech){await speechRequest('speak',{token:'native-smoke',text:'Essai de lecture.'}); await new Promise(r=>setTimeout(r,300)); await speechRequest('stop-speaking');}"
@@ -82,9 +83,9 @@
         "render(await request('view')); await document.getElementById('next').onclick();}"
         "const reprise=await request('view');"
         "const support=!document.getElementById('repriseSupport').hidden && document.getElementById('repriseSupport').textContent.includes(String(reprise.reprise_attendue));"
-        "await document.getElementById('finish').onclick();"
+        "await idle();await document.getElementById('finish').onclick();"
         "document.getElementById('activity').value='acces-lexical';"
-        "await document.getElementById('start').onclick();"
+        "await idle();await document.getElementById('start').onclick();"
         "const helpInitiallyClosed=!document.getElementById('lexicalHelp').open;document.getElementById('lexicalHelp').open=true;await document.getElementById('hint').onclick();"
         "const hinted=await request('view'); const hintVisible=Boolean(document.getElementById('hints').textContent);"
         "const regressionField=document.getElementById('answer'); regressionField.value='bouteille';"
@@ -92,8 +93,8 @@
         "const dictationLocked=document.getElementById('validate').disabled; await document.getElementById('hint').onclick();"
         "const dictationUnlocked=dictationLocked&&!document.getElementById('validate').disabled&&!regressionField.readOnly&&regressionField.value==='bouteille';"
         "await document.getElementById('reveal').onclick(); const revealed=await request('view');"
-        "await document.getElementById('finish').onclick();"
-        "document.getElementById('activity').value='pqrst-guide'; await document.getElementById('start').onclick();"
+        "await idle();await document.getElementById('finish').onclick();"
+        "document.getElementById('activity').value='pqrst-guide'; await idle();await document.getElementById('start').onclick();"
         "await document.getElementById('protocol-continue').onclick();"
         "document.getElementById('protocol-option-1').onclick(); await document.getElementById('protocol-respond').onclick();"
         "await document.getElementById('protocol-continue').onclick();"
@@ -110,7 +111,7 @@
         "for(let i=0;i<2;i++){document.getElementById('protocol-option-0').onclick(); await document.getElementById('protocol-respond').onclick();}"
         "await document.getElementById('protocol-submit').onclick(); const pqrst=await request('view');"
         "const pqrstOK=masked&&draft&&pqrst.feedback.sequence.observation.tentatives['4'][0].reponse==='Le colis attend'&&pqrst.feedback.sequence['1'].correcte===false&&document.getElementById('feedback').textContent.includes('sujet du texte : réponse à revoir');"
-        "await document.getElementById('finish').onclick(); document.getElementById('activity').value='memoire-source'; await document.getElementById('start').onclick();"
+        "await idle();await document.getElementById('finish').onclick(); document.getElementById('activity').value='memoire-source'; await idle();await document.getElementById('start').onclick();"
         "const contextSession=await request('view'); let photoLoaded=false;"
         "for(let n=0;n<contextSession.total;n++){"
         "await document.getElementById('contextes-show').onclick();"
@@ -122,15 +123,15 @@
         "await window.pauseForInterruption(); await document.getElementById('resume').onclick();"
         "const recallResumed=!document.querySelector('#contextes img')&&!document.getElementById('exercise').hidden;"
         "await document.getElementById('contextes-answer-0').onclick();"
-        "const recalled=await request('view'); await document.getElementById('finish').onclick();"
+        "const recalled=await request('view'); await idle();await document.getElementById('finish').onclick();"
         "let strategies=true; for(const activity of ['choisir-plan','chercher-information']){"
-        "document.getElementById('activity').value=activity; await document.getElementById('start').onclick();"
+        "document.getElementById('activity').value=activity; await idle();await document.getElementById('start').onclick();"
         "strategies=strategies&&document.getElementById('answerForm').hidden&&!document.getElementById('choices').hidden;"
         "if(activity==='chercher-information')strategies=strategies&&Boolean(document.querySelector('#choices article').textContent);"
         "await document.getElementById('choice-0').onclick(); const firstChoice=await request('view');"
         "if(firstChoice.retry_feedback){strategies=strategies&&document.getElementById('next').hidden&&!document.getElementById('feedback').textContent.includes('Réponse :'); await document.getElementById('choice-1').onclick();}"
-        "const finalChoice=await request('view'); strategies=strategies&&Boolean(finalChoice.feedback); await document.getElementById('finish').onclick();}"
-        "document.getElementById('activity').value='chiffres-endroit'; await document.getElementById('start').onclick();"
+        "const finalChoice=await request('view'); strategies=strategies&&Boolean(finalChoice.feedback); await idle();await document.getElementById('finish').onclick();}"
+        "document.getElementById('activity').value='chiffres-endroit'; await idle();await document.getElementById('start').onclick();"
         "const memoryReady=await request('view'); const noSequence=!JSON.stringify(memoryReady).includes('affichage');"
         "const presentationStart=performance.now(); await document.getElementById('memory-show').onclick();"
         "const answerHidden=document.getElementById('answerForm').hidden;"
@@ -139,7 +140,7 @@
         "const timedMemory=answerHidden&&exposureDuration>=19000&&memoryQuestion.memory.phase==='question'&&!('content' in memoryQuestion.memory)&&!document.getElementById('answerForm').hidden;"
         "const memoryField=document.getElementById('answer');memoryField.value='inconnu';await document.getElementById('answerForm').onsubmit({preventDefault(){}});"
         "for(let k=0;k<100&&busy;k++)await new Promise(r=>setTimeout(r,10));"
-        "const memoryAnswer=await request('view');await document.getElementById('finish').onclick();"
+        "const memoryAnswer=await request('view');await idle();await document.getElementById('finish').onclick();"
         "return {dictationUnlocked,speech:typeof voiceCapabilities.speech==='boolean'&&typeof voiceCapabilities.on_device_dictation==='boolean',memory:noSequence&&timedMemory&&Boolean(memoryAnswer.feedback),strategies,contextes:photoLoaded&&noPhoto&&recallResumed&&recalled.contextes.phase==='feedback',result:r,title:document.querySelector('h1').textContent,error:document.getElementById('error').textContent,"
         "paused,resumed,support,lexical:helpInitiallyClosed && document.getElementById('lexicalHelp').tagName==='DETAILS' && hinted.activity==='acces-lexical' && hinted.hints_used===1 && hintVisible && revealed.feedback.assistee===true,"
         "pqrst:pqrstOK};";
@@ -310,6 +311,33 @@
     XCTAssertEqualObjects(result[@"passed"], @20);
     NSLog(@"PILOT_RESULT=%@", report);
 }
+- (void)testYPathVisibilityAndAutomaticFeedback {
+    UIWindowScene *scene = (UIWindowScene *)UIApplication.sharedApplication.connectedScenes.anyObject;
+    WKWebView *web = [scene.windows.firstObject.rootViewController valueForKey:@"web"];
+    XCTAssertNotNil(web); if (!web) return;
+    XCTestExpectation *done = [self expectationWithDescription:@"Chemin visible et suite automatique"];
+    NSString *script = @"for(let i=0;i<500&&(typeof state==='undefined'||busy||!homeReady);i++)await new Promise(r=>setTimeout(r,20));"
+        "stopFeedbackFlow();stopSpeechForTransition();const old=await request('view');if(old.started&&!old.finished)await request('finish',{session_id:old.session_id});"
+        "render(await request('start',{activity:'mi-chemin',parametres:{longueur:2}}));await immediateCommand('show');"
+        "const lit=document.querySelector('.immediate-path-cell.is-lit');const other=[...document.querySelectorAll('.immediate-path-cell')].find(n=>!n.classList.contains('is-lit'));"
+        "const visible=Boolean(lit&&other&&getComputedStyle(lit).backgroundColor!==getComputedStyle(other).backgroundColor);"
+        "for(let i=0;i<1000&&(busy||state.immediate.phase!=='reponse');i++)await new Promise(r=>setTimeout(r,20));"
+        "if(state.immediate.phase!=='reponse')throw Error('Le chemin ne passe pas au rappel');"
+        "await immediateCommand('answer',{response:null,observations:{absence_declaree:true}});"
+        "const hold=!document.getElementById('holdFeedback').hidden;const first=state.item_id;"
+        "for(let i=0;i<900&&(busy||state.item_id===first);i++)await new Promise(r=>setTimeout(r,20));"
+        "const automatic=state.item_id!==first&&state.immediate.phase==='pret';"
+        "const options=!document.getElementById('sessionOptions').hidden&&!document.getElementById('sessionOptions').open;"
+        "render(await request('finish',{session_id:state.session_id}));return {visible,hold,automatic,options};";
+    [web callAsyncJavaScript:script arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld completionHandler:^(id value, NSError *error) {
+        XCTAssertNil(error);
+        for (NSString *key in @[@"visible",@"hold",@"automatic",@"options"]) XCTAssertEqualObjects(value[key], @YES, @"%@", key);
+        NSLog(@"ERGONOMY_DEVICE_RESULT=%@", value);
+        [done fulfill];
+    }];
+    [self waitForExpectations:@[done] timeout:60];
+}
+
 - (void)testZComplementaryPathways {
     UIWindowScene *scene = (UIWindowScene *)UIApplication.sharedApplication.connectedScenes.anyObject;
     WKWebView *web = [scene.windows.firstObject.rootViewController valueForKey:@"web"];
