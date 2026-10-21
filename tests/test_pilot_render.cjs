@@ -8,7 +8,8 @@ async function page({native = true, reply = async()=>({started:false}), speechRe
   const nodes = {};
   const create = tag => {
     const node = {tagName:tag, textContent:'', value:'', hidden:false, disabled:false, children:[], attrs:{}, style:{setProperty(key,value){this[key]=value;}},dataset:{},classList:{values:new Set(),add(value){this.values.add(value);},remove(value){this.values.delete(value);}},addEventListener(name,callback){this["on"+name]=callback;},querySelector(){return null;}, focus(){}, blur(){},
-      append(...items){this.children.push(...items);}, replaceChildren(...items){this.children=items;},
+      append(...items){for(const item of items){if(item&&typeof item==='object')item.parentNode=this;this.children.push(item);}}, replaceChildren(...items){this.children=[];this.append(...items);},
+      replaceWith(node){const parent=this.parentNode;if(parent){parent.children[parent.children.indexOf(this)]=node;node.parentNode=parent;}},
       setAttribute(key,value){this.attrs[key]=value;}};
     Object.defineProperty(node,'id',{set(value){nodes[value]=this;}, get(){return Object.keys(nodes).find(key=>nodes[key]===this);}});
     return node;
@@ -817,4 +818,66 @@ test('les options de séance et la relecture sont accessibles sans multiplier le
   assert.ok(app.get('protocol-help').children.includes(app.get('protocol-reread-absence')));
   assert.ok(app.get('protocol-help').children.includes(app.get('protocol-reread')));
   app.render({started:false});assert.equal(app.get('sessionOptions').hidden,true);
+});
+
+
+async function touchPath(){
+  const app=await page();
+  app.context.pathPoints=[{id:'a',x:.1,y:.5},{id:'b',x:.5,y:.5},{id:'c',x:.9,y:.5}];
+  vm.runInContext(`var pathBoard=document.createElement('div'),pathCells=pathPoints.map((point,i)=>{const cell=document.createElement('button');cell.getBoundingClientRect=()=>({left:i*100,right:i*100+44,top:0,bottom:44});return cell;}),pathSelected=[],redraws=0;immediatePathTouch(pathBoard,pathCells,pathPoints,pathSelected,3,()=>redraws++);`,app.context);
+  return {...app,board:app.context.pathBoard,cells:app.context.pathCells,selected:()=>Array.from(app.context.pathSelected)};
+}
+const pointer=(x,extra={})=>({clientX:x,clientY:20,pointerId:1,isPrimary:true,button:0,preventDefault(){},...extra});
+test('le doigt traverse les cases dans leur ordre sans doublon ni clic parasite',async()=>{
+  const app=await touchPath();
+  app.board.onpointerdown(pointer(20));app.board.onpointermove(pointer(220));app.board.onpointerup(pointer(220));
+  assert.deepEqual(app.selected(),['a','b','c']);
+  app.cells[2].onclick({detail:1});assert.deepEqual(app.selected(),['a','b','c']);
+  app.cells[1].onclick({detail:0});assert.deepEqual(app.selected(),['a','c']);
+});
+test('un toucher simple sélectionne puis retire une case, un geste annulé ne valide rien',async()=>{
+  const app=await touchPath();
+  app.board.onpointerdown(pointer(20));app.board.onpointerup(pointer(20));app.cells[0].onclick({detail:1});
+  assert.deepEqual(app.selected(),['a']);
+  app.board.onpointerdown(pointer(20));app.board.onpointerup(pointer(20));app.cells[0].onclick({detail:1});
+  assert.deepEqual(app.selected(),[]);
+  app.board.onpointerdown(pointer(120));app.board.onpointercancel(pointer(120));
+  assert.deepEqual(app.selected(),[]);
+});
+test('le geste ignore le deuxième doigt, les cases déjà visitées et les interruptions',async()=>{
+  const app=await touchPath();
+  app.board.onpointerdown(pointer(20));app.board.onpointermove(pointer(220,{pointerId:2,isPrimary:false}));
+  assert.deepEqual(app.selected(),[]);
+  app.board.onpointermove(pointer(120));app.board.onpointermove(pointer(20));
+  assert.deepEqual(app.selected(),['a','b']);
+  vm.runInContext('paused=true',app.context);app.board.onpointermove(pointer(220));app.board.onpointerup(pointer(220));
+  assert.deepEqual(app.selected(),['a','b']);
+});
+test('la correction trace le modèle dans les cases sans exposer de trajet dans la saisie',async()=>{
+  const app=await page(),region=app.get('immediate');
+  app.context.pathModel={kind:'chemin',model:{positions:[{id:'a',x:.1,y:.2},{id:'b',x:.8,y:.7}],trajet:['a','b']}};
+  vm.runInContext('immediateRenderModel(pathModel,element("immediate"))',app.context);
+  const area=region.children[1],svg=area.children.at(-1);
+  assert.match(area.className,/immediate-path-model/);assert.equal(svg.children.length,1);
+  assert.equal(svg.children[0].attrs.x1,.1*100);assert.equal(svg.children[0].attrs.y2,.7*100);
+  assert.equal(svg.children[0].attrs['vector-effect'],'non-scaling-stroke');
+});
+
+
+test('le geste prépare une réponse bornée sans enregistrer avant Valider le chemin',async()=>{
+  const app=await page(),region=app.get('immediate'),writes=[];
+  app.context.immediateCommand=(operation,payload)=>writes.push({operation,payload});
+  app.context.touchFixture={kind:'chemin',params:{longueur:2},stimulus:{positions:[{id:'a',x:.1,y:.5},{id:'b',x:.5,y:.5},{id:'c',x:.9,y:.5}]}};
+  vm.runInContext('immediateResponse(touchFixture,element("immediate"))',app.context);
+  const board=region.children.find(node=>node.className?.includes('immediate-path'));
+  const cells=board.children.filter(node=>node.tagName==='button');
+  cells.forEach((cell,i)=>cell.getBoundingClientRect=()=>({left:i*100,right:i*100+44,top:0,bottom:44}));
+  board.onpointerdown(pointer(20));board.onpointermove(pointer(220));board.onpointerup(pointer(220));
+  cells[0].onclick({detail:1});
+  assert.equal(writes.length,0);
+  assert.equal(board.children.find(node=>node.tagName==='svg').children.length,1);
+  assert.equal(cells[0].children[0].textContent,'1');assert.equal(cells[1].children[0].textContent,'2');
+  region.children.find(node=>node.textContent==='Valider le chemin').onclick();
+  assert.equal(writes.length,1);assert.equal(writes[0].operation,'answer');
+  assert.deepEqual(Array.from(writes[0].payload.response),['a','b']);
 });

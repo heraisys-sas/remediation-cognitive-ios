@@ -48,6 +48,62 @@ function immediateBoard(positions,className="mi-object-board") {
   return {board,cells};
 }
 
+
+function immediatePathLinks(area) {
+  const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");
+  svg.setAttribute("viewBox","0 0 100 100");svg.setAttribute("preserveAspectRatio","none");
+  svg.setAttribute("aria-hidden","true");svg.classList.add("immediate-path-links");area.append(svg);return svg;
+}
+function immediateDrawPath(svg,positions,path) {
+  svg.replaceChildren();
+  for(let i=1;i<path.length;i++){
+    const from=positions.find(p=>p.id===path[i-1]),to=positions.find(p=>p.id===path[i]);
+    if(!from||!to)continue;
+    const line=document.createElementNS("http://www.w3.org/2000/svg","line");
+    line.setAttribute("x1",from.x*100);line.setAttribute("y1",from.y*100);
+    line.setAttribute("x2",to.x*100);line.setAttribute("y2",to.y*100);
+    line.setAttribute("vector-effect","non-scaling-stroke");svg.append(line);
+  }
+}
+function immediatePathTouch(board,cells,positions,selected,limit,redraw) {
+  let gesture=null,suppressClick=false;
+  const hit=(x,y)=>cells.findIndex(cell=>{const r=cell.getBoundingClientRect();return x>=r.left&&x<=r.right&&y>=r.top&&y<=r.bottom;});
+  const add=index=>{if(index<0||selected.length>=limit||selected.includes(positions[index].id))return;selected.push(positions[index].id);redraw();};
+  const toggle=index=>{if(index<0)return;const id=positions[index].id,existing=selected.indexOf(id);if(existing>=0)selected.splice(existing,1);else if(selected.length<limit)selected.push(id);redraw();};
+  board.addEventListener("pointerdown",event=>{
+    if(busy||paused||event.isPrimary===false||event.button!==0||gesture)return;
+    const first=hit(event.clientX,event.clientY);if(first<0)return;
+    gesture={id:event.pointerId,first,x:event.clientX,y:event.clientY,dragging:false};suppressClick=true;
+    if(event.isTrusted)board.setPointerCapture?.(event.pointerId);event.preventDefault();
+  });
+  const move=event=>{
+    if(!gesture||gesture.id!==event.pointerId||busy||paused)return;
+    const steps=Math.max(1,Math.ceil(Math.hypot(event.clientX-gesture.x,event.clientY-gesture.y)/8));
+    const x=gesture.x,y=gesture.y;
+    for(let step=1;step<=steps;step++){
+      const index=hit(x+(event.clientX-x)*step/steps,y+(event.clientY-y)*step/steps);
+      if(index>=0&&index!==gesture.first&&!gesture.dragging){gesture.dragging=true;add(gesture.first);}
+      if(gesture.dragging)add(index);
+    }
+    gesture.x=event.clientX;gesture.y=event.clientY;
+  };
+  board.addEventListener("pointermove",event=>{if(gesture?.id!==event.pointerId)return;move(event);event.preventDefault();});
+  const end=(event,cancelled)=>{
+    if(!gesture||gesture.id!==event.pointerId)return;
+    if(!cancelled&&!busy&&!paused){move(event);if(!gesture.dragging)toggle(gesture.first);}
+    gesture=null;
+    if(board.hasPointerCapture?.(event.pointerId))board.releasePointerCapture(event.pointerId);
+  };
+  board.addEventListener("pointerup",event=>end(event,false));
+  board.addEventListener("pointercancel",event=>end(event,true));
+  board.addEventListener("lostpointercapture",()=>{gesture=null;});
+  cells.forEach((cell,index)=>cell.onclick=event=>{
+    // Le clic synthétisé après un geste ne doit pas retirer la dernière case.
+    if(event?.detail>0&&suppressClick){suppressClick=false;return;}
+    if(!busy&&!paused)toggle(index);
+  });
+}
+
 async function immediateCommand(operation, extra = {}) {
   if (!immediateView || !immediateView.immediate || busy) return;
   immediateStopTimer();
@@ -148,14 +204,14 @@ function immediateResponse(screen, region) {
     actions.append(immediateButton("Valider le code",submit,true));input.focus();
   } else if(kind==="chemin") {
     const positions=screen.stimulus?.positions||[],selected=[],{board,cells}=immediateBoard(positions,"immediate-path");
-    const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");svg.setAttribute("viewBox","0 0 100 100");svg.setAttribute("preserveAspectRatio","none");svg.setAttribute("aria-hidden","true");svg.classList.add("immediate-path-links");board.append(svg);region.append(board);
+    const svg=immediatePathLinks(board);board.classList.add("immediate-path-input");region.append(board);
     const status=immediateNode("p","","indice"),confirmation=immediateNode("div","","mi-controls");
-    const redraw=()=>{cells.forEach((cell,index)=>{const id=positions[index].id;const rank=selected.flatMap((value,i)=>value===id?[i+1]:[]);cell.textContent=rank.join(" · ");cell.setAttribute("aria-label",`${immediatePositionLabel(positions[index])}${rank.length?`; votre choix ${rank.join(", ")}`:""}`);});
-      svg.replaceChildren();for(let i=1;i<selected.length;i++){const from=positions.find(p=>p.id===selected[i-1]),to=positions.find(p=>p.id===selected[i]),line=document.createElementNS("http://www.w3.org/2000/svg","line");line.setAttribute("x1",from.x*100);line.setAttribute("y1",from.y*100);line.setAttribute("x2",to.x*100);line.setAttribute("y2",to.y*100);svg.append(line);}status.textContent=`${selected.length} choix sur ${screen.params.longueur}.`;clear.disabled=!selected.length;confirmation.replaceChildren();};
-    positions.forEach((position,index)=>{const cell=immediateButton("",()=>{const existing=selected.indexOf(position.id);if(existing>=0)selected.splice(existing,1);else if(selected.length<screen.params.longueur)selected.push(position.id);redraw();});cell.classList.add("immediate-path-cell");cell.style.left=`${position.x*100}%`;cell.style.top=`${position.y*100}%`;cell.setAttribute("aria-label",immediatePositionLabel(position));cell.addEventListener("keydown",event=>{const d={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1]}[event.key];if(!d)return;event.preventDefault();const options=positions.map((p,i)=>({p,i,dx:p.x-position.x,dy:p.y-position.y})).filter(v=>v.dx*d[0]+v.dy*d[1]>0).sort((a,b)=>(a.dx*a.dx+a.dy*a.dy)-(b.dx*b.dx+b.dy*b.dy));if(options.length)cells[options[0].i].focus();});cells[index].replaceWith(cell);cells[index]=cell;});
+    const redraw=()=>{cells.forEach((cell,index)=>{const id=positions[index].id;const rank=selected.flatMap((value,i)=>value===id?[i+1]:[]);cell.replaceChildren(immediateNode("span",rank.join(" · "),"immediate-path-rank"));cell.setAttribute("aria-pressed",String(rank.length>0));cell.setAttribute("aria-label",`${immediatePositionLabel(positions[index])}${rank.length?`; votre choix ${rank.join(", ")}`:""}`);});
+      immediateDrawPath(svg,positions,selected);status.textContent=`${selected.length} choix sur ${screen.params.longueur}.`;clear.disabled=!selected.length;confirmation.replaceChildren();};
+    positions.forEach((position,index)=>{const cell=immediateNode("button","","secondaryButton");cell.type="button";cell.classList.add("immediate-path-cell");cell.style.left=`${position.x*100}%`;cell.style.top=`${position.y*100}%`;cell.setAttribute("aria-label",immediatePositionLabel(position));cell.addEventListener("keydown",event=>{const d={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1]}[event.key];if(!d)return;event.preventDefault();const options=positions.map((p,i)=>({p,i,dx:p.x-position.x,dy:p.y-position.y})).filter(v=>v.dx*d[0]+v.dy*d[1]>0).sort((a,b)=>(a.dx*a.dx+a.dy*a.dy)-(b.dx*b.dx+b.dy*b.dy));if(options.length)cells[options[0].i].focus();});cells[index].replaceWith(cell);cells[index]=cell;});
     const clear=immediateButton("Vider les cases",()=>{selected.length=0;redraw();});
     const submit=()=>{if(selected.length<screen.params.longueur){confirmation.replaceChildren(immediateNode("p","Le chemin est incomplet."),immediateButton("Corriger",()=>confirmation.replaceChildren()),immediateButton("Confirmer cette réponse",()=>immediateCommand("answer",{response:[...selected],observations:{}}),true));}else immediateCommand("answer",{response:[...selected],observations:{}});};
-    region.append(status,immediateNode("p","Si tu hésites, suis ton intuition. Tu peux laisser le chemin incomplet.","indice"),clear,immediateButton("Valider le chemin",submit,true),confirmation);redraw();cells[0]?.focus();
+    region.append(status,immediateNode("p","Relie les cases avec le doigt, ou touche-les une à une dans l’ordre. Tu peux laisser le chemin incomplet.","indice"),clear,immediateButton("Valider le chemin",submit,true),confirmation);immediatePathTouch(board,cells,positions,selected,screen.params.longueur,redraw);redraw();cells[0]?.focus();
   } else if(kind==="changement") {
     const selected=new Set(),items=screen.stimulus?.apres||[],condition=screen.params?.condition;
     const {board,cells}=immediateBoard(items.map(item=>({x:(Number(item.position)+.5)/items.length,y:.5})));region.append(board);
@@ -178,8 +234,9 @@ function immediateRenderModel(screen, root, response = null) {
   const kind=screen.kind,s=screen.model||{},params=screen.params||{};
   if(kind==="code"){root.append(immediateNode("p",`Code présenté : ${(s.chiffres||[]).join(" ")}`));return;}
   if(kind==="chemin"){
-    const area=immediateNode("div","","immediate-path");
-    for(const position of s.positions||[]){const rank=(s.trajet||[]).flatMap((id,index)=>id===position.id?[index+1]:[]);const cell=immediateNode("div",rank.join(" · "),"immediate-path-cell");cell.style.left=`${position.x*100}%`;cell.style.top=`${position.y*100}%`;cell.setAttribute("aria-label",immediatePositionLabel(position)+(rank.length?`, choix ${rank.join(", ")}`:""));area.append(cell);}
+    const area=immediateNode("div","","immediate-path immediate-path-model");
+    for(const position of s.positions||[]){const rank=(s.trajet||[]).flatMap((id,index)=>id===position.id?[index+1]:[]);const cell=immediateNode("div","","immediate-path-cell");cell.append(immediateNode("span",rank.join(" · "),"immediate-path-rank"));cell.style.left=`${position.x*100}%`;cell.style.top=`${position.y*100}%`;cell.setAttribute("aria-label",immediatePositionLabel(position)+(rank.length?`, choix ${rank.join(", ")}`:""));area.append(cell);}
+    immediateDrawPath(immediatePathLinks(area),s.positions||[],s.trajet||[]);
     root.append(immediateNode("p","Le chemin présenté, avec son ordre :"),area);return;
   }
   if(kind==="changement"){
