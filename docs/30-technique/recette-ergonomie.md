@@ -50,7 +50,8 @@ retarde la suite. « Prendre le temps » permet de lire sans limite.
   iPhone Air réussi. Le pilote iPhone 17 échoue dans le scénario de test lors
   du passage de Contextes aux stratégies (bouton absent). Le test attend désormais
   la fin des écritures asynchrones avant ses commandes de clôture/démarrage ;
-  cette correction du scénario reste à confirmer sur le runner.
+  le scénario corrigé passe également les dix tests sur iPhone Air
+  (`.local/ergonomie-idle-device.xcresult`), et reste à confirmer sur le runner.
 
 ## Recette encore nécessaire
 
