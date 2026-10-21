@@ -310,6 +310,33 @@
     XCTAssertEqualObjects(result[@"passed"], @20);
     NSLog(@"PILOT_RESULT=%@", report);
 }
+- (void)testYPathVisibilityAndAutomaticFeedback {
+    UIWindowScene *scene = (UIWindowScene *)UIApplication.sharedApplication.connectedScenes.anyObject;
+    WKWebView *web = [scene.windows.firstObject.rootViewController valueForKey:@"web"];
+    XCTAssertNotNil(web); if (!web) return;
+    XCTestExpectation *done = [self expectationWithDescription:@"Chemin visible et suite automatique"];
+    NSString *script = @"for(let i=0;i<500&&(typeof state==='undefined'||busy||!homeReady);i++)await new Promise(r=>setTimeout(r,20));"
+        "stopFeedbackFlow();stopSpeechForTransition();const old=await request('view');if(old.started&&!old.finished)await request('finish',{session_id:old.session_id});"
+        "render(await request('start',{activity:'mi-chemin',parametres:{longueur:2}}));await immediateCommand('show');"
+        "const lit=document.querySelector('.immediate-path-cell.is-lit');const other=[...document.querySelectorAll('.immediate-path-cell')].find(n=>!n.classList.contains('is-lit'));"
+        "const visible=Boolean(lit&&other&&getComputedStyle(lit).backgroundColor!==getComputedStyle(other).backgroundColor);"
+        "for(let i=0;i<1000&&(busy||state.immediate.phase!=='reponse');i++)await new Promise(r=>setTimeout(r,20));"
+        "if(state.immediate.phase!=='reponse')throw Error('Le chemin ne passe pas au rappel');"
+        "await immediateCommand('answer',{response:null,observations:{absence_declaree:true}});"
+        "const hold=!document.getElementById('holdFeedback').hidden;const first=state.item_id;"
+        "for(let i=0;i<900&&(busy||state.item_id===first);i++)await new Promise(r=>setTimeout(r,20));"
+        "const automatic=state.item_id!==first&&state.immediate.phase==='pret';"
+        "const options=!document.getElementById('sessionOptions').hidden&&!document.getElementById('sessionOptions').open;"
+        "render(await request('finish',{session_id:state.session_id}));return {visible,hold,automatic,options};";
+    [web callAsyncJavaScript:script arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld completionHandler:^(id value, NSError *error) {
+        XCTAssertNil(error);
+        for (NSString *key in @[@"visible",@"hold",@"automatic",@"options"]) XCTAssertEqualObjects(value[key], @YES, @"%@", key);
+        NSLog(@"ERGONOMY_DEVICE_RESULT=%@", value);
+        [done fulfill];
+    }];
+    [self waitForExpectations:@[done] timeout:60];
+}
+
 - (void)testZComplementaryPathways {
     UIWindowScene *scene = (UIWindowScene *)UIApplication.sharedApplication.connectedScenes.anyObject;
     WKWebView *web = [scene.windows.firstObject.rootViewController valueForKey:@"web"];

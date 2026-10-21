@@ -11,11 +11,11 @@ function renderPqrstProtocol(view) {
   if (!view.protocol) return;
   if (pqrstDraftSession !== view.session_id) { pqrstDrafts.clear(); pqrstDraftSession = view.session_id; }
   const protocol = view.protocol;
-  const append = (tag, text) => {
-    const node = document.createElement(tag); node.textContent = text; zone.append(node); return node;
+  const append = (tag, text, parent = zone) => {
+    const node = document.createElement(tag); node.textContent = text; parent.append(node); return node;
   };
-  const button = (id, label, callback) => {
-    const node = append("button", label); node.type = "button"; node.id = id;
+  const button = (id, label, callback, parent = zone) => {
+    const node = append("button", label, parent); node.type = "button"; node.id = id;
     node.onclick = () => { if (!busy && !paused) return callback(); };
     return node;
   };
@@ -56,9 +56,12 @@ function renderPqrstProtocol(view) {
     valid = button("protocol-respond", protocol.response_label, () => protocolCommand("respond", value));
     button("protocol-absence", protocol.absence_label, () => protocolCommand("respond", null)).className = "secondaryButton";
     if (protocol.can_reread) {
-      reread = button("protocol-reread", protocol.reread_label, () => protocolCommand("reread", value));
+      const help=append("details", "");
+      help.id="protocol-help";
+      append("summary", "Une aide pour continuer", help);
+      reread = button("protocol-reread", protocol.reread_label, () => protocolCommand("reread", value), help);
       reread.className = "secondaryButton";
-      absentReread = button("protocol-reread-absence", protocol.reread_absence_label, () => protocolCommand("reread", null));
+      absentReread = button("protocol-reread-absence", protocol.reread_absence_label, () => protocolCommand("reread", null), help);
       absentReread.className = "secondaryButton";
     }
     update();

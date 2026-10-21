@@ -16,7 +16,7 @@ function immediateNode(tag, text, cls) {
   return node;
 }
 function immediateButton(label, callback, primary = false) {
-  const node = immediateNode("button", label, primary ? "bouton bouton-primaire" : "bouton bouton-secondaire");
+  const node = immediateNode("button", label, primary ? "" : "secondaryButton");
   node.type = "button"; node.addEventListener("click", callback); return node;
 }
 function immediateRegion() { return element("immediate"); }
@@ -106,9 +106,9 @@ async function immediateVisualStimulus(screen, region, generation = immediateGen
     });
     for (let index = 0; index < path.length; index++) {
       if (generation !== immediateGeneration || paused) return true;
-      cells.get(path[index])?.classList.add("is-stimulus");
+      cells.get(path[index])?.classList.add("is-lit");
       await immediateWait(screen.params?.signal_ms || 1500, generation);
-      cells.get(path[index])?.classList.remove("is-stimulus");
+      cells.get(path[index])?.classList.remove("is-lit");
       if (index < path.length - 1) await immediateWait(screen.params?.intervalle_ms || 500, generation);
     }
     if (generation === immediateGeneration) immediateTimerCommand(screen.example ? "example-end" : "exposure-ended", generation);
