@@ -309,6 +309,7 @@
                                                            options:0 error:nil];
     XCTAssertEqualObjects(result[@"platform"], @"ios");
     XCTAssertEqualObjects(result[@"passed"], @20);
+    XCTAssertEqualObjects(result[@"correction_cases"], @70);
     NSLog(@"PILOT_RESULT=%@", report);
 }
 - (void)testYPathVisibilityAndAutomaticFeedback {

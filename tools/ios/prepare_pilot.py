@@ -21,6 +21,7 @@ def main():
     shutil.copytree(ROOT / "vendor", app / "vendor", ignore=ignore)
     shutil.copytree(ROOT / "mobile", app / "mobile", ignore=ignore)
     shutil.copy2(ROOT / "UPSTREAM.json", app / "UPSTREAM.json")
+    shutil.copy2(ROOT / "tests/fixtures/correction-0ed9207.json", app / "correction-0ed9207.json")
     native = ROOT / "mobile/ios/pilot"
     shutil.copy2(native / "SceneDelegate.m", destination / "iOSTestbed/SceneDelegate.m")
     for name in ("SpeechController.h", "SpeechController.m", "SemanticBridge.h", "SemanticBridge.m"):

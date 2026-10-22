@@ -182,4 +182,24 @@ def run():
             call(memory_runtime, "finish", session_id=memory_session["session_id"])
             assert memory_runtime.store.lire_cartes("memoire--" + activity)
             passed += 1
-    return json.dumps({"platform": sys.platform, "passed": passed, "http_server": False})
+    # Même corpus source sur ordinateur et dans le Python embarqué iOS.
+    from backend.app.domain.contenu import ChargeurContenu
+    from backend.app.domain.correction import corriger, _sens_proche
+    root = Path(__file__).resolve().parents[1]
+    corpus_path = root / "correction-0ed9207.json"
+    if not corpus_path.exists():
+        corpus_path = root / "tests/fixtures/correction-0ed9207.json"
+    corpus = json.loads(corpus_path.read_text())
+    content = ChargeurContenu()
+    cases = [*corpus["cases"], *corpus["synthetic"]]
+    assert len(cases) == 70
+    for case in cases:
+        if "item" in case:
+            item = content.item(case["theme"], case["item"])
+            assert item["reponse"]["valeur"] == case["expected"]
+            actual = corriger(case["theme"], item, case["response"])
+        else:
+            actual = _sens_proche(case["response"], [case["expected"]])
+        assert actual == case["accepted"], case["id"]
+    return json.dumps({"platform": sys.platform, "passed": passed, "http_server": False,
+                       "correction_cases": len(cases)})
