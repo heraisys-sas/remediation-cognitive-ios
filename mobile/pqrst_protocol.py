@@ -10,8 +10,8 @@ FOLLOWING = {"P": "P-retour", "Q": "Q-retour", "4": "retour-S", "5.0": "5.1", "5
 
 
 def create(reprise=False):
-    return {"revision": 0, "phase": "pret", "paused": False, "target": None, "elapsed_ms": 0,
-            "answer": {"5": [], "_pqrst": {"version": "pqrst-sequence-v1", "phase": "pret",
+    return {"revision": 0, "phase": "P", "paused": False, "target": None, "elapsed_ms": 0,
+            "answer": {"5": [], "_pqrst": {"version": "pqrst-sequence-v1", "phase": "P",
                 "etapes_realisees": [], "statuts": {}, "tentatives": {}, "relectures": [],
                 "interruptions": {}, "modele_avant_test": False, "reprise_apres_correction": reprise}}}
 

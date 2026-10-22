@@ -95,7 +95,7 @@
         "await document.getElementById('reveal').onclick(); const revealed=await request('view');"
         "await idle();await document.getElementById('finish').onclick();"
         "document.getElementById('activity').value='pqrst-guide'; await idle();await document.getElementById('start').onclick();"
-        "await document.getElementById('protocol-continue').onclick();"
+        "if(state.protocol.phase!=='P')throw new Error('PQRST doit démarrer directement');"
         "document.getElementById('protocol-option-1').onclick(); await document.getElementById('protocol-respond').onclick();"
         "await document.getElementById('protocol-continue').onclick();"
         "let field=document.getElementById('protocol-answer'); field.value='Que retenir ?'; field.oninput();"
