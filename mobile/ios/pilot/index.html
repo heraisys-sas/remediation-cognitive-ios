@@ -75,10 +75,11 @@
     <h2 id="question" tabindex="-1"></h2>
     <div id="audioControls" hidden>
       <button id="listen" type="button" class="secondaryButton">Écouter</button>
-      <button id="dictate" type="button" class="secondaryButton" hidden>Dicter</button>
+      <span id="dictationDock"><button id="dictate" type="button" class="secondaryButton" hidden>Dicter</button></span>
       <p id="audioStatus" role="status" aria-live="polite"></p>
     </div>
     <section id="protocol" aria-label="PQRST guidé" hidden></section>
+    <div id="protocolDictation" hidden></div>
     <section id="contextes" aria-label="Retrouver le contexte" hidden></section>
     <p id="repriseSupport" hidden></p>
     <details id="method"><summary>Une méthode pour t’aider</summary><p id="methodText"></p></details>
@@ -98,7 +99,9 @@
     <section id="choices" aria-label="Choix de réponse" hidden></section>
     <form id="answerForm">
       <label for="answer">Ta réponse</label>
-      <input id="answer" type="text" autocomplete="off" inputmode="text" enterkeyhint="done">
+      <div id="answerEntry" class="answerEntry">
+        <input id="answer" type="text" autocomplete="off" inputmode="text" enterkeyhint="done">
+      </div>
       <button id="validate" type="submit">Valider</button>
     </form>
     <div id="feedback" role="status" aria-live="polite"></div>

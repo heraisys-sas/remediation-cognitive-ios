@@ -44,7 +44,7 @@ function render(view) {
   if(!activeSession)element("sessionOptions").open=false;
   renderImmediate(view);
   if(view.immediate){
-    for(const id of ["question","position","lexicalHelp","method","repriseSupport","answerForm","protocol","contextes","memory","choices","deduction","lexicalStrategy","functional","comparison","attention","feedback","next","audioControls"])element(id).hidden=true;
+    for(const id of ["question","position","lexicalHelp","method","repriseSupport","answerForm","protocol","protocolDictation","contextes","memory","choices","deduction","lexicalStrategy","functional","comparison","attention","feedback","next","audioControls"])element(id).hidden=true;
     element("resume").hidden=!paused||Boolean(view.finished);
     document.title=view.finished?"Remédiation":view.title;
     element("activityChoice").hidden=!view.finished;element("exercise").hidden=Boolean(view.finished)||paused;
