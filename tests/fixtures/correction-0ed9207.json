@@ -1,0 +1,634 @@
+{
+  "version": 1,
+  "scope": "Cas de régression/exploration construits à partir des 12 prises de message versionnées ; étiquettes de travail à relire, sans valeur clinique ni validation indépendante.",
+  "cases": [
+    {
+      "id": "c001",
+      "theme": "quotidien",
+      "item": "qo-1-message-01",
+      "expected": "14 h 30",
+      "response": "14 h 30",
+      "accepted": true,
+      "category": "identite"
+    },
+    {
+      "id": "c002",
+      "theme": "quotidien",
+      "item": "qo-1-message-02",
+      "expected": "deux",
+      "response": "deux",
+      "accepted": true,
+      "category": "identite"
+    },
+    {
+      "id": "c003",
+      "theme": "quotidien",
+      "item": "qo-1-message-03",
+      "expected": "le lundi matin",
+      "response": "le lundi matin",
+      "accepted": true,
+      "category": "identite"
+    },
+    {
+      "id": "c004",
+      "theme": "quotidien",
+      "item": "qo-1-message-04",
+      "expected": "la porte de la cave",
+      "response": "la porte de la cave",
+      "accepted": true,
+      "category": "identite"
+    },
+    {
+      "id": "c005",
+      "theme": "quotidien",
+      "item": "qo-1-message-05",
+      "expected": "16 h 42",
+      "response": "16 h 42",
+      "accepted": true,
+      "category": "identite"
+    },
+    {
+      "id": "c006",
+      "theme": "quotidien",
+      "item": "qo-1-message-06",
+      "expected": "chez la gardienne",
+      "response": "chez la gardienne",
+      "accepted": true,
+      "category": "identite"
+    },
+    {
+      "id": "c007",
+      "theme": "quotidien",
+      "item": "qo-1-message-07",
+      "expected": "vendredi",
+      "response": "vendredi",
+      "accepted": true,
+      "category": "identite"
+    },
+    {
+      "id": "c008",
+      "theme": "quotidien",
+      "item": "qo-1-message-08",
+      "expected": "jeudi soir",
+      "response": "jeudi soir",
+      "accepted": true,
+      "category": "identite"
+    },
+    {
+      "id": "c009",
+      "theme": "quotidien",
+      "item": "qo-1-message-09",
+      "expected": "mardi",
+      "response": "mardi",
+      "accepted": true,
+      "category": "identite"
+    },
+    {
+      "id": "c010",
+      "theme": "quotidien",
+      "item": "qo-1-message-10",
+      "expected": "4721",
+      "response": "4721",
+      "accepted": true,
+      "category": "identite"
+    },
+    {
+      "id": "c011",
+      "theme": "quotidien",
+      "item": "qo-1-message-11",
+      "expected": "dix",
+      "response": "dix",
+      "accepted": true,
+      "category": "identite"
+    },
+    {
+      "id": "c012",
+      "theme": "quotidien",
+      "item": "qo-1-message-12",
+      "expected": "le 3 du mois prochain",
+      "response": "le 3 du mois prochain",
+      "accepted": true,
+      "category": "identite"
+    },
+    {
+      "id": "c013",
+      "theme": "quotidien",
+      "item": "qo-1-message-01",
+      "expected": "14 h 30",
+      "response": "14 heures 30",
+      "accepted": true,
+      "category": "forme"
+    },
+    {
+      "id": "c014",
+      "theme": "quotidien",
+      "item": "qo-1-message-01",
+      "expected": "14 h 30",
+      "response": "15 h 30",
+      "accepted": false,
+      "category": "heure"
+    },
+    {
+      "id": "c015",
+      "theme": "quotidien",
+      "item": "qo-1-message-02",
+      "expected": "deux",
+      "response": "2",
+      "accepted": true,
+      "category": "forme"
+    },
+    {
+      "id": "c016",
+      "theme": "quotidien",
+      "item": "qo-1-message-02",
+      "expected": "deux",
+      "response": "trois",
+      "accepted": false,
+      "category": "nombre"
+    },
+    {
+      "id": "c017",
+      "theme": "quotidien",
+      "item": "qo-1-message-03",
+      "expected": "le lundi matin",
+      "response": "lundi matin",
+      "accepted": true,
+      "category": "forme"
+    },
+    {
+      "id": "c018",
+      "theme": "quotidien",
+      "item": "qo-1-message-03",
+      "expected": "le lundi matin",
+      "response": "lundi soir",
+      "accepted": false,
+      "category": "moment"
+    },
+    {
+      "id": "c019",
+      "theme": "quotidien",
+      "item": "qo-1-message-04",
+      "expected": "la porte de la cave",
+      "response": "la cave",
+      "accepted": true,
+      "category": "reformulation"
+    },
+    {
+      "id": "c020",
+      "theme": "quotidien",
+      "item": "qo-1-message-04",
+      "expected": "la porte de la cave",
+      "response": "la porte du garage",
+      "accepted": false,
+      "category": "lieu"
+    },
+    {
+      "id": "c021",
+      "theme": "quotidien",
+      "item": "qo-1-message-04",
+      "expected": "la porte de la cave",
+      "response": "pas la porte de la cave",
+      "accepted": false,
+      "category": "negation"
+    },
+    {
+      "id": "c022",
+      "theme": "quotidien",
+      "item": "qo-1-message-04",
+      "expected": "la porte de la cave",
+      "response": "la porte de la cave ne convient pas",
+      "accepted": false,
+      "category": "negation"
+    },
+    {
+      "id": "c023",
+      "theme": "quotidien",
+      "item": "qo-1-message-05",
+      "expected": "16 h 42",
+      "response": "16 heures 42",
+      "accepted": true,
+      "category": "forme"
+    },
+    {
+      "id": "c024",
+      "theme": "quotidien",
+      "item": "qo-1-message-05",
+      "expected": "16 h 42",
+      "response": "16 h 24",
+      "accepted": false,
+      "category": "heure"
+    },
+    {
+      "id": "c025",
+      "theme": "quotidien",
+      "item": "qo-1-message-06",
+      "expected": "chez la gardienne",
+      "response": "chez le gardien",
+      "accepted": false,
+      "category": "personne"
+    },
+    {
+      "id": "c026",
+      "theme": "quotidien",
+      "item": "qo-1-message-06",
+      "expected": "chez la gardienne",
+      "response": "chez la voisine",
+      "accepted": false,
+      "category": "personne"
+    },
+    {
+      "id": "c027",
+      "theme": "quotidien",
+      "item": "qo-1-message-07",
+      "expected": "vendredi",
+      "response": "vendredi comme prévu",
+      "accepted": true,
+      "category": "forme"
+    },
+    {
+      "id": "c028",
+      "theme": "quotidien",
+      "item": "qo-1-message-07",
+      "expected": "vendredi",
+      "response": "samedi",
+      "accepted": false,
+      "category": "jour"
+    },
+    {
+      "id": "c029",
+      "theme": "quotidien",
+      "item": "qo-1-message-08",
+      "expected": "jeudi soir",
+      "response": "jeudi soir comme prévu",
+      "accepted": true,
+      "category": "forme"
+    },
+    {
+      "id": "c030",
+      "theme": "quotidien",
+      "item": "qo-1-message-08",
+      "expected": "jeudi soir",
+      "response": "vendredi soir",
+      "accepted": false,
+      "category": "jour"
+    },
+    {
+      "id": "c031",
+      "theme": "quotidien",
+      "item": "qo-1-message-09",
+      "expected": "mardi",
+      "response": "mardi",
+      "accepted": true,
+      "category": "forme"
+    },
+    {
+      "id": "c032",
+      "theme": "quotidien",
+      "item": "qo-1-message-09",
+      "expected": "mardi",
+      "response": "mercredi",
+      "accepted": false,
+      "category": "jour"
+    },
+    {
+      "id": "c033",
+      "theme": "quotidien",
+      "item": "qo-1-message-10",
+      "expected": "4721",
+      "response": "4722",
+      "accepted": false,
+      "category": "code"
+    },
+    {
+      "id": "c034",
+      "theme": "quotidien",
+      "item": "qo-1-message-11",
+      "expected": "dix",
+      "response": "10",
+      "accepted": true,
+      "category": "forme"
+    },
+    {
+      "id": "c035",
+      "theme": "quotidien",
+      "item": "qo-1-message-11",
+      "expected": "dix",
+      "response": "onze",
+      "accepted": false,
+      "category": "nombre"
+    },
+    {
+      "id": "c036",
+      "theme": "quotidien",
+      "item": "qo-1-message-12",
+      "expected": "le 3 du mois prochain",
+      "response": "le 4 du mois prochain",
+      "accepted": false,
+      "category": "nombre"
+    },
+    {
+      "id": "c037",
+      "theme": "quotidien",
+      "item": "qo-1-message-06",
+      "expected": "chez la gardienne",
+      "response": "pas chez la gardienne",
+      "accepted": false,
+      "category": "negation"
+    },
+    {
+      "id": "c038",
+      "theme": "quotidien",
+      "item": "qo-1-message-06",
+      "expected": "chez la gardienne",
+      "response": "chez la gardienne mais pas chez elle",
+      "accepted": false,
+      "category": "negation"
+    },
+    {
+      "id": "c039",
+      "theme": "quotidien",
+      "item": "qo-1-message-04",
+      "expected": "la porte de la cave",
+      "response": "la cave ou le garage",
+      "accepted": false,
+      "category": "alternative"
+    },
+    {
+      "id": "c040",
+      "theme": "quotidien",
+      "item": "qo-1-message-04",
+      "expected": "la porte de la cave",
+      "response": "la porte du garage et de la cave",
+      "accepted": false,
+      "category": "ajout"
+    },
+    {
+      "id": "c041",
+      "theme": "quotidien",
+      "item": "qo-1-message-04",
+      "expected": "la porte de la cave",
+      "response": "la porte de la cave est fermée",
+      "accepted": false,
+      "category": "contradiction"
+    },
+    {
+      "id": "c042",
+      "theme": "quotidien",
+      "item": "qo-1-message-04",
+      "expected": "la porte de la cave",
+      "response": "C’est la cave.",
+      "accepted": true,
+      "category": "forme"
+    },
+    {
+      "id": "c043",
+      "theme": "quotidien",
+      "item": "qo-1-message-04",
+      "expected": "la porte de la cave",
+      "response": "la réponse est la porte de la cave",
+      "accepted": true,
+      "category": "forme"
+    },
+    {
+      "id": "c044",
+      "theme": "quotidien",
+      "item": "qo-1-message-04",
+      "expected": "la porte de la cave",
+      "response": "la porte de la cave comme prévu",
+      "accepted": true,
+      "category": "forme"
+    },
+    {
+      "id": "c045",
+      "theme": "quotidien",
+      "item": "qo-1-message-06",
+      "expected": "chez la gardienne",
+      "response": "le colis est chez la gardienne",
+      "accepted": true,
+      "category": "contexte"
+    },
+    {
+      "id": "c046",
+      "theme": "quotidien",
+      "item": "qo-1-message-06",
+      "expected": "chez la gardienne",
+      "response": "le colis se trouve chez la gardienne",
+      "accepted": true,
+      "category": "contexte"
+    },
+    {
+      "id": "c047",
+      "theme": "quotidien",
+      "item": "qo-1-message-06",
+      "expected": "chez la gardienne",
+      "response": "la gardienne",
+      "accepted": true,
+      "category": "forme"
+    },
+    {
+      "id": "c048",
+      "theme": "quotidien",
+      "item": "qo-1-message-06",
+      "expected": "chez la gardienne",
+      "response": "chez la gardienne, comme prévu.",
+      "accepted": true,
+      "category": "forme"
+    },
+    {
+      "id": "c049",
+      "theme": "quotidien",
+      "item": "qo-1-message-06",
+      "expected": "chez la gardienne",
+      "response": "chez la gardienne ou chez la voisine",
+      "accepted": false,
+      "category": "alternative"
+    },
+    {
+      "id": "c050",
+      "theme": "quotidien",
+      "item": "qo-1-message-06",
+      "expected": "chez la gardienne",
+      "response": "devant chez la gardienne",
+      "accepted": false,
+      "category": "relation"
+    },
+    {
+      "id": "c051",
+      "theme": "quotidien",
+      "item": "qo-1-message-06",
+      "expected": "chez la gardienne",
+      "response": "derrière chez la gardienne",
+      "accepted": false,
+      "category": "relation"
+    },
+    {
+      "id": "c052",
+      "theme": "quotidien",
+      "item": "qo-1-message-06",
+      "expected": "chez la gardienne",
+      "response": "le colis est chez la voisine",
+      "accepted": false,
+      "category": "personne"
+    },
+    {
+      "id": "c053",
+      "theme": "quotidien",
+      "item": "qo-1-message-06",
+      "expected": "chez la gardienne",
+      "response": "le colis est chez la gardienne mais pas chez elle",
+      "accepted": false,
+      "category": "negation"
+    },
+    {
+      "id": "c054",
+      "theme": "quotidien",
+      "item": "qo-1-message-06",
+      "expected": "chez la gardienne",
+      "response": "la gardienne est chez le colis",
+      "accepted": false,
+      "category": "ordre"
+    },
+    {
+      "id": "c055",
+      "theme": "quotidien",
+      "item": "qo-1-message-01",
+      "expected": "14 h 30",
+      "response": "le rendez-vous est à 14 heures 30",
+      "accepted": true,
+      "category": "contexte"
+    },
+    {
+      "id": "c056",
+      "theme": "quotidien",
+      "item": "qo-1-message-01",
+      "expected": "14 h 30",
+      "response": "14 h 30 ou 15 h 30",
+      "accepted": false,
+      "category": "alternative"
+    },
+    {
+      "id": "c057",
+      "theme": "quotidien",
+      "item": "qo-1-message-02",
+      "expected": "deux",
+      "response": "la réponse est 2",
+      "accepted": true,
+      "category": "contexte"
+    },
+    {
+      "id": "c058",
+      "theme": "quotidien",
+      "item": "qo-1-message-02",
+      "expected": "deux",
+      "response": "2 ou 3",
+      "accepted": false,
+      "category": "alternative"
+    },
+    {
+      "id": "c059",
+      "theme": "quotidien",
+      "item": "qo-1-message-03",
+      "expected": "le lundi matin",
+      "response": "la pharmacie rouvre le lundi matin",
+      "accepted": true,
+      "category": "contexte"
+    },
+    {
+      "id": "c060",
+      "theme": "quotidien",
+      "item": "qo-1-message-03",
+      "expected": "le lundi matin",
+      "response": "la pharmacie rouvre le lundi soir",
+      "accepted": false,
+      "category": "moment"
+    },
+    {
+      "id": "c061",
+      "theme": "quotidien",
+      "item": "qo-1-message-05",
+      "expected": "16 h 42",
+      "response": "le train de 16 heures 42",
+      "accepted": true,
+      "category": "contexte"
+    },
+    {
+      "id": "c062",
+      "theme": "quotidien",
+      "item": "qo-1-message-05",
+      "expected": "16 h 42",
+      "response": "le train de 16 heures 24",
+      "accepted": false,
+      "category": "heure"
+    },
+    {
+      "id": "c063",
+      "theme": "quotidien",
+      "item": "qo-1-message-08",
+      "expected": "jeudi soir",
+      "response": "la voiture sera prête jeudi soir",
+      "accepted": true,
+      "category": "contexte"
+    },
+    {
+      "id": "c064",
+      "theme": "quotidien",
+      "item": "qo-1-message-08",
+      "expected": "jeudi soir",
+      "response": "la voiture sera prête vendredi soir",
+      "accepted": false,
+      "category": "jour"
+    },
+    {
+      "id": "c065",
+      "theme": "quotidien",
+      "item": "qo-1-message-10",
+      "expected": "4721",
+      "response": "c’est 4721",
+      "accepted": true,
+      "category": "forme"
+    },
+    {
+      "id": "c066",
+      "theme": "quotidien",
+      "item": "qo-1-message-10",
+      "expected": "4721",
+      "response": "4721 ou 4722",
+      "accepted": false,
+      "category": "alternative"
+    },
+    {
+      "id": "c067",
+      "theme": "quotidien",
+      "item": "qo-1-message-11",
+      "expected": "dix",
+      "response": "dix comme prévu",
+      "accepted": true,
+      "category": "forme"
+    },
+    {
+      "id": "c068",
+      "theme": "quotidien",
+      "item": "qo-1-message-12",
+      "expected": "le 3 du mois prochain",
+      "response": "le 3 du mois prochain ou le 4",
+      "accepted": false,
+      "category": "alternative"
+    }
+  ],
+  "synthetic": [
+    {
+      "id": "inversion-personnes",
+      "expected": "Paul appelle Marie pour confirmer le rendez-vous",
+      "response": "Marie appelle Paul pour confirmer le rendez-vous",
+      "accepted": false,
+      "category": "ordre"
+    },
+    {
+      "id": "inversion-objets",
+      "expected": "le chat poursuit le chien dans le jardin",
+      "response": "le chien poursuit le chat dans le jardin",
+      "accepted": false,
+      "category": "ordre"
+    }
+  ]
+}

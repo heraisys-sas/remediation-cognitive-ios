@@ -8,6 +8,7 @@ from .normalization import (
 from .numeric import (
     _corriger_estimation, _corriger_numerique,
 )
+from .message import correct_message
 from .recall import (
     _corriger_mots_ordonnes, _corriger_rappel_libre,
 )
@@ -41,11 +42,7 @@ def corriger(theme: str, item: dict, reponse) -> bool:
         return _contient_reponse(reponse, attendue)
     if theme == "quotidien":
         if item.get("type") == "prise-message":
-            if _clef_reponse(reponse) == _clef_reponse(attendue):
-                return True
-            # Formulation proche (« la cave » pour « la porte de la cave ») — mais
-            # jamais à travers un jour, un moment ou un nombre (voir _sens_proche).
-            return _sens_proche(reponse, [attendue]) or _contient_reponse(reponse, attendue)
+            return correct_message(item, reponse)
         if item.get("type") == "estimation-temps":
             return _corriger_estimation(item, reponse)
         # etape-suivante et les familles à choix : la proposition choisie, en clair.
