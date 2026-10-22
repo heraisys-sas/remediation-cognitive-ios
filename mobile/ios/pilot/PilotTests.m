@@ -74,6 +74,7 @@
         "if(voiceCapabilities.speech){await speechRequest('speak',{token:'native-smoke',text:'Essai de lecture.'}); await new Promise(r=>setTimeout(r,300)); await speechRequest('stop-speaking');}"
         "for(let i=0;i<200&&document.getElementById('status').textContent;i++) await new Promise(r=>setTimeout(r,10));"
         "for(let i=0;i<500&&(!homeReady||busy);i++)await new Promise(r=>setTimeout(r,20));homeEnabled=homeCompetencies.map(item=>item.id);renderHomeCards();await document.getElementById('activity-card-calcul-mental').onclick();"
+        "if(document.getElementById('answer').inputMode!=='decimal'||document.getElementById('answer').type!=='text')throw Error('Clavier numérique incompatible');"
         "const r=await window.webkit.messageHandlers.runtime.postMessage({action:'view'});"
         "window.pauseForInterruption(); const paused=document.getElementById('exercise').hidden;"
         "document.getElementById('resume').onclick();"

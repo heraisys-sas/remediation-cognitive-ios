@@ -23,6 +23,7 @@ from mobile.immediate_runtime import ImmediateRuntime
 from mobile.lexical_strategy_runtime import LexicalStrategyRuntime, LEXICAL_STRATEGY_ACTIVITIES
 from mobile.functional_runtime import FunctionalRuntime, FUNCTIONAL_ACTIVITIES
 from mobile.semantic_adapter import install as install_semantics
+from mobile.input_hints import answer_inputmode
 from mobile import pqrst_protocol  # noqa: E402
 
 ACTIVITIES = {
@@ -395,6 +396,7 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime, Lexical
                 "choice_revision": self.ui.get("choice_revision", 0),
                 "retry_feedback": self.ui.get("retry_feedback"),
                 "hints_used": self.ui.get("hints", {}).get(queue[cursor], 0) if cursor < len(queue) else 0,
+                "inputmode": answer_inputmode(current.items_par_id[item["id"]]) if item else "text",
                 "item": item, "protocol": protocol, "lexical_strategy": strategy, "functional": functional,
                 "position": cursor + 1, "total": len(queue),
                 "feedback": self.ui["feedback"],

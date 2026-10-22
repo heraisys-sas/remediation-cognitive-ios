@@ -54,7 +54,7 @@ function renderFunctional(view) {
   const fields = screen.fields || [];
   for (const field of fields) {
     const label = append("label", ""); label.append(document.createTextNode(field.label));
-    const input = document.createElement("input"); input.type = "text"; input.maxLength = 500;
+    const input = document.createElement("input"); input.type = "text"; input.inputMode = field.inputmode || "text"; input.maxLength = 500;
     input.autocomplete = "off"; input.value = values[field.id] || ""; input.setAttribute("aria-label", field.label);
     input.oninput = () => {
       values[field.id] = input.value; functionalDrafts.set(key, values);
