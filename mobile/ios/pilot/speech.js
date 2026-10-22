@@ -54,6 +54,21 @@ function stopSpeechForTransition() {
   if(active) return speechRequest("cancel").catch(()=>{});
   return null;
 }
+function renderAudioButton(button, label, kind, active, compact) {
+  button.textContent = compact ? "" : label;
+  button.className = compact ? "secondaryButton audioIconButton" : "secondaryButton";
+  button.setAttribute("aria-label", label);
+  button.setAttribute("title", label);
+  button.setAttribute("aria-pressed", String(Boolean(active)));
+  if (!compact) return;
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", "0 0 24 24"); svg.setAttribute("aria-hidden", "true");
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("d", active ? "M6 6h12v12H6Z" : kind === "microphone"
+    ? "M9 5a3 3 0 0 1 6 0v7a3 3 0 0 1-6 0V5ZM6 11v1a6 6 0 0 0 12 0v-1M12 18v4M8 22h8"
+    : "M11 4 6 8H3v8h3l5 4V4ZM15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14");
+  svg.append(path); button.append(svg);
+}
 function renderSpeechControls(view) {
   const key=audioContextKey(view);
   if(speechViewKey!==key) { element("audioStatus").textContent=""; speechViewKey=key; }
@@ -61,10 +76,14 @@ function renderSpeechControls(view) {
   if(dictationDraft&&(dictationDraft.key!==audioContextKey(view)||dictationDraft.field!==target)) stopSpeechForTransition();
   element("audioControls").hidden=!view?.item||Boolean(view.finished)||paused||!speechCapabilities;
   element("listen").hidden=!text||!speechCapabilities?.speech;
-  element("listen").textContent=speechToken?"Arrêter la lecture":"Écouter";
+  const compact = view?.activity === "calcul-mental";
+  renderAudioButton(element("listen"), speechToken?"Arrêter la lecture":compact?"Écouter la question":"Écouter", "speaker", speechToken, compact);
   element("listen").disabled=audioBusy;
   element("dictate").hidden=!target||!speechCapabilities?.on_device_dictation;
-  element("dictate").textContent=autoLexical?"Répondre au clavier":dictationDraft?"Arrêter la dictée":"Dicter";
+  renderAudioButton(element("dictate"), autoLexical?"Répondre au clavier":dictationDraft?"Arrêter la dictée":"Dicter", "microphone", dictationDraft, compact);
+  const inlineMic = compact && !element("dictate").hidden;
+  element("answerEntry").className = inlineMic ? "answerEntry withMicrophone" : "answerEntry";
+  (inlineMic ? element("answerEntry") : element("audioControls")).append(element("dictate"));
   element("dictate").disabled=audioBusy||dictationDraft?.status==="finishing";
   // Recalculer le verrou après perform : son instantané peut dater de la capture.
   element("validate").disabled=busy||Boolean(dictationDraft);

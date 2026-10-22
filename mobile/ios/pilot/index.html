@@ -98,7 +98,9 @@
     <section id="choices" aria-label="Choix de réponse" hidden></section>
     <form id="answerForm">
       <label for="answer">Ta réponse</label>
-      <input id="answer" type="text" autocomplete="off" inputmode="text" enterkeyhint="done">
+      <div id="answerEntry" class="answerEntry">
+        <input id="answer" type="text" autocomplete="off" inputmode="text" enterkeyhint="done">
+      </div>
       <button id="validate" type="submit">Valider</button>
     </form>
     <div id="feedback" role="status" aria-live="polite"></div>
