@@ -1,4 +1,5 @@
 from __future__ import annotations
+from collections import Counter
 import re
 from .. import capacites
 from .normalization import (
@@ -152,6 +153,8 @@ def _contient_reponse(reponse, attendue, mots_max: int = 12) -> bool:
         return False
     if _jetons_critiques(reponse) != _jetons_critiques(attendue):
         return False
+    if _negative(reponse) != _negative(attendue):
+        return False
     if clef == donnees:
         return True
     for variante in (clef, f"{clef}s" if not clef.endswith("s") else clef[:-1]):
@@ -210,6 +213,11 @@ def _jetons_critiques(texte) -> frozenset[str]:
             jalons.add(jeton)
     return frozenset(jalons)
 
+def _negative(value) -> bool:
+    return bool({"pas", "jamais", "sans", "aucun", "aucune", "non"}
+                & set(re.findall(r"[0-9a-z]+", _clef_texte(value))))
+
+
 def _sens_proche(reponse, attendues) -> bool:
     """Le poste reconnaît-il la réponse comme le même **sens** (dernier recours) ?
 
@@ -223,12 +231,16 @@ def _sens_proche(reponse, attendues) -> bool:
         return False
     jalons = _jetons_critiques(reponse)
     # Une proximité vectorielle ne distingue pas toujours une phrase de sa négation.
-    negations = {"pas", "jamais", "sans", "aucun", "aucune", "non"}
-    polarite = lambda valeur: bool(negations & set(_clef_texte(valeur).split()))
     for cible in attendues:
         if not cible:
             continue
-        if _jetons_critiques(cible) != jalons or polarite(cible) != polarite(reponse):
+        if _jetons_critiques(cible) != jalons or _negative(cible) != _negative(reponse):
+            continue
+        # Même sac de mots ne prouve pas mêmes rôles : « Paul appelle Marie »
+        # et son inverse atteignent 0,99 avec les empreintes Apple (ADR-051).
+        given = re.findall(r"[0-9a-z]+", _clef_texte(reponse))
+        expected = re.findall(r"[0-9a-z]+", _clef_texte(cible))
+        if given != expected and Counter(given) == Counter(expected):
             continue
         if capacites.proche(str(reponse or ""), [str(cible)]):
             return True

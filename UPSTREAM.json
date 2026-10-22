@@ -36,13 +36,13 @@
     "vendor/remediation/backend/app/domain/contenu.py": "46babd72ace677dad7c1a9b82e0a53b60e509a827e0f6ebf1c7ac8137aaba4bf",
     "vendor/remediation/backend/app/domain/correction/__init__.py": "c3e9aa6f65262837be9e5b8962e56427e8d25f5538031154266ba32eabe2fb6b",
     "vendor/remediation/backend/app/domain/correction/deduction.py": "0837e765723747085730fbd0df16eb70d5dc0e35c1f30775f18e5e2d87f7aa98",
-    "vendor/remediation/backend/app/domain/correction/dispatch.py": "a06ec3d8c98f2dfece496e7098cac788b38fc13c0fc7175d7ea34d9fd52423cb",
+    "vendor/remediation/backend/app/domain/correction/dispatch.py": "20886e814092a3925058e2f10df3ef7cc33bc0fb75ac0a2d330230b12b7dffe5",
     "vendor/remediation/backend/app/domain/correction/normalization.py": "e8871136ce2e3d2040c344da0db47bfbb0a56792d5c5d56ac8d70ec59e31c4df",
     "vendor/remediation/backend/app/domain/correction/numeric.py": "bf31ced590cea2d0434421b43000606d570106990cd360f4030041d373a370b0",
     "vendor/remediation/backend/app/domain/correction/recall.py": "61506a0e3babf7b684e9ca308244abf489fbb578a0a066f90202cfe8380d1d71",
     "vendor/remediation/backend/app/domain/correction/result.py": "750205b999105d612d436971400238647f0c86cec30cf0517261061d3d433ca2",
     "vendor/remediation/backend/app/domain/correction/sequence.py": "1cdda2760657f91d5b6ebf1a699955ff3179764a564f79615fed67e88bf30d34",
-    "vendor/remediation/backend/app/domain/correction/text.py": "90e939c64277b5889d72c9448c40fb0a8e2017b3cf6cd071dd943074e0fe9426",
+    "vendor/remediation/backend/app/domain/correction/text.py": "f2aadc866e9fdfc59591c03620240e6ae5ff47ab350dccb0ed9543b6260d1dae",
     "vendor/remediation/backend/app/domain/dictee_locale.py": "f023b256d897247ec7cd57fda7f8c7e2fc30a5933b2e07e0ea9861ce18590c7f",
     "vendor/remediation/backend/app/domain/dosage.py": "9e613b4fdcdf41358f226874b887307f811b1876bac546bc33e0e7555834a5ee",
     "vendor/remediation/backend/app/domain/fatigue.py": "dce12bf86d67c5981e472826be47315e1a6676c698394a15263d530635009a42",
@@ -250,10 +250,22 @@
     "vendor/remediation/frontend/images/contextes/source-10-v1-640.webp": "1949921622bb1792eb90754d3d468a5d367c706b5ee4e84b3a9c369e58a7af83",
     "vendor/remediation/frontend/images/contextes/source-10-v1-960.webp": "7f63493fd1d81f93bafc850f8ae496314902233505a2366c98b0183b4cb4b3e3",
     "vendor/remediation/frontend/src/dictee-auto.js": "a68c6c067bfe914c22d93ea884920370da103a40326cb6a89e9a8445896876c7",
-    "vendor/remediation/frontend/src/exercises/deduction.js": "18e140aa19d56e8883b18f8b931d4be274a77956d3cb27845f4cadbf09a93ada"
+    "vendor/remediation/frontend/src/exercises/deduction.js": "18e140aa19d56e8883b18f8b931d4be274a77956d3cb27845f4cadbf09a93ada",
+    "vendor/remediation/backend/app/domain/correction/message.py": "c1077f9a38ad058b2d83b2a8cacc5936b3c7ee946c1799bd2788885237d1ef5d"
   },
   "adaptations": {
     "vendor/remediation/backend/app/api/entrainement/__init__.py": "Point d’entrée local sans route FastAPI ; service.py inchangé.",
     "vendor/remediation/backend/app/api/memoires_immediates/__init__.py": "Point d’entrée local sans route FastAPI ; protocoles.py inchangé."
-  }
+  },
+  "partial_imports": [
+    {
+      "commit": "0ed9207e3dc7d13f03b0e283d34d1d627ab72fdd",
+      "paths": [
+        "vendor/remediation/backend/app/domain/correction/text.py",
+        "vendor/remediation/backend/app/domain/correction/dispatch.py",
+        "vendor/remediation/backend/app/domain/correction/message.py"
+      ],
+      "purpose": "Correcteurs négation, permutation et faits des prises de message ; autres fichiers au commit de base."
+    }
+  ]
 }

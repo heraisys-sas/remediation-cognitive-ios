@@ -30,6 +30,10 @@ et les empreintes du noyau ainsi que du service et des contenus importés.
 La licence BSD originale
 est conservée dans `LICENSE`.
 
+Un [portage partiel des correcteurs](docs/30-technique/parite-correcteurs.md)
+reprend trois fichiers du commit `0ed9207`, avec origine et empreintes séparées
+dans `UPSTREAM.json` ; les autres composants conservent leur référence de base.
+
 Les évolutions du dépôt source sont examinées avant portage : règles de correction,
 FSRS, protocoles, identifiants de contenu et formats d'historiques doivent rester
 compatibles. Pas de synchronisation aveugle ou de fusion automatique.
