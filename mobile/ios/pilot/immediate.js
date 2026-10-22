@@ -256,6 +256,7 @@ function immediateRenderFeedback(screen,region){
   if(c.positions_exactes!=null)region.append(immediateNode("p",`${c.positions_exactes} positions exactes sur ${c.longueur} ; ${c.elements_retrouves} éléments retrouvés, indépendamment de l’ordre.`));
   if(c.associations_exactes!=null)region.append(immediateNode("p",`${c.associations_exactes} association${c.associations_exactes>1?"s":""} exacte${c.associations_exactes>1?"s":""} sur ${c.nombre} ; ${c.associations_erronees} placement${c.associations_erronees>1?"s":""} différent${c.associations_erronees>1?"s":""} ; ${c.non_places} objet${c.non_places>1?"s":""} non placé${c.non_places>1?"s":""}.`));
   if(c.type){const labels={detection:"Changement détecté",changement_manque:"Changement non détecté",fausse_alerte:"Différence déclarée sur des compositions identiques",rejet_correct:"Compositions identiques reconnues"};region.append(immediateNode("p",labels[c.type]||"Réponse enregistrée."));if(c.localisation_exacte!=null)region.append(immediateNode("p",c.localisation_exacte?"Localisation exacte.":"Localisation différente du modèle."));}
+  if(c.exacte===true){const mark=immediateNode("span",null,"successMark");mark.setAttribute("aria-hidden","true");region.append(mark);}
   immediateRenderModel(screen,region,record.response);
   if(screen.assisted)region.append(immediateNode("p","Essai après réexposition et correction. La première réponse est conservée."));
 }

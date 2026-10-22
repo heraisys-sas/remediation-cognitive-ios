@@ -91,3 +91,8 @@ button:not(.secondaryButton):not(.protocolChoice):not(.activityCard):not(.mi-pat
   margin: 16px auto 12px;
   text-align: center;
 }
+
+/* Confirmation discrète ; le texte reste le signal accessible de réussite. */
+.successMark { display: inline-block; width: 10px; height: 18px; margin: 0 10px 2px 14px; border: solid #8fdfad; border-width: 0 3px 3px 0; transform: rotate(45deg); vertical-align: middle; animation: successTrace 360ms ease-out both; }
+@keyframes successTrace { from { clip-path: inset(0 0 100% 0); opacity: .3; } to { clip-path: inset(0); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .successMark { animation: none; } }
