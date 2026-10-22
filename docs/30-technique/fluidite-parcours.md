@@ -12,3 +12,5 @@ Examen du 22 octobre 2026 : un parcours sans présentation à durée imposée en
 Les validations de réponse et clôtures finales ne sont pas assimilées à des départs ; elles conservent leurs garanties de première réponse et de sauvegarde. Les retours automatiques existants restent en place.
 
 Validation ordinateur : 224 tests Python réussis et sonde locale avec 20 contrôles et 70 cas de correction. Le scénario WebKit exige le départ PQRST en phase P. Les sources et correcteurs importés restent inchangés.
+
+Recette sur iPhone Air : 10 tests XCTest réussis, zéro échec en 59,989 secondes ; sonde Python iOS 20 contrôles et 70 cas de correction. Le scénario WebKit vérifie directement la phase P sans Commencer. Preuves locales ignorées : .local/fluidite-device.log et .local/fluidite-device.xcresult.
