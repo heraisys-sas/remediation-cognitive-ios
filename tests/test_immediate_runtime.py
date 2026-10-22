@@ -41,7 +41,13 @@ def test_each_path_completes_four_fixed_trials_without_fsrs(kind):
     assert len(set(changed)) == 2
 
     for index in range(4):
-        view = step(runtime, view, "show")
+        if kind == "chemin" and index:
+            assert view["immediate"]["phase"] == "exposition"
+            assert "instruction" not in view["immediate"]
+            assert view["immediate"]["remaining_ms"] == runtime._immediate_exposure(runtime.ui["immediate"])
+        else:
+            assert view["immediate"]["phase"] == "pret"
+            view = step(runtime, view, "show")
         assert view["immediate"]["phase"] == "exposition"
         view = step(runtime, view, "exposure-ended")
         assert view["immediate"]["phase"] == "masque"
