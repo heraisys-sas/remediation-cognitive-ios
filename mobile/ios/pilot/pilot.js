@@ -100,7 +100,7 @@ function render(view) {
   element("hint").hidden = (view.hints_used || 0) >= hints.length;
   element("answerForm").hidden = Boolean(view.memory && view.memory.phase !== "question") || Boolean(view.memory?.paused) || Boolean(view.contextes) || isPqrst || isChoiceActivity(view) || Boolean(view.feedback) || Boolean(view.lexical_strategy||view.functional||view.comparison||view.attention) || view.activity==="deduction" || Boolean(view.memory?.options?.length);
   element("next").hidden = Boolean(view.contextes) || !view.feedback;
-  element("feedback").textContent = view.feedback ? `${view.feedback.feedback || ""}${view.feedback.attendue != null ? " Réponse : " + view.feedback.attendue + "." : ""}` : "";
+  element("feedback").textContent = view.feedback ? `${view.feedback.feedback === "Bien joué, réponse correcte !" ? "Réponse correcte !" : view.feedback.feedback || ""}${view.feedback.attendue != null ? " Réponse : " + view.feedback.attendue + "." : ""}` : "";
   if (!view.feedback && view.retry_feedback) element("feedback").textContent = view.retry_feedback;
   if (isPqrst && view.feedback) element("feedback").textContent = pqrstFeedbackLines(view.feedback).join("\n\n");
   if (view.feedback?.correcte === true) {
