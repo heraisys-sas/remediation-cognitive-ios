@@ -103,6 +103,10 @@ function render(view) {
   element("feedback").textContent = view.feedback ? `${view.feedback.feedback || ""}${view.feedback.attendue != null ? " Réponse : " + view.feedback.attendue + "." : ""}` : "";
   if (!view.feedback && view.retry_feedback) element("feedback").textContent = view.retry_feedback;
   if (isPqrst && view.feedback) element("feedback").textContent = pqrstFeedbackLines(view.feedback).join("\n\n");
+  if (view.feedback?.correcte === true) {
+    const mark = document.createElement("span"); mark.className = "successMark";
+    mark.setAttribute("aria-hidden", "true"); element("feedback").append(mark);
+  }
   renderSpeechControls(view);
 }
 element("start").onclick = () => perform(async () => {
