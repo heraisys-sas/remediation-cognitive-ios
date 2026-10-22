@@ -104,6 +104,21 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime, Lexical
 
     def call(self, request_json: str) -> str:
         request = json.loads(request_json)
+        if request.get("action") == "verify-answer-dictation":
+            # Prévisualisation sans réponse révélée, essai ni écriture historique.
+            from backend.app.domain.correction import corriger
+            with self.lock:
+                self._restore()
+                current = self._current_item(request)
+                text = request.get("transcription")
+                blocked = any(current.get(key) for key in ("feedback", "protocol", "contextes", "immediate",
+                              "lexical_strategy", "functional", "comparison", "attention"))
+                if (blocked or current.get("memory", {}).get("paused") or
+                        (current.get("memory") and current["memory"]["phase"] != "question") or
+                        not isinstance(text, str) or not text.strip() or len(text) > 2000):
+                    raise ValueError("Vérification automatique indisponible à cette étape")
+                item = self._session().items_par_id[current["item"]["id"]]
+                return json.dumps({"acceptee": bool(corriger(self._session().theme, item, text))})
         if request.get("action") == "verify-dictation":
             with self.lock:
                 self._restore()

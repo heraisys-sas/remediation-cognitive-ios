@@ -881,3 +881,31 @@ test('le geste prépare une réponse bornée sans enregistrer avant Valider le c
   assert.equal(writes.length,1);assert.equal(writes[0].operation,'answer');
   assert.deepEqual(Array.from(writes[0].payload.response),['a','b']);
 });
+
+
+for(const accepted of [true,false]) test(`dictée stable : ${accepted?'coupe le micro avant validation':'reste modifiable sans valider une erreur'}`,async()=>{
+  const calls=[];let current={started:true,activity:'calcul-mental',session_id:'s',position:1,item:{id:'i',contenu:{enonce:'2 + 2 ?'}}};
+  const {get,render,context}=await page({reply:async p=>{calls.push(p);if(p.action==='verify-answer-dictation')return {acceptee:accepted};if(p.action==='answer')current={...current,feedback:{correcte:true,feedback:'Réponse correcte !'}};return current;},speechReply:async p=>{calls.push(p);return p.operation==='capabilities'?{speech:true,on_device_dictation:true}:{ok:true};}});
+  render(current);await get('dictate').onclick();
+  const token=calls.find(p=>p.operation==='start-dictation').token;
+  context.window.nativeSpeechEvent({kind:'dictation',token,status:'partial',text:'quatre'});
+  await new Promise(r=>setTimeout(r,850));
+  const stop=calls.findIndex(p=>p.operation==='cancel'),answer=calls.findIndex(p=>p.action==='answer');
+  if(accepted){assert.ok(stop>=0&&answer>stop);assert.equal(get('answer').readOnly,false);}
+  else{assert.equal(answer,-1);assert.equal(stop,-1);assert.equal(get('answer').value,'quatre');context.stopSpeechForTransition();}
+});
+
+test('aucune validation manuelle avant la confirmation native d’arrêt du micro',async()=>{
+  const calls=[];let release;
+  let current={started:true,activity:'calcul-mental',session_id:'s',position:1,item:{id:'i',contenu:{enonce:'2 + 2 ?'}}};
+  const {get,render,context}=await page({reply:async p=>{calls.push(p);if(p.action==='verify-answer-dictation')return {acceptee:true};if(p.action==='answer')current={...current,feedback:{correcte:true}};return current;},speechReply:async p=>{calls.push(p);if(p.operation==='capabilities')return {speech:true,on_device_dictation:true};if(p.operation==='cancel')return new Promise(resolve=>{release=resolve;});return {ok:true};}});
+  render(current);await get('dictate').onclick();
+  const token=calls.find(p=>p.operation==='start-dictation').token;
+  context.window.nativeSpeechEvent({kind:'dictation',token,status:'partial',text:'quatre'});
+  await new Promise(r=>setTimeout(r,800));
+  assert.equal(get('validate').disabled,true);
+  get('answerForm').onsubmit({preventDefault(){}});
+  assert.ok(!calls.some(p=>p.action==='answer'));
+  release({ok:true});await new Promise(r=>setTimeout(r,30));
+  assert.equal(calls.filter(p=>p.action==='answer').length,1);
+});

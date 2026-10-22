@@ -1,5 +1,7 @@
 "use strict";
 let speechCapabilities=null, speechToken=null, dictationDraft=null, audioBusy=false, audioSerial=0, speechViewKey=null, audioGeneration=0;
+let dictationVerifyTimer=null;
+function cancelDictationVerification(){clearTimeout(dictationVerifyTimer);dictationVerifyTimer=null;}
 function audioContextKey(view) {
   return JSON.stringify([view?.session_id,view?.item?.id,view?.position,view?.protocol?.phase,view?.protocol?.revision,
     view?.memory?.phase,view?.memory?.revision,Boolean(view?.feedback),view?.hints_used]);
@@ -43,6 +45,7 @@ function unlockDictation() {
   dictationDraft=null;
 }
 function stopSpeechForTransition() {
+  cancelDictationVerification();
   stopMemoryAudio();
   abortAutoLexical();
   notifyAutoReading(false);
@@ -88,7 +91,7 @@ function renderSpeechControls(view) {
   (inlineMic ? element("answerEntry") : protocolMic ? element("protocolDictation") : element("dictationDock")).append(element("dictate"));
   element("dictate").disabled=audioBusy||dictationDraft?.status==="finishing";
   // Recalculer le verrou après perform : son instantané peut dater de la capture.
-  element("validate").disabled=busy||Boolean(dictationDraft);
+  element("validate").disabled=busy||audioBusy||Boolean(dictationDraft);
   if(!busy&&!dictationDraft&&view?.protocol?.input_label&&target&&typeof target.oninput==="function") target.oninput();
   if(dictationDraft) {
     dictationDraft.field.readOnly=true;
@@ -118,6 +121,7 @@ async function listenVisibleText() {
   });
 }
 async function dictateAnswer() {
+  cancelDictationVerification();
   if(autoLexical){autoLexical.manuel();return;}
   return audioOperation(async()=>{
     if(dictationDraft) {dictationDraft.status="finishing";await speechRequest("stop-dictation");return;}
@@ -131,6 +135,35 @@ async function dictateAnswer() {
     element("audioStatus").textContent="Préparation de la dictée…";
     await speechRequest("start-dictation",{token});
   });
+}
+function verifyStableDictation(draft) {
+  cancelDictationVerification();
+  if(state?.protocol || state?.activity==="acces-lexical" || draft.field!==element("answer"))return;
+  const text=draft.field.value, key=draft.key, generation=audioGeneration;
+  const current=()=>!paused&&!busy&&audioGeneration===generation&&!state?.feedback&&audioContextKey(state)===key&&
+    draft.field===dictationTarget(state)&&draft.field.value===text&&
+    (!dictationDraft||dictationDraft===draft)&&["partial","finished"].includes(draft.status);
+  dictationVerifyTimer=setTimeout(async()=>{
+    dictationVerifyTimer=null;
+    if(!current())return;
+    try {
+      const result=await request("verify-answer-dictation",{session_id:state.session_id,item_id:state.item.id,transcription:text});
+      if(!result.acceptee||!current())return;
+      // Invalider les événements tardifs avant de fermer réellement le micro.
+      draft.status="accepted";dictationDraft=null;draft.field.readOnly=false;
+      audioBusy=true;renderSpeechControls(state);
+      try {await speechRequest("cancel");} catch(error) {
+        if(audioGeneration===generation&&audioContextKey(state)===key){dictationDraft=draft;draft.status="partial";draft.field.readOnly=true;}
+        element("audioStatus").textContent="Arrête la dictée avant de valider.";
+        return;
+      } finally {audioBusy=false;renderSpeechControls(state);}
+      if(paused||busy||audioGeneration!==generation||audioContextKey(state)!==key||draft.field.value!==text)return;
+      await element("answerForm").onsubmit({preventDefault(){}});
+    } catch(error) {
+      // Un aperçu indisponible laisse la saisie et la validation manuelles.
+    }
+  },700);
+  dictationVerifyTimer?.unref?.();
 }
 window.nativeSpeechEvent=event=>{
   if(window.immediateNativeSpeechEvent?.(event))return;
@@ -155,6 +188,8 @@ window.nativeSpeechEvent=event=>{
   element("audioStatus").textContent=messages[event.status]||"";
   if(!["listening","partial","finishing"].includes(event.status)) unlockDictation();
   renderSpeechControls(state);
+  if(["partial","finished"].includes(event.status)&&draft.field.value.trim())verifyStableDictation(draft);
+  else cancelDictationVerification();
 };
 async function initializeSpeech() {
   try {speechCapabilities=await speechRequest("capabilities");}

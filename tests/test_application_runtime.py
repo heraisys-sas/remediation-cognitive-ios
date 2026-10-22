@@ -161,3 +161,19 @@ def test_dictation_preview_does_not_write_or_count_attempts(tmp_path):
     assert call(runtime, "answer", **args, answer=expected, elapsed_ms=1200)["correcte"] is True
     with pytest.raises(ValueError):
         call(runtime, "verify-dictation", **args, transcription=expected)
+
+
+def test_numeric_dictation_preview_has_no_attempt_or_storage_effect(tmp_path):
+    runtime = ApplicationRuntime(str(tmp_path))
+    session = call(runtime, "start", activity="calcul-mental")
+    item_id = session["items"][0]["id"]
+    expected = str(runtime._session().items_par_id[item_id]["reponse"]["valeur"])
+    before = {str(p.relative_to(tmp_path)): p.read_bytes() for p in tmp_path.rglob("*") if p.is_file()}
+    args = dict(session_id=session["session_id"], item_id=item_id)
+    assert not call(runtime, "verify-answer-dictation", **args, transcription="incomplet")["acceptee"]
+    assert call(runtime, "verify-answer-dictation", **args, transcription=expected) == {"acceptee": True}
+    assert before == {str(p.relative_to(tmp_path)): p.read_bytes() for p in tmp_path.rglob("*") if p.is_file()}
+    assert call(runtime, "view")["feedback"] is None
+    call(runtime, "answer", **args, answer=expected, elapsed_ms=1000)
+    with pytest.raises(ValueError):
+        call(runtime, "verify-answer-dictation", **args, transcription=expected)
