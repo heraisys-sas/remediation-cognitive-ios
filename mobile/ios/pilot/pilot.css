@@ -81,3 +81,13 @@ textarea:focus-visible { outline: 3px solid #b2e2ef; outline-offset: 3px; }
 @media (min-width: 640px) { .mi-model-comparison { grid-template-columns: 1fr 1fr; } }
 
 .immediate-path-input .immediate-path-cell, .immediate-path-model .immediate-path-cell { z-index: 3; background: transparent; }
+
+/* Titres courts centrés ; consignes, documents et réponses gardent leur alignement. */
+h1, h2, h3 { text-align: center; }
+/* Actions principales accessibles des deux côtés, sans déplacer les choix ou les cases. */
+button:not(.secondaryButton):not(.protocolChoice):not(.activityCard):not(.mi-path-cell):not(.mi-visual-cell):not(.mi-object-slot):not(.immediate-path-cell):not(.deductionGrid button):not(.deductionPalette button) {
+  display: block;
+  width: min(100%, 22rem);
+  margin: 16px auto 12px;
+  text-align: center;
+}
