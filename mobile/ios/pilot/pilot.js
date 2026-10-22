@@ -133,7 +133,7 @@ element("reveal").onclick = () => perform(async () => {
 });
 element("answerForm").onsubmit = event => {
   event.preventDefault();
-  if (!element("answer").value.trim() || !state?.item || paused) return;
+  if (!element("answer").value.trim() || !state?.item || paused || busy || audioBusy || dictationDraft) return;
   if (state.memory) return memoryCommand("answer", element("answer").value);
   perform(async () => {
     await request("answer", {session_id: state.session_id, item_id: state.item.id,
