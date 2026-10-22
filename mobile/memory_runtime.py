@@ -1,5 +1,6 @@
 """Présentation visuelle séquencée ; rappel corrigé par le service mémoire amont."""
 import copy
+from mobile.input_hints import answer_inputmode
 
 MEMORY_ACTIVITIES = {
     "pqrst-rappel": ("methodes", "pqrst-rappel", "Répondre de mémoire après lecture"),
@@ -163,6 +164,6 @@ class MemoryRuntime:
             elif state["phase"] == "question":
                 screen["question"] = item["contenu"]["enonce"]
                 screen["options"]=item["contenu"].get("options")
-                screen["inputmode"] = "numeric" if item["type"] in ("empan", "paires-associatives") else "text"
+                screen["inputmode"] = answer_inputmode(item)
         support = self.ui.get("reprise_support", {}).get(item["id"]) if common["reprise"] else None
         return {**common, "item": self._memory_stub(item), "memory": screen, "reprise_attendue": support}

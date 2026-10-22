@@ -109,5 +109,6 @@ class FunctionalRuntime:
                                "total": len(content["etapes"])})
             else:
                 screen.update({"consigne": "Écris la consigne finale. Les éléments non modifiés restent valables.",
-                               "fields": content["champs"]})
+                               "fields": [{**field, "inputmode": "numeric" if field["id"] in {"quai", "nombre", "public"} else "text"}
+                                          for field in content["champs"]]})
         return screen

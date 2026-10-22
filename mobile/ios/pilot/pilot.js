@@ -90,7 +90,7 @@ function render(view) {
     ? `Reprise avec la réponse déjà fournie : ${view.reprise_attendue}. Tu peux t’appuyer dessus.` : "";
   element("methodText").textContent = view.item.contenu.methode || "";
   element("method").hidden = !view.item.contenu.methode;
-  if (!view.memory) element("answer").inputMode = "text";
+  if (!view.memory) element("answer").inputMode = view.inputmode || "text";
   const hints = view.item.contenu.indices || [];
   const lexical = view.item.type === "rappel-indice";
   const helpKey=JSON.stringify([view.session_id,view.item.id,view.position,Boolean(view.reprise)]);
