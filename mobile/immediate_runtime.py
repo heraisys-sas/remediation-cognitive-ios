@@ -289,7 +289,13 @@ class ImmediateRuntime:
         elif op == "continue" and trial["phase"] == "feedback":
             if trial["index"] < 4:
                 state["index"] = trial["index"]
-                state["trials"].append(self._immediate_new_trial(state, trial["index"] + 1))
+                next_trial = self._immediate_new_trial(state, trial["index"] + 1)
+                # La consigne a déjà été lue au début du bloc chemin.
+                # Les aides et reprises conservent leur démarrage explicite.
+                if state["kind"] == "chemin":
+                    next_trial.update(phase="exposition", started=_now(),
+                                      remaining_ms=self._immediate_exposure(state))
+                state["trials"].append(next_trial)
             else:
                 state["finished"] = True
                 state["summary"] = self._immediate_summary(state)

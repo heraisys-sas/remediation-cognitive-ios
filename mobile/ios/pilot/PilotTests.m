@@ -336,7 +336,7 @@
         "window.pathTestPhase='feedback';const modelLines=document.querySelectorAll('.immediate-path-model svg line').length===1;"
         "const hold=!document.getElementById('holdFeedback').hidden;const first=state.item_id;"
         "for(let i=0;i<900&&(busy||state.item_id===first);i++)await new Promise(r=>setTimeout(r,20));"
-        "const automatic=state.item_id!==first&&state.immediate.phase==='pret';"
+        "const automatic=state.item_id!==first&&state.immediate.phase==='exposition'&&!Array.from(document.querySelectorAll('#immediate button')).some(b=>b.textContent==='Commencer');"
         "const options=!document.getElementById('sessionOptions').hidden&&!document.getElementById('sessionOptions').open;"
         "render(await request('finish',{session_id:state.session_id}));return {visible,hold,automatic,options,drawn,modelLines};";
     [web callAsyncJavaScript:script arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld completionHandler:^(id value, NSError *error) {
