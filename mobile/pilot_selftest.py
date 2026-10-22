@@ -76,7 +76,7 @@ def run():
             return call(instance, "pqrst-step", session_id=view["session_id"], item_id=view["item"]["id"],
                         revision=view["protocol"]["revision"], operation=operation, value=value, elapsed_ms=100)
 
-        advance(restored, "continue")
+        assert call(restored, "view")["protocol"]["phase"] == "P"
         advance(restored, "respond", steps[1]["bonne"])
         advance(restored, "continue")
         advance(restored, "respond", "Que retenir ?")

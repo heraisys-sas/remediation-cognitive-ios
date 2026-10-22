@@ -33,7 +33,7 @@ def to_reformulation(runtime):
     view = start(runtime)
     item = runtime._session().items_par_id[view["item"]["id"]]
     steps = {e["etape"]:e for e in item["contenu"]["etapes"]}
-    step(runtime, "continue")
+    assert view["protocol"]["phase"] == "P"
     step(runtime, "respond", steps[1]["bonne"])
     step(runtime, "continue")
     step(runtime, "respond", "Que retenir ?")
@@ -107,7 +107,7 @@ def test_partial_restore_pauses_hides_support_and_never_grades(tmp_path):
 def test_pqrst_replay_stale_commands_and_early_submit(tmp_path):
     runtime = ApplicationRuntime(str(tmp_path))
     view = start(runtime)
-    request = command(view, "continue")
+    request = command(view, "respond", None)
     changed = call(runtime, "pqrst-step", **request)
     assert call(runtime, "pqrst-step", **request) == changed
     assert call(runtime, "pqrst-step", **{**request, "elapsed_ms": 900}) == changed
@@ -146,7 +146,7 @@ def test_pqrst_test_relecture_keeps_first_choices_and_condition(tmp_path):
 def test_pqrst_checkpoint_failure_rolls_back_transition(tmp_path, monkeypatch):
     runtime = ApplicationRuntime(str(tmp_path))
     view = start(runtime)
-    request = command(view, "continue")
+    request = command(view, "respond", None)
     observations = runtime.store.lire_observations(view["session_id"])
     original = runtime._save
     def fail():
