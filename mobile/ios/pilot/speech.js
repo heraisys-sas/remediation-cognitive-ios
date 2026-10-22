@@ -76,14 +76,16 @@ function renderSpeechControls(view) {
   if(dictationDraft&&(dictationDraft.key!==audioContextKey(view)||dictationDraft.field!==target)) stopSpeechForTransition();
   element("audioControls").hidden=!view?.item||Boolean(view.finished)||paused||!speechCapabilities;
   element("listen").hidden=!text||!speechCapabilities?.speech;
-  const compact = view?.activity === "calcul-mental";
-  renderAudioButton(element("listen"), speechToken?"Arrêter la lecture":compact?"Écouter la question":"Écouter", "speaker", speechToken, compact);
+  const compact = Boolean(view?.item) && view.activity !== "acces-lexical";
+  renderAudioButton(element("listen"), speechToken?"Arrêter la lecture":"Écouter", "speaker", speechToken, compact);
   element("listen").disabled=audioBusy;
   element("dictate").hidden=!target||!speechCapabilities?.on_device_dictation;
   renderAudioButton(element("dictate"), autoLexical?"Répondre au clavier":dictationDraft?"Arrêter la dictée":"Dicter", "microphone", dictationDraft, compact);
-  const inlineMic = compact && !element("dictate").hidden;
+  const inlineMic = compact && target === element("answer") && !element("dictate").hidden;
+  const protocolMic = compact && Boolean(view.protocol) && !element("dictate").hidden;
+  element("protocolDictation").hidden = !protocolMic;
   element("answerEntry").className = inlineMic ? "answerEntry withMicrophone" : "answerEntry";
-  (inlineMic ? element("answerEntry") : element("audioControls")).append(element("dictate"));
+  (inlineMic ? element("answerEntry") : protocolMic ? element("protocolDictation") : element("dictationDock")).append(element("dictate"));
   element("dictate").disabled=audioBusy||dictationDraft?.status==="finishing";
   // Recalculer le verrou après perform : son instantané peut dater de la capture.
   element("validate").disabled=busy||Boolean(dictationDraft);
