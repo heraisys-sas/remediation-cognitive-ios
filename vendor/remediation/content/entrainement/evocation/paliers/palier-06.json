@@ -232,5 +232,464 @@
         "statut": "a_revoir"
       }
     }
+  },
+  {
+    "id": "ev-6-analyse-07",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Ce petit appareil électrique sert à faire griller des tranches de pain.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "grille-pain",
+      "variantes": [
+        "grille pain"
+      ]
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-6-analyse-08",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Ce récipient électrique chauffe de l’eau jusqu’à ébullition, notamment pour préparer du thé.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "bouilloire"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-6-analyse-09",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Cet appareil ménager aspire la poussière et les petites saletés sur le sol.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "aspirateur"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-6-analyse-10",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Cet outil, dont la pointe s’insère dans la tête d’une vis, sert à la serrer ou à la desserrer.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "tournevis"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-6-analyse-11",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Cet équipement comporte deux montants et des barreaux pour monter jusqu’à un endroit en hauteur.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "échelle"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-6-analyse-12",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Ce récipient de cuisine profond, muni d’un manche, sert notamment à faire bouillir de l’eau sur une plaque.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "casserole"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-6-analyse-13",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Cet objet plat, pourvu de dents alignées, sert à démêler et à coiffer les cheveux.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "peigne"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-6-analyse-14",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Ce récipient percé de nombreux trous sert à égoutter les pâtes ou à laver des légumes.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "passoire"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-6-analyse-15",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Cet instrument sert à mesurer le poids, par exemple celui des ingrédients en cuisine.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "balance"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-6-analyse-16",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Cette pochette en papier, que l’on ferme avant l’envoi, contient une lettre.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "enveloppe"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-6-analyse-17",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Ce document présente les jours, les semaines et les mois d’une année pour repérer les dates.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "calendrier"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-6-analyse-18",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "ev-palier-5"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode SFA : analyse le mot avant de le dire. Décris-le par ses caractéristiques (catégorie, usage, lieu), puis retrouve-le.",
+      "methode": "semantique",
+      "definition": "Cet instrument mesure la température, par exemple celle du corps ou de l’air.",
+      "etapes": [
+        "À quelle catégorie appartient-il ? (outil, meuble, lieu, véhicule…)",
+        "À quoi sert-il ?",
+        "Où le trouve-t-on ?",
+        "À quoi cela te fait-il penser ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis à voix haute ce que tu as trouvé : sa catégorie, son usage, le lieu."
+    },
+    "reponse": {
+      "valeur": "thermomètre"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
   }
 ]

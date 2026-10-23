@@ -172,6 +172,23 @@
     [self waitForExpectations:@[response] timeout:60];
 }
 
+- (void)testContextesEnrichedResources {
+    UIWindowScene *scene = (UIWindowScene *)UIApplication.sharedApplication.connectedScenes.anyObject;
+    WKWebView *web = [scene.windows.firstObject.rootViewController valueForKey:@"web"];
+    XCTAssertNotNil(web); if (!web) return;
+    NSPredicate *loaded = [NSPredicate predicateWithBlock:^BOOL(id object, NSDictionary *bindings) {
+        return !web.loading && [web.URL.lastPathComponent isEqualToString:@"index.html"];
+    }];
+    [self waitForExpectations:@[[[XCTNSPredicateExpectation alloc] initWithPredicate:loaded object:web]] timeout:20];
+    XCTestExpectation *done = [self expectationWithDescription:@"Vingt ressources Contextes locales décodées"];
+    NSString *script = @"let count=0;for(let i=11;i<=20;i++){for(const size of [640,960]){await new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>image.naturalWidth===size?resolve():reject(Error('Dimensions image '+i));image.onerror=()=>reject(Error('Image absente '+i));image.src='images/contextes/source-'+i+'-v2-'+size+'.webp';});count++;}}return {count};";
+    [web callAsyncJavaScript:script arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld completionHandler:^(id value, NSError *error) {
+        XCTAssertNil(error); XCTAssertEqualObjects(value[@"count"], @20);
+        NSLog(@"CONTEXTES_RESOURCES=%@", value); [done fulfill];
+    }];
+    [self waitForExpectations:@[done] timeout:30];
+}
+
 - (void)testVoiceSettingsLoad {
     UIWindowScene *scene = (UIWindowScene *)UIApplication.sharedApplication.connectedScenes.anyObject;
     WKWebView *web = [scene.windows.firstObject.rootViewController valueForKey:@"web"];

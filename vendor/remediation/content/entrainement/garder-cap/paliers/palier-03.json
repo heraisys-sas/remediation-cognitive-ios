@@ -138,5 +138,285 @@
         "statut": "a_revoir"
       }
     }
+  },
+  {
+    "id": "cap-1-3-05",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "cap-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu commandes quatre cahiers à grands carreaux. Le panier contient quatre cahiers, mais deux sont à petits carreaux. Le prix et l’adresse sont corrects. Que corriger avant de payer ?",
+      "options": [
+        "Remplacer les deux cahiers à petits carreaux",
+        "Changer seulement l’adresse",
+        "Ajouter deux cahiers sans retirer les autres"
+      ],
+      "methode": "Compare le résultat avec toutes les conditions du but. Une tâche presque terminée peut encore manquer d’un élément essentiel.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Remplacer les deux cahiers à petits carreaux"
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-3-06",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "cap-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu dois envoyer une photo récente à Samira en pièce jointe. Le message est adressé à Samira, mais la photo apparaît seulement dans un lien privé auquel elle n’a pas accès. Quelle correction satisfait la demande ?",
+      "options": [
+        "Renvoyer le même lien privé",
+        "Joindre directement la photo récente au message",
+        "Changer le destinataire"
+      ],
+      "methode": "Compare le résultat avec toutes les conditions du but. Une tâche presque terminée peut encore manquer d’un élément essentiel.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Joindre directement la photo récente au message"
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-3-07",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "cap-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu réserves une table pour cinq personnes dimanche à midi. La confirmation indique cinq personnes, dimanche à 19 h. Que faut-il faire vérifier avant de confirmer ?",
+      "options": [
+        "Le nombre de personnes",
+        "Le jour de la réservation",
+        "L’horaire, qui doit être midi"
+      ],
+      "methode": "Compare le résultat avec toutes les conditions du but. Une tâche presque terminée peut encore manquer d’un élément essentiel.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "L’horaire, qui doit être midi"
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-3-08",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "cap-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu dois rendre une clé et une carte d’accès à l’accueil. La clé est dans l’enveloppe de retour ; la carte est restée dans ton portefeuille. Que faire pour terminer la restitution ?",
+      "options": [
+        "Déposer l’enveloppe sans l’ouvrir",
+        "Ajouter la carte d’accès à l’enveloppe",
+        "Garder la clé avec la carte"
+      ],
+      "methode": "Compare le résultat avec toutes les conditions du but. Une tâche presque terminée peut encore manquer d’un élément essentiel.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Ajouter la carte d’accès à l’enveloppe"
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-3-09",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "cap-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu dois apporter un formulaire signé et une copie d’identité. Le formulaire est rempli mais pas signé ; la copie d’identité est présente. Quelle action manque ?",
+      "options": [
+        "Signer le formulaire",
+        "Refaire la copie d’identité",
+        "Retirer la copie d’identité"
+      ],
+      "methode": "Compare le résultat avec toutes les conditions du but. Une tâche presque terminée peut encore manquer d’un élément essentiel.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Signer le formulaire"
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-3-10",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "cap-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu prépares un colis avec deux livres et le bon de retour. Le colis contient les deux livres. Le bon est imprimé et reste sur la table. Que vérifier avant de fermer le colis ?",
+      "options": [
+        "Le poids de chaque livre seulement",
+        "Le nombre de pages du bon",
+        "La présence du bon de retour dans le colis"
+      ],
+      "methode": "Compare le résultat avec toutes les conditions du but. Une tâche presque terminée peut encore manquer d’un élément essentiel.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "La présence du bon de retour dans le colis"
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-3-11",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "cap-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu dois inscrire un rendez-vous vendredi à 10 h au centre de quartier. Le calendrier affiche vendredi à 10 h, mais indique la mairie comme lieu. Quel élément corriger ?",
+      "options": [
+        "Le jour",
+        "Le lieu, en indiquant le centre de quartier",
+        "L’heure"
+      ],
+      "methode": "Compare le résultat avec toutes les conditions du but. Une tâche presque terminée peut encore manquer d’un élément essentiel.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Le lieu, en indiquant le centre de quartier"
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-3-12",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "planification"
+    ],
+    "palier": 3,
+    "prerequis": [
+      "cap-palier-2"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu dois envoyer la version finale d’un compte rendu aux trois membres du groupe. Le message contient la version finale et seulement deux adresses du groupe. Que corriger avant l’envoi ?",
+      "options": [
+        "Ajouter l’adresse du troisième membre",
+        "Joindre aussi l’ancien brouillon",
+        "Retirer une des deux adresses présentes"
+      ],
+      "methode": "Compare le résultat avec toutes les conditions du but. Une tâche presque terminée peut encore manquer d’un élément essentiel.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Ajouter l’adresse du troisième membre"
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
   }
 ]

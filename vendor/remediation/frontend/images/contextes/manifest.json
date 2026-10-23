@@ -180,6 +180,186 @@
       "generation": "imagegen intégré, photo réaliste, contexte visuel, message français exact, lumière douce, scène calme, sans légende de contexte",
       "poids_640": 24332,
       "poids_960": 50042
+    },
+    {
+      "numero": 11,
+      "id": "ev-4-source-image-v2-11-2ad177471d",
+      "contexte": "Note fixée sur la machine à laver",
+      "message": "Laver les serviettes à 40 degrés.",
+      "image": {
+        "src": "images/contextes/source-11-v2-960.webp",
+        "srcset": "images/contextes/source-11-v2-640.webp 640w, images/contextes/source-11-v2-960.webp 960w",
+        "width": 960,
+        "height": 640,
+        "alt": "Laver les serviettes à 40 degrés.",
+        "sha256": "2ad177471d299e49af291c3084ce2c49cc7e45c8e4df7bb6ebf7333e8f54c1f0"
+      },
+      "generation": "imagegen intégré, photo réaliste, contexte visuel, message français exact, lumière douce, scène calme, sans légende de contexte",
+      "prompt": "Use case: photorealistic-natural. Asset: exercice de mémoire de source Orthogone, photo paysage 3:2. Scène : Une machine à laver blanche, une serviette pliée et une note papier fixée sur le hublot. Photo réaliste, lumière douce, composition simple et calme, peu d'objets, sans personne, texte de la note central parfaitement lisible même réduit à640pixels. La note occupe environ un tiers de l'image. Texte exact unique sur la note : « Laver les serviettes à 40 degrés. ». Pas de titre ou légende de contexte, pas de marque, pas d'autre texte lisible. Les éléments de décor permettent de reconnaître visuellement le lieu/support.",
+      "poids_640": 24384,
+      "poids_960": 44144
+    },
+    {
+      "numero": 12,
+      "id": "ev-4-source-image-v2-12-5861b9f34b",
+      "contexte": "Étiquette sur un pot de basilic",
+      "message": "Arroser le basilic le samedi.",
+      "image": {
+        "src": "images/contextes/source-12-v2-960.webp",
+        "srcset": "images/contextes/source-12-v2-640.webp 640w, images/contextes/source-12-v2-960.webp 960w",
+        "width": 960,
+        "height": 640,
+        "alt": "Arroser le basilic le samedi.",
+        "sha256": "5861b9f34bac5f37a4b8f7111236848c2196cd9f97b405f1d277af557aac3192"
+      },
+      "generation": "imagegen intégré, photo réaliste, contexte visuel, message français exact, lumière douce, scène calme, sans légende de contexte",
+      "prompt": "Use case: photorealistic-natural. Asset: exercice de mémoire de source Orthogone, photo paysage 3:2. Scène : Un pot de basilic vivant sur un rebord de fenêtre, une étiquette papier attachée au pot. Photo réaliste, lumière douce, composition simple et calme, peu d'objets, sans personne, texte de la note central parfaitement lisible même réduit à640pixels. La note occupe environ un tiers de l'image. Texte exact unique sur la note : « Arroser le basilic le samedi. ». Pas de titre ou légende de contexte, pas de marque, pas d'autre texte lisible. Les éléments de décor permettent de reconnaître visuellement le lieu/support.",
+      "poids_640": 32998,
+      "poids_960": 56786
+    },
+    {
+      "numero": 13,
+      "id": "ev-4-source-image-v2-13-bc4ad6370b",
+      "contexte": "Note sur la porte d’entrée",
+      "message": "Prendre le sac avant de partir.",
+      "image": {
+        "src": "images/contextes/source-13-v2-960.webp",
+        "srcset": "images/contextes/source-13-v2-640.webp 640w, images/contextes/source-13-v2-960.webp 960w",
+        "width": 960,
+        "height": 640,
+        "alt": "Prendre le sac avant de partir.",
+        "sha256": "bc4ad6370b926b81b1bebe5f0dffd7cef620117003111dcb504fb99b31ea1f1a"
+      },
+      "generation": "imagegen intégré, photo réaliste, contexte visuel, message français exact, lumière douce, scène calme, sans légende de contexte",
+      "prompt": "Use case: photorealistic-natural. Asset: exercice de mémoire de source Orthogone, photo paysage 3:2. Scène : Porte d'entrée domestique avec poignée et sac de courses posé près du seuil, une note papier fixée à la porte. Photo réaliste, lumière douce, composition simple et calme, peu d'objets, sans personne, texte de la note central parfaitement lisible même réduit à640pixels. La note occupe environ un tiers de l'image. Texte exact unique sur la note : « Prendre le sac avant de partir. ». Pas de titre ou légende de contexte, pas de marque, pas d'autre texte lisible. Les éléments de décor permettent de reconnaître visuellement le lieu/support.",
+      "poids_640": 31440,
+      "poids_960": 58550
+    },
+    {
+      "numero": 14,
+      "id": "ev-4-source-image-v2-14-fd5fb85e0f",
+      "contexte": "Papier glissé dans un livre",
+      "message": "Rapporter ce livre vendredi.",
+      "image": {
+        "src": "images/contextes/source-14-v2-960.webp",
+        "srcset": "images/contextes/source-14-v2-640.webp 640w, images/contextes/source-14-v2-960.webp 960w",
+        "width": 960,
+        "height": 640,
+        "alt": "Rapporter ce livre vendredi.",
+        "sha256": "fd5fb85e0f0fc319587b985a80639e2bb54a0a56e1085e555f75e0338fa7cde1"
+      },
+      "generation": "imagegen intégré, photo réaliste, contexte visuel, message français exact, lumière douce, scène calme, sans légende de contexte",
+      "prompt": "Use case: photorealistic-natural. Asset: exercice de mémoire de source Orthogone, photo paysage 3:2. Scène : Livre ouvert sur une table, note papier glissée entre ses pages, les autres pages sans texte lisible. Photo réaliste, lumière douce, composition simple et calme, peu d'objets, sans personne, texte de la note central parfaitement lisible même réduit à640pixels. La note occupe environ un tiers de l'image. Texte exact unique sur la note : « Rapporter ce livre vendredi. ». Pas de titre ou légende de contexte, pas de marque, pas d'autre texte lisible. Les éléments de décor permettent de reconnaître visuellement le lieu/support.",
+      "poids_640": 20142,
+      "poids_960": 34820
+    },
+    {
+      "numero": 15,
+      "id": "ev-4-source-image-v2-15-35d55c1a0e",
+      "contexte": "Note sur une boîte à outils",
+      "message": "Rendre le tournevis lundi.",
+      "image": {
+        "src": "images/contextes/source-15-v2-960.webp",
+        "srcset": "images/contextes/source-15-v2-640.webp 640w, images/contextes/source-15-v2-960.webp 960w",
+        "width": 960,
+        "height": 640,
+        "alt": "Rendre le tournevis lundi.",
+        "sha256": "35d55c1a0e90f9a7e0074d327289c82cff18016aac7578084799b38d2ee88749"
+      },
+      "generation": "imagegen intégré, photo réaliste, contexte visuel, message français exact, lumière douce, scène calme, sans légende de contexte",
+      "prompt": "Use case: photorealistic-natural. Asset: exercice de mémoire de source Orthogone, photo paysage 3:2. Scène : Boîte à outils ouverte avec tournevis visible, note papier fixée à son couvercle. Photo réaliste, lumière douce, composition simple et calme, peu d'objets, sans personne, texte de la note central parfaitement lisible même réduit à640pixels. La note occupe environ un tiers de l'image. Texte exact unique sur la note : « Rendre le tournevis lundi. ». Pas de titre ou légende de contexte, pas de marque, pas d'autre texte lisible. Les éléments de décor permettent de reconnaître visuellement le lieu/support.",
+      "poids_640": 22522,
+      "poids_960": 38356
+    },
+    {
+      "numero": 16,
+      "id": "ev-4-source-image-v2-16-e4fee4eb99",
+      "contexte": "Note sur le tableau de bord",
+      "message": "Faire le plein demain.",
+      "image": {
+        "src": "images/contextes/source-16-v2-960.webp",
+        "srcset": "images/contextes/source-16-v2-640.webp 640w, images/contextes/source-16-v2-960.webp 960w",
+        "width": 960,
+        "height": 640,
+        "alt": "Faire le plein demain.",
+        "sha256": "e4fee4eb993131efece69885b87eaf7a5d144d3407aaa11a66d12d7fe76fc68b"
+      },
+      "generation": "imagegen intégré, photo réaliste, contexte visuel, message français exact, lumière douce, scène calme, sans légende de contexte",
+      "prompt": "Use case: photorealistic-natural. Asset: exercice de mémoire de source Orthogone, photo paysage 3:2. Scène : Tableau de bord de voiture garée, volant partiellement visible, note papier posée sur le tableau de bord. Photo réaliste, lumière douce, composition simple et calme, peu d'objets, sans personne, texte de la note central parfaitement lisible même réduit à640pixels. La note occupe environ un tiers de l'image. Texte exact unique sur la note : « Faire le plein demain. ». Pas de titre ou légende de contexte, pas de marque, pas d'autre texte lisible. Les éléments de décor permettent de reconnaître visuellement le lieu/support.",
+      "poids_640": 23410,
+      "poids_960": 45926
+    },
+    {
+      "numero": 17,
+      "id": "ev-4-source-image-v2-17-b43be667f6",
+      "contexte": "Carte sur un bouquet",
+      "message": "Merci pour ton aide.",
+      "image": {
+        "src": "images/contextes/source-17-v2-960.webp",
+        "srcset": "images/contextes/source-17-v2-640.webp 640w, images/contextes/source-17-v2-960.webp 960w",
+        "width": 960,
+        "height": 640,
+        "alt": "Merci pour ton aide.",
+        "sha256": "b43be667f621ffac2771b442f71f80a6c0c84df65f5e841aa757454e7fe479a8"
+      },
+      "generation": "imagegen intégré, photo réaliste, contexte visuel, message français exact, lumière douce, scène calme, sans légende de contexte",
+      "prompt": "Use case: photorealistic-natural. Asset: exercice de mémoire de source Orthogone, photo paysage 3:2. Scène : Bouquet de fleurs sobre dans un vase, petite carte papier attachée au bouquet. Photo réaliste, lumière douce, composition simple et calme, peu d'objets, sans personne, texte de la note central parfaitement lisible même réduit à640pixels. La note occupe environ un tiers de l'image. Texte exact unique sur la note : « Merci pour ton aide. ». Pas de titre ou légende de contexte, pas de marque, pas d'autre texte lisible. Les éléments de décor permettent de reconnaître visuellement le lieu/support.",
+      "poids_640": 40598,
+      "poids_960": 70270
+    },
+    {
+      "numero": 18,
+      "id": "ev-4-source-image-v2-18-20583333f8",
+      "contexte": "Étiquette sur une boîte de biscuits",
+      "message": "Garder les biscuits pour dimanche.",
+      "image": {
+        "src": "images/contextes/source-18-v2-960.webp",
+        "srcset": "images/contextes/source-18-v2-640.webp 640w, images/contextes/source-18-v2-960.webp 960w",
+        "width": 960,
+        "height": 640,
+        "alt": "Garder les biscuits pour dimanche.",
+        "sha256": "20583333f8d2a905697cb1fe12237eeb2a308e8271315386178988112571c852"
+      },
+      "generation": "imagegen intégré, photo réaliste, contexte visuel, message français exact, lumière douce, scène calme, sans légende de contexte",
+      "prompt": "Use case: photorealistic-natural. Asset: exercice de mémoire de source Orthogone, photo paysage 3:2. Scène : Boîte de biscuits ouverte avec quelques biscuits visibles, étiquette papier fixée au couvercle. Photo réaliste, lumière douce, composition simple et calme, peu d'objets, sans personne, texte de la note central parfaitement lisible même réduit à640pixels. La note occupe environ un tiers de l'image. Texte exact unique sur la note : « Garder les biscuits pour dimanche. ». Pas de titre ou légende de contexte, pas de marque, pas d'autre texte lisible. Les éléments de décor permettent de reconnaître visuellement le lieu/support.",
+      "poids_640": 33990,
+      "poids_960": 58316
+    },
+    {
+      "numero": 19,
+      "id": "ev-4-source-image-v2-19-0f60d89a3f",
+      "contexte": "Note sur le miroir de la salle de bain",
+      "message": "Changer la serviette mardi.",
+      "image": {
+        "src": "images/contextes/source-19-v2-960.webp",
+        "srcset": "images/contextes/source-19-v2-640.webp 640w, images/contextes/source-19-v2-960.webp 960w",
+        "width": 960,
+        "height": 640,
+        "alt": "Changer la serviette mardi.",
+        "sha256": "0f60d89a3f699431cb32408f580c13aa834748cc196ed67cae764e40f97fcd49"
+      },
+      "generation": "imagegen intégré, photo réaliste, contexte visuel, message français exact, lumière douce, scène calme, sans légende de contexte",
+      "prompt": "Use case: photorealistic-natural. Asset: exercice de mémoire de source Orthogone, photo paysage 3:2. Scène : Miroir de salle de bain et lavabo partiellement visibles, une serviette unie, note papier collée sur le miroir. Photo réaliste, lumière douce, composition simple et calme, peu d'objets, sans personne, texte de la note central parfaitement lisible même réduit à640pixels. La note occupe environ un tiers de l'image. Texte exact unique sur la note : « Changer la serviette mardi. ». Pas de titre ou légende de contexte, pas de marque, pas d'autre texte lisible. Les éléments de décor permettent de reconnaître visuellement le lieu/support.",
+      "poids_640": 26070,
+      "poids_960": 48310
+    },
+    {
+      "numero": 20,
+      "id": "ev-4-source-image-v2-20-f3224f9b48",
+      "contexte": "Note sur une lampe de bureau",
+      "message": "Éteindre la lampe avant de sortir.",
+      "image": {
+        "src": "images/contextes/source-20-v2-960.webp",
+        "srcset": "images/contextes/source-20-v2-640.webp 640w, images/contextes/source-20-v2-960.webp 960w",
+        "width": 960,
+        "height": 640,
+        "alt": "Éteindre la lampe avant de sortir.",
+        "sha256": "f3224f9b485f6771b288c71adf603a33cced14fc9196c97770dcb6869d4b25ec"
+      },
+      "generation": "imagegen intégré, photo réaliste, contexte visuel, message français exact, lumière douce, scène calme, sans légende de contexte",
+      "prompt": "Use case: photorealistic-natural. Asset: exercice de mémoire de source Orthogone, photo paysage 3:2. Scène : Lampe de bureau éteinte sur un bureau sobre, une note papier attachée à son pied. Photo réaliste, lumière douce, composition simple et calme, peu d'objets, sans personne, texte de la note central parfaitement lisible même réduit à640pixels. La note occupe environ un tiers de l'image. Texte exact unique sur la note : « Éteindre la lampe avant de sortir. ». Pas de titre ou légende de contexte, pas de marque, pas d'autre texte lisible. Les éléments de décor permettent de reconnaître visuellement le lieu/support.",
+      "poids_640": 20396,
+      "poids_960": 35434
     }
   ]
 }

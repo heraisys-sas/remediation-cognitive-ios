@@ -232,5 +232,461 @@
         "statut": "a_revoir"
       }
     }
+  },
+  {
+    "id": "ev-7-analyse-07",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Cet objet en cire, muni d’une mèche, éclaire lorsqu’on allume sa flamme.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "bougie"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-7-analyse-08",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Cet objet rond rempli d’air sert notamment à jouer au football.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "ballon"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-7-analyse-09",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Cet accessoire se porte sur la tête et comporte généralement un bord tout autour.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "chapeau"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-7-analyse-10",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Ce récipient tressé, souvent muni d’une anse, sert à transporter des provisions.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "panier"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-7-analyse-11",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Cet instrument de musique possède un manche et généralement six cordes, que l’on pince ou que l’on gratte.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "guitare"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-7-analyse-12",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Cet outil muni d’un manche et d’une tête lourde sert à enfoncer des clous.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "marteau"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-7-analyse-13",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Cette pièce de tissu épais couvre une partie du sol et peut servir à le décorer.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "tapis"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-7-analyse-14",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Ce récipient à goulot étroit se ferme avec un bouchon pour conserver de l’eau ou du jus.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "bouteille"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-7-analyse-15",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Cet ustensile de table, muni de plusieurs dents, sert à piquer les aliments.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "fourchette"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-7-analyse-16",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Quel est le terme général pour cet objet qui protège le pied quand on marche dehors et qui comporte une semelle ?",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "chaussure"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-7-analyse-17",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Cet agrume jaune contient un jus acide que l’on peut ajouter au poisson ou au thé.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "citron"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "ev-7-analyse-18",
+    "type": "analyse-mot",
+    "module": "entrainement",
+    "theme": "evocation",
+    "fonctions_ciblees": [
+      "acces-lexical",
+      "recuperation"
+    ],
+    "palier": 7,
+    "prerequis": [
+      "ev-palier-6"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "consigne": "Méthode PCA : analyse le mot par ses sons. Commence par son premier son, compte ses syllabes, cherche une rime, puis retrouve-le.",
+      "methode": "phonologique",
+      "definition": "Cet objet porté au poignet indique l’heure sur un cadran.",
+      "etapes": [
+        "Par quel son commence-t-il ?",
+        "Combien de syllabes a-t-il ?",
+        "Avec quel mot rime-t-il ?",
+        "Quel est son dernier son ?"
+      ],
+      "enonce": "Quel est ce mot ?",
+      "aide": "Dis le mot à voix haute en détachant les syllabes."
+    },
+    "reponse": {
+      "valeur": "montre"
+    },
+    "meta": {
+      "auteur": "redaction-assistee (enrichissement trois mois)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
   }
 ]

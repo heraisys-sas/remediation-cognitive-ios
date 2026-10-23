@@ -138,5 +138,285 @@
         "statut": "a_revoir"
       }
     }
+  },
+  {
+    "id": "cap-1-2-05",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "flexibilite"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "cap-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu veux acheter une lampe à moins de 30 €, avec une ampoule incluse. Le modèle prévu est épuisé. A coûte 24 € sans ampoule ; l’ampoule coûte 8 €. B coûte 28 € avec ampoule. C coûte 35 € avec ampoule. Quel remplacement respecte les deux contraintes ?",
+      "options": [
+        "Acheter A et son ampoule",
+        "Acheter B avec son ampoule",
+        "Acheter C avec son ampoule"
+      ],
+      "methode": "Repère ce qui a changé, garde le but et les contraintes encore valables, puis ajuste seulement ce qui est nécessaire.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Acheter B avec son ampoule"
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-2-06",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "flexibilite"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "cap-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu dois imprimer dix pages recto simple avant 16 h. L’imprimante habituelle est en panne. A imprime en recto simple, disponible à 15 h. B imprime seulement recto verso, disponible à 14 h. C imprime recto simple, disponible demain. Quel choix conserve le résultat et le délai ?",
+      "options": [
+        "Utiliser l’imprimante A à 15 h",
+        "Utiliser l’imprimante B à 14 h",
+        "Attendre l’imprimante C demain"
+      ],
+      "methode": "Repère ce qui a changé, garde le but et les contraintes encore valables, puis ajuste seulement ce qui est nécessaire.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Utiliser l’imprimante A à 15 h"
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-2-07",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "flexibilite"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "cap-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu organises une lecture pour quatre personnes dans un lieu calme. Le salon prévu devient bruyant à cause de travaux. A : table pour quatre dans un café animé ; B : salle calme pour deux ; C : salle calme pour quatre. Quel lieu remplace le salon sans modifier le but ?",
+      "options": [
+        "Choisir le lieu A",
+        "Choisir le lieu B",
+        "Choisir le lieu C"
+      ],
+      "methode": "Repère ce qui a changé, garde le but et les contraintes encore valables, puis ajuste seulement ce qui est nécessaire.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Choisir le lieu C"
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-2-08",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "flexibilite"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "cap-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu dois livrer un gâteau vendredi avant midi, sans le congeler. Le destinataire sera absent à 11 h, horaire prévu. Il peut le recevoir vendredi à 9 h ou à 14 h, ou samedi à 10 h. Quel nouvel horaire respecte toutes les conditions ?",
+      "options": [
+        "Vendredi à 14 h",
+        "Vendredi à 9 h",
+        "Samedi à 10 h"
+      ],
+      "methode": "Repère ce qui a changé, garde le but et les contraintes encore valables, puis ajuste seulement ce qui est nécessaire.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Vendredi à 9 h"
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-2-09",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "flexibilite"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "cap-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu veux rapporter trois livres avant la fermeture de 18 h et repartir avec un nouveau livre. Le guichet de prêt est fermé, mais une borne permet les retours et les prêts jusqu’à 18 h. Une boîte extérieure accepte seulement les retours. Quel ajustement permet encore les deux actions ?",
+      "options": [
+        "Utiliser seulement la boîte extérieure",
+        "Reporter toutes les actions à demain",
+        "Utiliser la borne pour rendre puis emprunter"
+      ],
+      "methode": "Repère ce qui a changé, garde le but et les contraintes encore valables, puis ajuste seulement ce qui est nécessaire.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Utiliser la borne pour rendre puis emprunter"
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-2-10",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "flexibilite"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "cap-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu prépares un affichage lisible en noir et blanc. Les trois catégories étaient distinguées uniquement par couleur. L’imprimante couleur est indisponible et les trois couleurs donnent le même gris à l’impression. Quelle adaptation conserve la distinction entre les catégories ?",
+      "options": [
+        "Ajouter un symbole différent à chaque catégorie et imprimer en noir et blanc",
+        "Imprimer les couleurs en gris sans autre repère",
+        "Supprimer deux catégories"
+      ],
+      "methode": "Repère ce qui a changé, garde le but et les contraintes encore valables, puis ajuste seulement ce qui est nécessaire.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Ajouter un symbole différent à chaque catégorie et imprimer en noir et blanc"
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-2-11",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "flexibilite"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "cap-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu dois participer à une réunion à distance à 14 h, avec son et image. La caméra de l’ordinateur est en panne. Le téléphone a son et caméra, mais sa batterie est vide ; son chargeur fonctionne. L’autre ordinateur a du son mais aucune caméra. Que modifier pour conserver la participation demandée ?",
+      "options": [
+        "Utiliser l’ordinateur sans caméra",
+        "Brancher le téléphone et rejoindre avec son et image",
+        "Rejoindre uniquement par téléphone sans image"
+      ],
+      "methode": "Repère ce qui a changé, garde le but et les contraintes encore valables, puis ajuste seulement ce qui est nécessaire.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Brancher le téléphone et rejoindre avec son et image"
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "cap-1-2-12",
+    "type": "but-etapes",
+    "module": "entrainement",
+    "theme": "garder-cap",
+    "fonctions_ciblees": [
+      "fonctions-executives",
+      "flexibilite"
+    ],
+    "palier": 2,
+    "prerequis": [
+      "cap-palier-1"
+    ],
+    "cap_complexite": null,
+    "contenu": {
+      "enonce": "Tu dois apporter six verres propres et incassables pour une sortie. Deux des six verres prévus sont introuvables. Tu disposes de deux verres incassables propres, de deux tasses sales et de deux verres fragiles propres. Quel remplacement garde toutes les contraintes ?",
+      "options": [
+        "Remplacer par les deux tasses sales",
+        "Remplacer par les deux verres fragiles",
+        "Remplacer par les deux verres incassables propres"
+      ],
+      "methode": "Repère ce qui a changé, garde le but et les contraintes encore valables, puis ajuste seulement ce qui est nécessaire.",
+      "consigne": "Lis la situation à ton rythme. Choisis l’action qui respecte le but et toutes les contraintes ; les informations restent visibles."
+    },
+    "reponse": {
+      "valeur": "Remplacer par les deux verres incassables propres"
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
   }
 ]
