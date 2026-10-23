@@ -37,6 +37,7 @@ function renderContextes(view) {
     node.onclick=()=>contextesCommand(operation,value); region.append(node); return node;
   };
   paragraph(`${screen.pass === "decouverte" ? "Découverte après photo" : "Rappel sans photo"} · ${view.position} sur ${view.total}`);
+  if(screen.profil==="sources-vues")paragraph("Au rappel final, les choix proviennent des scènes vues dans cette séance.");
   if (screen.image_failed) paragraph("La scène n’a pas pu être chargée. Tu peux réessayer ou terminer la séance.");
   if (screen.phase === "pret") { paragraph(screen.instruction); button(screen.image_failed ? "Réessayer" : "Afficher", "show"); }
   if (screen.question) paragraph(screen.question);

@@ -17,6 +17,13 @@ class ContextesRuntime:
     def _contextes_item(self):
         return self.ui["session"]["items"][self.ui["cursor"]]
 
+    def _contextes_options(self):
+        item = self._contextes_item()
+        profile = self.ui["session"].get("protocole_contextes", {}).get("profil", "origine")
+        if profile == "sources-vues" and self.ui["contextes"]["pass"] == "rappel":
+            return item["contenu"]["options_rappel"]
+        return item["contenu"]["options"]
+
     def _contextes_facts(self):
         return {"passe": self.ui["contextes"]["pass"], "ordre": self.ui["cursor"] + 1}
 
@@ -65,9 +72,9 @@ class ContextesRuntime:
             self._contextes_record(presentee=True, presentee_ms=self._contextes_now())
         elif operation == "loaded" and state["phase"] == "photo":
             state["phase"] = "exposition"
-            self._contextes_record(exposition_ms=self._contextes_now())
+            self._contextes_record(exposition_ms=self._contextes_now(), photo_chargee=True)
         elif operation == "image-error" and state["phase"] in ("photo", "exposition", "feedback"):
-            self._contextes_record(incident_photo=True)
+            self._contextes_record(incident_photo=True, photo_chargee=False)
             state["image_failed"] = True
             if state["phase"] != "feedback":
                 self._contextes_accumulate(elapsed)
@@ -78,12 +85,17 @@ class ContextesRuntime:
             state["elapsed_ms"] = 0
         elif operation == "answer" and state["phase"] == "question":
             value = request.get("value")
-            if not isinstance(value, str) or value not in item["contenu"]["options"]:
+            if not isinstance(value, str) or value not in self._contextes_options():
                 raise ValueError("Choisir une réponse proposée")
             state["elapsed_ms"] += elapsed
+            facts = self._contextes_facts()
+            if state["pass"] == "decouverte":
+                records = self.store.lire_observations(session.session_id).get("contextes", {}).get("decouverte", [])
+                recorded = next((record for record in records if record["item_id"] == item["id"]), {})
+                facts.update({key: recorded[key] for key in ("photo_chargee", "exposition_ms") if key in recorded})
             result = self.manager.repondre(session.theme, session.session_id, item["id"], value,
                 state["elapsed_ms"], memorisation=state["pass"] == "decouverte",
-                observation_contextes=self._contextes_facts())
+                observation_contextes=facts)
             self.ui["feedback"] = result
             if result.get("motif_arret") == "duree":
                 self.ui["stop_proposal"] = True
@@ -124,6 +136,7 @@ class ContextesRuntime:
         contenu = item["contenu"]
         screen = {key: state[key] for key in ("pass", "phase", "revision", "paused")}
         screen["image_failed"] = state.get("image_failed", False)
+        screen["profil"] = self.ui["session"].get("protocole_contextes", {}).get("profil", "origine")
         if not state["paused"]:
             if state["phase"] == "pret":
                 screen["instruction"] = contenu["consigne"]
@@ -132,7 +145,7 @@ class ContextesRuntime:
                 screen["remaining_ms"] = max(0, contenu["affichage"]["duree_totale_ms"] - state["exposure_ms"])
             else:
                 screen["question"] = contenu["enonce"]
-                screen["options"] = contenu["options"] if state["phase"] == "question" else []
+                screen["options"] = self._contextes_options() if state["phase"] == "question" else []
                 if state["phase"] == "feedback" and state["pass"] == "rappel" and not self.ui["feedback"]["correcte"] and not state.get("image_failed"):
                     screen["reveal_recorded"] = state.get("reveal_recorded", False)
                     screen["image"] = contenu["affichage"]["image"]

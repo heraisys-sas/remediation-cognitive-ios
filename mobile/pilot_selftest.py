@@ -104,7 +104,8 @@ def run():
         assert pqrst_restored.store.lire_cartes("methodes--pqrst-guide")
         assert pqrst_restored.store.lire_temps_reference("methodes--pqrst-guide") == []
         passed += 1
-        contexts = call(pqrst_restored, "start", activity="memoire-source")
+        contexts = call(pqrst_restored, "start", activity="memoire-source", profil_contextes="sources-vues")
+        assert contexts["protocole_contextes"]["profil"] == "sources-vues"
         def context_step(instance, operation, value=None):
             view = call(instance, "view")
             return call(instance, "contextes-step", session_id=view["session_id"], item_id=view["item"]["id"],

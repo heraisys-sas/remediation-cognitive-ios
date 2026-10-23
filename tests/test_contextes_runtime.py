@@ -28,6 +28,8 @@ def expose(runtime):
 
 def test_two_passes_match_source_and_only_recall_changes_progress(tmp_path, monkeypatch):
     now = datetime.now(timezone.utc)
+    from engine.session.runner import SessionRunner
+    monkeypatch.setattr(SessionRunner, "_secondes_ecoulees", lambda self: 0)
     original = GestionnaireSessions.__init__
     def fixed(self, *args, **kwargs):
         original(self, *args, **kwargs)
