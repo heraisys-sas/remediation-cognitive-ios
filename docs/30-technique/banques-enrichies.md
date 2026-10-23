@@ -15,3 +15,5 @@ Revue indépendante favorable : fichiers importés identiques à la source figé
 La première suite native a révélé une ancienne hypothèse de la sonde : banque épuisée après une séance de dix scènes. Avec vingt scènes, la sonde vérifie désormais une deuxième sélection de dix identifiants distincts, puis clôt sa séance synthétique. La sonde corrigée passe sur ordinateur ; elle conserve ses 20 contrôles et les 70 cas de correction.
 
 Poids mesuré des 20 scènes, en 640 et 960 pixels : 1 500 224 octets, soit environ 1,50 Mo. Une banque de 200 scènes de compression comparable représenterait environ 15 Mo pour les deux résolutions, hors application.
+
+Recette finale sur iPhone Air : 11 tests XCTest réussis, zéro échec en 61,190 secondes. Les 20 nouveaux WebP sont décodés par WebKit. La sonde Python iOS conserve ses 20 contrôles et les 70 cas de correction ; elle vérifie deux sélections de dix scènes distinctes. Preuves locales ignorées : .local/banques-final-device.log et .local/banques-final-device.xcresult.
