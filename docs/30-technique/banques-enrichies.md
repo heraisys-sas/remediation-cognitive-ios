@@ -11,3 +11,7 @@ Les 16 nouvelles séries entendues réutilisent 43 mots dont les fichiers audio 
 Validation ordinateur : 238 tests existants réussis, quatre nouveaux contrôles d’intégrité et ressources réussis ; 72 contrôles JavaScript. Le manifeste de référence figé vérifie les 50 anciens exercices des banques modifiées, inchangés, et les 90 ajouts. Toutes les images principales correspondent à leur SHA-256 et les ressources audio référencées existent. Le test natif supplémentaire demande le décodage des 20 nouveaux WebP dans WebKit. La recette physique de tous les nouveaux exercices et la relecture des rédactions restent distinctes.
 
 Revue indépendante favorable : fichiers importés identiques à la source figée, dépendances déjà présentes, aucune modification supplémentaire des adaptateurs requise. Aucune fusion ni publication automatique.
+
+La première suite native a révélé une ancienne hypothèse de la sonde : banque épuisée après une séance de dix scènes. Avec vingt scènes, la sonde vérifie désormais une deuxième sélection de dix identifiants distincts, puis clôt sa séance synthétique. La sonde corrigée passe sur ordinateur ; elle conserve ses 20 contrôles et les 70 cas de correction.
+
+Poids mesuré des 20 scènes, en 640 et 960 pixels : 1 500 224 octets, soit environ 1,50 Mo. Une banque de 200 scènes de compression comparable représenterait environ 15 Mo pour les deux résolutions, hors application.

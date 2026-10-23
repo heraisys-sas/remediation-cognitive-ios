@@ -133,8 +133,10 @@ def run():
                 assert not context_restored.store.lire_cartes("evocation--memoire-source")
         assert view["finished"] and view["summary"]["resume"]["correctes"] == len(contexts["items"])
         assert context_restored.store.lire_cartes("evocation--memoire-source")
-        empty = call(context_restored, "start", activity="memoire-source")
-        assert not empty["items"] and call(context_restored, "view")["finished"]
+        following = call(context_restored, "start", activity="memoire-source")
+        assert len(following["items"]) == 10
+        assert {item["id"] for item in following["items"]}.isdisjoint(item["id"] for item in contexts["items"])
+        call(context_restored, "finish", session_id=following["session_id"])
         passed += 1
         for activity in ("choisir-plan", "auto-instruction", "verifier-plan", "chercher-information"):
             strategy_directory = Path(directory) / activity
