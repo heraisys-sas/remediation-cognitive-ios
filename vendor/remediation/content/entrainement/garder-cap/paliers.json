@@ -15,7 +15,7 @@
         "cap-palier-1"
       ],
       "fichier": "paliers/palier-02.json",
-      "nb_items": 4
+      "nb_items": 12
     },
     {
       "id": "cap-palier-3",
@@ -24,7 +24,7 @@
         "cap-palier-2"
       ],
       "fichier": "paliers/palier-03.json",
-      "nb_items": 4
+      "nb_items": 12
     }
   ]
 }

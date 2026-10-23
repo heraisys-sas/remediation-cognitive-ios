@@ -674,5 +674,1235 @@
         "statut": "a_revoir"
       }
     }
+  },
+  {
+    "id": "mt2-6-pqrst-05",
+    "type": "pqrst-mise-en-oeuvre",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "mt-palier-5"
+    ],
+    "cap_complexite": "un texte court et cinq étapes guidées, une seule fois",
+    "contenu": {
+      "consigne": "Méthode PQRST, appliquée pas à pas : Parcours le texte, écris la question que tu te poses, Lis-le, Reformule-le avec tes mots, puis Teste-toi de mémoire.",
+      "titre_texte": "Le prêt à la bibliothèque",
+      "texte": "La bibliothèque prête trois livres pour quatre semaines. Les retours se déposent dans la boîte bleue près de l’entrée. Pour prolonger un prêt, appeler la bibliothèque avant la date de retour. Un livre réservé par une autre personne ne peut pas être prolongé.",
+      "etapes": [
+        {
+          "etape": 1,
+          "nom": "Parcours",
+          "enonce": "De quoi parle ce texte ?",
+          "options": [
+            "d’un voyage en avion",
+            "du prêt de livres",
+            "d’une recette de cuisine"
+          ],
+          "bonne": "du prêt de livres"
+        },
+        {
+          "etape": 2,
+          "nom": "Question",
+          "enonce": "Écris la question que tu te poses sur ce texte.",
+          "modele": "Comment prolonger un prêt ?"
+        },
+        {
+          "etape": 3,
+          "nom": "Lecture",
+          "enonce": "Lis le texte entier, en cherchant la réponse à ta question."
+        },
+        {
+          "etape": 4,
+          "nom": "Reformulation",
+          "enonce": "Redis le texte en une phrase, avec tes mots.",
+          "modele": "La bibliothèque prête trois livres pour quatre semaines ; les retours vont dans la boîte bleue et une prolongation se demande par téléphone avant la date de retour.",
+          "criteres": [
+            {
+              "label": "trois livres",
+              "expressions": [
+                "trois livres",
+                "3 livres"
+              ],
+              "contradictions": [
+                "sans trois livres",
+                "pas trois livres",
+                "deux livres",
+                "quatre livres"
+              ]
+            },
+            {
+              "label": "quatre semaines",
+              "expressions": [
+                "quatre semaines",
+                "4 semaines"
+              ],
+              "contradictions": [
+                "sans quatre semaines",
+                "pas quatre semaines",
+                "deux semaines",
+                "trois mois"
+              ]
+            },
+            {
+              "label": "boite bleue",
+              "expressions": [
+                "boite bleue"
+              ],
+              "contradictions": [
+                "sans boite bleue",
+                "pas boite bleue"
+              ]
+            },
+            {
+              "label": "telephone",
+              "expressions": [
+                "telephone",
+                "appeler",
+                "appel"
+              ],
+              "contradictions": [
+                "sans telephone",
+                "pas telephone"
+              ]
+            },
+            {
+              "label": "avant la date de retour",
+              "expressions": [
+                "avant la date de retour"
+              ],
+              "contradictions": [
+                "sans avant la date de retour",
+                "pas avant la date de retour"
+              ]
+            }
+          ],
+          "seuil": 0.8
+        },
+        {
+          "etape": 5,
+          "nom": "Test",
+          "questions": [
+            {
+              "enonce": "Combien de temps dure le prêt ?",
+              "options": [
+                "trois mois",
+                "quatre semaines",
+                "deux semaines"
+              ],
+              "bonne": "quatre semaines"
+            },
+            {
+              "enonce": "Où déposer les livres rendus ?",
+              "options": [
+                "dans la boîte bleue",
+                "au guichet de la mairie",
+                "sur une table de lecture"
+              ],
+              "bonne": "dans la boîte bleue"
+            }
+          ]
+        }
+      ],
+      "fiche_methode": [
+        "Parcours : je regarde le titre et le début, je devine le sujet.",
+        "Question : j'écris la question que je me pose.",
+        "Lecture : je lis en cherchant la réponse à ma question.",
+        "Reformulation : je redis le texte en une phrase, avec mes mots.",
+        "Test : je me teste de mémoire, sans regarder."
+      ]
+    },
+    "reponse": {
+      "valeur": "trois livres, quatre semaines, boite bleue, telephone, avant la date de retour",
+      "seuil": 0.8
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt2-6-pqrst-06",
+    "type": "pqrst-mise-en-oeuvre",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "mt-palier-5"
+    ],
+    "cap_complexite": "un texte court et cinq étapes guidées, une seule fois",
+    "contenu": {
+      "consigne": "Méthode PQRST, appliquée pas à pas : Parcours le texte, écris la question que tu te poses, Lis-le, Reformule-le avec tes mots, puis Teste-toi de mémoire.",
+      "titre_texte": "L’atelier de réparation",
+      "texte": "L’atelier de réparation ouvre samedi de 10 h à midi dans la salle du jardin. Chaque personne apporte un seul petit objet et ses piles si nécessaire. L’aide est gratuite, mais les pièces de remplacement sont payantes. Il faut réserver sa place par téléphone.",
+      "etapes": [
+        {
+          "etape": 1,
+          "nom": "Parcours",
+          "enonce": "De quoi parle ce texte ?",
+          "options": [
+            "d’un atelier de réparation",
+            "d’une recette de cuisine",
+            "d’un voyage en avion"
+          ],
+          "bonne": "d’un atelier de réparation"
+        },
+        {
+          "etape": 2,
+          "nom": "Question",
+          "enonce": "Écris la question que tu te poses sur ce texte.",
+          "modele": "Que faut-il apporter ?"
+        },
+        {
+          "etape": 3,
+          "nom": "Lecture",
+          "enonce": "Lis le texte entier, en cherchant la réponse à ta question."
+        },
+        {
+          "etape": 4,
+          "nom": "Reformulation",
+          "enonce": "Redis le texte en une phrase, avec tes mots.",
+          "modele": "L’atelier du samedi accueille un petit objet par personne de 10 h à midi dans la salle du jardin ; l’aide est gratuite et la place se réserve par téléphone.",
+          "criteres": [
+            {
+              "label": "samedi",
+              "expressions": [
+                "samedi"
+              ],
+              "contradictions": [
+                "sans samedi",
+                "pas samedi"
+              ]
+            },
+            {
+              "label": "10 h",
+              "expressions": [
+                "10 h",
+                "10 heures",
+                "dix heures"
+              ],
+              "contradictions": [
+                "sans 10 h",
+                "pas 10 h",
+                "9 h",
+                "11 h"
+              ]
+            },
+            {
+              "label": "petit objet",
+              "expressions": [
+                "petit objet"
+              ],
+              "contradictions": [
+                "sans petit objet",
+                "pas petit objet"
+              ]
+            },
+            {
+              "label": "aide gratuite",
+              "expressions": [
+                "aide gratuite"
+              ],
+              "contradictions": [
+                "sans aide gratuite",
+                "pas aide gratuite",
+                "aide payante",
+                "aide n est pas gratuite"
+              ],
+              "groupes": [
+                [
+                  "aide"
+                ],
+                [
+                  "gratuite",
+                  "gratuit"
+                ]
+              ]
+            },
+            {
+              "label": "telephone",
+              "expressions": [
+                "telephone",
+                "appeler",
+                "appel"
+              ],
+              "contradictions": [
+                "sans telephone",
+                "pas telephone"
+              ]
+            }
+          ],
+          "seuil": 0.8
+        },
+        {
+          "etape": 5,
+          "nom": "Test",
+          "questions": [
+            {
+              "enonce": "Quel coût est annoncé ?",
+              "options": [
+                "l’aide est gratuite, les pièces sont payantes",
+                "tout est gratuit",
+                "l’aide est payante, les pièces sont gratuites"
+              ],
+              "bonne": "l’aide est gratuite, les pièces sont payantes"
+            },
+            {
+              "enonce": "Comment réserver ?",
+              "options": [
+                "en déposant l’objet devant la salle",
+                "par courrier postal",
+                "par téléphone"
+              ],
+              "bonne": "par téléphone"
+            }
+          ]
+        }
+      ],
+      "fiche_methode": [
+        "Parcours : je regarde le titre et le début, je devine le sujet.",
+        "Question : j'écris la question que je me pose.",
+        "Lecture : je lis en cherchant la réponse à ma question.",
+        "Reformulation : je redis le texte en une phrase, avec mes mots.",
+        "Test : je me teste de mémoire, sans regarder."
+      ]
+    },
+    "reponse": {
+      "valeur": "samedi, 10 h, petit objet, aide gratuite, telephone",
+      "seuil": 0.8
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt2-6-pqrst-07",
+    "type": "pqrst-mise-en-oeuvre",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "mt-palier-5"
+    ],
+    "cap_complexite": "un texte court et cinq étapes guidées, une seule fois",
+    "contenu": {
+      "consigne": "Méthode PQRST, appliquée pas à pas : Parcours le texte, écris la question que tu te poses, Lis-le, Reformule-le avec tes mots, puis Teste-toi de mémoire.",
+      "titre_texte": "La visite du jardin partagé",
+      "texte": "Une visite du jardin partagé est proposée dimanche à 14 h ; le groupe se retrouve devant le portail vert. La visite dure une heure et reste sur les allées. Prévoir des chaussures fermées. En cas de pluie, la visite est reportée au dimanche suivant à la même heure.",
+      "etapes": [
+        {
+          "etape": 1,
+          "nom": "Parcours",
+          "enonce": "De quoi parle ce texte ?",
+          "options": [
+            "d’une recette de cuisine",
+            "d’un voyage en avion",
+            "d’une visite de jardin"
+          ],
+          "bonne": "d’une visite de jardin"
+        },
+        {
+          "etape": 2,
+          "nom": "Question",
+          "enonce": "Écris la question que tu te poses sur ce texte.",
+          "modele": "Où le groupe se retrouve-t-il ?"
+        },
+        {
+          "etape": 3,
+          "nom": "Lecture",
+          "enonce": "Lis le texte entier, en cherchant la réponse à ta question."
+        },
+        {
+          "etape": 4,
+          "nom": "Reformulation",
+          "enonce": "Redis le texte en une phrase, avec tes mots.",
+          "modele": "La visite du jardin commence dimanche à 14 h au portail vert, dure une heure et demande des chaussures fermées ; la pluie la reporte au dimanche suivant.",
+          "criteres": [
+            {
+              "label": "dimanche",
+              "expressions": [
+                "dimanche"
+              ],
+              "contradictions": [
+                "sans dimanche",
+                "pas dimanche"
+              ]
+            },
+            {
+              "label": "14 h",
+              "expressions": [
+                "14 h",
+                "14 heures",
+                "quatorze heures"
+              ],
+              "contradictions": [
+                "sans 14 h",
+                "pas 14 h",
+                "15 h",
+                "13 h"
+              ]
+            },
+            {
+              "label": "portail vert",
+              "expressions": [
+                "portail vert"
+              ],
+              "contradictions": [
+                "sans portail vert",
+                "pas portail vert"
+              ]
+            },
+            {
+              "label": "une heure",
+              "expressions": [
+                "une heure",
+                "1 heure",
+                "60 minutes"
+              ],
+              "contradictions": [
+                "sans une heure",
+                "pas une heure",
+                "deux heures",
+                "30 minutes"
+              ]
+            },
+            {
+              "label": "chaussures fermees",
+              "expressions": [
+                "chaussures fermees"
+              ],
+              "contradictions": [
+                "sans chaussures fermees",
+                "pas chaussures fermees"
+              ]
+            }
+          ],
+          "seuil": 0.8
+        },
+        {
+          "etape": 5,
+          "nom": "Test",
+          "questions": [
+            {
+              "enonce": "Où est le rendez-vous ?",
+              "options": [
+                "à l’arrêt de bus",
+                "dans la serre",
+                "devant le portail vert"
+              ],
+              "bonne": "devant le portail vert"
+            },
+            {
+              "enonce": "Que se passe-t-il en cas de pluie ?",
+              "options": [
+                "la visite est annulée définitivement",
+                "la visite est reportée au dimanche suivant",
+                "la visite se fait dans la serre"
+              ],
+              "bonne": "la visite est reportée au dimanche suivant"
+            }
+          ]
+        }
+      ],
+      "fiche_methode": [
+        "Parcours : je regarde le titre et le début, je devine le sujet.",
+        "Question : j'écris la question que je me pose.",
+        "Lecture : je lis en cherchant la réponse à ma question.",
+        "Reformulation : je redis le texte en une phrase, avec mes mots.",
+        "Test : je me teste de mémoire, sans regarder."
+      ]
+    },
+    "reponse": {
+      "valeur": "dimanche, 14 h, portail vert, une heure, chaussures fermees",
+      "seuil": 0.8
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt2-6-pqrst-08",
+    "type": "pqrst-mise-en-oeuvre",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "mt-palier-5"
+    ],
+    "cap_complexite": "un texte court et cinq étapes guidées, une seule fois",
+    "contenu": {
+      "consigne": "Méthode PQRST, appliquée pas à pas : Parcours le texte, écris la question que tu te poses, Lis-le, Reformule-le avec tes mots, puis Teste-toi de mémoire.",
+      "titre_texte": "Les paniers de légumes",
+      "texte": "Les paniers de légumes se commandent avant lundi midi ; ils sont retirés mercredi entre 16 h et 18 h dans la cour de la ferme. Le panier coûte douze euros, à payer lors du retrait. Apporter un sac réutilisable. Si une autre personne vient, elle donne le nom indiqué sur la commande.",
+      "etapes": [
+        {
+          "etape": 1,
+          "nom": "Parcours",
+          "enonce": "De quoi parle ce texte ?",
+          "options": [
+            "d’un voyage en avion",
+            "d’une commande de légumes",
+            "d’une recette de cuisine"
+          ],
+          "bonne": "d’une commande de légumes"
+        },
+        {
+          "etape": 2,
+          "nom": "Question",
+          "enonce": "Écris la question que tu te poses sur ce texte.",
+          "modele": "Quand faut-il commander ?"
+        },
+        {
+          "etape": 3,
+          "nom": "Lecture",
+          "enonce": "Lis le texte entier, en cherchant la réponse à ta question."
+        },
+        {
+          "etape": 4,
+          "nom": "Reformulation",
+          "enonce": "Redis le texte en une phrase, avec tes mots.",
+          "modele": "Il faut commander les légumes avant lundi midi et les retirer mercredi de 16 h à 18 h à la ferme, avec douze euros et un sac réutilisable.",
+          "criteres": [
+            {
+              "label": "avant lundi midi",
+              "expressions": [
+                "avant lundi midi"
+              ],
+              "contradictions": [
+                "sans avant lundi midi",
+                "pas avant lundi midi"
+              ]
+            },
+            {
+              "label": "mercredi",
+              "expressions": [
+                "mercredi"
+              ],
+              "contradictions": [
+                "sans mercredi",
+                "pas mercredi"
+              ]
+            },
+            {
+              "label": "ferme",
+              "expressions": [
+                "ferme"
+              ],
+              "contradictions": [
+                "sans ferme",
+                "pas ferme"
+              ]
+            },
+            {
+              "label": "douze euros",
+              "expressions": [
+                "douze euros",
+                "12 euros"
+              ],
+              "contradictions": [
+                "sans douze euros",
+                "pas douze euros",
+                "dix euros",
+                "vingt euros"
+              ]
+            },
+            {
+              "label": "sac reutilisable",
+              "expressions": [
+                "sac reutilisable"
+              ],
+              "contradictions": [
+                "sans sac reutilisable",
+                "pas sac reutilisable"
+              ]
+            }
+          ],
+          "seuil": 0.8
+        },
+        {
+          "etape": 5,
+          "nom": "Test",
+          "questions": [
+            {
+              "enonce": "Quand retirer le panier ?",
+              "options": [
+                "vendredi à 18 h",
+                "mercredi entre 16 h et 18 h",
+                "lundi avant midi"
+              ],
+              "bonne": "mercredi entre 16 h et 18 h"
+            },
+            {
+              "enonce": "Que faut-il apporter pour transporter les légumes ?",
+              "options": [
+                "un sac réutilisable",
+                "une boîte fournie par la ferme",
+                "un chariot obligatoire"
+              ],
+              "bonne": "un sac réutilisable"
+            }
+          ]
+        }
+      ],
+      "fiche_methode": [
+        "Parcours : je regarde le titre et le début, je devine le sujet.",
+        "Question : j'écris la question que je me pose.",
+        "Lecture : je lis en cherchant la réponse à ma question.",
+        "Reformulation : je redis le texte en une phrase, avec mes mots.",
+        "Test : je me teste de mémoire, sans regarder."
+      ]
+    },
+    "reponse": {
+      "valeur": "avant lundi midi, mercredi, ferme, douze euros, sac reutilisable",
+      "seuil": 0.8
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt2-6-pqrst-09",
+    "type": "pqrst-mise-en-oeuvre",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "mt-palier-5"
+    ],
+    "cap_complexite": "un texte court et cinq étapes guidées, une seule fois",
+    "contenu": {
+      "consigne": "Méthode PQRST, appliquée pas à pas : Parcours le texte, écris la question que tu te poses, Lis-le, Reformule-le avec tes mots, puis Teste-toi de mémoire.",
+      "titre_texte": "La salle de musique",
+      "texte": "La salle de musique peut être réservée pour une heure ; la clé se retire à l’accueil contre la carte d’adhérent. Après la séance, ranger les chaises et fermer les fenêtres. La clé doit être rendue à l’accueil avant 19 h. Les instruments restent dans la salle.",
+      "etapes": [
+        {
+          "etape": 1,
+          "nom": "Parcours",
+          "enonce": "De quoi parle ce texte ?",
+          "options": [
+            "de l’utilisation d’une salle de musique",
+            "d’une recette de cuisine",
+            "d’un voyage en avion"
+          ],
+          "bonne": "de l’utilisation d’une salle de musique"
+        },
+        {
+          "etape": 2,
+          "nom": "Question",
+          "enonce": "Écris la question que tu te poses sur ce texte.",
+          "modele": "Que faut-il faire après la séance ?"
+        },
+        {
+          "etape": 3,
+          "nom": "Lecture",
+          "enonce": "Lis le texte entier, en cherchant la réponse à ta question."
+        },
+        {
+          "etape": 4,
+          "nom": "Reformulation",
+          "enonce": "Redis le texte en une phrase, avec tes mots.",
+          "modele": "La salle se réserve pour une heure ; la carte d’adhérent permet de prendre la clé, puis il faut ranger les chaises, fermer les fenêtres et rendre la clé avant 19 h.",
+          "criteres": [
+            {
+              "label": "une heure",
+              "expressions": [
+                "une heure",
+                "1 heure",
+                "60 minutes"
+              ],
+              "contradictions": [
+                "sans une heure",
+                "pas une heure",
+                "deux heures",
+                "30 minutes"
+              ]
+            },
+            {
+              "label": "carte d adherent",
+              "expressions": [
+                "carte d adherent",
+                "carte de membre"
+              ],
+              "contradictions": [
+                "sans carte d adherent",
+                "pas carte d adherent"
+              ]
+            },
+            {
+              "label": "ranger les chaises",
+              "expressions": [
+                "ranger les chaises",
+                "remettre les chaises en place"
+              ],
+              "contradictions": [
+                "sans ranger les chaises",
+                "pas ranger les chaises"
+              ]
+            },
+            {
+              "label": "fermer les fenetres",
+              "expressions": [
+                "fermer les fenetres"
+              ],
+              "contradictions": [
+                "sans fermer les fenetres",
+                "pas fermer les fenetres"
+              ]
+            },
+            {
+              "label": "avant 19 h",
+              "expressions": [
+                "avant 19 h",
+                "avant 19 heures",
+                "avant dix neuf heures"
+              ],
+              "contradictions": [
+                "sans avant 19 h",
+                "pas avant 19 h",
+                "apres 19 h",
+                "20 h"
+              ]
+            }
+          ],
+          "seuil": 0.8
+        },
+        {
+          "etape": 5,
+          "nom": "Test",
+          "questions": [
+            {
+              "enonce": "Que présente-t-on pour prendre la clé ?",
+              "options": [
+                "la carte d’adhérent",
+                "un billet de concert",
+                "un justificatif de domicile"
+              ],
+              "bonne": "la carte d’adhérent"
+            },
+            {
+              "enonce": "Où restent les instruments ?",
+              "options": [
+                "à l’accueil",
+                "chez la personne qui a réservé",
+                "dans la salle"
+              ],
+              "bonne": "dans la salle"
+            }
+          ]
+        }
+      ],
+      "fiche_methode": [
+        "Parcours : je regarde le titre et le début, je devine le sujet.",
+        "Question : j'écris la question que je me pose.",
+        "Lecture : je lis en cherchant la réponse à ma question.",
+        "Reformulation : je redis le texte en une phrase, avec mes mots.",
+        "Test : je me teste de mémoire, sans regarder."
+      ]
+    },
+    "reponse": {
+      "valeur": "une heure, carte d adherent, ranger les chaises, fermer les fenetres, avant 19 h",
+      "seuil": 0.8
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt2-6-pqrst-10",
+    "type": "pqrst-mise-en-oeuvre",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "mt-palier-5"
+    ],
+    "cap_complexite": "un texte court et cinq étapes guidées, une seule fois",
+    "contenu": {
+      "consigne": "Méthode PQRST, appliquée pas à pas : Parcours le texte, écris la question que tu te poses, Lis-le, Reformule-le avec tes mots, puis Teste-toi de mémoire.",
+      "titre_texte": "Le linge à déposer",
+      "texte": "La laverie accepte le linge à repasser le mardi matin ; mettre le linge propre et sec dans un sac fermé, avec une fiche portant son nom. Le retrait se fait vendredi après-midi. Le paiement se fait au retrait. Les vêtements fragiles doivent être signalés sur la fiche.",
+      "etapes": [
+        {
+          "etape": 1,
+          "nom": "Parcours",
+          "enonce": "De quoi parle ce texte ?",
+          "options": [
+            "d’une recette de cuisine",
+            "d’un voyage en avion",
+            "du dépôt de linge à repasser"
+          ],
+          "bonne": "du dépôt de linge à repasser"
+        },
+        {
+          "etape": 2,
+          "nom": "Question",
+          "enonce": "Écris la question que tu te poses sur ce texte.",
+          "modele": "Quand récupérer le linge ?"
+        },
+        {
+          "etape": 3,
+          "nom": "Lecture",
+          "enonce": "Lis le texte entier, en cherchant la réponse à ta question."
+        },
+        {
+          "etape": 4,
+          "nom": "Reformulation",
+          "enonce": "Redis le texte en une phrase, avec tes mots.",
+          "modele": "Le linge propre et sec se dépose mardi matin dans un sac fermé avec son nom ; il se récupère vendredi après-midi et se paie au retrait.",
+          "criteres": [
+            {
+              "label": "mardi matin",
+              "expressions": [
+                "mardi matin"
+              ],
+              "contradictions": [
+                "sans mardi matin",
+                "pas mardi matin"
+              ]
+            },
+            {
+              "label": "propre et sec",
+              "expressions": [
+                "propre et sec"
+              ],
+              "contradictions": [
+                "sans propre et sec",
+                "pas propre et sec"
+              ],
+              "groupes": [
+                [
+                  "propre"
+                ],
+                [
+                  "sec"
+                ]
+              ]
+            },
+            {
+              "label": "sac ferme",
+              "expressions": [
+                "sac ferme"
+              ],
+              "contradictions": [
+                "sans sac ferme",
+                "pas sac ferme"
+              ]
+            },
+            {
+              "label": "vendredi apres midi",
+              "expressions": [
+                "vendredi apres midi"
+              ],
+              "contradictions": [
+                "sans vendredi apres midi",
+                "pas vendredi apres midi"
+              ]
+            },
+            {
+              "label": "au retrait",
+              "expressions": [
+                "au retrait"
+              ],
+              "contradictions": [
+                "sans au retrait",
+                "pas au retrait"
+              ]
+            }
+          ],
+          "seuil": 0.8
+        },
+        {
+          "etape": 5,
+          "nom": "Test",
+          "questions": [
+            {
+              "enonce": "Quand le linge est-il prêt à être retiré ?",
+              "options": [
+                "mardi matin",
+                "mercredi soir",
+                "vendredi après-midi"
+              ],
+              "bonne": "vendredi après-midi"
+            },
+            {
+              "enonce": "Quand payer ?",
+              "options": [
+                "à la fin du mois",
+                "au retrait",
+                "avant le dépôt par internet"
+              ],
+              "bonne": "au retrait"
+            }
+          ]
+        }
+      ],
+      "fiche_methode": [
+        "Parcours : je regarde le titre et le début, je devine le sujet.",
+        "Question : j'écris la question que je me pose.",
+        "Lecture : je lis en cherchant la réponse à ma question.",
+        "Reformulation : je redis le texte en une phrase, avec mes mots.",
+        "Test : je me teste de mémoire, sans regarder."
+      ]
+    },
+    "reponse": {
+      "valeur": "mardi matin, propre et sec, sac ferme, vendredi apres midi, au retrait",
+      "seuil": 0.8
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt2-6-pqrst-11",
+    "type": "pqrst-mise-en-oeuvre",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "mt-palier-5"
+    ],
+    "cap_complexite": "un texte court et cinq étapes guidées, une seule fois",
+    "contenu": {
+      "consigne": "Méthode PQRST, appliquée pas à pas : Parcours le texte, écris la question que tu te poses, Lis-le, Reformule-le avec tes mots, puis Teste-toi de mémoire.",
+      "titre_texte": "L’inscription à la promenade",
+      "texte": "La promenade du quartier a lieu jeudi à 9 h 30 ; le départ se fait devant la fontaine, pour un parcours de deux kilomètres. L’inscription se fait à l’accueil du centre social avant mercredi soir. Prévoir une bouteille d’eau. Le groupe revient au même point avant 11 h.",
+      "etapes": [
+        {
+          "etape": 1,
+          "nom": "Parcours",
+          "enonce": "De quoi parle ce texte ?",
+          "options": [
+            "d’un voyage en avion",
+            "d’une promenade de quartier",
+            "d’une recette de cuisine"
+          ],
+          "bonne": "d’une promenade de quartier"
+        },
+        {
+          "etape": 2,
+          "nom": "Question",
+          "enonce": "Écris la question que tu te poses sur ce texte.",
+          "modele": "Où s’inscrire ?"
+        },
+        {
+          "etape": 3,
+          "nom": "Lecture",
+          "enonce": "Lis le texte entier, en cherchant la réponse à ta question."
+        },
+        {
+          "etape": 4,
+          "nom": "Reformulation",
+          "enonce": "Redis le texte en une phrase, avec tes mots.",
+          "modele": "La promenade part jeudi à 9 h 30 de la fontaine pour deux kilomètres ; on s’inscrit au centre social avant mercredi soir et on apporte de l’eau.",
+          "criteres": [
+            {
+              "label": "jeudi",
+              "expressions": [
+                "jeudi"
+              ],
+              "contradictions": [
+                "sans jeudi",
+                "pas jeudi"
+              ]
+            },
+            {
+              "label": "9 h 30",
+              "expressions": [
+                "9 h 30",
+                "9 heures 30",
+                "neuf heures trente"
+              ],
+              "contradictions": [
+                "sans 9 h 30",
+                "pas 9 h 30",
+                "9 h 00",
+                "10 h 30"
+              ]
+            },
+            {
+              "label": "fontaine",
+              "expressions": [
+                "fontaine"
+              ],
+              "contradictions": [
+                "sans fontaine",
+                "pas fontaine"
+              ]
+            },
+            {
+              "label": "deux kilometres",
+              "expressions": [
+                "deux kilometres",
+                "2 kilometres"
+              ],
+              "contradictions": [
+                "sans deux kilometres",
+                "pas deux kilometres",
+                "trois kilometres",
+                "un kilometre"
+              ]
+            },
+            {
+              "label": "centre social",
+              "expressions": [
+                "centre social"
+              ],
+              "contradictions": [
+                "sans centre social",
+                "pas centre social"
+              ]
+            }
+          ],
+          "seuil": 0.8
+        },
+        {
+          "etape": 5,
+          "nom": "Test",
+          "questions": [
+            {
+              "enonce": "Où commence la promenade ?",
+              "options": [
+                "à la gare",
+                "devant la fontaine",
+                "devant la bibliothèque"
+              ],
+              "bonne": "devant la fontaine"
+            },
+            {
+              "enonce": "Avant quand faut-il s’inscrire ?",
+              "options": [
+                "avant mercredi soir",
+                "avant jeudi midi",
+                "avant vendredi matin"
+              ],
+              "bonne": "avant mercredi soir"
+            }
+          ]
+        }
+      ],
+      "fiche_methode": [
+        "Parcours : je regarde le titre et le début, je devine le sujet.",
+        "Question : j'écris la question que je me pose.",
+        "Lecture : je lis en cherchant la réponse à ma question.",
+        "Reformulation : je redis le texte en une phrase, avec mes mots.",
+        "Test : je me teste de mémoire, sans regarder."
+      ]
+    },
+    "reponse": {
+      "valeur": "jeudi, 9 h 30, fontaine, deux kilometres, centre social",
+      "seuil": 0.8
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "id": "mt2-6-pqrst-12",
+    "type": "pqrst-mise-en-oeuvre",
+    "module": "entrainement",
+    "theme": "methodes",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation",
+      "fonctions-executives"
+    ],
+    "palier": 6,
+    "prerequis": [
+      "mt-palier-5"
+    ],
+    "cap_complexite": "un texte court et cinq étapes guidées, une seule fois",
+    "contenu": {
+      "consigne": "Méthode PQRST, appliquée pas à pas : Parcours le texte, écris la question que tu te poses, Lis-le, Reformule-le avec tes mots, puis Teste-toi de mémoire.",
+      "titre_texte": "La collecte de petits appareils",
+      "texte": "La collecte de petits appareils électriques se tient samedi de 9 h à 12 h sur le parking de la mairie ; les piles se déposent séparément dans le bac rouge. Les grands appareils ne sont pas acceptés sur place. Aucune inscription n’est nécessaire. Les objets doivent être remis à une personne de l’équipe, pas laissés sur le parking.",
+      "etapes": [
+        {
+          "etape": 1,
+          "nom": "Parcours",
+          "enonce": "De quoi parle ce texte ?",
+          "options": [
+            "d’une collecte d’appareils électriques",
+            "d’une recette de cuisine",
+            "d’un voyage en avion"
+          ],
+          "bonne": "d’une collecte d’appareils électriques"
+        },
+        {
+          "etape": 2,
+          "nom": "Question",
+          "enonce": "Écris la question que tu te poses sur ce texte.",
+          "modele": "Où déposer les piles ?"
+        },
+        {
+          "etape": 3,
+          "nom": "Lecture",
+          "enonce": "Lis le texte entier, en cherchant la réponse à ta question."
+        },
+        {
+          "etape": 4,
+          "nom": "Reformulation",
+          "enonce": "Redis le texte en une phrase, avec tes mots.",
+          "modele": "La collecte de petits appareils a lieu samedi matin sur le parking de la mairie ; les piles vont dans le bac rouge et les objets sont remis à l’équipe.",
+          "criteres": [
+            {
+              "label": "petits appareils",
+              "expressions": [
+                "petits appareils"
+              ],
+              "contradictions": [
+                "sans petits appareils",
+                "pas petits appareils"
+              ]
+            },
+            {
+              "label": "samedi",
+              "expressions": [
+                "samedi"
+              ],
+              "contradictions": [
+                "sans samedi",
+                "pas samedi"
+              ]
+            },
+            {
+              "label": "parking de la mairie",
+              "expressions": [
+                "parking de la mairie"
+              ],
+              "contradictions": [
+                "sans parking de la mairie",
+                "pas parking de la mairie"
+              ]
+            },
+            {
+              "label": "bac rouge",
+              "expressions": [
+                "bac rouge"
+              ],
+              "contradictions": [
+                "sans bac rouge",
+                "pas bac rouge"
+              ]
+            },
+            {
+              "label": "equipe",
+              "expressions": [
+                "equipe",
+                "personne de l equipe"
+              ],
+              "contradictions": [
+                "sans equipe",
+                "pas equipe"
+              ]
+            }
+          ],
+          "seuil": 0.8
+        },
+        {
+          "etape": 5,
+          "nom": "Test",
+          "questions": [
+            {
+              "enonce": "Où déposer les piles ?",
+              "options": [
+                "dans le bac rouge",
+                "avec les appareils sans les retirer",
+                "dans un sac laissé sur le parking"
+              ],
+              "bonne": "dans le bac rouge"
+            },
+            {
+              "enonce": "Comment remettre les objets ?",
+              "options": [
+                "en les laissant sur le parking",
+                "en les plaçant devant la mairie la veille",
+                "à une personne de l’équipe"
+              ],
+              "bonne": "à une personne de l’équipe"
+            }
+          ]
+        }
+      ],
+      "fiche_methode": [
+        "Parcours : je regarde le titre et le début, je devine le sujet.",
+        "Question : j'écris la question que je me pose.",
+        "Lecture : je lis en cherchant la réponse à ma question.",
+        "Reformulation : je redis le texte en une phrase, avec mes mots.",
+        "Test : je me teste de mémoire, sans regarder."
+      ]
+    },
+    "reponse": {
+      "valeur": "petits appareils, samedi, parking de la mairie, bac rouge, equipe",
+      "seuil": 0.8
+    },
+    "meta": {
+      "auteur": "redaction-assistee — enrichissement trois mois",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
   }
 ]

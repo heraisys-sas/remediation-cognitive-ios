@@ -33,7 +33,7 @@
         "ev-palier-3"
       ],
       "fichier": "paliers/palier-04.json",
-      "nb_items": 10
+      "nb_items": 20
     },
     {
       "id": "ev-palier-5",
@@ -51,7 +51,7 @@
         "ev-palier-5"
       ],
       "fichier": "paliers/palier-06.json",
-      "nb_items": 6
+      "nb_items": 18
     },
     {
       "id": "ev-palier-7",
@@ -60,7 +60,7 @@
         "ev-palier-6"
       ],
       "fichier": "paliers/palier-07.json",
-      "nb_items": 6
+      "nb_items": 18
     },
     {
       "id": "ev-palier-8",

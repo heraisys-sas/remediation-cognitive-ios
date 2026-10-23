@@ -74,7 +74,7 @@ _PARCOURS_PAR_THEME: dict[str, list[dict]] = {
             11: "Interprétation et raisonnement · voix ou clavier", 12: "Nuances soutenues · voix ou clavier"}},
         {"id": "memoire-source", "nom": "Retrouver le contexte",
          "description": "Distinguer l’information de l’endroit où elle a été apprise", "sources": [4],
-         "types": ["rappel-source"]},
+         "types": ["rappel-source"], "max_items_paliers": {1: 10}},
         {"id": "strategie-semantique", "nom": "Stratégie sémantique (SFA)", "sources": [6]},
         {"id": "strategie-phonologique", "nom": "Stratégie phonologique (PCA)", "sources": [7]},
     ],

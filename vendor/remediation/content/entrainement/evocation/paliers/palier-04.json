@@ -538,5 +538,545 @@
         "statut": "a_revoir"
       }
     }
+  },
+  {
+    "type": "rappel-source",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Observe la scène et le message : tu devras retrouver dans quel contexte tu l'as vu.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "",
+            "Laver les serviettes à 40 degrés."
+          ]
+        ],
+        "image": {
+          "src": "images/contextes/source-11-v2-960.webp",
+          "srcset": "images/contextes/source-11-v2-640.webp 640w, images/contextes/source-11-v2-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "alt": "Laver les serviettes à 40 degrés.",
+          "sha256": "2ad177471d299e49af291c3084ce2c49cc7e45c8e4df7bb6ebf7333e8f54c1f0"
+        }
+      },
+      "enonce": "Sur quel support précis avais-tu vu : « Laver les serviettes à 40 degrés. » ?",
+      "options": [
+        "Note fixée sur la machine à laver",
+        "Note sur un bidon de lessive",
+        "Note sur un panier à linge",
+        "Carnet d’entretien du linge"
+      ],
+      "aide": "Repense au support visible dans la scène, pas seulement au message."
+    },
+    "reponse": {
+      "valeur": "Note fixée sur la machine à laver"
+    },
+    "id": "ev-4-source-image-v2-11-2ad177471d",
+    "palier": 4,
+    "prerequis": [
+      "ev-palier-3"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/content_sources/evocation_04_2026-10-10.json)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-source",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Observe la scène et le message : tu devras retrouver dans quel contexte tu l'as vu.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "",
+            "Arroser le basilic le samedi."
+          ]
+        ],
+        "image": {
+          "src": "images/contextes/source-12-v2-960.webp",
+          "srcset": "images/contextes/source-12-v2-640.webp 640w, images/contextes/source-12-v2-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "alt": "Arroser le basilic le samedi.",
+          "sha256": "5861b9f34bac5f37a4b8f7111236848c2196cd9f97b405f1d277af557aac3192"
+        }
+      },
+      "enonce": "Sur quel support précis avais-tu vu : « Arroser le basilic le samedi. » ?",
+      "options": [
+        "Note dans un carnet de jardinage",
+        "Étiquette sur un pot de basilic",
+        "Note sur le frigo",
+        "Note dans un agenda papier"
+      ],
+      "aide": "Repense au support visible dans la scène, pas seulement au message."
+    },
+    "reponse": {
+      "valeur": "Étiquette sur un pot de basilic"
+    },
+    "id": "ev-4-source-image-v2-12-5861b9f34b",
+    "palier": 4,
+    "prerequis": [
+      "ev-palier-3"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/content_sources/evocation_04_2026-10-10.json)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-source",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Observe la scène et le message : tu devras retrouver dans quel contexte tu l'as vu.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "",
+            "Prendre le sac avant de partir."
+          ]
+        ],
+        "image": {
+          "src": "images/contextes/source-13-v2-960.webp",
+          "srcset": "images/contextes/source-13-v2-640.webp 640w, images/contextes/source-13-v2-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "alt": "Prendre le sac avant de partir.",
+          "sha256": "bc4ad6370b926b81b1bebe5f0dffd7cef620117003111dcb504fb99b31ea1f1a"
+        }
+      },
+      "enonce": "Sur quel support précis avais-tu vu : « Prendre le sac avant de partir. » ?",
+      "options": [
+        "Note sur le plan de travail",
+        "Note dans un agenda papier",
+        "Note sur la porte d’entrée",
+        "Mémo du téléphone"
+      ],
+      "aide": "Repense au support visible dans la scène, pas seulement au message."
+    },
+    "reponse": {
+      "valeur": "Note sur la porte d’entrée"
+    },
+    "id": "ev-4-source-image-v2-13-bc4ad6370b",
+    "palier": 4,
+    "prerequis": [
+      "ev-palier-3"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/content_sources/evocation_04_2026-10-10.json)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-source",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Observe la scène et le message : tu devras retrouver dans quel contexte tu l'as vu.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "",
+            "Rapporter ce livre vendredi."
+          ]
+        ],
+        "image": {
+          "src": "images/contextes/source-14-v2-960.webp",
+          "srcset": "images/contextes/source-14-v2-640.webp 640w, images/contextes/source-14-v2-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "alt": "Rapporter ce livre vendredi.",
+          "sha256": "fd5fb85e0f0fc319587b985a80639e2bb54a0a56e1085e555f75e0338fa7cde1"
+        }
+      },
+      "enonce": "Sur quel support précis avais-tu vu : « Rapporter ce livre vendredi. » ?",
+      "options": [
+        "Note dans un agenda papier",
+        "Note sur la porte d’entrée",
+        "SMS de la bibliothèque",
+        "Papier glissé dans un livre"
+      ],
+      "aide": "Repense au support visible dans la scène, pas seulement au message."
+    },
+    "reponse": {
+      "valeur": "Papier glissé dans un livre"
+    },
+    "id": "ev-4-source-image-v2-14-fd5fb85e0f",
+    "palier": 4,
+    "prerequis": [
+      "ev-palier-3"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/content_sources/evocation_04_2026-10-10.json)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-source",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Observe la scène et le message : tu devras retrouver dans quel contexte tu l'as vu.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "",
+            "Rendre le tournevis lundi."
+          ]
+        ],
+        "image": {
+          "src": "images/contextes/source-15-v2-960.webp",
+          "srcset": "images/contextes/source-15-v2-640.webp 640w, images/contextes/source-15-v2-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "alt": "Rendre le tournevis lundi.",
+          "sha256": "35d55c1a0e90f9a7e0074d327289c82cff18016aac7578084799b38d2ee88749"
+        }
+      },
+      "enonce": "Sur quel support précis avais-tu vu : « Rendre le tournevis lundi. » ?",
+      "options": [
+        "Note sur une boîte à outils",
+        "Note sur le plan de travail",
+        "Note dans un agenda papier",
+        "Mémo du téléphone"
+      ],
+      "aide": "Repense au support visible dans la scène, pas seulement au message."
+    },
+    "reponse": {
+      "valeur": "Note sur une boîte à outils"
+    },
+    "id": "ev-4-source-image-v2-15-35d55c1a0e",
+    "palier": 4,
+    "prerequis": [
+      "ev-palier-3"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/content_sources/evocation_04_2026-10-10.json)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-source",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Observe la scène et le message : tu devras retrouver dans quel contexte tu l'as vu.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "",
+            "Faire le plein demain."
+          ]
+        ],
+        "image": {
+          "src": "images/contextes/source-16-v2-960.webp",
+          "srcset": "images/contextes/source-16-v2-640.webp 640w, images/contextes/source-16-v2-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "alt": "Faire le plein demain.",
+          "sha256": "e4fee4eb993131efece69885b87eaf7a5d144d3407aaa11a66d12d7fe76fc68b"
+        }
+      },
+      "enonce": "Sur quel support précis avais-tu vu : « Faire le plein demain. » ?",
+      "options": [
+        "Note sur le pare-soleil de la voiture",
+        "Note sur le tableau de bord",
+        "Note dans la boîte à gants",
+        "Note attachée au porte-clés de voiture"
+      ],
+      "aide": "Repense au support visible dans la scène, pas seulement au message."
+    },
+    "reponse": {
+      "valeur": "Note sur le tableau de bord"
+    },
+    "id": "ev-4-source-image-v2-16-e4fee4eb99",
+    "palier": 4,
+    "prerequis": [
+      "ev-palier-3"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/content_sources/evocation_04_2026-10-10.json)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-source",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Observe la scène et le message : tu devras retrouver dans quel contexte tu l'as vu.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "",
+            "Merci pour ton aide."
+          ]
+        ],
+        "image": {
+          "src": "images/contextes/source-17-v2-960.webp",
+          "srcset": "images/contextes/source-17-v2-640.webp 640w, images/contextes/source-17-v2-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "alt": "Merci pour ton aide.",
+          "sha256": "b43be667f621ffac2771b442f71f80a6c0c84df65f5e841aa757454e7fe479a8"
+        }
+      },
+      "enonce": "Sur quel support précis avais-tu vu : « Merci pour ton aide. » ?",
+      "options": [
+        "SMS d’un ami",
+        "Courriel d’un ami",
+        "Carte sur un bouquet",
+        "Note sur le plan de travail"
+      ],
+      "aide": "Repense au support visible dans la scène, pas seulement au message."
+    },
+    "reponse": {
+      "valeur": "Carte sur un bouquet"
+    },
+    "id": "ev-4-source-image-v2-17-b43be667f6",
+    "palier": 4,
+    "prerequis": [
+      "ev-palier-3"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/content_sources/evocation_04_2026-10-10.json)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-source",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Observe la scène et le message : tu devras retrouver dans quel contexte tu l'as vu.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "",
+            "Garder les biscuits pour dimanche."
+          ]
+        ],
+        "image": {
+          "src": "images/contextes/source-18-v2-960.webp",
+          "srcset": "images/contextes/source-18-v2-640.webp 640w, images/contextes/source-18-v2-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "alt": "Garder les biscuits pour dimanche.",
+          "sha256": "20583333f8d2a905697cb1fe12237eeb2a308e8271315386178988112571c852"
+        }
+      },
+      "enonce": "Sur quel support précis avais-tu vu : « Garder les biscuits pour dimanche. » ?",
+      "options": [
+        "Note sur le frigo",
+        "Note sur le plan de travail",
+        "Note dans un carnet de courses",
+        "Étiquette sur une boîte de biscuits"
+      ],
+      "aide": "Repense au support visible dans la scène, pas seulement au message."
+    },
+    "reponse": {
+      "valeur": "Étiquette sur une boîte de biscuits"
+    },
+    "id": "ev-4-source-image-v2-18-20583333f8",
+    "palier": 4,
+    "prerequis": [
+      "ev-palier-3"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/content_sources/evocation_04_2026-10-10.json)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-source",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Observe la scène et le message : tu devras retrouver dans quel contexte tu l'as vu.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "",
+            "Changer la serviette mardi."
+          ]
+        ],
+        "image": {
+          "src": "images/contextes/source-19-v2-960.webp",
+          "srcset": "images/contextes/source-19-v2-640.webp 640w, images/contextes/source-19-v2-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "alt": "Changer la serviette mardi.",
+          "sha256": "0f60d89a3f699431cb32408f580c13aa834748cc196ed67cae764e40f97fcd49"
+        }
+      },
+      "enonce": "Sur quel support précis avais-tu vu : « Changer la serviette mardi. » ?",
+      "options": [
+        "Note sur le miroir de la salle de bain",
+        "Note sur le frigo",
+        "Note dans un agenda papier",
+        "Note sur la machine à laver"
+      ],
+      "aide": "Repense au support visible dans la scène, pas seulement au message."
+    },
+    "reponse": {
+      "valeur": "Note sur le miroir de la salle de bain"
+    },
+    "id": "ev-4-source-image-v2-19-0f60d89a3f",
+    "palier": 4,
+    "prerequis": [
+      "ev-palier-3"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/content_sources/evocation_04_2026-10-10.json)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
+  },
+  {
+    "type": "rappel-source",
+    "fonctions_ciblees": [
+      "memorisation-longue",
+      "recuperation"
+    ],
+    "contenu": {
+      "consigne": "Observe la scène et le message : tu devras retrouver dans quel contexte tu l'as vu.",
+      "affichage": {
+        "mode": "liste",
+        "duree_totale_ms": 12000,
+        "elements": [
+          [
+            "",
+            "Éteindre la lampe avant de sortir."
+          ]
+        ],
+        "image": {
+          "src": "images/contextes/source-20-v2-960.webp",
+          "srcset": "images/contextes/source-20-v2-640.webp 640w, images/contextes/source-20-v2-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "alt": "Éteindre la lampe avant de sortir.",
+          "sha256": "f3224f9b485f6771b288c71adf603a33cced14fc9196c97770dcb6869d4b25ec"
+        }
+      },
+      "enonce": "Sur quel support précis avais-tu vu : « Éteindre la lampe avant de sortir. » ?",
+      "options": [
+        "Note sur la porte d’entrée",
+        "Note sur une lampe de bureau",
+        "Note sur le frigo",
+        "Note sur le plan de travail"
+      ],
+      "aide": "Repense au support visible dans la scène, pas seulement au message."
+    },
+    "reponse": {
+      "valeur": "Note sur une lampe de bureau"
+    },
+    "id": "ev-4-source-image-v2-20-f3224f9b48",
+    "palier": 4,
+    "prerequis": [
+      "ev-palier-3"
+    ],
+    "module": "entrainement",
+    "theme": "evocation",
+    "cap_complexite": null,
+    "meta": {
+      "auteur": "redaction-assistee (tools/content_sources/evocation_04_2026-10-10.json)",
+      "date_creation": "2026-10-10",
+      "relecture_ortho": {
+        "statut": "a_revoir"
+      }
+    }
   }
 ]
