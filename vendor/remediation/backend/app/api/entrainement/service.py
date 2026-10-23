@@ -20,6 +20,7 @@ proposition renvoyée en fin de séance — JAMAIS une interruption.
 from __future__ import annotations
 
 import re
+import copy
 import statistics
 import threading
 import uuid
@@ -148,6 +149,8 @@ class SessionEnCours:
     # Essais clos en affichant la réponse : aucune erreur commise par
     # l'utilisateur, mais pas de récupération réussie non plus.
     assistees: set[str] = field(default_factory=set)
+    protocole_contextes: dict | None = None
+    items_decouverts: set[str] = field(default_factory=set)
     terminee: bool = False
 
 
@@ -188,6 +191,7 @@ class GestionnaireSessions:
         sans_limite_sessions: bool = False,
         parcours: str | None = None,
         rejouer_palier: bool = False,
+        profil_contextes: str | None = None,
     ) -> dict:
         """Démarre une séance et retourne le payload 201 du contrat.
 
@@ -213,6 +217,10 @@ class GestionnaireSessions:
             raise ThemeInconnu(theme)
         if not self.contenu.parcours_existe(theme, parcours):
             raise ParcoursInconnu(parcours)
+        if profil_contextes is not None and (profil_contextes not in ("origine", "sources-vues") or (theme, parcours) != ("evocation", "memoire-source")):
+            raise ReponseInvalide("profil_contextes incompatible")
+        protocole = ({"version": "contextes-source-v2", "profil": profil_contextes or "origine"}
+                     if (theme, parcours) == ("evocation", "memoire-source") else None)
         stockage_theme = f"{theme}--{parcours}" if parcours else theme
         items_disponibles = self.contenu.items(theme, parcours)
         categorie = self.contenu.categorie(theme)
@@ -279,6 +287,20 @@ class GestionnaireSessions:
                 reglages["max_items"],
                 inclure_non_dus=rejouer_palier or bool(reglages.get("inclure_non_dus", False)),
             )
+            selection = copy.deepcopy(selection)
+            if protocole and protocole["profil"] == "sources-vues":
+                sources = list(dict.fromkeys(item["reponse"]["valeur"] for item in selection))
+                for index, item in enumerate(selection):
+                    correcte = item["reponse"]["valeur"]
+                    candidates = [source for source in sources if source != correcte]
+                    rotation = index % max(1, len(candidates))
+                    autres = (candidates[rotation:] + candidates[:rotation])[:3]
+                    choix = autres[:]
+                    choix.insert(index % (len(autres) + 1), correcte)
+                    # Une seule liste par condition : deux listes différentes
+                    # révéleraient parfois la réponse par leur intersection.
+                    item["contenu"]["options"] = choix.copy()
+                    item["contenu"]["options_rappel"] = choix
             runner = SessionRunner(
                 items=[ItemMoteur(item) for item in selection],
                 max_items=reglages["max_items"],
@@ -303,14 +325,18 @@ class GestionnaireSessions:
                 items_par_id={item["id"]: item for item in selection},
                 items_disponibles=items_disponibles,
                 depart=maintenant,
+                protocole_contextes=protocole,
             )
             # Une séance **vide** (rien de dû, rien de nouveau) ne consomme pas le quota
             # de la fenêtre : elle n'a rien proposé, elle ne doit rien coûter.
             if selection:
                 self.stockage.incrementer_compteur(theme, debut)
+        if protocole:
+            self.stockage.modifier_observations(session_id, lambda document: {**document, "protocole_contextes": protocole.copy()})
         return {
             "session_id": session_id,
             "parcours": parcours,
+            **({"protocole_contextes": protocole} if protocole else {}),
             "items": [_item_sans_reponse(item) for item in selection],
             "regles": {
                 "max_items": reglages["max_items"],
@@ -412,12 +438,20 @@ class GestionnaireSessions:
         ):
             raise ReponseInvalide("indice_utilise hors bornes")
         assistee = nb_indices > 0 and indice_utilise > nb_indices
+        if session.protocole_contextes and session.protocole_contextes["profil"] == "sources-vues" and not memorisation:
+            if set(session.items_par_id) != session.items_decouverts:
+                raise ReponseInvalide("sources proposées non découvertes")
+        if (session.protocole_contextes and session.protocole_contextes["profil"] == "sources-vues"
+                and observation_contextes is None):
+            raise ReponseInvalide("observation de passe requise")
         faits = None
         if observation_contextes is not None:
             try:
                 if observation_contextes.get("photo_apres_erreur") or "photo_revelee_ms" in observation_contextes:
                     raise ValueError("révélation avant correction")
                 faits = self._faits_contexte(session, item, observation_contextes)
+                if session.protocole_contextes and (faits["passe"] == "decouverte") != memorisation:
+                    raise ValueError("passe incompatible avec memorisation")
                 if faits["passe"] == "rappel" and not any(
                     ligne["item_id"] == item_id and ligne.get("premiere_reponse")
                     for ligne in self.stockage.lire_observations(session_id).get("contextes", {}).get("decouverte", [])
@@ -425,6 +459,9 @@ class GestionnaireSessions:
                     raise ValueError("rappel avant découverte")
             except ValueError as exc:
                 raise ReponseInvalide(str(exc)) from exc
+        if session.protocole_contextes and session.protocole_contextes["profil"] == "sources-vues" and memorisation:
+            if not faits or not faits.get("photo_chargee") or "exposition_ms" not in faits:
+                raise ReponseInvalide("photo non exposée")
         try:
             correction = evaluer(theme, item, reponse, assistee)
         except ValueError as exc:
@@ -448,6 +485,7 @@ class GestionnaireSessions:
                 "feedback": messages.texte("entrainement", "feedback_correcte" if correcte else "feedback_incorrecte"),
             }
             resultat.update(correction.feedback())
+            session.items_decouverts.add(item_id)
             if faits is not None:
                 premiere = {"reponse": reponse, "correcte": correcte, "aide": indice_utilise,
                             "temps_ms": temps_ms, "validee_ms": int(self.horloge().timestamp() * 1000)}
@@ -554,7 +592,12 @@ class GestionnaireSessions:
 
     def _faits_contexte(self, session: SessionEnCours, item: dict, donnees: dict) -> dict:
         ordre = list(session.items_par_id).index(item["id"]) + 1
-        return normaliser_faits(item, donnees, ordre)
+        faits = normaliser_faits(item, donnees, ordre)
+        if session.protocole_contextes:
+            faits["protocole"] = session.protocole_contextes.copy()
+            cle = "options_rappel" if faits["passe"] == "rappel" else "options"
+            faits["choix_proposes"] = list(item["contenu"].get(cle, item["contenu"].get("options", [])))
+        return faits
 
     def _enregistrer_contexte(self, session: SessionEnCours, faits: dict, premiere: dict | None = None) -> dict:
         def modifier(document):

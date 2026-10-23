@@ -25,7 +25,7 @@
   },
   "vendor_sha256": {
     "vendor/remediation/backend/app/api/entrainement/__init__.py": "f19cb1874de569ff8628a4cdd02c60e4297b9de2003bc2a9f1f990bcff32b340",
-    "vendor/remediation/backend/app/api/entrainement/service.py": "bde081513e85a18c25f1f62f4466f886239d8fd6d1fd1dcc21817dd7e4531355",
+    "vendor/remediation/backend/app/api/entrainement/service.py": "bcdc45ab8efb3aeda0c05d19e9eedbfc3ef9859cc344998d22a30e41feeb7078",
     "vendor/remediation/backend/app/api/memoires_immediates/__init__.py": "3f792f1bd103c0f482097f9c594040ee182cfe869cad0629032054949bdc0ec5",
     "vendor/remediation/backend/app/api/memoires_immediates/protocoles.py": "7395a37e60df0057e5b75a5a934f94a71ca60baf7315c17a3ec82f7a4f00d8ac",
     "vendor/remediation/backend/app/domain/__init__.py": "24627728a05ba674baba4717f861fd0ac518a2d160256e67f7c5da1be87bbc5d",
@@ -48,7 +48,7 @@
     "vendor/remediation/backend/app/domain/fatigue.py": "dce12bf86d67c5981e472826be47315e1a6676c698394a15263d530635009a42",
     "vendor/remediation/backend/app/domain/feedback.py": "ca2e7d9e038232e533781c5dba0362cff47d2cc83c734e226f9406913e034578",
     "vendor/remediation/backend/app/domain/messages.py": "194da4e52c8c7a2982ad3ea063147ef8877a9a9200d792f9a44771964df164e2",
-    "vendor/remediation/backend/app/domain/observations_contextes.py": "6f4ab78dd2a92e49fb25d488c563f77ae04d05db1ab287ec5c22a30689f92578",
+    "vendor/remediation/backend/app/domain/observations_contextes.py": "412e799da9773b89cb1a85435885dc4e77c9eba371c97646c6096a1f72cd48f6",
     "vendor/remediation/backend/app/domain/programme.py": "1515cbc972c4c0830dee8a5a5c8abfe0de83439fd80d3d41efacb21ceb33cf8a",
     "vendor/remediation/backend/app/domain/progression.py": "b3055d4334c33574df3fec47f03207f398eea143c43d86387c3a9819fc5e35f9",
     "vendor/remediation/backend/app/domain/selection.py": "af8b33f341b320f94570725acef2cfa441d95b30e8750e3a0a1b343e8f40b634",
@@ -327,6 +327,15 @@
         "vendor/remediation/backend/app/domain/catalog.py"
       ],
       "purpose": "Banques enrichies, scènes Contextes statiques et plafond de dix scènes ; service, moteur et FSRS inchangés."
+    },
+    {
+      "commit": "61c0ffdc18329ed71d7bdac88e60cfb3ce92448f",
+      "branch": "feat/contextes-progression",
+      "paths": [
+        "vendor/remediation/backend/app/api/entrainement/service.py",
+        "vendor/remediation/backend/app/domain/observations_contextes.py"
+      ],
+      "purpose": "Deux profils Contextes manuels et faits de chargement ; branche source en PR, non intégrée dans dev/main."
     }
   ]
 }

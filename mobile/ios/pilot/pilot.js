@@ -113,6 +113,7 @@ element("start").onclick = () => perform(async () => {
   const activity=element("activity").value||"calcul-mental";
   await authorizeAutoLexical(activity);
   const params=activity.startsWith("mi-")?{parametres:activity==="mi-code"?{modalite:element("miModality").value||"visuelle"}:activity==="mi-changement"?{condition:element("miCondition").value||"forme"}:{}}:{};
+  if(activity==="memoire-source")params.profil_contextes=element("contextesProfile").value||"origine";
   await request("start", {activity,...params});
   let view = await request("view");
   if (!view.item && !view.finished) { await request("finish", {session_id:view.session_id}); view = await request("view"); }

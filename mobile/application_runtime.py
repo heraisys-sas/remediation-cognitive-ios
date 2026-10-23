@@ -73,14 +73,21 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime, Lexical
             values = data["session"]
             available = self.manager.contenu.items(values["theme"], values["parcours"])
             by_id = {item["id"]: item for item in available}
-            selected = {key: by_id[key] for key in data["selected"]}
+            selected = {key: copy.deepcopy(by_id[key]) for key in data["selected"]}
+            if (values.get("protocole_contextes") or {}).get("profil") == "sources-vues":
+                snapshots = {item["id"]: item for item in self.ui["session"]["items"]}
+                for identifier, item in selected.items():
+                    for key in ("options", "options_rappel"):
+                        item["contenu"][key] = copy.deepcopy(snapshots[identifier]["contenu"][key])
+
             runner = SessionRunner([ItemMoteur(item) for item in selected.values()],
                                    **data["runner_config"])
             for key, value in data["runner_state"].items():
                 setattr(runner, key, datetime.fromisoformat(value) if key == "_depart" else value)
             values["depart"] = datetime.fromisoformat(values["depart"])
-            for key in ("protocoles_pqrst", "reprises", "assistees"):
-                values[key] = set(values[key])
+            for key in ("protocoles_pqrst", "reprises", "assistees", "items_decouverts"):
+                if key in values:
+                    values[key] = set(values[key])
             session = SessionEnCours(**values, runner=runner, items_par_id=selected,
                                      items_disponibles=available)
             self.manager._sessions[session.session_id] = session
@@ -168,7 +175,12 @@ class ApplicationRuntime(ContextesRuntime, ChoiceRuntime, MemoryRuntime, Lexical
             else:
                 self.manager._sessions.clear()
                 theme, parcours, _ = ACTIVITIES[activity]
-                result = self.manager.demarrer(theme, parcours=parcours)
+                options = {}
+                if "profil_contextes" in request:
+                    if activity != "memoire-source" or request["profil_contextes"] not in ("origine", "sources-vues"):
+                        raise ValueError("Profil Contextes invalide")
+                    options["profil_contextes"] = request["profil_contextes"]
+                result = self.manager.demarrer(theme, parcours=parcours, **options)
                 kept={key:copy.deepcopy(self.ui[key]) for key in ("immediate_daily","immediate_history") if key in self.ui}
                 self.ui = {**kept,"session": result, "queue": [i["id"] for i in result["items"]],
                            "cursor": 0, "feedback": None, "reprise_support": {},

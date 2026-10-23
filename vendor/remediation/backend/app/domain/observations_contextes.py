@@ -2,7 +2,7 @@
 
 PASSES = ("decouverte", "rappel")
 TEMPS = ("presentee_ms", "exposition_ms", "photo_revelee_ms")
-BOOLEENS = ("presentee", "incident_photo", "photo_apres_erreur")
+BOOLEENS = ("presentee", "incident_photo", "photo_apres_erreur", "photo_chargee")
 
 
 def normaliser_faits(item: dict, donnees: dict, ordre: int) -> dict:
